@@ -145,19 +145,16 @@ input[type="search"]:focus {
 	color: rgba(255, 255, 255, 1);
 }
 
-a.twitter-share-button,
 a.continue-reading {
 	color: rgba(255, 255, 255, 1);
 	background: rgba(255, 93, 38, 1);
 }
 
-a.twitter-share-button:hover,
 a.continue-reading:hover {
 	color: rgba(255, 255, 255, 1);
 	background: rgba(213, 78, 32, 1);
 }
 
-a.twitter-share-button:active,
 a.continue-reading:active {
 	background: rgba(160, 50, 38, 1);
 }
@@ -244,19 +241,16 @@ abbr[title], dfn[title] {border-bottom: 1px dotted; cursor: help;}
 	color: rgba(255, 255, 255, 1);
 }
 
-.dark a.twitter-share-button,
 .dark a.continue-reading {
 	color: rgba(5, 5, 5, 1);
 	background: rgba(255, 93, 38, 1);
 }
 
-.dark a.twitter-share-button:hover,
 .dark a.continue-reading:hover {
 	color: rgba(0, 0, 0, 1);
 	background: rgba(255, 134, 0, 1);
 }
 
-.dark a.twitter-share-button:active,
 .dark a.continue-reading:active {
 	background: rgba(213, 78, 32, 1);
 }
@@ -311,7 +305,6 @@ footer,
 .entry-title,
 .entry-content,
 .pages,
-.shortener,
 .yoggrtad-wrap,
 #post-nav>section {
 	max-width: 1200px;
@@ -639,60 +632,6 @@ a.continue-reading:hover {
 	font-size: 11px !important;
 }
 
-.shortener {
-	font-size: 0.8em;
-	padding-bottom: 5em;
-	opacity: 0.4;
-}
-
-.shortener:hover {
-	opacity: 1;
-}
-
-.shortener p {
-	cursor: help;
-}
-
-.shortener section + p {
-	margin: 0;
-}
-
-.shortener input {
-	width: 50%;
-	border: none;
-	cursor: pointer;
-	background-color: transparent;
-	margin-bottom: 0.5em;
-}
-
-.shortener input:focus {
-	outline-width: 0;
-}
-
-.fleuron {
-	font-family: Georgia, serif;
-	font-size: 2em;
-/*	height: 32px;*/
-/*	width: 32px;*/
-/*	margin: 0 auto;*/
-	/* fixed displaying square in chrome */
-	text-rendering: auto;
-	display: inline;
-	vertical-align: bottom;
-	padding-right: 0.2em;
-}
-
-.twitter-share-button {
-	float: right;
-	margin-top: 3px;
-	padding: 4px 5px;
-	text-decoration: none;
-	font-family: Arial, sans-serif;
-	font-size: 11px;
-	font-weight: bold;
-	border-radius: 3px;
-}
-
 .yoggrtad-wrap {
 	padding-bottom: 5em;
 	margin: 0 auto;
@@ -951,8 +890,7 @@ article:hover, aside:hover, figure:hover, footer:hover, header:hover, hgroup:hov
 	        transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.continue-reading,
-.twitter-share-button {
+.continue-reading {
 	/* dont use * mask here. and .continue-reading is special, need to overide a:hover */
 	-webkit-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
 	   -moz-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
@@ -960,8 +898,7 @@ article:hover, aside:hover, figure:hover, footer:hover, header:hover, hgroup:hov
 	        transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
 }
 
-.continue-reading:hover,
-.twitter-share-button:hover {
+.continue-reading:hover {
 	/* dont use * mask here. and .continue-reading is special, need to overide a:hover */
 	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
 	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
