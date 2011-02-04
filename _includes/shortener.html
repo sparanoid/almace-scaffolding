@@ -1,4 +1,0 @@
-<section class=shortener>
-	<section class=fleuron>&#10086;</section><input type=text id=short-url readonly=readonly title="Short URL for this post" onclick="SelectShortURL('short-url');" value="{% if page.short %}{{ site.shortener }}{{ page.short }}{% else %}URL shortener unavailable{% endif %}">
-	<a href="http://twitter.com/share?url={{ site.twitter-base }}{{ page.url }}/&amp;via={{ site.twitter }}&amp;text={{}}&amp;related={{ site.twitter }}&amp;lang=en&amp;count=none&amp;counturl={{ site.twitter-base }}{{ page.url }}" class="twitter-share-button" target="_blank">Tweet!</a>
-</section>
