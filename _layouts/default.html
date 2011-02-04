@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+                                    _    __	 	
+  ___ ___  ___ ________ ____  ___  (_)__/ /
+ (_-</ _ \/ _ `/ __/ _ `/ _ \/ _ \/ / _  /
+/___/ .__/\_,_/_/  \_,_/_//_/\___/_/\_,_/
+   /_/
+
+-->
+
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel=stylesheet href="/static/css/desktop.css">
+<link rel=alternate href="/feed/" type=application/atom+xml>
+
+<title>{% if page.type != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+
+<body{% if page.persona %} class={{ page.persona }}{% endif %}>
+
+<header id=top-logo>
+	<h1 id=site-title>
+		<a href="//{{ site.url }}/" title="{{ site.name }} [x]" rel=home accesskey=x>{{ site.name }}</a>
+	</h1>
+</header>
+
+<header id=pages>
+	<div class=pages>
+		<ul>
+			<li{% if page.type == 'home' %} class=current{% endif %}><a href="/">Home</a></li>
+			<li{% if page.category == 'project' or page.title == 'Project' %} class=current{% endif %}><a href="/project/">Project</a></li>
+			<li{% if page.category == 'artwork' or page.title == 'Artwork' %} class=current{% endif %}><a href="/artwork/">Artwork</a></li>
+			<li{% if page.category == 'notebook' or page.title == 'Notebook' %} class=current{% endif %}><a href="/notebook/">Notebook</a></li>
+			<li{% if page.category == 'about' or page.title == 'About' %} class=current{% endif %}><a href="/about/">About</a></li>
+		</ul>
+	</div>
+</header>
+
+<section id=decoration-wrap>
+	<section id=decoration>
+		<p>
+			{% if page.type == 'home' %}
+				{{ site.slogan }}
+			{% elsif page.type == 'about' %}
+				{{ site.full-name }}
+			{% else %}
+				{{ page.title }}
+			{% endif %}
+		</p>
+	</section>
+</section>
+
+<section id=wrap>
+
+{{ content }}
+
+<footer>
+	<a href="#footer" id=footer accesskey=b class=hide-this-shortcut-for-print-style></a>
+	<section id=search-form>
+		<form action=http://www.google.com/cse id=cse-search-box>
+			<input type=hidden name=cx value={{ site.googe-custom-search }}>
+			<input type=hidden name=ie value=utf-8>
+			<input type=search name=q size=16 placeholder="search">
+		</form>
+	</section>
+
+	<p id=footer-meta>
+		<a href="/feed/" title="Feed - Atom (The Atom Syndication Format)">Feed</a> / 
+		<a href="http://twitter.com/{{ site.twitter }}">Twitter</a> / 
+		<a href="#" title="Back to top [t]" accesskey=t>top</a>
+	</p>
+
+	<p class=footer-printable>
+		(c) <a href="/" class=lindsayisgod rel=home>{{ site.name }}</a>
+	</p>
+</footer>
+
+</section>
+<!-- #wrap -->
+
+</body>

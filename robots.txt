@@ -1,0 +1,8 @@
+Sitemap: http://sparanoid.com/sitemap.xml
+
+User-agent: *
+Disallow: /*.mp3$
+Disallow: /*.ogg$
+Disallow: /*.mp4$
+Disallow: /*.avi$
+Disallow: /*.mov$
