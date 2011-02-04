@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article>
+	<hgroup class=entry-title>
+		<h1>{{ page.title }} <time pubdate datetime="{{ page.date }}">{{ page.date | date: "%d %b %Y" }}</time></h1>
+		{% if page.excerpt %}<h2 class=entry-meta>{{ page.excerpt }}</h2>{% endif %}
+	</hgroup>
+	<section class=entry-content>
+		{{ content }}
+	</section>
+</article>
+
+<section id=post-nav>
+	<section>
+		{% if page.previous.url %}
+			<nav class=nav-next><a href="{{ page.previous.url }}/">{{page.previous.title}}</a></nav>
+        {% endif %}
+		{% if page.next.url %}
+			<nav class=nav-previous><a href="{{ page.next.url }}/">{{page.next.title}}</a></nav>
+        {% endif %}
+	</section>
+</section>
+
+{% include sponsor.html %}
