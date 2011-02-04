@@ -1,0 +1,40 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<title>{{ site.name }}</title>
+<subtitle>{{ site.slogan }}</subtitle>
+
+<link href="http://{{ site.url }}/feed/" rel="self" />
+<link href="http://{{ site.url }}/" />
+
+<id>http://{{ site.url }}/feed/</id>
+
+<updated>{{ site.time | date_to_xmlschema }}</updated>
+<rights>Copyright © 2011, {{ site.full-name }}</rights>
+
+<author>
+	<name>{{ site.full-name }}</name>
+	<email>{{ site.email }}</email>
+</author>
+
+{% for post in site.posts limit:10 %}
+<entry>
+	<title>{{ post.title | xml_escape }}</title>
+	<link href="http://{{ site.url }}{{ post.url }}/" />
+	<id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+	<updated>{{ post.date | date_to_xmlschema }}</updated>
+	<author>
+		<name>{{ site.full-name }}</name>
+		<uri>http://{{ site.url }}/</uri>
+	</author>
+	<summary>{{ post.excerpt | xml_escape }}</summary>
+	<content type="html" xml:base="http://{{ site.url }}/"><![CDATA[
+	{{ post.excerpt }} ... <a href="http://{{ site.url }}{{ post.url }}/"><small>FULL VERSION</small></a>
+	]]></content>
+</entry>
+{% endfor %}
+
+</feed>
