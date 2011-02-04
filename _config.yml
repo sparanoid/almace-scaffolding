@@ -24,4 +24,5 @@ server_port: 4321
 # exclude files for generated site
 exclude: 
 - README.md
+- LICENSE
 - desktop.less
