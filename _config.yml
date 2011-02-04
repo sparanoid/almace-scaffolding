@@ -1,0 +1,27 @@
+# folder settings
+source: .
+destination: /Users/sparanoid/dropbox/sparanoid-web/sparanoid.com
+#destination: ./_site
+
+# site settings
+permalink: /:categories/:title
+markdown: rdiscount
+
+# custom vars
+name: Sparanoid
+full-name: Tunghiao Liu
+email: info@sparanoid.com
+url: sparanoid.com
+twitter: sparanoid
+slogan: The net is vast and limitless
+googe-custom-search: 012621050422714259885:jabcs0nmacy
+
+# fire up a localhost and auto generate when files change
+auto: true
+server: ture
+server_port: 4321
+
+# exclude files for generated site
+exclude: 
+- README.md
+- desktop.less
