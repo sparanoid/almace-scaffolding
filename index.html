@@ -8,7 +8,7 @@ type: home
 
 <article>
 	<hgroup class=entry-title>
-		<h1><a href="{{ latest.url }}/" rel=bookmark>{{ latest.title }} </a> <time pubdate datetime="{{ latest.date }}">{{ latest.date | date: "%d %b %Y" }}</time></h1>
+		<h1><a href="{{ latest.url }}/" rel=bookmark>{{ latest.title }} </a> <time pubdate datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%d %b %Y" }}</time></h1>
 		{% if latest.excerpt %}<h2 class=entry-meta>{{ latest.excerpt }}</h2>{% endif %}
 	</hgroup>
 	<section class=entry-content>
