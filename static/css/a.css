@@ -1,3 +1,6 @@
+/*!
+  (c) sparanoid.com [https://github.com/sparanoid/sparanoid.com]
+*/
 /* @group Reference Block
 
 	By default:
@@ -66,25 +69,27 @@ article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 /* @group Color Assets */
 
 body, input {
-	color: rgba(0, 0, 0, 1);
-	background: rgba(255, 255, 255, 1);
+	color: #000;
+	background: #fff;
 }
 
 a {
-	color: rgba(0, 0, 0,1);
+	color: #000;
 }
 
-a:hover,
-.current a {
-	color: rgba(255, 93, 38, 1);
+a:hover/*
+,
+.current a
+*/ {
+	color: #ff5d26;
 }
 
 .entry-content a {
-	color: rgba(255, 93, 38, 1);
+	color: #ff5d26;
 }
 
 .entry-content a:hover {
-	color: rgba(160, 50, 38, 1);
+	color: #a03226;
 }
 
 .entry-content .note {
@@ -102,13 +107,13 @@ li, blockquote,
 
 h1, h2, h3, h4, h5, h6, 
 .self-intro {
-	text-shadow: rgba(255, 255, 255, 1) 0 0 20px;
+	text-shadow: #fff 0 0 20px;
 }
 
 code, 
 pre {
 	color: rgba(0, 0, 102, 0.75);
-	background-color: rgba(0, 255, 255, 0.2); 
+	background-color: rgba(0, 255, 255, 0.2);
 }
 
 abbr {
@@ -117,7 +122,7 @@ abbr {
 
 input[type="search"] {
 	border: rgba(0, 0, 0, 0.3) 1px solid;
-	background: rgba(255, 255, 255, 1);
+	background: #fff;
 }
 
 input[type="search"]:focus {
@@ -142,27 +147,27 @@ input[type="search"]:focus {
 }
 
 .note a, .download a, .note a:hover, .download a:hover {
-	color: rgba(255, 255, 255, 1);
+	color: #fff;
 }
 
 a.continue-reading {
-	color: rgba(255, 255, 255, 1);
-	background: rgba(255, 93, 38, 1);
+	color: #fff;
+	background: #ff5d26;
 }
 
 a.continue-reading:hover {
-	color: rgba(255, 255, 255, 1);
-	background: rgba(213, 78, 32, 1);
+	color: #fff;
+	background: #d54e20;
 }
 
 a.continue-reading:active {
-	background: rgba(160, 50, 38, 1);
+	background: #a03226;
 }
 
-::-webkit-input-placeholder {color: rgba(255, 93, 38, 1);}
-:-moz-placeholder {color: rgba(255, 93, 38, 1);}
-::-moz-selection {background: rgba(0, 255, 255, 0.9); color: rgba(255, 0, 0, 1);}
-::selection {background: rgba(0, 255, 255, 0.9); color: rgba(255, 0, 0, 1);}
+::-webkit-input-placeholder {color: #ff5d26;}
+:-moz-placeholder {color: #ff5d26;}
+::-moz-selection {background: rgba(0, 255, 255, 0.9); color: #ff0000;}
+::selection {background: rgba(0, 255, 255, 0.9); color: #ff0000;}
 .lindsayisgod::-moz-selection {background: #f00; color: #fff;}
 .lindsayisgod::selection {background: #f00; color: #fff;}
 
@@ -178,25 +183,25 @@ abbr[title], dfn[title] {border-bottom: 1px dotted; cursor: help;}
 /* @group Color Assets for About page */
 
 .dark, .dark input {
-	color: rgba(255, 93, 38, 1);
-	background: rgba(5, 5, 5, 1);
+	color: #ff5d26;
+	background: #050505;
 }
 
 .dark a {
-	color: rgba(255, 134, 0, 1);
+	color: #ff8600;
 }
 
 .dark a:hover,
 .dark .current a {
-	color: rgba(255, 180, 0, 1);
+	color: #ffb400;
 }
 
 .dark .entry-content a {
-	color: rgba(255, 131, 0, 1);
+	color: #ff8300;
 }
 
 .dark .entry-content a:hover {
-	color: rgba(255, 180, 0, 1);
+	color: #ffb400;
 }
 
 .dark li, .dark blockquote,
@@ -206,13 +211,13 @@ abbr[title], dfn[title] {border-bottom: 1px dotted; cursor: help;}
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
 .dark .self-intro {
-	text-shadow: rgba(5, 5, 5, 1) 0 0 20px;
+	text-shadow: #050505 0 0 20px;
 }
 
 .dark code, 
 .dark pre {
 	color: rgba(0, 0, 102, 0.75);
-	background-color: rgba(0, 255, 255, 1); 
+	background-color: #00ffff; 
 }
 
 .dark abbr {
@@ -238,21 +243,21 @@ abbr[title], dfn[title] {border-bottom: 1px dotted; cursor: help;}
 }
 
 .dark .note, .dark .download, .dark .note a, .dark .download a, .dark .note a:hover, .dark .download a:hover {
-	color: rgba(255, 255, 255, 1);
+	color: #fff;
 }
 
 .dark a.continue-reading {
-	color: rgba(5, 5, 5, 1);
-	background: rgba(255, 93, 38, 1);
+	color: #050505;
+	background: #ff5d26;
 }
 
 .dark a.continue-reading:hover {
-	color: rgba(0, 0, 0, 1);
-	background: rgba(255, 134, 0, 1);
+	color: #000;
+	background: #ff8600;
 }
 
 .dark a.continue-reading:active {
-	background: rgba(213, 78, 32, 1);
+	background: #d54e20;
 }
 
 /* @end */
@@ -304,7 +309,7 @@ h6, .h6 {font-size: 1;}
 footer,
 .entry-title,
 .entry-content,
-.pages,
+#pages,
 .yoggrtad-wrap,
 #post-nav>section {
 	max-width: 1200px;
@@ -315,7 +320,7 @@ footer,
 
 #wrap {
 /* 	background: rgba(0,0,0,0.05); */
-	padding-top: 3.6em;
+	padding-top: 8em;
 }
 
 code, pre, input[type="search"],
@@ -328,15 +333,46 @@ code, pre, input[type="search"],
 	display: none;
 }
 
-#pages {
-	font-size: 0.8125em;
+.pages {
+	position: fixed;
+	top: 4.5em;
+	padding: 1.125em 0.6em 1.00em 0.6em;
+	font-size: 0.6875em;
 	text-transform: uppercase;
-	padding: 1.5em 0;
-	background: rgba(0,0,0,0.03);
+	border-radius: 0.3em; 
+	-webkit-animation: nav 1s 1 ease-in-out;
+	z-index: 9876543210;
 }
 
-#pages:hover {
-	background: rgba(0,0,0,0.05);
+@-webkit-keyframes nav {
+	0% {opacity: 0;}
+	30% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+.pages {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.pages:hover,
+.dark .pages:hover {
+	background: rgba(255, 93, 38, 0.9);
+}
+
+.pages:hover a {
+	color: #fff;
+}
+
+.dark .pages {
+	background: rgba(255, 93, 38, 0.2);
+}
+
+.dark .pages a {
+	color: #ff5d26;
+}
+
+.dark .pages:hover a {
+	color: #000;
 }
 
 .pages ul li {
@@ -344,15 +380,7 @@ code, pre, input[type="search"],
 }
 
 .pages ul li {
-	padding: 0 1em;
-}
-
-.pages ul li:first-child {
-	padding-left: 0;
-}
-
-.pages ul li:last-child {
-	padding-bottom: 0;
+	padding: 0 0.5em;
 }
 
 #decoration-wrap {
@@ -375,8 +403,12 @@ code, pre, input[type="search"],
 	letter-spacing: -0.035em;
 	word-spacing: -0.1em;
 	opacity: 0.05;
-	/* This is my favorite trick on Windows */
-	text-shadow: rgba(255,255,255,0) 0 0 1px;
+	/* This is my favorite trick for Windows users */
+	text-shadow: rgba(255, 255, 255, 0) 0 0 1px;
+}
+
+.dark #decoration {
+	opacity: 0.3;
 }
 
 /* @end */
@@ -898,7 +930,7 @@ article:hover, aside:hover, figure:hover, footer:hover, header:hover, hgroup:hov
 	        transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
 }
 
-.continue-reading:hover {
+.continue-reading:hover, .pages, .pages li a {
 	/* dont use * mask here. and .continue-reading is special, need to overide a:hover */
 	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
 	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
