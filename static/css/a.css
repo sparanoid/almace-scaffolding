@@ -123,8 +123,13 @@ input[type="search"]:focus {
 	background: rgba(255, 85, 0, 0.9);
 }
 
-.pages:hover a {
+.pages:hover a,
+.pages:hover .current {
 	color: #fff;
+}
+
+.current {
+	color: rgba(0, 0, 0, 0.3);
 }
 
 #decoration-wrap {
@@ -258,8 +263,8 @@ code, pre, input[type="search"],
 	font-size: 0.6875em;
 	text-transform: uppercase;
 	border-radius: 0.3em; 
-	-webkit-animation: nav 1s 1 ease-in-out;
 	z-index: 9876543210;
+	-webkit-animation: nav 1s 1 ease-in-out;
 }
 
 .pages ul li {
@@ -268,6 +273,14 @@ code, pre, input[type="search"],
 
 .pages ul li {
 	padding: 0 0.3em;
+}
+
+.current:before {
+	content: "[";
+}
+
+.current:after {
+	content: "]";
 }
 
 #decoration-wrap {
@@ -793,7 +806,7 @@ article:hover, aside:hover, figure:hover, footer:hover, header:hover, hgroup:hov
 	        transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
 }
 
-.more:hover, .pages, .pages li a {
+.more:hover, .pages, .pages li a, .current {
 	/* dont use * mask here. and .more is special, need to overide a:hover */
 	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
 	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
