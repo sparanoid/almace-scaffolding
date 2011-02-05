@@ -15,10 +15,10 @@ layout: default
 <section id=post-nav>
 	<section>
 		{% if page.previous.url %}
-			<nav class=nav-next><a href="{{ page.previous.url }}/">{{page.previous.title}}</a></nav>
+			<nav class=nav-previous><a href="{{ page.previous.url }}/">{{page.previous.title}}</a></nav>
         {% endif %}
 		{% if page.next.url %}
-			<nav class=nav-previous><a href="{{ page.next.url }}/">{{page.next.title}}</a></nav>
+			<nav class=nav-next><a href="{{ page.next.url }}/">{{page.next.title}}</a></nav>
         {% endif %}
 	</section>
 </section>
