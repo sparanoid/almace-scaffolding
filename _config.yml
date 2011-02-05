@@ -25,5 +25,5 @@ server_port: 4321
 exclude: 
 - README.md
 - LICENSE
-- desktop.less
+- a.css
 - deploy.sh
