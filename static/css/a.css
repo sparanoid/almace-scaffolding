@@ -36,7 +36,7 @@
 
 /* @group CSS Reset */
 
-/* !asterisk, not worse than a block of shitty tags? */
+/* asterisk, not worse than a block of shitty tags? */
 * {margin: 0; padding: 0;}
 article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 
@@ -72,120 +72,60 @@ body, input {
 	color: #000;
 	background: #fff;
 }
-	.dark, .dark input {
-		color: #ff5d26;
-		background: #050505;
-	}
 
 a {
 	color: #000;
 }
-	.dark a {
-		color: #ff8600;
-	}
 
-a:hover {
-	color: #ff5d26;
-}
-	.dark a:hover {
-		color: #ffb400;
-	}
-
+a:hover,
 .entry-content a {
-	color: #ff5d26;
+	color: #f50;
 }
-	.dark .entry-content a {
-		color: #ff8300;
-	}
 
 .entry-content a:hover {
-	color: #a03226;
+	color: #c20;
 }
-	.dark .entry-content a:hover {
-		color: #ffb400;
-	}
 
 li, blockquote,
 #post-nav {
 	color: rgba(0, 0, 0, 0.6);
 }
-	.dark li, .dark blockquote,
-	.dark #post-nav {
-		color: rgba(255, 93, 38, 0.6);
-	}
 
 h1, h2, h3, h4, h5, h6, 
 .self-intro {
 	text-shadow: #fff 0 0 20px;
 }
-	.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
-	.dark .self-intro {
-		text-shadow: #050505 0 0 20px;
-	}
 
 code, 
 pre {
 	color: rgba(0, 0, 102, 0.75);
 	background-color: rgba(0, 255, 255, 0.2);
 }
-	.dark code, 
-	.dark pre {
-		color: rgba(0, 0, 102, 0.75);
-		background-color: #00ffff; 
-	}
 
 abbr {
 	border-color: rgba(0, 0, 0, 0.3);
 }
-	.dark abbr {
-		border-color: rgba(255, 93, 38, 0.3);
-	}
 
 input[type="search"] {
 	border: rgba(0, 0, 0, 0.3) 1px solid;
 	background: #fff;
 }
-	.dark input[type="search"] {
-		border: rgba(255, 93, 38, 0.5) 1px solid;
-		background: rgba(255, 93, 38, 0.1);
-	}
 
 input[type="search"]:focus {
-	-webkit-box-shadow: 0 0 10px rgba(255, 134, 0, 0.3);
-	   -moz-box-shadow: 0 0 10px rgba(255, 134, 0, 0.3);
-	        box-shadow: 0 0 10px rgba(255, 134, 0, 0.3);
+	border: rgba(255, 85, 0, 1) 1px solid;
 }
-	.dark input[type="search"]:focus {
-		-webkit-box-shadow: 0 0 10px rgba(255, 134, 0, 0.3);
-		   -moz-box-shadow: 0 0 10px rgba(255, 134, 0, 0.3);
-		        box-shadow: 0 0 10px rgba(255, 134, 0, 0.3);
-	}
 
 .pages {
 	background: rgba(0, 0, 0, 0.05);
 }
-	.dark .pages {
-		background: rgba(255, 93, 38, 0.2);
-	}
 
-.pages:hover,
-.dark .pages:hover {
-	background: rgba(255, 93, 38, 0.9);
+.pages:hover {
+	background: rgba(255, 85, 0, 0.9);
 }
-
-.pages a {
-	color: #000;
-}
-	.dark .pages a {
-		color: #ff5d26;
-	}
 
 .pages:hover a {
 	color: #fff;
 }
-	.dark .pages:hover a {
-		color: #000;
-	}
 
 #decoration-wrap {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(35%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
@@ -193,13 +133,6 @@ input[type="search"]:focus {
 /*	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,0,1)), color-stop(85%,rgba(34,34,34,0)), color-stop(100%,rgba(34,34,34,0)));*/
 /*	-webkit-mask-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(black), to(transparent));*/
 }
-	.dark #decoration-wrap {
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 124, 8, 0.4)), color-stop(35%,rgba(5, 5, 5, 0)), color-stop(100%,rgba(5, 5, 5, 0)));
-		background: -moz-linear-gradient(top, rgba(255, 124, 8, 0.4) 0%, rgba(5, 5, 5, 0) 35%, rgba(5, 5, 5, 0) 100%);
-	/*	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,0,1)), color-stop(85%,rgba(34,34,34,0)), color-stop(100%,rgba(34,34,34,0)));*/
-	/*	-webkit-mask-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(black), to(transparent));*/
-	}
-
 
 .note {
 	color: rgba(255, 255, 255, 0.8);
@@ -214,39 +147,25 @@ input[type="search"]:focus {
 .note a, .download a, .note a:hover, .download a:hover {
 	color: #fff;
 }
-	.dark .note, .dark .download, .dark .note a, .dark .download a, .dark .note a:hover, .dark .download a:hover {
-		color: #fff;
-	}
 
 a.more {
 	color: #fff;
-	background: #ff5d26;
+	background: #f50;
 }
-	.dark a.more {
-		color: #050505;
-		background: #ff5d26;
-	}
 
 a.more:hover {
 	color: #fff;
-	background: #d54e20;
+	background: #f70;
 }
-	.dark a.more:hover {
-		color: #000;
-		background: #ff8600;
-	}
 
 a.more:active {
-	background: #a03226;
+	background: #c20;
 }
-	.dark a.more:active {
-		background: #d54e20;
-	}
 
-::-webkit-input-placeholder {color: #ff5d26;}
-:-moz-placeholder {color: #ff5d26;}
-::-moz-selection {background: rgba(0, 255, 255, 0.9); color: #ff0000;}
-::selection {background: rgba(0, 255, 255, 0.9); color: #ff0000;}
+::-webkit-input-placeholder {color: #f50;}
+:-moz-placeholder {color: #f50;}
+::-moz-selection {background: rgba(0, 255, 255, 0.9); color: #f00;}
+::selection {background: rgba(0, 255, 255, 0.9); color: #f00;}
 .lindsayisgod::-moz-selection {background: #f00; color: #fff;}
 .lindsayisgod::selection {background: #f00; color: #fff;}
 
@@ -327,6 +246,11 @@ code, pre, input[type="search"],
 	display: none;
 }
 
+#pages {
+	/* used by absolute position in handheld styles */
+	position: relative;
+}
+
 .pages {
 	position: fixed;
 	top: 4.5em;
@@ -338,18 +262,12 @@ code, pre, input[type="search"],
 	z-index: 9876543210;
 }
 
-@-webkit-keyframes nav {
-	0% {opacity: 0;}
-	30% {opacity: 0;}
-	100% {opacity: 100;}
-}
-
 .pages ul li {
 	display: inline-block; 
 }
 
 .pages ul li {
-	padding: 0 0.5em;
+	padding: 0 0.3em;
 }
 
 #decoration-wrap {
@@ -374,10 +292,6 @@ code, pre, input[type="search"],
 	opacity: 0.05;
 	/* This is my favorite trick for Windows users */
 	text-shadow: rgba(255, 255, 255, 0) 0 0 1px;
-}
-
-.dark #decoration {
-	opacity: 0.3;
 }
 
 /* @end */
@@ -409,33 +323,18 @@ code, pre, input[type="search"],
 
 .entry-content section {
 	-webkit-column-count: 2;
-	   -moz-column-count: 2;
-	        column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
 	-webkit-column-gap: 40px;
-	   -moz-column-gap: 40px;
-	        column-gap: 40px;
+	-moz-column-gap: 40px;
+	column-gap: 40px;
 }
 
 .entry-content section.three-col {
 	-webkit-column-count: 3;
-	   -moz-column-count: 3;
-	        column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
 }
-
-
-/*
-.intro section {
-	-webkit-column-count: 1 !important;
-	-webkit-column-gap: 0;
-	-moz-column-count: 1;
-	-moz-column-gap: 0;
-	column-count: 1;
-	column-gap: 0;
-	width: 46%;
-	float: left;
-	padding: 0 20px;
-}
-*/
 
 .entry-content {
 	padding-bottom: 2em;
@@ -602,11 +501,6 @@ a.more:hover {
 	padding: 3em 0;
 	background: rgba(0, 0, 0, 0.04);
 	overflow: auto;
-}
-
-#post-nav:hover {
-	/* this is buggy in dark mode in all css3 browsers */
-/* 	background: rgba(0, 0, 0, 0.08); */
 }
 
 .nav-previous {
@@ -809,7 +703,8 @@ footer #search-form {
 
 @media screen and (max-width: 480px) {
 	/* a really small screen for debugging */
-	.pages ul li {padding: 0 0.5em;}
+	#wrap {padding-top: 5em;}
+	.pages {position: absolute; top: 2.4em;}
 	.entry-content ul {list-style-position: inside !important;}
 	.nav-previous {max-width: 100%; float: none; text-align: left; margin-top: 1.5em;}
 	.nav-previous:after {content: " - Older Entry";}
@@ -821,7 +716,6 @@ footer #search-form {
 
 @media screen and (max-device-width: 480px) {
 	body {-webkit-text-size-adjust: none; /* fix font-size on iphone */}
-	.pages ul li {padding: 0 0.5em;}
 }
 
 @media screen and (max-device-width: 320px) {
@@ -908,17 +802,23 @@ article:hover, aside:hover, figure:hover, footer:hover, header:hover, hgroup:hov
 }
 
 input[type="search"] {
-	-webkit-transition: -webkit-box-shadow 0.6s ease-in-out; 
-	   -moz-transition:    -moz-box-shadow 0.6s ease-in-out; 
-	     -o-transition:         box-shadow 0.6s ease-in-out; 
-	        transition:         box-shadow 0.6s ease-in-out; 
+	-webkit-transition: border 0.6s ease-in-out; 
+	   -moz-transition: border 0.6s ease-in-out; 
+	     -o-transition: border 0.6s ease-in-out; 
+	        transition: border 0.6s ease-in-out; 
 }
 
 input[type="search"]:hover {
-	-webkit-transition: -webkit-box-shadow 0.3s ease-in-out; 
-	   -moz-transition:    -moz-box-shadow 0.3s ease-in-out; 
-	     -o-transition:         box-shadow 0.3s ease-in-out; 
-	        transition:         box-shadow 0.3s ease-in-out; 
+	-webkit-transition: border 0.3s ease-in-out; 
+	   -moz-transition: border 0.3s ease-in-out; 
+	     -o-transition: border 0.3s ease-in-out; 
+	        transition: border 0.3s ease-in-out; 
+}
+
+@-webkit-keyframes nav {
+	0% {opacity: 0;}
+	30% {opacity: 0;}
+	100% {opacity: 100;}
 }
 
 /*
