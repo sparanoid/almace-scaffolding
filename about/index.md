@@ -18,7 +18,7 @@ type: about
 <p>This site is <abbr title="Not Safe For Work">NSFW</abbr>.</p>
 </section>
 
-<h2>Small Projects <a href="/project/" class=continue-reading>more</a></h2>
+<h2>Small Projects <a href="/project/" class=more>more</a></h2>
 
 <ul>
 	<li><a href="/lab/7z/">7-Zip L10n Project</a> - An open-source file archiver.</li>
