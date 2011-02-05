@@ -173,10 +173,12 @@ input[type="search"]:focus {
 	background: rgba(255, 93, 38, 0.9);
 }
 
-.pages a,
-.dark .pages a {
-	color: #ff5d26;
+.pages a {
+	color: #000;
 }
+	.dark .pages a {
+		color: #ff5d26;
+	}
 
 .pages:hover a {
 	color: #fff;
@@ -216,28 +218,28 @@ input[type="search"]:focus {
 		color: #fff;
 	}
 
-a.continue-reading {
+a.more {
 	color: #fff;
 	background: #ff5d26;
 }
-	.dark a.continue-reading {
+	.dark a.more {
 		color: #050505;
 		background: #ff5d26;
 	}
 
-a.continue-reading:hover {
+a.more:hover {
 	color: #fff;
 	background: #d54e20;
 }
-	.dark a.continue-reading:hover {
+	.dark a.more:hover {
 		color: #000;
 		background: #ff8600;
 	}
 
-a.continue-reading:active {
+a.more:active {
 	background: #a03226;
 }
-	.dark a.continue-reading:active {
+	.dark a.more:active {
 		background: #d54e20;
 	}
 
@@ -316,7 +318,7 @@ footer,
 }
 
 code, pre, input[type="search"],
-.note, .download, .continue-reading {
+.note, .download, .more {
 	border-radius: 0.3em;
 }
 
@@ -549,7 +551,7 @@ code, pre, input[type="search"],
 	margin-bottom: 1em;
 }
 
-.entry-content .continue-reading {
+.entry-content .more {
 	font-family: Arial, sans-serif;
 	font-size: 0.625em;
 	text-decoration: none;
@@ -575,8 +577,8 @@ code, pre, input[type="search"],
 	text-decoration: underline;
 }
 
-a.continue-reading,
-a.continue-reading:hover {
+a.more,
+a.more:hover {
 	/* this prevent adding text-shadow for 'MORE' link in About page */
 	text-shadow: none;
 	/* this prevent adding underline when in Archive page */
@@ -607,22 +609,22 @@ a.continue-reading:hover {
 /* 	background: rgba(0, 0, 0, 0.08); */
 }
 
-.nav-next {
+.nav-previous {
 	float: left;
 	max-width: 45%;
 }
 
-.nav-next:after {
+.nav-previous:after {
 	content: " - Older Entry";
 }
 
-.nav-previous {
+.nav-next {
 	float: right;
 	max-width: 45%;
 	text-align: right;
 }
 
-.nav-previous:before {
+.nav-next:before {
 	content: "Newer Entry - ";
 }
 
@@ -809,11 +811,11 @@ footer #search-form {
 	/* a really small screen for debugging */
 	.pages ul li {padding: 0 0.5em;}
 	.entry-content ul {list-style-position: inside !important;}
-	.nav-next {max-width: 100%; float: none; text-align: left; margin-top: 1.5em;}
-	.nav-next:after {content: " - Older Entry";}
-	.nav-previous {max-width: 100%; float: none; text-align: left;}
-	.nav-previous:before {content: "";}
-	.nav-previous:after {content: " - Newer Entry";}
+	.nav-previous {max-width: 100%; float: none; text-align: left; margin-top: 1.5em;}
+	.nav-previous:after {content: " - Older Entry";}
+	.nav-next {max-width: 100%; float: none; text-align: left;}
+	.nav-next:before {content: "";}
+	.nav-next:after {content: " - Newer Entry";}
 	.yoggrttext {font-size: 1em;}
 }
 
@@ -845,7 +847,7 @@ footer #search-form {
 	p, h2, h3 {widows: 3; orphans: 3;}
 	h2, h3{page-break-after: avoid;}
 	#wrap {margin-top: 3em;}
-	#search-form, #pages, #post-nav, #footer-meta, .entry-meta, .yoggrtad-wrap, .continue-reading, .entry-extra, .hide-this-shortcut-for-print-style {display: none !important;}
+	#search-form, #pages, #post-nav, #footer-meta, .entry-meta, .yoggrtad-wrap, .more, .entry-extra, .hide-this-shortcut-for-print-style {display: none !important;}
 	.entry-content a, .entry-content a:visited {text-decoration: none !important; font-weight: bold !important;}
 	.entry-content img, .entry-content p img {width: 100% !important; margin: 0 !important;}
 	.entry-content .note, .entry-content .download {margin: 0 !important; padding: 0 !important;}
@@ -875,7 +877,7 @@ a:hover {
 }
 
 article, aside, figure, footer, header, hgroup, nav, section:not(#decoration) {
-	/* dont use * mask here. and .continue-reading is special, need to overide a:hover */
+	/* dont use * mask here. and .more is special, need to overide a:hover */
 	-webkit-transition: opacity 1s ease-in-out, background-color 1s ease-in-out; 
 	   -moz-transition: opacity 1s ease-in-out, background-color 1s ease-in-out; 
 	     -o-transition: opacity 1s ease-in-out, background-color 1s ease-in-out; 
@@ -889,16 +891,16 @@ article:hover, aside:hover, figure:hover, footer:hover, header:hover, hgroup:hov
 	        transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.continue-reading {
-	/* dont use * mask here. and .continue-reading is special, need to overide a:hover */
+.more {
+	/* dont use * mask here. and .more is special, need to overide a:hover */
 	-webkit-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
 	   -moz-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
 	     -o-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
 	        transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
 }
 
-.continue-reading:hover, .pages, .pages li a {
-	/* dont use * mask here. and .continue-reading is special, need to overide a:hover */
+.more:hover, .pages, .pages li a {
+	/* dont use * mask here. and .more is special, need to overide a:hover */
 	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
 	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
 	     -o-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
