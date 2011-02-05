@@ -18,16 +18,12 @@
 
 <body{% if page.persona %} class={{ page.persona }}{% endif %}>
 
-<header id=top-logo>
-	<h1 id=site-title>
-		<a href="//{{ site.url }}/" title="{{ site.name }} [x]" rel=home accesskey=x>{{ site.name }}</a>
-	</h1>
-</header>
+<h1 id=site-title>{{ site.name }}</h1>
 
 <header id=pages>
 	<div class=pages>
 		<ul>
-			<li{% if page.type == 'home' %} class=current{% endif %}><a href="/">Home</a></li>
+			<li{% if page.type == 'home' %} class=current{% endif %}><a href="/" rel=home accesskey=x>Home</a></li>
 			<li{% if page.category == 'project' or page.title == 'Project' %} class=current{% endif %}><a href="/project/">Project</a></li>
 			<li{% if page.category == 'artwork' or page.title == 'Artwork' %} class=current{% endif %}><a href="/artwork/">Artwork</a></li>
 			<li{% if page.category == 'notebook' or page.title == 'Notebook' %} class=current{% endif %}><a href="/notebook/">Notebook</a></li>
@@ -55,7 +51,12 @@
 {{ content }}
 
 <footer>
-	<a href="#footer" id=footer accesskey=b class=hide-this-shortcut-for-print-style></a>
+	<ul>
+		<li>(c) <a href="/" class=lindsayisgod rel=home>{{ site.name }}</a></li>
+		<li class=unprintable><a href="/feed/" title="Feed - Atom (The Atom Syndication Format)">Feed</a></li>
+		<li class=unprintable><a href="http://twitter.com/{{ site.twitter }}">Twitter</a></li>
+	</ul>
+
 	<section id=search-form>
 		<form action=http://www.google.com/cse id=cse-search-box>
 			<input type=hidden name=cx value={{ site.googe-custom-search }}>
@@ -63,16 +64,6 @@
 			<input type=search name=q size=16 placeholder="search">
 		</form>
 	</section>
-
-	<p id=footer-meta>
-		<a href="/feed/" title="Feed - Atom (The Atom Syndication Format)">Feed</a> / 
-		<a href="http://twitter.com/{{ site.twitter }}">Twitter</a> / 
-		<a href="#" title="Back to top [t]" accesskey=t>top</a>
-	</p>
-
-	<p class=footer-printable>
-		(c) <a href="/" class=lindsayisgod rel=home>{{ site.name }}</a>
-	</p>
 </footer>
 
 </section>

@@ -91,12 +91,12 @@ li, blockquote,
 	color: rgba(0, 0, 0, 0.6);
 }
 
-h1, h2, h3, h4, h5, h6, 
+h1, h2, h3, h4, h5, h6,
 .self-intro {
 	text-shadow: #fff 0 0 20px;
 }
 
-code, 
+code,
 pre {
 	color: rgba(0, 0, 102, 0.75);
 	background-color: rgba(0, 255, 255, 0.2);
@@ -201,12 +201,12 @@ code, pre, input {
 }
 
 a {
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
-	letter-spacing: -.02em; 
+	letter-spacing: -.02em;
 }
 
 h1, .h1 {font-size: 1.625em;}
@@ -246,8 +246,7 @@ code, pre, input[type="search"],
 	border-radius: 0.3em;
 }
 
-#top-logo {
-	position: relative;
+#site-title {
 	display: none;
 }
 
@@ -262,13 +261,13 @@ code, pre, input[type="search"],
 	padding: 1.125em 0.6em 1.00em 0.6em;
 	font-size: 0.6875em;
 	text-transform: uppercase;
-	border-radius: 0.3em; 
+	border-radius: 0.3em;
 	z-index: 9876543210;
 	-webkit-animation: nav 1s 1 ease-in-out;
 }
 
 .pages ul li {
-	display: inline-block; 
+	display: inline-block;
 }
 
 .pages ul li {
@@ -467,7 +466,7 @@ code, pre, input[type="search"],
 	font-family: Arial, sans-serif;
 	font-size: 0.625em;
 	text-decoration: none;
-	padding: 0.25em 0.8em; 
+	padding: 0.25em 0.8em;
 	display: inline-block;
 	text-transform: uppercase;
 	vertical-align: 0.2em;
@@ -559,7 +558,7 @@ a.more:hover {
 
 .yoggrtad img {
 	margin: 0;
-	border-radius: 0.3em; 
+	border-radius: 0.3em;
 }
 
 .yoggrttext {
@@ -644,7 +643,7 @@ p.self-intro, p.self-intro abbr {
 
 p.self-intro {
 	font-weight: bold;
-	font-size: 250%; 
+	font-size: 250%;
 	line-height: 1.1em;
 	margin: 0 auto 0.5em auto;
 	text-align: left;
@@ -661,10 +660,39 @@ p.self-intro {
 
 /* @group Footer */
 
+footer {
+	font-size: 0.8125em;
+/* 	font-size: 0.625em; */
+	padding-bottom: 8em;
+	line-height: 1.2em;
+	text-transform: uppercase;
+}
+
+footer ul {
+	float: left;
+}
+
+footer ul li {
+	display: inline;
+}
+
+footer ul li:before {
+	content: " / ";
+}
+
+footer ul li:first-child:before {
+	content: "";
+}
+
+#search-form {
+	float: right;
+	margin-bottom: 1.5em;
+}
+
 input[type="search"] {
 	font-size: 1.1em;
-	float: right;
 	outline: none;
+	margin-top: -0.4em;
 	padding: 0.3em 0.5em;
 /*	-webkit-appearance: searchfield;*/
 	-webkit-appearance: none;
@@ -675,23 +703,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
 	display: none;
-}
-
-footer {
-	font-size: 0.8125em;
-/* 	font-size: 0.625em; */
-	padding-bottom: 8em;
-	line-height: 1.2em;
-	text-transform: uppercase; 
-	opacity: 0.4;
-}
-
-footer:hover {
-	opacity: 1;
-}
-
-footer #search-form {
-	margin-bottom: 1.5em;
 }
 
 /* @end */
@@ -725,6 +736,8 @@ footer #search-form {
 	.nav-next:before {content: "";}
 	.nav-next:after {content: " - Newer Entry";}
 	.yoggrttext {font-size: 1em;}
+	footer ul, #search-form {float: none;}
+	#search-form {margin-top: 2em;}
 }
 
 @media screen and (max-device-width: 480px) {
@@ -754,12 +767,10 @@ footer #search-form {
 	p, h2, h3 {widows: 3; orphans: 3;}
 	h2, h3{page-break-after: avoid;}
 	#wrap {margin-top: 3em;}
-	#search-form, #pages, #post-nav, #footer-meta, .entry-meta, .yoggrtad-wrap, .more, .entry-extra, .hide-this-shortcut-for-print-style {display: none !important;}
+	#search-form, #pages, #post-nav, .unprintable, .entry-meta, .yoggrtad-wrap, .more, .entry-extra {display: none !important;}
 	.entry-content a, .entry-content a:visited {text-decoration: none !important; font-weight: bold !important;}
 	.entry-content img, .entry-content p img {width: 100% !important; margin: 0 !important;}
 	.entry-content .note, .entry-content .download {margin: 0 !important; padding: 0 !important;}
-	.footer-printable a {font-weight: normal;}
-	.footer-printable a:after {content: none;}
 }
 
 /* @end */
@@ -770,62 +781,62 @@ footer #search-form {
 /* @group Transitions */
 
 a {
-	-webkit-transition: color 0.8s ease-in-out; 
-	   -moz-transition: color 0.8s ease-in-out; 
-	     -o-transition: color 0.8s ease-in-out; 
+	-webkit-transition: color 0.8s ease-in-out;
+	   -moz-transition: color 0.8s ease-in-out;
+	     -o-transition: color 0.8s ease-in-out;
 	        transition: color 0.8s ease-in-out;
 }
 
 a:hover {
-	-webkit-transition: color 0.0s ease-in-out; 
-	   -moz-transition: color 0.0s ease-in-out; 
-	     -o-transition: color 0.0s ease-in-out; 
+	-webkit-transition: color 0.0s ease-in-out;
+	   -moz-transition: color 0.0s ease-in-out;
+	     -o-transition: color 0.0s ease-in-out;
 	        transition: color 0.0s ease-in-out;
 }
 
-article, aside, figure, footer, header, hgroup, nav, section:not(#decoration) {
+article, aside, figure, header, hgroup, nav, section:not(#decoration) {
 	/* dont use * mask here. and .more is special, need to overide a:hover */
-	-webkit-transition: opacity 1s ease-in-out, background-color 1s ease-in-out; 
-	   -moz-transition: opacity 1s ease-in-out, background-color 1s ease-in-out; 
-	     -o-transition: opacity 1s ease-in-out, background-color 1s ease-in-out; 
+	-webkit-transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
+	   -moz-transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
+	     -o-transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
 	        transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
 }
 
-article:hover, aside:hover, figure:hover, footer:hover, header:hover, hgroup:hover, nav:hover, section:hover {
-	-webkit-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
-	   -moz-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
-	     -o-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+article:hover, aside:hover, figure:hover, header:hover, hgroup:hover, nav:hover, section:hover {
+	-webkit-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	   -moz-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	     -o-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 	        transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .more {
 	/* dont use * mask here. and .more is special, need to overide a:hover */
-	-webkit-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
-	   -moz-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
-	     -o-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out; 
+	-webkit-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
+	   -moz-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
+	     -o-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
 	        transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
 }
 
 .more:hover, .pages, .pages li a, .current {
 	/* dont use * mask here. and .more is special, need to overide a:hover */
-	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
-	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
-	     -o-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	     -o-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 	        transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 input[type="search"] {
-	-webkit-transition: border 0.6s ease-in-out; 
-	   -moz-transition: border 0.6s ease-in-out; 
-	     -o-transition: border 0.6s ease-in-out; 
-	        transition: border 0.6s ease-in-out; 
+	-webkit-transition: border 0.6s ease-in-out;
+	   -moz-transition: border 0.6s ease-in-out;
+	     -o-transition: border 0.6s ease-in-out;
+	        transition: border 0.6s ease-in-out;
 }
 
 input[type="search"]:hover {
-	-webkit-transition: border 0.3s ease-in-out; 
-	   -moz-transition: border 0.3s ease-in-out; 
-	     -o-transition: border 0.3s ease-in-out; 
-	        transition: border 0.3s ease-in-out; 
+	-webkit-transition: border 0.3s ease-in-out;
+	   -moz-transition: border 0.3s ease-in-out;
+	     -o-transition: border 0.3s ease-in-out;
+	        transition: border 0.3s ease-in-out;
 }
 
 @-webkit-keyframes nav {
