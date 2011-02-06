@@ -132,8 +132,8 @@ input[type="search"]:focus {
 }
 
 #decoration-wrap {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(35%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
 /*	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,0,1)), color-stop(85%,rgba(34,34,34,0)), color-stop(100%,rgba(34,34,34,0)));*/
 /*	-webkit-mask-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(black), to(transparent));*/
 }
@@ -306,7 +306,7 @@ code, pre, input[type="search"],
 #decoration-wrap {
 	width: 100%;
 	height: 540px;
-	margin-top: -52px;
+	margin-top: -20px;
 	padding-bottom: 0;
 	overflow: hidden;
 	position: absolute;
