@@ -19,9 +19,9 @@ type: home
 <section class=entry-content>
 <section>
 	<ul class=archive-excerpt>
-		{% for post in site.categories.project limit:6 offset:0 %}
-			{% include post-list-link.html %}
-	    {% endfor %}
+	{% for post in site.categories.project limit:6 offset:0 %}
+		{% include post-list-link.html %}
+    {% endfor %}
 	</ul>
 </section>
 </section>
