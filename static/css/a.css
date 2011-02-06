@@ -115,11 +115,22 @@ input[type="search"]:focus {
 }
 
 .pages {
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.2);
 }
 
 .pages:hover {
 	background: rgba(255, 85, 0, 0.9);
+}
+
+.effect-loader {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+@-webkit-keyframes fade {
+	0% {background: rgba(0, 0, 0, 0.7);}
+	80% {background: rgba(0, 0, 0, 0.7);}
+	81% {background: rgba(0, 0, 0, 0.7);}
+	100% {background: rgba(0, 0, 0, 0.2);}
 }
 
 .pages *,
@@ -201,7 +212,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
-	letter-spacing: -.02em;
+	letter-spacing: -0.02em;
 }
 
 h1, .h1 {font-size: 1.625em;}
@@ -253,15 +264,16 @@ code, pre, input[type="search"],
 .pages {
 	position: fixed;
 	top: 4.5em;
-	padding: 1.125em 1em 1.00em 0.8em;
+	padding: 1.125em 1em 1.00em 0.9em;
 	font-size: 0.6875em;
 	text-transform: uppercase;
 	border-radius: 0.3em;
 	z-index: 9876543210;
+	-webkit-animation: fade 4s 1 ease;
 }
 
 .effect-loader {
-	-webkit-animation: nav 1.2s 1 ease-in-out;
+	-webkit-animation: nav 1.2s 1 ease;
 }
 
 .pages ul li {
@@ -560,11 +572,6 @@ a.more:hover {
 	padding-bottom: 5em;
 	margin: 0 auto;
 	height: 90px;
-	opacity: 0.5;
-}
-
-.yoggrtad-wrap:hover{
-	opacity: 1;
 }
 
 .yoggrtad {
@@ -798,62 +805,38 @@ input[type="search"]::-webkit-search-results-decoration {
 /* @group Transitions */
 
 a {
-	-webkit-transition: color 0.8s ease-in-out;
-	   -moz-transition: color 0.8s ease-in-out;
-	     -o-transition: color 0.8s ease-in-out;
-	        transition: color 0.8s ease-in-out;
+	-webkit-transition: color 0.8s ease;
+	   -moz-transition: color 0.8s ease;
+	    -ms-transition: color 0.8s ease;
+	     -o-transition: color 0.8s ease;
+	        transition: color 0.8s ease;
 }
 
 a:hover {
-	-webkit-transition: color 0.0s ease-in-out;
-	   -moz-transition: color 0.0s ease-in-out;
-	     -o-transition: color 0.0s ease-in-out;
-	        transition: color 0.0s ease-in-out;
+	-webkit-transition: color 0.0s ease;
+	   -moz-transition: color 0.0s ease;
+	    -ms-transition: color 0.0s ease;
+	     -o-transition: color 0.0s ease;
+	        transition: color 0.0s ease;
 }
 
-article, aside, figure, header, hgroup, nav, section:not(#decoration) {
-	/* dont use * mask here. and .more is special, need to overide a:hover */
-	-webkit-transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
-	   -moz-transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
-	     -o-transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
-	        transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
-}
-
-article:hover, aside:hover, figure:hover, header:hover, hgroup:hover, nav:hover, section:hover {
-	-webkit-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-	   -moz-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-	     -o-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-	        transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.more {
-	/* dont use * mask here. and .more is special, need to overide a:hover */
-	-webkit-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
-	   -moz-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
-	     -o-transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
-	        transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
-}
-
-.more:hover, .pages {
-	/* dont use * mask here. and .more is special, need to overide a:hover */
-	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-	     -o-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-	        transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
+.more,
 input[type="search"] {
-	-webkit-transition: border 0.6s ease-in-out;
-	   -moz-transition: border 0.6s ease-in-out;
-	     -o-transition: border 0.6s ease-in-out;
-	        transition: border 0.6s ease-in-out;
+	-webkit-transition: background-color 1s ease, border 1s ease;
+	   -moz-transition: background-color 1s ease, border 1s ease;
+	    -ms-transition: background-color 1s ease, border 1s ease;
+	     -o-transition: background-color 1s ease, border 1s ease;
+	        transition: background-color 1s ease, border 1s ease;
 }
 
-input[type="search"]:hover {
-	-webkit-transition: border 0.3s ease-in-out;
-	   -moz-transition: border 0.3s ease-in-out;
-	     -o-transition: border 0.3s ease-in-out;
-	        transition: border 0.3s ease-in-out;
+.more:hover,
+input[type="search"]:hover,
+.pages {
+	-webkit-transition: background-color 0.3s ease, border 0.3s ease;
+	   -moz-transition: background-color 0.3s ease, border 0.3s ease;
+	    -ms-transition: background-color 0.3s ease, border 0.3s ease;
+	     -o-transition: background-color 0.3s ease, border 0.3s ease;
+	        transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 @-webkit-keyframes nav {
@@ -868,18 +851,6 @@ input[type="search"]:hover {
     67% {top: 4.5em;}
     86% {top: 4.45em;}
     100% {top: 4.5em;}
-}
-*/
-
-/*
-@-webkit-keyframes decoration {
-	0% {opacity:0.9;}
-	20% {opacity:0.9;}
-	100% {opacity:0.03;}
-}
-
-#decoration {
-	-webkit-animation: decoration 4s 1 ease-in-out;
 }
 */
 
