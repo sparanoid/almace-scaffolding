@@ -1,5 +1,5 @@
 /*! (c) sparanoid.com */
-aaabbccc
+
 /* @group Reference Block
 
 	By default:
@@ -115,20 +115,16 @@ input[type="search"]:focus {
 }
 
 .pages {
-	background: rgba(0, 0, 0, 0.05);
+	background: rgba(0, 0, 0, 0.1);
 }
 
 .pages:hover {
 	background: rgba(255, 85, 0, 0.9);
 }
 
-.pages:hover a,
-.pages:hover .current {
+.pages *,
+.pages *:hover {
 	color: #fff;
-}
-
-.current {
-	color: rgba(0, 0, 0, 0.3);
 }
 
 #decoration-wrap {
@@ -257,12 +253,15 @@ code, pre, input[type="search"],
 .pages {
 	position: fixed;
 	top: 4.5em;
-	padding: 1.125em 0.6em 1.00em 0.6em;
+	padding: 1.125em 1em 1.00em 0.8em;
 	font-size: 0.6875em;
 	text-transform: uppercase;
 	border-radius: 0.3em;
 	z-index: 9876543210;
-	-webkit-animation: nav 1s 1 ease-in-out;
+}
+
+.effect-loader {
+	-webkit-animation: nav 1.2s 1 ease-in-out;
 }
 
 .pages ul li {
@@ -270,9 +269,27 @@ code, pre, input[type="search"],
 }
 
 .pages ul li {
-	padding: 0 0.3em;
+	padding: 0 0.1em;
 }
 
+.pages ul li:before {
+	opacity: 0;
+	content: "[";
+}
+
+.pages ul li:after {
+	opacity: 0;
+	content: "]";
+}
+
+.pages ul li:hover:before,
+.pages ul li:hover:after,
+.current:before,
+.current:after {
+	opacity: 1 !important;
+}
+
+/*
 .current:before {
 	content: "[";
 }
@@ -280,6 +297,7 @@ code, pre, input[type="search"],
 .current:after {
 	content: "]";
 }
+*/
 
 #decoration-wrap {
 	width: 100%;
@@ -816,7 +834,7 @@ article:hover, aside:hover, figure:hover, header:hover, hgroup:hover, nav:hover,
 	        transition: color 1s ease-in-out, opacity 1s ease-in-out, background-color 1s ease-in-out;
 }
 
-.more:hover, .pages, .pages li a, .current {
+.more:hover, .pages {
 	/* dont use * mask here. and .more is special, need to overide a:hover */
 	-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 	   -moz-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -840,9 +858,18 @@ input[type="search"]:hover {
 
 @-webkit-keyframes nav {
 	0% {opacity: 0;}
-	30% {opacity: 0;}
+	50% {opacity: 0;}
 	100% {opacity: 100;}
 }
+
+/*
+@-webkit-keyframes nav {
+    0% {top: -4.5em;}
+    67% {top: 4.5em;}
+    86% {top: 4.45em;}
+    100% {top: 4.5em;}
+}
+*/
 
 /*
 @-webkit-keyframes decoration {
