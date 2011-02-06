@@ -126,13 +126,6 @@ input[type="search"]:focus {
 	background: rgba(0, 0, 0, 0.7);
 }
 
-@-webkit-keyframes fade {
-	0% {background: rgba(0, 0, 0, 0.7);}
-	80% {background: rgba(0, 0, 0, 0.7);}
-	81% {background: rgba(0, 0, 0, 0.7);}
-	100% {background: rgba(0, 0, 0, 0.2);}
-}
-
 .pages *,
 .pages *:hover {
 	color: #fff;
@@ -269,7 +262,6 @@ code, pre, input[type="search"],
 	text-transform: uppercase;
 	border-radius: 0.3em;
 	z-index: 9876543210;
-	-webkit-animation: fade 4s 1 ease;
 }
 
 .effect-loader {
