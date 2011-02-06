@@ -115,7 +115,7 @@ input[type="search"]:focus {
 }
 
 .pages {
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.15);
 }
 
 .pages:hover {
@@ -255,7 +255,7 @@ code, pre, input[type="search"],
 }
 
 .pages {
-	position: fixed;
+	position: absolute;
 	top: 4em;
 	padding: 0.75em 1em;
 	font-size: 0.8125em;
