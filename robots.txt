@@ -1,5 +1,5 @@
-User-agent: *
-
 Sitemap: http://sparanoid.com/sitemap.xml
 
-Disallow: /static
+User-agent: *
+
+Disallow: /static/

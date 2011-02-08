@@ -26,4 +26,4 @@ exclude:
 - README.md
 - LICENSE
 #- a.css
-- deploy.sh
+- Rakefile
