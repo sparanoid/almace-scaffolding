@@ -77,11 +77,11 @@ a {
 }
 
 a:hover,
-.entry-content a {
+article a {
 	color: #f50;
 }
 
-.entry-content a:hover {
+article a:hover {
 	color: #c20;
 }
 
@@ -223,20 +223,17 @@ h6, .h6 {font-size: 1;}
 /* @group Commons, Header and Index */
 
 /* #wrap, */
+header,
+article,
 footer,
-.entry-title,
-.entry-content,
-#pages,
+hgroup,
 .yoggrtad-wrap,
 #post-nav>section {
 	max-width: 1200px;
-	padding: 0 4%;
+	padding-left: 4%;
+	padding-right: 4%;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-article {
-	padding-top: 8em;
 }
 
 code, pre, input[type="search"],
@@ -248,59 +245,65 @@ code, pre, input[type="search"],
 	display: none;
 }
 
-#pages {
+hgroup {
+	/* aka .entry-title */
+	padding-top: 8em;
+	margin-bottom: 3em;
+}
+	hgroup time {
+		font-weight: normal;
+		text-transform: uppercase;
+		opacity: 0.2;
+	}
+	hgroup h2 {
+		/* aka .entry-meta */
+		display: block;
+		font-size: 1em;
+		clear: both;
+		margin-top: 0.6em;
+		text-transform: uppercase;
+		opacity: 0.5;
+	}
+
+article {
+	padding-bottom: 2em;
+}
+
+header {
+	/* aka #pages */
 	/* used by absolute position in handheld styles */
 	position: relative;
 }
-
-.pages {
-	position: absolute;
-	top: 4em;
-	padding: 0.75em 1em;
-	font-size: 0.8125em;
-	text-transform: uppercase;
-	border-radius: 0.3em;
-	z-index: 9876543210;
-}
-
-.effect-loader {
-	-webkit-animation: nav 1.2s 1 ease;
-}
-
-.pages ul li {
-	display: inline-block;
-}
-
-.pages ul li {
-	padding: 0 0.1em;
-}
-
-.pages ul li:before {
-	opacity: 0;
-	content: "[";
-}
-
-.pages ul li:after {
-	opacity: 0;
-	content: "]";
-}
-
-.pages ul li:hover:before,
-.pages ul li:hover:after,
-.current:before,
-.current:after {
-	opacity: 1 !important;
-}
-
-/*
-.current:before {
-	content: "[";
-}
-
-.current:after {
-	content: "]";
-}
-*/
+	.pages {
+		position: absolute;
+		top: 4em;
+		padding: 0.75em 1em;
+		font-size: 0.8125em;
+		text-transform: uppercase;
+		border-radius: 0.3em;
+		z-index: 9876543210;
+	}
+		.pages ul li {
+			display: inline-block;
+			padding: 0 0.1em;
+		}
+			.pages ul li:before {
+				opacity: 0;
+				content: "[";
+			}
+			.pages ul li:after {
+				opacity: 0;
+				content: "]";
+			}
+				.pages ul li:hover:before,
+				.pages ul li:hover:after,
+				.current:before,
+				.current:after {
+					opacity: 1 !important;
+				}
+		.effect-loader {
+			-webkit-animation: nav 1.2s 1 ease;
+		}
 
 #decoration-wrap {
 	width: 100%;
@@ -311,49 +314,29 @@ code, pre, input[type="search"],
 	position: absolute;
 	z-index: -999;
 }
-
-#decoration {
-	font-family: 'Scriptina Pro', Zapfino, serif;
-	margin-left: -3.2em;
-	text-align: center;
-	font-size: 12em;
-	word-break: keep-all;
-	white-space: nowrap;
-	letter-spacing: -0.035em;
-	word-spacing: -0.1em;
-	opacity: 0.05;
-	/* This is my favorite trick for Windows users */
-	text-shadow: rgba(255, 255, 255, 0) 0 0 1px;
-}
+	#decoration {
+		font-family: 'Scriptina Pro', Zapfino, serif;
+		margin-left: -3.2em;
+		text-align: center;
+		font-size: 12em;
+		word-break: keep-all;
+		white-space: nowrap;
+		letter-spacing: -0.035em;
+		word-spacing: -0.1em;
+		opacity: 0.05;
+		/* This is my favorite trick for Windows users */
+		text-shadow: rgba(255, 255, 255, 0) 0 0 1px;
+	}
 
 /* @end */
 
 
 
 
-/* @group Post Styles (single.php) */
+/* @group Post Content Styles */
 /* img p, blockquote p are workaround for WordPress auto paragraph */
 /* all paragraph should use margin-bottom instead of padding-bottom */
-.entry-title {
-	margin-bottom: 3.6em;
-}
-
-.entry-title time {
-	font-weight: normal;
-	text-transform: uppercase;
-	opacity: 0.2;
-}
-
-.entry-meta {
-	display: block;
-	font-size: 1em;
-	clear: both;
-	margin-top: 0.6em;
-	text-transform: uppercase;
-	opacity: 0.5;
-}
-
-.entry-content section {
+article section {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
 	column-count: 2;
@@ -362,104 +345,96 @@ code, pre, input[type="search"],
 	column-gap: 40px;
 }
 
-.entry-content section.three-col {
+article section.three-col {
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	column-count: 3;
 }
 
-.entry-content {
-	padding-bottom: 2em;
-}
-
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+article h1, article h2, article h3, article h4, article h5, article h6 {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	-webkit-column-span: all;
 	-moz-column-span: all;
 	column-span: all;
 }
+	article > h1:first-child, article > h2:first-child, article > h3:first-child, article > h4:first-child, article > h5:first-child, article > h6:first-child {
+		margin-top: 0;
+	}
 
-.entry-content > h1:first-child, .entry-content > h2:first-child, .entry-content > h3:first-child, .entry-content > h4:first-child, .entry-content > h5:first-child, .entry-content > h6:first-child {
-	margin-top: 0;
-}
-
-.entry-content img,
-.entry-content p img {
+article img,
+article p img {
 	width: 100%;
 	border-radius: 3px;
 	vertical-align: top;
 }
 
-.entry-content video {
+article video {
 	margin-bottom: 1em;
 	width: 100%;
 }
 
-.entry-content a {
+article a {
 	text-decoration: none;
 }
+	article a:hover {
+		text-decoration: underline;
+	}
 
-.entry-content a:hover {
-	text-decoration: underline;
-}
-
-.entry-content p {
+article p {
 	margin-bottom: 1.5em;
 	line-height: 1.5;
 	text-align: justify;
 }
 
-.entry-content ul, .entry-content ol {
+article ul, article ol {
 	margin-bottom: 1.5em;
 	list-style-position: outside;
 }
+	article li {
+		font-size: 0.9375em;
+		line-height: 1.7;
+	}
+		article li a {
+			text-decoration: none;
+		}
+			article li a:hover {
+				text-decoration: underline;
+			}
+		article ol li ol,
+		article ul li ul {
+			/* This trick fixs the global css reset margin. */
+			margin-left: 2em;
+			margin-bottom: 0;
+		}
+		article li > ul li,
+		article li > ol li,
+		article li > ul > li > ul li,
+		article li > ol > li > ol li {
+			/* fix sub-list inherit issue */
+			font-size: 1em;
+		}
 
-.entry-content li {
-	font-size: 0.9375em;
-	line-height: 1.7;
-}
-
-.entry-content li a {
-	text-decoration: none;
-}
-
-.entry-content li a:hover {
-	text-decoration: underline;
-}
-
-.entry-content ol li ol,
-.entry-content ul li ul {
-	/* This trick fixs the global css reset margin. */
-	margin-left: 2em;
-	margin-bottom: 0;
-}
-
-.entry-content li > ul li,
-.entry-content li > ol li,
-.entry-content li > ul > li > ul li,
-.entry-content li > ol > li > ol li {
-	/* fix sub-list inherit issue */
-	font-size: 1em;
-}
-
-.entry-content sup {
+article sup {
 	font-size: 0.6em;
 	margin: 0 0.2em;
 	vertical-align: super;
 }
 
-.entry-content code, .entry-content pre, .entry-content blockquote {
+article code, article pre, article blockquote {
 	margin-bottom: 2em;
 }
 
-.entry-content code {
+article code {
 	padding: 0.25em 0.5em;
 	word-wrap: break-word;
 	word-break: break-all;
 }
+	article code > em {
+		font-style: normal;
+	}
 
-.entry-content pre {
+article pre {
 	display: block;
 	padding: 0.5em 1em;
 	overflow: auto;
@@ -467,22 +442,21 @@ code, pre, input[type="search"],
 	/* white-space: nowrap; */
 }
 
-.entry-content blockquote {
+article blockquote {
 /*	max-width: 100%;*/
 /*	text-align: center;*/
 	line-height: 1.25em;
 }
+	article blockquote[lang=zh] {
+		line-height: 1em;
+	}
 
-.entry-content blockquote[lang=zh] {
-	line-height: 1em;
-}
-
-.entry-content .slogan {
+article .slogan {
 	font-size: 2.4em;
-	margin-bottom: 1em;
+	margin-bottom: 1.2em;
 }
 
-.entry-content .more {
+article .more {
 	font-family: Arial, sans-serif;
 	font-size: 0.625em;
 	text-decoration: none;
@@ -492,21 +466,19 @@ code, pre, input[type="search"],
 	vertical-align: 0.2em;
 }
 
-.entry-content .note, .entry-content .download {
+article .note, article .download {
 	font-size: 1.2em;
 	min-width: 44.4%;
 	margin-bottom: 1em;
 	padding: 1.65em 2em 1.5em 2em;
 }
-
-.entry-content .note a, .entry-content .download a {
-/* 	font-weight: bold; */
-	text-decoration: none;
-}
-
-.entry-content .note a:hover, .entry-content .download a:hover {
-	text-decoration: underline;
-}
+	article .note a, article .download a {
+	/* 	font-weight: bold; */
+		text-decoration: none;
+	}
+		article .note a:hover, article .download a:hover {
+			text-decoration: underline;
+		}
 
 a.more,
 a.more:hover {
@@ -516,8 +488,9 @@ a.more:hover {
 	text-decoration: none;
 }
 
-.entry-content code > em {
-	font-style: normal;
+.gist .gist-file .gist-meta {
+	/* fixing inherit issue */
+	font-size: 11px !important;
 }
 
 /* @end */
@@ -525,79 +498,63 @@ a.more:hover {
 
 
 
-/* @group Post Extra (single.php) */
+/* @group Post Extra */
 #post-nav {
-	/* .entry-extra just below the post-content */
 	font-size: 0.875em;
 	margin-bottom: 5em;
 	padding: 3em 0;
 	background: rgba(0, 0, 0, 0.04);
 	overflow: auto;
 }
-
-.nav-previous {
-	float: left;
-	max-width: 45%;
-}
-
-.nav-previous:after {
-	content: " - Older Entry";
-}
-
-.nav-next {
-	float: right;
-	max-width: 45%;
-	text-align: right;
-}
-
-.nav-next:before {
-	content: "Newer Entry - ";
-}
-
-.gist .gist-file .gist-meta {
-	/* fixing inherit issue */
-	font-size: 11px !important;
-}
+	.nav-previous {
+		float: left;
+		max-width: 45%;
+	}
+		.nav-previous:after {
+			content: " - Older Entry";
+		}
+	.nav-next {
+		float: right;
+		max-width: 45%;
+		text-align: right;
+	}
+		.nav-next:before {
+			content: "Newer Entry - ";
+		}
 
 .yoggrtad-wrap {
 	padding-bottom: 5em;
 	margin: 0 auto;
 	height: 90px;
 }
-
-.yoggrtad {
-	float: left;
-	clear: right;
-	padding-right: 1em;
-}
-
-.yoggrtad img {
-	margin: 0;
-	border-radius: 0.3em;
-}
-
-.yoggrttext {
-	font-size: 1.25em;
-	line-height: 1.5em;
-	font-family: Georgia, serif;
-	font-style: italic;
-	display: block;
-}
-
-.yoggrttext:before {
-	content: "\201C";
-	font-weight: normal;
-}
-
-.yoggrttext:after {
-	content: "\201D";
-	font-weight: normal;
-}
-
-.adby {
-	display: inline-block;
-	font-size: 0.8em;
-}
+	.yoggrtad {
+		float: left;
+		clear: right;
+		padding-right: 1em;
+	}
+		.yoggrtad img {
+			margin: 0;
+			border-radius: 0.3em;
+		}
+	.yoggrttext {
+		font-size: 1.25em;
+		line-height: 1.5em;
+		font-family: Georgia, serif;
+		font-style: italic;
+		display: block;
+	}
+		.yoggrttext:before {
+			content: "\201C";
+			font-weight: normal;
+		}
+		.yoggrttext:after {
+			content: "\201D";
+			font-weight: normal;
+		}
+	.adby {
+		display: inline-block;
+		font-size: 0.8em;
+	}
 
 /* @end */
 
@@ -626,41 +583,38 @@ a.more:hover {
 
 
 
-/* @group Archive & Pages (archive.php & pages.php) */
+/* @group Archive & Pages */
 
 .archive-excerpt {
 	font-size: 1.6em;
 	list-style: none;
 }
+	ul.archive-excerpt {
+		/* avoid using !important */
+		margin-bottom: 0;
+	}
+		.archive-excerpt li {
+			line-height: 1;
+			margin-top: 2em;
+		}
+			.archive-excerpt li p {
+				margin-top: 0.5em;
+				font-size: 0.68em;
+			}
+				.archive-excerpt li a:hover {
+					text-decoration: none;
+				}
 
-ul.archive-excerpt {
-	/* avoid using !important */
-	margin-bottom: 0;
-}
-
-.archive-excerpt li {
-	line-height: 1;
-	margin-top: 2em;
-}
-
-.archive-excerpt li a:hover {
-	text-decoration: none;
-}
-
-.archive-excerpt li p {
-	margin-top: 0.5em;
-	font-size: 0.68em;
-}
-
-p.self-intro, p.self-intro abbr {
+.self-intro, .self-intro abbr {
 	font-family: Titillium, sans-serif;
 }
 
-p.self-intro {
+.self-intro {
 	font-weight: bold;
 	font-size: 250%;
 	line-height: 1.1em;
 	margin: 0 auto 0.5em auto;
+	padding-top: 3.1em;
 	text-align: left;
 	letter-spacing: -0.05em;
 	-webkit-column-span: all;
@@ -678,47 +632,41 @@ p.self-intro {
 footer {
 	font-size: 0.8125em;
 /* 	font-size: 0.625em; */
-	padding-bottom: 8em;
+	padding-bottom: 6em;
 	line-height: 1.2em;
 	text-transform: uppercase;
 }
-
-footer ul {
-	float: left;
-}
-
-footer ul li {
-	display: inline;
-}
-
-footer ul li:before {
-	content: " / ";
-}
-
-footer ul li:first-child:before {
-	content: "";
-}
+	footer ul {
+		float: left;
+	}
+		footer ul li {
+			display: inline;
+		}
+			footer ul li:before {
+				content: " / ";
+			}
+				footer ul li:first-child:before {
+					content: "";
+				}
 
 #search-form {
 	float: right;
 	margin-bottom: 1.5em;
 }
-
-input[type="search"] {
-	font-size: 1.1em;
-	outline: none;
-	margin-top: -0.4em;
-	padding: 0.3em 0.5em;
-/*	-webkit-appearance: searchfield;*/
-	-webkit-appearance: none;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-	display: none;
-}
+	input[type="search"] {
+		font-size: 1.1em;
+		outline: none;
+		margin-top: -0.4em;
+		padding: 0.3em 0.5em;
+/* 		-webkit-appearance: searchfield; */
+		-webkit-appearance: none;
+	}
+	input[type="search"]::-webkit-search-decoration,
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-results-button,
+	input[type="search"]::-webkit-search-results-decoration {
+		display: none;
+	}
 
 /* @end */
 
@@ -732,7 +680,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media screen and (max-width: 800px) {
 	body {font-size: 95%;}
-	.entry-content section, .entry-content section.three-col {-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}
+	article section, article section.three-col {-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}
 	.yoggrttext, .adby {display: inline;}
 }
 
@@ -744,7 +692,9 @@ input[type="search"]::-webkit-search-results-decoration {
 	/* a really small screen for debugging */
 	#wrap {padding-top: 5em;}
 	.pages {position: absolute; top: 2.4em;}
-	.entry-content ul {list-style-position: inside !important;}
+	hgroup {padding-top: 6em}
+	.self-intro {padding-top: 2em;}
+	article ul {list-style-position: inside !important;}
 	.nav-previous {max-width: 100%; float: none; text-align: left; margin-top: 1.5em;}
 	.nav-previous:after {content: " - Older Entry";}
 	.nav-next {max-width: 100%; float: none; text-align: left;}
@@ -773,7 +723,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media print {
 	* {background: transparent !important; color: black !important; text-shadow: none !important; border: none !important;}
-	/*.entry-content a:after {content: " (" attr(href) ")"; font-weight: normal;}*/
+	/*article a:after {content: " (" attr(href) ")"; font-weight: normal;}*/
 	abbr:after {content: " (" attr(title) ")";}
 	pre, blockquote {page-break-inside: avoid;}
 	img {page-break-inside: avoid; /* opera only */}
@@ -782,10 +732,10 @@ input[type="search"]::-webkit-search-results-decoration {
 	p, h2, h3 {widows: 3; orphans: 3;}
 	h2, h3{page-break-after: avoid;}
 	#wrap {margin-top: 3em;}
-	#search-form, #pages, #post-nav, .unprintable, .entry-meta, .yoggrtad-wrap, .more, .entry-extra {display: none !important;}
-	.entry-content a, .entry-content a:visited {text-decoration: none !important; font-weight: bold !important;}
-	.entry-content img, .entry-content p img {width: 100% !important; margin: 0 !important;}
-	.entry-content .note, .entry-content .download {margin: 0 !important; padding: 0 !important;}
+	#search-form, header, #post-nav, .unprintable, hgroup h2, .yoggrtad-wrap, .more {display: none !important;}
+	article a, article a:visited {text-decoration: none !important; font-weight: bold !important;}
+	article img, article p img {width: 100% !important; margin: 0 !important;}
+	article .note, article .download {margin: 0 !important; padding: 0 !important;}
 }
 
 /* @end */
