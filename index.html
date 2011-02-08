@@ -5,22 +5,11 @@ title: Sparanoid
 
 {% assign latest = site.posts.first %}
 
-<article>
-	<hgroup class=entry-title>
-		<h1><a href="{{ latest.url }}/" rel=bookmark>{{ latest.title }} </a> <time pubdate datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%d %b %Y" }}</time></h1>
-		{% if latest.excerpt %}<h2 class=entry-meta>{{ latest.excerpt }}</h2>{% endif %}
-	</hgroup>
-	<section class=entry-content>
-		{{ latest.content }}
-	</section>
-</article>
+<hgroup>
+	<h1><a href="{{ latest.url }}/" rel=bookmark>{{ latest.title }} </a> <time pubdate datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%d %b %Y" }}</time></h1>
+	{% if latest.excerpt %}<h2>{{ latest.excerpt }}</h2>{% endif %}
+</hgroup>
 
-<section class=entry-content>
-<section>
-	<ul class=archive-excerpt>
-	{% for post in site.categories.project limit:6 offset:0 %}
-		{% include post-list-link.html %}
-    {% endfor %}
-	</ul>
-</section>
-</section>
+<article>
+	{{ latest.content }}
+</article>
