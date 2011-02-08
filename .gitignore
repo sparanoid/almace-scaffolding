@@ -1,4 +1,5 @@
 # Jekyll specified
+_site
 *.min.css
 
 # Mac OS X files

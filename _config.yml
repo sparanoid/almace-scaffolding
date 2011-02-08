@@ -1,7 +1,6 @@
 # folder settings
 source: .
-destination: /Users/sparanoid/dropbox/sparanoid-web/sparanoid.com/jekyll
-#destination: ./_site
+destination: ./_site
 
 # site settings
 permalink: /:categories/:title
