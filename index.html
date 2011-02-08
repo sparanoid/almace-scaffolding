@@ -3,13 +3,15 @@ layout: default
 title: Sparanoid
 ---
 
-{% assign latest = site.posts.first %}
-
+{% for post in site.posts limit:1 %}
+{% if post.category == "artwork" %} 
 <hgroup>
-	<h1><a href="{{ latest.url }}/" rel=bookmark>{{ latest.title }} </a> <time pubdate datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%d %b %Y" }}</time></h1>
-	{% if latest.excerpt %}<h2>{{ latest.excerpt }}</h2>{% endif %}
+	<h1><a href="{{ post.url }}/" rel=bookmark>{{ post.title }} </a> <time pubdate datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time></h1>
+	{% if post.excerpt %}<h2>{{ post.excerpt }}</h2>{% endif %}
 </hgroup>
 
 <article>
-	{{ latest.content }}
+	{{ post.content }}
 </article>
+{% endif %} 
+{% endfor %}
