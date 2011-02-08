@@ -22,8 +22,8 @@
 
 <h1 id=site-title>{{ site.name }}</h1>
 
-<header id=pages>
-	<div class="pages{% if page.title == 'Sparanoid' %} effect-loader{% endif %}">
+<header>
+	<section class="pages{% if page.title == 'Sparanoid' %} effect-loader{% endif %}">
 		<ul>
 			<li{% if page.title == 'Sparanoid' %} class=current{% endif %}><a href="/" rel=home accesskey=x>Home</a></li>
 			<li{% if page.title == 'Project' or page.category == 'project' %} class=current{% endif %}><a href="/project/">Project</a></li>
@@ -31,7 +31,7 @@
 			<li{% if page.title == 'Notebook' or page.category == 'notebook' %} class=current{% endif %}><a href="/notebook/">Notebook</a></li>
 			<li{% if page.title == 'About' or page.category == 'about' %} class=current{% endif %}><a href="/about/">About</a></li>
 		</ul>
-	</div>
+	</section>
 </header>
 
 <section id=decoration-wrap>
