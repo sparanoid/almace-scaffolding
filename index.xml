@@ -37,4 +37,5 @@ layout: nil
 </entry>
 {% endfor %}
 
+{% include fake-cache.html %}
 </feed>

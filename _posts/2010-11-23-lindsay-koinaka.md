@@ -5,7 +5,7 @@ category: project
 excerpt: A WordPress theme, now it's on Stacey
 ---
 
-<p><a href="//sparanoid.com/about/"><img src="http://static.sparanoid.com/lindsay-koinaka-3.png" alt="lindsay-koinaka 3.0" /></a></p>
+<p><a href="//sparanoid.com/about/"><img src="http://static.sparanoid.com/lindsay-koinaka-3-v2.png" alt="lindsay-koinaka 3.0" /></a></p>
 
 <p class="note">Now lindsay-koinaka has three versions: <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://staceyapp.com/">Stacey</a> and WordPress, check out the download boxes below</p>
 <p class="download"><a href="http://github.com/sparanoid/sparanoid.com">Jekyll Version</a> @GitHub (Full Site Source Code)</p>

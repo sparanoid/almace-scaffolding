@@ -19,4 +19,5 @@ layout: nil
 	</url>
 {% endfor %}
 
+{% include fake-cache.html %}
 </urlset>
