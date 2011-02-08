@@ -2,14 +2,13 @@
 layout: default
 ---
 
+<hgroup>
+	<h1>{{ page.title }} <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time></h1>
+	{% if page.excerpt %}<h2>{{ page.excerpt }}</h2>{% endif %}
+</hgroup>
+
 <article>
-	<hgroup class=entry-title>
-		<h1>{{ page.title }} <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time></h1>
-		{% if page.excerpt %}<h2 class=entry-meta>{{ page.excerpt }}</h2>{% endif %}
-	</hgroup>
-	<section class=entry-content>
-		{{ content }}
-	</section>
+	{{ content }}
 </article>
 
 <section id=post-nav>
