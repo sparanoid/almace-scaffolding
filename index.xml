@@ -31,9 +31,6 @@ layout: nil
 		<uri>http://{{ site.url }}/</uri>
 	</author>
 	<summary>{{ post.excerpt | xml_escape }}</summary>
-	<content type="html" xml:base="http://{{ site.url }}/"><![CDATA[
-	{{ post.excerpt }} ... <a href="http://{{ site.url }}{{ post.url }}/"><small>FULL VERSION</small></a>
-	]]></content>
 </entry>
 {% endfor %}
 
