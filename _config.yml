@@ -7,10 +7,11 @@ permalink: /:categories/:title
 markdown: rdiscount
 
 # custom vars
+url: sparanoid.com
+file: http://a1.sparanoid.com
 name: Sparanoid
 full-name: Tunghiao Liu
 email: info@sparanoid.com
-url: sparanoid.com
 twitter: sparanoid
 slogan: The net is vast and limitless
 googe-custom-search: 012621050422714259885:jabcs0nmacy
