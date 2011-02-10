@@ -5,7 +5,7 @@ category: project
 excerpt: Based on Japanese anime Lucky☆Star「らき☆すた」
 ---
 
-<p><img src="http://static.sparanoid.com/lucky-star-for-sogou_large.png" alt="Lucky Star Theme for QQ/Sogou Pinyin IME" /></p>
+<p><img src="{{ site.file }}/lucky-star-for-sogou_large.png" alt="Lucky Star Theme for QQ/Sogou Pinyin IME" /></p>
 
 <p>之前的 for Sogou 版本被誤刪除，這次重新發一下，新增了 QQ 輸入法的皮膚</p>
 
