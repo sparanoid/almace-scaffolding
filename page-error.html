@@ -1,0 +1,35 @@
+---
+permalink: assets/error.html
+---
+
+<!DOCTYPE html>
+<!-- No ASCII art here. -->
+{% include fake-cache.html %}
+
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel=stylesheet href="{{ site.assets }}/css/an.error.min.css">
+
+<title>{{ site.name }} - Error</title>
+
+<div id=wrap>
+<header>
+</header>
+
+<article>
+	{% include sponsor.html %}
+</article>
+
+<footer>
+	<p>You see this page probably one of the following errors occurs:</p>
+	<ul>
+		<li>The request cannot be fulfilled due to bad syntax.</li>
+		<li>The page you're looking for does not exist on the server.</li>
+		<li>It's forbidden and you don't have the right perimissions to view.</li>
+		<li>Couldn't retrieve the HTML document because of server-configuration problems.</li>
+		<li>The server is currently unavailable (because it is overloaded or down for maintenance).</li>
+	</ul>
+	<p>Now you can <a href="http://{{ site.url }}/">back to home</a> or refresh this page or just enjoy it.</p>
+</footer>
+</div>
