@@ -2,4 +2,4 @@ Sitemap: http://sparanoid.com/sitemap.xml
 
 User-agent: *
 
-Disallow: /static/
+Disallow: /assets/
