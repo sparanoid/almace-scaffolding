@@ -13,12 +13,10 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<link rel=stylesheet href="/static/css/a.min.css">
+<link rel=stylesheet href="{{ site.assets }}/css/a.min.css">
 <link rel=alternate href="/feed/" type=application/atom+xml>
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
-
-<body{% if page.persona %} class={{ page.persona }}{% endif %}>
 
 <h1 id=site-title>{{ site.name }}</h1>
 
@@ -65,5 +63,3 @@
 		</form>
 	</section>
 </footer>
-
-</body>
