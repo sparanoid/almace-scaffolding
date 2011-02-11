@@ -1,32 +1,19 @@
----
-permalink: assets/404.html
----
+/*! (c) sparanoid.com */
 
-<!DOCTYPE html>
-<title>Sparanoid - Error 404: Page not found</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<style type="text/css">
-<!--
 * {
 	margin: 0;
 	padding: 0;
 }
 body {
 	background: rgba(0, 0, 0, 0.05);
-	color: #000;
+	color: rgba(0, 0, 0, 0.35);
 	font-family: Arial, sans-serif;
 	line-height: 1;
 }
 
 a {
-	color: #000;
+	color: rgba(0, 0, 0, 0.7);
 	text-decoration: none;
-}
-
-header {
-	margin: 10%;
 }
 
 br {
@@ -34,17 +21,27 @@ br {
 	display: none;
 }
 
-article, footer {
+#wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	width: 400px;
-	margin: 0 auto 10px auto;
+	height: 480px;
+	margin: -240px 0 0 -200px;
+/* 	background: #fff; */
 }
 
-article section:first-child {
+header {
 	display: block;
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background: #000;
+	background: rgba(0, 0, 0, 1);
+	margin: 10% auto 20px auto;
+}
+
+article, footer {
+	width: 400px;
 	margin: 0 auto 20px auto;
 }
 
@@ -86,24 +83,12 @@ article section:first-child {
 footer {
 	font-size: 12px;
 }
-	footer p {
+	footer p, footer li {
 		margin: 0 20px;
+		line-height: 1.5;
 	}
--->
-</style>
-
-<!--[if lt IE 9]>
-<![endif]-->
-
-<header>
-</header>
-
-<article>
-	<section>
-	</section>
-	{% include sponsor.html %}
-</article>
-
-<footer>
-	<p>This is an error 404 page, the page you're looking for doesn't exist.</p>
-</footer>
+	footer ul {
+		margin: 1em 0 1em 20px;
+	}
+::-moz-selection {background: rgba(0, 0, 0, 0.05);}
+::selection {background: rgba(0, 0, 0, 0.05);}

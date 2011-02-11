@@ -168,8 +168,8 @@ a.more:active {
 
 ::-webkit-input-placeholder {color: #f50;}
 :-moz-placeholder {color: #f50;}
-::-moz-selection {background: rgba(0, 255, 255, 0.9); color: #f00;}
-::selection {background: rgba(0, 255, 255, 0.9); color: #f00;}
+::-moz-selection {background: rgba(0, 0, 0, 0.05);}
+::selection {background: rgba(0, 0, 0, 0.05);}
 .lindsayisgod::-moz-selection {background: #f00; color: #fff;}
 .lindsayisgod::selection {background: #f00; color: #fff;}
 
