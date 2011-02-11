@@ -48,14 +48,14 @@ article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 
 @font-face {
 	font-family: 'Titillium';
-	src: local('☺'), url('../font/titilliumtext25l003.otf') format('opentype'), url('../font/titilliumtext25l003.ttf') format('truetype');
+	src: local('☺'), url('http://a1.sparanoid.com/assets/font/titilliumtext25l003.otf') format('opentype'), url('http://a1.sparanoid.com/assets/font/titilliumtext25l003.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Scriptina Pro';
-	src: local('☺'), url('../font/scriptina_pro.otf') format('opentype'), url('../font/scriptina_pro.ttf') format('truetype');
+	src: local('☺'), url('http://a1.sparanoid.com/assets/font/scriptina_pro.otf') format('opentype'), url('http://a1.sparanoid.com/assets/font/scriptina_pro.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
