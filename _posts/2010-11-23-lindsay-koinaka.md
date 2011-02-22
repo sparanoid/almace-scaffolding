@@ -2,7 +2,7 @@
 layout: post
 title: lindsay-koinaka 3.0
 category: project
-excerpt: A WordPress theme, now it's on Stacey
+excerpt: A WordPress theme, now it's on Stacey and Jekyll
 ---
 
 <p><a href="//sparanoid.com/about/"><img src="{{ site.file }}/lindsay-koinaka-3-v2.png" alt="lindsay-koinaka 3.0" /></a></p>
