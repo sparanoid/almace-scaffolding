@@ -8,7 +8,7 @@ excerpt: A WordPress theme, now it's on Stacey and Jekyll
 <p><a href="//sparanoid.com/about/"><img src="{{ site.file }}/lindsay-koinaka-3-v2.png" alt="lindsay-koinaka 3.0" /></a></p>
 
 <p class="note">Now lindsay-koinaka has three versions: <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://staceyapp.com/">Stacey</a> and WordPress, check out the download boxes below</p>
-<p class="download"><a href="http://github.com/sparanoid/sparanoid.com">Jekyll Version</a> @GitHub (Full Site Source Code)</p>
+<p class="download"><a href="http://github.com/sparanoid/lindsay-koinaka-jekyll">Jekyll Version</a> @GitHub (Full Site Source Code)</p>
 <p class="download"><a href="http://github.com/sparanoid/lindsay-koinaka-stacey">Stacey Version</a> @GitHub (Full Site Source Code)</p>
 <p class="download"><a href="http://github.com/sparanoid/lindsay-koinaka-wp">WordPress Version</a> @GitHub (Uncompressed Source Code)</p>
 
