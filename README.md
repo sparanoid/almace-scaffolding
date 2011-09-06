@@ -4,12 +4,6 @@ lindsay-loinaka (Jekyll Version)
 [Jekyll][jk] runing on [sparanoid.com][sp], Codename lindsay-koinaka, version 14. Looking for Stacey or WordPress version? Go [here][lk-stacey] and [here][lk-wp].
 
 
-Instructions
-------------
-
-* I don't suppose you're stupid, do it yourself.
-
-
 License
 -------
 

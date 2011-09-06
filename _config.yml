@@ -8,7 +8,7 @@ markdown: rdiscount
 
 # custom vars
 url: sparanoid.com
-file: http://a1.sparanoid.com
+file: http://rsrc.sparanoid.com
 assets: /assets
 name: Sparanoid
 full-name: Tunghiao Liu
