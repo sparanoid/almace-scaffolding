@@ -1,7 +1,13 @@
-lindsay-loinaka (Jekyll Version)
-================================
+fogbound-highrise
+=================
 
-[Jekyll][jk] runing on [sparanoid.com][sp], Codename lindsay-koinaka, version 14. Looking for Stacey or WordPress version? Go [here][lk-stacey] and [here][lk-wp].
+[Jekyll][jk] runing on [sparanoid.com][sp], Codename fogbound-highrise, version 15.
+
+
+Instructions
+------------
+
+* I don't suppose you're stupid.
 
 
 License
@@ -9,7 +15,5 @@ License
 
 See LICENSE.
 
-[lk-stacey]: http://github.com/sparanoid/lindsay-koinaka-stacey
-[lk-wp]: http://github.com/sparanoid/lindsay-koinaka-wp
 [jk]: https://github.com/mojombo/jekyll
 [sp]: http://sparanoid.com/
