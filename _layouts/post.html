@@ -3,9 +3,9 @@ layout: default
 ---
 
 <hgroup>
-	<h2>{{ page.head }}</h2>
-	<h1 class=rt>{{ page.title }}</h1>
-	{% if page.excerpt %}<h3 class=lt>{{ page.excerpt }}</h3>{% endif %}
+	<h1>{{ page.title }}</h1>
+	{% if page.date %}<h2><time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %Y" }}</time></h2>{% endif %}
+	{% if page.desc %}<h2>{{ page.desc }}</h2>{% endif %}
 </hgroup>
 
 <article>

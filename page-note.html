@@ -1,0 +1,14 @@
+---
+layout: post
+title: Note
+permalink: /note/index.html
+desc: Random ramblings
+---
+
+<div class=txt>
+<ul class=pl>
+{% for post in site.categories.note %}
+	<li><a href={{ post.url }}/>{{ post.title }}</a><ins>{{ post.excerpt }}</ins></li>
+{% endfor %}
+</ul>
+</div>

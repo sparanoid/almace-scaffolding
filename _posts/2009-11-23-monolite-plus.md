@@ -1,21 +1,17 @@
 ---
 layout: post
 title: foobar2000 Skin - MonoLite Plus
-head: MonoLite Plus
-category: project
+category: work
 excerpt: A foobar2000 theme based on Columns UI
+thumb: monolite-plus.jpg
+bg: '#fff9ed'
 ---
 
-<section class=text>
 <p class=note>Lastest Version: <strong>0.4.3</strong> for foobar2000 1.0 / <strong>0.2</strong> for foobar2000 0.9.6.9</p>
 <p class=note>0.4.* 版本的 Last.fm 同步功能可能會在退出 foobar2000 時隨機出現錯誤提示，但不會影響正常使用</p>
-</section>
 
-<section>
 <p><img src="{{ site.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>
-</section>
 
-<section class=text>
 <h3>什麽是 MonoLite Plus？</h3>
 
 <p>MonoLite Plus 是一款基于 <a href="http://yuo.be/columns.php">Columns UI</a> 組件創建的 <a href="http://www.foobar2000.org/">foobar2000</a> 皮膚</p>
@@ -31,9 +27,25 @@ excerpt: A foobar2000 theme based on Columns UI
 <li>多處界面細節調整</li>
 </ul>
 
-<p><strong>MonoLite Plus 0.4.* 界面截圖：</strong><a href="{{ site.file }}/monolite-plus-04-01.png" rel="lightbox[monolite_04]">#1</a> <a href="{{ site.file }}/monolite-plus-04-02.png" rel="lightbox[monolite_04]">#2</a><br />
-<strong>MonoLite Plus 0.2 / 0.3.* 界面截圖：</strong><a href="{{ site.file }}/monolite-plus-02-01.png" rel="lightbox[monolite_02]">#1</a> <a href="{{ site.file }}/monolite-plus-02-02.png" rel="lightbox[monolite_02]">#2</a> <a href="{{ site.file }}/monolite-plus-02-03.png" rel="lightbox[monolite_02]">#3</a> <a href="{{ site.file }}/monolite-plus-02-04.png" rel="lightbox[monolite_02]">#4</a> <a href="{{ site.file }}/monolite-plus-02-05.png" rel="lightbox[monolite_02]">#5</a> <a href="{{ site.file }}/monolite-plus-02-06.png" rel="lightbox[monolite_02]">#6</a> <a href="{{ site.file }}/monolite-plus-02-07.png" rel="lightbox[monolite_02]">#7</a><br />
-<strong>MonoLite Plus 0.1 界面截圖：</strong><a href="{{ site.file }}/monolite-plus-01.png" rel="lightbox[monolite_01]">#1</a> <a href="{{ site.file }}/monolite-plus-02.png" rel="lightbox[monolite_01]">#2</a> <a href="{{ site.file }}/monolite-plus-03.png" rel="lightbox[monolite_01]">#3</a></p>
+<p>
+<strong>MonoLite Plus 0.4.* 界面截圖：</strong>
+	<a href="{{ site.file }}/monolite-plus-04-01.png">#1</a>
+	<a href="{{ site.file }}/monolite-plus-04-02.png">#2</a>
+<br>
+<strong>MonoLite Plus 0.2 / 0.3.* 界面截圖：</strong>
+	<a href="{{ site.file }}/monolite-plus-02-01.png">#1</a>
+	<a href="{{ site.file }}/monolite-plus-02-02.png">#2</a>
+	<a href="{{ site.file }}/monolite-plus-02-03.png">#3</a>
+	<a href="{{ site.file }}/monolite-plus-02-04.png">#4</a>
+	<a href="{{ site.file }}/monolite-plus-02-05.png">#5</a>
+	<a href="{{ site.file }}/monolite-plus-02-06.png">#6</a>
+	<a href="{{ site.file }}/monolite-plus-02-07.png">#7</a>
+<br>
+<strong>MonoLite Plus 0.1 界面截圖：</strong>
+	<a href="{{ site.file }}/monolite-plus-01.png">#1</a>
+	<a href="{{ site.file }}/monolite-plus-02.png">#2</a>
+	<a href="{{ site.file }}/monolite-plus-03.png">#3</a>
+</p>
 
 <h3>MonoLite Plus 安裝向導 (Portable 模式)</h3>
 
@@ -120,4 +132,3 @@ excerpt: A foobar2000 theme based on Columns UI
 <p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-03.7z</p>
 <p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-02.7z</p>
 <p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-01.7z</p>
-</section>

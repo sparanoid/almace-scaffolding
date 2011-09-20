@@ -13,10 +13,10 @@ url: sparanoid.com
 file: http://rsrc.sparanoid.com
 
 # used by specified background images
-assets-cdn: 
+assets-cdn: http://a2.sparanoid.com
 
-# used by css url in default.html
-assets-path: /assets
+# used by css url in default.html and index.xml
+css-path: /css
 
 # custom vars
 name: Sparanoid
@@ -24,7 +24,6 @@ full-name: Tunghiao Liu
 email: info@sparanoid.com
 twitter: sparanoid
 slogan: The net is vast and limitless
-googe-custom-search: 012621050422714259885:yjom5u8_gk4
 
 # fire up a localhost and auto generate when files change
 auto: true
@@ -36,4 +35,4 @@ exclude:
 - README.md
 - LICENSE
 - Rakefile
-- fogbound-highrise.tmproj
+- cyrconplex.tmproj

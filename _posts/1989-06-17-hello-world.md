@@ -1,11 +1,8 @@
 ---
 layout: post
 title: Hello World
-head: Hello World
-category: notebook
+category: note
 excerpt: It's me
 ---
 
-<section class="text">
 <p>Yes, it's me.</p>
-</section>

@@ -18,6 +18,4 @@ layout: nil
 		<priority>0.7</priority>
 	</url>
 {% endfor %}
-
-{% include fake-cache.html %}
 </urlset>

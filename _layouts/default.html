@@ -1,84 +1,57 @@
 <!DOCTYPE html>
 <!--
-                                    _    __	 	
+                                    _    __
   ___ ___  ___ ________ ____  ___  (_)__/ /
  (_-</ _ \/ _ `/ __/ _ `/ _ \/ _ \/ / _  /
 /___/ .__/\_,_/_/  \_,_/_//_/\___/_/\_,_/
    /_/
 
 -->
-
-{% include fake-cache.html %}
-
-<meta name=viewport content=width=device-width>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
 
 <link rel=alternate href=/feed/ type=application/atom+xml>
-<link rel=stylesheet href={{ site.assets-path }}/css/a.min.css>
+<link rel=stylesheet href={{ site.css-path }}/a.min.css>
+<link rel=dns-prefetch href={{ site.file }}>
 
-{% if page.bg-img %}<style>:root {background-image: url({% if site.assets-cdn %}{{ site.assets-cdn }}{% endif %}{{ site.assets-path }}{{ page.bg-img }});}</style>{% endif %}
+{% if page.title == 'Sparanoid' %}<style>:root {background: url(/img/s.svg) no-repeat 0 0;}</style>{% endif %}
+{% if page.title == 'Work' or page.category == 'work' %}<style>:root {background: url(/img/w.svg) no-repeat 0 0;}</style>{% endif %}
+{% if page.title == 'Note' or page.category == 'note' %}<style>:root {background: url(/img/n.svg) no-repeat 0 0;}</style>{% endif %}
+{% if page.title == 'About' or page.category == 'about' %}<style>:root {background: url(/img/a.svg) no-repeat 0 0;}</style>{% endif %}
+{% if page.title == 'Error' %}<style>:root {background: #ff0;}</style>{% endif %}
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
-<h1 id=st>{{ site.name }}</h1>
-
 <header>
 	<ul>
-		<li{% if page.title == 'Sparanoid' %} class=current{% endif %}><a href=/ rel=home accesskey=x>Home</a></li>
-		<li{% if page.title == 'Project' or page.category == 'project' %} class=current{% endif %}><a href=/project/>Project</a></li>
-		<li{% if page.title == 'Artwork' or page.category == 'artwork' %} class=current{% endif %}><a href=/artwork/>Artwork</a></li>
-		<li{% if page.title == 'Notebook' or page.category == 'notebook' %} class=current{% endif %}><a href=/notebook/>Notebook</a></li>
+		<li><a href=/ rel=home accesskey=x>Home</a></li>
+		<li{% if page.title == 'Work' or page.category == 'work' %} class=current{% endif %}><a href=/work/>Work</a></li>
+		<li{% if page.title == 'Note' or page.category == 'note' %} class=current{% endif %}><a href=/note/>Note</a></li>
 		<li{% if page.title == 'About' or page.category == 'about' %} class=current{% endif %}><a href=/about/>About</a></li>
 	</ul>
 </header>
 
 {{ content }}
 
-<footer{% if page.title == 'Sparanoid' or page.type == 'page' or page.title == 'archive' %}{% else %} class=is-entry{% endif %}>
-	{% if page.category == "artwork" or page.category == "project" or page.category == "notebook" %} 
-	<div id=nv>
-		<p class=lt>Next Entry / Previous Entry</p>
-		<div class=rt>
-			{% if page.next.url %}
-				<p><a href={{ page.next.url }}/>{{ page.next.title }}</a></p>
-			{% else %}
-				<p>N/A</p>
-	        {% endif %}
-			{% if page.previous.url %}
-				<p><a href={{ page.previous.url }}/>{{ page.previous.title }}</a></p>
-			{% else %}
-				<p>N/A</p>
-	        {% endif %}
-		</div>
-	</div>
+{% if page.category == "work" or page.category == "note" %} 
+<nav>
+{% if page.next.url %}
+	<p><span>Next</span> <a href={{ page.next.url }}/>{{ page.next.title }}</a></p>
+{% else %}
+	<p><span>Next</span> N/A</p>
+{% endif %}
+{% if page.previous.url %}
+	<p><span>Prev</span> <a href={{ page.previous.url }}/>{{ page.previous.title }}</a></p>
+{% else %}
+	<p><span>Prev</span> N/A</p>
+{% endif %}
+</nav>
+{% endif %}
+
+<footer>
+	{% if page.title != 'Sparanoid' %}
+	{% include sponsor.html %}
+	<br>
 	{% endif %}
 
-	<div id=sc>
-		<p class=lt>Search this site</p>
-		<div class=rt>
-			<form action=http://www.google.com/cse id=cse-search-box>
-				<input type=hidden name=cx value={{ site.googe-custom-search }}>
-				<input type=hidden name=ie value=utf-8>
-				<input type=search name=q size=16>
-			</form>
-		</div>
-	</div>
-
-	<div id=sp>
-		{% include sponsor.html %}
-	</div>
-
-	<div id=cp>
-		<p class=lt>&copy;</p>
-		<div class=rt>
-			<a href=/>{{ site.name }}</a>
-		</div>
-	</div>
-
-	<div id=mt>
-		<p class=lt>Meta</p>
-		<ul class=rt>
-			<li><a href=/feed/ title="Feed - Atom (The Atom Syndication Format)">Feed</a></li>
-			<li><a href=http://twitter.com/{{ site.twitter }}>Twitter</a></li>
-		</ul>
-	</div>
+	<p class=c><a href=http://twitter.com/{{ site.twitter }}>{{ site.name }}</a> feat. <a href=http://sparanoid.com/work/cyrconplex/>cyrconplex</a>. (<a href=/feed/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>)</p>
 </footer>
