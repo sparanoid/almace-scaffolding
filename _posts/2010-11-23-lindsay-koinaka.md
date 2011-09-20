@@ -7,10 +7,7 @@ thumb: lindsay-koinaka.jpg
 ---
 
 <div class=txt>
-<p class=note>Now lindsay-koinaka has three versions: <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://staceyapp.com/">Stacey</a> and WordPress, check out the download boxes below</p>
-<p class=download><a href="http://github.com/sparanoid/lindsay-koinaka-jekyll">Jekyll Version</a> @GitHub (Full Site Source Code)</p>
-<p class=download><a href="http://github.com/sparanoid/lindsay-koinaka-stacey">Stacey Version</a> @GitHub (Full Site Source Code)</p>
-<p class=download><a href="http://github.com/sparanoid/lindsay-koinaka-wp">WordPress Version</a> @GitHub (Uncompressed Source Code)</p>
+<p class=note>Since September 2011, source code no longer provided, sorry for that.</p>
 
 <p>在發佈第二版的時候，很多東西都會自己在敷衍自己，而成品的很多東西明明感覺並不對勁、不滿意。但在我讀完 <a href="http://books.alistapart.com/products/html5-for-web-designers">HTML5 / CSS3 For Web Designers</a> 這兩本書後，我覺得還可以做的更好（這兩本書很薄，內容不多，很快就可以閱讀完）。也希望這種創作時產生的惰性，可以在今後盡量避免</p>
 
