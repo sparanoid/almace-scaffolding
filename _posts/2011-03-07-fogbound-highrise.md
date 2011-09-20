@@ -6,6 +6,6 @@ excerpt: The 15th version of sparanoid.com, featuring Jekyll
 thumb: fogbound-highrise.png
 ---
 
-<p><img src="{{ site.file }}/fogbound-highrise.png"></p>
+<p><img src="{{ site.file }}/fogbound-highrise-screenshot.png"></p>
 
 @<a href="https://github.com/sparanoid/fogbound-highrise">GitHub</a>

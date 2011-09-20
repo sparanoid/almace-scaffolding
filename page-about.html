@@ -1,25 +1,27 @@
 ---
 layout: post
-title: About
-permalink: /about/index.html
+title: About ／ について ／ 關於
+permalink: /about/
 desc: A brief introduction
 ---
 
 <div class=txt>
-<p>Sparanoid is a personal website created by Tunghsiao Liu (a.k.a. 劉通曉), an undergraduate at Tianjin Academy of Fine Arts. You are welcome to ping me on <a href="http://twitter.com/tunghsiao">Twitter</a> or send correspondence to <a href="mailto:info@sparanoid.com">info@sparanoid.com</a>.</p>
+<p>Sparanoid is a personal website about fine arts and web design.</p>
 
-<h3>Projects</h3>
+<h3>About Tunghsiao Liu</h3>
+
+<p>Tunghsiao Liu (劉通曉), an undergraduate at Tianjin Academy of Fine Arts. You are welcome to ping me on <a href="http://twitter.com/tunghsiao">Twitter</a> or send correspondence to <a href="mailto:info@sparanoid.com">info@sparanoid.com</a>.</p>
+
+<p>The following are some of my projects.</p>
 
 <ul>
-	<li><a href="/lab/7z/">7-Zip <abbr title="localization">L10n</abbr> Project</a> - An open-source file archiver. I maintain Chinese Simplified localization since 2004.</li>
-	<li><a href="/work/quotmarks-replacer/">Quotmarks Replacer</a> - A WordPress plugin disables <code>wptexturize</code> function that keeps all quotation marks and suspension points in half-width form.</li>
+  <li><a href="{% if site.prod %}//{{ site.url }}{% endif %}/lab/7z/">7-Zip <abbr title="localization">L10n</abbr> Project</a> - An open-source file archiver. I maintain Chinese Simplified localization since 2004.</li>
+  <li><a href="{% if site.prod %}//{{ site.url }}{% endif %}/work/quotmarks-replacer/">Quotmarks Replacer</a> - A WordPress plugin disables <code>wptexturize</code> function that keeps all quotation marks and suspension points in half-width form.</li>
 </ul>
-
-<p>More small projects please visit <a href="/work/">Work</a> page.</p>
 
 <h3>Colophon</h3>
 
-<p>This site is powered by <a href="http://jekyllrb.com/">Jekyll</a>, source code stored at <a href="https://github.com/sparanoid/sparanoid.com">Github</a>, website is hosted by <a href="http://aws.amazon.com/ec2/">Amazon EC2</a>, images and static assets are hosted by <a href="http://aws.amazon.com/s3/">Amazon S3</a> and <a href="http://aws.amazon.com/cloudfront/">CloudFront</a>. It was hosted by my friend <a href="http://astonysh.com/">Tony</a> on DreamHost from 2008 to 2010. This site has undergone several revisions leading up to the current design, which is the 16<sup>th</sup> version. You can get more information on <a href="/work/cyrconplex/">this post</a>.</p>
+<p>This site is powered by <a href="http://jekyllrb.com/">Jekyll</a>, source code stored at <a href="https://github.com/sparanoid/sparanoid.com">Github</a>. Images and static assets are hosted by <a href="http://aws.amazon.com/s3/">Amazon S3</a> and <a href="http://aws.amazon.com/cloudfront/">CloudFront</a>. It was hosted by my friend <a href="http://astonysh.com/">Tony</a> on DreamHost from 2008 to 2010. This site has undergone several revisions leading up to the current design, which is the 17<sup>th</sup> version. You can get more information on <a href="{% if site.prod %}//{{ site.url }}{% endif %}/work/nite/">this post</a>.</p>
 
-<p>Contents of this sites are licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel=license>Creative Commons License (BY-NC-ND 3.0)</a>. Code license depends on different projects. The views expressed on this site are mine alone and not those of my employers and clients, past and present.</p>
+<p>All posts are &copy; Tunghsiao Liu, all rights reserved. The views expressed on this site are mine alone and not those of my employers and clients, past and present.</p>
 </div>

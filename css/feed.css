@@ -1,8 +1,8 @@
 /*!
-	CSS for Atom feeds (Borrowed from MediaWiki)
-	Created by Wikimedia Foundation, modified by Tunghsiao Liu for sparanoid.com
-	This CSS file is licensed under GPLv2. Read more information at:
-	http://www.gnu.org/licenses/gpl.html
+  CSS for Atom feeds (Borrowed from MediaWiki)
+  Created by Wikimedia Foundation, modified by Tunghsiao Liu for sparanoid.com
+  This CSS file is licensed under GPLv2. Read more information at:
+  http://www.gnu.org/licenses/gpl.html
 
 */
 /*
@@ -19,70 +19,70 @@ Compatibility:
 */
 
 feed, title, subtitle, link, id, updated, rights, author, entry, summary {
-	display: block;
+  display: block;
 }
 
 :root {
-	background: #fff;
-	color: #000;
-	padding: 20px;
-	font: 12px/1.5 Consolas, Menlo, 'Courier New', 'Andale Mono', 'Droid Sans Mono', monospace;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  font: 12px/1.5 Consolas, Menlo, 'Courier New', 'Andale Mono', 'Droid Sans Mono', monospace;
 }
 
 :root:before {
-	content: "This Atom feed is meant to be read in a syndicated news reader such as Google Reader, and isn't ideal for a web browser.";
-	color: red;
-	line-height: 2em;
+  content: "This Atom feed is meant to be read in a syndicated news reader such as Google Reader, and isn't ideal for a web browser.";
+  color: red;
+  line-height: 2em;
 }
 
 :root > title,
 entry > title {
-	font-weight: bold;
-	border-bottom: solid 1px #aaa;
-	font-size: 120%;
-	margin-bottom: 0.3em;
-	padding-bottom: 0.3em;
+  font-weight: bold;
+  border-bottom: solid 1px #aaa;
+  font-size: 120%;
+  margin-bottom: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 entry {
-	margin-top: 2em;
+  margin-top: 2em;
 }
 
 entry>summary {
-	white-space: pre;
-	overflow: auto;
+  white-space: pre;
+  overflow: auto;
 }
 
 entry>content {
-	display: none;
+  display: none;
 }
 
 subtitle:before {
-	content: "Subtitle: ";
+  content: "Subtitle: ";
 }
 
 link:before {
-	content: "Link: ";
+  content: "Link: ";
 }
 
 id:before {
-	content: "ID: ";
+  content: "ID: ";
 }
 
 updated:before {
-	content: "Updated: ";
+  content: "Updated: ";
 }
 
 rights:before {
-	content: "Copyright: ";
+  content: "Copyright: ";
 }
 
 author:before {
-	content: "Author: ";
+  content: "Author: ";
 }
 
 summary:before {
-	content: "Summary: ";
+  content: "Summary: ";
 }
 
 subtitle:before,
@@ -92,9 +92,9 @@ updated:before,
 rights:before,
 author:before,
 summary:before {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 :root link:after {
-	content: attr(href);
+  content: attr(href);
 }

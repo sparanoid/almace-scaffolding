@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Note
-permalink: /note/index.html
+title: Note ／ ノート ／ 筆記
+permalink: /note/
 desc: Random ramblings
 ---
 
 <div class=txt>
 <ul class=pl>
 {% for post in site.categories.note %}
-	<li><a href={{ post.url }}/>{{ post.title }}</a><ins>{{ post.excerpt }}</ins></li>
+  <li><a href={% if site.prod %}//{{ site.url }}{% endif %}{{ post.url }}/>{{ post.title }}</a><ins>{{ post.excerpt }}</ins></li>
 {% endfor %}
 </ul>
 </div>
