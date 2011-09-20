@@ -9,6 +9,10 @@ markdown: rdiscount
 # site url
 url: sparanoid.com
 
+# Focus domain name to site.url, used for CloudFront production only
+# prod: true
+prod: false
+
 # used by images inserted in posts
 file: http://rsrc.sparanoid.com
 
@@ -16,14 +20,14 @@ file: http://rsrc.sparanoid.com
 assets-cdn: http://a2.sparanoid.com
 
 # used by css url in default.html and index.xml
-css-path: /css
+css-path: css
 
-# custom vars
+# custom vars, most of them are used by index.xml
 name: Sparanoid
 full-name: Tunghiao Liu
 email: info@sparanoid.com
+slogan: I make things that don't suck.
 twitter: sparanoid
-slogan: The net is vast and limitless
 
 # fire up a localhost and auto generate when files change
 auto: true
@@ -35,4 +39,4 @@ exclude:
 - README.md
 - LICENSE
 - Rakefile
-- cyrconplex.tmproj
+- nite.tmproj

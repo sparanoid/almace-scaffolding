@@ -2,7 +2,7 @@
 permalink: /feed/index.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/css" href="{{ site.css-path }}/feed.min.css"?> 
+<?xml-stylesheet type="text/css" href="{% if site.prod %}//{{ site.url }}{% endif %}/{{ site.css-path }}/feed.min.css"?> 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 <title>{{ site.name }}</title>
@@ -17,22 +17,22 @@ permalink: /feed/index.xml
 <rights>Copyright © 2011, {{ site.full-name }}</rights>
 
 <author>
-	<name>{{ site.full-name }}</name>
-	<email>{{ site.email }}</email>
+  <name>{{ site.full-name }}</name>
+  <email>{{ site.email }}</email>
 </author>
 
 {% for post in site.posts limit:10 %}
 <entry>
-	<title>{{ post.title | xml_escape }}</title>
-	<link href="http://{{ site.url }}{{ post.url }}/" />
-	<id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
-	<updated>{{ post.date | date_to_xmlschema }}</updated>
-	<author>
-		<name>{{ site.full-name }}</name>
-		<uri>http://{{ site.url }}/</uri>
-	</author>
-	<summary>{{ post.excerpt | xml_escape }}</summary>
-	<content type="html">{% if post.thumb %}&lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;{% else %}{% endif %}&lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;</content>
+  <title>{{ post.title | xml_escape }}</title>
+  <link href="http://{{ site.url }}{{ post.url }}/" />
+  <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+  <updated>{{ post.date | date_to_xmlschema }}</updated>
+  <author>
+    <name>{{ site.full-name }}</name>
+    <uri>http://{{ site.url }}/</uri>
+  </author>
+  <summary>{{ post.excerpt | xml_escape }}</summary>
+  <content type="html">{% if post.thumb %}&lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;{% else %}{% endif %}&lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;</content>
 </entry>
 {% endfor %}
 </feed>

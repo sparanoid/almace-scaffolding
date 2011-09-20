@@ -2,252 +2,302 @@
 
 /*!
 
-	© sparanoid.com
+  © sparanoid.com
 
 */
 
 * {
-	margin: 0;
-	padding: 0;
-/*	I don't need any decoration here. */
-	text-decoration: none;
+  margin: 0;
+  padding: 0;
+/*  I don't need any decoration here. */
+  text-decoration: none;
 }
 
 :root {
-	color: #000;
-	font-size: 14px;
-	font-family: 'Courier New', 'Hiragino Mincho Pro', monospace;
+  color: #000;
+/*  color: rgba(255, 255, 255, .3);*/
+  background: #fff;
+/*  background: #000;*/
+  font-size: 14px;
+  font-family: Georgia, 'Hiragino Mincho Pro', serif;
+  line-height: 1.7;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px 110px;
+  image-rendering: optimizeQuality;
 }
 
 a {
-	color: #000;
+  color: #000;
+/*  color: #fff;*/
+  -webkit-transition: color .8s ease, background .8s ease, opacity .8s ease;
+     -moz-transition: color .8s ease, background .8s ease, opacity .8s ease;
+          transition: color .8s ease, background .8s ease, opacity .8s ease;
 }
-	a:hover {
-		background: rgba(255, 255, 0, .9);
-		border-bottom: 1px dotted rgba(0, 0, 0, .5);
-	}
+  a:hover, .pl li a:hover {
+    color: #000;
+    border-bottom: 1px dotted rgba(0, 0, 0, .3);
+    background: rgba(255, 255, 0, .95);
+    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease;
+       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease;
+            transition: color .1s ease, background .1s ease, opacity .1s ease;
+  }
 
 ins {
-	color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, .3);
 }
 
 del {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
-header {
-	margin-top: 35px;
-}
-	header ul {
-		font-size: 12px;
-		font-weight: bold;
-	}
-		header li {
-			display: inline;
-			margin-right: 7px;
-		}
-		.current a {
-			border-bottom: 1px dotted rgba(0, 0, 0, .5);
-		}
-		header a[rel=home] {
-			width: 14px;
-			height: 14px;
-			border-radius: 14px;
-			border: 3px #000 solid;
-			display: inline-block;
-			text-indent: -999em;
-			vertical-align: 1px;
-		}
-
-header, hgroup, article, nav, footer {
-	padding: 0 20px 30px 20px;
+header, nav, hgroup, article, aside, footer {
+  padding-bottom: 50px;
 }
 
-hgroup {
+nav ul {
+  list-style: none;
 }
-	hgroup h1 {
-		font-size: 16px;
-	}
-	hgroup h2 {
-		font-size: 12px;
-		font-weight: normal;
-	}
-	hgroup span,
-	nav span {
-		background: rgba(255, 255, 0, .9);
-		text-transform: uppercase;
-	}
+  nav ul li {
+    display: inline-block;
+    margin-right: 12%;
+  }
+    nav ul li:last-child {
+      margin-right: 0;
+    }
 
-nav {
+h1 {
+  position: relative;
+  font-weight: 100;
+  font-size: 36px;
+  line-height: 1;
 }
-	nav p {
-		margin-bottom: 2px;
-	}
+  h1[lang=ja] {
+    margin-left: -4px;
+  }
+  h1:before {
+    position: absolute;
+    top: 1px;
+    left: -60px;
+    display: block;
+    content: ' ';
+    width: 22px;
+    height: 22px;
+    border-radius: 2000px;
+    border: 5px #000 solid;
+    z-index: -100;
+  }
+
+h2, h2 a, footer, footer a,
+nav:nth-of-type(2) {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+article {
+  font-size: 16px;
+/*  reduce margin-top as each first of paragraph has its own margin-top */
+  margin-top: -.8em;
+  float: left;
+  width: 100%;
+}
+
+article h3 {
+/*  only h3, please */
+  font-size: 18px;
+  margin: 2em 0;
+}
+
+article a {
+  border-bottom: 1px dotted rgba(0, 0, 0, .5);
+}
+
+article img,
+article video {
+  max-width: 100%;
+}
+
+article p {
+  margin: 1em 0;
+  line-height: 1.8;
+}
+
+article ul,
+article ol {
+  margin: 1em 0;
+  list-style: square;
+}
+  article li {
+    line-height: 1.8;
+  }
+
+article blockquote {
+}
+
+article sup {
+  line-height: 1;;
+}
+
+article abbr:after {
+  content: " (" attr(title) ")";
+}
+
+article code, article pre {
+  font-family: Menlo, Consolas, monospace;
+  color: #b74;
+}
+
+article .txt {
+  max-width: 600px;
+}
+
+article .note, article .download {
+  padding: 1em 2em;
+}
+
+article .note {
+  background: rgba(255, 255, 0, .1);
+}
+
+article .download {
+  background: rgba(0, 0, 0, .08);
+}
+
+/*  post list in "note" */
+.pl li {
+  margin-bottom: 1.2em;
+}
+  .pl li a {
+    border: none;
+  }
+.pl ins {
+  display: block;
+}
+
+/* image list in "work" */
+/* a padding-top unification workaround */
+.al,
+article > p > img {
+  padding-top: 8px;
+}
+  .al li {
+    position: relative;
+    list-style: none;
+    float: left;
+    line-height: 0;
+  }
+    .al li img {
+      width: 160px;
+      height: 120px;
+    }
+    .al li a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      width: 140px;
+      height: 100px;
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0;
+    }
+      .al li:hover a {
+        opacity: 1;
+      }
+
+.current a {
+  border-bottom: 1px dotted rgba(0, 0, 0, .3);
+}
+
+.bsap {
+  max-width: 600px;
+  padding-top: 6px;
+}
+/*image */
+.bsa_it_i {
+  display: inline-block;
+  padding-right: 15px;
+  float: left;
+}
+/*ads text title */
+.bsa_it_t {
+  display: block;
+  padding-bottom: .5em;
+  font-weight: bold;
+}
+/*ads text content */
+.bsa_it_d {
+  line-height: 1.5;
+}
+/*hide ads by */
+.one .bsa_it_p {
+  display: none;
+}
 
 footer {
 }
-	footer br {
-		line-height: 30px;
-	}
-	.bsap {
-		max-width: 600px;
-	}
-	.bsa_it_ad a:first-child {
-		border: none;
-		background: none;
-	}
-/*	image */
-	.bsa_it_i {
-		display: inline-block;
-		padding-right: 10px;
-		float: left;
-	}
-/*	ads text title */
-	.bsa_it_t {
-		display: block;
-		padding-bottom: .5em;
-		font-weight: bold;
-	}
-/*	ads text content */
-	.bsa_it_d {
-		line-height: 1.6;
-	}
-/*	hide ads by */
-	.one .bsa_it_p {
-		display:none;
-	}
-	.c {
-		font-size: 12px;
-	}
-
-article {
-	max-width: 1200px;
-}
-	article h3 {
-/*		only h3, please */
-		font-size: 16px;
-		margin: 1.5em 0;
-	}
-
-	article a {
-		border-bottom: 1px dotted rgba(0, 0, 0, .5);
-	}
-
-	article img,
-	article video {
-		max-width: 100%;
-	}
-
-	article p {
-		margin: 1em 0;
-		line-height: 1.7;
-	}
-
-	article ul,
-	article ol {
-		margin-left: 18px;
-		list-style: square;
-	}
-		article li {
-			line-height: 1.7;
-		}
-
-	article blockquote {
-	}
-
-	article sup {
-		line-height: 1;;
-	}
-
-	article abbr:after {
-		content: " (" attr(title) ")";
-	}
-
-	article code, article pre {
-		color: #69c;
-	}
-
-	article .txt {
-		max-width: 600px;
-	}
-
-	article .note {
-		background: rgba(255, 0, 0, .08);
-	}
-
-	article .download {
-		background: rgba(0, 255, 0, .08);
-	}
-
-/*	post list in pages */
-	.pl li {
-		margin-bottom: 1em;
-	}
-	.pl ins {
-		display: block;
-	}
-	.al {
-		margin: 0 0 -12px 0;
-	}
-		.al li {
-			position: relative;
-			list-style: none;
-			display: inline-block;
-			margin: 0 10px 10px 0;
-		}
-			.al li img {
-				width: 180px;
-				height: 135px;
-			}
-			.al li a {
-				position: absolute;
-				top: 0;
-				left: 0;
-				padding: 10px;
-				width: 160px;
-				height: 115px;
-				font-size: 12px;
-				opacity: 0;
-			}
-				.al li:hover a {
-					opacity: 1;
-				}
-
-/* first-children and last-children resets */
-p:first-child,
-li:first-child,
-h3:first-child {
-	margin-top: 0;
-}
-
-p:last-child,
-li:last-child,
-h3:last-child {
-	margin-bottom: 0;
-}
+  footer a {
+  }
 
 ::selection {
-	background: rgba(255, 255, 0, .8);
+  background: rgba(255, 255, 0, .8);
+}
+
+@media (min-width: 1600px) {
+  :root {
+    max-width: 1200px;
+  }
 }
 
 @media print,
-		screen and (max-device-width: 480px),
-		(min-device-width: 1024px) and (max-width: 959px),
-		(max-device-width: 480px) and (orientation: landscape),
-		(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
-	* {}
-	:root {-webkit-text-size-adjust: none;}
+screen and (max-device-width: 480px),
+(min-device-width: 1024px) and (max-width: 959px),
+(max-device-width: 480px) and (orientation: landscape),
+(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  :root {
+    -webkit-text-size-adjust: none;
+    padding: 50px 15%;
+  }
+  h1 {
+    font-size: 28px;
+  }
+    h1:before {
+      top: -200px;
+      left: -200px;
+      width: 300px;
+      height: 300px;
+      border: 48px rgba(0, 0, 0, .05) solid;
+    }
+  nav ul li span {
+    display: none;
+  }
+  .bsa_it_i {
+    display: block;
+  }
 }
 
 @media print {
-	* {
-		color: #000 !important;
-		line-height: 1.6 !important;
-		background: transparent !important;
-		border: none !important;
-		text-decoration: none !important;
-	}
-	a {font-weight: bold;}
-	header, nav, footer {display: none;}
-	article {text-align: justify;}
+  * {
+    color: #000 !important;
+    line-height: 1.6 !important;
+    background: transparent !important;
+    border: none !important;
+    text-decoration: none !important;
+  }
+  h1:before {
+    display: none;
+  }
+  a {
+    font-weight: bold;
+  }
+  header, nav, aside, footer {
+    display: none;
+  }
+  article {
+    text-align: justify;
+  }
 }

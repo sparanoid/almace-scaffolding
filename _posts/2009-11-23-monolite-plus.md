@@ -7,11 +7,14 @@ thumb: monolite-plus.jpg
 bg: '#fff9ed'
 ---
 
+<div class=txt>
 <p class=note>Lastest Version: <strong>0.4.3</strong> for foobar2000 1.0 / <strong>0.2</strong> for foobar2000 0.9.6.9</p>
 <p class=note>0.4.* 版本的 Last.fm 同步功能可能會在退出 foobar2000 時隨機出現錯誤提示，但不會影響正常使用</p>
+</div>
 
 <p><img src="{{ site.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>
 
+<div class=txt>
 <h3>什麽是 MonoLite Plus？</h3>
 
 <p>MonoLite Plus 是一款基于 <a href="http://yuo.be/columns.php">Columns UI</a> 組件創建的 <a href="http://www.foobar2000.org/">foobar2000</a> 皮膚</p>
@@ -132,3 +135,4 @@ bg: '#fff9ed'
 <p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-03.7z</p>
 <p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-02.7z</p>
 <p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-01.7z</p>
+</div>

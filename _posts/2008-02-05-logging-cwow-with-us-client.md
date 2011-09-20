@@ -79,8 +79,8 @@ excerpt: Use US World of Warcraft client to login Chinese servers
 <h3>替換 Wow.exe</h3>
 <p>先將 3.1.3.9947 的原版 Wow.exe 備份下，就叫 Wow-en.exe 好了，然後從下列地址下載 3.1.3.9981 版本的 Wow.exe，複制到遊戲根目錄即可</p>
 
-<p><del>{{ site.file }}/download/WoW.exe-3.1.3.9981.7z</del></p>
-<p><del>{{ site.file }}/download/WoW.exe-3.0.5.9869.7z</del></p>
+<p class=note>下載鏈已失效，本站不會再提供下載</p>
+<p class=download><a href="{{ site.file }}/download/WoW.exe-3.1.3.9981.7z">WoW.exe-3.1.3.9981.7z</a> / <a href="{{ site.file }}/download/WoW.exe-3.1.3.9981.7z">WoW.exe-3.0.5.9869.7z</a></p>
 
 <h3>字體修改</h3>
 <p>到目前爲止已經可以登錄上了，但是這樣遊戲中出現的中文都會是亂碼。下面要做的就是下載一份中文字體，將它們優先載入，美服客戶端的字體和國服的不大一樣，還是以前的字體對應，沒有<del datetime="2009-07-10T17:38:41+00:00">九城</del>和方正亂搞的那一說：</p>
