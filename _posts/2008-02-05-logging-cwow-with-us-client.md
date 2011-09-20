@@ -1,23 +1,24 @@
 ---
 layout: post
 title: Logging Chinese WoW with US Client
+head: World of Warcraft
 category: notebook
-excerpt: How to use an US World of Warcraft client to login Chinese servers
+excerpt: Use US World of Warcraft client to login Chinese servers
 ---
 
-<p class="note">本文作者已 <a href="//sparanoid.com/game/make-love-not-warcraft-something-about-me-and-wow/">徹底告別魔獸世界</a>，故本文永久停止更新。最後更新：2009-09-19</p>
+<section class=text>
+<p class=note>本文作者已 <a href="//sparanoid.com/game/make-love-not-warcraft-something-about-me-and-wow/">徹底告別魔獸世界</a>，故本文永久停止更新。最後更新：2009-09-19</p>
 
-<p class="note">NGA <del datetime="2009-07-24T19:58:20+00:00">同步更新帖</del> <a href="http://bbs.ngacn.cc/read.php?tid=1614456">在此</a>（ID 已被 Nuked，吐槽不能），注意：本文具有一定的時效性。最後更新：2009-07-25</p>
+<p class=note>NGA <del datetime="2009-07-24T19:58:20+00:00">同步更新帖</del> <a href="http://bbs.ngacn.cc/read.php?tid=1614456">在此</a>（ID 已被 Nuked，吐槽不能），注意：本文具有一定的時效性。最後更新：2009-07-25</p>
 
-<p><del datetime="2009-09-19T02:41:14+00:00">已找到登陸方法，待更新</del></p>
+<p>已找到登陸方法，待更新</p>
 
-<p><del datetime="2009-08-08T03:56:28+00:00">網易 30 日開始的內測，國服從網易官網上下載的客戶端現在可以登陸上去了，但是無服務器，美服暫時無法連接上去，無法驗證版本</del></p>
-
-<p><del datetime="2009-07-25T14:25:59+00:00">新的網易官網已經給出了 3.0.5.9689 升級到 3.1.3.9981 的補丁，總共 370 多兆，其它國家的 3.1.3 版本 build 爲 9947，又是一個中國特色的版本，理論上開服後完全可以用美服的 3.1.3 客戶端登陸閹割版國服，但還是老規矩，鑒于目前尚未開服，更新後如過悲劇了請後果自負吧</del></p>
-
-<p><del datetime="2009-07-24T19:48:10+00:00">從六月份開始停服到現在，應該快開了，聽說開服後應該會升級到 3.1.3 版，那麽提前提供下更新後美服客戶端登陸國服的方法，也就是用美服的 3.1.3 客戶端直接登錄國服。需要提醒的是，目前並沒有官方消息稱開服後會是 3.1.3，升級後所造成的損失本人不負責</del></p>
-
-<p><del datetime="2009-07-10T17:20:25+00:00">更新到了 WotLK，發現國服是 3.0.5 版本，超前了國外一步，簡單研究了下發現了用美服 3.0.3 上國服 3.0.5 的方法，在這裏說下。首先，如果 2.4.3 你一直在用美服的話，想成功升級到 3.0.3 是有難度的，新補丁在安裝時加入了對安裝路徑的判斷，對于安了多種語言客戶端的玩家來說會比較麻煩。所以個人意見是，備份好你的宏，截圖，插件(知道名字就行)，將之前安裝的版本卸載，全新安裝一份</del></p>
+<ol>
+<li>網易 30 日開始的內測，國服從網易官網上下載的客戶端現在可以登陸上去了，但是無服務器，美服暫時無法連接上去，無法驗證版本</li>
+<li>新的網易官網已經給出了 3.0.5.9689 升級到 3.1.3.9981 的補丁，總共 370 多兆，其它國家的 3.1.3 版本 build 爲 9947，又是一個中國特色的版本，理論上開服後完全可以用美服的 3.1.3 客戶端登陸閹割版國服，但還是老規矩，鑒于目前尚未開服，更新後如過悲劇了請後果自負吧</li>
+<li>從六月份開始停服到現在，應該快開了，聽說開服後應該會升級到 3.1.3 版，那麽提前提供下更新後美服客戶端登陸國服的方法，也就是用美服的 3.1.3 客戶端直接登錄國服。需要提醒的是，目前並沒有官方消息稱開服後會是 3.1.3，升級後所造成的損失本人不負責</li>
+<li>更新到了 WotLK，發現國服是 3.0.5 版本，超前了國外一步，簡單研究了下發現了用美服 3.0.3 上國服 3.0.5 的方法，在這裏說下。首先，如果 2.4.3 你一直在用美服的話，想成功升級到 3.0.3 是有難度的，新補丁在安裝時加入了對安裝路徑的判斷，對于安了多種語言客戶端的玩家來說會比較麻煩。所以個人意見是，備份好你的宏，截圖，插件(知道名字就行)，將之前安裝的版本卸載，全新安裝一份</li>
+</ol>
 
 <h3>下載</h3>
 <p>思路是先用 BT 拖 WotLK 3.0.1 完整版，然後再一路小補丁升上去，根據此思路下載會用到這些文件：</p>
@@ -72,15 +73,15 @@ excerpt: How to use an US World of Warcraft client to login Chinese servers
 <h3>配置文件、字體修改</h3>
 <p>從 3.0.3 開始配置文件已經徹底舍棄 <code>[WoWRoot]\realmlist.wtf</code> 了，所以根本不需要這個文件，說用改這個文件的也是錯誤的說法。目前 WoW 會調用 <code>[WoWRoot]\WTF\Config.wtf</code> 爲配置文件。<code>[WoWRoot]\Data\enUS\realmlist.wtf</code> 爲服務器模板文件(這是美服登陸國服的關鍵)</p>
 
-<p class="note">下述修改方法爲九城時期的服務器設置，<del datetime="2010-08-09T19:32:51+00:00">網易的設置請持續關注本文</del></p>
+<p class=note>下述修改方法爲九城時期的服務器設置，<del datetime="2010-08-09T19:32:51+00:00">網易的設置請持續關注本文</del></p>
 
 <p>用文本編輯器打開 <code>[WoWRoot]\Data\enUS\realmlist.wtf</code>，將其中的 <code>set realmlist us.logon.worldofwarcraft.com</code> 那項改爲 <code>set realmlist cn*.grunt.wowchina.com</code>，* 代表你所在的大區，比如六區爲 <code>set realmlist cn<em>6</em>.grunt.wowchina.com</code></p>
 
 <h3>替換 Wow.exe</h3>
 <p>先將 3.1.3.9947 的原版 Wow.exe 備份下，就叫 Wow-en.exe 好了，然後從下列地址下載 3.1.3.9981 版本的 Wow.exe，複制到遊戲根目錄即可</p>
 
-[download]{{ site.file }}/download/WoW.exe-3.1.3.9981.7z[/download]
-[download]{{ site.file }}/download/WoW.exe-3.0.5.9869.7z[/download]
+<p><del>{{ site.file }}/download/WoW.exe-3.1.3.9981.7z</del></p>
+<p><del>{{ site.file }}/download/WoW.exe-3.0.5.9869.7z</del></p>
 
 <h3>字體修改</h3>
 <p>到目前爲止已經可以登錄上了，但是這樣遊戲中出現的中文都會是亂碼。下面要做的就是下載一份中文字體，將它們優先載入，美服客戶端的字體和國服的不大一樣，還是以前的字體對應，沒有<del datetime="2009-07-10T17:38:41+00:00">九城</del>和方正亂搞的那一說：</p>
@@ -92,7 +93,8 @@ excerpt: How to use an US World of Warcraft client to login Chinese servers
 <li><code>skurri.ttf</code> - 傷害字體</li>
 </ul>
 
-<p>我目前使用的是自己修改的微軟雅黑 + Yanone Kaffeesatz 英文字體，如果你沒找到好字體的話，可以試試它，<a href="//@base_url/project/msyhwow/">點擊這裏</a> 了解該字體的詳細信息</p>
+<p>我目前使用的是自己修改的微軟雅黑 + Yanone Kaffeesatz 英文字體，如果你沒找到好字體的話，可以試試它，<a href="//sparanoid.com/project/msyhwow/">點擊這裏</a> 了解該字體的詳細信息</p>
 
 <h3>FAQ</h3>
 <p>把這個放到了最後說，這裏有一點要注意的，就是登錄的時候要把左下角的 Show Launcher 選項卡給去掉，以後登錄直接運行 <code>Wow.exe</code> 即可，並且界面上可以保存用戶名，免得每次都要重新輸入用戶名的麻煩。美服客戶端的幾個缺點：在用戶選擇界面那裏無法顯示遊戲剩余時間，所以只能到<del datetime="2009-07-10T17:18:52+00:00">九城</del>網易通行證裏去看；無法建立中文名稱的競技場戰隊；無法進入中文名的自建頻道。至于插件，美服客戶端比國服能用的多多了，而國服用的基本都可以在美服客戶端上用。當然你也可以試試我制作的插件包：<a href="http://code.google.com/p/sparanoid/">Sparanoid's UI (已停止更新)</a></p>
+</section>
