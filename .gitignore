@@ -19,3 +19,4 @@ Rakefile
 *.bak
 *.tmproj
 *.esproj
+*.sublime*
