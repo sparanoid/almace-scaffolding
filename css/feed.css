@@ -25,7 +25,7 @@ feed, title, subtitle, link, id, updated, rights, author, entry, summary {
 :root {
 	background: #fff;
 	color: #000;
-	padding: 2em 5%;
+	padding: 20px;
 	font: 12px/1.5 Consolas, Menlo, 'Courier New', 'Andale Mono', 'Droid Sans Mono', monospace;
 }
 
