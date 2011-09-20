@@ -1,15 +1,21 @@
 ---
 layout: post
 title: foobar2000 Skin - MonoLite Plus
+head: MonoLite Plus
 category: project
 excerpt: A foobar2000 theme based on Columns UI
 ---
 
-<p class="note">Lastest Version: <strong>0.4.3</strong> for foobar2000 1.0 / <strong>0.2</strong> for foobar2000 0.9.6.9</p>
-<p class="note">0.4.* 版本的 Last.fm 同步功能可能會在退出 foobar2000 時隨機出現錯誤提示，但不會影響正常使用</p>
+<section class=text>
+<p class=note>Lastest Version: <strong>0.4.3</strong> for foobar2000 1.0 / <strong>0.2</strong> for foobar2000 0.9.6.9</p>
+<p class=note>0.4.* 版本的 Last.fm 同步功能可能會在退出 foobar2000 時隨機出現錯誤提示，但不會影響正常使用</p>
+</section>
 
-<img src="{{ site.file }}/monolite-plus-04.jpg" alt="" />
+<section>
+<p><img src="{{ site.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>
+</section>
 
+<section class=text>
 <h3>什麽是 MonoLite Plus？</h3>
 
 <p>MonoLite Plus 是一款基于 <a href="http://yuo.be/columns.php">Columns UI</a> 組件創建的 <a href="http://www.foobar2000.org/">foobar2000</a> 皮膚</p>
@@ -104,13 +110,14 @@ excerpt: A foobar2000 theme based on Columns UI
 <li>媒體庫查看方式代碼基于 hydrogenaudio.org 論壇的 2E7AH 修改 <a href="http://www.hydrogenaudio.org/forums/index.php?s=&showtopic=68552&view=findpost&p=684400">#</a></li>
 </ul>
 
-<p class="note">該主題基于 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商業性使用-相同方式共享 3.0 發布</a></p>
+<p class=note>該主題基于 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商業性使用-相同方式共享 3.0 發布</a></p>
 
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-043.7z</p>
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-042.7z</p>
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-041.7z</p>
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-04.7z</p>
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-031.7z</p>
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-03.7z</p>
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-02.7z</p>
-<p class="download"><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-01.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-043.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-042.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-041.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-04.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-031.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-03.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-02.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-01.7z</p>
+</section>

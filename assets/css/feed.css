@@ -1,0 +1,100 @@
+/*!
+	CSS for Atom feeds (Borrowed from MediaWiki)
+	Created by Wikimedia Foundation, modified by Tunghsiao Liu for sparanoid.com
+	This CSS file is licensed under GPLv2. Read more information at:
+	http://www.gnu.org/licenses/gpl.html
+
+*/
+/*
+Make RSS and Atom feeds at least semi-legible to folk who accidentally
+load them in a browser...
+
+Compatibility:
+* Mozilla is fine.
+* Safari 1.2: the RSS <link> text isn't shown
+* Opera 7.5 uses the style sheet instead of its native RSS mode.
+* IE/Mac 5.2: none of the :before content works; doesn't get the charset right and displays garbage for non-ASCII.
+* IE/Win 6.0: No background color, borders, font size, font weight, or :before content.
+
+*/
+
+feed, title, subtitle, link, id, updated, rights, author, entry, summary {
+	display: block;
+}
+
+:root {
+	background: #fff;
+	color: #000;
+	padding: 2em 5%;
+	font: 12px/1.5 Consolas, Menlo, 'Courier New', 'Andale Mono', 'Droid Sans Mono', monospace;
+}
+
+:root:before {
+	content: "This Atom feed is meant to be read in a syndicated news reader such as Google Reader, and isn't ideal for a web browser.";
+	color: red;
+	line-height: 2em;
+}
+
+:root > title,
+entry > title {
+	font-weight: bold;
+	border-bottom: solid 1px #aaa;
+	font-size: 120%;
+	margin-bottom: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+entry {
+	margin-top: 2em;
+}
+
+entry>summary {
+	white-space: pre;
+	overflow: auto;
+}
+
+entry>content {
+	display: none;
+}
+
+subtitle:before {
+	content: "Subtitle: ";
+}
+
+link:before {
+	content: "Link: ";
+}
+
+id:before {
+	content: "ID: ";
+}
+
+updated:before {
+	content: "Updated: ";
+}
+
+rights:before {
+	content: "Copyright: ";
+}
+
+author:before {
+	content: "Author: ";
+}
+
+summary:before {
+	content: "Summary: ";
+}
+
+subtitle:before,
+link:before,
+id:before,
+updated:before,
+rights:before,
+author:before,
+summary:before {
+	font-weight: bold;
+}
+
+:root link:after {
+	content: attr(href);
+}

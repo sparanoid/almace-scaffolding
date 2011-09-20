@@ -1,10 +1,16 @@
 ---
-layout: archive
+layout: post
+type: page
 title: Artwork
+head: Category.Artwork
 permalink: /artwork/index.html
-excerpt: A collection of hand-drawn / computer-drawn / freehand works
+excerpt: A collection of hand-drawn / computer-drawn works
 ---
 
+<section class=text>
+<ul class=pl>
 {% for post in site.categories.artwork %}
 	{% include post-list-link.html %}
 {% endfor %}
+</ul>
+</section>

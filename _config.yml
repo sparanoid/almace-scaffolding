@@ -6,16 +6,25 @@ destination: ./_site
 permalink: /:categories/:title
 markdown: rdiscount
 
-# custom vars
+# site url
 url: sparanoid.com
+
+# used by images inserted in posts
 file: http://rsrc.sparanoid.com
-assets: /assets
+
+# used by specified background images
+assets-cdn: 
+
+# used by css url in default.html
+assets-path: /assets
+
+# custom vars
 name: Sparanoid
 full-name: Tunghiao Liu
 email: info@sparanoid.com
 twitter: sparanoid
 slogan: The net is vast and limitless
-googe-custom-search: 012621050422714259885:jabcs0nmacy
+googe-custom-search: 012621050422714259885:yjom5u8_gk4
 
 # fire up a localhost and auto generate when files change
 auto: true
@@ -26,5 +35,5 @@ server_port: 4321
 exclude: 
 - README.md
 - LICENSE
-#- a.css
 - Rakefile
+- fogbound-highrise.tmproj
