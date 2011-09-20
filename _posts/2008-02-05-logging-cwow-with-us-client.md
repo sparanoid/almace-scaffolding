@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Logging Chinese WoW with US Client
-head: World of Warcraft
-category: notebook
+title: Logging Chinese World of Warcraft with US Client
+category: note
 excerpt: Use US World of Warcraft client to login Chinese servers
 ---
 
-<section class=text>
-<p class=note>本文作者已 <a href="//sparanoid.com/game/make-love-not-warcraft-something-about-me-and-wow/">徹底告別魔獸世界</a>，故本文永久停止更新。最後更新：2009-09-19</p>
+<div class=txt>
+<p class=note>本文作者已 <a href="/game/make-love-not-warcraft-something-about-me-and-wow/">徹底告別魔獸世界</a>，故本文永久停止更新。最後更新：2009-09-19</p>
 
 <p class=note>NGA <del datetime="2009-07-24T19:58:20+00:00">同步更新帖</del> <a href="http://bbs.ngacn.cc/read.php?tid=1614456">在此</a>（ID 已被 Nuked，吐槽不能），注意：本文具有一定的時效性。最後更新：2009-07-25</p>
 
@@ -93,8 +92,8 @@ excerpt: Use US World of Warcraft client to login Chinese servers
 <li><code>skurri.ttf</code> - 傷害字體</li>
 </ul>
 
-<p>我目前使用的是自己修改的微軟雅黑 + Yanone Kaffeesatz 英文字體，如果你沒找到好字體的話，可以試試它，<a href="//sparanoid.com/project/msyhwow/">點擊這裏</a> 了解該字體的詳細信息</p>
+<p>我目前使用的是自己修改的微軟雅黑 + Yanone Kaffeesatz 英文字體，如果你沒找到好字體的話，可以試試它，<a href="/work/msyhwow/">點擊這裏</a> 了解該字體的詳細信息</p>
 
 <h3>FAQ</h3>
 <p>把這個放到了最後說，這裏有一點要注意的，就是登錄的時候要把左下角的 Show Launcher 選項卡給去掉，以後登錄直接運行 <code>Wow.exe</code> 即可，並且界面上可以保存用戶名，免得每次都要重新輸入用戶名的麻煩。美服客戶端的幾個缺點：在用戶選擇界面那裏無法顯示遊戲剩余時間，所以只能到<del datetime="2009-07-10T17:18:52+00:00">九城</del>網易通行證裏去看；無法建立中文名稱的競技場戰隊；無法進入中文名的自建頻道。至于插件，美服客戶端比國服能用的多多了，而國服用的基本都可以在美服客戶端上用。當然你也可以試試我制作的插件包：<a href="http://code.google.com/p/sparanoid/">Sparanoid's UI (已停止更新)</a></p>
-</section>
+</div>

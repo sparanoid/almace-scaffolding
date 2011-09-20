@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/*!
+
+	© sparanoid.com
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+/*	I don't need any decoration here. */
+	text-decoration: none;
+}
+
+:root {
+	color: rgba(0, 0, 0, .3);
+/*	color: rgba(255, 255, 255, .3);*/
+	background: #fff;
+/*	background: #000;*/
+	font-size: 14px;
+	font-family: 'Kozuka Mincho Pr6N', 'Hiragino Mincho Pro', serif;
+	line-height: 1.7;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 50px 90px;
+    -webkit-perspective: 200;
+    -moz-perspective: 200;
+    perspective: 200;
+	-webkit-animation: wrap 1.5s ease;
+	-moz-animation: wrap 1.5s ease;
+	animation: wrap 1.5s ease;
+}
+
+a {
+	color: #000;
+/*	color: #fff;*/
+	background: rgba(255, 255, 0, 0);
+}
+	a:hover {
+		border-bottom: 1px dotted rgba(0, 0, 0, .5);
+		background: rgba(255, 255, 0, .9);
+	}
+
+header, article, footer, h2 {
+	padding-bottom: 40px;
+}
+
+h1, article, footer {
+	-webkit-transform-origin: -100px 0;
+	-moz-transform-origin: -100px 0;
+	transform-origin: -100px 0;
+	-webkit-animation: spin .8s 1 ease;
+	-moz-animation: spin .8s 1 ease;
+	animation: spin .8s 1 ease;
+}
+
+h1 {
+	position: relative;
+	font-weight: 100;
+	font-size: 45px;
+	line-height: 1;
+	margin-left: -4px;
+	-webkit-animation-delay: 0.55s;
+	-moz-animation-delay: 0.55s;
+	animation-delay: 0.55s;
+}
+	h1:before {
+		position: absolute;
+		top: 3px;
+		left: -60px;
+		display: block;
+		content: ' ';
+		width: 30px;
+		height: 30px;
+		border-radius: 80px;
+		border: 6px #000 solid;
+	}
+
+h2, footer, article p {
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+h2 {
+	-webkit-animation: txt 3s 1 ease;
+	-moz-animation: txt 3s 1 ease;
+	animation: txt 3s 1 ease;
+}
+
+article {
+	
+}
+	article:nth-of-type(1) {
+		-webkit-animation-delay: .6s;
+		-moz-animation-delay: .6s;
+		animation-delay: .6s;
+	}
+	article:nth-of-type(2) {
+		-webkit-animation-delay: .65s;
+		-moz-animation-delay: .65s;
+		animation-delay: .65s;
+	}
+	article:nth-of-type(3) {
+		-webkit-animation-delay: .7s;
+		-moz-animation-delay: .7s;
+		animation-delay: .7s;
+	}
+	article:nth-of-type(4) {
+		-webkit-animation-delay: .75s;
+		-moz-animation-delay: .75s;
+		animation-delay: .75s;
+	}
+	article:nth-of-type(5) {
+		-webkit-animation-delay: .8s;
+		-moz-animation-delay: .8s;
+		animation-delay: .8s;
+	}
+	article:nth-of-type(6) {
+		-webkit-animation-delay: .85s;
+		-moz-animation-delay: .85s;
+		animation-delay: .85s;
+	}
+
+	article ul {
+		list-style: none;
+		-webkit-column-width: 225px;
+		-webkit-column-gap: 20px;
+		-moz-column-width: 225px;
+		-moz-column-gap: 20px;
+		column-width: 225px;
+		column-gap: 20px;
+	}
+
+footer {
+	-webkit-animation-delay: 0.9s;
+	-moz-animation-delay: 0.9s;
+	animation-delay: 0.9s;
+}
+
+@-webkit-keyframes spin {
+	0% {-webkit-transform: rotateY(180deg);}
+	100% {-webkit-transform: rotateY(360deg);}
+}
+
+@-moz-keyframes spin {
+	0% {-moz-transform: rotateY(180deg);}
+	100% {-moz-transform: rotateY(360deg);}
+}
+
+@keyframes spin {
+	0% {transform: rotateY(180deg);}
+	100% {transform: rotateY(360deg);}
+}
+
+
+@-webkit-keyframes txt {
+	0% {opacity: 0;}
+	95% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+@-moz-keyframes txt {
+	0% {opacity: 0;}
+	95% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+@keyframes txt {
+	0% {opacity: 0;}
+	95% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+@-webkit-keyframes wrap {
+	0% {opacity: 0;}
+	60% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+@-moz-keyframes wrap {
+	0% {opacity: 0;}
+	60% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+@keyframes wrap {
+	0% {opacity: 0;}
+	60% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+::selection {
+	background: rgba(255, 255, 0, .8);
+}
+
+@media print,
+		screen and (max-device-width: 480px),
+		(min-device-width: 1024px) and (max-width: 959px),
+		(max-device-width: 480px) and (orientation: landscape),
+		(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+	* {}
+	:root {-webkit-text-size-adjust: none;}
+}

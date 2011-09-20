@@ -1,11 +1,11 @@
 ---
 layout: post
 title: fogbound-highrise ft. Jekyll
-head: fogbound-highrise
-category: project
+category: work
 excerpt: The 15th version of sparanoid.com, featuring Jekyll
+thumb: fogbound-highrise.png
 ---
 
-<section>
-<p><a href="https://github.com/sparanoid/fogbound-highrise"><img src="{{ site.file }}/fogbound-highrise.png"></a></p>
-</section>
+<p><img src="{{ site.file }}/fogbound-highrise.png"></p>
+
+@<a href="https://github.com/sparanoid/fogbound-highrise">GitHub</a>

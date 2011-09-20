@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+/*!
+
+	© sparanoid.com
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+/*	I don't need any decoration here. */
+	text-decoration: none;
+}
+
+:root {
+	color: #000;
+	font-size: 14px;
+	font-family: 'Courier New', 'Hiragino Mincho Pro', monospace;
+}
+
+a {
+	color: #000;
+}
+	a:hover {
+		background: rgba(255, 255, 0, .9);
+		border-bottom: 1px dotted rgba(0, 0, 0, .5);
+	}
+
+ins {
+	color: rgba(0, 0, 0, .5);
+}
+
+del {
+	text-decoration: line-through;
+}
+
+header {
+	margin-top: 35px;
+}
+	header ul {
+		font-size: 12px;
+		font-weight: bold;
+	}
+		header li {
+			display: inline;
+			margin-right: 7px;
+		}
+		.current a {
+			border-bottom: 1px dotted rgba(0, 0, 0, .5);
+		}
+		header a[rel=home] {
+			width: 14px;
+			height: 14px;
+			border-radius: 14px;
+			border: 3px #000 solid;
+			display: inline-block;
+			text-indent: -999em;
+			vertical-align: 1px;
+		}
+
+header, hgroup, article, nav, footer {
+	padding: 0 20px 30px 20px;
+}
+
+hgroup {
+}
+	hgroup h1 {
+		font-size: 16px;
+	}
+	hgroup h2 {
+		font-size: 12px;
+		font-weight: normal;
+	}
+	hgroup span,
+	nav span {
+		background: rgba(255, 255, 0, .9);
+		text-transform: uppercase;
+	}
+
+nav {
+}
+	nav p {
+		margin-bottom: 2px;
+	}
+
+footer {
+}
+	footer br {
+		line-height: 30px;
+	}
+	.bsap {
+		max-width: 600px;
+	}
+	.bsa_it_ad a:first-child {
+		border: none;
+		background: none;
+	}
+/*	image */
+	.bsa_it_i {
+		display: inline-block;
+		padding-right: 10px;
+		float: left;
+	}
+/*	ads text title */
+	.bsa_it_t {
+		display: block;
+		padding-bottom: .5em;
+		font-weight: bold;
+	}
+/*	ads text content */
+	.bsa_it_d {
+		line-height: 1.6;
+	}
+/*	hide ads by */
+	.one .bsa_it_p {
+		display:none;
+	}
+	.c {
+		font-size: 12px;
+	}
+
+article {
+	max-width: 1200px;
+}
+	article h3 {
+/*		only h3, please */
+		font-size: 16px;
+		margin: 1.5em 0;
+	}
+
+	article a {
+		border-bottom: 1px dotted rgba(0, 0, 0, .5);
+	}
+
+	article img,
+	article video {
+		max-width: 100%;
+	}
+
+	article p {
+		margin: 1em 0;
+		line-height: 1.7;
+	}
+
+	article ul,
+	article ol {
+		margin-left: 18px;
+		list-style: square;
+	}
+		article li {
+			line-height: 1.7;
+		}
+
+	article blockquote {
+	}
+
+	article sup {
+		line-height: 1;;
+	}
+
+	article abbr:after {
+		content: " (" attr(title) ")";
+	}
+
+	article code, article pre {
+		color: #69c;
+	}
+
+	article .txt {
+		max-width: 600px;
+	}
+
+	article .note {
+		background: rgba(255, 0, 0, .08);
+	}
+
+	article .download {
+		background: rgba(0, 255, 0, .08);
+	}
+
+/*	post list in pages */
+	.pl li {
+		margin-bottom: 1em;
+	}
+	.pl ins {
+		display: block;
+	}
+	.al {
+		margin: 0 0 -12px 0;
+	}
+		.al li {
+			position: relative;
+			list-style: none;
+			display: inline-block;
+			margin: 0 10px 10px 0;
+		}
+			.al li img {
+				width: 180px;
+				height: 135px;
+			}
+			.al li a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 10px;
+				width: 160px;
+				height: 115px;
+				font-size: 12px;
+				opacity: 0;
+			}
+				.al li:hover a {
+					opacity: 1;
+				}
+
+/* first-children and last-children resets */
+p:first-child,
+li:first-child,
+h3:first-child {
+	margin-top: 0;
+}
+
+p:last-child,
+li:last-child,
+h3:last-child {
+	margin-bottom: 0;
+}
+
+::selection {
+	background: rgba(255, 255, 0, .8);
+}
+
+@media print,
+		screen and (max-device-width: 480px),
+		(min-device-width: 1024px) and (max-width: 959px),
+		(max-device-width: 480px) and (orientation: landscape),
+		(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+	* {}
+	:root {-webkit-text-size-adjust: none;}
+}
+
+@media print {
+	* {
+		color: #000 !important;
+		line-height: 1.6 !important;
+		background: transparent !important;
+		border: none !important;
+		text-decoration: none !important;
+	}
+	a {font-weight: bold;}
+	header, nav, footer {display: none;}
+	article {text-align: justify;}
+}

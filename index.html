@@ -2,17 +2,3 @@
 layout: default
 title: Sparanoid
 ---
-
-{% for post in site.posts limit:1 %}
-{% if post.category == "artwork" %} 
-<hgroup>
-	<h2>{{ post.head }}</h2>
-	<h1 class=rt><a href="{{ post.url }}/" rel=bookmark>{{ post.title }}</a></h1>
-	{% if post.excerpt %}<h3 class=lt>{{ post.excerpt }}</h3>{% endif %}
-</hgroup>
-
-<article>
-	{{ post.content }}
-</article>
-{% endif %} 
-{% endfor %}
