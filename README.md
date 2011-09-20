@@ -1,14 +1,7 @@
-cyrconplex
-==========
+NITE
+====
 
-[Jekyll][jk] runing on [sparanoid.com][sp], Codename cyrconplex, version 16.
-
-
-Instructions
-------------
-
-* I don't suppose you're stupid.
-
+[Jekyll][jk] runing on [sparanoid.com][sp], codename NITE, version 17.
 
 License
 -------
