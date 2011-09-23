@@ -70,11 +70,11 @@ excerpt: Use US World of Warcraft client to login Chinese servers
 <p>值對不上的重新下載，沒問題的該解包的解包，該執行的執行，按照上面對應的列表順序安裝即可</p>
 
 <h3>配置文件、字體修改</h3>
-<p>從 3.0.3 開始配置文件已經徹底舍棄 <code>[WoWRoot]\realmlist.wtf</code> 了，所以根本不需要這個文件，說用改這個文件的也是錯誤的說法。目前 WoW 會調用 <code>[WoWRoot]\WTF\Config.wtf</code> 爲配置文件。<code>[WoWRoot]\Data\enUS\realmlist.wtf</code> 爲服務器模板文件(這是美服登陸國服的關鍵)</p>
+<p>從 3.0.3 開始配置文件已經徹底舍棄 <code>[WoWRoot]\realmlist.wtf</code> 了，所以根本不需要這個文件，說用改這個文件的也是錯誤的說法。目前 WoW 會調用 <code>[WoWRoot]<wbr>\WTF<wbr>\Config.wtf</code> 爲配置文件。<code>[WoWRoot]<wbr>\Data<wbr>\enUS<wbr>\realmlist.wtf</code> 爲服務器模板文件(這是美服登陸國服的關鍵)</p>
 
 <p class=note>下述修改方法爲九城時期的服務器設置，<del datetime="2010-08-09T19:32:51+00:00">網易的設置請持續關注本文</del></p>
 
-<p>用文本編輯器打開 <code>[WoWRoot]\Data\enUS\realmlist.wtf</code>，將其中的 <code>set realmlist us.logon.worldofwarcraft.com</code> 那項改爲 <code>set realmlist cn*.grunt.wowchina.com</code>，* 代表你所在的大區，比如六區爲 <code>set realmlist cn<em>6</em>.grunt.wowchina.com</code></p>
+<p>用文本編輯器打開 <code>[WoWRoot]<wbr>\Data<wbr>\enUS<wbr>\realmlist.wtf</code>，將其中的 <code>set realmlist us.logon.worldofwarcraft.com</code> 那項改爲 <code>set realmlist cn*.grunt.wowchina.com</code>，* 代表你所在的大區，比如六區爲 <code>set realmlist cn<em>6</em>.grunt.wowchina.com</code></p>
 
 <h3>替換 Wow.exe</h3>
 <p>先將 3.1.3.9947 的原版 Wow.exe 備份下，就叫 Wow-en.exe 好了，然後從下列地址下載 3.1.3.9981 版本的 Wow.exe，複制到遊戲根目錄即可</p>
