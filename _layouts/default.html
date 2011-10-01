@@ -34,13 +34,13 @@
 
 {% if page.category == "work" or page.category == "note" %} 
 <nav>
-{% if page.next.url %}
-  <p><a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.next.url }}/>{{ page.next.title }}</a> |
+{% if page.next_in_categories.url %}
+  <p><a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.next_in_categories.url }}/>{{ page.next_in_categories.title }}</a> |
 {% else %}
   <p>You're viewing the latest post |
 {% endif %}
-{% if page.previous.url %}
-  Previous: <a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous.url }}/>{{ page.previous.title }}</a> &gt;</p>
+{% if page.previous_in_categories.url %}
+  Previous: <a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous_in_categories.url }}/>{{ page.previous_in_categories.title }}</a> &gt;</p>
 {% else %}
   You're reading my first post</p>
 {% endif %}
