@@ -23,7 +23,7 @@
   line-height: 1.7;
   max-width: 960px;
   margin: 0 auto;
-  padding: 40px 110px;
+  padding: 40px;
   image-rendering: optimizeQuality;
   -webkit-font-smoothing: antialiased;
   font-weight: 100;
@@ -301,6 +301,26 @@ footer {
   background: rgba(255, 255, 0, .8);
 }
 
+@media print,
+screen and (max-device-width: 480px),
+(min-device-width: 1024px) and (max-width: 959px),
+(max-device-width: 480px) and (orientation: landscape),
+(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  :root {
+    -webkit-text-size-adjust: none;
+    padding: 40px 60px;
+  }
+}
+
+@media
+screen and (max-device-width: 480px) {
+  :root {
+    padding: 40px 20px;
+  }
+  hgroup {
+    width: 200px;
+  }
+}
 
 @media print {
   * {
