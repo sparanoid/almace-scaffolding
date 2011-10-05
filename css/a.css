@@ -258,9 +258,10 @@ article > p > img {
       line-height: 1.5;
       opacity: 0;
       text-transform: uppercase;
+      color: #fff;
     }
       .al li a:hover {
-        background: #ff0;
+        background: #000;
       }
       .al li:hover a {
         opacity: 1;
