@@ -1,13 +1,11 @@
 ---
 layout: post
 title: cyrconlex
-category: work
+category: note
 excerpt: The 16th version of sparanoid.com
 thumb: cyrconplex.jpg
 bg: '#fff6ed'
 ---
-
-<p><img src="{{ site.file }}/cyrconplex-preview.jpg"></p>
 
 <div class=txt>
 <p>Yes this is another version, codename inspired by sayCet - Cyrconlex, illustration is 松前緒花 from Japanese anime 「花咲くいろは」. You can also get the source code from <a href="https://github.com/sparanoid/sparanoid.com">Github</a>.</p>

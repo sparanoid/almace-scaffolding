@@ -5,10 +5,11 @@ permalink: /note/
 desc: Random ramblings
 ---
 
-<div class=txt>
-<ul class=pl>
-{% for post in site.categories.note %}
-  <li><a href={% if site.prod %}//{{ site.url }}{% endif %}{{ post.url }}/>{{ post.title }}</a><ins>{{ post.excerpt }}</ins></li>
-{% endfor %}
-</ul>
-</div>
+<dl>
+  {% for post in site.categories.note %}
+    <dd>
+      {{ post.content }}
+    </dd>
+    <dt>{{ post.title }} <a href={{ post.url }}/>&para;</a></dt>
+  {% endfor %}
+</dl>
