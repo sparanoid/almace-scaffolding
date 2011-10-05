@@ -4,29 +4,22 @@
 
 <meta name=viewport content="width=device-width, initial-scale=1.0">
 
-<link rel=alternate href={% if site.prod %}//{{ site.url }}{% endif %}/feed/ type=application/atom+xml>
-<link rel=stylesheet href={% if site.prod %}//{{ site.url }}{% endif %}/{{ site.css-path }}/a.min.css>
+<link rel=alternate href=/feed/ type=application/atom+xml>
+<link rel=stylesheet href=/{{ site.css-path }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
-{% if page.title == 'Sparanoid' %}
 <header>
-  <h2>Welcome to <a href={% if site.prod %}//{{ site.url }}{% endif %}/>Sparanoid</a></h2>
-  <h1 lang=ja><a href={% if site.prod %}//{{ site.url }}{% endif %}/ rel=home accesskey=x>スパラノイド</a></h1>
+  <h1><a href=/>Sparanoid</a></h1>
 </header>
-{% endif %}
 
 <nav>
-  {% if page.title == 'Sparanoid' %}
-    <h2>Get Started Here</h2>
-  {% else %}
-    <h2>&lt; <a href={% if site.prod %}//{{ site.url }}{% endif %}/ rel=home accesskey=x>Back to Home</a></h2>
-  {% endif %}
   <ul>
-    <li{% if page.permalink == '/work/' or page.category == 'work' %} class=current{% endif %}><a href={% if site.prod %}//{{ site.url }}{% endif %}/work/>Work<span> ／ ワークス ／ 作品</span></a></li>
-    <li{% if page.permalink == '/note/' or page.category == 'note' %} class=current{% endif %}><a href={% if site.prod %}//{{ site.url }}{% endif %}/note/>Note<span> ／ ノート ／ 筆記</span></a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href={% if site.prod %}//{{ site.url }}{% endif %}/about/>About<span> ／ について ／ 關於</span></a></li>
+    <li{% if page.title == 'Sparanoid' %} class=current{% endif %}><a href=/ rel=home accesskey=x>Home</a></li>
+    <li{% if page.permalink == '/work/' or page.category == 'work' %} class=current{% endif %}><a href=/work/>Work</a></li>
+    <li{% if page.permalink == '/note/' or page.category == 'note' %} class=current{% endif %}><a href=/note/>Note</a></li>
+    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href=/about/>About</a></li>
   </ul>
 </nav>
 
@@ -35,19 +28,19 @@
 {% if page.category == "work" or page.category == "note" %} 
 <nav>
 {% if page.next_in_categories.url %}
-  <p><a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.next_in_categories.url }}/>{{ page.next_in_categories.title }}</a> |
+  <p><a href={{ page.next_in_categories.url }}/>{{ page.next_in_categories.title }}</a> |
 {% else %}
-  <p>You're viewing the latest post |
+  <p>Top |
 {% endif %}
 {% if page.previous_in_categories.url %}
-  Previous: <a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous_in_categories.url }}/>{{ page.previous_in_categories.title }}</a> &gt;</p>
+  <a href={{ page.previous_in_categories.url }}/>{{ page.previous_in_categories.title }}</a> &gt;</p>
 {% else %}
-  You're reading my first post</p>
+  Bottom</p>
 {% endif %}
 </nav>
 {% endif %}
 
-{% if page.title != 'Sparanoid' %}
+{% if page.title != 'Sparanoid' and page.category == "note" %}
 <aside>
 <h2><a href="http://www.yoggrt.com/">Ads by Yoggrt</a></h2>
 {% include sponsor.html %}
@@ -55,5 +48,5 @@
 {% endif %}
 
 <footer>
-  <p class=c><a href=http://twitter.com/{{ site.twitter }}>{{ site.name }}</a> feat. <a href=http://sparanoid.com/work/nite/>NITE</a>. (<a href=/feed/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>)</p>
+  <p><a href=/>{{ site.name }}</a> / <a href=/feed/ title="Feed - Atom (The Atom Syndication Format)">Atom</a></p>
 </footer>

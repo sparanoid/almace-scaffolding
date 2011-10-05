@@ -8,7 +8,7 @@ bg: '#eafbf1'
 ---
 
 <div class=txt>
-<h3>學園都市風紀委員 177 支部＆警備員 スクリーンセーバー＆アイコン<br>from「とある科學の超電磁砲」</h3>
+<p>學園都市風紀委員 177 支部＆警備員 スクリーンセーバー＆アイコン<br>from「とある科學の超電磁砲」</p>
 </div>
 
 <p><img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-00.png" alt="Judgment Icon from Academy City" class="no-border"></p>
