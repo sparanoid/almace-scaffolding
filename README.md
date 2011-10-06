@@ -1,7 +1,7 @@
-NITE
-====
+Minimalist Syndrome
+===================
 
-[Jekyll][jk] runing on [sparanoid.com][sp], codename NITE, version 17.
+[Jekyll][jk] runing on [sparanoid.com][sp], codename Minimalist Syndrome, version 18.
 
 License
 -------
