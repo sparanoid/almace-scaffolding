@@ -25,16 +25,15 @@
   margin: 0 auto;
   padding: 40px;
   image-rendering: optimizeQuality;
-  -webkit-font-smoothing: antialiased;
   font-weight: 100;
 }
 
 a {
   color: #000;
 /*  color: #fff;*/
-  -webkit-transition: color .8s ease, background .8s ease, opacity .8s ease;
-     -moz-transition: color .8s ease, background .8s ease, opacity .8s ease;
-          transition: color .8s ease, background .8s ease, opacity .8s ease;
+  -webkit-transition: color .5s ease, background .5s ease, opacity .5s ease;
+     -moz-transition: color .5s ease, background .5s ease, opacity .5s ease;
+          transition: color .5s ease, background .5s ease, opacity .5s ease;
 }
   a:hover {
 /*    color: #000;*/
@@ -65,10 +64,10 @@ nav, h2, footer {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: .4em;
-  color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, .4);
 }
   nav a, h2 a, footer a {
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .4);
   }
     nav a:hover, h2 a:hover, footer a:hover,
     .current a {
@@ -94,17 +93,19 @@ hgroup {
   color: #fff;
   margin-bottom: 30px;
   padding: 20px;
-  width: 280px;
+  max-width: 280px;
+  -webkit-font-smoothing: antialiased;
 }
   hgroup h2 {
     color: #fff;
   }
-  h1 {
+  h1, nav p {
     font-family: 'Helvetica CY', Arial, sans-serif;
     font-size: 18px;
     line-height: 1;
     text-transform: uppercase;
     font-weight: 100;
+    letter-spacing: 0;
   }
     h1[lang=ja] {
       margin-left: -2px;
@@ -131,7 +132,7 @@ article h3 {
   }
 
 article a {
-  border-bottom: 1px dotted rgba(0, 0, 0, .5);
+  border-bottom: 1px dotted rgba(0, 0, 0, .4);
 }
   article a:hover {
     background: #fff;
@@ -308,7 +309,6 @@ screen and (max-device-width: 480px),
 (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
   :root {
     -webkit-text-size-adjust: none;
-    padding: 40px 60px;
   }
 }
 
@@ -317,8 +317,8 @@ screen and (max-device-width: 480px) {
   :root {
     padding: 40px 20px;
   }
-  hgroup {
-    width: 200px;
+  nav ul li {
+    margin-right: 14px;
   }
 }
 
