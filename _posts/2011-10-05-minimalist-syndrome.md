@@ -6,5 +6,5 @@ excerpt: It's me
 ---
 
 <div class=txt>
-<p>This time I deleted all my old posts and redesigned this site.</p>
+<p>本想把這裡關掉，只留一頁面當擺設，但怎麼說也堅持了六年，於是把老文章刪掉，重新開始吧</p>
 </div>
