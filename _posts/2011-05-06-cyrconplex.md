@@ -3,8 +3,6 @@ layout: post
 title: cyrconlex
 category: note
 excerpt: The 16th version of sparanoid.com
-thumb: cyrconplex.jpg
-bg: '#fff6ed'
 ---
 
 <div class=txt>
