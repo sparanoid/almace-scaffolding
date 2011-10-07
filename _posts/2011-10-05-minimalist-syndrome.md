@@ -2,7 +2,6 @@
 layout: post
 title: Minimalist Syndrome
 category: note
-excerpt: It's me
 ---
 
 <div class=txt>

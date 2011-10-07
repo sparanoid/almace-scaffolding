@@ -31,8 +31,17 @@ permalink: /feed/index.xml
     <name>{{ site.full-name }}</name>
     <uri>http://{{ site.url }}/</uri>
   </author>
-  <summary>{{ post.excerpt | xml_escape }}</summary>
-  <content type="html">{% if post.thumb %}&lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;{% else %}{% endif %}&lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;</content>
+  <content type="html">
+    {% if post.thumb %}
+      &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
+    {% else %}
+    {% endif %}
+    {% if post.category == "note" %}
+      &lt;p&gt;{{ post.content | xml_escape }}&lt;/p&gt;
+    {% elsif post.excerpt %}
+      &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
+    {% endif %}
+  </content>
 </entry>
 {% endfor %}
 </feed>
