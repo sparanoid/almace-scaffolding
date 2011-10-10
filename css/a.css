@@ -175,7 +175,7 @@ article code, article pre {
 
 article .txt {
   max-width: 600px;
-  font-family: Georgia, serif;
+  font-family: Palatino, 'Palatino Linotype', serif;
   font-size: 14px;
   background: rgba(0, 0, 0, .05);
   padding: 10px 20px;
