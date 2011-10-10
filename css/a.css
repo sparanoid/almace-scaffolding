@@ -132,10 +132,10 @@ article h3 {
   }
 
 article a {
-  border-bottom: 1px dotted rgba(0, 0, 0, .4);
+  border-bottom: 1px dotted rgba(0, 0, 0, .2);
 }
   article a:hover {
-    background: #fff;
+    border-bottom-color: #000;
   }
 
 article img,
