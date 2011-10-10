@@ -31,16 +31,16 @@
 a {
   color: #000;
 /*  color: #fff;*/
-  -webkit-transition: color .5s ease, background .5s ease, opacity .5s ease;
-     -moz-transition: color .5s ease, background .5s ease, opacity .5s ease;
-          transition: color .5s ease, background .5s ease, opacity .5s ease;
+  -webkit-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
+     -moz-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
+          transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
 }
   a:hover {
 /*    color: #000;*/
 /*    background: rgba(255, 255, 0, .95);*/
-    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease;
-       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease;
-            transition: color .1s ease, background .1s ease, opacity .1s ease;
+    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
+       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
+            transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
   }
 
 ins {
