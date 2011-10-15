@@ -19,7 +19,7 @@
   background: #fff;
 /*  background: #000;*/
   font-size: 14px;
-  font-family: Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+  font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
   line-height: 1.7;
   max-width: 960px;
   margin: 0 auto;
@@ -59,23 +59,24 @@ header {
   display: none;
 }
 
-nav, h2, footer {
-  font-size: 10px;
+/*add hgroup here, it needs letter-spacing for titles*/
+nav, hgroup, h1, h2, h3, dt, footer {
+  font-family: Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+  font-size: 11px;
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: .4em;
+  letter-spacing: .3em;
   color: rgba(0, 0, 0, .4);
 }
-  nav a, h2 a, footer a {
+  nav a, h2 a, dt a:last-child, footer a {
     color: rgba(0, 0, 0, .4);
   }
-    nav a:hover, h2 a:hover, footer a:hover,
+    nav a:hover, h2 a:hover, dt a:last-child:hover, footer a:hover,
     .current a {
       color: #000;
     }
 
 nav {
-  font-size: 11px;
 }
   nav ul {
     list-style: none;
@@ -89,28 +90,17 @@ nav {
       }
 
 hgroup {
-  background: #000;
-  color: #fff;
-  margin-bottom: 30px;
-  padding: 20px;
-  max-width: 280px;
-  -webkit-font-smoothing: antialiased;
+  margin-bottom: 10px;
 }
+  hgroup h1 {
+    display: inline;
+/*    float: left;*/
+/*    margin-right: .8em;*/
+    color: #000;
+  }
   hgroup h2 {
-    color: #fff;
+    display: inline;
   }
-  h1, nav p {
-    font-family: 'Helvetica CY', Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1;
-    text-transform: uppercase;
-    font-weight: 100;
-    letter-spacing: 0;
-  }
-    h1[lang=ja] {
-      margin-left: -2px;
-    }
-
 
 article {
 /*  reduce margin-top as each first of paragraph has its own margin-top */
@@ -118,17 +108,11 @@ article {
   float: left;
   width: 100%;
 }
-
 article h3 {
-/*  only h3, please */
-  font-family: 'Helvetica CY', Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1;
-  text-transform: uppercase;
-  margin: 2em 0 0;
+  margin-top: 24px;
 }
   article h3:first-child {
-    margin-top: .5em;
+    margin-top: 15px;
   }
 
 article a {
@@ -175,12 +159,17 @@ article code, article pre {
 
 article .txt {
   max-width: 600px;
-  font-family: Palatino, 'Palatino Linotype', serif;
   font-size: 14px;
-  background: rgba(0, 0, 0, .05);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .02));
+  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .02));
+  background-image:         linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .02));
+  border-radius: 3px;
   padding: 10px 20px;
   margin-top: 20px;
 }
+  article .txt p,
+  article .txt li {
+  }
 
 /* Borrowed from Bootstrap */
 article .note, article .download {
@@ -218,17 +207,10 @@ dl {
     
   }
     dt {
-      font-size: 11px;
-      margin: 10px 0 0 20px;
-      text-transform: uppercase;
+      margin: 20px 0 -10px 0;
     }
       dt a {
         border: none;
-        opacity: 0;
-      }
-      dt:hover a,
-      dd:hover + dt > a {
-        opacity: 1;
       }
 
 /* image list in "work" */
