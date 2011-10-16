@@ -8,4 +8,6 @@ thumb: fogbound-highrise.png
 
 <p><img src="{{ site.file }}/fogbound-highrise-screenshot.png"></p>
 
-@<a href="https://github.com/sparanoid/sparanoid.com">GitHub</a>
+<div class=txt>
+<p>Source code hosted @<a href="https://github.com/sparanoid/sparanoid.com">GitHub</a></p>
+</div>
