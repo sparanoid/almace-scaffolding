@@ -116,7 +116,7 @@ article h3 {
   }
 
 article a {
-  border-bottom: 1px dotted rgba(0, 0, 0, .2);
+  border-bottom: 1px dotted rgba(0, 0, 0, .1);
 }
   article a:hover {
     border-bottom-color: #000;
