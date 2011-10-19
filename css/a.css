@@ -160,9 +160,9 @@ article code, article pre {
 article .txt {
   max-width: 600px;
   font-size: 14px;
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .02));
-  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .02));
-  background-image:         linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .02));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .015));
+  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .015));
+  background-image:         linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .015));
   border-radius: 3px;
   padding: 10px 20px;
   margin-top: 20px;
