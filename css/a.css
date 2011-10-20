@@ -1,11 +1,4 @@
 @charset "utf-8";
-
-/*!
-
-  © sparanoid.com
-
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +14,12 @@
   font-size: 14px;
   font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
   line-height: 1.7;
+  font-weight: 100;
   max-width: 960px;
   margin: 0 auto;
   padding: 40px;
   image-rendering: optimizeQuality;
-  font-weight: 100;
+  -webkit-text-size-adjust: none;
 }
 
 a {
@@ -282,23 +276,13 @@ footer {
   background: rgba(255, 255, 0, .8);
 }
 
-@media print,
-screen and (max-device-width: 480px),
-(min-device-width: 1024px) and (max-width: 959px),
-(max-device-width: 480px) and (orientation: landscape),
-(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
-  :root {
-    -webkit-text-size-adjust: none;
-  }
-}
-
 @media
 screen and (max-device-width: 480px) {
   :root {
     padding: 40px 20px;
   }
   nav ul li {
-    margin-right: 14px;
+    margin-right: 20px;
   }
 }
 
@@ -310,9 +294,6 @@ screen and (max-device-width: 480px) {
     border: none !important;
     text-decoration: none !important;
   }
-  h1:before {
-    display: none;
-  }
   a {
     font-weight: bold;
   }
@@ -321,5 +302,8 @@ screen and (max-device-width: 480px) {
   }
   article {
     text-align: justify;
+  }
+  article .txt {
+    padding: 0;
   }
 }
