@@ -18,8 +18,8 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 40px;
-  image-rendering: optimizeQuality;
-  -webkit-text-size-adjust: none;
+  text-rendering: optimizelegibility;
+  image-rendering: optimizequality;
 }
 
 a {
