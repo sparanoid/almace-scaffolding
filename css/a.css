@@ -236,7 +236,7 @@ article > p > img {
       color: #fff;
     }
       .al li a:hover {
-        background: #000;
+        background: rgba(0, 0, 0, .9);
       }
       .al li:hover a {
         opacity: 1;
