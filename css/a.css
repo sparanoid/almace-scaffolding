@@ -154,11 +154,11 @@ article code, article pre {
 article .txt {
   max-width: 600px;
   font-size: 14px;
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .015));
-  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .015));
-  background-image:         linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .015));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .03), rgba(0, 0, 0, .015));
+  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .03), rgba(0, 0, 0, .015));
+  background-image:         linear-gradient(top, rgba(0, 0, 0, .03), rgba(0, 0, 0, .015));
   border-radius: 3px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   margin-top: 20px;
   text-align: justify;
   -webkit-hyphens: auto;
@@ -206,6 +206,9 @@ dl {
       dt a {
         border: none;
       }
+        dt a:hover {
+          opacity: .6;
+        }
 
 /* image list in "work" */
 /* a padding-top unification workaround */
