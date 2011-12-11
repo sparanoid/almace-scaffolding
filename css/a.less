@@ -26,12 +26,12 @@
 }
 
 @font-face {
-    font-family: 'AllerRegular';
-    src: url('aller_rg-webfont.eot');
-    src: url('aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('aller_rg-webfont.woff') format('woff'),
-         url('aller_rg-webfont.ttf') format('truetype'),
-         url('aller_rg-webfont.svg#AllerRegular') format('svg');
+    font-family: 'f';
+    src: url('f.eot');
+    src: url('f.eot?#iefix') format('embedded-opentype'),
+         url('f.woff') format('woff'),
+         url('f.ttf') format('truetype'),
+         url('f.svg#AllerRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -39,7 +39,7 @@
 .gray { color: rgba(0, 0, 0, .35); }
 
 .aller {
-  font-family: AllerRegular, Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+  font-family: f, Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -74,19 +74,45 @@ del {
 }
 
 header {
+  position: relative;
   .aller;
   font-size: 30px;
   padding: 5px 0 0 50px;
   height: 38px;
   width: 160px;
   margin: 0 auto;
-  background: url(l.png) no-repeat 0 0;
+  a:hover {
+    color: inherit;
+  }
 }
+
+header:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 38px;
+  width: 38px;
+  content: '';
+  background: url(l.svg) no-repeat 0 0;
+  background-size: 38px 38px;
+  -webkit-animation: r 10s infinite linear;
+     -moz-animation: r 10s infinite linear;
+}
+
+@-webkit-keyframes r {
+  0%   { -webkit-transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes r {
+  0%   { -moz-transform: rotate(0); }
+  100% { -moz-transform: rotate(360deg); }
+}
+
 
 nav {
   .helvetica;
   font-size: 11px;
-  padding: 20px 0;
+  padding: 15px 0;
   ul {
     text-align: center;
     li {
@@ -166,6 +192,7 @@ article {
     .helvetica;
     color: #000;
     letter-spacing: 0;
+    text-transform: none;
     font-size: 14px;
     padding: 20px;
     border-left: 3px solid rgba(255, 64, 0, .15);
@@ -267,4 +294,18 @@ footer {
   text-align: center;
 }
 
+@media screen and (max-width: 640px) {
+  article .txt {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  :root {
+    padding: 40px 20px;
+  }
+  article .txt {
+    font-size: 14px;
+  }
+}
 
