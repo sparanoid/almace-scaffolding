@@ -5,13 +5,13 @@
 <meta name=viewport content="width=device-width, initial-scale=1.0">
 
 <link rel=alternate href=/feed/ type=application/atom+xml>
-<link rel=stylesheet href=/{{ site.css-path }}/a.min.css>
+<link rel=stylesheet href=/{{ site.css-path }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
 <header>
-  <h1><a href=/>Sparanoid</a></h1>
+  <h1><a href=/ rel=home accesskey=x>Sparanoid</a></h1>
 </header>
 
 <nav>
@@ -30,23 +30,25 @@
 {% if page.next_in_categories.url %}
   <p><a href={{ page.next_in_categories.url }}/>{{ page.next_in_categories.title }}</a> |
 {% else %}
-  <p>Top |
+  <p>----- |
 {% endif %}
 {% if page.previous_in_categories.url %}
   <a href={{ page.previous_in_categories.url }}/>{{ page.previous_in_categories.title }}</a> &gt;</p>
 {% else %}
-  Bottom</p>
+  -----</p>
 {% endif %}
 </nav>
 {% endif %}
 
 {% if page.title != 'Sparanoid' %}
 <aside>
-<h2><a href="http://www.yoggrt.com/">ads by BSA</a></h2>
 {% include sponsor.html %}
 </aside>
 {% endif %}
 
+{% if page.title == 'Sparanoid' %}
+{% else %}
 <footer>
   <p><a href=/>{{ site.name }}</a> / <a href=/feed/ title="Feed - Atom (The Atom Syndication Format)">Atom</a></p>
 </footer>
+{% endif %}

@@ -3,8 +3,8 @@ layout: default
 ---
 
 <hgroup>
-  <h1{% if page.lang %} lang={{ page.lang }}{% endif %}><a href={% if page.link %}{{ page.link }}{% else %}{{ page.url }}/{% endif %}>{{ page.title }}</a></h1>
-  {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %Y" }}</time></h2>{% endif %}
+  <h1><a href={% if page.link %}{{ page.link }}{% else %}{{ page.url }}/{% endif %}>{{ page.title }}</a></h1>
+  {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %d, %Y" }}</time></h2>{% endif %}
   {% if page.desc %}<h2>{{ page.desc }}</h2>{% endif %}
 </hgroup>
 
