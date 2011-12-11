@@ -1,0 +1,319 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  font-family: inherit;
+  //I don't need any decoration here. 
+  text-decoration: none;
+}
+
+:root {
+  color: #000;
+  background: #fff;
+  font-size: 14px;
+  font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
+  line-height: 1.7;
+  font-weight: 100;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  text-rendering: optimizelegibility;
+  image-rendering: optimizequality;
+}
+
+@font-face {
+    font-family: 'AllerRegular';
+    src: url('aller_rg-webfont.eot');
+    src: url('aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('aller_rg-webfont.woff') format('woff'),
+         url('aller_rg-webfont.ttf') format('truetype'),
+         url('aller_rg-webfont.svg#AllerRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+  color: #000;
+  -webkit-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
+     -moz-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
+          transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
+  &:hover {
+      -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
+         -moz-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
+              transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
+  }
+}
+
+ins {
+  color: rgba(0, 0, 0, .3);
+}
+
+del {
+  text-decoration: line-through;
+}
+
+header, nav, article, aside, footer {
+  padding-bottom: 30px;
+}
+
+header {
+  display: none;
+}
+
+/*add hgroup here, it needs letter-spacing for titles in post.html*/
+nav, hgroup, h1, h2, h3, dt, .al a, footer {
+  font-family: Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  color: rgba(0, 0, 0, .4);
+}
+  nav a, h2 a, dt a:last-child, footer a {
+    color: rgba(0, 0, 0, .4);
+  }
+    nav a:hover, h2 a:hover, dt a:last-child:hover, footer a:hover,
+    .current a {
+      color: #000;
+    }
+
+nav {
+}
+  nav ul {
+    list-style: none;
+  }
+    nav ul li {
+      display: inline-block;
+      margin-right: 34px;
+    }
+      nav ul li:last-child {
+        margin-right: 0;
+      }
+
+hgroup {
+  margin-bottom: 10px;
+}
+  hgroup h1 {
+    display: inline;
+/*    float: left;*/
+/*    margin-right: .8em;*/
+    color: #000;
+  }
+  hgroup h2 {
+    display: inline;
+  }
+
+article {
+/*  reduce margin-top as each first of paragraph has its own margin-top */
+  margin-top: -20px;
+  float: left;
+  width: 100%;
+}
+article h3 {
+  margin-top: 24px;
+}
+  article h3:first-child {
+    margin-top: 15px;
+  }
+
+article a {
+  border-bottom: 1px dotted rgba(0, 0, 0, .1);
+}
+  article a:hover {
+    border-bottom-color: #000;
+  }
+
+article img,
+article video {
+  max-width: 100%;
+}
+
+article p {
+  margin: 1em 0;
+  line-height: 1.8;
+}
+
+article ul,
+article ol {
+  margin: 1em 0 1em 20px;
+  list-style: square;
+}
+  article li {
+    line-height: 1.8;
+  }
+
+article blockquote {
+}
+
+article sup {
+  line-height: 1;
+}
+
+article abbr:after {
+  content: " (" attr(title) ")";
+}
+
+article code, article pre {
+  font-family: Menlo, Consolas, monospace;
+  color: #b74;
+}
+
+article .txt {
+  max-width: 600px;
+  font-size: 14px;
+/*  padding: 5px 20px;*/
+  margin-top: 20px;
+  text-align: justify;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+  article .txt p,
+  article .txt li {
+  }
+
+/* Borrowed from Bootstrap */
+article .note, article .download {
+  padding: 7px 15px;
+  color: #404040;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+  background-color: #eedc94;
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(top, #fceec1, #eedc94);
+  background-image:    -moz-linear-gradient(top, #fceec1, #eedc94);
+  background-image:         linear-gradient(top, #fceec1, #eedc94);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+article .note {
+/*  background: #fff;*/
+}
+
+article .download {
+/*  background: #fff;*/
+}
+
+/*  post list in "note" */
+dl {
+}
+  dt {
+    margin: 20px 0 -5px 0;
+  }
+    dt a {
+      border: none;
+    }
+      dt a:hover {
+        opacity: .6;
+      }
+  dd {
+    margin-bottom: 40px;
+  }
+
+/* image list in "work" */
+/* a padding-top unification workaround */
+.al,
+article > p > img {
+  padding-top: 8px;
+  margin-left: 0;
+}
+  .al li {
+    position: relative;
+    list-style: none;
+    float: left;
+    line-height: 0;
+  }
+    .al li img {
+      width: 160px;
+      height: 120px;
+    }
+    .al li a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      width: 140px;
+      height: 100px;
+      line-height: 1.5;
+      opacity: 0;
+      color: #fff;
+    }
+      .al li a:hover {
+        background: rgba(0, 0, 0, .9);
+      }
+      .al li:hover a {
+        opacity: 1;
+      }
+
+.bsap {
+  max-width: 600px;
+  padding-top: 6px;
+}
+/*image */
+.bsa_it_i {
+  display: inline-block;
+  padding-right: 15px;
+  float: left;
+}
+/*ads text title */
+.bsa_it_t {
+  display: block;
+  padding-bottom: .5em;
+  font-weight: bold;
+}
+/*ads text content */
+.bsa_it_d {
+  line-height: 1.5;
+}
+/*hide ads by */
+.one .bsa_it_p {
+  display: none;
+}
+
+footer {
+}
+  footer a {
+  }
+
+::selection {
+  background: rgba(255, 255, 0, .8);
+}
+
+@media
+screen and (max-device-width: 480px) {
+  :root {
+    padding: 40px 20px;
+  }
+  nav ul li {
+    margin-right: 20px;
+  }
+}
+
+@media print {
+  * {
+    color: #000 !important;
+    line-height: 1.6 !important;
+    background: transparent !important;
+    border: none !important;
+    text-decoration: none !important;
+  }
+  a {
+    font-weight: bold;
+  }
+  header, nav, aside, footer {
+    display: none;
+  }
+  article {
+    text-align: justify;
+  }
+  article .txt {
+    padding: 0;
+  }
+}

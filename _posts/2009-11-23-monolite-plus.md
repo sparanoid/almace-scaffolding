@@ -7,12 +7,12 @@ thumb: monolite-plus.jpg
 bg: '#fff9ed'
 ---
 
+<p><img src="{{ site.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>
+
 <div class=txt>
 <p class=note>Lastest Version: <strong>0.4.3</strong> for foobar2000 1.0 / <strong>0.2</strong> for foobar2000 0.9.6.9</p>
 <p class=note>0.4.* 版本的 Last.fm 同步功能可能會在退出 foobar2000 時隨機出現錯誤提示，但不會影響正常使用</p>
 </div>
-
-<p><img src="{{ site.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>
 
 <div class=txt>
 <h3>什麽是 MonoLite Plus？</h3>
