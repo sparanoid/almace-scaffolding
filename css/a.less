@@ -73,6 +73,20 @@ del {
   text-decoration: line-through;
 }
 
+body:before {
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  display: block;
+  background: rgba(0, 0, 0, .05);
+  border-bottom: 1px solid rgba(0, 0, 0, .02);
+  z-index: 9999;
+  pointer-events: none;
+}
+
 header {
   position: relative;
   .aller;
@@ -292,6 +306,9 @@ footer {
   .helvetica;
   font-size: 11px;
   text-align: center;
+}
+
+.top {
 }
 
 @media screen and (max-width: 640px) {
