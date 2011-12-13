@@ -75,14 +75,13 @@ del {
 
 body:before {
   position: fixed;
-  content: '';
   top: 0;
   left: 0;
   width: 100%;
   height: 12px;
-  display: block;
+  content: '';
   background: rgba(0, 0, 0, .05);
-  border-bottom: 1px solid rgba(0, 0, 0, .02);
+  border-bottom: 1px solid rgba(0, 0, 0, .01);
   z-index: 9999;
   pointer-events: none;
 }
@@ -122,10 +121,12 @@ header:before {
   100% { -moz-transform: rotate(360deg); }
 }
 
-
 nav {
   .helvetica;
   font-size: 11px;
+}
+
+nav[role=navigation] {
   padding: 15px 0;
   ul {
     text-align: center;
@@ -133,6 +134,23 @@ nav {
       display: inline;
       margin: 0 .9em;
     }
+  }
+}
+
+nav[role=pagination] {
+  a {
+    position: absolute;
+    top: 177px;
+    display: block;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, .05);
+    z-index: 9999;
+  }
+  a[role=next] {
+    left: 0;
+  }
+  a[role=previous] {
+    right: 0;
   }
 }
 
