@@ -39,4 +39,6 @@ exclude:
 - README.md
 - LICENSE
 - Rakefile
-- nite.tmproj
+- sparanoid.com.tmproj
+- sparanoid.sublime-project
+- sparanoid.sublime-workspace
