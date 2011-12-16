@@ -1,7 +1,7 @@
-Minimalist Syndrome
-===================
+lindsayisgod
+============
 
-[Jekyll][jk] runing on [sparanoid.com][sp], codename Minimalist Syndrome, version 18.
+[Jekyll][jk] runing on [sparanoid.com][sp], codename `lindsayisgod`, version 19.
 
 License
 -------
