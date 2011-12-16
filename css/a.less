@@ -81,7 +81,7 @@ body:before {
   height: 12px;
   content: '';
   background: rgba(0, 0, 0, .05);
-  border-bottom: 1px solid rgba(0, 0, 0, .01);
+  border-bottom: 1px solid rgba(0, 0, 0, .02);
   z-index: 9999;
   pointer-events: none;
 }
@@ -139,7 +139,7 @@ nav[role=navigation] {
 
 nav[role=pagination] {
   a {
-    position: absolute;
+    position: fixed;
     top: 177px;
     display: block;
     padding: 10px 15px;
@@ -196,7 +196,7 @@ article {
     }
     h3 {
       .helvetica;
-      padding: 60px 0 1em;
+      padding: 60px 0 0;
       text-align: center;
       &:first-child {
         margin-top: -40px;
@@ -277,7 +277,7 @@ dl {
   text-align: center;
   margin-top: -40px;
   dt {
-    padding: 60px 0 1em;
+    padding: 60px 0 0;
     .helvetica;
     a {
       border: none;
