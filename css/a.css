@@ -11,7 +11,7 @@ body:before{position:fixed;top:0;left:0;width:100%;height:12px;content:'';backgr
 header{position:relative;font-family:f,Helvetica,'Hiragino Sans GB',Arial,sans-serif;text-transform:uppercase;font-size:30px;padding:5px 0 0 50px;height:38px;width:160px;margin:0 auto;}header a:hover{color:inherit;}
 header:before{position:absolute;top:0;left:0;height:38px;width:38px;content:'';background:url(l.svg) no-repeat 0 0;background-size:38px 38px;-webkit-animation:r 10s infinite linear;-moz-animation:r 10s infinite linear;}
 @-webkit-keyframes r{0%{-webkit-transform:rotate(0);} 100%{-webkit-transform:rotate(360deg);}}@-moz-keyframes r{0%{-moz-transform:rotate(0);} 100%{-moz-transform:rotate(360deg);}}nav{color:rgba(0, 0, 0, 0.35);font-family:Helvetica,'Hiragino Sans GB',Arial,sans-serif;font-size:12px;font-weight:100;text-transform:uppercase;letter-spacing:.3em;font-size:11px;}
-nav[role=navigation]{padding:15px 0;}nav[role=navigation] ul{text-align:center;}nav[role=navigation] ul li{display:inline;margin:0 .9em;}
+nav[role=navigation]{padding:15px 0;}nav[role=navigation] ul{text-align:center;}nav[role=navigation] ul li{display:inline;margin:0 .8em;}
 nav[role=pagination] a{position:fixed;top:177px;display:block;padding:10px 15px;background:rgba(0, 0, 0, 0.05);z-index:9999;}
 nav[role=pagination] a[role=next]{left:0;}
 nav[role=pagination] a[role=previous]{right:0;}
