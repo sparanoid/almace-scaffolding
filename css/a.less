@@ -244,11 +244,12 @@ article {
 }
 
 // image list in "work" 
-.al {
+ul[role*=list] {
   max-width: 675px;
   text-align: center;
   margin: 0 auto;
   padding-top: 20px;
+  clear: both;
   li {
     position: relative;
     list-style: none;
@@ -283,41 +284,25 @@ article {
 }
 
 // image navigation in post page 
-.an {
+ul[role$=small] {
   max-width: 640px;
-  text-align: center;
   margin: 100px auto;
   padding: 60px 0 20px;
-  clear: both;
   li {
-    position: relative;
-    list-style: none;
-    float: left;
-    line-height: 0;
-    text-align: left;
     img {
       width: 64px;
       height: 48px;
-      margin: 0;
     }
     a {
-      position: absolute;
-      top: 0;
-      left: 0;
       padding: 4px;
       width: 56px;
       height: 40px;
-      .aller;
-      color: #fff;
       font-size: 9px;
       line-height: 1.2;
-      opacity: 0;
       &:hover {
-        background: rgba(0, 0, 0, .9);
       }
     }
     &:hover a {
-      opacity: 1;
     }
   }
 }
