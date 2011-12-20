@@ -22,7 +22,7 @@ permalink: /feed/index.xml
   {% for post in site.posts limit:10 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
-    <link href="http://{{ site.url }}{{ post.url }}/" />
+    <link href="{% if post.link %}{{ post.link }}{% else %}http://{{ site.url }}{{ post.url }}/{% endif %}" />
     <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
@@ -36,6 +36,7 @@ permalink: /feed/index.xml
       {% endif %}
       {% if post.category == "note" %}
         {{ post.content | xml_escape }}
+        {% if post.link %}&lt;p&gt;&lt;a href=http://{{ site.url }}{{ post.url }}/ title=&quot;Permanent link to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#182;&lt;/a&gt;&lt;/p&gt;{% endif %}
       {% elsif post.excerpt %}
         &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
       {% endif %}
