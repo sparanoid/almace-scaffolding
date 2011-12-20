@@ -57,13 +57,13 @@ a {
   -webkit-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
      -moz-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
           transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
-  &:hover {
+}
+  .a a, a:hover {
     color: #f40;
     -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
        -moz-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
             transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
   }
-}
 
 ins {
   .gray;
@@ -148,10 +148,12 @@ nav[role=navigation] {
 
 nav[role=pagination] {
   a {
-    position: fixed;
-    top: 177px;
+    position: absolute;
+    top: 180px;
     display: block;
-    padding: 10px 15px;
+    padding: 8px 10px;
+    font-size: 9px;
+    letter-spacing: .2em;
     background: rgba(0, 0, 0, .05);
     z-index: 9999;
   }
@@ -242,12 +244,11 @@ article {
 }
 
 // image list in "work" 
-// a padding-top unification workaround 
 .al {
   max-width: 675px;
-  padding-top: 20px;
   text-align: center;
   margin: 0 auto;
+  padding-top: 20px;
   li {
     position: relative;
     list-style: none;
@@ -270,6 +271,46 @@ article {
       color: #fff;
       font-size: 14px;
       line-height: 1.45;
+      opacity: 0;
+      &:hover {
+        background: rgba(0, 0, 0, .9);
+      }
+    }
+    &:hover a {
+      opacity: 1;
+    }
+  }
+}
+
+// image navigation in post page 
+.an {
+  max-width: 640px;
+  text-align: center;
+  margin: 100px auto;
+  padding: 60px 0 20px;
+  clear: both;
+  li {
+    position: relative;
+    list-style: none;
+    float: left;
+    line-height: 0;
+    text-align: left;
+    img {
+      width: 64px;
+      height: 48px;
+      margin: 0;
+    }
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 4px;
+      width: 56px;
+      height: 40px;
+      .aller;
+      color: #fff;
+      font-size: 9px;
+      line-height: 1.2;
       opacity: 0;
       &:hover {
         background: rgba(0, 0, 0, .9);
@@ -333,9 +374,6 @@ footer {
   .helvetica;
   font-size: 11px;
   text-align: center;
-}
-
-.top {
 }
 
 @media screen and (max-width: 640px) {
