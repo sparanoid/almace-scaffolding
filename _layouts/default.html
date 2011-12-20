@@ -16,8 +16,8 @@
 
 <nav role=navigation>
   <ul>
-    <li{% if page.title == 'Sparanoid' %} class=a{% endif %}><a href=/ rel=home accesskey=x>Home</a></li>
     <li{% if page.permalink == '/work/' or page.category == 'work' %} class=a{% endif %}><a href=/work/>Work</a></li>
+    <li{% if page.permalink == '/store/' or page.category == 'store' %} class=a{% endif %}><a href=/store/>Store</a></li>
     <li{% if page.permalink == '/note/' or page.category == 'note' %} class=a{% endif %}><a href=/note/>Note</a></li>
     <li{% if page.permalink == '/about/' or page.category == 'about' %} class=a{% endif %}><a href=/about/>About</a></li>
   </ul>
