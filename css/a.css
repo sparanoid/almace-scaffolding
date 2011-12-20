@@ -28,12 +28,11 @@ article .txt sup{line-height:1;}
 article .txt abbr:after{content:" (" attr(title) ")";}
 article .txt code,article .txt pre{font-family:Menlo, Consolas, monospace;color:#b74;}
 article .note,article .download{color:rgba(0, 0, 0, 0.35);font-family:Helvetica,'Hiragino Sans GB',Arial,sans-serif;font-size:12px;font-weight:100;text-transform:uppercase;letter-spacing:.3em;color:#000;letter-spacing:0;text-transform:none;font-size:14px;padding:20px;border-left:3px solid rgba(255, 64, 0, 0.15);background:rgba(255, 64, 0, 0.1);}
-.al{max-width:675px;text-align:center;margin:0 auto;padding-top:20px;}.al li{position:relative;list-style:none;float:left;line-height:0;text-align:left;}.al li img{width:135px;height:101.25px;margin:0;}
-.al li a{position:absolute;top:0;left:0;padding:10px;width:115px;height:81.25px;font-family:f,Helvetica,'Hiragino Sans GB',Arial,sans-serif;text-transform:uppercase;color:#fff;font-size:14px;line-height:1.45;opacity:0;}.al li a:hover{background:rgba(0, 0, 0, 0.9);}
-.al li:hover a{opacity:1;}
-.an{max-width:640px;text-align:center;margin:100px auto;padding:60px 0 20px;clear:both;}.an li{position:relative;list-style:none;float:left;line-height:0;text-align:left;}.an li img{width:64px;height:48px;margin:0;}
-.an li a{position:absolute;top:0;left:0;padding:4px;width:56px;height:40px;font-family:f,Helvetica,'Hiragino Sans GB',Arial,sans-serif;text-transform:uppercase;color:#fff;font-size:9px;line-height:1.2;opacity:0;}.an li a:hover{background:rgba(0, 0, 0, 0.9);}
-.an li:hover a{opacity:1;}
+ul[role*=list]{max-width:675px;text-align:center;margin:0 auto;padding-top:20px;clear:both;}ul[role*=list] li{position:relative;list-style:none;float:left;line-height:0;text-align:left;}ul[role*=list] li img{width:135px;height:101.25px;margin:0;}
+ul[role*=list] li a{position:absolute;top:0;left:0;padding:10px;width:115px;height:81.25px;font-family:f,Helvetica,'Hiragino Sans GB',Arial,sans-serif;text-transform:uppercase;color:#fff;font-size:14px;line-height:1.45;opacity:0;}ul[role*=list] li a:hover{background:rgba(0, 0, 0, 0.9);}
+ul[role*=list] li:hover a{opacity:1;}
+ul[role$=small]{max-width:640px;margin:100px auto;padding:60px 0 20px;}ul[role$=small] li img{width:64px;height:48px;}
+ul[role$=small] li a{padding:4px;width:56px;height:40px;font-size:9px;line-height:1.2;}
 dl{text-align:center;margin-top:-40px;}dl dt{padding:60px 0 0;color:rgba(0, 0, 0, 0.35);font-family:Helvetica,'Hiragino Sans GB',Arial,sans-serif;font-size:12px;font-weight:100;text-transform:uppercase;letter-spacing:.3em;}dl dt a{border:none;}
 dl dd{margin-bottom:40px;}
 aside{padding:60px 0 40px;width:200px;text-align:center;margin:0 auto;clear:both;}aside .bsap .bsa_it_i{display:block;}
