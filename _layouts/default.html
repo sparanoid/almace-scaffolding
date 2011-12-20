@@ -16,26 +16,32 @@
 
 <nav role=navigation>
   <ul>
-    <li{% if page.title == 'Sparanoid' %} class=current{% endif %}><a href=/ rel=home accesskey=x>Home</a></li>
-    <li{% if page.permalink == '/work/' or page.category == 'work' %} class=current{% endif %}><a href=/work/>Work</a></li>
-    <li{% if page.permalink == '/note/' or page.category == 'note' %} class=current{% endif %}><a href=/note/>Note</a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href=/about/>About</a></li>
+    <li{% if page.title == 'Sparanoid' %} class=a{% endif %}><a href=/ rel=home accesskey=x>Home</a></li>
+    <li{% if page.permalink == '/work/' or page.category == 'work' %} class=a{% endif %}><a href=/work/>Work</a></li>
+    <li{% if page.permalink == '/note/' or page.category == 'note' %} class=a{% endif %}><a href=/note/>Note</a></li>
+    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=a{% endif %}><a href=/about/>About</a></li>
   </ul>
 </nav>
 
 {{ content }}
 
-{% if page.category == "work" %} 
+{% if page.category == "note" %} 
 <nav role=pagination>
 {% if page.next_in_categories.url %}
   <a role=next href={{ page.next_in_categories.url }}/ title="{{ page.next_in_categories.title }}">Next</a>
 {% else %}
 {% endif %}
 {% if page.previous_in_categories.url %}
-  <a role=previous href={{ page.previous_in_categories.url }}/ title="{{ page.previous_in_categories.title }}">Previous</a>
+  <a role=previous href={{ page.previous_in_categories.url }}/ title="{{ page.previous_in_categories.title }}">Prev</a>
 {% else %}
 {% endif %}
 </nav>
+{% endif %}
+
+{% if page.category == "work" %} 
+<ul class=an>
+{% for post in site.categories.work %}<li><img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}"><a href={{ post.url }}/>{{ post.title }}</a></li>{% endfor %}
+</ul>
 {% endif %}
 
 {% if page.title != 'Sparanoid' %}
