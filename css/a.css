@@ -1,13 +1,14 @@
 @charset "utf-8";
 *{margin:0;padding:0;border:0;font-weight:normal;font-style:normal;font-size:100%;font-family:inherit;line-height:1;text-decoration:none;}
 :root{color:#000;background:#fff;font-size:14px;font-family:Palatino,'Palatino Linotype','Hiragino Mincho ProN',serif;line-height:1.7;font-weight:100;max-width:1080px;margin:0 auto;padding:60px 40px;text-rendering:optimizelegibility;image-rendering:optimizequality;}
-@font-face{font-family:'f';src:url('f.eot');src:url('f.eot?#iefix') format('embedded-opentype'),url('f.woff') format('woff'),url('f.ttf') format('truetype'),url('f.svg#AllerRegular') format('svg');font-weight:normal;font-style:normal;}.gray{color:rgba(0, 0, 0, 0.35);}
-.aller{font-family:f,Helvetica,'Hiragino Sans GB',Arial,sans-serif;text-transform:uppercase;}
-.helvetica{color:rgba(0, 0, 0, 0.35);font-family:Helvetica,'Hiragino Sans GB',Arial,sans-serif;font-size:12px;font-weight:100;text-transform:uppercase;letter-spacing:.25em;}
-a{color:#000;-webkit-transition:color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;-moz-transition:color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;}
-.a a,a:hover{color:#f40;-webkit-transition:color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;-moz-transition:color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;}
+::selection{background:rgba(0, 0, 0, 0.05);}
+@font-face{font-family:'f';src:url('f.eot');src:url('f.eot?#iefix') format('embedded-opentype'),url('f.woff') format('woff'),url('f.ttf') format('truetype'),url('f.svg#AllerRegular') format('svg');font-weight:normal;font-style:normal;}a{color:#000;-webkit-transition:color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;-moz-transition:color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;}
+.a a,a:hover{color:#e34;-webkit-transition:color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;-moz-transition:color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;}
 ins{color:rgba(0, 0, 0, 0.35);}
 del{text-decoration:line-through;}
+.gray{color:rgba(0, 0, 0, 0.35);}
+.aller{font-family:f,Helvetica,'Hiragino Sans GB',Arial,sans-serif;text-transform:uppercase;}
+.helvetica{color:rgba(0, 0, 0, 0.35);font-family:Helvetica,'Hiragino Sans GB',Arial,sans-serif;font-size:12px;font-weight:100;text-transform:uppercase;letter-spacing:.25em;}
 body:before,body:after{position:fixed;left:0;width:100%;content:'';z-index:9999;pointer-events:none;}
 body:before{top:0;height:12px;background:rgba(0, 0, 0, 0.05);border-bottom:1px solid rgba(0, 0, 0, 0.02);}
 body:after{bottom:0;height:70px;background-image:-webkit-linear-gradient(top, rgba(255, 255, 255, 0), #ffffff);background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0), #ffffff);}
@@ -28,7 +29,7 @@ article .txt sup{line-height:1;}
 article .txt abbr:after{content:" (" attr(title) ")";}
 article .txt code,article .txt pre{font-family:Menlo, Consolas, monospace;color:#b74;}
 article div[role*=announcement]{text-align:center;}
-article .note,article .download{color:rgba(0, 0, 0, 0.35);font-family:Helvetica,'Hiragino Sans GB',Arial,sans-serif;font-size:12px;font-weight:100;text-transform:uppercase;letter-spacing:.25em;color:#000;letter-spacing:0;text-transform:none;font-size:14px;padding:20px;border-left:3px solid rgba(255, 64, 0, 0.15);background:rgba(255, 64, 0, 0.1);}
+article .note,article .download{color:rgba(0, 0, 0, 0.35);font-family:Helvetica,'Hiragino Sans GB',Arial,sans-serif;font-size:12px;font-weight:100;text-transform:uppercase;letter-spacing:.25em;color:#000;letter-spacing:0;text-transform:none;font-size:14px;padding:20px;border-left:3px solid rgba(238, 51, 68, 0.2);background:rgba(238, 51, 68, 0.1);}
 ul[role*=list]{max-width:675px;text-align:center;margin:0 auto;padding-top:20px;clear:both;}ul[role*=list] li{position:relative;list-style:none;float:left;line-height:0;text-align:left;}ul[role*=list] li img{width:135px;height:101px;margin:0;}
 ul[role*=list] li a{position:absolute;top:0;left:0;padding:10px;width:115px;height:80px;font-family:f,Helvetica,'Hiragino Sans GB',Arial,sans-serif;text-transform:uppercase;color:#fff;font-size:14px;line-height:1.45;opacity:0;}ul[role*=list] li a:hover{background:rgba(0, 0, 0, 0.9);}
 ul[role*=list] li:hover a{opacity:1;}
