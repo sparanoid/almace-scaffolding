@@ -23,7 +23,7 @@
 
 {{ content }}
 
-{% if page.category == "note" %} 
+{% if page.category == "note" %}
 <nav role=pagination>
 {% if page.next_in_categories.url %}
   <a role=next href={{ page.next_in_categories.url }}/ title="{{ page.next_in_categories.title }}">Next</a>
