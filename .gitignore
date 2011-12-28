@@ -2,8 +2,7 @@
 
 # Jekyll specified
 _site
-*.min.css
-*.min.js
+*.css
 Rakefile
 
 # Mac OS X files
