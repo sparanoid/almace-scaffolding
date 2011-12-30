@@ -8,6 +8,52 @@
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
+
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script type="text/javascript">
+  WebFont.load({
+    custom: {
+      families: ['a'],
+      urls: ['/css/f.css']
+    }
+  });
+</script>
+<style type="text/css">
+  .wf-loading h1 {
+    font-family: "Helvetica CY", 'Hiragino Sans GB', Arial, sans-serif;
+  }
+  .wf-inactive h1 {
+    font-family: "Helvetica CY", 'Hiragino Sans GB', Arial, sans-serif;
+  }
+  .wf-active h1 {
+    font-family: a, "Helvetica CY", 'Hiragino Sans GB', Arial, sans-serif;
+  }
+</style>
+
+
+<!--
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans', 'Droid Serif']
+    }
+  });
+</script>
+<style type="text/css">
+  .wf-loading h1 {
+    font-family: "Helvetica CY", 'Hiragino Sans GB', Arial, sans-serif;
+  }
+  .wf-inactive h1 {
+    font-family: "Helvetica CY", 'Hiragino Sans GB', Arial, sans-serif;
+  }
+  .wf-active h1 {
+    font-family: "Droid Sans", 'Hiragino Sans GB', Arial, sans-serif;
+  }
+</style>
+-->
+
+
 <header>
   <h1><a href=/ rel=home accesskey=x>Sparanoid</a></h1>
 </header>
@@ -49,7 +95,6 @@
 
 {% if page.title != 'Sparanoid' %}
 <aside>
-{% include sponsor.html %}
 </aside>
 {% endif %}
 
