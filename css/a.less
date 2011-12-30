@@ -34,6 +34,17 @@
   background: rgba(0, 0, 0, .05);
 }
 
+@font-face {
+  font-family: 'f';
+  src: url('f.eot');
+  src: url('f.eot?#iefix') format('embedded-opentype'),
+       url('f.woff') format('woff'),
+       url('f.ttf') format('truetype'),
+       url('f.svg#AllerRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 a {
   color: #000;
   -webkit-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
@@ -53,34 +64,10 @@ del {
   text-decoration: line-through;
 }
 
-/*@font-face {
-    font-family: 'a';
-    font-style: normal;
-    font-weight: normal;
-    src: url('aller.eot');
-    src: url('aller.eot?#iefix')        format('embedded-opentype'),
-         url('aller.woff')              format('woff'),
-         url('aller.ttf')               format('truetype'),
-         url('aller.svg#AllerRegular')  format('svg');
-}
-*/
-/*.wf-inactive h1 {
-  .aller-alt;
-}
-.wf-loading h1 {
-  .aller-alt;
-}
-.wf-active h1 {
-  .aller;
-}
-*/
-.aller {
-  font-family: a, "Helvetica CY", 'Hiragino Sans GB', Arial, sans-serif;
-  text-transform: uppercase;
-}
+.gray { color: rgba(0, 0, 0, .4); }
 
-.aller-alt {
-  font-family: "Helvetica CY", 'Hiragino Sans GB', Arial, sans-serif;
+.aller {
+  font-family: f, Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -92,8 +79,6 @@ del {
   text-transform: uppercase;
   letter-spacing: .25em;
 }
-
-.gray { color: rgba(0, 0, 0, .4); }
 
 body:before, body:after {
   position: fixed;
