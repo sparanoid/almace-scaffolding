@@ -8,6 +8,9 @@
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
+<script src=/{{ site.css-path }}/a.min.js></script>
+
+<body>
 <header>
   <h1><a href=/ rel=home accesskey=x>Sparanoid</a></h1>
 </header>
@@ -41,7 +44,7 @@
 {% for post in site.categories.work %}
   <li>
     <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
-    <a href={{ post.url }}/>{{ post.title }}</a>
+    <a class=ajaxy href={{ post.url }}/>{{ post.title }}</a>
   </li>
 {% endfor %}
 </ul>
@@ -58,3 +61,5 @@
   <p><a href=/>{{ site.name }}</a> / <a href=/feed/ title="Feed - Atom (The Atom Syndication Format)">Atom</a></p>
 </footer>
 {% endif %}
+
+</body>
