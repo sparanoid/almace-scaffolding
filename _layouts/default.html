@@ -2,13 +2,12 @@
 
 <meta name=viewport content="width=device-width, initial-scale=1.0">
 
+<title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 <link rel=alternate href=/feed/ type=application/atom+xml>
 <link rel=stylesheet href=/{{ site.css-path }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
-<title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
-
-<script src=/{{ site.css-path }}/a.min.js></script>
+{% if page.category == "work" %}<script src=/{{ site.css-path }}/a.min.js></script>{% endif %}
 
 <body>
 <header>
@@ -39,7 +38,7 @@
 </nav>
 {% endif %}
 
-{% if page.category == "work" %} 
+{% if page.category == "work" %}
 <ul role=work-list-small>
 {% for post in site.categories.work %}
   <li>
