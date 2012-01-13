@@ -7,7 +7,7 @@
 <link rel=stylesheet href=/{{ site.css-path }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
-{% if page.category == "work" %}<script src=/{{ site.css-path }}/a.min.js></script>{% endif %}
+{% if page.permalink == '/work/' or page.category == 'work' %}<script src=/{{ site.css-path }}/a.min.js></script>{% endif %}
 
 <body>
 <header>
@@ -16,16 +16,16 @@
 
 <nav role=navigation>
   <ul>
-    <li{% if page.permalink == '/work/' or page.category == 'work' %} class=a{% endif %}><a href=/work/>Work</a></li>
-    <li{% if page.permalink == '/store/' or page.category == 'store' %} class=a{% endif %}><a href=/store/>Store</a></li>
-    <li{% if page.permalink == '/note/' or page.category == 'note' %} class=a{% endif %}><a href=/note/>Note</a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=a{% endif %}><a href=/about/>About</a></li>
+    <li><a href=/work/>Work</a></li>
+    <li><a href=/store/>Store</a></li>
+    <li><a href=/note/>Note</a></li>
+    <li><a href=/about/>About</a></li>
   </ul>
 </nav>
 
 {{ content }}
 
-{% if page.category == "note" %}
+{% if page.category == 'note' %}
 <nav role=pagination>
 {% if page.next_in_categories.url %}
   <a role=next href={{ page.next_in_categories.url }}/ title="{{ page.next_in_categories.title }}">Next</a>
@@ -38,7 +38,7 @@
 </nav>
 {% endif %}
 
-{% if page.category == "work" %}
+{% if page.category == 'work' %}
 <ul role=work-list-small>
 {% for post in site.categories.work %}
   <li>

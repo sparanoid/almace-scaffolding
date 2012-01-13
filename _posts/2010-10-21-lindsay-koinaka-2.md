@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello World
+title: lindsay-koinaka 2.0
 category: note
 excerpt: It's me
 ---
