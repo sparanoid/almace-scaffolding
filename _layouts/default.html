@@ -7,8 +7,6 @@
 <link rel=stylesheet href=/{{ site.css-path }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
-{% if page.permalink == '/work/' or page.category == 'work' %}<script src=/{{ site.css-path }}/a.min.js></script>{% endif %}
-
 <body>
 <header>
   <h1><a href=/ rel=home accesskey=x>Sparanoid</a></h1>
@@ -16,10 +14,10 @@
 
 <nav role=navigation>
   <ul>
-    <li><a href=/work/>Work</a></li>
-    <li><a href=/store/>Store</a></li>
-    <li><a href=/note/>Note</a></li>
-    <li><a href=/about/>About</a></li>
+    <li{% if page.permalink == '/work/' or page.category == 'work' %} class=a{% endif %}><a href=/work/>Work</a></li>
+    <li{% if page.permalink == '/store/' or page.category == 'store' %} class=a{% endif %}><a href=/store/>Store</a></li>
+    <li{% if page.permalink == '/note/' or page.category == 'note' %} class=a{% endif %}><a href=/note/>Note</a></li>
+    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=a{% endif %}><a href=/about/>About</a></li>
   </ul>
 </nav>
 
