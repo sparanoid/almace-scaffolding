@@ -109,19 +109,18 @@ header {
   a:hover {
     color: inherit;
   }
-}
-
-header:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 38px;
-  width: 38px;
-  content: '';
-  background: url(l.svg) no-repeat 0 0;
-  background-size: 38px 38px;
-  -webkit-animation: r 10s infinite linear;
-     -moz-animation: r 10s infinite linear;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 38px;
+    width: 38px;
+    content: '';
+    background: url(l.svg) no-repeat 0 0;
+    background-size: 38px 38px;
+    -webkit-animation: r 10s infinite linear;
+       -moz-animation: r 10s infinite linear;
+  }
 }
 
 @-webkit-keyframes r {
@@ -136,35 +135,33 @@ header:before {
 nav {
   .helvetica;
   font-size: 11px;
-}
-
-nav[role=navigation] {
-  padding: 15px 0;
-  ul {
-    text-align: center;
-    li {
-      display: inline;
-      margin: 0 .8em;
+  &[role=navigation] {
+    padding: 15px 0;
+    ul {
+      text-align: center;
+      li {
+        display: inline;
+        margin: 0 .8em;
+      }
     }
   }
-}
-
-nav[role=pagination] {
-  a {
-    position: absolute;
-    top: 180px;
-    display: block;
-    padding: 8px 10px;
-    font-size: 9px;
-    letter-spacing: .2em;
-    background: rgba(0, 0, 0, .05);
-    z-index: 9999;
-  }
-  a[role=next] {
-    left: 0;
-  }
-  a[role=previous] {
-    right: 0;
+  &[role=pagination] {
+    a {
+      position: absolute;
+      top: 180px;
+      display: block;
+      padding: 8px 10px;
+      font-size: 9px;
+      letter-spacing: .2em;
+      background: rgba(0, 0, 0, .05);
+      z-index: 9999;
+      &[role=next] {
+        left: 0;
+      }
+      &[role=previous] {
+        right: 0;
+      }
+    }
   }
 }
 
