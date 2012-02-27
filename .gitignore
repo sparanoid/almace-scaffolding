@@ -14,8 +14,4 @@ Rakefile
 
 # Logs, Leftovers
 *.log
-!errors.log
 *.bak
-*.tmproj
-*.esproj
-*.sublime*
