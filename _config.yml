@@ -9,7 +9,7 @@ markdown: rdiscount
 # site url
 url: sparanoid.com
 
-# Focus domain name to site.url, used for CloudFront production only
+# force adding domain name site.url, used for CloudFront production only
 # prod: true
 prod: false
 
@@ -39,6 +39,3 @@ exclude:
 - README.md
 - LICENSE
 - Rakefile
-- sparanoid.com.tmproj
-- sparanoid.sublime-project
-- sparanoid.sublime-workspace
