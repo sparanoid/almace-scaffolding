@@ -12,7 +12,7 @@ permalink: /feed/index.xml
   <id>http://{{ site.url }}/feed/</id>
 
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <rights>Copyright © 2011, {{ site.full-name }}</rights>
+  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.full-name }}</rights>
 
   <author>
     <name>{{ site.full-name }}</name>
