@@ -1,7 +1,6 @@
 ---
 permalink: /feed/rss.xml
 ---
-<!-- This file is used for exporting posts to WordPress -->
 
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -12,6 +11,8 @@ permalink: /feed/rss.xml
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
   xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
   >
+
+<!-- This file is used for exporting posts to WordPress -->
 
 <channel>
   <title>{{ site.name }}</title>
