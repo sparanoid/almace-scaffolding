@@ -2,3 +2,9 @@
 layout: default
 title: Sparanoid
 ---
+
+<script>
+  if(window.navigator && window.navigator.loadPurpose === "preview") {
+    window.location.href = "//{{ site.url }}/about/"
+  }
+</script>
