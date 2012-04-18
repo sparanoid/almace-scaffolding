@@ -5,6 +5,9 @@ _site
 *.css
 Rakefile
 
+# Codekit specified
+codekit-config.json
+
 # Mac OS X files
 .DS_Store
 
