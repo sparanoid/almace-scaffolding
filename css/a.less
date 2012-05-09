@@ -44,13 +44,13 @@
 
 a {
   color: #000;
-  -webkit-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
-     -moz-transition: color .5s ease, background .5s ease, opacity .5s ease, border .5s ease;
+  -webkit-transition: all .5s ease, background .5s ease, opacity 1.5s ease, border .5s ease;
+     -moz-transition: all .5s ease, background .5s ease, opacity 1.5s ease, border .5s ease;
 }
   .a a, a:hover {
     color: #e34;
-    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
-       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease, border .5s ease;
+    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease, border .1s ease;
+       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease, border .1s ease;
   }
 
 ins {
@@ -172,7 +172,7 @@ article {
   a {
     border-bottom: 1px dotted rgba(0, 0, 0, .2);
     &:hover {
-      /*border-bottom-color: #000;*/
+      // border-bottom-color: #000;
     }
   }
   img, video {
@@ -237,10 +237,10 @@ article {
 
 // image list in "work" 
 ul[role*=list] {
-  max-width: 675px;
+  max-width: 640px;
   text-align: center;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 12px;
   clear: both;
   li {
     position: relative;
@@ -248,28 +248,26 @@ ul[role*=list] {
     float: left;
     line-height: 0;
     text-align: left;
+    margin: 8px;
     img {
-      width: 135px;
-      //height: 101.25px;
-      height: 101px;
+      width: 64px;
+      height: 64px;
       margin: 0;
     }
     a {
       position: absolute;
-      top: 0;
-      left: 0;
-      padding: 10px;
-      width: 115px;
-      //height: 81.25px;
-      height: 80px;
+      top: -8px;
+      left: -8px;
+      padding: 8px;
+      width: 64px;
+      height: 64px;
       .aller;
       color: #fff;
-      font-size: 14px;
-      line-height: 1.45;
+      font-size: 10px;
+      line-height: 1.2;
       opacity: 0;
-      &:hover {
-        background: rgba(0, 0, 0, .9);
-      }
+      border-bottom: none;
+      background: rgba(0, 0, 0, .8);
     }
     &:hover a {
       opacity: 1;
@@ -284,15 +282,8 @@ ul[role$=small] {
   padding: 60px 0 20px;
   li {
     img {
-      width: 64px;
-      height: 48px;
     }
     a {
-      padding: 4px;
-      width: 56px;
-      height: 40px;
-      font-size: 9px;
-      line-height: 1.2;
       &:hover {
       }
     }
