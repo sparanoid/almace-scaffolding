@@ -1,10 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="172px" height="172px" viewBox="0 0 172 172" enable-background="new 0 0 172 172" xml:space="preserve">
-<g id="Layer_3" display="none">
-	<polygon display="inline" points="119.416,86 171.416,86 145.416,110.25 	"/>
-</g>
-<path d="M86,154.635l-59.439-34.316V51.683L86,17.365l59.439,34.317v68.634L86,154.635z M113.707,101.997V70.003L86,54.006
-	L58.292,70.003v31.994L86,117.994L113.707,101.997z"/>
+<svg id="logo"  width="172px" height="172px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <path d="M86,154.635l-59.439-34.316V51.683L86,17.365l59.439,34.317v68.634L86,154.635z M113.707,101.997V70.003L86,54.006 L58.292,70.003v31.994L86,117.994L113.707,101.997z"/>
 </svg>
