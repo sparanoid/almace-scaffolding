@@ -236,6 +236,9 @@ article {
 }
 
 // image list in "work" 
+@thumb-size: 64px;
+@thumb-padding: 8px;
+
 ul[role*=list] {
   max-width: 640px;
   text-align: center;
@@ -250,17 +253,18 @@ ul[role*=list] {
     text-align: left;
     margin: 8px;
     img {
-      width: 64px;
-      height: 64px;
+      width: @thumb-size;
+      height: @thumb-size;
+      max-width: @thumb-size;
       margin: 0;
     }
     a {
       position: absolute;
-      top: -8px;
-      left: -8px;
-      padding: 8px;
-      width: 64px;
-      height: 64px;
+      top: -@thumb-padding;
+      left: -@thumb-padding;
+      padding: @thumb-padding;
+      width: @thumb-size;
+      height: @thumb-size;
       .aller;
       color: #fff;
       font-size: 10px;
@@ -297,7 +301,7 @@ dl {
   text-align: center;
   margin-top: -40px;
   dt {
-    line-height: 2;
+    line-height: 1;
     padding: 60px 0 0;
     .helvetica;
     a {
