@@ -1,5 +1,5 @@
 ---
-permalink: /rss/index.xml
+permalink: /index.rss
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -23,7 +23,7 @@ permalink: /rss/index.xml
   <language>en</language>
   <sy:updatePeriod>hourly</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
-  <generator>Jekyll RSS 2.0 (Tunghsiao Liu remix)</generator>
+  <generator>Jekyll RSS 2.0 (Tunghsiao Liu Remix Ver.)</generator>
 
   {% for post in site.posts %}
     <item>

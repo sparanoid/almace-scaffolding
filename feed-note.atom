@@ -1,5 +1,5 @@
 ---
-permalink: /feed/index.xml
+permalink: /note.atom
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -19,7 +19,7 @@ permalink: /feed/index.xml
     <email>{{ site.email }}</email>
   </author>
 
-  {% for post in site.posts limit:10 %}
+  {% for post in site.categories.note limit:10 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
     <link href="{% if post.link %}{{ post.link }}{% else %}http://{{ site.url }}{{ post.url }}/{% endif %}" />
