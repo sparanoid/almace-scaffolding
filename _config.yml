@@ -1,4 +1,4 @@
-# jekyll general settings
+# jekyll configurations
 source:       .
 destination:  ./_site
 permalink:    /:categories/:title
@@ -14,6 +14,7 @@ exclude:      LICENSE, Rakefile, README.md
 url:          sparanoid.com
 file:         http://rsrc.sparanoid.com
 css:          css
+feed:         /index.atom
 name:         Sparanoid
 full-name:    Tunghiao Liu
 email:        info@sparanoid.com

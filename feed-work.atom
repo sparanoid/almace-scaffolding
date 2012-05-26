@@ -1,0 +1,46 @@
+---
+permalink: /work.atom
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.slogan }}</subtitle>
+
+  <link href="http://{{ site.url }}/feed/" rel="self" />
+  <link href="http://{{ site.url }}/" />
+
+  <id>http://{{ site.url }}/feed/</id>
+
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.full-name }}</rights>
+
+  <author>
+    <name>{{ site.full-name }}</name>
+    <email>{{ site.email }}</email>
+  </author>
+
+  {% for post in site.categories.work limit:10 %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <link href="{% if post.link %}{{ post.link }}{% else %}http://{{ site.url }}{{ post.url }}/{% endif %}" />
+    <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>{{ site.full-name }}</name>
+      <uri>http://{{ site.url }}/</uri>
+    </author>
+    <content type="html">
+      {% if post.thumb %}
+        &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
+      {% else %}
+      {% endif %}
+      {% if post.category == "note" %}
+        {{ post.content | xml_escape }}
+        {% if post.link %}&lt;p&gt;&lt;a href=http://{{ site.url }}{{ post.url }}/ title=&quot;Permanent link to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#182;&lt;/a&gt;&lt;/p&gt;{% endif %}
+      {% elsif post.excerpt %}
+        &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
+      {% endif %}
+    </content>
+  </entry>
+  {% endfor %}
+</feed>
