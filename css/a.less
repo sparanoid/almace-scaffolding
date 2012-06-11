@@ -99,25 +99,14 @@ body:after {
 }
 
 header {
-  position: relative;
-  .aller;
-  font-size: 30px;
-  padding: 5px 0 0 40px;
-  height: 38px;
-  width: 160px;
-  margin: 0 auto;
-  a:hover {
-    color: inherit;
-  }
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
+  a {
+    display: block;
     height: 38px;
     width: 38px;
-    content: '';
+    margin: 0 auto;
     background: url(l.svg) no-repeat 0 0;
     background-size: 38px 38px;
+    text-indent: -9999em;
   }
 }
 
@@ -125,7 +114,7 @@ nav {
   .helvetica;
   font-size: 11px;
   &[role=navigation] {
-    padding: 15px 0;
+    padding: 10px 0 15px;
     ul {
       text-align: center;
       li {
