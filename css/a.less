@@ -35,22 +35,22 @@
 }
 
 @font-face {
-  font-family: 'f';
-  src: url('f.woff') format('woff'),
-       url('f.svg#AllerRegular') format('svg');
+  font-family: 'sparanoid.com';
+  src: url('font.woff') format('woff'),
+       url('font.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 a {
   color: #000;
-  -webkit-transition: all .5s ease, background .5s ease, opacity 1.5s ease, border .5s ease;
-     -moz-transition: all .5s ease, background .5s ease, opacity 1.5s ease, border .5s ease;
+  -webkit-transition: color .5s ease, background .5s ease, opacity 1.5s ease;
+     -moz-transition: color .5s ease, background .5s ease, opacity 1.5s ease;
 }
   .a a, a:hover {
     color: #e34;
-    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease, border .1s ease;
-       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease, border .1s ease;
+    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease;
+       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease;
   }
 
 ins {
@@ -63,8 +63,8 @@ del {
 
 .gray { color: rgba(0, 0, 0, .4); }
 
-.aller {
-  font-family: f, Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+.font-face {
+  font-family: 'sparanoid.com', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -104,7 +104,7 @@ header {
     height: 38px;
     width: 38px;
     margin: 0 auto;
-    background: url(l.svg) no-repeat 0 0;
+    background: url(logo.svg) no-repeat 0 0;
     background-size: 38px 38px;
     text-indent: -9999em;
   }
@@ -144,7 +144,7 @@ nav {
 }
 
 hgroup {
-  .aller;
+  .font-face;
   font-size: 18px;
   text-align: center;
   padding-top: 40px;
@@ -160,9 +160,6 @@ article {
   padding-top: 40px;
   a {
     border-bottom: 1px dotted rgba(0, 0, 0, .2);
-    &:hover {
-      // border-bottom-color: #000;
-    }
   }
   img, video {
     display: block;
@@ -254,7 +251,7 @@ ul[role*=list] {
       padding: @thumb-padding;
       width: @thumb-size;
       height: @thumb-size;
-      .aller;
+      .font-face;
       color: #fff;
       font-size: 10px;
       line-height: 1.2;
@@ -294,7 +291,7 @@ dl {
     padding: 60px 0 0;
     .helvetica;
     a {
-      border: none;
+      border-bottom: none;
     }
   }
   dd {
