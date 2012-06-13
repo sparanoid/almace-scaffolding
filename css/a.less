@@ -29,6 +29,8 @@
 
 .gray { color: rgba(0, 0, 0, .4); }
 
+@txt-width: 620px;
+
 // basic configurations
 * {
   margin: 0;
@@ -151,7 +153,7 @@ hgroup {
   font-size: 24px;
   text-align: center;
   padding-top: 40px;
-  max-width: 620px;
+  max-width: @txt-width;
   margin: auto;
   h2 {
     .helvetica;
@@ -174,7 +176,7 @@ article {
   p {
   }
   .txt {
-    max-width: 620px;
+    max-width: @txt-width;
     font-size: 18px;
     margin: 0 auto;
     text-align: justify;
