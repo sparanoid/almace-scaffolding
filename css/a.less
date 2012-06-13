@@ -4,6 +4,32 @@
 /*!
 */
 
+// variables
+@font-face {
+  font-family: 'sparanoid.com';
+  src: url('font.woff') format('woff'),
+       url('font.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-face {
+  font-family: 'sparanoid.com', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.helvetica {
+  .gray;
+  font-family: Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+}
+
+.gray { color: rgba(0, 0, 0, .4); }
+
+// basic configurations
 * {
   margin: 0;
   padding: 0;
@@ -30,18 +56,6 @@
   image-rendering: optimizequality;
 }
 
-::selection {
-  background: rgba(0, 0, 0, .05);
-}
-
-@font-face {
-  font-family: 'sparanoid.com';
-  src: url('font.woff') format('woff'),
-       url('font.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 a {
   color: #000;
   -webkit-transition: color .5s ease, background .5s ease, opacity 1.5s ease;
@@ -61,22 +75,11 @@ del {
   text-decoration: line-through;
 }
 
-.gray { color: rgba(0, 0, 0, .4); }
-
-.font-face {
-  font-family: 'sparanoid.com', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
-  text-transform: uppercase;
+::selection {
+  background: rgba(0, 0, 0, .05);
 }
 
-.helvetica {
-  .gray;
-  font-family: Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: .25em;
-}
-
+// core styles begin
 body:before, body:after {
   position: fixed;
   left: 0;
