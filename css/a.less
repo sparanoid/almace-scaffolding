@@ -133,18 +133,55 @@ nav {
   &[role=pagination] {
     a {
       position: absolute;
-      top: 170px;
+      top: 173px;
       display: block;
-      padding: 10px;
+      padding: 7px 10px;
       font-size: 9px;
       letter-spacing: .2em;
       background: rgba(0, 0, 0, .05);
       z-index: 9999;
+      -webkit-transition: padding .1s ease;
+         -moz-transition: padding .1s ease;
+      [role=tooltip] {
+        position: absolute;
+        top: 23px;
+        white-space: nowrap;
+        opacity: 0;
+        padding: 7px 10px;
+        color: #fff;
+        background: fade(@link-color, 90%);
+        pointer-events: none;
+        -webkit-transition: opacity .1s ease, padding .1s ease;
+           -moz-transition: opacity .1s ease, padding .1s ease;
+      }
+      &:hover {
+        [role=tooltip] {
+          opacity: 1;
+        }
+      }
       &[role=next] {
         left: 0;
+        [role=tooltip] {
+          left: 0;
+        }
+        &:hover {
+          padding-left: 15px;
+          [role=tooltip] {
+            padding-left: 15px;
+          }
+        }
       }
       &[role=previous] {
         right: 0;
+        [role=tooltip] {
+          right: 0;
+        }
+        &:hover {
+          padding-right: 15px;
+          [role=tooltip] {
+            padding-right: 15px;
+          }
+        }
       }
     }
   }
