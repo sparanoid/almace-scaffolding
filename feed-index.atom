@@ -39,7 +39,7 @@ permalink: /index.atom
         {% else %}
           {{ post.content | xml_escape }}
         {% endif %}
-        {% if post.link %}&lt;p&gt;&lt;a href=http://{{ site.url }}{{ post.url }}/ title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&lt;&gt;&lt;/a&gt;&lt;/p&gt;{% endif %}
+        {% if post.link %}&lt;p&gt;&lt;a href=http://{{ site.url }}{{ post.url }}/ title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&infin;&lt;/a&gt;&lt;/p&gt;{% endif %}
       {% endif %}
     </content>
   </entry>
