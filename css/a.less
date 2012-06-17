@@ -5,6 +5,17 @@
 */
 
 // variables
+@txt-width: 620px;
+@link: #e34; // #2ed for invert color
+@bg: #fff;
+@txt: #000;
+
+
+// invert color switcher for images and videos
+img, video {
+  // -webkit-filter: invert(100%);
+}
+
 @font-face {
   font-family: 'sparanoid.com';
   src: url('font.woff') format('woff'),
@@ -19,19 +30,13 @@
 }
 
 .helvetica {
-  .gray;
+  color: fade(@txt, 40%);
   font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
   font-size: 12px;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: .25em;
 }
-
-.gray { color: rgba(0, 0, 0, .4); }
-
-@txt-width: 620px;
-
-@link-color: #e34;
 
 // basic configurations
 * {
@@ -47,8 +52,8 @@
 }
 
 :root {
-  color: #000;
-  background: #fff;
+  color: @txt;
+  background: @bg;
   font-size: 14px;
   font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
   line-height: 1.7;
@@ -61,18 +66,18 @@
 }
 
 a {
-  color: #000;
+  color: @txt;
   -webkit-transition: color .5s ease, background .5s ease, opacity 1.5s ease;
      -moz-transition: color .5s ease, background .5s ease, opacity 1.5s ease;
 }
   .a a, a:hover {
-    color: @link-color;
+    color: @link;
     -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease;
        -moz-transition: color .1s ease, background .1s ease, opacity .1s ease;
   }
 
 ins {
-  .gray;
+  color: fade(@txt, 40%);
 }
 
 del {
@@ -80,7 +85,7 @@ del {
 }
 
 ::selection {
-  background: rgba(0, 0, 0, .05);
+  background: fade(@txt, 5%);
 }
 
 // core styles begin
@@ -95,8 +100,8 @@ body:before, body:after {
 body:before {
   top: 0;
   height: 12px;
-  background: rgba(0, 0, 0, .05);
-  border-bottom: 1px solid rgba(0, 0, 0, .02);
+  background: fade(@txt, 5%);
+  border-bottom: 1px solid fade(@txt, 2%);
 }
 
 header {
@@ -132,7 +137,7 @@ nav {
       padding: 7px 10px;
       font-size: 9px;
       letter-spacing: .2em;
-      background: rgba(0, 0, 0, .05);
+      background: fade(@txt, 5%);
       z-index: 9999;
       -webkit-transition: padding .1s ease;
          -moz-transition: padding .1s ease;
@@ -143,7 +148,7 @@ nav {
         opacity: 0;
         padding: 7px 10px;
         color: #fff;
-        background: fade(@link-color, 90%);
+        background: fade(@link, 90%);
         pointer-events: none;
         -webkit-transition: opacity .1s ease, padding .1s ease;
            -moz-transition: opacity .1s ease, padding .1s ease;
@@ -199,7 +204,7 @@ article {
   width: 100%;
   padding-top: 40px;
   a {
-    border-bottom: 1px dotted rgba(0, 0, 0, .2);
+    border-bottom: 1px dotted fade(@txt, 5%); // set larger value for invert color
   }
   img, video {
     display: block;
@@ -291,7 +296,7 @@ ul[role*=list] {
       max-width: @thumb-size;
       // override: article img
       margin: 0;
-      background: @link-color;
+      background: @link;
     }
     a {
       position: absolute;
@@ -306,7 +311,7 @@ ul[role*=list] {
       line-height: 1.2;
       opacity: 0;
       border-bottom: none;
-      background: rgba(0, 0, 0, .8);
+      background: fade(@txt, 80%);
     }
     &:hover a {
       opacity: 1;
@@ -375,7 +380,7 @@ aside {
       display: block;
       font-size: 12px;
       a {
-        .gray;
+        color: fade(@txt, 40%);
         &:hover {
           color: #000;
         }
