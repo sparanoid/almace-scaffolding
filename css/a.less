@@ -10,11 +10,8 @@
 @bg: #fff;
 @txt: #000;
 
-
 // invert color switcher for images and videos
-img, video {
-  // -webkit-filter: invert(100%);
-}
+// :root { -webkit-filter: invert(100%); }
 
 @font-face {
   font-family: 'sparanoid.com';
@@ -204,7 +201,7 @@ article {
   width: 100%;
   padding-top: 40px;
   a {
-    border-bottom: 1px dotted fade(@txt, 5%); // set larger value for invert color
+    border-bottom: 1px dotted fade(@txt, 10%); // set larger value for invert color
   }
   img, video {
     display: block;
