@@ -103,7 +103,7 @@ bg: '#fff9ed'
 <li>隱藏菜單欄、狀態欄會有更好的視覺效果。菜單欄可以在需要的時候點擊右上角的按鈕顯示</li>
 <li>在播放列表任意位置點擊右鍵，即可修改 Sort 與 Group by 類型</li>
 <li>當修改了 Group by 類型後，專輯封面大小會發生變化，導致專輯封面顯示模糊，此時右鍵點擊列表任意位置選 Refresh all 即可</li>
-<li>建議 <a href="{{ site.file }}/monolite-plus-04.png" rel="lightbox">如圖修改</a> 快捷鍵設置，從此敲擊空格即可定位到正在播放的曲目</li>
+<li>建議 <a href="{{ site.file }}/monolite-plus-04.png">如圖修改</a> 快捷鍵設置，從此敲擊空格即可定位到正在播放的曲目</li>
 </ul>
 
 <h3>Windows XP 用戶</h3>
