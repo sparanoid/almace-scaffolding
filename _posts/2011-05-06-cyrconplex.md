@@ -2,7 +2,6 @@
 layout: post
 title: cyrconlex
 category: note
-excerpt: The 16th version of sparanoid.com
 ---
 
 <div class=txt>

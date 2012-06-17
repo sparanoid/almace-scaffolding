@@ -32,13 +32,14 @@ permalink: /index.atom
     <content type="html">
       {% if post.thumb %}
         &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
-      {% else %}
-      {% endif %}
-      {% if post.category == "note" %}
-        {{ post.content | xml_escape }}
-        {% if post.link %}&lt;p&gt;&lt;a href=http://{{ site.url }}{{ post.url }}/ title=&quot;Permanent link to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#182;&lt;/a&gt;&lt;/p&gt;{% endif %}
-      {% elsif post.excerpt %}
-        &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
+        &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;        
+      {% elsif post.category == "note" %}
+        {% if post.excerpt %}
+          &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;        
+        {% else %}
+          {{ post.content | xml_escape }}
+        {% endif %}
+        {% if post.link %}&lt;p&gt;&lt;a href=http://{{ site.url }}{{ post.url }}/ title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&lt;&gt;&lt;/a&gt;&lt;/p&gt;{% endif %}
       {% endif %}
     </content>
   </entry>
