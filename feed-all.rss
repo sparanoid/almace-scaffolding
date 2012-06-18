@@ -1,5 +1,5 @@
 ---
-permalink: /index.rss
+permalink: /all.rss
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -16,7 +16,7 @@ permalink: /index.rss
 
 <channel>
   <title>{{ site.name }}</title>
-  <atom:link href="http://{{ site.url }}/feed/" rel="self" type="application/rss+xml" />
+  <atom:link href="http://{{ site.url }}{{ page.url }}" rel="self" type="application/rss+xml" />
   <link>http://{{ site.url }}/</link>
   <description></description>
   <lastBuildDate>{{ site.time | date: "%A, %d %b %Y %H:%M:%S +0000" }}</lastBuildDate>

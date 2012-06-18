@@ -1,12 +1,7 @@
 ---
-permalink: /index.atom
+permalink: /all.atom
 ---
 <?xml version="1.0" encoding="utf-8"?>
-
-<!DOCTYPE feed [
-  <!ENTITY id "tag:{{ site.url }},">
-  <!ENTITY url "http://{{ site.url }}/">
-]>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.name }}</title>
@@ -22,17 +17,17 @@ permalink: /index.atom
     <email>{{ site.email }}</email>
   </author>
 
-  {% for post in site.posts limit:10 %}
+  {% for post in site.posts %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
-    <id>&id;{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+    <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
     <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}http://{{ site.url }}{{ post.url }}/{% endif %}" />
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
       <name>{{ site.full-name }}</name>
       <uri>http://{{ site.url }}/</uri>
     </author>
-    <content type="html" xml:base="&url;">
+    <content type="html" xml:base="http://{{ site.url }}/">
       {% if post.thumb %}
         &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
         &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
