@@ -14,7 +14,7 @@ exclude:      LICENSE, Rakefile, README.md
 url:          sparanoid.com
 file:         http://rsrc.sparanoid.com
 css:          css
-feed:         /index.atom
+feed:         all.atom
 name:         Sparanoid
 full-name:    Tunghiao Liu
 email:        info@sparanoid.com
