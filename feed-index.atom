@@ -2,15 +2,18 @@
 permalink: /index.atom
 ---
 <?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE feed [
+  <!ENTITY id "tag:{{ site.url }},">
+  <!ENTITY url "http://{{ site.url }}/">
+]>
+
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.name }}</title>
   <subtitle>{{ site.slogan }}</subtitle>
-
-  <link href="http://{{ site.url }}/feed/" rel="self" />
-  <link href="http://{{ site.url }}/" />
-
-  <id>http://{{ site.url }}/feed/</id>
-
+  <id>&id;2005:/</id>
+  <link rel="self" type="application/atom+xml" href="http://{{ site.url }}{{ page.url }}" />
+  <link rel="alternate" type="text/html" href="http://{{ site.url }}/" />
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.full-name }}</rights>
 
@@ -22,24 +25,24 @@ permalink: /index.atom
   {% for post in site.posts limit:10 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
-    <link href="{% if post.link %}{{ post.link }}{% else %}http://{{ site.url }}{{ post.url }}/{% endif %}" />
-    <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+    <id>&id;{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+    <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}http://{{ site.url }}{{ post.url }}/{% endif %}" />
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
       <name>{{ site.full-name }}</name>
       <uri>http://{{ site.url }}/</uri>
     </author>
-    <content type="html">
+    <content type="html" xml:base="&url;">
       {% if post.thumb %}
         &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
-        &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;        
+        &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
       {% elsif post.category == "note" %}
         {% if post.excerpt %}
-          &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;        
+          &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
         {% else %}
           {{ post.content | xml_escape }}
         {% endif %}
-        {% if post.link %}&lt;p&gt;&lt;a href=http://{{ site.url }}{{ post.url }}/ title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&infin;&lt;/a&gt;&lt;/p&gt;{% endif %}
+        {% if post.link %}&lt;p&gt;&lt;a href=&quot;http://{{ site.url }}{{ post.url }}/&quot; title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#8734;&lt;/a&gt;&lt;/p&gt;{% endif %}
       {% endif %}
     </content>
   </entry>
