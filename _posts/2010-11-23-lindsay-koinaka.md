@@ -2,7 +2,7 @@
 layout: post
 title: lindsay-koinaka 3.0
 category: work
-excerpt: A WordPress theme, now it's on Stacey and Jekyll
+excerpt: A WordPress theme, now it’s on Stacey and Jekyll
 thumb: lindsay-koinaka.jpg
 ---
 
