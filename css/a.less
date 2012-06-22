@@ -30,7 +30,6 @@
   color: fade(@txt, 40%);
   font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
   font-size: 12px;
-  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: .25em;
 }
@@ -40,8 +39,6 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-weight: normal;
-  font-style: normal;
   font-size: 100%;
   font-family: inherit;
   line-height: 1;
@@ -54,7 +51,6 @@
   font-size: 14px;
   font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
   line-height: 1.7;
-  font-weight: 100;
   max-width: 1080px;
   margin: 0 auto;
   padding: 60px 40px;
@@ -190,6 +186,9 @@ hgroup {
   padding-top: 40px;
   max-width: @txt-width;
   margin: auto;
+  > * {
+    font-weight: normal;
+  }
   h2 {
     .helvetica;
     padding-top: .4em;
@@ -220,7 +219,7 @@ article {
             hyphens: auto;
     p {
       margin: 1em 0;
-      line-height: 2;
+      line-height: 1.9;
     }
     h3 {
       .helvetica;
@@ -235,6 +234,23 @@ article {
       list-style: square;
       li {
         line-height: 1.8;
+      }
+    }
+    blockquote {
+      position: relative;
+      padding-left: 40px;
+      font-style: italic;
+      &:before {
+        position: absolute;
+        top: -14px;
+        left: -6px;
+        content: '\201c';
+        font-size: 96px;
+        color: fade(@txt, 10%);
+        font-family: 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        z-index: -1;
+        pointer-events: none;
       }
     }
     sup {
