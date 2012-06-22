@@ -12,7 +12,7 @@ permalink: /all.rss
   xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
   >
 
-<!-- This file is used for exporting posts to WordPress -->
+<!-- This file is used for exporting entries to WordPress -->
 
 <channel>
   <title>{{ site.name }}</title>
