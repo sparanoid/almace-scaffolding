@@ -2,7 +2,7 @@
 layout: post
 title: UPC Dope Show
 category: work
-excerpt: We're all stars now, in the dope show
+excerpt: We’re all stars now, in the dope show
 thumb: upc-dope-show.jpg
 ---
 
