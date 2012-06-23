@@ -3,7 +3,7 @@ layout: post
 title: Lucky Star Skin for QQ / Sogou Pinyin IME
 category: work
 excerpt: Based on Lucky☆Star「らき☆すた」
-thumb: lucky-star-ime-theme.png
+thumb: lucky-star-ime-theme.jpg
 bg: '#fcebef'
 ---
 
