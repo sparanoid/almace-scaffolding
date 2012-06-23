@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<hgroup>
-  <h1>{{ page.title }}</h1>
-  {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %Y" }}</time></h2>{% endif %}
-  {% if page.desc %}<h2>{{ page.desc }}</h2>{% endif %}
-</hgroup>
-
 <article>
+  <hgroup>
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %Y" }}</time></h2>{% endif %}
+    {% if page.desc %}<h2>{{ page.desc }}</h2>{% endif %}
+  </hgroup>
+
   {{ content }}
 </article>
