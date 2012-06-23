@@ -183,7 +183,7 @@ hgroup {
   .font-face;
   font-size: 24px;
   text-align: center;
-  padding-top: 40px;
+  padding-bottom: 40px;
   max-width: @txt-width;
   margin: auto;
   > * {
@@ -199,9 +199,6 @@ article {
   float: left;
   width: 100%;
   padding-top: 40px;
-  a {
-    border-bottom: 1px dotted fade(@txt, 10%); // set larger value for invert color
-  }
   img, video {
     display: block;
     margin: 20px auto;
@@ -217,6 +214,9 @@ article {
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
             hyphens: auto;
+    a {
+      border-bottom: 1px dotted fade(@txt, 30%); // set larger value for invert color
+    }
     p {
       margin: 1em 0;
       line-height: 1.9;
@@ -323,7 +323,6 @@ ul[role*=list] {
       font-size: 10px;
       line-height: 1.2;
       opacity: 0;
-      border-bottom: none;
       background: fade(@link, 90%);
     }
     &:hover a {
@@ -357,9 +356,6 @@ dl {
     line-height: 1;
     padding: 60px 0 0;
     .helvetica;
-    a {
-      border-bottom: none;
-    }
     time + a {
       font-size: 16px;
     }
