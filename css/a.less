@@ -30,6 +30,7 @@
   color: fade(@txt, 40%);
   font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
   font-size: 12px;
+  font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .25em;
 }
@@ -348,19 +349,21 @@ ul[role$=small] {
   }
 }
 
-// post list in "note" 
-dl {
-  text-align: center;
+// post list in "note"
+div[role=note-list] {
+  // make sure the last post next to footer has the correct margin value.
   margin-top: -40px;
-  dt {
-    line-height: 1;
-    padding: 60px 0 0;
-    .helvetica;
-    time + a {
-      font-size: 16px;
+  section {
+    text-align: center;
+    h2 {
+      line-height: 1;
+      // padding: 60px 0 0;
+      .helvetica;
+      time + a {
+        font-size: 16px;
+      }
     }
-  }
-  dd {
+    padding-top: 60px;
     margin-bottom: 40px;
   }
 }

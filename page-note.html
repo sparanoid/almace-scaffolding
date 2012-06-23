@@ -5,14 +5,15 @@ permalink: /note/
 desc: Random ramblings
 ---
 
-<dl>
-{% for post in site.categories.note %}
-  <dt>
-    {% if post.link %}<a href={{ post.link }}>{{ post.title }}</a>{% else %}<a href={{ post.url }}/>{{ post.title }}</a>{% endif %}
-    <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-    {% if post.link %}<a href={{ post.url }}/>&infin;</a>{% endif %}</dt>
-  <dd>
+<div role=note-list>
+  {% for post in site.categories.note %}
+  <section>
+    <h2>
+      {% if post.link %}<a href={{ post.link }}>{{ post.title }}</a>{% else %}<a href={{ post.url }}/>{{ post.title }}</a>{% endif %}
+      <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
+      {% if post.link %}<a href={{ post.url }}/>&infin;</a>{% endif %}
+    </h2>
     {{ post.content }}
-  </dd>
-{% endfor %}
-</dl>
+  </section>
+  {% endfor %}  
+</div>
