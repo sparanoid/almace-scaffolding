@@ -13,10 +13,10 @@
 
 <nav role=navigation>
   <ul>
-    <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current{% endif %}><a href=/work/>Work</a></li>
-    <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current{% endif %}><a href=/store/>Store</a></li>
-    <li{% if page.permalink == '/note/' or page.category == 'note' %} role=current{% endif %}><a href=/note/>Note</a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} role=current{% endif %}><a href=/about/>About</a></li>
+    <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current-page{% endif %}><a href=/work/>Work</a></li>
+    <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current-page{% endif %}><a href=/store/>Store</a></li>
+    <li{% if page.permalink == '/note/' or page.category == 'note' %} role=current-page{% endif %}><a href=/note/>Note</a></li>
+    <li{% if page.permalink == '/about/' or page.category == 'about' %} role=current-page{% endif %}><a href=/about/>About</a></li>
   </ul>
 </nav>
 
