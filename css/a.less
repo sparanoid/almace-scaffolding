@@ -290,7 +290,7 @@ article {
 @thumb-size: 64px;
 @thumb-padding: 8px;
 
-ul[role*=list] {
+ul[role^=work-list] {
   max-width: 640px;
   text-align: center;
   margin: 0 auto;
@@ -349,7 +349,7 @@ ul[role$=small] {
 }
 
 // post list in "note"
-div[role=note-list] {
+div[role^=note-list] {
   // make sure the last post next to footer has the correct margin value.
   margin-top: -40px;
   section {
