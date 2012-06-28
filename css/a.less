@@ -99,82 +99,82 @@ body:before {
   border-bottom: 1px solid fade(@txt, 2%);
 }
 
-header {
-  a {
-    display: block;
-    height: 38px;
-    width: 38px;
-    margin: 0 auto;
-    background: url(logo.svg) no-repeat 0 0;
-    background-size: 38px 38px;
-    text-indent: -9999em;
-  }
+a[role=logo] {
+  display: block;
+  height: 38px;
+  width: 38px;
+  margin: 0 auto;
+  background: url(logo.svg) no-repeat 0 0;
+  background-size: 38px 38px;
+  text-indent: -9999em;
 }
 
 nav {
   .helvetica;
+}
+
+nav[role=navigation] {
   font-size: 11px;
-  &[role=navigation] {
-    padding: 10px 0 15px;
-    ul {
-      text-align: center;
-      li {
-        display: inline;
-        margin: 0 .8em;
-      }
+  padding: 10px 0 15px;
+  ul {
+    text-align: center;
+    li {
+      display: inline;
+      margin: 0 .8em;
     }
   }
-  &[role=pagination] {
-    a {
+}
+
+nav[role=pagination] {
+  a {
+    position: absolute;
+    top: 173px;
+    display: block;
+    padding: 7px 10px;
+    font-size: 9px;
+    letter-spacing: .2em;
+    background: fade(@txt, 5%);
+    z-index: 9999;
+    -webkit-transition: padding .1s ease;
+       -moz-transition: padding .1s ease;
+    [role=tooltip] {
       position: absolute;
-      top: 173px;
-      display: block;
+      top: 23px;
+      white-space: nowrap;
+      opacity: 0;
       padding: 7px 10px;
-      font-size: 9px;
-      letter-spacing: .2em;
-      background: fade(@txt, 5%);
-      z-index: 9999;
-      -webkit-transition: padding .1s ease;
-         -moz-transition: padding .1s ease;
+      color: #fff;
+      background: fade(@link, 90%);
+      pointer-events: none;
+      -webkit-transition: opacity .1s ease, padding .1s ease;
+         -moz-transition: opacity .1s ease, padding .1s ease;
+    }
+    &:hover {
       [role=tooltip] {
-        position: absolute;
-        top: 23px;
-        white-space: nowrap;
-        opacity: 0;
-        padding: 7px 10px;
-        color: #fff;
-        background: fade(@link, 90%);
-        pointer-events: none;
-        -webkit-transition: opacity .1s ease, padding .1s ease;
-           -moz-transition: opacity .1s ease, padding .1s ease;
+        opacity: 1;
+      }
+    }
+    &[role=next] {
+      left: 0;
+      [role=tooltip] {
+        left: 0;
       }
       &:hover {
+        padding-left: 15px;
         [role=tooltip] {
-          opacity: 1;
-        }
-      }
-      &[role=next] {
-        left: 0;
-        [role=tooltip] {
-          left: 0;
-        }
-        &:hover {
           padding-left: 15px;
-          [role=tooltip] {
-            padding-left: 15px;
-          }
         }
       }
-      &[role=previous] {
+    }
+    &[role=prev] {
+      right: 0;
+      [role=tooltip] {
         right: 0;
+      }
+      &:hover {
+        padding-right: 15px;
         [role=tooltip] {
-          right: 0;
-        }
-        &:hover {
           padding-right: 15px;
-          [role=tooltip] {
-            padding-right: 15px;
-          }
         }
       }
     }
@@ -247,6 +247,7 @@ article {
         left: -6px;
         content: '\201c';
         font-size: 96px;
+        line-height: 1;
         color: fade(@txt, 70%);
         font-family: 'Helvetica Neue', sans-serif;
         font-style: normal;
@@ -283,7 +284,7 @@ article {
 
 // word of the year override
 [role=woty] {
-  padding-top: 0;
+  padding-top: 10px;
 }
 
 // image list in "work"
@@ -354,8 +355,10 @@ div[role^=note-list] {
   section {
     text-align: center;
     h2 {
-      line-height: 1;
       .helvetica;
+      line-height: 2;
+      margin: -3px auto -6px;
+      max-width: @txt-width;
       // an infinite symbol next to the post date
       time + a {
         font-size: 16px;
