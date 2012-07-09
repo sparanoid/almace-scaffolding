@@ -25,14 +25,14 @@
 {% if page.category == 'note' %}
 <nav role=pagination>
 {% if page.next_in_categories.url %}
-  <a role=next href={{ page.next_in_categories.url }}/ title="{{ page.next_in_categories.title }}">
+  <a role=next href={{ page.next_in_categories.url }}/>
     <span>Next</span>
     <span role=tooltip>{{ page.next_in_categories.title }}</span>
   </a>
 {% else %}
 {% endif %}
 {% if page.previous_in_categories.url %}
-  <a role=prev href={{ page.previous_in_categories.url }}/ title="{{ page.previous_in_categories.title }}">
+  <a role=prev href={{ page.previous_in_categories.url }}/>
     <span>Prev</span>
     <span role=tooltip>{{ page.previous_in_categories.title }}</span>
   </a>
@@ -42,6 +42,7 @@
 {% endif %}
 
 {% if page.category == 'work' %}
+<h3 role=work-list-title>Other Works</h3>
 <ul role=work-list-small>
 {% for post in site.categories.work %}
   <li>
