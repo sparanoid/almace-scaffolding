@@ -125,7 +125,7 @@ nav[role=navigation] {
 nav[role=pagination] {
   a {
     position: absolute;
-    top: 233px;
+    top: 250px;
     display: block;
     padding: 7px 10px;
     font-size: 10px;
@@ -336,18 +336,18 @@ div[role^=note-list] {
       }
       // an infinite symbol next to the post date
       time + a {
-        // font-size: 16px;
+        // need line-height: 0 to make vertical-align work
+        line-height: 0;
+        vertical-align: 3px;
       }
     }
     padding-top: @space * 1.5;
-    margin-bottom: @space;
   }
 }
 
 aside {
   padding: @space 0 0;
   width: 200px;
-  margin: 0 auto;
   clear: both;
   // BuySellAds block
   .bsap {
