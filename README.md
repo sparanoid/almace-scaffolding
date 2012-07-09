@@ -1,7 +1,7 @@
 lindsayisgod
 ============
 
-[Jekyll][jk] runing on [sparanoid.com][sp], codename `lindsayisgod`, version 19.
+[Jekyll][jk] runing on [sparanoid.com][sp], codename `lindsayisgod`, version 20.
 
 License
 -------
