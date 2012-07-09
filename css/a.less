@@ -58,7 +58,6 @@
   padding: @space * 1.5 @space;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
-  // -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -104,7 +103,6 @@ a[role=logo] {
   display: block;
   height: 38px;
   width: 38px;
-  // margin: 0 auto;
   background: url(logo.svg) no-repeat 0 0;
   background-size: auto 36px;
   text-indent: -9999em;
@@ -115,10 +113,8 @@ nav {
 }
 
 nav[role=navigation] {
-  // font-size: 11px;
   padding: 10px 0 15px;
   ul {
-    // text-align: center;
     li {
       display: inline;
       margin-right: .8em;
@@ -184,11 +180,8 @@ nav[role=pagination] {
 
 hgroup {
   .font-face;
-  // font-size: 56px;
-  // text-align: center;
   padding-bottom: @space * 1.5 * 2/3;
   max-width: @txt-width;
-  // margin: auto;
   > * {
     font-weight: normal;
   }
@@ -211,8 +204,6 @@ article {
   }
   .txt {
     max-width: @txt-width;
-    // margin: 0 auto;
-    // text-align: justify;
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
             hyphens: auto;
@@ -226,7 +217,6 @@ article {
     h3 {
       .helvetica;
       padding: @space * 1.5 0 0;
-      // text-align: center;
       &:first-child {
         margin-top: -@space;
       }
@@ -267,9 +257,6 @@ article {
       color: #68a;
     }
   }
-  div[role*=announcement] {
-    // text-align: center;
-  }
   .note, .download {
     background-size: 40px 40px;
     padding-left: 50px;
@@ -293,11 +280,10 @@ article {
 @thumb-padding: 4px;
 
 ul[role^=work-list] {
-  // max-width: 750px;
-  // text-align: center;
-  // margin: 0 auto;
   padding-top: 12px;
   clear: both;
+  margin-left: -@thumb-padding;
+  margin-right: @thumb-padding;
   li {
     position: relative;
     list-style: none;
@@ -345,19 +331,15 @@ div[role^=note-list] {
   // make sure the last post next to footer has the correct margin value.
   margin-top: -@space;
   section {
-    // text-align: center;
     h2 {
       .font-face;
-      // font-size: 56px;
-      // line-height: 2;
-      // font-size: 56px;
       margin: -3px 0 -12px;
       max-width: @txt-width;
       font-weight: normal;
-      // an infinite symbol next to the post date
       time {
         color: fade(@txt, 30%);
       }
+      // an infinite symbol next to the post date
       time + a {
         // font-size: 16px;
       }
@@ -370,7 +352,6 @@ div[role^=note-list] {
 aside {
   padding: @space 0 0;
   width: 200px;
-  text-align: center;
   margin: 0 auto;
   clear: both;
   // BuySellAds block
@@ -405,7 +386,6 @@ footer {
   padding: 15px 0;
   .helvetica;
   font-size: 11px;
-  // text-align: center;
 }
 
 @media (max-width: 640px) {
