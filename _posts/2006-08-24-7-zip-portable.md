@@ -2,6 +2,7 @@
 layout: post
 title: Segoe UI, Frutiger Next LT and Frutiger 45
 category: note
+lang: zh
 ---
 
 <div class=txt>

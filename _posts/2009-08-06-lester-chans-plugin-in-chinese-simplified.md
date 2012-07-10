@@ -2,6 +2,7 @@
 layout: post
 title: Lester Chan’s Plugins in Chinese Simplified
 category: note
+lang: zh
 ---
 
 <div class=txt>
