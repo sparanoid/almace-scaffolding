@@ -40,6 +40,26 @@
   -webkit-transition: @transition;
      -moz-transition: @transition;
 }
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+     -moz-transform: rotate(@degrees);
+}
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+}
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+}
+.skew(@x, @y) {
+  -webkit-transform: skew(@x, @y);
+     -moz-transform: skew(@x, @y);
+}
+.translate3d(@x, @y, @z) {
+  -webkit-transform: translate(@x, @y, @z);
+     -moz-transform: translate(@x, @y, @z);
+}
 
 // basic configurations
 * {
@@ -127,11 +147,12 @@ nav[role=navigation] {
       font-weight: bold;
       -webkit-font-smoothing: antialiased;
       span {
-        float: right; // fix a container size
+        display: inline-block; // fix a container size
+        // float: right;
         margin-left: -1em;
         letter-spacing: -.75em;
         opacity: 0;
-        .transition(~"letter-spacing .2s ease, margin-left .2s ease, opacity .1s ease");
+        .transition(~"letter-spacing .05s linear, margin-left .05s linear, opacity .05s linear");
       }
     }
     &:hover, &[role=current] {
