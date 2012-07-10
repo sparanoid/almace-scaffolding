@@ -320,6 +320,13 @@ article {
   }
 }
 
+// workaround solution for post with chinese
+[lang=zh] .txt {
+  p, li {
+    text-align: justify;
+  }
+}
+
 // image list in "work"
 @thumb-size: 96px;
 @thumb-padding: 4px;

@@ -2,6 +2,7 @@
 layout: post
 title: Need More Space? UI in Opera, Chrome, IE and Firefox
 category: note
+lang: zh
 ---
 
 <div class=txt>

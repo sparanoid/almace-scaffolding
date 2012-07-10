@@ -2,6 +2,7 @@
 layout: post
 title: Minimalist Syndrome
 category: note
+lang: zh
 ---
 
 <div class=txt>

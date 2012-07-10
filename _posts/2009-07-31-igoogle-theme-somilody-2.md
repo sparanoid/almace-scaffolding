@@ -4,6 +4,7 @@ title: iGoogle Theme - Somilody 2
 category: work
 excerpt: iGoogle Theme - Somilody 2
 thumb: somilody-2.jpg
+lang: zh
 ---
 
 <p><img src="{{ site.file }}/somilody-2.png" alt="iGoogle Theme - Somilody 2"></p>

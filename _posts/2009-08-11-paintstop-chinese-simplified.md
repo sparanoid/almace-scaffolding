@@ -2,6 +2,7 @@
 layout: post
 title: PaintStop Chinese Simplified for ZBrush 3.1
 category: work
+lang: zh
 ---
 
 <div class=txt>
