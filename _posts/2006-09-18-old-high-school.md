@@ -4,6 +4,7 @@ title: Old High School
 category: work
 excerpt: My old high school, before we moved to a new one.
 thumb: old-high-school.jpg
+lang: zh
 ---
 
 <p><img src="{{ site.file }}/work/old_high_school.jpg" alt="Old High School" class="center"></p>

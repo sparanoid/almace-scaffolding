@@ -2,6 +2,7 @@
 layout: post
 title: lindsay-koinaka
 category: note
+lang: zh
 ---
 
 <div class=txt>

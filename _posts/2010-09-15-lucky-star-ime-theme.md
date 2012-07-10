@@ -5,6 +5,7 @@ category: work
 excerpt: Based on Lucky☆Star「らき☆すた」
 thumb: lucky-star-ime-theme.jpg
 bg: '#fcebef'
+lang: zh
 ---
 
 <p><img src="{{ site.file }}/lucky-star-for-sogou_large.png" alt="Lucky Star Theme for QQ/Sogou Pinyin IME"></p>
