@@ -36,6 +36,11 @@
   letter-spacing: .25em;
 }
 
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+}
+
 // basic configurations
 * {
   margin: 0;
@@ -62,13 +67,11 @@
 
 a {
   color: @txt;
-  -webkit-transition: color .5s ease, background .5s ease, opacity 1.5s ease;
-     -moz-transition: color .5s ease, background .5s ease, opacity 1.5s ease;
+  .transition(~"color .5s ease, background .5s ease, opacity 1.5s ease");
 }
-  a:hover, [role=current] a {
+  a:hover {
     color: @link;
-    -webkit-transition: color .1s ease, background .1s ease, opacity .1s ease;
-       -moz-transition: color .1s ease, background .1s ease, opacity .1s ease;
+    .transition(~"color .1s ease, background .1s ease, opacity .1s ease");
   }
 
 ins {
@@ -100,6 +103,7 @@ body:before {
 }
 
 a[role=logo] {
+  float: left;
   display: block;
   width: 31px;
   height: 36px;
@@ -113,11 +117,32 @@ nav {
 }
 
 nav[role=navigation] {
-  padding: 10px 0 15px;
-  ul {
-    li {
-      display: inline;
-      margin-right: .8em;
+  float: left;
+  margin-left: 15px;
+  li {
+    display: inline;
+    a {
+      float: left;
+      padding: 12px .8em 11px;
+      font-weight: bold;
+      -webkit-font-smoothing: antialiased;
+      span {
+        display: inline-block; // fix a container size
+        margin-left: -1em;
+        letter-spacing: -.75em;
+        opacity: 0;
+        .transition(~"letter-spacing .2s ease, margin-left .2s ease, opacity .1s ease");
+      }
+    }
+    &:hover, &[role=current] {
+      a {
+        color: @link;
+        span {
+          margin-left: 0;
+          letter-spacing: .25em;
+          opacity: 1;
+        }
+      }
     }
   }
 }
