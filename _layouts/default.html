@@ -9,16 +9,17 @@
 
 <header>
   <h1><a href=/ role=logo accesskey=x>Sparanoid</a></h1>
+  <nav role=navigation>
+    <ul>
+      <li{% if page.permalink == '/' or page.category == 'home' %} role=current{% endif %}><a href=/>Home</a></li>
+      <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current{% endif %}><a href=/work/>Work</a></li>
+      <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current{% endif %}><a href=/store/>Store</a></li>
+      <li{% if page.permalink == '/note/' or page.category == 'note' %} role=current{% endif %}><a href=/note/>Note</a></li>
+      <li{% if page.permalink == '/about/' or page.category == 'about' %} role=current{% endif %}><a href=/about/>About</a></li>
+    </ul>
+  </nav>
 </header>
 
-<nav role=navigation>
-  <ul>
-    <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current{% endif %}><a href=/work/>W<span>ork</span></a></li>
-    <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current{% endif %}><a href=/store/>S<span>tore</span></a></li>
-    <li{% if page.permalink == '/note/' or page.category == 'note' %} role=current{% endif %}><a href=/note/>N<span>ote</span></a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} role=current{% endif %}><a href=/about/>A<span>bout</span></a></li>
-  </ul>
-</nav>
 
 {{ content }}
 
