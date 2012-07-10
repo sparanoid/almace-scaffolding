@@ -10,7 +10,13 @@
 <header>
   <h1><a href=/ role=logo accesskey=x>Sparanoid</a></h1>
   <nav role=navigation>
-    <ul>
+    <ul class=
+      {% if page.permalink == '/' or page.category == 'home' %}offset-home{% endif %}
+      {% if page.permalink == '/work/' or page.category == 'work' %}offset-work{% endif %}
+      {% if page.permalink == '/store/' or page.category == 'store' %}offset-store{% endif %}
+      {% if page.permalink == '/note/' or page.category == 'note' %}offset-note{% endif %}
+      {% if page.permalink == '/about/' or page.category == 'about' %}offset-about{% endif %}
+    >
       <li{% if page.permalink == '/' or page.category == 'home' %} role=current{% endif %}><a href=/>Home</a></li>
       <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current{% endif %}><a href=/work/>Work</a></li>
       <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current{% endif %}><a href=/store/>Store</a></li>

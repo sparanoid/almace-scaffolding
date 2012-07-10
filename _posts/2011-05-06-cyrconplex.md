@@ -2,6 +2,7 @@
 layout: post
 title: cyrconlex
 category: note
+lang: zh
 ---
 
 <div class=txt>

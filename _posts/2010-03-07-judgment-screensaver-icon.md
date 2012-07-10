@@ -5,6 +5,7 @@ category: work
 excerpt: Based on Toaru Kagaku no Railgun「とある科学の超電磁砲」
 thumb: judgment-screensaver-icon.png
 bg: '#eafbf1'
+lang: zh
 ---
 
 <div class=txt>

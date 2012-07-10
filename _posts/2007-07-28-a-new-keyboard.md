@@ -2,6 +2,7 @@
 layout: post
 title: A New Keyboard
 category: note
+lang: zh
 ---
 
 <div class=txt>
