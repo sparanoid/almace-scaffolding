@@ -129,22 +129,12 @@ nav[role=navigation] {
       }
       &:not([role=current]) {
         opacity: 0;
+        pointer-events: none;
       }
       a {
         padding: 3px .8em;
         font-weight: bold;
         -webkit-font-smoothing: antialiased;
-      }
-    }
-    &:hover {
-      li {
-        .transition(~"top .15s ease-out, opacity .6s ease-out");
-        opacity: 1;
-        &:nth-of-type(1) { top: 0; }
-        &:nth-of-type(2) { top: 20px; }
-        &:nth-of-type(3) { top: 40px; }
-        &:nth-of-type(4) { top: 60px; }
-        &:nth-of-type(5) { top: 80px; }
       }
     }
     @base: 12px;
@@ -168,6 +158,18 @@ nav[role=navigation] {
     &.offset-about {
       top: @base - @rate * 4;
       li { top: @rate * 4; }
+    }
+    &:hover {
+      li {
+        .transition(~"top .25s ease-out, opacity .3s ease-out .15s");
+        opacity: 1;
+        pointer-events: auto;
+        &:nth-of-type(1) { top: 0; }
+        &:nth-of-type(2) { top: 20px; }
+        &:nth-of-type(3) { top: 40px; }
+        &:nth-of-type(4) { top: 60px; }
+        &:nth-of-type(5) { top: 80px; }
+      }
     }
   }
 }
