@@ -20,24 +20,23 @@ thumb: tianjin-project.jpg
 <script>
 // By Chris Coyier & tweaked by Mathias Bynens
 $(function() {
-	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
-	    $fluidEl = $("body");
-	$allVideos.each(function() {
-		$(this)
-			.data('aspectRatio', this.height / this.width)
-			.removeAttr('height')
-			.removeAttr('width');
-	});
+  var $allVideos = $("iframe[src*='//www.youtube.com/embed']"),
+      $fluidEl = $("body");
+  $allVideos.each(function() {
+    $(this)
+      .data('aspectRatio', this.height / this.width)
+      .removeAttr('height')
+      .removeAttr('width');
+  });
 
-	$(window).resize(function() {
-		var newWidth = $fluidEl.width();
-		$allVideos.each(function() {
-			var $el = $(this);
-			$el
-				.width(newWidth)
-				.height(newWidth * $el.data('aspectRatio'));
-
-		});
-	}).resize();
+  $(window).resize(function() {
+    var newWidth = $fluidEl.width();
+    $allVideos.each(function() {
+      var $el = $(this);
+      $el
+        .width(newWidth)
+        .height(newWidth * $el.data('aspectRatio'));
+    });
+  }).resize();
 });
 </script>
