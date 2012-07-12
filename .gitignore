@@ -2,6 +2,7 @@
 
 # Jekyll specified
 _site
+_build
 *.css
 Rakefile
 
