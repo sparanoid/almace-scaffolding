@@ -4,6 +4,7 @@ title: PaintStop Chinese Simplified for ZBrush 3.1
 category: work
 tag: design
 lang: zh
+thumb: paintstop.jpg
 ---
 
 <div class=txt>
