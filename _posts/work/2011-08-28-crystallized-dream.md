@@ -2,6 +2,7 @@
 layout: post
 title: Crystallized Dream
 category: work
+tag: drawing
 excerpt: Moonstruck princess in my dream, under the umbrella.
 thumb: crystallized-dream.jpg
 ---
