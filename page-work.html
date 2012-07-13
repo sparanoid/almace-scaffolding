@@ -5,8 +5,23 @@ permalink: /work/
 desc: Designs &amp; drawings 
 ---
 
+<div class=txt>
+  <h3>Web Designs / Themes / Side Projects</h3>
+</div>
 <ul role=work-list>
-{% for post in site.categories.work %}
+{% for post in site.tags.design %}
+  <li>
+    <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
+    <a href={{ post.url }}/>{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+<div class=txt>
+  <h3>Sketches / Paintings</h3>
+</div>
+<ul role=work-list>
+{% for post in site.tags.drawing %}
   <li>
     <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
     <a href={{ post.url }}/>{{ post.title }}</a>

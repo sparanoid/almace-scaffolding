@@ -2,6 +2,7 @@
 layout: post
 title: iGoogle Theme - Somilody 2
 category: work
+tag: design
 excerpt: iGoogle Theme - Somilody 2
 thumb: somilody-2.jpg
 lang: zh
