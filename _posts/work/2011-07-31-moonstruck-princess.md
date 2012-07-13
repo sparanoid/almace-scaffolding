@@ -2,6 +2,7 @@
 layout: post
 title: Moonstruck Princess
 category: work
+tag: drawing
 excerpt: Moonstruck princess in my dream, inspired by you.
 thumb: moonstruck-princess.jpg
 ---

@@ -2,11 +2,12 @@
 layout: post
 title: fogbound-highrise ft. Jekyll
 category: work
+tag: design
 excerpt: The 15th version of sparanoid.com, featuring Jekyll
 thumb: fogbound-highrise.png
 ---
 
-<p><img src="{{ site.file }}/fogbound-highrise-screenshot.png"></p>
+<p class=browser><img src="{{ site.file }}/fogbound-highrise-screenshot-large.png"></p>
 
 <div class=txt>
 <p>Source code hosted @<a href="https://github.com/sparanoid/sparanoid.com">GitHub</a></p>

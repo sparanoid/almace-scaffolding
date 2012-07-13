@@ -255,6 +255,7 @@ article {
   p {
   }
   .txt {
+    clear: both;
     max-width: @txt-width;
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
@@ -310,11 +311,12 @@ article {
     }
   }
   .browser {
+    float: left;
     margin: 20px 0 40px;
-    box-shadow: rgba(0, 0, 0, .15) 0 10px 50px 0, rgba(0, 0, 0, .4) 0 0 0 1px, inset rgba(255, 255, 255, .6) 0 1px 0 0;
     padding-top: 16px;
     border-radius: 4px 4px 0 0;
     background: #e8e8e8;
+    box-shadow: rgba(0, 0, 0, .15) 0 10px 50px 0, rgba(0, 0, 0, .4) 0 0 0 1px, inset rgba(255, 255, 255, .6) 0 1px 0 0;
     img {
       box-shadow: rgba(0, 0, 0, .4) 0 -1px 0 0;
       margin: 0;
@@ -345,8 +347,9 @@ article {
 @thumb-padding: 4px;
 
 ul[role^=work-list] {
-  padding-top: 31px;
+  padding-top: 20px;
   clear: both;
+  overflow: hidden;
   margin-left: -@thumb-padding;
   margin-right: @thumb-padding;
   li {
@@ -387,7 +390,7 @@ ul[role^=work-list] {
 // image navigation in post page 
 h3[role=work-list-title] {
   .helvetica;
-  padding: @space * 1.5 0 20px;
+  padding: @space * 1.5 0 0;
   float: left;
 }
 

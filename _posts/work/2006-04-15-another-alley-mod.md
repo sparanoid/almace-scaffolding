@@ -2,6 +2,7 @@
 layout: post
 title: Another Alley [Mod]
 category: work
+tag: drawing
 excerpt: Another Alley [Mod]
 thumb: another-alley-mod.jpg
 ---

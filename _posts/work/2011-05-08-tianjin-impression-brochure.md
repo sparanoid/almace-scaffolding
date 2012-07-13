@@ -2,6 +2,7 @@
 layout: post
 title: Tianjin Impression Brochure
 category: work
+tag: design
 excerpt: Tianjin Impression brochure for my college work
 thumb: tianjin-impression-brochure.jpg
 bg: '#f1eafb'

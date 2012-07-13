@@ -2,6 +2,7 @@
 layout: post
 title: Gouache - Trees
 category: work
+tag: drawing
 excerpt: Gouache - Trees
 thumb: gouache-trees.jpg
 ---

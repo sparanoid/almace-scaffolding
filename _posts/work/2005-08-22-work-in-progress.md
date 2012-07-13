@@ -2,6 +2,7 @@
 layout: post
 title: Work In Progress
 category: work
+tag: design
 excerpt: Work in Progress
 thumb: work-in-progress.jpg
 ---

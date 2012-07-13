@@ -2,6 +2,7 @@
 layout: post
 title: WordPress Plugin - Quotmarks Replacer
 category: work
+tag: design
 excerpt: A plugin that disables wptexturize function
 ---
 
