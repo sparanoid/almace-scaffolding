@@ -2,6 +2,7 @@
 layout: post
 title: Countryroad
 category: work
+tag: drawing
 excerpt: Cuntryroad
 thumb: countryroad.jpg
 ---

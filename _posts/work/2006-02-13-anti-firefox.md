@@ -2,6 +2,7 @@
 layout: post
 title: WordPress Plugin - Anti-Firefox
 category: work
+tag: design
 excerpt: I dont't like Firefox, what about you?
 ---
 

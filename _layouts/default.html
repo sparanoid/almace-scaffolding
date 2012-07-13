@@ -45,10 +45,22 @@
 </nav>
 {% endif %}
 
-{% if page.category == 'work' %}
-<h3 role=work-list-title>Other Works</h3>
+{% if page.tag == 'design' %}
+<h3 role=work-list-title>Other Design Works</h3>
 <ul role=work-list-small>
-{% for post in site.categories.work %}
+{% for post in site.tags.design %}
+  <li>
+    <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
+    <a href={{ post.url }}/>{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if page.tag == 'drawing' %}
+<h3 role=work-list-title>Other Sketches / Paintings</h3>
+<ul role=work-list-small>
+{% for post in site.tags.design %}
   <li>
     <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
     <a href={{ post.url }}/>{{ post.title }}</a>
