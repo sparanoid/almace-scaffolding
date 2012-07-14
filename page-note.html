@@ -10,8 +10,8 @@ desc: Random ramblings
   <section{% if post.lang %} lang={{ post.lang }}{% endif %}>
     <h2>
       {% if post.link %}<a href={{ post.link }}>{{ post.title }}</a>{% else %}<a href={{ post.url }}/>{{ post.title }}</a>{% endif %}
-      <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-      {% if post.link %}<a href={{ post.url }}/>&infin;</a>{% endif %}
+      &#20;<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
+      {% if post.link %}&#20;<a href={{ post.url }}/>&infin;</a>{% endif %}
     </h2>
     {{ post.content }}
   </section>
