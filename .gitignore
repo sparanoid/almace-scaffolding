@@ -4,7 +4,6 @@
 _site
 _build
 *.css
-Rakefile
 
 # Codekit specified
 codekit-config.json
