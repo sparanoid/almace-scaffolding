@@ -11,6 +11,8 @@ thumb: tianjin-project.jpg
 <p><img src="{{ site.file }}/tianjin-project.png" alt="A Graduate Work from Tunghsiao Liu / A Detailed Introduction to Municipality of Tianjin"></p>
 </div>
 
+<p class=browser><a href="/lab/tianjin/"><img src="{{ site.file }}/tianjin-project-site.jpg" alt="Tianjin Project Website"></a></p>
+
 <iframe width="1280" height="720" src="http://www.youtube.com/embed/dk2Fg8WJ3-o?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <div class=txt>
