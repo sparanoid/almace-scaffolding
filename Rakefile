@@ -21,6 +21,7 @@ end
 desc 'Minified HTML'
 task :minify do
   puts '>>> Minifying HTML'
-  sh "java -jar _build/htmlcompressor-1.5.3.jar -r --remove-intertag-spaces --remove-quotes --remove-http-protocol --remove-https-protocol --compress-js --compress-css --type html -o _site _site"
+  sh "java -jar _build/htmlcompressor-1.5.3.jar -r --type html --remove-intertag-spaces --remove-quotes --remove-http-protocol --remove-https-protocol --compress-js --compress-css -o _site _site"
+  sh "java -jar _build/htmlcompressor-1.5.3.jar -r --type xml -o _site _site"
   puts '>>> Minified.'
 end
