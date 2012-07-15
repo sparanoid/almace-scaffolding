@@ -195,8 +195,7 @@ nav[role=pagination] {
     letter-spacing: .2em;
     background: fade(@txt, 5%);
     z-index: 9999;
-    -webkit-transition: padding .1s ease;
-       -moz-transition: padding .1s ease;
+    .transition(~"padding .1s ease");
     [role=tooltip] {
       position: absolute;
       top: 23px;
@@ -206,8 +205,7 @@ nav[role=pagination] {
       color: #fff;
       background: fade(@link, 95%);
       pointer-events: none;
-      -webkit-transition: opacity .1s ease, padding .1s ease;
-         -moz-transition: opacity .1s ease, padding .1s ease;
+      .transition(~"opacity .1s ease, padding .1s ease");
     }
     &:hover {
       [role=tooltip] {
@@ -480,7 +478,7 @@ footer {
 }
 
 // all ios devices, the easy way
-@media (max-width: 640px), (max-device-width: 480px), (max-device-width: 1024px) {  
+@media (max-device-width: 480px), (max-device-width: 1024px) {  
   nav[role=navigation] {
     ul {
       position: static;
@@ -516,7 +514,7 @@ footer {
 }
 
 // iphone portrait
-@media (max-width: 640px), (max-device-width: 480px) and (orientation: portrait) {
+@media (max-device-width: 480px) and (orientation: portrait) {
   :root {
     padding: @space * 1.5 20px;
   }
