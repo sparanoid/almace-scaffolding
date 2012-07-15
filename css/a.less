@@ -6,7 +6,7 @@
 
 // global variables
 @space: 70px;
-@txt-width: 750px;
+@txt_width: 750px;
 @link: #e34; // #2ed for invert color
 @bg: #fff;
 @txt: #000;
@@ -34,6 +34,14 @@
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .25em;
+}
+
+.clearfix { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 }
 
 .transition(@transition) {
@@ -102,13 +110,14 @@ body:before {
   border-bottom: 1px solid fade(@txt, 2%);
 }
 
+@logo_width: 43px;
 a[role=logo] {
   float: left;
   display: block;
   width: 37px;
-  height: 43px;
+  height: @logo_width;
   background: url(logo.svg) no-repeat 0 0;
-  background-size: auto 43px;
+  background-size: auto @logo_width;
   text-indent: -9999em;
 }
 
@@ -117,8 +126,10 @@ nav {
 }
 
 nav[role=navigation] {
-  float: left;
-  margin-left: 10px;
+  margin: 0 0 @space * 1.35 @logo_width + 4px;
+  &:after {
+    .clearfix;
+  }
   ul {
     position: relative;
     li {
@@ -232,31 +243,38 @@ nav[role=pagination] {
 
 hgroup {
   .font-face;
-  padding-bottom: @space * 1.5 * 2/3;
-  max-width: @txt-width;
+  padding-bottom: @space * 1.35;
+  max-width: @txt_width;
   > * {
     font-weight: normal;
   }
+  h1 {
+    margin: 0 0 .1em;
+  }
   h2 {
     .helvetica;
-    padding-top: .4em;
+  }
+  & + .txt :first-child { // ie. hgroup + .txt h3:first-child
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
 article {
-  float: left;
   width: 100%;
-  padding-top: @space * 1.35;
-  img, video {
+  margin: 0 0 @space * 1.35;
+  &:after { 
+    .clearfix;
+  }
+  img, video, iframe {
     display: block;
-    margin: 35px 0;
+    margin: 0 0 40px;
     max-width: 100%;
   }
-  p {
-  }
   .txt {
-    clear: both;
-    max-width: @txt-width;
+    clear: both; // for sibling, following elements (ie. .browser class) with float: left;
+    overflow: hidden;
+    max-width: @txt_width;
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
             hyphens: auto;
@@ -264,21 +282,17 @@ article {
       border-bottom: 1px dotted fade(@txt, 30%); // set larger value for invert color
     }
     p {
-      margin: 1em 0;
+      margin: 0 0 1.1em;
       line-height: 1.6;
     }
     h3 {
       .helvetica;
-      padding: @space * 1.5 0 0;
-      &:first-child {
-        margin-top: -@space;
-      }
+      margin: @space * .75 0 1.6em;
     }
     ul, ol {
-      margin: 1em 0 1em 20px;
-      list-style: square;
+      margin: 0 0 1em 1em;
       li {
-        line-height: 1.8;
+        line-height: 1.6;
       }
     }
     blockquote {
@@ -312,7 +326,7 @@ article {
   }
   .browser {
     float: left;
-    margin: 20px 0 40px;
+    margin: 0 0 40px;
     padding-top: 16px;
     border-radius: 4px 4px 0 0;
     background: #e8e8e8;
@@ -323,8 +337,9 @@ article {
     }
   }
   .note, .download {
-    background-size: 40px 40px;
-    padding-left: 50px;
+    @icon: 40px;
+    background-size: @icon @icon;
+    padding-left: @icon * 1.25;
   }
   .download {
     background: url(download.svg) no-repeat 0 0;    
@@ -335,10 +350,9 @@ article {
   }
 }
 
-// workaround solution for post with chinese
 [lang=zh] .txt {
   p, li {
-    text-align: justify;
+    text-align: justify; // workaround solution for post with chinese
   }
 }
 
@@ -347,11 +361,10 @@ article {
 @thumb-padding: 14px;
 
 ul[role^=work-list] {
-  padding-top: 20px - @thumb-padding;
-  clear: both;
-  overflow: hidden;
-  margin-left: -@thumb-padding;
-  margin-right: -@thumb-padding;
+  margin: -@thumb-padding;
+  &:after { 
+     .clearfix;
+  }
   li {
     position: relative;
     list-style: none;
@@ -362,8 +375,7 @@ ul[role^=work-list] {
     img {
       width: @thumb-size;
       height: @thumb-size;
-      // override: article img
-      margin: 0;
+      margin: 0; // override: article img
       background: @link;
     }
     a {
@@ -385,73 +397,77 @@ ul[role^=work-list] {
       opacity: 1;
     }
   }
+  & ~ div.txt {
+    margin: @space * .5 0 0; // better margin between to work lists
+  }
 }
 
 // image navigation in post page 
 h3[role=work-list-title] {
   .helvetica;
-  padding: @space * 1.5 0 0;
-  float: left;
+  margin: 0 0 20px;
 }
 
 // post list in "note"
 div[role^=note-list] {
-  // make sure the last post next to footer has the correct margin value.
-  margin-top: -@space;
   section {
+    margin: 0 0 @space * 1.35;
+    overflow: hidden;
     h2 {
       .font-face;
-      margin: -3px 0 -12px;
-      max-width: @txt-width;
+      margin: 0 0 .2em;
+      max-width: @txt_width;
       font-weight: normal;
       time {
         color: fade(@txt, 30%);
       }
-      // an infinite symbol next to the post date
       time + a {
-        // need line-height: 0 to make vertical-align work
-        line-height: 0;
+        line-height: 0; // an infinite symbol next to the post date, need line-height: 0 to make vertical-align work
         vertical-align: 3px;
       }
     }
-    padding-top: @space * 1.5;
+  }
+  section:last-child {
+    margin-bottom: 0;
   }
 }
 
 aside {
-  padding: @space 0 0;
-  width: 200px;
-  clear: both;
-  // BuySellAds block
-  .bsap {
-    padding: 10px 0 @space;
-    .bsa_it_i {
-      display: block;
-    }
-    .bsa_it_t {
-      display: block;
-      margin: 1em 0;
-    }
-    .bsa_it_d {
-      display: block;
-      margin: 1em 0;
-      line-height: 1.7;
-    }
-    .bsa_it_p {
-      display: block;
-      font-size: 12px;
-      a {
-        color: fade(@txt, 40%);
-        &:hover {
-          color: #000;
-        }
-      }
-    }
-  }
+  margin: 0 0 @space * 1.35;
 }
 
+//aside[rolw=sponsor] {
+//  padding: @space 0 0;
+//  width: 200px;
+//  clear: both;
+//  .bsap {
+//    padding: 10px 0 @space;
+//    .bsa_it_i {
+//      display: block;
+//    }
+//    .bsa_it_t {
+//      display: block;
+//      margin: 1em 0;
+//    }
+//    .bsa_it_d {
+//      display: block;
+//      margin: 1em 0;
+//      line-height: 1.7;
+//    }
+//    .bsa_it_p {
+//      display: block;
+//      font-size: 12px;
+//      a {
+//        color: fade(@txt, 40%);
+//        &:hover {
+//          color: #000;
+//        }
+//      }
+//    }
+//  }
+//}
+
 footer {
-  padding: 15px 0;
   .helvetica;
   font-size: 11px;
 }
@@ -464,7 +480,7 @@ footer {
 }
 
 // all ios devices, the easy way
-@media (max-device-width: 480px), (max-device-width: 1024px) {  
+@media (max-width: 640px), (max-device-width: 480px), (max-device-width: 1024px) {  
   nav[role=navigation] {
     ul {
       position: static;
@@ -481,7 +497,7 @@ footer {
           pointer-events: auto;
         }
         &:first-child {
-          display: none;
+          display: none; // hide HOME link
         }
         a {
           display: block;
@@ -500,7 +516,7 @@ footer {
 }
 
 // iphone portrait
-@media (max-device-width: 480px) and (orientation: portrait) {
+@media (max-width: 640px), (max-device-width: 480px) and (orientation: portrait) {
   :root {
     padding: @space * 1.5 20px;
   }
@@ -522,6 +538,12 @@ footer {
       }
     }
   }
+  
+  nav[role=pagination] {
+    a {
+      top: 379px;
+    }
+  }
 
   ul[role^=work-list] {
     li {
@@ -529,8 +551,7 @@ footer {
       margin-bottom: @thumb-padding * 2;
       img {
         width: 100%;
-        // should be 100%, but Safari for iOS has stupid bug for it.
-        height: auto;
+        height: auto; // should be 100%, but Safari for iOS has stupid bug for it.
       }
       a {
         width: 100%;
