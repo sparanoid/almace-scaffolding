@@ -22,7 +22,7 @@ thumb: tianjin-project.jpg
 <iframe width="1280" height="720" src="http://www.youtube.com/embed/dk2Fg8WJ3-o?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <div class=txt>
-<p>Created using iBooks Author, for iPad only, check out the project page <a href="/lab/tianjin/">here</a>.</p> 
+<p>Created using iBooks Author, for iPad only, check out the project page <a href="/lab/tianjin/">here</a>.</p>
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
