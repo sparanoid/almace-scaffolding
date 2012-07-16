@@ -5,7 +5,7 @@ layout: default
 <article{% if page.lang %} lang={{ page.lang }}{% endif %}>
   <hgroup>
     <h1>{% if page.link %}<a href={{ page.link }}>{{ page.title }} &rarr;</a>{% else %}{{ page.title }}{% endif %}</h1>
-    {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %d, %Y" }}</time></h2>{% endif %}
+    {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %d, %Y" }}</time>, by {{ site.user }}</h2>{% endif %}
     {% if page.desc %}<h2>{{ page.desc }}</h2>{% endif %}
   </hgroup>
 
