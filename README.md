@@ -1,7 +1,7 @@
-lindsayisgod
-============
+t+y
+===
 
-[Jekyll][jk] runing on [sparanoid.com][sp], codename `lindsayisgod`, version 20.
+[Jekyll][jk] runing on [sparanoid.com][sp], codename `t+y`, version 20.
 
 License
 -------
