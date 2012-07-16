@@ -11,10 +11,10 @@ permalink: /feed/index.xml
   <link rel="self" type="application/atom+xml" href="http://{{ site.url }}{{ page.url }}" />
   <link rel="alternate" type="text/html" href="http://{{ site.url }}/" />
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.full-name }}</rights>
+  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.user }}</rights>
 
   <author>
-    <name>{{ site.full-name }}</name>
+    <name>{{ site.user }}</name>
     <email>{{ site.email }}</email>
   </author>
 
@@ -25,7 +25,7 @@ permalink: /feed/index.xml
     <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}http://{{ site.url }}{{ post.url }}/{% endif %}" />
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
-      <name>{{ site.full-name }}</name>
+      <name>{{ site.user }}</name>
       <uri>http://{{ site.url }}/</uri>
     </author>
     <content type="html" xml:base="http://{{ site.url }}/">
