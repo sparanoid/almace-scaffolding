@@ -31,7 +31,7 @@ permalink: /rss/
     <link>http://{{ site.url }}{{ post.url }}/</link>
     <comments>http://{{ site.url }}{{ post.url }}/#comments</comments>
     <pubDate>{{ post.date | date: "%A, %d %b %Y 00:00:00 +0000" }}</pubDate>
-    <dc:creator>{{ site.full-name }}</dc:creator>
+    <dc:creator>{{ site.user }}</dc:creator>
 
     <guid isPermaLink="false">http://{{ site.url }}{{ post.url }}/</guid>
     <description><![CDATA[{{ post.excerpt }}]]></description>
