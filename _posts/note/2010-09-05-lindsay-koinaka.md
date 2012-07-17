@@ -2,9 +2,8 @@
 layout: post
 title: lindsay-koinaka
 category: note
-lang: zh
 ---
 
 <div class=txt>
-<p>新主題差不多就是現在看到的樣子了，半成品。Webkit 應該有比較好的效果，新版的 Firefox 4 效果也不錯，IE 除了沒有圓角和動畫，也還看的過去，用了點 HTML 5 和 CSS 3 的東西。源碼已經放到了 <del datetime="2010-10-15T11:23:56+00:00">Google Code</del> <a href="http://github.com/sparanoid/lindsay-koinaka">GitHub 上</a>，不過畢竟是第一次嘗試寫，也不見得會有多好，難免也會有錯，歡迎去提交 ticket</p>
+<p>The new theme is out. <del>Just what you’re looking at,</del> it’s still work-in-progress, based on HTML5 and CSS 3. It looks great on a Webkit brwoser. New Firefox 4 should look fine too. IE 10 may also work except border-radius and animations. The source code can be accessed at <del datetime="2010-10-15T11:23:56+00:00">Google Code</del> <a href="http://github.com/sparanoid/lindsay-koinaka">GitHub</a>, however it’s the first time I’m trying things like this. bug reports, comments, suggestions, and ideas for improvements are welcome.</p>
 </div>
