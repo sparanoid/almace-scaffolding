@@ -66,9 +66,9 @@
   font-size: 28px;
   font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
   line-height: 1.7;
-  max-width: 1080px;
+  max-width: @thumb-size * 5 + @thumb-padding * 8; // defined at work-list
   margin: 0 auto;
-  padding: @space * 1.5 @space;
+  padding: @space * 1.5 @space * .8;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
 }
@@ -91,7 +91,7 @@ del {
 }
 
 ::selection {
-  background: fade(@txt, 5%);
+  background: fade(@txt, 6%);
 }
 
 // core styles begin
@@ -355,8 +355,8 @@ article {
 }
 
 // image list in "work"
-@thumb-size: 95px;
-@thumb-padding: 14px;
+@thumb-size: 190px;
+@thumb-padding: 15px;
 
 ul[role^=work-list] {
   margin: -@thumb-padding;
@@ -386,9 +386,9 @@ ul[role^=work-list] {
       .font-face;
       -webkit-font-smoothing: antialiased;
       color: #fff;
-      font-size: 18px;
-      line-height: 1.2;
+      font-size: 1.5em;
       opacity: 0;
+      overflow: hidden; // for text
       background: fade(@link, 90%);
     }
     &:hover a {
