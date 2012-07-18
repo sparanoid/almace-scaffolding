@@ -478,7 +478,7 @@ footer {
 }
 
 // all ios devices, the easy way
-@media (max-device-width: 480px), (max-device-width: 1024px) {
+@media (max-width: 640px), (max-device-width: 480px), (max-device-width: 1024px) {
   nav[role=navigation] {
     ul {
       position: static;
@@ -507,9 +507,24 @@ footer {
 }
 
 // iphone
-@media (max-device-width: 480px) {
+@media  (max-width: 640px),(max-device-width: 480px) {
   :root {
     -webkit-text-size-adjust: none;
+  }
+
+  ul[role^=work-list] {
+    li {
+      float: none; // make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
+      margin-bottom: @thumb-padding * 2;
+      img {
+        width: 100%;
+        height: auto; // should be 100%, but Safari for iOS has stupid bug for it.
+      }
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -540,22 +555,6 @@ footer {
   nav[role=pagination] {
     a {
       top: 379px;
-    }
-  }
-
-  ul[role^=work-list] {
-    li {
-      float: none;
-      margin-bottom: @thumb-padding * 2;
-      img {
-        width: 100%;
-        height: auto; // should be 100%, but Safari for iOS has stupid bug for it.
-      }
-      a {
-        width: 100%;
-        height: 100%;
-        font-size: 24px;
-      }
     }
   }
 }
