@@ -1,10 +1,11 @@
 ---
 layout: post
-title: PaintStop Chinese Simplified for ZBrush 3.1
+title: PaintStop Chinese Simplified for ZBrush
 category: work
 tag: design
-lang: zh
+excerpt: PaintStop plugin Chinese Simplified language version for ZBrush 3.1 and above
 thumb: paintstop.jpg
+lang: zh
 ---
 
 <div class=txt>
