@@ -15,4 +15,6 @@ thumb: qmr.png
 <p class=note>Version history available at: <a href="http://wordpress.org/extend/plugins/quotmarks-replacer/changelog/">wordpress.org</a></p>
 
 <p class=download><a href="http://wordpress.org/extend/plugins/quotmarks-replacer/">Download</a> @ WordPress Officail Plugin Directory</p>
+
+<p class=store>Love this plugin? please consider <a href="{{ site.donate }}">making a donation</a></p>
 </div>
