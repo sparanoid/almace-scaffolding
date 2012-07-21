@@ -3,6 +3,7 @@
 # Jekyll specified
 _site
 _build
+_assets
 *.css
 
 # Codekit specified
