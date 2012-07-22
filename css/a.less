@@ -451,36 +451,37 @@ aside {
   margin: 0 0 @space * 1.35;
 }
 
-//aside[rolw=sponsor] {
-//  padding: @space 0 0;
-//  width: 200px;
-//  clear: both;
-//  .bsap {
-//    padding: 10px 0 @space;
-//    .bsa_it_i {
-//      display: block;
-//    }
-//    .bsa_it_t {
-//      display: block;
-//      margin: 1em 0;
-//    }
-//    .bsa_it_d {
-//      display: block;
-//      margin: 1em 0;
-//      line-height: 1.7;
-//    }
-//    .bsa_it_p {
-//      display: block;
-//      font-size: 12px;
-//      a {
-//        color: fade(@txt, 40%);
-//        &:hover {
-//          color: #000;
-//        }
-//      }
-//    }
-//  }
-//}
+aside[role=sponsor] {
+  max-width: @txt_width;
+  clear: both;
+  .bsap {
+    .bsa_it_i { // image
+      float: left;
+      padding-right: 20px;
+    }
+    .bsa_it_t { // text
+      display: block;
+      font-size: .5em;
+      line-height: 1.6;
+    }
+    .bsa_it_d { // description
+      display: block;
+      font-size: .9em;
+      line-height: 1.6;
+    }
+    .bsa_it_p {
+      display: block;
+      margin-top: 5px;
+      .helvetica;
+      a {
+        color: fade(@txt, 40%);
+        &:hover {
+          color: @txt;
+        }
+      }
+    }
+  }
+}
 
 footer {
   .helvetica;
