@@ -313,6 +313,21 @@ article {
     }
     sup {
       line-height: 1;
+      font-size: .7em;
+    }
+    hr {
+      position: relative;
+      .helvetica;
+      margin: @space 0 2.4em;
+      border-bottom: 1px dotted fade(@txt, 10%);
+      &:before {
+        position: absolute;
+        top: -5px;
+        content: attr(data-placeholder);
+        background: @bg;
+        padding-right: 10px;
+        pointer-events: none;
+      }
     }
     abbr:after {
       content: " (" attr(title) ")";
@@ -352,10 +367,8 @@ article {
   }
 }
 
-[lang=zh] .txt {
-  p, li {
-    text-align: justify; // workaround solution for post with chinese
-  }
+[lang=zh] {
+  text-align: justify; // workaround solution for post with chinese
 }
 
 // image list in "work"
