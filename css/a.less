@@ -374,6 +374,7 @@ article {
 // image list in "work"
 @thumb-size: 190px;
 @thumb-padding: 15px;
+@thumb-font-size: 18px;
 
 ul[role^=work-list] {
   margin: -@thumb-padding;
@@ -387,29 +388,28 @@ ul[role^=work-list] {
     line-height: 0;
     text-align: left;
     margin: @thumb-padding;
+    a {
+      display: block;
+      width: @thumb-size;
+      height: @thumb-size + @thumb-font-size * 2 + @thumb-padding * 1.4 + 1px; // 1px to make the contianer safer
+      .font-face;
+      font-size: .6em;
+      overflow: hidden; // for text
+    }
+    &:hover a {
+      opacity: 1;
+    }
+    p {
+      margin: @thumb-padding * 1.4 0 0;
+    }
+    time {
+      color: fade(@txt, 30%);
+    }
     img {
       width: @thumb-size;
       height: @thumb-size;
       margin: 0; // override: article img
       background: @link;
-    }
-    a {
-      position: absolute;
-      top: -@thumb-padding;
-      left: -@thumb-padding;
-      padding: @thumb-padding;
-      width: @thumb-size;
-      height: @thumb-size;
-      .font-face;
-      -webkit-font-smoothing: antialiased;
-      color: #fff;
-      font-size: 1.5em;
-      opacity: 0;
-      overflow: hidden; // for text
-      background: fade(@link, 90%);
-    }
-    &:hover a {
-      opacity: 1;
     }
   }
   & ~ div.txt {
