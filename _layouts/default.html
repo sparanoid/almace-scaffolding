@@ -55,8 +55,13 @@
   <ul role=work-list>
   {% for post in site.tags.design %}
     <li>
-      <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
-      <a href={{ post.url }}/>{{ post.title }}</a>
+      <a href={{ post.url }}/>
+        <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
+        <p>
+          {{ post.title }}
+          <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
+        </p>
+      </a>
     </li>
   {% endfor %}
   </ul>
@@ -69,8 +74,13 @@
   <ul role=work-list>
   {% for post in site.tags.drawing %}
     <li>
-      <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
-      <a href={{ post.url }}/>{{ post.title }}</a>
+      <a href={{ post.url }}/>
+        <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
+        <p>
+          {{ post.title }}
+          <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
+        </p>
+      </a>
     </li>
   {% endfor %}
   </ul>
