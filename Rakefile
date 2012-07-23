@@ -23,6 +23,7 @@ task :minify do
   puts '>>> Minifying HTML'
   sh "java -jar _build/htmlcompressor.jar -r --type html --remove-intertag-spaces --remove-quotes --remove-http-protocol --remove-https-protocol --compress-js --compress-css -o _site _site"
   sh "java -jar _build/htmlcompressor.jar -r --type xml -o _site _site"
+  # sh "java -jar _build/yuicompressor.jar --type css _site/css/a.css -o _site/css/a.css"
   # a workaround for yuicompressor bug
   sh "perl -i -p -e 's/\n//' ./_site/css/a.css"
   puts '>>> Minified.'
