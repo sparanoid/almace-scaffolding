@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tianjin Project &times; The World Economic Forum
+title: Tianjin Project × The World Economic Forum
 category: work
 tag: design
 excerpt: A Detailed Introduction to Municipality of Tianjin featured on the World Economic Forum
