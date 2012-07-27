@@ -18,7 +18,7 @@ permalink: /feed/index.xml
     <email>{{ site.email }}</email>
   </author>
 
-  {% for post in site.posts limit:10 %}
+  {% for post in site.posts limit:15 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
     <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
@@ -30,7 +30,7 @@ permalink: /feed/index.xml
     </author>
     <content type="html" xml:base="http://{{ site.url }}/">
       {% if post.thumb %}
-        &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
+        &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot; style=&quot;max-width: 500px;&quot;&gt;
         &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
       {% elsif post.category == "note" %}
         {% if post.excerpt %}
