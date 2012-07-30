@@ -36,12 +36,25 @@
   letter-spacing: .25em;
 }
 
-.clearfix {
-   content: ".";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+// http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+
+.cf {
+  &:before,
+  &:after {
+    content: ""; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 .transition(@transition) {
@@ -95,19 +108,17 @@ del {
 }
 
 // core styles begin
-body:before, body:after {
+body:before {
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  content: '';
-  z-index: 9999;
-  pointer-events: none;
-}
-body:before {
-  top: 0;
   height: 12px;
+  content: "";
   background: fade(@txt, 5%);
   border-bottom: 1px solid fade(@txt, 2%);
+  z-index: 9999;
+  pointer-events: none;
 }
 
 @logo_width: 43px;
@@ -127,9 +138,7 @@ nav {
 
 nav[role=navigation] {
   margin: 0 0 @space * 1.35 @logo_width + 4px;
-  &:after {
-    .clearfix;
-  }
+  .cf;
   ul {
     position: relative;
     li {
@@ -261,9 +270,8 @@ hgroup {
 article {
   width: 100%;
   margin: 0 0 @space * 1.35;
-  &:after {
-    .clearfix;
-  }
+  // for some specified posts in work category
+  .cf;
   img, video, iframe {
     display: block;
     margin: 0 0 40px;
@@ -301,7 +309,7 @@ article {
         position: absolute;
         top: -16px;
         left: -8px;
-        content: '\201c';
+        content: "\201c";
         font-size: 120px;
         line-height: 1;
         color: fade(@txt, 70%);
@@ -378,9 +386,7 @@ article {
 
 ul[role^=work-list] {
   margin: -@thumb-padding;
-  &:after {
-     .clearfix;
-  }
+  .cf;
   li {
     position: relative;
     list-style: none;
