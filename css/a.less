@@ -6,10 +6,11 @@
 
 // global variables
 @space: 70px;
-@txt_width: 750px;
-@link: #e34; // #2ed for invert color
-@bg: #fff;
-@txt: #000;
+@wrapperWidth: 750px;
+@lineHeight: 1.7;
+@linkColor: #e34; // #2ed for invert color
+@bgColor: #fff;
+@textColor: #000;
 
 // invert color switcher for images and videos
 // :root { -webkit-filter: invert(100%); }
@@ -28,7 +29,7 @@
 }
 
 .helvetica {
-  color: fade(@txt, 40%);
+  color: fade(@textColor, 40%);
   font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
   font-size: 12px;
   font-weight: normal;
@@ -70,11 +71,11 @@
 }
 
 :root {
-  color: @txt;
-  background: @bg;
+  color: @textColor;
+  background: @bgColor;
   font-size: 24px;
   font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
-  line-height: 1.7;
+  line-height: @lineHeight;
   max-width: @thumb-size * 5 + @thumb-padding * 8; // defined at work-list
   margin: 0 auto;
   padding: @space * 1.5 @space * .8;
@@ -83,16 +84,16 @@
 }
 
 a {
-  color: @txt;
+  color: @textColor;
   .transition(~"color .5s ease, background .5s ease, opacity 1.5s ease");
 }
   a:hover {
-    color: @link;
+    color: @linkColor;
     .transition(~"color .1s ease, background .1s ease, opacity .1s ease");
   }
 
 ins {
-  color: fade(@txt, 40%);
+  color: fade(@textColor, 40%);
 }
 
 del {
@@ -100,7 +101,7 @@ del {
 }
 
 ::selection {
-  background: fade(@txt, 6%);
+  background: fade(@textColor, 6%);
 }
 
 // core styles begin
@@ -111,8 +112,8 @@ body:before {
   width: 100%;
   height: 12px;
   content: "";
-  background: fade(@txt, 5%);
-  border-bottom: 1px solid fade(@txt, 2%);
+  background: fade(@textColor, 5%);
+  border-bottom: 1px solid fade(@textColor, 2%);
   z-index: 9999;
   pointer-events: none;
 }
@@ -198,7 +199,7 @@ nav[role=pagination] {
     padding: 7px 10px;
     font-size: 10px;
     letter-spacing: .2em;
-    background: fade(@txt, 5%);
+    background: fade(@textColor, 5%);
     z-index: 9999;
     .transition(~"padding .1s ease");
     [role=tooltip] {
@@ -208,7 +209,7 @@ nav[role=pagination] {
       opacity: 0;
       padding: 7px 10px;
       color: #fff;
-      background: fade(@link, 95%);
+      background: fade(@linkColor, 95%);
       pointer-events: none;
       .transition(~"opacity .1s ease, padding .1s ease");
     }
@@ -247,7 +248,7 @@ nav[role=pagination] {
 hgroup {
   .font-face;
   padding-bottom: @space * 1.35;
-  max-width: @txt_width;
+  max-width: @wrapperWidth;
   > * {
     font-weight: normal;
   }
@@ -276,16 +277,16 @@ article {
   .txt {
     clear: both; // for sibling, following elements (ie. .browser class) with float: left;
     overflow: hidden;
-    max-width: @txt_width;
+    max-width: @wrapperWidth;
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
             hyphens: auto;
     a {
-      border-bottom: 1px dotted fade(@txt, 30%); // set larger value for invert color
+      border-bottom: 1px dotted fade(@textColor, 30%); // set larger value for invert color
     }
     p {
       margin: 0 0 1.1em;
-      line-height: 1.6;
+      line-height: @lineHeight;
     }
     h3 {
       .helvetica;
@@ -294,7 +295,7 @@ article {
     ul, ol {
       margin: 0 0 1em 1em;
       li {
-        line-height: 1.6;
+        line-height: @lineHeight;
       }
     }
     blockquote {
@@ -307,8 +308,7 @@ article {
         left: -8px;
         content: "\201c";
         font-size: 120px;
-        line-height: 1;
-        color: fade(@txt, 70%);
+        color: fade(@textColor, 70%);
         font-family: 'Helvetica Neue', sans-serif;
         font-style: normal;
         z-index: -1;
@@ -316,19 +316,18 @@ article {
       }
     }
     sup {
-      line-height: 1;
-      font-size: .7em;
+      font-size: 75%;
     }
     hr {
       position: relative;
       .helvetica;
       margin: @space 0 2.4em;
-      border-bottom: 1px dotted fade(@txt, 10%);
+      border-bottom: 1px dotted fade(@textColor, 10%);
       &:before {
         position: absolute;
         top: -5px;
         content: attr(data-placeholder);
-        background: @bg;
+        background: @bgColor;
         padding-right: 10px;
         pointer-events: none;
       }
@@ -387,8 +386,6 @@ ul[role^=work-list] {
     position: relative;
     list-style: none;
     float: left;
-    line-height: 0;
-    text-align: left;
     margin: @thumb-padding;
     a {
       display: block;
@@ -405,13 +402,13 @@ ul[role^=work-list] {
       margin: @thumb-padding * 1.4 0 0;
     }
     time {
-      color: fade(@txt, 30%);
+      color: fade(@textColor, 30%);
     }
     img {
       width: @thumb-size;
       height: @thumb-size;
       margin: 0; // override: article img
-      background: @link;
+      background: @linkColor;
     }
   }
   & ~ div.txt {
@@ -433,10 +430,10 @@ div[role^=note-list] {
     h2 {
       .font-face;
       margin: 0 0 .3em;
-      max-width: @txt_width;
+      max-width: @wrapperWidth;
       font-weight: normal;
       time {
-        color: fade(@txt, 30%);
+        color: fade(@textColor, 30%);
       }
       time + a {
         line-height: 0; // an infinite symbol next to the post date, need line-height: 0 to make vertical-align work
@@ -454,7 +451,7 @@ aside {
 }
 
 aside[role=sponsor] {
-  max-width: @txt_width;
+  max-width: @wrapperWidth;
   clear: both;
   .bsap {
     .bsa_it_i { // image
@@ -464,21 +461,21 @@ aside[role=sponsor] {
     .bsa_it_t { // text
       display: block;
       font-size: .5em;
-      line-height: 1.6;
+      line-height: @lineHeight;
     }
     .bsa_it_d { // description
       display: block;
       font-size: .9em;
-      line-height: 1.6;
+      line-height: @lineHeight;
     }
     .bsa_it_p {
       display: block;
       margin-top: 5px;
       .helvetica;
       a {
-        color: fade(@txt, 40%);
+        color: fade(@textColor, 40%);
         &:hover {
-          color: @txt;
+          color: @textColor;
         }
       }
     }
@@ -507,7 +504,7 @@ footer {
         position: static;
         &[role=current] {
           a {
-            color: @link;
+            color: @linkColor;
           }
         }
         &:not([role=current]) {
