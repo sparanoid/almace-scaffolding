@@ -6,6 +6,12 @@
 <link rel=stylesheet href=/{{ site.css }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
+{% if page.title == 'Error' %}
+<style>
+  :root { -webkit-filter: invert(100%); }
+</style>
+{% endif %}
+
 {% if page.excerpt %}
 <meta name=description content="{{ page.excerpt }}">
 {% endif %}
