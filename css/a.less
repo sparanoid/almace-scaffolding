@@ -7,9 +7,10 @@
 // global variables
 @space: 70px;
 @wrapperWidth: 750px;
-@lineHeight: 1.7;
+@baseFontSize: 24px;
+@baseLineHeight: 1.7;
 @linkColor: #e34; // #2ed for invert color
-@bgColor: #fff;
+@backgroundColor: #fff;
 @textColor: #000;
 
 // invert color switcher for images and videos
@@ -25,13 +26,13 @@
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: -.02em;
-  font-size: 56px;
+  font-size: @baseFontSize * 7/3;
 }
 
 .helvetica {
   color: fade(@textColor, 40%);
   font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
-  font-size: 12px;
+  font-size: @baseFontSize / 2;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .25em;
@@ -72,11 +73,11 @@
 
 :root {
   color: @textColor;
-  background: @bgColor;
-  font-size: 24px;
+  background: @backgroundColor;
+  font-size: @baseFontSize;
   font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
-  line-height: @lineHeight;
-  max-width: @thumb-size * 5 + @thumb-padding * 8; // defined at work-list
+  line-height: @baseLineHeight;
+  max-width: @thumbSize * 5 + @thumbPadding * 8; // defined at work-list
   margin: 0 auto;
   padding: @space * 1.5 @space * .8;
   text-rendering: optimizelegibility;
@@ -118,14 +119,14 @@ body:before {
   pointer-events: none;
 }
 
-@logo_width: 43px;
+@logoWidth: 43px;
 a[role=logo] {
   float: left;
   display: block;
   width: 37px;
-  height: @logo_width;
+  height: @logoWidth;
   background: url("data:image/svg+xml,<svg id='logo' width='37px' height='43px' xmlns='http://www.w3.org/2000/svg' version='1.1'><path d='M18.5,0.171L0.021,10.839v21.337L18.5,42.845l18.479-10.669V10.839L18.5,0.171z M27.043,26.377l-8.542,4.867L9.96,26.377 v-9.734l8.541-4.866l8.542,4.866V26.377z'/></svg>") no-repeat 0 0;
-  background-size: auto @logo_width;
+  background-size: auto @logoWidth;
   text-indent: -9999em;
 }
 
@@ -134,7 +135,7 @@ nav {
 }
 
 nav[role=navigation] {
-  margin: 0 0 @space * 1.35 @logo_width + 4px;
+  margin: 0 0 @space * 1.35 @logoWidth + 4px;
   .cf;
   ul {
     position: relative;
@@ -154,26 +155,26 @@ nav[role=navigation] {
         -webkit-font-smoothing: antialiased;
       }
     }
-    @base: 15px;
+    @baseNavPosition: 15px;
     @rate: 20px;
     &.nav-home {
-      top: @base;
+      top: @baseNavPosition;
       li { top: 0px; }
     }
     &.nav-work {
-      top: @base - @rate * 1;
+      top: @baseNavPosition - @rate * 1;
       li { top: @rate * 1; }
     }
     &.nav-store {
-      top: @base - @rate * 2;
+      top: @baseNavPosition - @rate * 2;
       li { top: @rate * 2; }
     }
     &.nav-note {
-      top: @base - @rate * 3;
+      top: @baseNavPosition - @rate * 3;
       li { top: @rate * 3; }
     }
     &.nav-about {
-      top: @base - @rate * 4;
+      top: @baseNavPosition - @rate * 4;
       li { top: @rate * 4; }
     }
     &:hover {
@@ -197,7 +198,7 @@ nav[role=pagination] {
     top: 246px;
     display: block;
     padding: 7px 10px;
-    font-size: 10px;
+    font-size: @baseFontSize / 2 - 2px;
     letter-spacing: .2em;
     background: fade(@textColor, 5%);
     z-index: 9999;
@@ -286,7 +287,7 @@ article {
     }
     p {
       margin: 0 0 1.1em;
-      line-height: @lineHeight;
+      line-height: @baseLineHeight;
     }
     h3 {
       .helvetica;
@@ -295,7 +296,7 @@ article {
     ul, ol {
       margin: 0 0 1em 1em;
       li {
-        line-height: @lineHeight;
+        line-height: @baseLineHeight;
       }
     }
     blockquote {
@@ -327,7 +328,7 @@ article {
         position: absolute;
         top: -5px;
         content: attr(data-placeholder);
-        background: @bgColor;
+        background: @backgroundColor;
         padding-right: 10px;
         pointer-events: none;
       }
@@ -353,11 +354,11 @@ article {
     }
   }
   .note, .store, .download {
-    @icon: 40px;
+    @iconSize: 40px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: @icon @icon;
-    padding-left: @icon * 1.25;
+    background-size: @iconSize @iconSize;
+    padding-left: @iconSize * 1.25;
   }
   .note {
     background-image: url("data:image/svg+xml,<svg id='note' width='40px' height='40px' xmlns='http://www.w3.org/2000/svg' version='1.1'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>");
@@ -375,38 +376,38 @@ article {
 }
 
 // image list in "work"
-@thumb-size: 190px;
-@thumb-padding: 15px;
-@thumb-font-size: 18px;
+@thumbSize: 190px;
+@thumbPadding: 15px;
+@thumbFontSize: @baseFontSize * .7;
 
 ul[role^=work-list] {
-  margin: -@thumb-padding;
+  margin: -@thumbPadding;
   .cf;
   li {
     position: relative;
     list-style: none;
     float: left;
-    margin: @thumb-padding;
+    margin: @thumbPadding;
     a {
       display: block;
-      width: @thumb-size;
-      height: @thumb-size + @thumb-font-size * 2 + @thumb-padding * 1.4 + 1px; // 1px to make the contianer safer
+      width: @thumbSize;
+      height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
       .font-face;
-      font-size: 17px;
+      font-size: @thumbFontSize;
       overflow: hidden; // for text
     }
     &:hover a {
       opacity: 1;
     }
     p {
-      margin: @thumb-padding * 1.4 0 0;
+      margin: @thumbPadding * 1.4 0 0;
     }
     time {
       color: fade(@textColor, 30%);
     }
     img {
-      width: @thumb-size;
-      height: @thumb-size;
+      width: @thumbSize;
+      height: @thumbSize;
       margin: 0; // override: article img
       background: @linkColor;
     }
@@ -461,12 +462,12 @@ aside[role=sponsor] {
     .bsa_it_t { // text
       display: block;
       font-size: .5em;
-      line-height: @lineHeight;
+      line-height: @baseLineHeight;
     }
     .bsa_it_d { // description
       display: block;
       font-size: .9em;
-      line-height: @lineHeight;
+      line-height: @baseLineHeight;
     }
     .bsa_it_p {
       display: block;
@@ -482,9 +483,23 @@ aside[role=sponsor] {
   }
 }
 
+.tweet {
+  .helvetica;
+  display: block;
+  float: left;
+  color: @backgroundColor;
+  background: @textColor;
+  font-size: @baseFontSize / 2 - 2px;
+  padding: 7px 10px;
+  &:hover {
+    color: @backgroundColor;
+    background: @linkColor;
+  }
+}
+
 footer {
   .helvetica;
-  font-size: 11px;
+  font-size: @baseFontSize / 2 - 1px;
 }
 
 // small screen
@@ -532,7 +547,7 @@ footer {
   ul[role^=work-list] {
     li {
       float: none; // make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
-      margin-bottom: @thumb-padding * 2;
+      margin-bottom: @thumbPadding * 2;
       img {
         width: 100%;
         height: auto; // should be 100%, but Safari for iOS has stupid bug for it.
