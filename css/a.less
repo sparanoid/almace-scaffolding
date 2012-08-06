@@ -79,7 +79,7 @@
   line-height: @baseLineHeight;
   max-width: @thumbSize * 5 + @thumbPadding * 8; // defined at work-list
   margin: 0 auto;
-  padding: @space * 1.5 @space * .8;
+  padding: @space * 1.5 @space * 1.2;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
 }
@@ -107,13 +107,13 @@ del {
 
 // core styles begin
 body:before {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 12px;
+  height: 15px;
   content: "";
-  background: fade(@textColor, 5%);
+  background: fade(@textColor, 2%);
   border-bottom: 1px solid fade(@textColor, 2%);
   z-index: 9999;
   pointer-events: none;
@@ -511,6 +511,10 @@ footer {
 
 // all ios devices, the easy way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
+  :root {
+    -webkit-text-size-adjust: none;
+  }
+
   nav[role=navigation] {
     ul {
       position: static;
@@ -538,10 +542,18 @@ footer {
   }
 }
 
+// ipad portrait {
+@media (max-device-width: 1024px) and (orientation: portrait) {
+  :root {
+    -webkit-text-size-adjust: none;
+    padding: @space * 1.5 69px;
+  }
+}
+
 // iphone
 @media (max-device-width: 480px) {
   :root {
-    -webkit-text-size-adjust: none;
+    padding: @space * 1.5 40px;
   }
 
   ul[role^=work-list] {
@@ -562,10 +574,6 @@ footer {
 
 // iphone portrait
 @media (max-device-width: 480px) and (orientation: portrait) {
-  :root {
-    padding: @space * 1.5 20px;
-  }
-
   a[role=logo] {
     float: none;
   }
