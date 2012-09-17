@@ -30,7 +30,7 @@
 }
 
 .helvetica {
-  color: fade(@textColor, 50%);
+  color: fade(@textColor, 40%);
   font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
   font-size: @baseFontSize / 2;
   font-weight: normal;
@@ -77,9 +77,9 @@
   font-size: @baseFontSize;
   font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
   line-height: @baseLineHeight;
-  max-width: @thumbSize * 5 + @thumbPadding * 8; // variables are defined at work-list
+  max-width: @thumbSize * 5 + @thumbPadding * 8; // defined at work-list
   margin: 0 auto;
-  padding: @space * 1.8 @space * 2.5;
+  padding: @space * 1.5 @space * 1.2;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
 }
@@ -195,7 +195,7 @@ nav[role=navigation] {
 nav[role=pagination] {
   a {
     position: absolute;
-    top: 267px;
+    top: 246px;
     display: block;
     padding: 7px 10px;
     font-size: @baseFontSize / 2 - 2px;
@@ -289,16 +289,9 @@ article {
       margin: 0 0 1.1em;
       line-height: @baseLineHeight;
     }
-    h3, h4 {
+    h3 {
       .helvetica;
       margin: @space 0 1.6em;
-    }
-    h3 + h4 {
-      margin: -1em 0 1.6em;
-    }
-    h4 {
-      font-size: 10px;
-      color: fade(@textColor, 25%);
     }
     ul, ol {
       margin: 0 0 1em 1em;
@@ -383,7 +376,7 @@ article {
 }
 
 // image list in "work"
-@thumbSize: 160px;
+@thumbSize: 190px;
 @thumbPadding: 15px;
 @thumbFontSize: @baseFontSize * .7;
 
@@ -510,27 +503,16 @@ footer {
 }
 
 // small screen
-@media (max-width: 1080px) {
-  :root {
-    padding: @space * 1.8 @space * 1.8;
-  }
-}
-
-// smaller screen
 @media (max-width: 640px) {
-  :root {
-    padding: @space * 1.8 @space * .8;
-  }
   article .txt {
     font-size: 80%;
   }
 }
 
-// all ios devices, the easy way
+// all ios devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
   :root {
     -webkit-text-size-adjust: none;
-    padding: @space * 1.5 @space * 1.2;
   }
 
   nav[role=navigation] {
@@ -560,7 +542,7 @@ footer {
   }
 }
 
-// ipad portrait {
+// ipad, iphone portrait {
 @media (max-device-width: 1024px) and (orientation: portrait) {
   :root {
     -webkit-text-size-adjust: none;
