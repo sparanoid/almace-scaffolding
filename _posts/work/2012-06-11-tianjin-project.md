@@ -21,8 +21,7 @@ thumb: tianjin-project.jpg
 <p><img src="{{ site.file }}/tianjin-project-preview-03.jpg" alt="Tianjin Project Book Preview #3"></p>
 <p><img src="{{ site.file }}/tianjin-project-preview-04.jpg" alt="Tianjin Project Book Preview #4"></p>
 <p><img src="{{ site.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5"></p>
-<p><img src="{{ site.file }}/tianjin-project-preview-06.jpg" alt="Tianjin Project Book Preview #6"></p>
-<p><img src="{{ site.file }}/tianjin-project-preview-07.jpg" alt="Tianjin Project Book Preview #7"></p>
+<p><img src="{{ site.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6"></p>
 
 <div class=txt>
   <h3>Website Design</h3>

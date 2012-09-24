@@ -16,6 +16,4 @@ thumb: tianjin-project-wef.jpg
 <div class=txt>
   <h3>Book Preview</h3>
 </div>
-<p><img src="{{ site.file }}/tianjin-project-wef-preview-01.jpg" alt="Tianjin Project &times; World Economic Forum Book Preview #1"></p>
-<p><img src="{{ site.file }}/tianjin-project-wef-preview-02.jpg" alt="Tianjin Project &times; World Economic Forum Book Preview #2"></p>
-<p><img src="{{ site.file }}/tianjin-project-wef-preview-03.jpg" alt="Tianjin Project &times; World Economic Forum Book Preview #3"></p>
+<p><img src="{{ site.file }}/tianjin-project-wef-preview-merged.jpg" alt="Tianjin Project &times; World Economic Forum Book Preview"></p>
