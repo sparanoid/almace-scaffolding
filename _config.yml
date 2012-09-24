@@ -13,7 +13,8 @@ exclude:      LICENSE, Rakefile, README.md
 # custom settings
 domain:       sparanoid.com
 url:          http://sparanoid.com
-file:         http://rsrc.sparanoid.com
+# file:         http://rsrc.sparanoid.com
+file:         http://d349cztnlupsuf.cloudfront.net
 css:          css
 feed:         feed/
 name:         Sparanoid
