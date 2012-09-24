@@ -36,6 +36,7 @@
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .25em;
+  line-height: @baseLineHeight;
 }
 
 // http://nicolasgallagher.com/micro-clearfix-hack/
@@ -84,14 +85,14 @@
   image-rendering: optimizequality;
 }
 
-a {
+a, button {
   color: @textColor;
   .transition(~"color .5s ease, background .5s ease, opacity 1.5s ease");
-}
-  a:hover {
+  &:hover {
     color: @linkColor;
     .transition(~"color .1s ease, background .1s ease, opacity .1s ease");
   }
+}
 
 ins {
   color: fade(@textColor, 40%);
@@ -340,6 +341,26 @@ article {
       font-family: Menlo, monospace;
       color: #68a;
     }
+    form {
+      label {
+        .helvetica;
+        display: block;
+        margin-bottom: 20px;
+      }
+      input {
+        .helvetica;
+        display: block;
+        border: 1px solid fade(@textColor, 20%);
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 80%;
+        height: 15px;
+        outline: none;
+        &:focus {
+          border-color: @textColor;
+        }
+      }
+    }
   }
   .browser {
     float: left;
@@ -491,7 +512,9 @@ aside[role=sponsor] {
   background: @textColor;
   font-size: @baseFontSize / 2 - 2px;
   padding: 7px 10px;
-  &:hover {
+  cursor: pointer;
+  outline: none;
+  &:hover, &:focus {
     color: @backgroundColor;
     background: @linkColor;
   }
