@@ -34,6 +34,7 @@
   font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
   font-size: @baseFontSize / 2;
   font-weight: normal;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: .25em;
   line-height: @baseLineHeight * .9;
@@ -81,6 +82,7 @@
   max-width: @thumbSize * 5 + @thumbPadding * 8; // defined at work-list
   margin: 0 auto;
   padding: @space * 1.5 @space * 1.2;
+  text-align: center;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
 }
@@ -122,10 +124,10 @@ body:before {
 
 @logoWidth: 43px;
 a[role=logo] {
-  float: left;
   display: block;
   width: 37px;
   height: @logoWidth;
+  margin: 0 auto @space / 5;
   background: url("data:image/svg+xml,<svg id='logo' width='37px' height='43px' xmlns='http://www.w3.org/2000/svg' version='1.1'><path d='M18.5,0.171L0.021,10.839v21.337L18.5,42.845l18.479-10.669V10.839L18.5,0.171z M27.043,26.377l-8.542,4.867L9.96,26.377 v-9.734l8.541-4.866l8.542,4.866V26.377z'/></svg>") no-repeat 0 0;
   background-size: auto @logoWidth;
   text-indent: -9999em;
@@ -136,58 +138,20 @@ nav {
 }
 
 nav[role=navigation] {
-  margin: 0 0 @space * 1.35 @logoWidth + 4px;
+  margin: 0 0 @space * 1.5;
   .cf;
   ul {
-    position: relative;
     li {
-      position: absolute;
+      display: inline-block;
       list-style: none;
-      &[role=current] {
-        z-index: 9999;
-      }
-      &:not([role=current]) {
-        opacity: 0;
-        pointer-events: none;
-      }
       a {
         padding: 3px .8em;
         font-weight: bold;
-        -webkit-font-smoothing: antialiased;
       }
-    }
-    @baseNavPosition: 15px;
-    @rate: 20px;
-    &.nav-home {
-      top: @baseNavPosition;
-      li { top: 0px; }
-    }
-    &.nav-work {
-      top: @baseNavPosition - @rate * 1;
-      li { top: @rate * 1; }
-    }
-    &.nav-store {
-      top: @baseNavPosition - @rate * 2;
-      li { top: @rate * 2; }
-    }
-    &.nav-note {
-      top: @baseNavPosition - @rate * 3;
-      li { top: @rate * 3; }
-    }
-    &.nav-about {
-      top: @baseNavPosition - @rate * 4;
-      li { top: @rate * 4; }
-    }
-    &:hover {
-      li {
-        .transition(~"top .25s ease-out, opacity .3s ease-out .15s");
-        opacity: 1;
-        pointer-events: auto;
-        &:nth-of-type(1) { top: 0; }
-        &:nth-of-type(2) { top: 20px; }
-        &:nth-of-type(3) { top: 40px; }
-        &:nth-of-type(4) { top: 60px; }
-        &:nth-of-type(5) { top: 80px; }
+      &[role=current] {
+        a {
+          color: @linkColor;
+        }
       }
     }
   }
@@ -196,7 +160,7 @@ nav[role=navigation] {
 nav[role=pagination] {
   a {
     position: absolute;
-    top: 246px;
+    top: 282px;
     display: block;
     padding: 7px 10px;
     font-size: @baseFontSize / 2 - 2px;
@@ -250,7 +214,6 @@ nav[role=pagination] {
 hgroup {
   .font-face;
   padding-bottom: @space * 1.35;
-  max-width: @wrapperWidth;
   > * {
     font-weight: normal;
   }
@@ -260,26 +223,52 @@ hgroup {
   h2 {
     .helvetica;
   }
+  .status {
+    a {
+      &:hover {
+        color: fade(green, 80%);
+      }
+    }
+    & > *:first-child:before {
+      @s: 9px;
+      display: inline-block;
+      content: '';
+      width: @s;
+      height: @s;
+      border-radius: 50%;
+      background: fade(@textColor, 20%);
+      margin-right: @s;
+    }
+    &.available > *:first-child:before {
+      background: fade(green, 60%);
+    }
+    &.unavailable > *:first-child:before {
+      background: fade(red, 20%);
+    }
+  }
   & + .txt :first-child { // ie. hgroup + .txt h3:first-child
     margin-top: 0;
     padding-top: 0;
   }
 }
 
+article:not(.width-fix) {
+  max-width: @wrapperWidth; // width fix for work-list in posts
+}
+
 article {
-  width: 100%;
-  margin: 0 0 @space * 1.35;
+  margin: 0 auto @space * 1.35;
   // for some specified posts in work category
   .cf;
   img, video, iframe {
     display: block;
-    margin: 0 0 40px;
+    margin: 0 auto 40px;
     max-width: 100%;
   }
   .txt {
     clear: both; // for sibling, following elements (ie. .browser class) with float: left;
     overflow: hidden;
-    max-width: @wrapperWidth;
+    text-align: left;
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
             hyphens: auto;
@@ -321,17 +310,10 @@ article {
       font-size: 75%;
     }
     hr {
-      position: relative;
       .helvetica;
-      margin: @space 0 2.4em;
-      border-bottom: 1px dotted fade(@textColor, 10%);
+      margin: @space 0 1.6em;
       &:before {
-        position: absolute;
-        top: -6px;
         content: attr(data-placeholder);
-        background: @backgroundColor;
-        padding-right: 10px;
-        pointer-events: none;
       }
     }
     abbr:after {
@@ -345,20 +327,26 @@ article {
       label {
         .helvetica;
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: @space * .3;
       }
       input {
         .helvetica;
         display: block;
         border: 1px solid fade(@textColor, 20%);
-        padding: 10px;
-        margin-bottom: 20px;
-        width: 80%;
-        height: 15px;
+        padding: 7px;
+        margin: 0 auto @space * .3;
+        width: 100%;
         outline: none;
+        box-sizing: border-box;
+        border-radius: 0; // remove border-radius for ios devices
+        -webkit-appearance: none; // remove ios pre-defined style
         &:focus {
           border-color: @textColor;
         }
+      }
+      button.btn {
+        display: block;
+        margin: 0 auto;
       }
     }
   }
@@ -403,6 +391,7 @@ article {
 
 ul[role^=work-list] {
   margin: -@thumbPadding;
+  text-align: left;
   .cf;
   li {
     position: relative;
@@ -452,7 +441,6 @@ div[role^=note-list] {
     h2 {
       .font-face;
       margin: 0 0 .3em;
-      max-width: @wrapperWidth;
       font-weight: normal;
       time {
         color: fade(@textColor, 30%);
@@ -506,8 +494,7 @@ aside[role=sponsor] {
 
 .btn {
   .helvetica;
-  display: block;
-  float: left;
+  display: inline-block;
   color: @backgroundColor;
   background: @textColor;
   font-size: @baseFontSize / 2 - 2px;
@@ -525,6 +512,20 @@ footer {
   font-size: @baseFontSize / 2 - 1px;
 }
 
+// 4 thumbnails in a row
+@media (max-width: 1238px) {
+  :root {
+    max-width: @thumbSize * 4 + @thumbPadding * 6; // defined at work-list
+  }
+}
+
+// 3 thumbnails in a row
+@media (max-width: 1018px) {
+  :root {
+    max-width: @thumbSize * 3 + @thumbPadding * 4; // defined at work-list
+  }
+}
+
 // small screen
 @media (max-width: 640px) {
   article .txt {
@@ -536,32 +537,6 @@ footer {
 @media (max-device-width: 480px), (max-device-width: 1024px) {
   :root {
     -webkit-text-size-adjust: none;
-  }
-
-  nav[role=navigation] {
-    ul {
-      position: static;
-      li {
-        float: left;
-        position: static;
-        &[role=current] {
-          a {
-            color: @linkColor;
-          }
-        }
-        &:not([role=current]) {
-          opacity: 1;
-          pointer-events: auto;
-        }
-        &:first-child {
-          display: none; // hide HOME link
-        }
-        a {
-          display: block;
-          padding: 15px .6em;
-        }
-      }
-    }
   }
 }
 
@@ -576,7 +551,7 @@ footer {
 // iphone
 @media (max-device-width: 480px) {
   :root {
-    padding: @space * 1.5 40px;
+    padding: @space * 1.5 30px;
   }
 
   ul[role^=work-list] {
@@ -597,27 +572,18 @@ footer {
 
 // iphone portrait
 @media (max-device-width: 480px) and (orientation: portrait) {
-  a[role=logo] {
-    float: none;
+  :root {
+    padding: @space * 1.5 15px;
   }
 
   nav[role=navigation] {
-    float: none;
-    margin-left: 0;
-    margin-top: 10px;
     ul {
       li {
-        float: none;
         a {
-          padding: 10px 0;
+          padding-left: .4em; // use -left and -right to avoid overriding -top and -bottom values previously defined above.
+          padding-right: .4em;
         }
       }
-    }
-  }
-
-  nav[role=pagination] {
-    a {
-      top: 379px;
     }
   }
 }

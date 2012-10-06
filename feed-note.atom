@@ -1,0 +1,36 @@
+---
+permalink: /feed/note/index.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.slogan }}</subtitle>
+  <id>tag:{{ site.url }},2005:/</id>
+  <link rel="self" type="application/atom+xml" href="{{ site.url }}{{ page.url }}" />
+  <link rel="alternate" type="text/html" href="{{ site.url }}/" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.user }}</rights>
+
+  <author>
+    <name>{{ site.user }}</name>
+    <email>{{ site.email }}</email>
+  </author>
+
+  {% for post in site.categories.note limit:50 %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+    <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site.url }}{{ post.url }}/{% endif %}" />
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>{{ site.user }}</name>
+      <uri>{{ site.url }}/</uri>
+    </author>
+    <content type="html" xml:base="{{ site.url }}/">
+      {{ post.content | xml_escape }}
+    </content>
+  </entry>
+  {% endfor %}
+</feed>

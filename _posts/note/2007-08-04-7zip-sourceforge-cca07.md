@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SourceForge.net CCA 2007 Winner - 7-Zip
+title: SF.net CCA 2007 Winner
 category: note
 link: http://sourceforge.net/blog/cca07/
 ---
