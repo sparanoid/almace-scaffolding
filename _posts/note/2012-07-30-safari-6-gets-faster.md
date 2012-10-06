@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Safari 6 Loads Page Faster
+title: Safari 6 Gets Faster
 category: note
 ---
 
