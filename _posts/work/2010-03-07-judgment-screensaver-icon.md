@@ -9,11 +9,9 @@ bg: '#eafbf1'
 ---
 
 <div class=txt>
-<p lang="zh">學園都市風紀委員 177 支部＆警備員 スクリーンセーバー＆アイコン from「とある科學の超電磁砲」</p>
-
-<hr data-placeholder="English">
-
 <p>Antiskill <i>&amp;</i> Judgment Section 177 screensaver and icons, auto-scale screensaver tested up to 2560 &times; 1600.</p>
+
+<p lang="zh">學園都市風紀委員 177 支部＆警備員 スクリーンセーバー＆アイコン from「とある科學の超電磁砲」</p>
 </div>
 
 <p><img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-00.png" alt="Judgment Icon from Academy City" class="no-border"></p>
