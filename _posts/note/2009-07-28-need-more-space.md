@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Need More Space? UI in Opera, Chrome, IE and Firefox
+title: Need More Space?
 category: note
 ---
 

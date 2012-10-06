@@ -26,7 +26,6 @@
   {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
   {% if page.permalink == '/note/' or page.category == 'note' %}<ul class=nav-note>{% endif %}
   {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
-    <li{% if page.permalink == '/' or page.category == 'home' %} role=current{% endif %}><a href=/>Home</a></li>
     <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current{% endif %}><a href=/work/>Work</a></li>
     <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current{% endif %}><a href=/store/>Store</a></li>
     <li{% if page.permalink == '/note/' or page.category == 'note' %} role=current{% endif %}><a href=/note/>Note</a></li>
