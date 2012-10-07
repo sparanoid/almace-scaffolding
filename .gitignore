@@ -1,21 +1,10 @@
-# TUNGHSIAO LIU'S FAVORITE GITIGNORE
+# Mac OS X files
+.DS_Store
 
 # Jekyll specified
 _site
 _build
-_assets
 *.css
 
-# Codekit specified
+# CodeKit specified
 codekit-config.json
-
-# Mac OS X files
-.DS_Store
-
-# Image, font original files
-*.psd
-*.ai
-
-# Logs, Leftovers
-*.log
-*.bak
