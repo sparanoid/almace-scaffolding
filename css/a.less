@@ -293,17 +293,27 @@ article {
       position: relative;
       padding-left: @space * .75;
       font-style: italic;
+      .cf;
       &:before {
         position: absolute;
         top: -16px;
         left: -8px;
-        content: "\201c";
+        content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
         font-size: 120px;
         color: fade(@textColor, 70%);
         font-family: 'Helvetica Neue', sans-serif;
         font-style: normal;
         z-index: -1;
         pointer-events: none;
+      }
+      cite {
+        float: right;
+        margin: 0 0 2em;
+        font-size: 85%;
+        color: fade(@textColor, 80%);
+        &:before {
+          content: "\2500\2500\00a0" // http://www.fileformat.info/info/unicode/char/2500/index.htm
+        }
       }
     }
     sup {
