@@ -12,7 +12,7 @@ thumb: qmr.png
 
 <blockquote cite="http://www.hecaitou.net/?p=64">
   <p lang=zh>我──一個網絡民工──當然有人會覺得這是謙虛，終於擁有了強悍的標點符號插件──也可能是世界上最棒的！我可以這樣雙引號“”，也可以這樣""，還可以這樣"──無論是哪一樣，都是最自由的表達！</p>
-  <cite><a href="http://www.hecaitou.net/?p=64">和菜头</a></cite>
+  <cite><a href="http://www.hecaitou.net/?p=64">和菜頭</a></cite>
 </blockquote>
 
 <hr data-placeholder="English">
