@@ -33,22 +33,22 @@ bg: '#fff9ed'
 
 <p>
 <strong>MonoLite Plus 0.4.* 界面截圖：</strong>
-	<a href="{{ site.file }}/monolite-plus-04-01.png">#1</a>
-	<a href="{{ site.file }}/monolite-plus-04-02.png">#2</a>
+  <a href="{{ site.file }}/monolite-plus-04-01.png">#1</a>
+  <a href="{{ site.file }}/monolite-plus-04-02.png">#2</a>
 <br>
 <strong>MonoLite Plus 0.2 / 0.3.* 界面截圖：</strong>
-	<a href="{{ site.file }}/monolite-plus-02-01.png">#1</a>
-	<a href="{{ site.file }}/monolite-plus-02-02.png">#2</a>
-	<a href="{{ site.file }}/monolite-plus-02-03.png">#3</a>
-	<a href="{{ site.file }}/monolite-plus-02-04.png">#4</a>
-	<a href="{{ site.file }}/monolite-plus-02-05.png">#5</a>
-	<a href="{{ site.file }}/monolite-plus-02-06.png">#6</a>
-	<a href="{{ site.file }}/monolite-plus-02-07.png">#7</a>
+  <a href="{{ site.file }}/monolite-plus-02-01.png">#1</a>
+  <a href="{{ site.file }}/monolite-plus-02-02.png">#2</a>
+  <a href="{{ site.file }}/monolite-plus-02-03.png">#3</a>
+  <a href="{{ site.file }}/monolite-plus-02-04.png">#4</a>
+  <a href="{{ site.file }}/monolite-plus-02-05.png">#5</a>
+  <a href="{{ site.file }}/monolite-plus-02-06.png">#6</a>
+  <a href="{{ site.file }}/monolite-plus-02-07.png">#7</a>
 <br>
 <strong>MonoLite Plus 0.1 界面截圖：</strong>
-	<a href="{{ site.file }}/monolite-plus-01.png">#1</a>
-	<a href="{{ site.file }}/monolite-plus-02.png">#2</a>
-	<a href="{{ site.file }}/monolite-plus-03.png">#3</a>
+  <a href="{{ site.file }}/monolite-plus-01.png">#1</a>
+  <a href="{{ site.file }}/monolite-plus-02.png">#2</a>
+  <a href="{{ site.file }}/monolite-plus-03.png">#3</a>
 </p>
 
 <h3>MonoLite Plus 安裝向導 (Portable 模式)</h3>
