@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lester Chan’s Plugins in Chinese
+title: Lester’s Plugins in Chinese
 category: note
 ---
 
