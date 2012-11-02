@@ -13,7 +13,6 @@ desc: Random ramblings
       &#20;<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
       {% if post.link %}&#20;<a href={{ post.url }}/>&infin;</a>{% endif %}
     </h2>
-    {{ post.content }}
   </section>
   {% endfor %}
 </div>
