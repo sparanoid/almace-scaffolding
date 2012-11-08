@@ -18,11 +18,11 @@
 
 @font-face {
   font-family: PFDTCP-M; // PFDinTextCompPro-Medium.ttf
-  src: url('font.woff') format('woff');
+  src: url(font.woff) format('woff');
 }
 
 .font-face {
-  font-family: 'PFDTCP-M', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+  font-family: PFDTCP-M, "Helvetica Neue", "Hiragino Sans GB", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: -.02em;
@@ -31,7 +31,7 @@
 
 .helvetica {
   color: fade(@textColor, 40%);
-  font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", sans-serif;
   font-size: @baseFontSize / 2;
   font-weight: normal;
   text-align: center;
@@ -77,7 +77,7 @@
   color: @textColor;
   background: @backgroundColor;
   font-size: @baseFontSize;
-  font-family: Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif;
+  font-family: Palatino, "Hiragino Mincho ProN", serif;
   line-height: @baseLineHeight;
   max-width: @thumbSize * 5 + @thumbPadding * 8; // defined at work-list
   margin: 0 auto;
@@ -232,7 +232,7 @@ hgroup {
     & > *:first-child:before {
       @s: 9px;
       display: inline-block;
-      content: '';
+      content: "";
       width: @s;
       height: @s;
       border-radius: 50%;
@@ -301,7 +301,7 @@ article {
         content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
         font-size: 120px;
         color: fade(@textColor, 70%);
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: "Helvetica Neue", sans-serif;
         font-style: normal;
         z-index: -1;
         pointer-events: none;
