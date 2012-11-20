@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content="@{{ site.twitter }}">
+<meta name=twitter:creator content="@tunghsiao">
+<meta name=twitter:url content="{{ site.url }}/{{ page.url }}">
+<meta name=twitter:title content="{{ page.title | xml_escape }}">
+<meta name=twitter:description content="{{ page.excerpt | xml_escape }}">
+<meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
+
 <article>
   <hgroup>
     <h1>{% if page.link %}<a href={{ page.link }}>{{ page.title }} &rarr;</a>{% else %}{{ page.title }}{% endif %}</h1>
@@ -11,5 +19,5 @@ layout: default
 
   {{ content }}
 
-  <a href="http://twitter.com/home?status={{ page.title | cgi_escape }}{{ " by @" | cgi_escape }}{{ site.twitter | cgi_escape }}{{ " http://" | cgi_escape }}{{ site.url | cgi_escape }}{{ page.url | cgi_escape }}{{ "/" | cgi_escape }}" class=btn target=_blank>Tweet it</a>
+  <a href="http://twitter.com/home?status={{ page.title | cgi_escape }}{{ " by @" | cgi_escape }}{{ site.twitter | cgi_escape }}{{ " http://" | cgi_escape }}{{ site.url | cgi_escape }}{{ page.url | cgi_escape }}{{ "/" | cgi_escape }}" role=tweet class=btn target=_blank>Tweet it</a>
 </article>
