@@ -59,15 +59,7 @@
   <h3 role=work-list-title>Other Design Works</h3>
   <ul role=work-list>
   {% for post in site.tags.design %}
-    <li>
-      <a href={{ post.url }}/>
-        <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
-        <p>
-          {{ post.title }}
-          <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-        </p>
-      </a>
-    </li>
+    {% include work-thumb.html %}
   {% endfor %}
   </ul>
 </aside>
@@ -78,15 +70,7 @@
   <h3 role=work-list-title>Other Sketches / Paintings</h3>
   <ul role=work-list>
   {% for post in site.tags.drawing %}
-    <li>
-      <a href={{ post.url }}/>
-        <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
-        <p>
-          {{ post.title }}
-          <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-        </p>
-      </a>
-    </li>
+    {% include work-thumb.html %}
   {% endfor %}
   </ul>
 </aside>
@@ -98,4 +82,8 @@
 <footer>
   <p><a href=/>{{ site.name }}</a> / <a href=/{{ site.feed }} title="Feed - Atom (The Atom Syndication Format)">Atom</a></p>
 </footer>
+{% endif %}
+
+{% if page.permalink == '/work/' or page.category == 'work' %}
+  {% include lazyload.html %}
 {% endif %}

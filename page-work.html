@@ -10,15 +10,7 @@ desc: Designs &amp; drawings
 </div>
 <ul role=work-list>
 {% for post in site.tags.design %}
-  <li>
-    <a href={{ post.url }}/>
-      <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
-      <p>
-        {{ post.title }}
-        <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-      </p>
-    </a>
-  </li>
+  {% include work-thumb.html %}
 {% endfor %}
 </ul>
 
@@ -27,14 +19,6 @@ desc: Designs &amp; drawings
 </div>
 <ul role=work-list>
 {% for post in site.tags.drawing %}
-  <li>
-    <a href={{ post.url }}/>
-      <img src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}">
-      <p>
-        {{ post.title }}
-        <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-      </p>
-    </a>
-  </li>
+  {% include work-thumb.html %}
 {% endfor %}
 </ul>
