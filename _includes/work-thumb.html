@@ -1,6 +1,6 @@
 <li>
   <a href={{ post.url }}/>
-    <img data-src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" src=data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 alt="{{ post.title }}" onload=lzld(this) onerror=lzld(this)>
+    <img data-src="{{ site.file }}/thumb/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" src=/_.gif alt="{{ post.title }}" onload=lzld(this) onerror=lzld(this)>
     <p>
       {{ post.title }}
       <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
