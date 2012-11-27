@@ -80,8 +80,8 @@
   font-family: Palatino, "Hiragino Mincho ProN", serif;
   line-height: @baseLineHeight;
   max-width: @thumbSize * 5 + @thumbPadding * 8; // defined at work-list
-  margin: 0 auto;
-  padding: @space * 1.5 @space * 1.2;
+  margin: -29px auto 0;
+  padding: 0 @space * 1.2 @space * 1.5;
   text-align: center;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
@@ -126,7 +126,7 @@ a[role=logo] {
   display: block;
   width: 0;
   height: 0;
-  margin: 0 auto @space / 3;
+  margin: 0 auto @space / 5;
   border-style: solid;
   border-width: 0 26px 45px 26px;
   border-color: transparent transparent @textColor transparent;
@@ -147,6 +147,7 @@ nav[role=navigation] {
     li {
       display: inline-block;
       list-style: none;
+      line-height: 2;
       a {
         padding: 3px .8em;
         font-weight: bold;
@@ -561,18 +562,21 @@ footer {
   }
 }
 
-// ipad, iphone portrait {
+// ipad and iphone portrait {
 @media (max-device-width: 1024px) and (orientation: portrait) {
   :root {
-    -webkit-text-size-adjust: none;
-    padding: @space * 1.5 69px;
+    @padding: 69px;
+    padding-left: @padding;
+    padding-right: @padding;
   }
 }
 
 // iphone
 @media (max-device-width: 480px) {
   :root {
-    padding: @space * 1.5 30px;
+    @padding: 32px;
+    padding-left: @padding;
+    padding-right: @padding;
   }
 
   ul[role^=work-list] {
@@ -594,17 +598,8 @@ footer {
 // iphone portrait
 @media (max-device-width: 480px) and (orientation: portrait) {
   :root {
-    padding: @space * 1.5 15px;
-  }
-
-  nav[role=navigation] {
-    ul {
-      li {
-        a {
-          padding-left: .4em; // use -left and -right to avoid overriding -top and -bottom values previously defined above.
-          padding-right: .4em;
-        }
-      }
-    }
+    @padding: 15px;
+    padding-left: @padding;
+    padding-right: @padding;
   }
 }
