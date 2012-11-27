@@ -4,7 +4,7 @@
 /*!
 */
 
-// global variables
+// Global variables
 @space: 70px;
 @wrapperWidth: 750px;
 @baseFontSize: 24px;
@@ -13,7 +13,7 @@
 @backgroundColor: #fff;
 @textColor: #000;
 
-// invert color switcher for images and videos
+// Invert color switcher for images and videos
 // :root { -webkit-filter: invert(100%); }
 
 @font-face {
@@ -62,7 +62,7 @@
      -moz-transition: @transition;
 }
 
-// basic configurations
+// Basic configurations
 * {
   margin: 0;
   padding: 0;
@@ -79,7 +79,7 @@
   font-size: @baseFontSize;
   font-family: Palatino, "Hiragino Mincho ProN", serif;
   line-height: @baseLineHeight;
-  max-width: @thumbSize * 5 + @thumbPadding * 8; // defined at work-list
+  max-width: @thumbSize * 5 + @thumbPadding * 8; // Defined at work-list
   margin: -29px auto 0;
   padding: 0 @space * 1.2 @space * 1.5;
   text-align: center;
@@ -108,7 +108,7 @@ del {
   background: fade(@textColor, 6%);
 }
 
-// core styles begin
+// Core styles begin
 body:before {
   position: absolute;
   top: 0;
@@ -250,19 +250,19 @@ hgroup {
       background: fade(red, 20%);
     }
   }
-  & + .txt :first-child { // ie. hgroup + .txt h3:first-child
+  & + .txt :first-child { // For example, hgroup + .txt h3:first-child
     margin-top: 0;
     padding-top: 0;
   }
 }
 
 article:not(.width-fix) {
-  max-width: @wrapperWidth; // width fix for work-list in posts
+  max-width: @wrapperWidth; // Width fix for work-list in posts
 }
 
 article {
   margin: 0 auto @space * 1.35;
-  // for some specified posts in work category
+  // For some specified posts in work category
   .cf;
   img, video, iframe {
     display: block;
@@ -270,14 +270,14 @@ article {
     max-width: 100%;
   }
   .txt {
-    clear: both; // for sibling, following elements (ie. .browser class) with float: left;
+    clear: both; // For sibling, following elements (ie. .browser class) with float: left;
     overflow: hidden;
     text-align: left;
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
             hyphens: auto;
     a {
-      border-bottom: 1px dotted fade(@textColor, 30%); // set larger value for invert color
+      border-bottom: 1px dotted fade(@textColor, 30%); // Set larger value for invert color
     }
     p {
       margin: 0 0 1.1em;
@@ -352,8 +352,8 @@ article {
         width: 100%;
         outline: none;
         box-sizing: border-box;
-        border-radius: 0; // remove border-radius for ios devices
-        -webkit-appearance: none; // remove ios pre-defined style
+        border-radius: 0; // Remove border-radius for ios devices
+        -webkit-appearance: none; // Remove ios pre-defined style
         &:focus {
           border-color: @textColor;
         }
@@ -395,7 +395,7 @@ article {
 }
 
 [lang=zh] {
-  text-align: justify; // workaround solution for post with chinese
+  text-align: justify; // Workaround solution for post with chinese
 }
 
 [role=tweet] {
@@ -406,7 +406,7 @@ article {
   text-align: center;
 }
 
-// image list in "work"
+// Image list in "work"
 @thumbSize: 190px;
 @thumbPadding: 15px;
 @thumbFontSize: @baseFontSize * .7;
@@ -426,7 +426,7 @@ ul[role^=work-list] {
       height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
       .font-face;
       font-size: @thumbFontSize;
-      overflow: hidden; // for text
+      overflow: hidden; // For text
     }
     &:hover a {
       opacity: 1;
@@ -440,22 +440,22 @@ ul[role^=work-list] {
     img {
       width: @thumbSize;
       height: @thumbSize;
-      margin: 0; // override: article img
+      margin: 0; // Override: article img
       background: @linkColor;
     }
   }
   & ~ div.txt {
-    margin: @space * .5 0 0; // better margin between to work lists
+    margin: @space * .5 0 0; // Better margin between to work lists
   }
 }
 
-// image navigation in post page
+// Image navigation in post page
 h3[role=work-list-title] {
   .helvetica;
   margin: 0 0 20px;
 }
 
-// post list in "note"
+// Post list in "note"
 div[role^=note-list] {
   section {
     margin: 0 0 @space * .2;
@@ -469,7 +469,7 @@ div[role^=note-list] {
         color: fade(@textColor, 30%);
       }
       time + a {
-        line-height: 0; // an infinite symbol next to the post date, need line-height: 0 to make vertical-align work
+        line-height: 0; // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
         vertical-align: 3px;
       }
     }
@@ -487,16 +487,16 @@ aside[role=sponsor] {
   max-width: @wrapperWidth;
   clear: both;
   .bsap {
-    .bsa_it_i { // image
+    .bsa_it_i { // Letter i = image
       float: left;
       padding-right: 20px;
     }
-    .bsa_it_t { // text
+    .bsa_it_t { // Letter t = text
       display: block;
       font-size: .5em;
       line-height: @baseLineHeight;
     }
-    .bsa_it_d { // description
+    .bsa_it_d { // Letter d = description
       display: block;
       font-size: .9em;
       line-height: @baseLineHeight;
@@ -534,35 +534,35 @@ footer {
   font-size: @baseFontSize / 2 - 1px;
 }
 
-// 4 thumbnails in a row
+// Four thumbnails in a row
 @media (max-width: 1238px) {
   :root {
-    max-width: @thumbSize * 4 + @thumbPadding * 6; // defined at work-list
+    max-width: @thumbSize * 4 + @thumbPadding * 6; // Defined at work-list
   }
 }
 
-// 3 thumbnails in a row
+// Three thumbnails in a row
 @media (max-width: 1018px) {
   :root {
-    max-width: @thumbSize * 3 + @thumbPadding * 4; // defined at work-list
+    max-width: @thumbSize * 3 + @thumbPadding * 4; // Defined at work-list
   }
 }
 
-// small screen
+// Small screen
 @media (max-width: 640px) {
   article .txt {
     font-size: 80%;
   }
 }
 
-// all ios devices, the easiest way
+// All iOS devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
   :root {
     -webkit-text-size-adjust: none;
   }
 }
 
-// ipad and iphone portrait {
+// iPad and iPhone portrait {
 @media (max-device-width: 1024px) and (orientation: portrait) {
   :root {
     @padding: 69px;
@@ -571,7 +571,7 @@ footer {
   }
 }
 
-// iphone
+// iPhone
 @media (max-device-width: 480px) {
   :root {
     @padding: 32px;
@@ -581,11 +581,11 @@ footer {
 
   ul[role^=work-list] {
     li {
-      float: none; // make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
+      float: none; // Make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
       margin-bottom: @thumbPadding * 2;
       img {
         width: 100%;
-        height: auto; // should be 100%, but Safari for iOS has stupid bug for it.
+        height: auto; // Should be 100%, but Safari for iOS has stupid bug for it.
       }
       a {
         width: 100%;
@@ -595,7 +595,7 @@ footer {
   }
 }
 
-// iphone portrait
+// iPhone portrait
 @media (max-device-width: 480px) and (orientation: portrait) {
   :root {
     @padding: 15px;
