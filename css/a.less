@@ -27,6 +27,7 @@
   font-weight: normal;
   letter-spacing: -.02em;
   font-size: @baseFontSize * 7/3;
+  -webkit-font-smoothing: antialiased;
 }
 
 .helvetica {
@@ -79,7 +80,7 @@
   font-size: @baseFontSize;
   font-family: Palatino, "Hiragino Mincho ProN", serif;
   line-height: @baseLineHeight;
-  margin: -29px auto 0;
+  margin: 0 auto 0;
   padding: 0 0  @space * 1.5;
   text-align: center;
   text-rendering: optimizelegibility;
@@ -131,13 +132,55 @@ a[role=logo] {
   display: block;
   width: 0;
   height: 0;
-  margin: 0 auto @space / 5;
+  margin: -29px auto @space / 5;
   border-style: solid;
   border-width: 0 26px 45px 26px;
-  border-color: transparent transparent @textColor transparent;
+  border-color: transparent;
+  border-bottom-color: @textColor;
   text-indent: -9999em;
   &:hover {
-    border-color: transparent transparent @linkColor transparent;
+    border-bottom-color: @linkColor;
+  }
+}
+
+// Borrowed from Bootstrap
+.vertical(@startColor: #444, @endColor: #333) {
+  background-color: mix(@startColor, @endColor, 60%);
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+  background-image:    -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+  background-image:      -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+  background-image:   linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+  background-repeat: repeat-x;
+}
+
+header.index {
+  margin: 0 0 @space / 5;
+  height: 200px;
+  .vertical(#9475d1, #bd7fd6);
+  a[role=logo] {
+    margin: 36px auto 0;
+    border-bottom-color: @backgroundColor;
+    &:hover {
+      border-bottom-color: fade(@textColor, 70%);
+    }
+  }
+  h2 {
+    padding: 0 5%;
+    a {
+      color: @backgroundColor;
+      .font-face;
+      font-size: @baseFontSize * 1.25;
+      border-bottom: transparent 1px solid; // We have to define this in order to make transition work
+      &:hover {
+        border-bottom-color: @backgroundColor;
+      }
+    }
+  }
+  h3 {
+    .helvetica;
+    padding-top: 70px;
+    color: @backgroundColor;
+    opacity: .6;
   }
 }
 
