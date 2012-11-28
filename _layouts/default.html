@@ -20,62 +20,66 @@
   <h1><a href=/ role=logo accesskey=x>Sparanoid</a></h1>
 </header>
 
-<nav role=navigation>
-  {% if page.permalink == '/' or page.category == 'home' %}<ul class=nav-home>{% endif %}
-  {% if page.permalink == '/work/' or page.category == 'work' %}<ul class=nav-work>{% endif %}
-  {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
-  {% if page.permalink == '/note/' or page.category == 'note' %}<ul class=nav-note>{% endif %}
-  {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
-    <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current{% endif %}><a href=/work/>Work</a></li>
-    <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current{% endif %}><a href=/store/>Store</a></li>
-    <li{% if page.permalink == '/' or page.category == 'home' %} role=current{% endif %}><a href=/>Home</a></li>
-    <li{% if page.permalink == '/note/' or page.category == 'note' %} role=current{% endif %}><a href=/note/>Note</a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} role=current{% endif %}><a href=/about/>About</a></li>
-  </ul>
-</nav>
+<div class="wrapper">
 
-{{ content }}
+  <nav role=navigation>
+    {% if page.permalink == '/' or page.category == 'home' %}<ul class=nav-home>{% endif %}
+    {% if page.permalink == '/work/' or page.category == 'work' %}<ul class=nav-work>{% endif %}
+    {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
+    {% if page.permalink == '/note/' or page.category == 'note' %}<ul class=nav-note>{% endif %}
+    {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
+      <li{% if page.permalink == '/work/' or page.category == 'work' %} role=current{% endif %}><a href=/work/>Work</a></li>
+      <li{% if page.permalink == '/store/' or page.category == 'store' %} role=current{% endif %}><a href=/store/>Store</a></li>
+      <li{% if page.permalink == '/' or page.category == 'home' %} role=current{% endif %}><a href=/>Home</a></li>
+      <li{% if page.permalink == '/note/' or page.category == 'note' %} role=current{% endif %}><a href=/note/>Note</a></li>
+      <li{% if page.permalink == '/about/' or page.category == 'about' %} role=current{% endif %}><a href=/about/>About</a></li>
+    </ul>
+  </nav>
 
-{% if page.category == 'note' %}
-<nav role=pagination>
-{% if page.next_in_categories.url %}
-  <a role=next href={{ page.next_in_categories.url }}/>
-    <span>Next</span>
-    <span role=tooltip>{{ page.next_in_categories.title }}</span>
-  </a>
-{% else %}
-{% endif %}
-{% if page.previous_in_categories.url %}
-  <a role=prev href={{ page.previous_in_categories.url }}/>
-    <span>Prev</span>
-    <span role=tooltip>{{ page.previous_in_categories.title }}</span>
-  </a>
-{% else %}
-{% endif %}
-</nav>
-{% endif %}
+  {{ content }}
 
-{% if page.tag == 'design' %}
-<aside>
-  <h3 role=work-list-title>Other Design Works</h3>
-  <ul role=work-list>
-  {% for post in site.tags.design %}
-    {% include work-thumb.html %}
-  {% endfor %}
-  </ul>
-</aside>
-{% endif %}
+  {% if page.category == 'note' %}
+  <nav role=pagination>
+  {% if page.next_in_categories.url %}
+    <a role=next href={{ page.next_in_categories.url }}/>
+      <span>Next</span>
+      <span role=tooltip>{{ page.next_in_categories.title }}</span>
+    </a>
+  {% else %}
+  {% endif %}
+  {% if page.previous_in_categories.url %}
+    <a role=prev href={{ page.previous_in_categories.url }}/>
+      <span>Prev</span>
+      <span role=tooltip>{{ page.previous_in_categories.title }}</span>
+    </a>
+  {% else %}
+  {% endif %}
+  </nav>
+  {% endif %}
 
-{% if page.tag == 'drawing' %}
-<aside>
-  <h3 role=work-list-title>Other Sketches / Paintings</h3>
-  <ul role=work-list>
-  {% for post in site.tags.drawing %}
-    {% include work-thumb.html %}
-  {% endfor %}
-  </ul>
-</aside>
-{% endif %}
+  {% if page.tag == 'design' %}
+  <aside>
+    <h3 role=work-list-title>Other Design Works</h3>
+    <ul role=work-list>
+    {% for post in site.tags.design %}
+      {% include work-thumb.html %}
+    {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+
+  {% if page.tag == 'drawing' %}
+  <aside>
+    <h3 role=work-list-title>Other Sketches / Paintings</h3>
+    <ul role=work-list>
+    {% for post in site.tags.drawing %}
+      {% include work-thumb.html %}
+    {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+
+</div><!-- .wrapper -->
 
 {% if page.title != 'Sparanoid' %}
 <!-- Insert ad here -->
