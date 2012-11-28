@@ -79,12 +79,17 @@
   font-size: @baseFontSize;
   font-family: Palatino, "Hiragino Mincho ProN", serif;
   line-height: @baseLineHeight;
-  max-width: @thumbSize * 5 + @thumbPadding * 8; // Defined at work-list
   margin: -29px auto 0;
-  padding: 0 @space * 1.2 @space * 1.5;
+  padding: 0 0  @space * 1.5;
   text-align: center;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
+}
+
+.wrapper {
+  max-width: @thumbSize * 5 + @thumbPadding * 8; // Defined at work-list
+  margin: 0 auto;
+  padding: 0 @space * 1.2;
 }
 
 a, button {
@@ -536,14 +541,14 @@ footer {
 
 // Four thumbnails in a row
 @media (max-width: 1238px) {
-  :root {
+  .wrapper {
     max-width: @thumbSize * 4 + @thumbPadding * 6; // Defined at work-list
   }
 }
 
 // Three thumbnails in a row
 @media (max-width: 1018px) {
-  :root {
+  .wrapper {
     max-width: @thumbSize * 3 + @thumbPadding * 4; // Defined at work-list
   }
 }
@@ -557,14 +562,14 @@ footer {
 
 // All iOS devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
-  :root {
+  .wrapper {
     -webkit-text-size-adjust: none;
   }
 }
 
 // iPad and iPhone portrait {
 @media (max-device-width: 1024px) and (orientation: portrait) {
-  :root {
+  .wrapper {
     @padding: 69px;
     padding-left: @padding;
     padding-right: @padding;
@@ -573,7 +578,7 @@ footer {
 
 // iPhone
 @media (max-device-width: 480px) {
-  :root {
+  .wrapper {
     @padding: 32px;
     padding-left: @padding;
     padding-right: @padding;
@@ -597,7 +602,7 @@ footer {
 
 // iPhone portrait
 @media (max-device-width: 480px) and (orientation: portrait) {
-  :root {
+  .wrapper {
     @padding: 15px;
     padding-left: @padding;
     padding-right: @padding;
