@@ -1,5 +1,5 @@
-t+y
-===
+sparanoid.com
+=============
 
 [Jekyll][jk] runing on [sparanoid.com][sp], codename `Auratus`, version 21.
 
