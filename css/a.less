@@ -147,8 +147,6 @@ a[role=logo] {
 .vertical(@startColor: #444, @endColor: #333) {
   background-color: mix(@startColor, @endColor, 60%);
   background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-  background-image:    -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
-  background-image:      -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
   background-image:   linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
   background-repeat: repeat-x;
 }
@@ -156,7 +154,7 @@ a[role=logo] {
 header.index {
   margin: 0 0 @space / 5;
   height: 200px;
-  .vertical(#9475d1, #bd7fd6);
+  .vertical(#9475d1, #b67fd6);
   a[role=logo] {
     margin: 37px auto 0;
     border-bottom-color: @backgroundColor;
