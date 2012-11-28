@@ -8,7 +8,7 @@ markdown:     rdiscount
 auto:         true
 server:       ture
 server_port:  4321
-exclude:      LICENSE, Rakefile, README.md
+exclude:      LICENSE, Rakefile, README.md, a.less
 
 # custom settings
 domain:       sparanoid.com
