@@ -12,6 +12,8 @@
 @linkColor: #e34; // #2ed for invert color
 @backgroundColor: #fff;
 @textColor: #000;
+@sansSerif: "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+@serif: Palatino, "Hiragino Mincho ProN", serif;
 
 // Invert color switcher for images and videos
 // :root { -webkit-filter: invert(100%); }
@@ -22,7 +24,7 @@
 }
 
 .font-face {
-  font-family: PFDTCP-M, "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+  font-family: PFDTCP-M, @sansSerif;
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: -.02em;
@@ -32,7 +34,7 @@
 
 .helvetica {
   color: fade(@textColor, 40%);
-  font-family: "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+  font-family: @sansSerif;
   font-size: @baseFontSize / 2;
   font-weight: normal;
   text-align: center;
@@ -78,7 +80,7 @@
   color: @textColor;
   background: @backgroundColor;
   font-size: @baseFontSize;
-  font-family: Palatino, "Hiragino Mincho ProN", serif;
+  font-family: @serif;
   line-height: @baseLineHeight;
   margin: 0 auto 0;
   padding: 0 0  @space * 1.5;
@@ -351,7 +353,7 @@ article {
         content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
         font-size: 120px;
         color: fade(@textColor, 70%);
-        font-family: "Helvetica Neue", sans-serif;
+        font-family: @sansSerif;
         font-style: normal;
         z-index: -1;
         pointer-events: none;
