@@ -1,20 +1,25 @@
-# jekyll configurations
+# Jekyll configurations
 source:       .
 destination:  ./_site
 permalink:    /:categories/:title
 markdown:     rdiscount
 
-# jekyll server settings
+# Jekyll server settings
 auto:         true
 server:       ture
 server_port:  4321
-exclude:      LICENSE, Rakefile, README.md, a.less
+exclude:
+- LICENSE
+- Rakefile
+- README.md
+- a.less
 
-# custom settings
+# Custom settings
 domain:       sparanoid.com
 url:          http://sparanoid.com
 # file:         http://rsrc.sparanoid.com
-file:         http://d349cztnlupsuf.cloudfront.net
+# file:         http://d349cztnlupsuf.cloudfront.net
+file:         http://c1288.orca.io
 css:          css
 feed:         feed/
 name:         Sparanoid
