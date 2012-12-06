@@ -5,59 +5,43 @@ category: work
 tag: design
 excerpt: A Detailed Introduction to Municipality of Tianjin
 thumb: tianjin-project.jpg
+plugin: slider
 ---
 
 <div class=txt>
-<p><img src="{{ site.file }}/tianjin-project.png" alt="A Graduate Work from Tunghsiao Liu / A Detailed Introduction to Municipality of Tianjin"></p>
+<p><img src="{{ site.file }}/tianjin-project.png" width=400 alt="A Graduate Work from Tunghsiao Liu / A Detailed Introduction to Municipality of Tianjin"></p>
 
-<p class=note>Now this project is featured on <a href="/work/tianjin-project-wef/">The World Economic Forum - Tianjin Davos 2012</a>.</p>
+<p class=note>Now this project is featured on <a href="/work/tianjin-project-wef/">The World Economic Forum - Tianjin Davos 2012</a>. You can also check out the <a href="/lab/tianjin/">project page</a>.</p>
 </div>
 
 <div class=txt>
   <h3>Book Preview</h3>
 </div>
-<p><img src="{{ site.file }}/tianjin-project-preview-01.jpg" alt="Tianjin Project Book Preview #1"></p>
-<p><img src="{{ site.file }}/tianjin-project-preview-02.jpg" alt="Tianjin Project Book Preview #2"></p>
-<p><img src="{{ site.file }}/tianjin-project-preview-03.jpg" alt="Tianjin Project Book Preview #3"></p>
-<p><img src="{{ site.file }}/tianjin-project-preview-04.jpg" alt="Tianjin Project Book Preview #4"></p>
-<p><img src="{{ site.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5"></p>
-<p><img src="{{ site.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6"></p>
 
-<div class=txt>
-  <h3>Website Design</h3>
-</div>
-<p class=browser><a href="/lab/tianjin/"><img src="{{ site.file }}/tianjin-project-site.jpg" alt="Tianjin Project Website"></a></p>
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="{{ site.file }}/tianjin-project-preview-01.jpg" alt="Tianjin Project Book Preview #1">
+    </li>
+    <li>
+      <img src="{{ site.file }}/tianjin-project-preview-02.jpg" alt="Tianjin Project Book Preview #2">
+    </li>
+    <li>
+      <img src="{{ site.file }}/tianjin-project-preview-03.jpg" alt="Tianjin Project Book Preview #3">
+    </li>
+    <li>
+      <img src="{{ site.file }}/tianjin-project-preview-04.jpg" alt="Tianjin Project Book Preview #4">
+    </li>
+    <li>
+      <img src="{{ site.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5">
+    </li>
+    <li>
+      <img src="{{ site.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6">
+    </li>
+  </ul>
+</div><!-- .flexslider -->
 
 <div class=txt>
   <h3>Promo Video</h3>
 </div>
-<iframe width="1280" height="720" src="http://www.youtube.com/embed/dk2Fg8WJ3-o?rel=0" frameborder="0" allowfullscreen></iframe>
-
-<div class=txt>
-<p>Created using iBooks Author, for iPad only, check out the project page <a href="/lab/tianjin/">here</a>.</p>
-</div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>
-// By Chris Coyier & tweaked by Mathias Bynens
-$(function() {
-  var $allVideos = $("iframe[src*='//www.youtube.com/embed']"),
-      $fluidEl = $("body");
-  $allVideos.each(function() {
-    $(this)
-      .data('aspectRatio', this.height / this.width)
-      .removeAttr('height')
-      .removeAttr('width');
-  });
-
-  $(window).resize(function() {
-    var newWidth = $fluidEl.width();
-    $allVideos.each(function() {
-      var $el = $(this);
-      $el
-        .width(newWidth)
-        .height(newWidth * $el.data('aspectRatio'));
-    });
-  }).resize();
-});
-</script>
+<iframe src="http://player.vimeo.com/video/54786277?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ee3344" width="750" height="422" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

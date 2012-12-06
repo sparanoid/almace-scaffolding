@@ -8,7 +8,7 @@ thumb: tianjin-project-wef.jpg
 ---
 
 <div class=txt>
-<p><img src="{{ site.file }}/tianjin-project-wef.png" alt="A Production from Tunghsiao Liu / A Detailed Introduction to Municipality of Tianjin"></p>
+<p><img src="{{ site.file }}/tianjin-project-wef.png" width=500 alt="A Production from Tunghsiao Liu / A Detailed Introduction to Municipality of Tianjin"></p>
 
 <p><a href="/work/tianjin-project/">Tianjin Project</a> is now featured on the World Economic Forum - Tianjin Davos 2012. Created using iBooks Author, for iPad only.</p>
 </div>
