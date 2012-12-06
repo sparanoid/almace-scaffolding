@@ -6,6 +6,7 @@ tag: design
 excerpt: Based on Toaru Kagaku no Railgun「とある科学の超電磁砲」
 thumb: judgment-screensaver-icon.png
 bg: '#eafbf1'
+plugin: slider
 ---
 
 <div class=txt>
@@ -14,11 +15,19 @@ bg: '#eafbf1'
 <p lang=zh>學園都市風紀委員 177 支部＆警備員 スクリーンセーバー＆アイコン from「とある科學の超電磁砲」</p>
 </div>
 
-<p><img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-00.png" alt="Judgment Icon from Academy City" class="no-border"></p>
-
-<p><img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-02.png" alt="Judgment Screensaver from Academy City Screenshot"></p>
-
-<p><img src="{{ site.file }}/antiskill-screensaver-from-academy-city-02.jpg" alt="Original Antiskill Screensaver from Academy City"></p>
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-00.png" alt="Judgment Icon from Academy City">
+    </li>
+    <li>
+      <img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-02.png" alt="Judgment Screensaver from Academy City Screenshot">
+    </li>
+    <li>
+      <img src="{{ site.file }}/antiskill-screensaver-from-academy-city-02.jpg" alt="Original Antiskill Screensaver from Academy City">
+    </li>
+  </ul>
+</div><!-- .flexslider -->
 
 <div class=txt>
 <p lang=zh>來自學園都市風紀委員 177 支部的屏保，網上之前貌似有人做過，但效果不理想，重新做一下，自適應寬高比，最大測試過 2560x1600 的顯示器。另外做安裝包的同時順帶做了個圖標，<a href="{{ site.file }}/judgment-screensaver-icon-from-academy-city-01.png">內含七種顔色</a></p>
