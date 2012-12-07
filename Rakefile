@@ -27,7 +27,7 @@ task :minify do
   sh "java -jar _build/htmlcompressor.jar -r --type html --remove-intertag-spaces --remove-quotes --remove-http-protocol --remove-https-protocol --compress-js --compress-css -o _site _site"
   sh "java -jar _build/htmlcompressor.jar -r --type xml -o _site _site"
   # CSS minification workaround. YUI Compressor has a bug dealing with SVG data URI, don't use
-  # More information: http://yuilibrary.com/projects/yuicompressor/ticket/2528159
+  # More info: http://yuilibrary.com/projects/yuicompressor/ticket/2528159
   # sh "java -jar _build/yuicompressor.jar --type css _site/css/a.css -o _site/css/a.css"
   sh "perl -i -p -e 's/\n//' ./_site/css/a.css"
   puts '>>> Minified.'
