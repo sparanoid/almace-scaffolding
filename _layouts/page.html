@@ -2,12 +2,16 @@
 layout: default
 ---
 
+<!-- Page template -->
 <article{% if page.permalink == '/work/' %} class=width-fix{% endif %}>
+
+  <!-- Page title -->
   <hgroup>
     <h1>{{ page.title }}</h1>
     {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %Y" }}</time></h2>{% endif %}
     {% if page.desc %}<h2>{{ page.desc }}</h2>{% endif %}
   </hgroup>
 
+  <!-- Page content -->
   {{ content }}
 </article>
