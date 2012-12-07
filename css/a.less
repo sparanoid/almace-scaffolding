@@ -384,7 +384,7 @@ article {
       color: #68a;
     }
 
-    // In Store page
+    // Newsletter subscription form in page "store"
     form {
       label {
         .helvetica;
@@ -411,7 +411,45 @@ article {
         margin: 0 auto;
       }
     }
-  }
+
+    // Rest form validation styles, borrowed from Bootstrap
+    input, textarea, select {
+      &:focus:required:invalid {
+        &:focus {
+          background: fade(@linkColor, 5%);
+          border-color: @linkColor;
+          box-shadow: none; // Override Firefox default styles
+        }
+      }
+    }
+
+    // Form validation message bubble, borrowed from default WebKit styles
+    // More info: http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
+    ::-webkit-validation-bubble-message {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background: fade(@linkColor, 95%);
+      color: @backgroundColor;
+      // Override default WebKit styles
+      min-width: 100%;
+      max-height: auto;
+      border: none;
+      padding: 20px 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+    }
+    ::-webkit-validation-bubble-arrow {
+      display: none;
+    }
+    ::-webkit-validation-bubble-icon {
+      display: none;
+    }
+  } // .txt
+
+  // Broser frame for images in category "work"
   .browser {
     margin: 0 0 40px;
     padding-top: 16px;
@@ -425,6 +463,8 @@ article {
       box-shadow: rgba(0, 0, 0, .4) 0 -1px 0 0;
     }
   }
+
+  // Special paragraph with an icon
   .note, .store, .download {
     @iconSize: 40px;
     background-repeat: no-repeat;
