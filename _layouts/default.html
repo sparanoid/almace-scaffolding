@@ -39,16 +39,16 @@
   <meta name=description content="{{ page.excerpt }}">
 {% endif %}
 
-<!-- Header, logo -->
-<header{% if page.category == 'home' %} class=index{% endif %}>
-  <!-- Display a fancy header if a visitor lands on homepage -->
-  {% if page.category == 'home' %}
+<!-- Header, logo, we need a .index class here to include homepage specified styles -->
+{% if page.title == 'Sparanoid' or page.title == 'Error' %}
+  <header class=index>
     <h3>latest Work</h3>
     {% for post in site.categories.work limit:1 %}
       <h2><a href="{{ post.url }}/">{{ post.title }}</a></h2>
     {% endfor %}
-  {% endif %}
-
+{% else %}
+  <header>
+{% endif %}
   <!-- There's a normal header for the other pages -->
   <h1><a href=/ role=logo accesskey=x>Sparanoid</a></h1>
 </header>
