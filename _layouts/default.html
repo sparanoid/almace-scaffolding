@@ -6,28 +6,57 @@
 <link rel=stylesheet href=/{{ site.css }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
+<!-- Twitter Cards support for category "work", more info https://dev.twitter.com/docs/cards -->
+{% if page.category == 'work' %}
+  <meta name=twitter:card content="summary">
+  <meta name=twitter:site content="@{{ site.twitter }}">
+  <meta name=twitter:creator content="@tunghsiao">
+  <meta name=twitter:url content="{{ site.url }}{{ page.url }}">
+  <meta name=twitter:title content="{{ page.title | xml_escape }}">
+  <meta name=twitter:description content="{{ page.excerpt | xml_escape }}">
+  <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
+{% endif %}
+
+<!-- Twitter Cards support for cateogry "note" -->
+{% if page.category == 'note' %}
+  <meta name=twitter:card content="summary">
+  <meta name=twitter:site content="@{{ site.twitter }}">
+  <meta name=twitter:creator content="@tunghsiao">
+  <meta name=twitter:url content="{{ site.url }}{{ page.url }}">
+  <meta name=twitter:title content="{{ page.title | xml_escape }}">
+  <meta name=twitter:description content="{{ page.content | xml_escape }}">
+{% endif %}
+
+<!-- Error page specified styles -->
 {% if page.title == 'Error' %}
   <style>
     :root { -webkit-filter: invert(100%); }
   </style>
 {% endif %}
 
+<!-- If one post has excerpt defined, display it for better SEO result -->
 {% if page.excerpt %}
   <meta name=description content="{{ page.excerpt }}">
 {% endif %}
 
+<!-- Header, logo -->
 <header{% if page.category == 'home' %} class=index{% endif %}>
+  <!-- Display a fancy header if a visitor lands on homepage -->
   {% if page.category == 'home' %}
     <h3>latest Work</h3>
     {% for post in site.categories.work limit:1 %}
       <h2><a href="{{ post.url }}/">{{ post.title }}</a></h2>
     {% endfor %}
   {% endif %}
+
+  <!-- There's a normal header for the other pages -->
   <h1><a href=/ role=logo accesskey=x>Sparanoid</a></h1>
 </header>
 
+<!-- Wrap in all width sensitive elements -->
 <div class="wrapper">
 
+  <!-- Main navigation with current page / categoriy highlighted -->
   <nav role=navigation>
     {% if page.permalink == '/' or page.category == 'home' %}<ul class=nav-home>{% endif %}
     {% if page.permalink == '/work/' or page.category == 'work' %}<ul class=nav-work>{% endif %}
@@ -42,8 +71,10 @@
     </ul>
   </nav>
 
+  <!-- All dynamic, user generated content go here. It's linked with page.html and post.html at the moment -->
   {{ content }}
 
+  <!-- Display a paginator if current post category is "note" -->
   {% if page.category == 'note' %}
     <nav role=pagination>
       {% if page.next_in_categories.url %}
@@ -63,6 +94,7 @@
     </nav>
   {% endif %}
 
+  <!-- Display post thumbnails for tag "design" if current post category is "work" -->
   {% if page.tag == 'design' %}
     <aside>
       <h3 role=work-list-title>Other Design Works</h3>
@@ -74,6 +106,7 @@
     </aside>
   {% endif %}
 
+  <!-- Display post thumbnails for tag "drawing" if current post category is "work" -->
   {% if page.tag == 'drawing' %}
     <aside>
       <h3 role=work-list-title>Other Sketches / Paintings</h3>
@@ -87,6 +120,7 @@
 
 </div><!-- .wrapper -->
 
+<!-- Footer and sponsor ad section -->
 {% if page.title != 'Sparanoid' %}
   <!-- Insert ad here -->
 
@@ -95,10 +129,12 @@
   </footer>
 {% endif %}
 
+<!-- Add lazyload script for "Work" page and its posts -->
 {% if page.permalink == '/work/' or page.category == 'work' %}
   {% include lazyload.html %}
 {% endif %}
 
+<!-- Add FlexSlider script for posts with sliders -->
 {% if page.plugin == 'slider' %}
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="/{{ site.css }}/jquery.flexslider-min.js"></script>

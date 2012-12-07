@@ -2,22 +2,19 @@
 layout: default
 ---
 
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@{{ site.twitter }}">
-<meta name=twitter:creator content="@tunghsiao">
-<meta name=twitter:url content="{{ site.url }}/{{ page.url }}">
-<meta name=twitter:title content="{{ page.title | xml_escape }}">
-<meta name=twitter:description content="{{ page.excerpt | xml_escape }}">
-<meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
-
+<!-- Post template -->
 <article>
+
+  <!-- Post Title -->
   <hgroup>
     <h1>{% if page.link %}<a href={{ page.link }}>{{ page.title }} &rarr;</a>{% else %}{{ page.title }}{% endif %}</h1>
     {% if page.date %}<h2><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%b %d, %Y" }}</time>, by {{ site.user }}</h2>{% endif %}
     {% if page.desc %}<h2>{{ page.desc }}</h2>{% endif %}
   </hgroup>
 
+  <!-- Post content -->
   {{ content }}
 
+  <!-- A tweet button at then end of each post -->
   <a href="http://twitter.com/home?status={{ page.title | cgi_escape }}{{ " by @" | cgi_escape }}{{ site.twitter | cgi_escape }}{{ " http://" | cgi_escape }}{{ site.url | cgi_escape }}{{ page.url | cgi_escape }}{{ "/" | cgi_escape }}" role=tweet class=btn target=_blank>Tweet it</a>
 </article>
