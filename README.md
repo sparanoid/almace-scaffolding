@@ -8,7 +8,7 @@ License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License][cc].
 
-> Copyright (c) 2005-2012 Sparanoid
+> Copyright (c) 2005-2013 Sparanoid
 
 [jk]: https://github.com/mojombo/jekyll
 [sp]: http://sparanoid.com/
