@@ -15,6 +15,20 @@
 @sansSerif: "Helvetica Neue", "Hiragino Sans GB", sans-serif;
 @serif: Palatino, "Hiragino Mincho ProN", serif;
 
+// Transition mixin
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+
+// Borrowed from Bootstrap
+.vertical(@startColor: #444, @endColor: #333) {
+  background-color: mix(@startColor, @endColor, 60%);
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+  background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+  background-repeat: repeat-x;
+}
+
 // Invert color switcher for images and videos
 // :root { -webkit-filter: invert(100%); }
 
@@ -48,35 +62,30 @@
 // For modern browsers
 // 1. The original space content hack is removed here. No need to support Opera on my personal site.
 // 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements.
-
 .cf {
-  &:before,
-  &:after {
+  &:before, &:after {
     content: ""; /* 1 */
     display: table; /* 2 */
   }
+
   &:after {
     clear: both;
   }
 }
 
-.transition(@transition) {
-  -webkit-transition: @transition;
-          transition: @transition;
-}
-
-// Basic configurations
-* {
+// Basic reset
+p,
+ul, li,
+h1, h2, h3, h4, h5, h6,
+blockquote,
+hr {
   margin: 0;
   padding: 0;
-  border: 0;
   font-size: 100%;
-  font-family: inherit;
   line-height: 1;
-  text-decoration: none;
 }
 
-:root {
+body {
   color: @textColor;
   background: @backgroundColor;
   font-size: @baseFontSize;
@@ -87,8 +96,23 @@
   text-align: center;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
+
+  // A semitranslucent bar at the top of the page
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    content: "";
+    background: fade(@textColor, 2%);
+    border-bottom: 1px solid fade(@textColor, 2%);
+    z-index: 9999;
+    pointer-events: none;
+  }
 }
 
+// Global fixed width wrapper
 .wrapper {
   max-width: @thumbSize * 5 + @thumbPadding * 8; // Defined at work-list
   margin: 0 auto;
@@ -97,11 +121,17 @@
 
 a, button {
   color: @textColor;
+  text-decoration: none;
   .transition(~"color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease");
+
   &:hover {
     color: @linkColor;
     .transition(~"color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease");
   }
+}
+
+img, hr {
+  border: 0;
 }
 
 ins {
@@ -116,21 +146,8 @@ del {
   background: fade(@textColor, 6%);
 }
 
-// Core styles begin
-body:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  content: "";
-  background: fade(@textColor, 2%);
-  border-bottom: 1px solid fade(@textColor, 2%);
-  z-index: 9999;
-  pointer-events: none;
-}
-
-a[role=logo] {
+// Main site logo
+.logo {
   display: block;
   width: 0;
   height: 0;
@@ -140,41 +157,43 @@ a[role=logo] {
   border-color: transparent;
   border-bottom-color: @textColor;
   text-indent: -9999em;
+
   &:hover {
     border-bottom-color: @linkColor;
   }
 }
 
-// Borrowed from Bootstrap
-.vertical(@startColor: #444, @endColor: #333) {
-  background-color: mix(@startColor, @endColor, 60%);
-  background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-  background-image:   linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
-  background-repeat: repeat-x;
-}
-
-header.index {
+// A different logo only available in homepage
+.index { // header.index
   margin: 0 0 @space / 5;
   .vertical(#9475d1, #b67fd6);
-  a[role=logo] {
+
+  .logo {
     margin: @space / 2 auto 0;
     border-bottom-color: @backgroundColor;
+
     &:hover {
       border-bottom-color: fade(@backgroundColor, 70%);
     }
   }
+
+  // Post title
   h2 {
     padding: 0 5%;
+
     a {
       color: @backgroundColor;
       .font-face;
       font-size: @baseFontSize * 1.5;
-      border-bottom: transparent 1px solid; // We have to define this in order to make transition work
+      border-bottom: transparent 1px solid; // We have to define a transparent border in order to make transition work
+
       &:hover {
         border-bottom-color: @backgroundColor;
       }
     }
   }
+
+  // "LATEST WORK"
   h3 {
     .helvetica;
     padding-top: 64px;
@@ -183,32 +202,38 @@ header.index {
   }
 }
 
+// Global navigations font styles
 nav {
   .helvetica;
 }
 
-nav[role=navigation] {
+// Main navigation
+.navigation { // nav.navigation
   margin: 0 0 @space * 1.5;
   .cf;
-  ul {
-    li {
-      display: inline-block;
-      list-style: none;
-      line-height: 2;
-      a {
-        padding: 3px 1em;
-        font-weight: bold;
-      }
-      &[role=current] {
-        a {
-          color: @linkColor;
-        }
-      }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    line-height: 2;
+
+    a {
+      padding: 3px 1em;
+      font-weight: bold;
     }
   }
 }
 
-nav[role=pagination] {
+// Currently activated page or category a post it belongs to
+.current { // li.current
+  a {
+    color: @linkColor;
+  }
+}
+
+// Pagination for posts in category "note"
+.pagination { // nav.pagination
+
   a {
     position: absolute;
     top: 162px;
@@ -219,68 +244,86 @@ nav[role=pagination] {
     background: fade(@textColor, 5%);
     z-index: 9999;
     .transition(~"padding .1s ease");
-    [role=tooltip] {
-      position: absolute;
-      top: 23px;
-      white-space: nowrap;
-      opacity: 0;
-      padding: 7px 10px;
-      color: #fff;
-      background: fade(@linkColor, 95%);
-      pointer-events: none;
-      .transition(~"opacity .1s ease, padding .1s ease");
-    }
+
     &:hover {
-      [role=tooltip] {
+
+      .tooltip {
         opacity: 1;
       }
     }
-    &[role=next] {
+  }
+
+  .tooltip { // a.tooltip
+    position: absolute;
+    top: 23px;
+    white-space: nowrap;
+    opacity: 0;
+    padding: 7px 10px;
+    color: #fff;
+    background: fade(@linkColor, 95%);
+    pointer-events: none;
+    .transition(~"opacity .1s ease, padding .1s ease");
+  }
+
+  .next { // a.next
+    left: 0;
+
+    .tooltip {
       left: 0;
-      [role=tooltip] {
-        left: 0;
-      }
-      &:hover {
+    }
+
+    &:hover {
+      padding-left: 15px;
+
+      .tooltip {
         padding-left: 15px;
-        [role=tooltip] {
-          padding-left: 15px;
-        }
       }
     }
-    &[role=prev] {
+  }
+
+  .prev { // a.prev
+    right: 0;
+
+    .tooltip {
       right: 0;
-      [role=tooltip] {
-        right: 0;
-      }
-      &:hover {
+    }
+
+    &:hover {
+      padding-right: 15px;
+
+      .tooltip {
         padding-right: 15px;
-        [role=tooltip] {
-          padding-right: 15px;
-        }
       }
     }
   }
 }
 
+// Titles wrapper
 hgroup {
-  .font-face;
   padding-bottom: @space * 1.35;
-  > * {
-    font-weight: normal;
-  }
+
   h1 {
+    .font-face;
     margin: 0 0 .1em;
   }
+
   h2 {
     .helvetica;
   }
-  .status {
-    a {
-      &:hover {
-        color: fade(green, 80%);
-      }
-    }
-    & > *:first-child:before {
+
+  // TODO: performance opti.
+  & + .txt :first-child { // For example, hgroup + .txt h3:first-child
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+// Pserson status
+.status { // h2.status
+
+  a {
+
+    &:before {
       @s: 9px;
       display: inline-block;
       content: "";
@@ -290,320 +333,219 @@ hgroup {
       background: fade(@textColor, 20%);
       margin-right: @s;
     }
-    &.available > *:first-child:before {
+  }
+}
+
+.available {
+
+  a {
+    color: @textColor;
+
+    &:hover {
+      color: fade(green, 80%);
+    }
+
+    &:before {
       background: fade(green, 60%);
     }
-    &.unavailable > *:first-child:before {
+  }
+}
+.unavailable {
+
+  a {
+    color: fade(@textColor, 50%);
+
+    &:hover {
+      color: fade(red, 60%);
+    }
+
+    &:before {
       background: fade(red, 20%);
     }
   }
-  & + .txt :first-child { // For example, hgroup + .txt h3:first-child
-    margin-top: 0;
-    padding-top: 0;
-  }
 }
 
-article:not(.width-fix) {
-  max-width: @wrapperWidth; // Width fix for work-list in posts
+// Width fix for article element except .work-list
+.width-unfixed { // article.width-fix
+  max-width: 100%;
 }
 
+// Article wrapper
 article {
+  max-width: @wrapperWidth;
   margin: 0 auto @space * 1.35;
-  // For some specified posts in work category
-  .cf;
+  .cf; // For some specified posts in work category
+
   img, video, iframe {
     display: block;
     margin: 0 auto 40px;
     max-width: 100%;
   }
-  .txt {
-    overflow: hidden;
-    text-align: left;
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-            hyphens: auto;
-    a {
-      border-bottom: 1px dotted fade(@textColor, 30%); // Set larger value for invert color
-    }
-    p {
-      margin: 0 0 1.1em;
+}
+
+// All staff inside article .txt
+.txt {
+  overflow: hidden;
+  text-align: left;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+
+  a {
+    border-bottom: 1px dotted fade(@textColor, 30%); // Set larger value for invert color
+  }
+
+  p {
+    margin: 0 0 1.1em;
+    line-height: @baseLineHeight;
+  }
+
+  h3 {
+    .helvetica;
+    margin: @space 0 1.6em;
+  }
+
+  ul, ol {
+    margin: 0 0 1em 1em;
+
+    li {
       line-height: @baseLineHeight;
     }
-    h3 {
-      .helvetica;
-      margin: @space 0 1.6em;
+  }
+
+  blockquote {
+    position: relative;
+    padding-left: @space * .75;
+    font-style: italic;
+    .cf;
+
+    &:before {
+      position: absolute;
+      top: -16px;
+      left: -8px;
+      content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
+      font-size: 120px;
+      color: fade(@textColor, 70%);
+      font-family: @sansSerif;
+      font-style: normal;
+      z-index: -1;
+      pointer-events: none;
     }
-    ul, ol {
-      margin: 0 0 1em 1em;
-      li {
-        line-height: @baseLineHeight;
-      }
-    }
-    blockquote {
-      position: relative;
-      padding-left: @space * .75;
-      font-style: italic;
-      .cf;
+
+    cite {
+      float: right;
+      margin: 0 0 2em;
+      font-size: 85%;
+      color: fade(@textColor, 80%);
+
       &:before {
-        position: absolute;
-        top: -16px;
-        left: -8px;
-        content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
-        font-size: 120px;
-        color: fade(@textColor, 70%);
-        font-family: @sansSerif;
-        font-style: normal;
-        z-index: -1;
-        pointer-events: none;
-      }
-      cite {
-        float: right;
-        margin: 0 0 2em;
-        font-size: 85%;
-        color: fade(@textColor, 80%);
-        &:before {
-          content: "\2500\2500\00a0" // http://www.fileformat.info/info/unicode/char/2500/index.htm
-        }
+        content: "\2500\2500\00a0" // http://www.fileformat.info/info/unicode/char/2500/index.htm
       }
     }
-    sup {
-      font-size: 75%;
+  }
+
+  sup {
+    font-size: 75%;
+  }
+
+  hr {
+    .helvetica;
+    margin: @space 0 1.6em;
+    &:before {
+      content: attr(data-placeholder);
     }
-    hr {
+  }
+
+  abbr:after {
+    content: " (" attr(title) ")";
+  }
+
+  code, pre {
+    font-family: Menlo, monospace;
+    color: #68a;
+  }
+
+  // Newsletter subscription form in page "store"
+  form {
+
+    label {
       .helvetica;
-      margin: @space 0 1.6em;
-      &:before {
-        content: attr(data-placeholder);
-      }
-    }
-    abbr:after {
-      content: " (" attr(title) ")";
-    }
-    code, pre {
-      font-family: Menlo, monospace;
-      color: #68a;
+      display: block;
+      margin-bottom: @space * .3;
     }
 
-    // Newsletter subscription form in page "store"
-    form {
-      label {
-        .helvetica;
-        display: block;
-        margin-bottom: @space * .3;
-      }
-      input {
-        .helvetica;
-        display: block;
-        border: 1px solid fade(@textColor, 20%);
-        padding: 7px;
-        margin: 0 auto @space * .3;
-        width: 100%;
-        outline: none;
-        box-sizing: border-box;
-        border-radius: 0; // Remove border-radius for ios devices
-        -webkit-appearance: none; // Remove ios pre-defined style
-        &:focus {
-          border-color: @textColor;
-        }
-      }
-      button.btn {
-        display: block;
-        margin: 0 auto;
-      }
-    }
-
-    // Rest form validation styles, borrowed from Bootstrap
-    input, textarea, select {
-      &:focus:required:invalid {
-        &:focus {
-          background: fade(@linkColor, 5%);
-          border-color: @linkColor;
-          box-shadow: none; // Override Firefox default styles
-        }
-      }
-    }
-
-    // Form validation message bubble, borrowed from default WebKit styles
-    // More info: http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
-    ::-webkit-validation-bubble-message {
-      position: fixed;
-      top: 0;
-      left: 0;
+    input {
+      .helvetica;
+      display: block;
+      border: 1px solid fade(@textColor, 20%);
+      padding: 7px;
+      margin: 0 auto @space * .3;
       width: 100%;
-      height: auto;
-      background: fade(@linkColor, 95%);
-      color: @backgroundColor;
-      // Override default WebKit styles
-      min-width: 100%;
-      max-height: auto;
-      border: none;
-      padding: 20px 0;
-      border-radius: 0;
-      -webkit-box-shadow: none;
-    }
-    ::-webkit-validation-bubble-arrow {
-      display: none;
-    }
-    ::-webkit-validation-bubble-icon {
-      display: none;
-    }
-  } // .txt
-
-  // Broser frame for images in category "work"
-  .browser {
-    margin: 0 0 40px;
-    padding-top: 16px;
-    border-radius: 4px;
-    background: #e8e8e8;
-    border: 1px solid rgba(0, 0, 0, .4);
-    box-shadow: inset rgba(255, 255, 255, .6) 0 1px 0 0;
-    img {
-      margin: 0;
-      border-radius: 0 0 4px 4px;
-      box-shadow: rgba(0, 0, 0, .4) 0 -1px 0 0;
+      outline: none;
+      box-sizing: border-box;
+      border-radius: 0; // Remove border-radius for ios devices
+      -webkit-appearance: none; // Remove ios pre-defined style
+      &:focus {
+        border-color: @textColor;
+      }
     }
   }
 
-  // Special paragraph with an icon
-  .note, .store, .download {
-    @iconSize: 40px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: @iconSize @iconSize;
-    padding-left: @iconSize * 1.25;
+  // Rest form validation styles, borrowed from Bootstrap
+  input, textarea, select {
+    &:focus:required:invalid {
+      &:focus {
+        background: fade(@linkColor, 5%);
+        border-color: @linkColor;
+        box-shadow: none; // Override Firefox default styles
+      }
+    }
   }
-  .note {
-    background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>");
+
+  // Form validation message bubble, borrowed from default WebKit styles
+  // More info: http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
+  ::-webkit-validation-bubble-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: fade(@linkColor, 95%);
+    color: @backgroundColor;
+    // Override default WebKit styles
+    min-width: 100%;
+    max-height: auto;
+    border: none;
+    padding: 20px 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
   }
-  .store {
-    background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M20,0C8.954,0,0,8.954,0,20s8.954,20,20,20s20-8.954,20-20S31.046,0,20,0z M5,20c0-7.806,5.964-14.214,13.583-14.929 v3.574c-3.852,0.757-6.083,3.24-6.083,6.407c0,3.492,2.627,5.292,6.479,6.588c2.664,0.899,3.816,1.764,3.816,3.131 c0,1.44-1.404,2.232-3.456,2.232c-2.34,0-4.463-0.756-5.975-1.584l-1.08,4.211c1.368,0.792,3.708,1.44,6.119,1.548v3.734 C10.87,34.115,5,27.744,5,20z M21.931,34.862v-3.936c4.14-0.72,6.407-3.455,6.407-6.659c0-3.239-1.729-5.219-6.012-6.73 c-3.059-1.152-4.319-1.908-4.319-3.096c0-1.008,0.756-2.016,3.095-2.016c2.592,0,4.247,0.827,5.184,1.224l1.044-4.067 c-1.188-0.576-2.808-1.08-5.22-1.188V5.166C29.393,6.194,35,12.434,35,20C35,27.629,29.301,33.912,21.931,34.862z'/></svg>");
+
+  ::-webkit-validation-bubble-arrow {
+    display: none;
   }
-  .download {
-    background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M29.982,5.825c-0.469,0-0.922,0.074-1.375,0.142C26.867,2.87,23.65,0.808,20,0.808c-3.729,0-6.948,2.093-8.661,5.14 c-0.439-0.059-0.875-0.122-1.321-0.122C4.513,5.825,0,10.468,0,16c0,5.533,4.495,10,10,10h7v6h-5l8,8l8-8h-5v-6h7 c5.508,0,10-4.467,10-10C40,10.469,35.489,5.825,29.982,5.825z M30,21H10c-2.751,0-5-2.398-5-5.167c0-2.749,2.124-5.09,5.051-5.09 c1.73-0.001,2.464,0.587,3.394,1.203c0-1.807,2.229-6.122,6.555-6.122c2.496,0,3.952,2.242,4.441,2.735 c-1.945,1.957-2.845,4.457-2.412,7.752h0.691c0.573-2.291,2.455-5.557,7.279-5.557c2.749,0,5,2.311,5,5.078 C35,18.602,32.749,21,30,21z'/></svg>");
+
+  ::-webkit-validation-bubble-icon {
+    display: none;
   }
 }
 
+// Posts with Chinese characters
 [lang=zh] {
   text-align: justify; // Workaround solution for post with chinese
 }
 
-[role=tweet] {
+// Tweet button margin fix
+#tweet {
   margin-top: @space;
 }
 
-.txt[role=announcement] {
+// Centered text
+.center {
   text-align: center;
 }
 
-// Image list in "work"
-@thumbSize: 190px;
-@thumbPadding: 15px;
-@thumbFontSize: @baseFontSize * .7;
-
-ul[role^=work-list] {
-  margin: -@thumbPadding;
-  text-align: left;
-  .cf;
-  li {
-    position: relative;
-    list-style: none;
-    float: left;
-    margin: @thumbPadding;
-    a {
-      display: block;
-      width: @thumbSize;
-      height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
-      .font-face;
-      font-size: @thumbFontSize;
-      overflow: hidden; // For text
-    }
-    &:hover a {
-      opacity: 1;
-    }
-    p {
-      margin: @thumbPadding * 1.4 0 0;
-    }
-    time {
-      color: fade(@textColor, 30%);
-    }
-    img {
-      width: @thumbSize;
-      height: @thumbSize;
-      margin: 0; // Override: article img
-      background: @linkColor;
-    }
-  }
-  & ~ div.txt {
-    margin: @space * .5 0 0; // Better margin between to work lists
-  }
-}
-
-// Image navigation in post page
-h3[role=work-list-title] {
-  .helvetica;
-  margin: 0 0 20px;
-}
-
-// Post list in "note"
-div[role^=note-list] {
-  section {
-    margin: 0 0 @space * .2;
-    overflow: hidden;
-    h2 {
-      .font-face;
-      font-size: @baseFontSize * 2;
-      margin: 0 0 .1em;
-      font-weight: normal;
-      time {
-        color: fade(@textColor, 30%);
-      }
-      time + a {
-        line-height: 0; // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
-        vertical-align: 3px;
-      }
-    }
-  }
-  section:last-child {
-    margin-bottom: 0;
-  }
-}
-
-aside {
-  margin: 0 0 @space * 1.35;
-}
-
-aside[role=sponsor] {
-  max-width: @wrapperWidth;
-  clear: both;
-  .bsap {
-    .bsa_it_i { // Letter i = image
-      float: left;
-      padding-right: 20px;
-    }
-    .bsa_it_t { // Letter t = text
-      display: block;
-      font-size: .5em;
-      line-height: @baseLineHeight;
-    }
-    .bsa_it_d { // Letter d = description
-      display: block;
-      font-size: .9em;
-      line-height: @baseLineHeight;
-    }
-    .bsa_it_p {
-      display: block;
-      margin-top: 5px;
-      .helvetica;
-      a {
-        color: fade(@textColor, 40%);
-        &:hover {
-          color: @textColor;
-        }
-      }
-    }
-  }
-}
-
+// Button styles
 .btn {
   .helvetica;
   display: inline-block;
@@ -613,9 +555,170 @@ aside[role=sponsor] {
   padding: 7px 10px;
   cursor: pointer;
   outline: none;
+
   &:hover, &:focus {
     color: @backgroundColor;
     background: @linkColor;
+  }
+}
+
+// Broser frame for images in category "work"
+.browser {
+  margin: 0 0 40px;
+  padding-top: 16px;
+  border-radius: 4px;
+  background: #e8e8e8;
+  border: 1px solid rgba(0, 0, 0, .4);
+  box-shadow: inset rgba(255, 255, 255, .6) 0 1px 0 0;
+
+  img {
+    margin: 0;
+    border-radius: 0 0 4px 4px;
+    box-shadow: rgba(0, 0, 0, .4) 0 -1px 0 0;
+  }
+}
+
+// Special paragraph with an icon
+.note, .store, .download {
+  @iconSize: 40px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: @iconSize @iconSize;
+  padding-left: @iconSize * 1.25;
+}
+
+.note     { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>"); }
+.store    { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M20,0C8.954,0,0,8.954,0,20s8.954,20,20,20s20-8.954,20-20S31.046,0,20,0z M5,20c0-7.806,5.964-14.214,13.583-14.929 v3.574c-3.852,0.757-6.083,3.24-6.083,6.407c0,3.492,2.627,5.292,6.479,6.588c2.664,0.899,3.816,1.764,3.816,3.131 c0,1.44-1.404,2.232-3.456,2.232c-2.34,0-4.463-0.756-5.975-1.584l-1.08,4.211c1.368,0.792,3.708,1.44,6.119,1.548v3.734 C10.87,34.115,5,27.744,5,20z M21.931,34.862v-3.936c4.14-0.72,6.407-3.455,6.407-6.659c0-3.239-1.729-5.219-6.012-6.73 c-3.059-1.152-4.319-1.908-4.319-3.096c0-1.008,0.756-2.016,3.095-2.016c2.592,0,4.247,0.827,5.184,1.224l1.044-4.067 c-1.188-0.576-2.808-1.08-5.22-1.188V5.166C29.393,6.194,35,12.434,35,20C35,27.629,29.301,33.912,21.931,34.862z'/></svg>"); }
+.download { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M29.982,5.825c-0.469,0-0.922,0.074-1.375,0.142C26.867,2.87,23.65,0.808,20,0.808c-3.729,0-6.948,2.093-8.661,5.14 c-0.439-0.059-0.875-0.122-1.321-0.122C4.513,5.825,0,10.468,0,16c0,5.533,4.495,10,10,10h7v6h-5l8,8l8-8h-5v-6h7 c5.508,0,10-4.467,10-10C40,10.469,35.489,5.825,29.982,5.825z M30,21H10c-2.751,0-5-2.398-5-5.167c0-2.749,2.124-5.09,5.051-5.09 c1.73-0.001,2.464,0.587,3.394,1.203c0-1.807,2.229-6.122,6.555-6.122c2.496,0,3.952,2.242,4.441,2.735 c-1.945,1.957-2.845,4.457-2.412,7.752h0.691c0.573-2.291,2.455-5.557,7.279-5.557c2.749,0,5,2.311,5,5.078 C35,18.602,32.749,21,30,21z'/></svg>"); }
+
+// Image list in "work"
+@thumbSize: 190px;
+@thumbPadding: 15px;
+@thumbFontSize: @baseFontSize * .7;
+
+.work-list { // ul.work-list
+  margin: -@thumbPadding;
+  text-align: left;
+  .cf;
+
+  li {
+    position: relative;
+    list-style: none;
+    float: left;
+    margin: @thumbPadding;
+
+    a {
+      display: block;
+      width: @thumbSize;
+      height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
+      .font-face;
+      font-size: @thumbFontSize;
+      overflow: hidden; // For text
+    }
+
+    &:hover a {
+      opacity: 1;
+    }
+
+    p {
+      margin: @thumbPadding * 1.4 0 0;
+    }
+
+    time {
+      color: fade(@textColor, 30%);
+    }
+
+    img {
+      width: @thumbSize;
+      height: @thumbSize;
+      margin: 0; // Override: article img
+      background: @linkColor;
+    }
+  }
+
+  // Better margin between to work lists
+  & ~ div.txt {
+    margin: @space * .5 0 0;
+  }
+}
+
+// Image navigation in post page
+.work-list-title { // h3.work-list-title
+  .helvetica;
+  margin: 0 0 20px;
+}
+
+// Post list in "note"
+.note-list { // div.note-list
+
+  section {
+    margin: 0 0 @space * .2;
+    overflow: hidden;
+
+    h2 {
+      .font-face;
+      font-size: @baseFontSize * 2;
+      margin: 0 0 .1em;
+      font-weight: normal;
+
+      time {
+        color: fade(@textColor, 30%);
+      }
+
+      time + a {
+        line-height: 0; // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
+        vertical-align: 3px;
+      }
+    }
+  }
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Wrap sponsor and .work-list in post template
+aside {
+  margin: 0 0 @space * 1.35;
+}
+
+// Sponsor ad
+.sponsor { // aside.sponsor
+  max-width: @wrapperWidth;
+  clear: both;
+
+  // Letter i = image
+  .bsa_it_i {
+    float: left;
+    padding-right: 20px;
+  }
+
+  // Letter t = text
+  .bsa_it_t {
+    display: block;
+    font-size: .5em;
+    line-height: @baseLineHeight;
+  }
+
+  // Letter d = description
+  .bsa_it_d {
+    display: block;
+    font-size: .9em;
+    line-height: @baseLineHeight;
+  }
+
+  .bsa_it_p {
+    display: block;
+    margin-top: 5px;
+    .helvetica;
+
+    a {
+      color: fade(@textColor, 40%);
+
+      &:hover {
+        color: @textColor;
+      }
+    }
   }
 }
 
@@ -628,28 +731,28 @@ footer {
 .flexslider {
 
   // Slides
-  & > ul {
+  ul {
     list-style: none;
+  }
 
-    & > li {
-      display: none;
-      cursor: pointer;
-      -webkit-backface-visibility: hidden; // Hide the slides before the JS is loaded. Avoids image jumping
+  li {
+    display: none;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden; // Hide the slides before the JS is loaded. Avoids image jumping
 
-      &:first-child {
-        display: block; // Display the first image when scripts are not ready
-      }
+    &:first-child {
+      display: block; // Display the first image when scripts are not ready
+    }
 
-      .flex-caption {
-        .helvetica;
-        margin: -30px 0 30px;
-      }
+    .flex-caption {
+      .helvetica;
+      margin: -30px 0 30px;
     }
   }
 }
 
 // FlexSlider - No JavaScript fallback
-.no-js .flexslider > ul > li:first-child { display: block; }
+.no-js .flexslider ul li:first-child { display: block; }
 
 
 // Four thumbnails in a row
@@ -697,14 +800,16 @@ footer {
     padding-right: @padding;
   }
 
-  ul[role^=work-list] {
+  .work-list {
     li {
       float: none; // Make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
       margin-bottom: @thumbPadding * 2;
+
       img {
         width: 100%;
         height: auto; // Should be 100%, but Safari for iOS has stupid bug for it.
       }
+
       a {
         width: 100%;
         height: 100%;
