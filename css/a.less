@@ -607,33 +607,44 @@ article {
     float: left;
     margin: @thumbPadding;
 
-    a {
-      display: block;
-      width: @thumbSize;
-      height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
-      .font-face;
-      font-size: @thumbFontSize;
-      overflow: hidden; // For text
-    }
+    &:hover {
+      a {
+        opacity: 1;
+      }
 
-    &:hover a {
-      opacity: 1;
+      img {
+        .transition(-webkit-filter .1s ease);
+        -webkit-filter: none;
+                filter: none;
+      }
     }
+  }
 
-    p {
-      margin: @thumbPadding * 1.4 0 0;
-    }
+  a {
+    display: block;
+    width: @thumbSize;
+    height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
+    .font-face;
+    font-size: @thumbFontSize;
+    overflow: hidden; // For text
+  }
 
-    time {
-      color: fade(@textColor, 30%);
-    }
+  img {
+    width: @thumbSize;
+    height: @thumbSize;
+    margin: 0; // Override: article img
+    background: fade(@linkColor, 10%);
+    .transition(-webkit-filter .5s ease);
+    -webkit-filter: grayscale(.9);
+            filter: grayscale(.9);
+  }
 
-    img {
-      width: @thumbSize;
-      height: @thumbSize;
-      margin: 0; // Override: article img
-      background: @linkColor;
-    }
+  p {
+    margin: @thumbPadding * 1.4 0 0;
+  }
+
+  time {
+    color: fade(@textColor, 30%);
   }
 
   // Better margin between to work lists
@@ -780,6 +791,13 @@ footer {
 @media (max-device-width: 480px), (max-device-width: 1024px) {
   .wrapper {
     -webkit-text-size-adjust: none;
+  }
+
+  .work-list {
+    img {
+      -webkit-filter: none;
+              filter: none;
+    }
   }
 }
 
