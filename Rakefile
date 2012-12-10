@@ -1,6 +1,6 @@
 # General settings
-ssh_user = 'root@sparanoid.com'
-remote_root = '/srv/www/sparanoid.com/public_html'
+ssh_user      = 'root@sparanoid.com'
+remote_root   = '/srv/www/sparanoid.com/public_html'
 exclude_files = '--exclude=lab'
 
 # Default task, build static HTML pages and upload to my server with rsync
