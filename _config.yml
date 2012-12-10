@@ -10,6 +10,8 @@ server:       ture
 server_port:  4321
 exclude:
 - LICENSE
+- Gemfile
+- Gemfile.lock
 - Rakefile
 - README.md
 - a.less
@@ -19,8 +21,8 @@ domain:       sparanoid.com
 url:          http://sparanoid.com
 # file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
 # file:         http://d349cztnlupsuf.cloudfront.net
-# file:         http://rsrc.sparanoid.com
-file:         http://c1288.orca.io
+file:         http://rsrc.sparanoid.com
+# file:         http://c1288.orca.io
 css:          css
 feed:         feed/
 name:         Sparanoid

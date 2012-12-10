@@ -77,17 +77,17 @@
   <!-- Display a paginator if current post category is "note" -->
   {% if page.category == 'note' %}
     <nav class=pagination>
-      {% if page.next_in_categories.url %}
-        <a class=next href={{ page.next_in_categories.url }}/>
+      {% if page.cate_next.url %}
+        <a class=next href={{ page.cate_next.url }}/>
           <span>Next</span>
-          <span class=tooltip>{{ page.next_in_categories.title }}</span>
+          <span class=tooltip>{{ page.cate_next.title }}</span>
         </a>
       {% else %}
       {% endif %}
-      {% if page.previous_in_categories.url %}
-        <a class=prev href={{ page.previous_in_categories.url }}/>
+      {% if page.cate_prev.url %}
+        <a class=prev href={{ page.cate_prev.url }}/>
           <span>Prev</span>
-          <span class=tooltip>{{ page.previous_in_categories.title }}</span>
+          <span class=tooltip>{{ page.cate_prev.title }}</span>
         </a>
       {% else %}
       {% endif %}
