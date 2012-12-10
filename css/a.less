@@ -232,14 +232,18 @@ nav {
 }
 
 // Pagination for posts in category "note"
+@paginationFontSize: @baseFontSize / 2 - 2px;
+@paginationPaddingV: 7px;
+
 .pagination { // nav.pagination
 
   a {
     position: absolute;
     top: 162px;
     display: block;
-    padding: 7px 10px;
-    font-size: @baseFontSize / 2 - 2px;
+    padding: @paginationPaddingV 10px;
+    font-size: @paginationFontSize;
+    line-height: 1;
     letter-spacing: .2em;
     background: fade(@textColor, 5%);
     z-index: 9999;
@@ -255,7 +259,7 @@ nav {
 
   .tooltip { // a.tooltip
     position: absolute;
-    top: 23px;
+    top: @paginationFontSize + @paginationPaddingV * 2;
     white-space: nowrap;
     opacity: 0;
     padding: 7px 10px;
