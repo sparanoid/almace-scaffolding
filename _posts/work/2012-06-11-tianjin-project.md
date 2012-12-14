@@ -11,6 +11,8 @@ img-headline: tianjin-project.png
 
 <div class=txt>
 <p class=note>Now this project is featured on <a href="/work/tianjin-project-wef/">The World Economic Forum - Tianjin Davos 2012</a>. You can also check out the <a href="/lab/tianjin/">project page</a>.</p>
+
+<p class=download><a href="http://dl.sparanoid.com/Tianjin.ibooks">Download</a> it for iPad. (No iPad? Here’s a <a href="http://dl.sparanoid.com/Tianjin.pdf">PDF version</a>)</p>
 </div>
 
 <div class=txt>
