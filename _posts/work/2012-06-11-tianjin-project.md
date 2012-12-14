@@ -6,11 +6,10 @@ tag: design
 excerpt: A Detailed Introduction to Municipality of Tianjin
 thumb: tianjin-project.jpg
 plugin: slider
+img-headline: tianjin-project.png
 ---
 
 <div class=txt>
-<p><img src="{{ site.file }}/tianjin-project.png" width=400 alt="A Graduate Work from Tunghsiao Liu / A Detailed Introduction to Municipality of Tianjin"></p>
-
 <p class=note>Now this project is featured on <a href="/work/tianjin-project-wef/">The World Economic Forum - Tianjin Davos 2012</a>. You can also check out the <a href="/lab/tianjin/">project page</a>.</p>
 </div>
 
