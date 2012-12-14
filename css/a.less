@@ -75,7 +75,7 @@
 
 // Basic reset
 p,
-ul, li,
+ul, ol, li,
 h1, h2, h3, h4, h5, h6,
 blockquote,
 hr {
@@ -309,6 +309,11 @@ hgroup {
   h1 {
     .font-face;
     margin: 0 0 .1em;
+
+    // Override margin from article img
+    img {
+      margin-bottom: @baseFontSize * .6;
+    }
   }
 
   h2 {
@@ -387,7 +392,7 @@ article {
   }
 }
 
-// All staff inside article .txt
+// Basic staff inside article .txt
 .txt {
   overflow: hidden;
   text-align: left;
@@ -410,11 +415,15 @@ article {
   }
 
   ul, ol {
-    margin: 0 0 1em 1em;
+    margin: 0 0 1em 1.5em;
 
     li {
       line-height: @baseLineHeight;
     }
+  }
+
+  ol {
+    margin-left: 1.75em;
   }
 
   blockquote {
@@ -594,6 +603,25 @@ article {
 .note     { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>"); }
 .store    { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M20,0C8.954,0,0,8.954,0,20s8.954,20,20,20s20-8.954,20-20S31.046,0,20,0z M5,20c0-7.806,5.964-14.214,13.583-14.929 v3.574c-3.852,0.757-6.083,3.24-6.083,6.407c0,3.492,2.627,5.292,6.479,6.588c2.664,0.899,3.816,1.764,3.816,3.131 c0,1.44-1.404,2.232-3.456,2.232c-2.34,0-4.463-0.756-5.975-1.584l-1.08,4.211c1.368,0.792,3.708,1.44,6.119,1.548v3.734 C10.87,34.115,5,27.744,5,20z M21.931,34.862v-3.936c4.14-0.72,6.407-3.455,6.407-6.659c0-3.239-1.729-5.219-6.012-6.73 c-3.059-1.152-4.319-1.908-4.319-3.096c0-1.008,0.756-2.016,3.095-2.016c2.592,0,4.247,0.827,5.184,1.224l1.044-4.067 c-1.188-0.576-2.808-1.08-5.22-1.188V5.166C29.393,6.194,35,12.434,35,20C35,27.629,29.301,33.912,21.931,34.862z'/></svg>"); }
 .download { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M29.982,5.825c-0.469,0-0.922,0.074-1.375,0.142C26.867,2.87,23.65,0.808,20,0.808c-3.729,0-6.948,2.093-8.661,5.14 c-0.439-0.059-0.875-0.122-1.321-0.122C4.513,5.825,0,10.468,0,16c0,5.533,4.495,10,10,10h7v6h-5l8,8l8-8h-5v-6h7 c5.508,0,10-4.467,10-10C40,10.469,35.489,5.825,29.982,5.825z M30,21H10c-2.751,0-5-2.398-5-5.167c0-2.749,2.124-5.09,5.051-5.09 c1.73-0.001,2.464,0.587,3.394,1.203c0-1.807,2.229-6.122,6.555-6.122c2.496,0,3.952,2.242,4.441,2.735 c-1.945,1.957-2.845,4.457-2.412,7.752h0.691c0.573-2.291,2.455-5.557,7.279-5.557c2.749,0,5,2.311,5,5.078 C35,18.602,32.749,21,30,21z'/></svg>"); }
+
+// Reference notes and links in post
+.reflist {
+  font-size: .9em;
+  font-style: italic;
+}
+
+.cite, .ref {
+
+  &:target {
+    color: @linkColor;
+    text-shadow: 0 2px 15px @linkColor;
+  }
+
+}
+
+a.cite, a.ref {
+  border-bottom: none;
+}
 
 // Image list in "work"
 @thumbSize: 190px;
