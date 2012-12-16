@@ -549,6 +549,11 @@ article {
   text-align: justify; // Workaround solution for post with chinese
 }
 
+// Fix empty space when a paragraph starts with some asian punctuation marks
+.margin-fix:first-letter {
+  margin-left: -.6em;
+}
+
 // Tweet button margin fix
 #tweet {
   margin-top: @space;

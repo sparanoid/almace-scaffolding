@@ -1,5 +1,5 @@
 # Jekyll configurations
-source:       .
+source:       ./_source
 destination:  ./_site
 permalink:    /:categories/:title
 markdown:     rdiscount
@@ -9,11 +9,6 @@ auto:         true
 server:       ture
 server_port:  4321
 exclude:
-  - LICENSE
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
-  - README.md
   - a.less
 
 # Static images URL
