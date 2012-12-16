@@ -1,12 +1,15 @@
 # General settings
 ssh_user      = 'root@sparanoid.com'
 remote_root   = '/srv/www/sparanoid.com/public_html'
+assets        = 'http://rsrc.sparanoid.com'
 exclude_files = '--exclude=lab'
 
 # Default task, build static HTML pages and upload to my server with rsync
 desc 'Build and deploy'
 task :default do
-  system "jekyll --no-server --no-auto && rake minify && rsync -avz --delete #{exclude_files} _site/ #{ssh_user}:#{remote_root}"
+  system "jekyll --no-server --no-auto --no-future --file #{assets}"
+  Rake::Task["minify"].invoke
+  system "rsync -avz --delete #{exclude_files} _site/ #{ssh_user}:#{remote_root}"
   puts "Deploying to server ... done"
 end
 
