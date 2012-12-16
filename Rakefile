@@ -15,12 +15,14 @@ task :preview do
   }
 
   [jekyllPid, recessPid].each { |pid| Process.wait(pid) }
-
 end
 
 # Default task, build static HTML pages and upload to my server with rsync
 desc 'Build and deploy'
-task :default do
+task :default, :availability do |t, args|
+  args.with_defaults(:availability => 'free')
+  availability = args.availability
+  updateConfig "availability: #{availability}"
   system "jekyll --no-server --no-auto --no-future --file #{assets}"
   Rake::Task["minify"].invoke
   system "rsync -avz --delete #{exclude_files} _site/ #{ssh_user}:#{remote_root}"
@@ -45,3 +47,14 @@ task :minify do
   system "perl -i -p -e 's/\n//' ./_site/css/a.css"
   puts "Minifying HTML ... done"
 end
+
+private
+  def updateConfig(rep)
+    lines = IO.readlines("_config.yml");
+    lines[-1] = rep
+    File.open("_config.yml","w") do |file|
+      lines.each do |line|
+        file.write(line)
+      end
+    end
+  end
