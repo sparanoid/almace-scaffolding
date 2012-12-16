@@ -4,6 +4,20 @@ remote_root   = '/srv/www/sparanoid.com/public_html'
 assets        = 'http://rsrc.sparanoid.com'
 exclude_files = '--exclude=lab'
 
+task :preview do
+  system "recess _less/a.less:_source/css/a.css" unless File.exist?("_source/css/a.css")
+  jekyllPid = Process.spawn("jekyll")
+  recessPid = Process.spawn("recess _less/a.less:_source/css/a.css --watch")
+
+  trap("INT") {
+    [jekyllPid, recessPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+
+  [jekyllPid, recessPid].each { |pid| Process.wait(pid) }
+
+end
+
 # Default task, build static HTML pages and upload to my server with rsync
 desc 'Build and deploy'
 task :default do
