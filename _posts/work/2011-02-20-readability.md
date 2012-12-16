@@ -2,9 +2,9 @@
 layout: post
 title: Readability Buttons
 category: work
-tag:
+tag: design
 excerpt: A WordPress plugin to add readability.com widget on your site. A must-have plugin if you're a Readability publisher. This plugin also works fine with multisite enabled WordPress (aka. WordPress Mu).
-thumb: relative-url.png
+thumb: readability-thumb.png
 img-headline: readability.png
 ---
 
