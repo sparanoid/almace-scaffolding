@@ -2,7 +2,7 @@
 layout: post
 title: SlimBox & VoxGrowl
 category: work
-tag: design
+tag: project
 excerpt: The missing Growl styles for Mac OS X
 thumb: slimbox-and-voxgrowl.jpg
 bg: '#fefbed'
