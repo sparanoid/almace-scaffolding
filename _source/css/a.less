@@ -234,49 +234,42 @@ nav {
 }
 
 // Navigation for posts in category "note"
-.next, .prev { // nav a
-  @size: 56px;
-  position: fixed;
-  top: 45%;
-  margin-top: -@size / 2;
-  overflow: hidden;
-  display: block;
-  .font-face;
-  line-height: 1;
-  color: transparent;
-  background: rgba(0, 0, 0, .1);
-  z-index: 9999;
-  .transition(~"color .1s ease, background .1s ease");
+.post-nav {
+  .cf;
+  margin-top: @space / 5;
+  .transition(border-color .2s ease);
 
-  img {
-    width: @size;
-    height: @size;
-    float: left;
-    opacity: 0;
-    .transition(~"opacity .1s ease");
-  }
-
-  span {
-    display: block;
-    padding: 0 10px;
-  }
-
-  &:hover {
-    color: @textColor;
-    background: transparent;
-
-    img {
-      opacity: 1;
-    }
+  .next, .prev {
+    width: 45%;
   }
 }
 
 .next {
-  left: 0;
+  float: left;
+  text-align: left;
+  margin-left: -12px;
 }
 
 .prev {
-  right: 0;
+  float: right;
+  text-align: right;
+  margin-right: -12px;
+}
+
+.top {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-top: 2px;
+  border-style: solid;
+  border-width: 0 7.5px 13px 7.5px;
+  border-color: transparent;
+  border-bottom-color: @textColor;
+  text-indent: -9999em;
+
+  &:hover {
+    border-bottom-color: @linkColor;
+  }
 }
 
 // Titles wrapper
