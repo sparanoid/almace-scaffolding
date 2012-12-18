@@ -2,7 +2,7 @@
 layout: post
 title: foobar2000 Skin - MonoLite Plus
 category: work
-tag: design
+tag: project
 excerpt: A foobar2000 theme based on Columns UI
 thumb: monolite-plus-large.jpg
 bg: '#fff9ed'
