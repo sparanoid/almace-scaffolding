@@ -1,8 +1,9 @@
 # Jekyll configurations
 source:       ./_source
 destination:  ./_site
-permalink:    /:categories/:title
+plugins:      ./_plugins
 markdown:     rdiscount
+permalink:    /:categories/:title
 
 # Jekyll server settings
 auto:         true

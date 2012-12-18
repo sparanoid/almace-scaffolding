@@ -233,75 +233,50 @@ nav {
   }
 }
 
-// Pagination for posts in category "note"
-@paginationFontSize: @baseFontSize / 2 - 2px;
-@paginationPaddingV: 7px;
+// Navigation for posts in category "note"
+.next, .prev { // nav a
+  @size: 56px;
+  position: fixed;
+  top: 45%;
+  margin-top: -@size / 2;
+  overflow: hidden;
+  display: block;
+  .font-face;
+  line-height: 1;
+  color: transparent;
+  background: rgba(0, 0, 0, .1);
+  z-index: 9999;
+  .transition(~"color .1s ease, background .1s ease");
 
-.pagination { // nav.pagination
-
-  a {
-    position: absolute;
-    top: 162px;
-    display: block;
-    padding: @paginationPaddingV 10px;
-    font-size: @paginationFontSize;
-    line-height: 1;
-    letter-spacing: .2em;
-    background: fade(@textColor, 5%);
-    z-index: 9999;
-    .transition(~"padding .1s ease");
-
-    &:hover {
-
-      .tooltip {
-        opacity: 1;
-      }
-    }
-  }
-
-  .tooltip { // a.tooltip
-    position: absolute;
-    top: @paginationFontSize + @paginationPaddingV * 2;
-    white-space: nowrap;
+  img {
+    width: @size;
+    height: @size;
+    float: left;
     opacity: 0;
-    padding: 7px 10px;
-    color: #fff;
-    background: fade(@linkColor, 95%);
-    pointer-events: none;
-    .transition(~"opacity .1s ease, padding .1s ease");
+    .transition(~"opacity .1s ease");
   }
 
-  .next { // a.next
-    left: 0;
-
-    .tooltip {
-      left: 0;
-    }
-
-    &:hover {
-      padding-left: 15px;
-
-      .tooltip {
-        padding-left: 15px;
-      }
-    }
+  span {
+    display: block;
+    padding: 0 10px;
   }
 
-  .prev { // a.prev
-    right: 0;
+  &:hover {
+    color: @textColor;
+    background: transparent;
 
-    .tooltip {
-      right: 0;
-    }
-
-    &:hover {
-      padding-right: 15px;
-
-      .tooltip {
-        padding-right: 15px;
-      }
+    img {
+      opacity: 1;
     }
   }
+}
+
+.next {
+  left: 0;
+}
+
+.prev {
+  right: 0;
 }
 
 // Titles wrapper
@@ -335,14 +310,14 @@ hgroup {
   a {
 
     &:before {
-      @s: 9px;
+      @size: 9px;
       display: inline-block;
       content: "";
-      width: @s;
-      height: @s;
+      width: @size;
+      height: @size;
       border-radius: 50%;
       background: fade(@textColor, 20%);
-      margin-right: @s;
+      margin-right: @size;
     }
   }
 }
@@ -623,7 +598,6 @@ article {
     color: @linkColor;
     text-shadow: 0 2px 15px @linkColor;
   }
-
 }
 
 a.cite, a.ref {
@@ -693,12 +667,6 @@ a.cite, a.ref {
   }
 }
 
-// Image navigation in post page
-.work-list-title { // h3.work-list-title
-  .helvetica;
-  margin: 0 0 20px;
-}
-
 // Post list in "note"
 .note-list { // div.note-list
 
@@ -729,49 +697,49 @@ a.cite, a.ref {
 }
 
 // Wrap sponsor and .work-list in post template
-aside {
-  margin: 0 0 @space * 1.35;
-}
-
+// aside {
+//   margin: 0 0 @space * 1.35;
+// }
+//
 // Sponsor ad
-.sponsor { // aside.sponsor
-  max-width: @wrapperWidth;
-  clear: both;
-
-  // Letter i = image
-  .bsa_it_i {
-    float: left;
-    padding-right: 20px;
-  }
-
-  // Letter t = text
-  .bsa_it_t {
-    display: block;
-    font-size: .5em;
-    line-height: @baseLineHeight;
-  }
-
-  // Letter d = description
-  .bsa_it_d {
-    display: block;
-    font-size: .9em;
-    line-height: @baseLineHeight;
-  }
-
-  .bsa_it_p {
-    display: block;
-    margin-top: 5px;
-    .helvetica;
-
-    a {
-      color: fade(@textColor, 40%);
-
-      &:hover {
-        color: @textColor;
-      }
-    }
-  }
-}
+// .sponsor { // aside.sponsor
+//   max-width: @wrapperWidth;
+//   clear: both;
+//
+//   // Letter i = image
+//   .bsa_it_i {
+//     float: left;
+//     padding-right: 20px;
+//   }
+//
+//   // Letter t = text
+//   .bsa_it_t {
+//     display: block;
+//     font-size: .5em;
+//     line-height: @baseLineHeight;
+//   }
+//
+//   // Letter d = description
+//   .bsa_it_d {
+//     display: block;
+//     font-size: .9em;
+//     line-height: @baseLineHeight;
+//   }
+//
+//   .bsa_it_p {
+//     display: block;
+//     margin-top: 5px;
+//     .helvetica;
+//
+//     a {
+//       color: fade(@textColor, 40%);
+//
+//       &:hover {
+//         color: @textColor;
+//       }
+//     }
+//   }
+// }
 
 footer {
   .helvetica;
@@ -809,14 +777,14 @@ footer {
 // Four thumbnails in a row
 @media (max-width: 1238px) {
   .wrapper {
-    max-width: @thumbSize * 4 + @thumbPadding * 6; // Defined at work-list
+    max-width: @thumbSize * 4 + @thumbPadding * 6; // Defined at .work-list
   }
 }
 
 // Three thumbnails in a row
 @media (max-width: 1018px) {
   .wrapper {
-    max-width: @thumbSize * 3 + @thumbPadding * 4; // Defined at work-list
+    max-width: @thumbSize * 3 + @thumbPadding * 4; // Defined at .work-list
   }
 }
 
@@ -824,6 +792,28 @@ footer {
 @media (max-width: 640px) {
   article .txt {
     font-size: 80%;
+  }
+
+  // Thumbnail fix for page "Work"
+  .work-list {
+    li {
+      float: none; // Make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
+      margin-bottom: @thumbPadding * 2;
+
+      img {
+        width: 100%;
+        height: auto; // Should be 100%, but Safari for iOS has stupid bug for it.
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .next, .prev {
+    display: none;
   }
 }
 
@@ -856,23 +846,6 @@ footer {
     @padding: 32px;
     padding-left: @padding;
     padding-right: @padding;
-  }
-
-  .work-list {
-    li {
-      float: none; // Make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
-      margin-bottom: @thumbPadding * 2;
-
-      img {
-        width: 100%;
-        height: auto; // Should be 100%, but Safari for iOS has stupid bug for it.
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 }
 
