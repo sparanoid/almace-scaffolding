@@ -76,39 +76,6 @@
 
 </div><!-- .wrapper -->
 
-<!-- Place a paginator -->
-{% if page.category == 'work' %}
-<nav>
-  {% if page.cate_next.url %}
-  <a class=next href={{ page.cate_next.url }}/ title="{{ page.cate_next.title }}">
-    <img src="{{ site.file }}/thumb/{% if page.cate_next.thumb %}{{ page.cate_next.thumb }}{% else %}na.png{% endif %}">
-  </a>
-  {% endif %}
-
-  {% if page.cate_prev.url %}
-  <a class=prev href={{ page.cate_prev.url }}/ title="{{ page.cate_prev.title }}">
-    <img src="{{ site.file }}/thumb/{% if page.cate_prev.thumb %}{{ page.cate_prev.thumb }}{% else %}na.png{% endif %}">
-  </a>
-  {% endif %}
-</nav>
-{% endif %}
-
-{% if page.category == 'note' %}
-<nav>
-  {% if page.cate_next.url %}
-  <a class=next href={{ page.cate_next.url }}/ title="{{ page.cate_next.title }}">
-    <span>{{ page.cate_next.title | truncate: 1, '' }}</span>
-  </a>
-  {% endif %}
-
-  {% if page.cate_prev.url %}
-  <a class=prev href={{ page.cate_prev.url }}/ title="{{ page.cate_prev.title }}">
-    <span>{{ page.cate_prev.title | truncate: 1, '' }}</span>
-  </a>
-  {% endif %}
-</nav>
-{% endif %}
-
 <!-- Footer and sponsor ad section -->
 {% if page.title != 'Sparanoid' %}
   <!-- Insert ad here -->
