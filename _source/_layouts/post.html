@@ -19,6 +19,22 @@ layout: default
   <!-- Post content -->
   {{ content }}
 
+  <nav class=post-nav>
+    {% if page.cate_next.url %}
+      <a class=next href={{ page.cate_next.url }}/ title="{{ page.cate_next.title }}">&lsaquo; {{ page.cate_next.title }}</a>
+    {% else %}
+      <a class=next>&nbsp;</a>
+    {% endif %}
+
+    <a class=top href="#top" title=Top>Top</a>
+
+    {% if page.cate_prev.url %}
+      <a class=prev href={{ page.cate_prev.url }}/ title="{{ page.cate_prev.title }}">{{ page.cate_prev.title }} &rsaquo;</a>
+    {% else %}
+      <a class=prev>&nbsp;</a>
+    {% endif %}
+  </nav>
+
   <!-- A tweet button at then end of each post -->
   <a href="http://twitter.com/home?status={{ page.title | cgi_escape }}{{ " by @" | cgi_escape }}{{ site.twitter | cgi_escape }}{{ " http://" | cgi_escape }}{{ site.url | cgi_escape }}{{ page.url | cgi_escape }}{{ "/" | cgi_escape }}" id=tweet class=btn target=_blank>Tweet it</a>
 </article>
