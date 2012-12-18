@@ -13,7 +13,7 @@
   <meta name=twitter:creator content="@tunghsiao">
   <meta name=twitter:url content="{{ site.url }}{{ page.url }}">
   <meta name=twitter:title content="{{ page.title | xml_escape }}">
-  <meta name=twitter:description content="{{ page.excerpt | xml_escape }}">
+  <meta name=twitter:description content="{{ page.content | strip_html | xml_escape | truncate: 200, '' }}">
   <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
 {% endif %}
 
@@ -24,7 +24,7 @@
   <meta name=twitter:creator content="@tunghsiao">
   <meta name=twitter:url content="{{ site.url }}{{ page.url }}">
   <meta name=twitter:title content="{{ page.title | xml_escape }}">
-  <meta name=twitter:description content="{{ page.content | xml_escape }}">
+  <meta name=twitter:description content="{{ page.content | strip_html | xml_escape | truncate: 200, '' }}">
 {% endif %}
 
 <!-- Error page specified styles -->
@@ -74,51 +74,40 @@
   <!-- All dynamic, user generated content go here. It's linked with page.html and post.html at the moment -->
   {{ content }}
 
-  <!-- Display a paginator if current post category is "note" -->
-  {% if page.category == 'note' %}
-    <nav class=pagination>
-      {% if page.cate_next.url %}
-        <a class=next href={{ page.cate_next.url }}/>
-          <span>Next</span>
-          <span class=tooltip>{{ page.cate_next.title }}</span>
-        </a>
-      {% else %}
-      {% endif %}
-      {% if page.cate_prev.url %}
-        <a class=prev href={{ page.cate_prev.url }}/>
-          <span>Prev</span>
-          <span class=tooltip>{{ page.cate_prev.title }}</span>
-        </a>
-      {% else %}
-      {% endif %}
-    </nav>
-  {% endif %}
-
-  <!-- Display post thumbnails for tag "design" if current post category is "work" -->
-  {% if page.tag == 'design' %}
-    <aside>
-      <h3 class=work-list-title>Other Design Works</h3>
-      <ul class=work-list>
-        {% for post in site.tags.design %}
-          {% include work-thumb.html %}
-        {% endfor %}
-      </ul>
-    </aside>
-  {% endif %}
-
-  <!-- Display post thumbnails for tag "drawing" if current post category is "work" -->
-  {% if page.tag == 'drawing' %}
-    <aside>
-      <h3 class=work-list-title>Other Sketches / Paintings</h3>
-      <ul class=work-list>
-        {% for post in site.tags.drawing %}
-          {% include work-thumb.html %}
-        {% endfor %}
-      </ul>
-    </aside>
-  {% endif %}
-
 </div><!-- .wrapper -->
+
+<!-- Place a paginator -->
+{% if page.category == 'work' %}
+<nav>
+  {% if page.cate_next.url %}
+  <a class=next href={{ page.cate_next.url }}/ title="{{ page.cate_next.title }}">
+    <img src="{{ site.file }}/thumb/{% if page.cate_next.thumb %}{{ page.cate_next.thumb }}{% else %}na.png{% endif %}">
+  </a>
+  {% endif %}
+
+  {% if page.cate_prev.url %}
+  <a class=prev href={{ page.cate_prev.url }}/ title="{{ page.cate_prev.title }}">
+    <img src="{{ site.file }}/thumb/{% if page.cate_prev.thumb %}{{ page.cate_prev.thumb }}{% else %}na.png{% endif %}">
+  </a>
+  {% endif %}
+</nav>
+{% endif %}
+
+{% if page.category == 'note' %}
+<nav>
+  {% if page.cate_next.url %}
+  <a class=next href={{ page.cate_next.url }}/ title="{{ page.cate_next.title }}">
+    <span>{{ page.cate_next.title | truncate: 1, '' }}</span>
+  </a>
+  {% endif %}
+
+  {% if page.cate_prev.url %}
+  <a class=prev href={{ page.cate_prev.url }}/ title="{{ page.cate_prev.title }}">
+    <span>{{ page.cate_prev.title | truncate: 1, '' }}</span>
+  </a>
+  {% endif %}
+</nav>
+{% endif %}
 
 <!-- Footer and sponsor ad section -->
 {% if page.title != 'Sparanoid' %}
@@ -130,7 +119,7 @@
 {% endif %}
 
 <!-- Add lazyload script for "Work" page and its posts -->
-{% if page.permalink == '/work/' or page.category == 'work' %}
+{% if page.permalink == '/work/' %}
   {% include lazyload.html %}
 {% endif %}
 
