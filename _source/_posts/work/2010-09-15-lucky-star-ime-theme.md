@@ -2,7 +2,7 @@
 layout: post
 title: Lucky Star for QQ / Sogou Pinyin
 category: work
-tag: design
+tag: project
 excerpt: Based on Lucky☆Star「らき☆すた」
 thumb: lucky-star-ime-theme.jpg
 bg: '#fcebef'
