@@ -26,6 +26,8 @@ task :default, :availability do |t, args|
   system "jekyll --no-server --no-auto --no-future --file #{assets}"
   Rake::Task["minify"].invoke
   system "rsync -avz --delete #{exclude_files} _site/ #{ssh_user}:#{remote_root}"
+  # Reset availability
+  updateConfig "availability: free"
   puts "Deploying to server ... done"
 end
 
