@@ -7,11 +7,12 @@
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
 <!-- Define a description for better SEO result, exclude homepage -->
+{% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
 {% if page.permalink != '/' %}
   {% if page.excerpt %}
-    <meta name=description content="{{ page.excerpt | xml_escape | }} - {{ page.content | strip_html | xml_escape | truncate: 50 }}">
+    <meta name=description content="{{ page.excerpt | xml_escape | }} - {{ content_description }}">
   {% else %}
-    <meta name=description content="{{ page.content | strip_html | xml_escape | truncate: 100 }}">
+    <meta name=description content="{{ content_description }}">
   {% endif %}
 {% endif %}
 
@@ -22,7 +23,7 @@
   <meta name=twitter:creator content="@tunghsiao">
   <meta name=twitter:url content="{{ site.url }}{{ page.url }}">
   <meta name=twitter:title content="{{ page.title | xml_escape }}">
-  <meta name=twitter:description content="{{ page.content | strip_html | xml_escape | truncate: 220, '' }}">
+  <meta name=twitter:description content="{{ content_description }}">
   {% if page.category == 'work' %}
   <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
   {% endif %}
