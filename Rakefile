@@ -1,7 +1,7 @@
 # General settings
 ssh_user      = 'root@sparanoid.com'
 remote_root   = '/srv/www/sparanoid.com/public_html'
-assets        = 'http://rsrc.sparanoid.com'
+assets        = 'http://d349cztnlupsuf.cloudfront.net'
 exclude_files = '--exclude=lab'
 
 task :preview do
@@ -18,6 +18,8 @@ task :preview do
 end
 
 # Default task, build static HTML pages and upload to my server with rsync
+# Set availability to 'free': `rake` or `rake default[free]`
+# Set availability to 'busy': `rake default[busy]`
 desc 'Build and deploy'
 task :default, :availability do |t, args|
   args.with_defaults(:availability => 'free')
