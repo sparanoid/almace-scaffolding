@@ -92,6 +92,10 @@ hr {
   line-height: 1;
 }
 
+:root {
+  .webkit-fix;
+}
+
 body {
   color: @textColor;
   background: @backgroundColor;
@@ -175,7 +179,7 @@ del {
 .index { // header.index
   margin: 0 0 @space / 5;
   // .vertical(#9475d1, #b67fd6); // tianjin-project-wef
-  .vertical(#533790, #533790); // corner-bracket-lover
+  .vertical(#f86621, #f86621); // corner-bracket-lover
 
   .logo {
     margin: @space / 2 auto 0;
@@ -662,6 +666,10 @@ a.cite, a.ref {
         line-height: 0; // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
         vertical-align: 3px;
       }
+    }
+
+    .txt {
+      margin: @space / 5 auto @space;
     }
   }
 
