@@ -73,6 +73,13 @@
   }
 }
 
+// This fix some peformance issues in WebKit, such as transform, webkit-filter in retina displays, and more.
+.webkit-fix {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
 // Basic reset
 p,
 ul, ol, li,
@@ -96,6 +103,7 @@ body {
   text-align: center;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
+  .webkit-fix;
 
   // A semitranslucent bar at the top of the page
   &:before {
@@ -625,8 +633,15 @@ a.cite, a.ref {
     margin: @thumbPadding;
 
     &:hover {
+
       a {
         opacity: 1;
+      }
+
+      img {
+        .transition(-webkit-filter .1s ease);
+        -webkit-filter: none;
+                filter: none;
       }
     }
   }
@@ -646,6 +661,10 @@ a.cite, a.ref {
     margin: 0; // Override: article img
     background: fade(@linkColor, 10%);
     color: transparent; // Hide img alt
+    .webkit-fix;
+    .transition(-webkit-filter .5s ease);
+    -webkit-filter: grayscale(.9);
+            filter: grayscale(.9);
   }
 
   p {
@@ -816,6 +835,13 @@ footer {
 @media (max-device-width: 480px), (max-device-width: 1024px) {
   .wrapper {
     -webkit-text-size-adjust: none;
+  }
+
+  .work-list {
+    img {
+      -webkit-filter: none;
+              filter: none;
+    }
   }
 }
 
