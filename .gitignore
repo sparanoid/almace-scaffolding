@@ -5,6 +5,3 @@
 _site
 _build
 *.css
-
-# CodeKit specified
-codekit-config.json
