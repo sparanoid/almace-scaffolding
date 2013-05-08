@@ -1,9 +1,11 @@
 # General settings
 ssh_user      = 'root@sparanoid.com'
 remote_root   = '/srv/www/sparanoid.com/public_html'
-assets        = 'http://d349cztnlupsuf.cloudfront.net'
-static_files  = '~/Dropbox/Sites/static.sparanoid.com/'
 exclude_files = '--exclude=lab'
+static_files  = '~/Dropbox/Sites/static.sparanoid.com/'
+assets_dev    = 'http://sparanoid.s3-website-us-east-1.amazonaws.com'
+assets        = 'http://d349cztnlupsuf.cloudfront.net'
+# assets        = 'http://rsrc.sparanoid.com'
 
 task :preview do
   system "recess _less/a.less:_source/css/a.css" unless File.exist?("_source/css/a.css")
@@ -18,6 +20,13 @@ task :preview do
   [jekyllPid, recessPid].each { |pid| Process.wait(pid) }
 end
 
+
+# Serve task
+desc 'Serve and watch Jekyll instance'
+task :serve do
+  sh "jekyll serve --watch"
+end
+
 # Default task, build static HTML pages and upload to my server with rsync
 # Set availability to 'free': `rake` or `rake default[free]`
 # Set availability to 'busy': `rake default[busy]`
@@ -26,19 +35,21 @@ task :default, :availability do |t, args|
   args.with_defaults(:availability => 'free')
   availability = args.availability
   updateConfig "availability: #{availability}"
-  system "jekyll --no-server --no-auto --no-future --file #{assets}"
+  updateConfig "file:         #{assets}"
+  system "jekyll build"
   Rake::Task["minify"].invoke
   system "rsync -avz --delete #{exclude_files} _site/ #{ssh_user}:#{remote_root}"
   # Reset availability
   updateConfig "availability: free"
-  puts "Deploying to server ... done"
+  updateConfig "file:         #{assets_dev}"
+  puts "Deploying to server... done"
 end
 
 # Sync static files to Amazon S3
 desc 'Sync static files to S3'
 task :s3 do
   sh "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' #{static_files} s3://sparanoid/"
-  puts "Syncing static files to Amazon S3 ... done"
+  puts "Syncing static files to Amazon S3... done"
 end
 
 # Minify HTML ouput for better performance
@@ -50,7 +61,7 @@ task :minify do
   # More info: http://yuilibrary.com/projects/yuicompressor/ticket/2528159
   # sh "java -jar _build/yuicompressor.jar --type css _site/css/a.css -o _site/css/a.css"
   system "perl -i -p -e 's/\n//' ./_site/css/a.css"
-  puts "Minifying HTML ... done"
+  puts "Minifying HTML... done"
 end
 
 private
