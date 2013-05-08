@@ -2,6 +2,7 @@
 ssh_user      = 'root@sparanoid.com'
 remote_root   = '/srv/www/sparanoid.com/public_html'
 assets        = 'http://d349cztnlupsuf.cloudfront.net'
+static_files  = '~/Dropbox/Sites/static.sparanoid.com/'
 exclude_files = '--exclude=lab'
 
 task :preview do
@@ -36,7 +37,7 @@ end
 # Sync static files to Amazon S3
 desc 'Sync static files to S3'
 task :s3 do
-  sh "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' ~/dropbox/sparanoid-web/static.sparanoid.com/ s3://sparanoid/"
+  sh "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' #{static_files} s3://sparanoid/"
   puts "Syncing static files to Amazon S3 ... done"
 end
 
