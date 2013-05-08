@@ -15,6 +15,7 @@ future:       false
 # Other custom settings
 domain:       sparanoid.com
 url:          http://sparanoid.com
+file:         http://d349cztnlupsuf.cloudfront.net
 css:          css
 feed:         feed/
 name:         Sparanoid
@@ -23,4 +24,4 @@ email:        t@sparanoid.com
 slogan:       I make things that don't suck.
 twitter:      sparanoid
 donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
-file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
+availability: free

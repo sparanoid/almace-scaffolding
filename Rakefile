@@ -35,13 +35,11 @@ task :default, :availability do |t, args|
   args.with_defaults(:availability => 'free')
   availability = args.availability
   updateConfig "availability: #{availability}"
-  updateConfig "file:         #{assets}"
+  # TODO: update assets URL while building
   system "jekyll build"
   Rake::Task["minify"].invoke
   system "rsync -avz --delete #{exclude_files} _site/ #{ssh_user}:#{remote_root}"
-  # Reset availability
-  updateConfig "availability: free"
-  updateConfig "file:         #{assets_dev}"
+  updateConfig "availability: free" # Reset availability
   puts "Deploying to server... done"
 end
 
