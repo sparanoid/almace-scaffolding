@@ -1,15 +1,15 @@
-sparanoid.com
-=============
+# Sparanoid
 
-[Jekyll][jk] runing on [sparanoid.com][sp], codename `Auratus`, version 21.
+[Jekyll](https://github.com/mojombo/jekyll) runing on [sparanoid.com](http://sparanoid.com/), codename `Auratus`, version 21.
 
-License
--------
+## License
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License][cc].
+Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
 
-> Copyright (c) 2005-2013 Tunghsiao Liu
+- `_/source/_posts/`
+- `_/source/apple-touch-icon-precomposed.png`
+- `_/source/favicon.ico`
 
-[jk]: https://github.com/mojombo/jekyll
-[sp]: http://sparanoid.com/
-[cc]: http://creativecommons.org/licenses/by-nc-nd/3.0/
+All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
+
+Copyright (c) 2005-2013 Tunghsiao Liu. Rights reserved as indicated above.
