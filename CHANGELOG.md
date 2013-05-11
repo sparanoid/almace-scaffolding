@@ -59,6 +59,8 @@
 - Better configuration structure.
 - Updates gitignore (`codekit-config.json` removed since it's no longer serving me)
 - Remove support for `--file` flag
+- Updates readme
+- Adds CONTRIBUTING.md and CHANGELOG.md
 
 ## 21 (December 10, 2012)
 
