@@ -8,7 +8,6 @@ Most of changes are generated using `git log` command to get things done:
 
 - Hide img `alt`
 - Update post 'Project Railgun'
-- Better Rakefile
 - Add posts for newly released plugins.
 - Update old post with 'img-headline'.
 - Add `.reflist`, `.ref`, `.cite` for reference links in post
