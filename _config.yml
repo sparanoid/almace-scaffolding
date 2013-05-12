@@ -15,7 +15,7 @@ future:       false
 # Other custom settings
 domain:       sparanoid.com
 url:          http://sparanoid.com
-file:         http://d349cztnlupsuf.cloudfront.net
+file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
 css:          css
 feed:         feed/
 name:         Sparanoid
