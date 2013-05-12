@@ -450,13 +450,50 @@ Most of changes are generated using `git log` command to get things done:
 
 - BUMP version to 15 from old repo
 
-## 14 (2011)
+## 14-finale (September 7, 2011)
 
 - ADD fonts back due to the lack support of Firefox
 - ADD new webkit gradient style
 - UPDATE font files to CloudFront
 - UPDATE prepared for upcomming version
 - UPDATE URL for easy development
+
+## 14.1 (February 11, 2011)
+
+- UPDATE file structures
+- FIX navigation in index
+- UPDATE HTML structure and CSS cleanup
+- UPDATE index display settings
+- UPDATE Atom output
+- UPDATE Cloudfront files URL
+- ADD error 404 page
+- UPDATE assets files URL
+- UPDATE host font files elsewhere
+- UPDATE error page
+
+## 14 (February 8, 2011)
+
+- UPDATE readme and license
+- CREATE auto update script, inspired by https://github.com/henrik/henrik.nyh.se
+- FIX datetime valid XML schema
+- UPDATE delploy settings
+- UPDATE site navigation
+- UPDATE merge colors value to the same places
+- FIX minor color fixed in nav
+- UPDATE no more dark styles, CSS cleanup
+- ADD current nav style
+- FIX media query bug processed by yui compressor
+- UPDATE footer DELETE redundant white spaces
+- UPDATE deploy settings
+- UPDATE page navigation
+- UPDATE page navigation, transition cleanup
+- UPDATE nav transition effect, HTML markup cleanup
+- DELETE fade effect on page navigation
+- UPDATE page navigation font size and paddings
+- UPDATE decoration position
+- UPDATE no more fluid position
+- UPDATE deploy settings
+- UPDATE codes cleanup and some minor changes
 
 ## 13
 
@@ -506,19 +543,6 @@ Source code not available
 
 Source code not available
 
-## 1.1
-
-- UPDATE file structures
-- FIX navigation in index
-- UPDATE HTML structure and CSS cleanup
-- UPDATE index display settings
-- UPDATE Atom output
-- UPDATE Cloudfront files URL
-- ADD error 404 page
-- UPDATE assets files URL
-- UPDATE host font files elsewhere
-- UPDATE error page
-
-## 1.0
+## 1 (2005)
 
 - Initial release
