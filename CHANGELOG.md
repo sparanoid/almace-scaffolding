@@ -2,7 +2,7 @@
 
 Most of changes are generated using `git log` command to get things done:
 
-	git log 21..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /' > tmp.txt
+	git log 21..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'
 
 ## Head
 
