@@ -44,7 +44,7 @@ Most of changes are generated using `git log` command to get things done:
 - Add exclude search list for Textmate
 - Fix `site.url` for Twitter share button
 - Update Jekyll to 0.12.1
-- info@sparanoid.com -> t@sparanoid.com
+- `info@sparanoid.com` -> `t@sparanoid.com`
 - Remove post navigation
 - newsletter.sparanoid.com instead of sparanoid.createsend.com
 - Remove WebKit filter effect, not well supported on Retina Display
