@@ -6,7 +6,7 @@ Most of changes are generated using `git log` command to get things done:
 
 ## Head
 
-- Hide img alt
+- Hide img `alt`
 - Update post 'Project Railgun'
 - Better Rakefile
 - Add posts for newly released plugins.
