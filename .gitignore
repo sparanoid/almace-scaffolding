@@ -4,4 +4,5 @@
 # Jekyll specified
 _site
 _build
+*.log
 *.css
