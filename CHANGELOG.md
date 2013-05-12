@@ -63,8 +63,17 @@ Most of changes are generated using `git log` command to get things done:
 - Better configuration structure.
 - Updates gitignore (`codekit-config.json` removed since it's no longer serving me)
 - Remove support for `--file` flag
-- Updates readme
 - Adds CONTRIBUTING.md and CHANGELOG.md
+- Using the following command to update changelog: `git log 21..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'`
+- Better changelog style
+- Adds release date to changelog
+- Updates changelog with generation instructions
+- Fix changelog tab indent
+- No more `tmp.txt` generated from changelog generator command
+- Adds ATTRIBUTION.md based on teach.github.com
+- Simplifies license in readme
+- Updates `.gitignore`, remove logs from repo
+- Better rake build script for handling image assets URL
 
 ## 21 (December 10, 2012)
 
@@ -344,7 +353,6 @@ Most of changes are generated using `git log` command to get things done:
 - Update ignore files
 - Better top bar
 - Update error page
-- Update readme
 - Update navigation padding
 - Remove empty space
 - Add translucent gradient at the bottom of the page
