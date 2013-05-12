@@ -94,7 +94,7 @@
 - Fix `.paginaton` padding
 - Add cutsom Jekyll support
 
-## 20.1-finale
+## 20.1-finale (November 27, 2012)
 
 - Simplified feed templates
 - Uses `background-color` in transition statement to avoid animation effect on logo
@@ -119,7 +119,7 @@
 - Use nginx empty gif module instead of data URI to small generated HTML size, read more info about nginx empty gif module: http://wiki.nginx.org/HttpEmptyGifModule
 - `∞` (&#8734) -> `▲` (&#9650)
 
-## 20.1
+## 20.1 (October 7, 2012)
 
 - Convert Chinese posts to English
 - Update post 'Tianjin Project'
@@ -174,7 +174,7 @@
 - Adds `feed-note.atom` and `feed-work.atom` (Temporary)
 - Update `.btn` styles
 
-## 20
+## 20 (July 16, 2012)
 
 - First commit prepared for v20
 - Remove comments in LESS, `.work-list` minor tweak, remove text-align hook in error page
@@ -236,7 +236,7 @@
 - Update complier path
 - Update codename, bump to (real) version 20
 
-## 19.3-finale
+## 19.3-finale (June 28, 2012)
 
 - Better pagination for Note section with post title
 - Remove bottom gradient
@@ -282,7 +282,7 @@
 - Update Word of the Year titles
 - Refine CSS classes, remove unused styles, many minor fixes
 
-## 19.3
+## 19.3 (June 13, 2012)
 
 - More logo staff
 - Still more logo staff
@@ -307,7 +307,7 @@
 - Make `.txt` `max-width` variable
 - Add placeholder background for images in work list
 
-## 19.2
+## 19.2 (April 18, 2012)
 
 - Remove ajaxify-html
 - Add old posts
@@ -331,7 +331,7 @@
 - Update license
 - Update logo
 
-## 19.1
+## 19.1 (January 13, 2012)
 
 - Logo updated
 - Fix GitHub repo URL
@@ -372,11 +372,11 @@
 - Updatte ajaxify
 - Remove fade effect again
 
-## 19
+## 19 (December 12, 2011)
 
 - Upgrade to ver. 19, codename lindsayisgod
 
-## 18-finale
+## 18-finale (December 9, 2011)
 
 - REMOVE `</script>` fix for Jekyll
 - UPDATE font-family in image list
@@ -398,7 +398,7 @@
 - Update logo
 - Add BSA ads
 
-## 18
+## 18 (October 16, 2011)
 
 - ADD v18 mockup
 - REMOVE pagination for category NOTE
@@ -419,7 +419,7 @@
 - UPDATE pages
 - UPDATE styles for v18
 
-## 17-finale
+## 17-finale (October 1, 2011)
 
 - REMOVE dead GitHub links
 - POST minor changes
@@ -427,19 +427,19 @@
 - REMOVE Rakefile
 - UPDATE paginator
 
-## 17
+## 17 (2011)
 
 - BUMP version to 17 from old repo
 
-## 16
+## 16 (2011)
 
 - BUMP version to 16 from old repo
 
-## 15
+## 15 (2011)
 
 - BUMP version to 15 from old repo
 
-## 14
+## 14 (2011)
 
 - ADD fonts back due to the lack support of Firefox
 - ADD new webkit gradient style
