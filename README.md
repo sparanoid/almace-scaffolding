@@ -4,7 +4,7 @@
 
 ## License
 
-Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
+Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [CC BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
 
 - `_/source/_posts/`
 - `_/source/apple-touch-icon-precomposed.png`
