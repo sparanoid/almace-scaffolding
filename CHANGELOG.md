@@ -1,5 +1,9 @@
 # Changelog
 
+Most of changes are generated using `git log` command to get things done:
+
+  git log 21..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /' > tmp.txt
+
 ## Head
 
 - Hide img alt
@@ -446,6 +450,54 @@
 - UPDATE font files to CloudFront
 - UPDATE prepared for upcomming version
 - UPDATE URL for easy development
+
+## 13
+
+Source code not available
+
+## 12
+
+Source code not available
+
+## 11
+
+Source code not available
+
+## 10
+
+Source code not available
+
+## 9
+
+Source code not available
+
+## 8
+
+Source code not available
+
+## 7
+
+Source code not available
+
+## 6
+
+Source code not available
+
+## 5
+
+Source code not available
+
+## 4
+
+Source code not available
+
+## 3
+
+Source code not available
+
+## 2
+
+Source code not available
 
 ## 1.1
 
