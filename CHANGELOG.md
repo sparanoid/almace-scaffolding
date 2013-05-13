@@ -73,6 +73,17 @@ Most of changes are generated using `git log` command to get things done:
 - Simplifies license in readme
 - Updates `.gitignore`, remove logs from repo
 - Better rake build script for handling image assets URL
+- Update changelog with more accurate date and versions
+- Better base URL handling
+- Adds donate variable for Donate page
+- Adds `a.css` back to repo
+- Updates Jekyll version to 1.0.2
+- Block old version archive
+- Better post logo size with style `scoped` support
+- Fix feed validation
+- Remove `feed.rss`
+- Add configuration comment
+- Fix typos in changelog
 
 ## 21 (December 10, 2012)
 
