@@ -8,8 +8,8 @@ permalink: /feed/index.xml
   <title>{{ site.name }}</title>
   <subtitle>{{ site.slogan }}</subtitle>
   <id>tag:{{ site.domain }},2005:/</id>
-  <link rel="self" type="application/atom+xml" href="{{ site.url }}{{ page.url }}" />
-  <link rel="alternate" type="text/html" href="{{ site.url }}/" />
+  <link rel="self" type="application/atom+xml" href="{{ site.url }}{{ site.base }}{{ page.url }}" />
+  <link rel="alternate" type="text/html" href="{{ site.url }}{{ site.base }}/" />
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.user }}</rights>
 
@@ -21,14 +21,14 @@ permalink: /feed/index.xml
   {% for post in site.posts limit:15 %}
     <entry>
       <title>{{ post.title | xml_escape }}</title>
-      <id>tag:{{ site.url }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
-      <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site.url }}{{ post.url }}/{% endif %}" />
+      <id>tag:{{ site.url }}{{ site.base }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+      <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site.url }}{{ site.base }}{{ post.url }}/{% endif %}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <author>
         <name>{{ site.user }}</name>
-        <uri>{{ site.url }}/</uri>
+        <uri>{{ site.url }}{{ site.base }}/</uri>
       </author>
-      <content type="html" xml:base="{{ site.url }}/">
+      <content type="html" xml:base="{{ site.url }}{{ site.base }}/">
         {% if post.thumb %}
           &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot; style=&quot;max-width: 500px;&quot;&gt;
           &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
@@ -38,7 +38,7 @@ permalink: /feed/index.xml
           {% else %}
             {{ post.content | xml_escape }}
           {% endif %}
-          {% if post.link %}&lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ post.url }}/&quot; title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;{% endif %}
+          {% if post.link %}&lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ site.base }}{{ post.url }}/&quot; title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;{% endif %}
         {% endif %}
       </content>
     </entry>
