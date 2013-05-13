@@ -13,16 +13,16 @@ port:         4321
 future:       false
 
 # Other custom settings
-domain:       sparanoid.com
+domain:       sparanoid.com # `site.domain` is mainly used in atom feed in `id` tag.
 url:          http://sparanoid.com
 file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
-css:          css
-feed:         feed
+css:          css # `site.css` is used to specified CSS path in templates
+feed:         feed # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error.
 name:         Sparanoid
 user:         Tunghiao Liu
 email:        t@sparanoid.com
 slogan:       I make things that don't suck.
 twitter:      sparanoid
 donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
-availability: free
+availability: free # Used in homepage
 base:         "" # Example: /lab/version/21 without trailing slash
