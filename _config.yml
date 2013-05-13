@@ -17,7 +17,7 @@ domain:       sparanoid.com
 url:          http://sparanoid.com
 file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
 css:          css
-feed:         feed/
+feed:         feed
 name:         Sparanoid
 user:         Tunghiao Liu
 email:        t@sparanoid.com
@@ -25,3 +25,4 @@ slogan:       I make things that don't suck.
 twitter:      sparanoid
 donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
 availability: free
+base:         "" # Example: /lab/version/21 without trailing slash
