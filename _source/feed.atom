@@ -8,7 +8,7 @@ permalink: /feed/index.xml
   <title>{{ site.name }}</title>
   <subtitle>{{ site.slogan }}</subtitle>
   <id>tag:{{ site.domain }},2005:/</id>
-  <link rel="self" type="application/atom+xml" href="{{ site.url }}{{ site.base }}{{ page.url }}" />
+  <link rel="self" type="application/atom+xml" href="{{ site.url }}{{ site.base }}/{{ site.feed }}/" />
   <link rel="alternate" type="text/html" href="{{ site.url }}{{ site.base }}/" />
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.user }}</rights>
@@ -21,7 +21,7 @@ permalink: /feed/index.xml
   {% for post in site.posts limit:15 %}
     <entry>
       <title>{{ post.title | xml_escape }}</title>
-      <id>tag:{{ site.url }}{{ site.base }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+      <id>tag:{{ site.domain }}{{ site.base }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
       <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site.url }}{{ site.base }}{{ post.url }}/{% endif %}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <author>
@@ -30,7 +30,7 @@ permalink: /feed/index.xml
       </author>
       <content type="html" xml:base="{{ site.url }}{{ site.base }}/">
         {% if post.thumb %}
-          &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot; style=&quot;max-width: 500px;&quot;&gt;
+          &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
           &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
         {% elsif post.category == "note" %}
           {% if post.excerpt %}
