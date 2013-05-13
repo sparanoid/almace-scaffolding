@@ -2,8 +2,8 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
-<link rel=alternate href=/{{ site.feed }} type=application/atom+xml>
-<link rel=stylesheet href=/{{ site.css }}/a.css>
+<link rel=alternate href={{ site.base }}/{{ site.feed }}/ type=application/atom+xml>
+<link rel=stylesheet href={{ site.base }}/{{ site.css }}/a.css>
 {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
 <!-- Define a description for better SEO result, exclude homepage -->
@@ -21,7 +21,7 @@
   <meta name=twitter:card content="summary">
   <meta name=twitter:site content="@{{ site.twitter }}">
   <meta name=twitter:creator content="@tunghsiao">
-  <meta name=twitter:url content="{{ site.url }}{{ page.url }}">
+  <meta name=twitter:url content="{{ site.url }}{{ site.base }}{{ page.url }}">
   <meta name=twitter:title content="{{ page.title | xml_escape }}">
   <meta name=twitter:description content="{{ content_description }}">
   {% if page.category == 'work' %}
@@ -41,13 +41,13 @@
   <header class=index>
     <h3>latest Work</h3>
     {% for post in site.categories.work limit:1 %}
-      <h2><a href="{{ post.url }}/">{{ post.title }}</a></h2>
+      <h2><a href="{{ site.base }}{{ post.url }}/">{{ post.title }}</a></h2>
     {% endfor %}
 {% else %}
   <header>
 {% endif %}
   <!-- There's a normal header for the other pages -->
-  <h1><a href=/ class=logo accesskey=x>Sparanoid</a></h1>
+  <h1><a href={{ site.base }}/ class=logo accesskey=x>Sparanoid</a></h1>
 </header>
 
 <!-- Wrap in all width sensitive elements -->
@@ -60,11 +60,11 @@
     {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
     {% if page.permalink == '/note/'  or page.category == 'note'  %}<ul class=nav-note>{% endif %}
     {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
-      <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href=/work/>Work</a></li>
-      <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href=/store/>Store</a></li>
-      <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href=/>Home</a></li>
-      <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href=/note/>Note</a></li>
-      <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href=/about/>About</a></li>
+      <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href={{ site.base }}/work/>Work</a></li>
+      <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href={{ site.base }}/store/>Store</a></li>
+      <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href={{ site.base }}/>Home</a></li>
+      <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href={{ site.base }}/note/>Note</a></li>
+      <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href={{ site.base }}/about/>About</a></li>
     </ul>
   </nav>
 
@@ -78,7 +78,7 @@
   <!-- Insert ad here -->
 
   <footer>
-    <p><a href=/>{{ site.name }}</a> / <a href=/{{ site.feed }} title="Feed - Atom (The Atom Syndication Format)">Atom</a></p>
+    <p><a href={{ site.base }}/>{{ site.name }}</a> / <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a></p>
   </footer>
 {% endif %}
 
@@ -90,7 +90,7 @@
 <!-- Add FlexSlider script for posts with sliders -->
 {% if page.plugin == 'slider' %}
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="/{{ site.css }}/jquery.flexslider-min.js"></script>
+  <script src="{{ site.base }}/{{ site.css }}/jquery.flexslider-min.js"></script>
   <script>
   $(window).load(function() {
     $('.flexslider').flexslider({
