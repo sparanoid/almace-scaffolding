@@ -101,10 +101,10 @@ Most of changes are generated using `git log` command to get things done:
 - Better CSS selector performance
 - Update some posts thumbnails
 - Add a `-webkit-filter` effect for `.work-list`
-- Add some narrow typefaces failback
+- Add some narrow typefaces fallback
 - FlexSlider: `pauseOnHover: true`
 - Fix `.paginaton` padding
-- Add cutsom Jekyll support
+- Add custom Jekyll support
 
 ## 20.1-finale (November 27, 2012)
 
@@ -137,7 +137,7 @@ Most of changes are generated using `git log` command to get things done:
 - Update post 'Tianjin Project'
 - Update `.work-list` appearance
 - Fix work-list on iPhone landscape
-- Update post thumbnaills
+- Update post thumbnails
 - Update post 'Font Zomnk'
 - Update About page with microdata
 - Fix typo
@@ -380,7 +380,7 @@ Most of changes are generated using `git log` command to get things done:
 - Better footer position
 - Add Ajaxify with `histroy.js` and `ajaxify-html5.js`
 - Remove fade effect, load script on demand
-- Updatte ajaxify
+- Update ajaxify
 - Remove fade effect again
 
 ## 19 (December 12, 2011)
@@ -455,7 +455,7 @@ Most of changes are generated using `git log` command to get things done:
 - ADD fonts back due to the lack support of Firefox
 - ADD new webkit gradient style
 - UPDATE font files to CloudFront
-- UPDATE prepared for upcomming version
+- UPDATE prepared for upcoming version
 - UPDATE URL for easy development
 
 ## 14.1 (February 11, 2011)
@@ -465,7 +465,7 @@ Most of changes are generated using `git log` command to get things done:
 - UPDATE HTML structure and CSS cleanup
 - UPDATE index display settings
 - UPDATE Atom output
-- UPDATE Cloudfront files URL
+- UPDATE CloudFront files URL
 - ADD error 404 page
 - UPDATE assets files URL
 - UPDATE host font files elsewhere
@@ -476,13 +476,13 @@ Most of changes are generated using `git log` command to get things done:
 - UPDATE readme and license
 - CREATE auto update script, inspired by https://github.com/henrik/henrik.nyh.se
 - FIX datetime valid XML schema
-- UPDATE delploy settings
+- UPDATE deploy settings
 - UPDATE site navigation
 - UPDATE merge colors value to the same places
 - FIX minor color fixed in nav
 - UPDATE no more dark styles, CSS cleanup
 - ADD current nav style
-- FIX media query bug processed by yui compressor
+- FIX media query bug processed by YUI Compressor
 - UPDATE footer DELETE redundant white spaces
 - UPDATE deploy settings
 - UPDATE page navigation
