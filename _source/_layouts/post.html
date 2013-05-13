@@ -8,7 +8,10 @@ layout: default
   <!-- Post title -->
   <hgroup>
     {% if page.img-headline %}
-      <h1><img src="{{ site.file }}/{{ page.img-headline }}" width={% if page.img-headline-width %}{{ page.img-headline-width }}{% else %}500{% endif %} alt="{{ page.title | xml_escape }}"></h1>
+      <style scoped>
+        img { width: {% if page.img-headline-width %}{{ page.img-headline-width }}px{% else %}500px{% endif %};}
+      </style>
+      <h1><img src="{{ site.file }}/{{ page.img-headline }}" alt="{{ page.title | xml_escape }}"></h1>
     {% else %}
       <h1>{% if page.link %}<a href={{ page.link }}>{{ page.title }} &rarr;</a>{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
