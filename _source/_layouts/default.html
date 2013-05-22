@@ -10,7 +10,9 @@
 {% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
 {% if page.permalink != '/' %}
   {% if page.excerpt %}
-    <meta name=description content="{{ page.excerpt | xml_escape | }} - {{ content_description }}">
+    <meta name=description content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 160 }}">
+  {% elsif page.desc %}
+    <meta name=description content="{{ page.desc | strip_html | strip_newlines | xml_escape }}">
   {% else %}
     <meta name=description content="{{ content_description }}">
   {% endif %}
@@ -78,7 +80,13 @@
   <!-- Insert ad here -->
 
   <footer>
-    <p><a href={{ site.base }}/>{{ site.name }}</a> / <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a></p>
+    <p>
+      <a href={{ site.base }}/>{{ site.name }}</a> /
+      <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>
+    </p>
+    <p>
+      <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
+    </p>
   </footer>
 {% endif %}
 

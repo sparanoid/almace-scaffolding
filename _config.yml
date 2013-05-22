@@ -19,7 +19,7 @@ file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
 css:          css # `site.css` is used to specified CSS path in templates
 feed:         feed # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error.
 name:         Sparanoid
-user:         Tunghiao Liu
+user:         Tunghsiao Liu
 email:        t@sparanoid.com
 slogan:       I make things that don't suck.
 twitter:      sparanoid
