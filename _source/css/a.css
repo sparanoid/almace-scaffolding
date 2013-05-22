@@ -650,12 +650,6 @@ footer {
   line-height: 1.53;
   font-size: 11px;
 }
-footer ul li {
-  display: inline;
-}
-footer ul li a:after {
-  content: " / ";
-}
 .flexslider ul {
   list-style: none;
 }
