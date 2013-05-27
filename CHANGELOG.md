@@ -4,7 +4,7 @@ Most of changes are generated using `git log` command to get things done:
 
 	git log 21..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'
 
-## Head
+## Head [#][head]
 
 - Hide img `alt`
 - Update post 'Project Railgun'
@@ -85,7 +85,7 @@ Most of changes are generated using `git log` command to get things done:
 - Add configuration comment
 - Fix typos in changelog
 
-## 21 (December 10, 2012)
+## 21 (December 10, 2012) [#][21]
 
 - New header design
 - Better comments
@@ -117,7 +117,7 @@ Most of changes are generated using `git log` command to get things done:
 - Fix `.paginaton` padding
 - Add custom Jekyll support
 
-## 20.1-finale (November 27, 2012)
+## 20.1-finale (November 27, 2012) [#][20.1-finale]
 
 - Simplified feed templates
 - Uses `background-color` in transition statement to avoid animation effect on logo
@@ -142,7 +142,7 @@ Most of changes are generated using `git log` command to get things done:
 - Use nginx empty gif module instead of data URI to small generated HTML size, read more info about nginx empty gif module: http://wiki.nginx.org/HttpEmptyGifModule
 - `∞` (&#8734) -> `▲` (&#9650)
 
-## 20.1 (October 7, 2012)
+## 20.1 (October 7, 2012) [#][20.1]
 
 - Convert Chinese posts to English
 - Update post 'Tianjin Project'
@@ -197,7 +197,7 @@ Most of changes are generated using `git log` command to get things done:
 - Adds `feed-note.atom` and `feed-work.atom` (Temporary)
 - Update `.btn` styles
 
-## 20 (July 16, 2012)
+## 20 (July 16, 2012) [#][20]
 
 - First commit prepared for v20
 - Remove comments in LESS, `.work-list` minor tweak, remove text-align hook in error page
@@ -259,7 +259,7 @@ Most of changes are generated using `git log` command to get things done:
 - Update complier path
 - Update codename, bump to (real) version 20
 
-## 19.3-finale (June 28, 2012)
+## 19.3-finale (June 28, 2012) [#][19.3-finale]
 
 - Better pagination for Note section with post title
 - Remove bottom gradient
@@ -305,7 +305,7 @@ Most of changes are generated using `git log` command to get things done:
 - Update Word of the Year titles
 - Refine CSS classes, remove unused styles, many minor fixes
 
-## 19.3 (June 13, 2012)
+## 19.3 (June 13, 2012) [#][19.3]
 
 - More logo staff
 - Still more logo staff
@@ -330,7 +330,7 @@ Most of changes are generated using `git log` command to get things done:
 - Make `.txt` `max-width` variable
 - Add placeholder background for images in work list
 
-## 19.2 (April 18, 2012)
+## 19.2 (April 18, 2012) [#][19.2]
 
 - Remove ajaxify-html
 - Add old posts
@@ -354,7 +354,7 @@ Most of changes are generated using `git log` command to get things done:
 - Update license
 - Update logo
 
-## 19.1 (January 13, 2012)
+## 19.1 (January 13, 2012) [#][19.1]
 
 - Logo updated
 - Fix GitHub repo URL
@@ -394,11 +394,11 @@ Most of changes are generated using `git log` command to get things done:
 - Update ajaxify
 - Remove fade effect again
 
-## 19 (December 12, 2011)
+## 19 (December 12, 2011) [#][19]
 
 - Upgrade to ver. 19, codename lindsayisgod
 
-## 18-finale (December 9, 2011)
+## 18-finale (December 9, 2011) [#][18-finale]
 
 - REMOVE `</script>` fix for Jekyll
 - UPDATE font-family in image list
@@ -420,7 +420,7 @@ Most of changes are generated using `git log` command to get things done:
 - Update logo
 - Add BSA ads
 
-## 18 (October 16, 2011)
+## 18 (October 16, 2011) [#][18]
 
 - ADD v18 mockup
 - REMOVE pagination for category NOTE
@@ -449,15 +449,15 @@ Most of changes are generated using `git log` command to get things done:
 - REMOVE Rakefile
 - UPDATE paginator
 
-## 17 (2011)
+## 17 (2011) [#][17]
 
 - BUMP version to 17 from old repo
 
-## 16 (2011)
+## 16 (2011) [#][16]
 
 - BUMP version to 16 from old repo
 
-## 15 (2011)
+## 15 (2011) [#][15]
 
 - BUMP version to 15 from old repo
 
@@ -482,7 +482,7 @@ Most of changes are generated using `git log` command to get things done:
 - UPDATE host font files elsewhere
 - UPDATE error page
 
-## 14 (February 8, 2011)
+## 14 (February 8, 2011) [#][14]
 
 - UPDATE readme and license
 - CREATE auto update script, inspired by https://github.com/henrik/henrik.nyh.se
@@ -557,3 +557,20 @@ Source code not available
 ## 1 (2005)
 
 - Initial release
+
+[head]:         http://sparanoid.com/
+[21]:           http://sparanoid.com/lab/version/21/
+[20.1-finale]:  http://sparanoid.com/lab/version/20.1-finale/
+[20.1]:         http://sparanoid.com/lab/version/20.1/
+[20]:           http://sparanoid.com/lab/version/20/
+[19.3-finale]:  http://sparanoid.com/lab/version/19.3-finale/
+[19.3]:         http://sparanoid.com/lab/version/19.3/
+[19.2]:         http://sparanoid.com/lab/version/19.2/
+[19.1]:         http://sparanoid.com/lab/version/19.1/
+[19]:           http://sparanoid.com/lab/version/19/
+[18-finale]:    http://sparanoid.com/lab/version/18-finale/
+[18]:           http://sparanoid.com/lab/version/18/
+[17]:           http://sparanoid.com/lab/version/17/
+[16]:           http://sparanoid.com/lab/version/16/
+[15]:           http://sparanoid.com/lab/version/15/
+[14]:           http://sparanoid.com/lab/version/14/
