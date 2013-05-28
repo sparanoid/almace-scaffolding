@@ -556,14 +556,14 @@ Source code not available
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/05/06.jpg)
+- [Screenshot #01](http://sparanoid.com/lab/version/06/06.jpg)
 
 ## 05 (2006)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/04/05-01.jpg)
-- [Screenshot #02](http://sparanoid.com/lab/version/04/05-02.jpg)
+- [Screenshot #01](http://sparanoid.com/lab/version/05/05-01.jpg)
+- [Screenshot #02](http://sparanoid.com/lab/version/05/05-02.jpg)
 
 ## 04 (2006)
 
