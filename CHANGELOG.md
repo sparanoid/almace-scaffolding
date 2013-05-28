@@ -506,7 +506,7 @@ Most of changes are generated using `git log` command to get things done:
 - UPDATE deploy settings
 - UPDATE codes cleanup and some minor changes
 
-## 13 (2008 March 2010)
+## 13 (2008 - March 2010)
 
 Source code not available
 
@@ -519,7 +519,7 @@ Source code not available
 - [Screenshot #07](http://sparanoid.com/lab/version/13/13-07.jpg)
 - [Screenshot #08](http://sparanoid.com/lab/version/13/13-08.jpg)
 
-## 12
+## 12 (2007 - 2008)
 
 Source code not available
 
@@ -540,44 +540,44 @@ Source code not available
 
 Source code not available
 
-## 08
+## 08 (2007)
 
 Source code not available
 
 - [Screenshot #01](http://sparanoid.com/lab/version/08/08.png)
 
-## 07
+## 07 (2007)
 
 Source code not available
 
 - [Screenshot #01](http://sparanoid.com/lab/version/07/07.png)
 
-## 06
+## 06 (2007)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/06/06.png)
+- [Screenshot #01](http://sparanoid.com/lab/version/05/06.jpg)
 
-## 05
-
-Source code not available
-
-- [Screenshot #01](http://sparanoid.com/lab/version/05/05.jpg)
-
-## 04 (2007)
+## 05 (2006)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/04/04-01.jpg)
-- [Screenshot #02](http://sparanoid.com/lab/version/04/04-02.jpg)
+- [Screenshot #01](http://sparanoid.com/lab/version/04/05-01.jpg)
+- [Screenshot #02](http://sparanoid.com/lab/version/04/05-02.jpg)
 
-## 03 (2007)
+## 04 (2006)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/03/03.jpg)
+- [Screenshot #01](http://sparanoid.com/lab/version/04/04.jpg)
 
-## 02 (2006)
+## 03 (2006)
+
+Source code not available
+
+- [Screenshot #01](http://sparanoid.com/lab/version/03/03.png)
+
+## 02 (2005)
 
 Source code not available
 
