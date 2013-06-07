@@ -1,6 +1,7 @@
 node_modules
 _site
 _build
+Gemfile.lock
 *.log
 
 # ./_source/css/a.css
