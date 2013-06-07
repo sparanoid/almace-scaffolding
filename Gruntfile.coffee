@@ -89,11 +89,20 @@ module.exports = (grunt) ->
           "<%= core.assets %>/a.css": ["<%= core.assets %>/*.css"]
 
     shell:
-      server:
-        options:
-          stdout: true
+      options:
+        stdout: true
 
+      server:
         command: "jekyll serve --watch"
+
+      dist:
+        command: "jekyll build"
+
+      sync:
+        command: "rsync -avz --delete <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_user %>:<%= core.cfg.remote_dir %> > rsync.log"
+
+      s3:
+        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
 
     concurrent:
       server:
@@ -106,5 +115,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "server", ["less:server", "concurrent"]
   grunt.registerTask "test", ["coffeelint", "recess"]
-  grunt.registerTask "build", ["clean", "test", "less:dist", "cssmin"]
+  grunt.registerTask "build", ["clean", "test", "less:dist", "cssmin", "shell:dist"]
+  grunt.registerTask "sync", ["build", "shell:sync"]
+  grunt.registerTask "s3", ["shell:s3"]
   grunt.registerTask "default", ["build"]
