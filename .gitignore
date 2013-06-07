@@ -1,7 +1,5 @@
-# Mac OS X files
-.DS_Store
-
-# Jekyll specified
+node_modules
 _site
 _build
 *.log
+a.css
