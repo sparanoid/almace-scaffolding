@@ -27,7 +27,7 @@ future:       false
 
 domain:       sparanoid.com # In atom feed in `id` tag
 url:          http://sparanoid.com # In atom feed and sitemap
-file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
+file:         http://d349cztnlupsuf.cloudfront.net
 css:          css # Specify CSS path in templates
 feed:         feed # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
 name:         Sparanoid
