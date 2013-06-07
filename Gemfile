@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 group :development do
   gem "jekyll", :git => "git://github.com/mojombo/jekyll.git", :tag => "v1.0.2"
