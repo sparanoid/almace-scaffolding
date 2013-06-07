@@ -1,4 +1,4 @@
-# Sparanoid
+# Sparanoid [![Build Status](https://travis-ci.org/sparanoid/sparanoid.com.png)](https://travis-ci.org/sparanoid/sparanoid.com) [![Node Dependencies](https://david-dm.org/sparanoid/sparanoid.com.png)](https://david-dm.org/sparanoid/sparanoid.com)
 
 [Jekyll](https://github.com/mojombo/jekyll) runing on [sparanoid.com](http://sparanoid.com/), codename `Auratus`, version 21.
 
