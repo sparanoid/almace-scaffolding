@@ -74,7 +74,6 @@ module.exports = (grunt) ->
       dist:
         options:
           paths: ["<%= core.assets %>"]
-          # yuicompress: true
 
         files:
           "<%= core.assets %>/a.css": ["<%= core.assets %>/a.less"]
@@ -87,6 +86,37 @@ module.exports = (grunt) ->
 
         files:
           "<%= core.assets %>/a.css": ["<%= core.assets %>/*.css"]
+
+    htmlmin:
+      dist:
+        options:
+          removeComments: true
+          removeCommentsFromCDATA: true
+          removeCDATASectionsFromCDATA: true
+          collapseWhitespace: true
+          collapseBooleanAttributes: true
+          removeAttributeQuotes: true
+          removeRedundantAttributes: true
+          useShortDoctype: false
+          removeEmptyAttributes: true
+          removeOptionalTags: false
+          removeEmptyElements: false
+
+        files: [
+          expand: true
+          cwd: "<%= core.dist %>"
+          src: "**/*.html"
+          dest: "<%= core.dist %>/"
+        ]
+
+    xmlmin:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= core.dist %>"
+          src: "**/*.xml"
+          dest: "<%= core.dist %>/"
+        ]
 
     shell:
       options:
@@ -115,7 +145,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "server", ["less:server", "concurrent"]
   grunt.registerTask "test", ["coffeelint", "recess"]
-  grunt.registerTask "build", ["clean", "test", "less:dist", "cssmin", "shell:dist"]
+  grunt.registerTask "build", ["clean", "test", "less:dist", "cssmin", "htmlmin", "xmlmin", "shell:dist"]
   grunt.registerTask "sync", ["build", "shell:sync"]
   grunt.registerTask "s3", ["shell:s3"]
   grunt.registerTask "default", ["build"]
