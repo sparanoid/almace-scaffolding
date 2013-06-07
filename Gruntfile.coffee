@@ -7,10 +7,11 @@ module.exports = (grunt) ->
 
   # Configurable paths
   coreConfig =
-    app: "_source"
-    assets: "_source/css"
-    dist: "_site"
+    cfg: grunt.file.readYAML("_config.yml")
     pkg: grunt.file.readJSON("package.json")
+    app: "<%= core.cfg.source %>"
+    assets: "<%= core.cfg.source %>/css"
+    dist: "<%= core.cfg.destination %>"
     banner: do ->
       banner = "/*!\n"
       banner += " * (c) <%= core.pkg.author %>.\n *\n"
