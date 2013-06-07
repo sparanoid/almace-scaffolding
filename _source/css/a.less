@@ -494,7 +494,7 @@ article {
 }
 
 // Tweet button margin fix
-#tweet {
+.tweet {
   margin-top: @space;
 }
 
@@ -566,15 +566,12 @@ article {
 }
 
 .cite, .ref {
+  border-bottom: none !important;
 
   &:target {
     color: @linkColor;
     text-shadow: 0 2px 15px @linkColor;
   }
-}
-
-a.cite, a.ref {
-  border-bottom: none;
 }
 
 // Image list in "work"
@@ -637,7 +634,7 @@ a.cite, a.ref {
   }
 
   // Better margin between to work lists
-  & ~ div.txt {
+  & ~ .txt {
     margin: @space * .5 0 0;
   }
 }
