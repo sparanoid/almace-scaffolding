@@ -7,19 +7,6 @@ assets_dev    = 'http://sparanoid.s3-website-us-east-1.amazonaws.com' # Media as
 assets        = 'http://d349cztnlupsuf.cloudfront.net' # Media assets powered by CloudFront, used for production site
 # assets        = 'http://rsrc.sparanoid.com'
 
-task :preview do
-  system "recess _less/a.less:_source/css/a.css" unless File.exist?("_source/css/a.css")
-  jekyllPid = Process.spawn("jekyll")
-  recessPid = Process.spawn("recess _less/a.less:_source/css/a.css --watch")
-
-  trap("INT") {
-    [jekyllPid, recessPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    exit 0
-  }
-
-  [jekyllPid, recessPid].each { |pid| Process.wait(pid) }
-end
-
 # Default task, build static HTML pages and upload to my server with rsync
 # Set availability to 'free': `rake` or `rake default[free]`
 # Set availability to 'busy': `rake default[busy]`
