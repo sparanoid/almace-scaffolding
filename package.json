@@ -1,0 +1,29 @@
+{
+  "name": "sparanoid.com",
+  "version": "21.0.0",
+  "description": "Jekyll runing on sparanoid.com",
+  "author": "Tunghsiao Liu",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sparanoid/sparanoid.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sparanoid/sparanoid.com/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://github.com/sparanoid/sparanoid.com/blob/master/LICENSE"
+  },
+  "keywords": [
+    "jekyll",
+    "blog",
+    "less",
+    "css",
+  ],
+  "readmeFilename": "README.md",
+  "gitHead": "7d1fc96cf780dcd5412e32266b933d78dd7a2a26",
+}
