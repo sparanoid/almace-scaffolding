@@ -1,4 +1,7 @@
+#
 # Jekyll basic configurations
+#
+
 source:       ./_source
 destination:  ./_site
 exclude:      ['a.less']
@@ -6,23 +9,45 @@ timezone:     Asia/Hong_Kong
 permalink:    /:categories/:title
 markdown:     rdiscount
 
+#
 # Jekyll serve settings
+#
+
 port:         4321
 
+#
 # Jekyll build settings
+#
+
 future:       false
 
-# Other custom settings
-domain:       sparanoid.com # `site.domain` is mainly used in atom feed in `id` tag.
-url:          http://sparanoid.com
+#
+# Custom site settings
+#
+
+domain:       sparanoid.com # In atom feed in `id` tag
+url:          http://sparanoid.com # In atom feed and sitemap
 file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
-css:          css # `site.css` is used to specified CSS path in templates
-feed:         feed # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error.
+css:          css # Specify CSS path in templates
+feed:         feed # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
 name:         Sparanoid
 user:         Tunghsiao Liu
 email:        t@sparanoid.com
 slogan:       I make things that don't suck.
 twitter:      sparanoid
 donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
-availability: free # Used in homepage
+availability: free # In homepage
 base:         "" # Example: /lab/version/21 without trailing slash
+
+#
+# Custom distribution settings
+#
+
+remote_user:  root@sparanoid.com # SSH user used by rsync
+remote_dir:   /srv/www/sparanoid.com/public_html # Remote root directory
+ignore_files: --exclude=lab # Prevent them from being deleted on server (rsync --delete)
+static_files: ~/Dropbox/Sites/static.sparanoid.com/ # Media assets sync'ed using s3cmd
+s3_bucket:    s3://sparanoid/ # Amazon S3 Bucket
+assets_dev:   http://sparanoid.s3-website-us-east-1.amazonaws.com # Media assets hosted on S3
+assets:       http://d349cztnlupsuf.cloudfront.net # For production site
+# assets:       http://rsrc.sparanoid.com
