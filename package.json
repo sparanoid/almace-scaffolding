@@ -3,7 +3,8 @@
   "version": "21.0.0",
   "description": "Jekyll runing on sparanoid.com",
   "author": "Tunghsiao Liu",
-  "main": "index.js",
+  "homepage": "http://sparanoid.com/",
+  "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
   },
@@ -22,8 +23,22 @@
     "jekyll",
     "blog",
     "less",
-    "css",
+    "css"
   ],
   "readmeFilename": "README.md",
   "gitHead": "7d1fc96cf780dcd5412e32266b933d78dd7a2a26",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-contrib-less": "~0.5.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-connect": "~0.2.0",
+    "grunt-coffeelint": "0.0.6",
+    "grunt-recess": "~0.3.3",
+    "connect-livereload": "~0.1.4",
+    "matchdep": "~0.1.2",
+    "grunt-shell": "~0.2.2",
+    "grunt-concurrent": "~0.2.0"
+  }
 }
