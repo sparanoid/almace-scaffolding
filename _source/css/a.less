@@ -33,33 +33,33 @@
 
 .font-face {
   font-family: PFDTCP-M, "Avenir Next Condensed", "Arial Narrow", @sansSerif; // Add some narrow typefaces failback
-  text-transform: uppercase;
-  font-weight: normal;
-  letter-spacing: -.02em;
   font-size: @baseFontSize * 7/3;
   -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
 }
 
 .helvetica {
-  color: fade(@textColor, 40%);
   font-family: @sansSerif;
   font-size: @baseFontSize / 2;
   font-weight: normal;
+  line-height: @baseLineHeight * .9;
+  letter-spacing: .25em;
+  color: fade(@textColor, 40%);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .25em;
-  line-height: @baseLineHeight * .9;
 }
 
 // http://nicolasgallagher.com/micro-clearfix-hack/
 //
 // For modern browsers
-// 1. The original space content hack is removed here. No need to support Opera on my personal site.
-// 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements.
+// 1. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements.
+// 2. The original space content hack is removed here. No need to support Opera on my personal site.
 .cf {
   &:before, &:after {
-    content: ""; /* 1 */
-    display: table; /* 2 */
+    display: table; // 1
+    content: ""; // 2
   }
 
   &:after {
@@ -69,9 +69,9 @@
 
 // This fix some peformance issues in WebKit, such as transform, webkit-filter in retina displays, and more.
 .webkit-fix {
-  -webkit-transform: translate3d(0, 0, 0);
+  // -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
+  // -webkit-perspective: 1000;
 }
 
 // Basic reset
@@ -80,8 +80,8 @@ ul, ol, li,
 h1, h2, h3, h4, h5, h6,
 blockquote,
 hr {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-size: 100%;
   line-height: 1;
 }
@@ -91,15 +91,15 @@ hr {
 }
 
 body {
-  color: @textColor;
-  background: @backgroundColor;
-  font-size: @baseFontSize;
-  font-family: @serif;
-  line-height: @baseLineHeight;
-  margin: 0 auto 0;
   padding: 0 0  @space * 1.5;
+  margin: 0 auto 0;
+  font-family: @serif;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
   text-align: center;
   text-rendering: optimizelegibility;
+  background: @backgroundColor;
   image-rendering: optimizequality;
 
   // A semitranslucent bar at the top of the page
@@ -107,21 +107,21 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 9999;
     width: 100%;
     height: 15px;
-    content: "";
+    pointer-events: none;
     background: fade(@textColor, 2%);
     border-bottom: 1px solid fade(@textColor, 2%);
-    z-index: 9999;
-    pointer-events: none;
+    content: "";
   }
 }
 
 // Global fixed width wrapper
 .wrapper {
   max-width: @thumbSize * 5 + @thumbPadding * 8; // Defined at work-list
-  margin: 0 auto;
   padding: 0 @space * 1.2;
+  margin: 0 auto;
 }
 
 a, button {
@@ -158,11 +158,11 @@ del {
   width: 0;
   height: 0;
   margin: -29px auto @space / 5;
-  border-style: solid;
-  border-width: 0 26px 45px 26px;
+  text-indent: -9999em;
   border-color: transparent;
   border-bottom-color: @textColor;
-  text-indent: -9999em;
+  border-style: solid;
+  border-width: 0 26px 45px 26px;
 
   &:hover {
     border-bottom-color: @linkColor;
@@ -189,9 +189,9 @@ del {
     padding: 0 5%;
 
     a {
-      color: @backgroundColor;
       .font-face;
       font-size: @baseFontSize * 1.5;
+      color: @backgroundColor;
       border-bottom: transparent 1px solid; // We have to define a transparent border in order to make transition work
 
       &:hover {
@@ -202,8 +202,8 @@ del {
 
   // "LATEST WORK"
   h3 {
-    .helvetica;
     padding-top: 64px;
+    .helvetica;
     color: @backgroundColor;
     opacity: .6;
   }
@@ -221,8 +221,8 @@ nav {
 
   li {
     display: inline-block;
-    list-style: none;
     line-height: 2;
+    list-style: none;
 
     a {
       padding: 3px 1em;
@@ -243,8 +243,8 @@ hgroup {
   padding-bottom: @space * 1.35;
 
   h1 {
-    .font-face;
     margin: 0 0 .1em;
+    .font-face;
 
     // Override margin from article img
     img {
@@ -258,8 +258,8 @@ hgroup {
 
   // TODO: performance opti.
   & + .txt :first-child { // For example, hgroup + .txt h3:first-child
-    margin-top: 0;
     padding-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -271,12 +271,12 @@ hgroup {
     &:before {
       @size: 9px;
       display: inline-block;
-      content: "";
       width: @size;
       height: @size;
-      border-radius: 50%;
-      background: fade(@textColor, 20%);
       margin-right: @size;
+      background: fade(@textColor, 20%);
+      border-radius: 50%;
+      content: "";
     }
   }
 }
@@ -323,18 +323,18 @@ article {
 
   img, video, iframe {
     display: block;
-    margin: 0 auto 40px;
     max-width: 100%;
+    margin: 0 auto 40px;
   }
 }
 
 // Basic staff inside article .txt
 .txt {
   overflow: hidden;
-  text-align: left;
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
           hyphens: auto;
+  text-align: left;
 
   a {
     border-bottom: 1px dotted fade(@textColor, 30%); // Set larger value for invert color
@@ -346,8 +346,8 @@ article {
   }
 
   h3 {
-    .helvetica;
     margin: @space 0 1.6em;
+    .helvetica;
   }
 
   ul, ol {
@@ -372,13 +372,13 @@ article {
       position: absolute;
       top: -16px;
       left: -8px;
-      content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
-      font-size: 120px;
-      color: fade(@textColor, 70%);
-      font-family: @sansSerif;
-      font-style: normal;
       z-index: -1;
+      font-family: @sansSerif;
+      font-size: 120px;
+      font-style: normal;
+      color: fade(@textColor, 70%);
       pointer-events: none;
+      content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
     }
 
     cite {
@@ -398,8 +398,9 @@ article {
   }
 
   hr {
-    .helvetica;
     margin: @space 0 1.6em;
+    .helvetica;
+
     &:before {
       content: attr(data-placeholder);
     }
@@ -418,22 +419,23 @@ article {
   form {
 
     label {
-      .helvetica;
       display: block;
       margin-bottom: @space * .3;
+      .helvetica;
     }
 
     input {
-      .helvetica;
       display: block;
-      border: 1px solid fade(@textColor, 20%);
+      width: 100%;
       padding: 7px;
       margin: 0 auto @space * .3;
-      width: 100%;
+      .helvetica;
+      border: 1px solid fade(@textColor, 20%);
+      border-radius: 0; // Remove border-radius for ios devices
       outline: none;
       box-sizing: border-box;
-      border-radius: 0; // Remove border-radius for ios devices
       -webkit-appearance: none; // Remove ios pre-defined style
+
       &:focus {
         border-color: @textColor;
       }
@@ -442,7 +444,9 @@ article {
 
   // Rest form validation styles, borrowed from Bootstrap
   input, textarea, select {
+
     &:focus:required:invalid {
+
       &:focus {
         background: fade(@linkColor, 5%);
         border-color: @linkColor;
@@ -459,13 +463,13 @@ article {
     left: 0;
     width: 100%;
     height: auto;
-    background: fade(@linkColor, 95%);
-    color: @backgroundColor;
+    max-height: auto;
     // Override default WebKit styles
     min-width: 100%;
-    max-height: auto;
-    border: none;
     padding: 20px 0;
+    color: @backgroundColor;
+    background: fade(@linkColor, 95%);
+    border: none;
     border-radius: 0;
     -webkit-box-shadow: none;
   }
@@ -501,13 +505,13 @@ article {
 
 // Button styles
 .btn {
-  .helvetica;
   display: inline-block;
-  color: @backgroundColor;
-  background: @textColor;
-  font-size: @baseFontSize / 2 - 2px;
   padding: 7px 10px;
+  .helvetica;
+  font-size: @baseFontSize / 2 - 2px;
+  color: @backgroundColor;
   cursor: pointer;
+  background: @textColor;
   outline: none;
 
   &:hover, &:focus {
@@ -519,10 +523,10 @@ article {
 // Broser frame for images in category "work"
 .browser {
   position: relative;
-  margin: 0 0 40px;
   padding-top: 20px;
-  border-radius: 5px 5px 0 0;
+  margin: 0 0 40px;
   background: #e8e8e8;
+  border-radius: 5px 5px 0 0;
 
   &:before {
     position: absolute;
@@ -531,14 +535,13 @@ article {
     display: block;
     width: 8px;
     height: 8px;
-    content: "";
     background: rgba(0, 0, 0, .2);
     border-radius: 50%;
+    content: "";
   }
 
   img {
     margin: 0;
-    // border-radius: 0 0 4px 4px;
     box-shadow: rgba(0, 0, 0, .05) 0 -1px 0 0;
   }
 }
@@ -546,10 +549,10 @@ article {
 // Special paragraph with an icon
 .note, .store, .download {
   @iconSize: 40px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: @iconSize @iconSize;
   padding-left: @iconSize * 1.25;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: @iconSize @iconSize;
 }
 
 .note     { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>"); }
@@ -586,9 +589,9 @@ a.cite, a.ref {
 
   li {
     position: relative;
-    list-style: none;
     float: left;
     margin: @thumbPadding;
+    list-style: none;
 
     &:hover {
 
@@ -597,9 +600,9 @@ a.cite, a.ref {
       }
 
       img {
-        .transition(-webkit-filter .1s ease);
         -webkit-filter: none;
                 filter: none;
+        .transition(-webkit-filter .1s ease);
       }
     }
   }
@@ -608,21 +611,21 @@ a.cite, a.ref {
     display: block;
     width: @thumbSize;
     height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
+    overflow: hidden; // For text
     .font-face;
     font-size: @thumbFontSize;
-    overflow: hidden; // For text
   }
 
   img {
     width: @thumbSize;
     height: @thumbSize;
     margin: 0; // Override: article img
-    background: fade(@linkColor, 10%);
     color: transparent; // Hide img alt
-    .webkit-fix;
-    .transition(-webkit-filter .5s ease);
+    background: fade(@linkColor, 10%);
     -webkit-filter: grayscale(.9);
             filter: grayscale(.9);
+    .transition(-webkit-filter .5s ease);
+    .webkit-fix;
   }
 
   p {
@@ -647,9 +650,9 @@ a.cite, a.ref {
     overflow: hidden;
 
     h2 {
+      margin: 0 0 .1em;
       .font-face;
       font-size: @baseFontSize * 2;
-      margin: 0 0 .1em;
       font-weight: normal;
 
       time {
