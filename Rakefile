@@ -20,13 +20,6 @@ task :preview do
   [jekyllPid, recessPid].each { |pid| Process.wait(pid) }
 end
 
-
-# Serve task
-desc 'Serve and watch Jekyll instance'
-task :serve do
-  sh "jekyll serve --watch"
-end
-
 # Default task, build static HTML pages and upload to my server with rsync
 # Set availability to 'free': `rake` or `rake default[free]`
 # Set availability to 'busy': `rake default[busy]`
