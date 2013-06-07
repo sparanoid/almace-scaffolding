@@ -92,7 +92,7 @@ module.exports = (grunt) ->
         options:
           stdout: true
 
-        command: "rake serve"
+        command: "jekyll serve --watch"
 
     concurrent:
       server:
@@ -103,7 +103,7 @@ module.exports = (grunt) ->
 
     clean: [".tmp", "<%= core.dist %>/*"]
 
-  grunt.registerTask "server", ["concurrent"]
+  grunt.registerTask "server", ["less:server", "concurrent"]
   grunt.registerTask "test", ["coffeelint", "recess"]
   grunt.registerTask "build", ["clean", "test", "less:dist", "cssmin"]
   grunt.registerTask "default", ["build"]
