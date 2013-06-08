@@ -115,7 +115,7 @@ body {
 
 // Global fixed width wrapper
 .wrapper {
-  max-width: @thumbSize * 5 + @thumbPadding * 8; // Defined at work-list
+  max-width: 1070;
   margin: 0 0 @space;
 }
 
@@ -270,11 +270,6 @@ hgroup {
       background: fade(red, 20%);
     }
   }
-}
-
-// Width fix for article element except .work-list
-.width-unfixed { // article.width-fix
-  max-width: 100%;
 }
 
 // Article wrapper
@@ -541,75 +536,8 @@ article {
   }
 }
 
-// Image list in "work"
-@thumbSize: 190px;
-@thumbPadding: 15px;
-@thumbFontSize: @baseFontSize * .7;
-
-.work-list { // ul.work-list
-  margin: -@thumbPadding;
-  .cf;
-
-  li {
-    position: relative;
-    float: left;
-    margin: @thumbPadding;
-    list-style: none;
-
-    &:hover {
-
-      a {
-        opacity: 1;
-      }
-
-      img {
-        -webkit-filter: none;
-                filter: none;
-        .transition(-webkit-filter .1s ease);
-      }
-    }
-  }
-
-  a {
-    display: block;
-    width: @thumbSize;
-    height: (@thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px); // 1px to make the contianer safer
-    overflow: hidden; // For text
-    .font-face;
-  }
-
-  a {
-    font-size: @thumbFontSize;
-  }
-
-  img {
-    width: @thumbSize;
-    height: @thumbSize;
-    margin: 0; // Override: article img
-    color: transparent; // Hide img alt
-    background: fade(@linkColor, 10%);
-    -webkit-filter: grayscale(.9);
-            filter: grayscale(.9);
-    .transition(-webkit-filter .5s ease);
-    .webkit-fix;
-  }
-
-  p {
-    margin: (@thumbPadding * 1.4) 0 0;
-  }
-
-  time {
-    color: fade(@textColor, 30%);
-  }
-
-  // Better margin between to work lists
-  & ~ .txt {
-    margin: (@space * .5) 0 0;
-  }
-}
-
 // Post list in "note"
-.note-list { // div.note-list
+.list { // div.list
 
   section {
     margin: 0 0 (@space * .2);
@@ -749,36 +677,11 @@ footer {
   article .txt {
     font-size: 80%;
   }
-
-  // Thumbnail fix for page "Work"
-  .work-list {
-    li {
-      float: none; // Make sure smaller images are stretched to 100% in iOS and Safari, Firefox (only Chrome works without this hack at the moment)
-      margin-bottom: @thumbPadding * 2;
-
-      img {
-        width: 100%;
-        height: auto; // Should be 100%, but Safari for iOS has stupid bug for it.
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
 }
 
 // All iOS devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
   .wrapper {
     -webkit-text-size-adjust: none;
-  }
-
-  .work-list {
-    img {
-      -webkit-filter: none;
-              filter: none;
-    }
   }
 }
