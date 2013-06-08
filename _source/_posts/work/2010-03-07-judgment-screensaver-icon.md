@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Antiskill, Judgment Screensaver / Icon
+title: Antiskill, Judgment Screensaver
 category: work
 tag: project
 excerpt: Based on Toaru Kagaku no Railgun「とある科学の超電磁砲」

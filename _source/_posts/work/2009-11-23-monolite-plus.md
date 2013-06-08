@@ -1,6 +1,6 @@
 ---
 layout: post
-title: foobar2000 Skin - MonoLite Plus
+title: foobar2000 - MonoLite Plus
 category: work
 tag: project
 excerpt: A foobar2000 theme based on Columns UI
