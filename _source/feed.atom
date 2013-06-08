@@ -29,17 +29,17 @@ permalink: /feed/index.xml
         <uri>{{ site.url }}{{ site.base }}/</uri>
       </author>
       <content type="html" xml:base="{{ site.url }}{{ site.base }}/">
-        {% if post.thumb %}
-          &lt;img src=&quot;{{ site.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot;&gt;
+        {% if post.img-headline %}
+					&lt;img src=&quot;{{ site.file }}/{{ post.img-headline }}&quot; alt=&quot;{{ post.title | xml_escape }}&quot; width=&quot;500&quot;&gt;
+				{% endif %}
+        {% if post.excerpt %}
           &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
-        {% elsif post.category == "note" %}
-          {% if post.excerpt %}
-            &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
-          {% else %}
-            {{ post.content | xml_escape }}
-          {% endif %}
-          {% if post.link %}&lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ site.base }}{{ post.url }}/&quot; title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;{% endif %}
+        {% else %}
+          {{ post.content | xml_escape }}
         {% endif %}
+        {% if post.link %}
+					&lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ site.base }}{{ post.url }}/&quot; title=&quot;Permalink to &#8216;{{ post.title | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;
+				{% endif %}
       </content>
     </entry>
   {% endfor %}
