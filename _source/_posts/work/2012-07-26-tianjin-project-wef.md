@@ -5,7 +5,7 @@ category: work
 tag: design
 excerpt: A Detailed Introduction to Municipality of Tianjin featured on the World Economic Forum
 thumb: tianjin-project-wef.jpg
-img-headline: tianjin-project-wef.png
+img-headline: tianjin-project-wef.svg
 img-headline-width: 600
 ---
 
