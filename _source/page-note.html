@@ -7,12 +7,6 @@ desc: TL;DR
 
 <div class=list>
   {% for post in site.categories.note %}
-    <section{% if post.lang %} lang={{ post.lang }}{% endif %}>
-      <h2>
-        {% if post.link %}<a href={{ post.link }}>{{ post.title }}</a>{% else %}<a href={{ site.base }}{{ post.url }}/>{{ post.title }}</a>{% endif %}
-        &#20;<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-        {% if post.link %}&#20;<a href={{ site.base }}{{ post.url }}/>&infin;</a>{% endif %}
-      </h2>
-    </section>
+    {% include list-item.html %}
   {% endfor %}
 </div>

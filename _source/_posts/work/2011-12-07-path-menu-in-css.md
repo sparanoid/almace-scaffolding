@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Path Menu Using CSS
-category: note
+title: Path Menu in CSS
+category: work
+tag: project
 link: /lab/path-menu/
 ---
 

@@ -6,17 +6,11 @@ desc: Designs &amp; drawings
 ---
 
 <div class=txt>
-  <h3>Side Projects</h3>
+  <h3>Personal Projects</h3>
 </div>
 <ul class=list>
   {% for post in site.tags.project %}
-    <section{% if post.lang %} lang={{ post.lang }}{% endif %}>
-      <h2>
-        {% if post.link %}<a href={{ post.link }}>{{ post.title }}</a>{% else %}<a href={{ site.base }}{{ post.url }}/>{{ post.title }}</a>{% endif %}
-        &#20;<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-        {% if post.link %}&#20;<a href={{ site.base }}{{ post.url }}/>&infin;</a>{% endif %}
-      </h2>
-    </section>
+    {% include list-item.html %}
   {% endfor %}
 </ul>
 
@@ -25,27 +19,15 @@ desc: Designs &amp; drawings
 </div>
 <ul class=list>
   {% for post in site.tags.design %}
-    <section{% if post.lang %} lang={{ post.lang }}{% endif %}>
-      <h2>
-        {% if post.link %}<a href={{ post.link }}>{{ post.title }}</a>{% else %}<a href={{ site.base }}{{ post.url }}/>{{ post.title }}</a>{% endif %}
-        &#20;<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-        {% if post.link %}&#20;<a href={{ site.base }}{{ post.url }}/>&infin;</a>{% endif %}
-      </h2>
-    </section>
+    {% include list-item.html %}
   {% endfor %}
 </ul>
 
 <div class=txt>
-  <h3>Sketches / Paintings</h3>
+  <h3>Paintings / Sketches</h3>
 </div>
 <ul class=list>
   {% for post in site.tags.drawing %}
-    <section{% if post.lang %} lang={{ post.lang }}{% endif %}>
-      <h2>
-        {% if post.link %}<a href={{ post.link }}>{{ post.title }}</a>{% else %}<a href={{ site.base }}{{ post.url }}/>{{ post.title }}</a>{% endif %}
-        &#20;<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %Y" }}</time>
-        {% if post.link %}&#20;<a href={{ site.base }}{{ post.url }}/>&infin;</a>{% endif %}
-      </h2>
-    </section>
+    {% include list-item.html %}
   {% endfor %}
 </ul>

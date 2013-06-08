@@ -1,11 +1,12 @@
 ---
 layout: post
-title: WordPress Plugin - Quotmarks Replacer
+title: Quotmarks Replacer
 category: work
 tag: project
 excerpt: A plugin that disables wptexturize function
 thumb: qmr.png
 img-headline: quotmarks-replacer.png
+link: http://wordpress.org/extend/plugins/quotmarks-replacer/
 ---
 
 <div class=txt>
