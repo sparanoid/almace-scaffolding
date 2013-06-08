@@ -5,6 +5,40 @@ Most of changes are generated using `git log` command to get things done:
 	git log 21..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'
 
 ## Head [#][head]
+- Move all element to align left
+- Better Textmate exclude list
+- Better work list
+	- Remove image thumbnals, the same as Note page
+	- No more `.width-unfixed` class for normal pages
+- Shorten some post tiles
+- Update posts structures for new design
+	- Move Path Menu post from Note to Work
+	- Add relative links for some posts in Work category
+- Make it compatible with less 1.4 beta or greater
+- Revert adding more margin space for `.tweet` button
+- More details about post “ReadWise”
+- “Latest Work” --> “Latest”
+- Better copywriting
+- No more `lazyload.html` for Work page
+- Add my favorite titles back
+- Better body padding for small screens
+- Remove `.center` class, no longer need
+- More multiple language titles
+- Shorten Work page subtitle
+- Fix typos
+- Better template structure
+- Simplify post title “find.ac Alter”
+- No more `hgroup`, use `header + h1 + small`
+- More structure fix, valid for w3c check
+- Remove sponsor styles and HTML code
+- Add a simple animation for latest work link
+- Better post title image for new design
+- Create new post “DOLLARS Chat Room”
+- Simplify Atom feed structure, no more `post.thumb` determination
+- Better navigation styles for small devices
+- Add excludeInFileChooser for `.tm_properties`
+
+## 21 (Jun 7, 2013) [#][21-finale]
 
 - Hide img `alt`
 - Update post 'Project Railgun'
@@ -83,7 +117,33 @@ Most of changes are generated using `git log` command to get things done:
 - Fix feed validation
 - Remove `feed.rss`
 - Add configuration comment
-- Fix typos in changelog
+- Fix typos in `CHANGELOG.md`
+- Fix typo in `_config.yml`
+- Recompile CSS
+- Update changelog with demo links
+- Update changelog with old version screenshots
+- Update changelog date
+- Fix screenshots URLs in changelog
+- Fix dead link in old post
+- Fix  permission
+- Adds package.json
+- Add Grunt support, now use `grunt [task]` to manage server, build tasks
+- Change source to 'https://rubygems.org' for secure HTTPS connection
+- Add Travis support
+- Add Travis and David badges
+- Remove Gemfile.lock
+- Remove unused grunt dependencies
+- Remove old `rake serve` task, use jekyll itself
+- Remode deprecated task :preview
+- Read basic configurations from YAML
+- Copy rake tasks to Gruntfile
+- Move more rake tasks to Gruntfile
+- Say goodbye to Rakefile
+- Move scoped style into proper scope
+- Add scoped style fallback
+- Better less style with recess check
+- More less properties order fix
+
 
 ## 21 (December 10, 2012) [#][21]
 
@@ -590,6 +650,7 @@ Source code not available
 - Initial release
 
 [head]:         http://sparanoid.com/
+[21-finale]:    http://sparanoid.com/lab/version/21-finale/
 [21]:           http://sparanoid.com/lab/version/21/
 [20.1-finale]:  http://sparanoid.com/lab/version/20.1-finale/
 [20.1]:         http://sparanoid.com/lab/version/20.1/
