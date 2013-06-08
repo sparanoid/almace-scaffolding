@@ -6,7 +6,13 @@ permalink: /
 
 <article>
   <hgroup>
-    <h1>Hi, I’m Tunghsiao Liu, <br>I make things that don’t suck.</h1>
+    <h1>
+      Hi, I’m Tunghsiao Liu, <br>
+      I make things that don’t suck.<br>
+      {% for post in site.categories.work limit:1 %}
+        Latest Work - <a href="{{ site.base }}{{ post.url }}/">{{ post.title }}</a>
+      {% endfor %}
+    </h1>
 
     {% if site.availability == 'free' %}
       <h2 class="status available"><a href="mailto:{{ site.email }}">Hire me, currently available for freelance</a><h2>

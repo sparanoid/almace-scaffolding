@@ -38,17 +38,8 @@
   </style>
 {% endif %}
 
-<!-- Header, logo, we need a .index class here to include homepage specified styles -->
-{% if page.title == 'Sparanoid' or page.title == 'Error' %}
-  <header class=index>
-    <h3>latest Work</h3>
-    {% for post in site.categories.work limit:1 %}
-      <h2><a href="{{ site.base }}{{ post.url }}/">{{ post.title }}</a></h2>
-    {% endfor %}
-{% else %}
-  <header>
-{% endif %}
-  <!-- There's a normal header for the other pages -->
+<!-- Header, just a logo at the moment -->
+<header>
   <h1><a href={{ site.base }}/ class=logo accesskey=x>Sparanoid</a></h1>
 </header>
 
@@ -62,9 +53,9 @@
     {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
     {% if page.permalink == '/note/'  or page.category == 'note'  %}<ul class=nav-note>{% endif %}
     {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
+      <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href={{ site.base }}/>Home</a></li>
       <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href={{ site.base }}/work/>Work</a></li>
       <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href={{ site.base }}/store/>Store</a></li>
-      <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href={{ site.base }}/>Home</a></li>
       <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href={{ site.base }}/note/>Note</a></li>
       <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href={{ site.base }}/about/>About</a></li>
     </ul>

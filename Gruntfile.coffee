@@ -135,17 +135,21 @@ module.exports = (grunt) ->
         command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
 
     concurrent:
-      server:
-        options:
-          logConcurrentOutput: true
+      options:
+        logConcurrentOutput: true
 
+      server:
         tasks: ["shell:server", "watch"]
+
+      dist:
+        tasks: ["cssmin", "htmlmin", "xmlmin"]
+
 
     clean: [".tmp", "<%= core.dist %>/*"]
 
   grunt.registerTask "server", ["less:server", "concurrent"]
   grunt.registerTask "test", ["coffeelint", "recess"]
-  grunt.registerTask "build", ["clean", "test", "less:dist", "cssmin", "htmlmin", "xmlmin", "shell:dist"]
+  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
   grunt.registerTask "sync", ["build", "shell:sync"]
   grunt.registerTask "s3", ["shell:s3"]
   grunt.registerTask "default", ["build"]
