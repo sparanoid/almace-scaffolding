@@ -33,7 +33,7 @@
 
 .font-face {
   font-family: PFDTCP-M, "Avenir Next Condensed", "Arial Narrow", @sansSerif; // Add some narrow typefaces failback
-  font-size: @baseFontSize * 7/3;
+  font-size: (@baseFontSize * 7/3);
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
   letter-spacing: -.02em;
@@ -42,9 +42,9 @@
 
 .helvetica {
   font-family: @sansSerif;
-  font-size: @baseFontSize / 2;
+  font-size: (@baseFontSize / 2);
   font-weight: normal;
-  line-height: @baseLineHeight * .9;
+  line-height: (@baseLineHeight * .9);
   letter-spacing: .45em;
   color: fade(@textColor, 40%);
   text-transform: uppercase;
@@ -116,7 +116,7 @@ body {
 // Global fixed width wrapper
 .wrapper {
   max-width: 1070;
-  margin: 0 0 @space;
+  margin: 0 0 (@space * 1.35);
 }
 
 a, button {
@@ -152,7 +152,7 @@ del {
   display: block;
   width: 0;
   height: 0;
-  margin: -36px 0 @space / 5;
+  margin: -36px 0 (@space / 5);
   text-indent: -9999em;
   border-color: transparent;
   border-bottom-color: @textColor;
@@ -171,7 +171,7 @@ nav {
 
 // Main navigation
 .navigation { // nav.navigation
-  margin: 0 0 @space * 1.5;
+  margin: 0 0 (@space * 1.5);
   .cf;
 
   li {
@@ -202,7 +202,7 @@ nav {
 
 // Titles wrapper
 hgroup {
-  padding-bottom: @space * 1.35;
+  padding-bottom: (@space * 1.35);
 
   h1 {
     margin: 0 0 .1em;
@@ -210,7 +210,7 @@ hgroup {
 
     // Override margin from article img
     img {
-      margin-bottom: @baseFontSize * .6;
+      margin-bottom: (@baseFontSize * .6);
     }
   }
 
@@ -319,7 +319,7 @@ article {
 
   blockquote {
     position: relative;
-    padding-left: @space * .75;
+    padding-left: (@space * .75);
     font-style: italic;
     .cf;
 
@@ -375,7 +375,7 @@ article {
 
     label {
       display: block;
-      margin-bottom: @space * .3;
+      margin-bottom: (@space * .3);
       .helvetica;
     }
 
@@ -451,7 +451,7 @@ article {
 
 // Tweet button margin fix
 .tweet {
-  margin-top: @space;
+  margin-top: (@space * 1.35);
 }
 
 // Centered text
@@ -477,9 +477,6 @@ article {
   & {
     color: @backgroundColor;
   }
-}
-
-.btn {
 }
 
 // Broser frame for images in category "work"
@@ -511,7 +508,7 @@ article {
 // Special paragraph with an icon
 .note, .store, .download {
   @iconSize: 40px;
-  padding-left: @iconSize * 1.25;
+  padding-left: (@iconSize * 1.25);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: @iconSize @iconSize;
@@ -622,7 +619,7 @@ footer {
   .helvetica;
 
   & {
-    font-size: (@baseFontSize / 2) - 1px;
+    font-size: (@baseFontSize / 2 - 1px);
   }
 }
 
