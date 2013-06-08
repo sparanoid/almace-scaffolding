@@ -1,6 +1,6 @@
 ---
 layout: post
-title: find.ac Alter Merchant Page
+title: find.ac Alter
 category: work
 tag: design
 excerpt: find.ac Alter merchant page for a Japanese ACG (Animations, Comics and Games) community
