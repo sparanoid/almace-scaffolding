@@ -5,7 +5,7 @@ category: work
 tag: project
 excerpt: A plugin that disables wptexturize function
 thumb: qmr.png
-img-headline: quotmarks-replacer.png
+img-headline: quotmarks-replacer-h.svg
 link: http://wordpress.org/extend/plugins/quotmarks-replacer/
 ---
 
