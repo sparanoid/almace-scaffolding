@@ -38,7 +38,7 @@ Most of changes are generated using `git log` command to get things done:
 - Better navigation styles for small devices
 - Add excludeInFileChooser for `.tm_properties`
 
-## 21 (Jun 7, 2013) [#][21-finale]
+## 21-finale (Jun 7, 2013) [#][21-finale]
 
 - Hide img `alt`
 - Update post 'Project Railgun'
@@ -145,7 +145,7 @@ Most of changes are generated using `git log` command to get things done:
 - More less properties order fix
 
 
-## 21 (December 10, 2012) [#][21]
+## 21 (December 10, 2012)
 
 - New header design
 - Better comments
@@ -651,7 +651,6 @@ Source code not available
 
 [head]:         http://sparanoid.com/
 [21-finale]:    http://sparanoid.com/lab/version/21-finale/
-[21]:           http://sparanoid.com/lab/version/21/
 [20.1-finale]:  http://sparanoid.com/lab/version/20.1-finale/
 [20.1]:         http://sparanoid.com/lab/version/20.1/
 [20]:           http://sparanoid.com/lab/version/20/
