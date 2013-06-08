@@ -72,11 +72,10 @@
 }
 
 // Basic reset
-p,
-ul, ol, li,
-h1, h2, h3, h4, h5, h6,
-blockquote,
-hr {
+p, hr, pre, blockquote,
+ol, ul, li, dl, dt, dd,
+a, em, strong, small, s, cite, q, dfn, abbr, time, code, var, i, b, u, span, br, wbr,
+h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -198,27 +197,31 @@ nav {
 }
 
 // Titles wrapper
-hgroup {
-  padding-bottom: (@space * 1.35);
+.wrapper { // Wrap them all in .wrapper to avoid overriding site header
 
-  h1 {
-    margin: 0 0 .1em;
-    .font-face;
+  header {
+    padding-bottom: (@space * 1.35);
 
-    // Override margin from article img
-    img {
-      margin-bottom: (@baseFontSize * .6);
+    h1 {
+      margin: 0 0 .1em;
+      .font-face;
+
+      // Override margin from article img
+      img {
+        margin-bottom: (@baseFontSize * .6);
+      }
     }
-  }
 
-  h2 {
-    .helvetica;
-  }
+    small {
+      display: block;
+      .helvetica;
+    }
 
-  // TODO: performance opti.
-  & + .txt :first-child { // For example, hgroup + .txt h3:first-child
-    padding-top: 0;
-    margin-top: 0;
+    // TODO: performance opti.
+    & + .txt :first-child { // For example, hgroup + .txt h3:first-child
+      padding-top: 0;
+      margin-top: 0;
+    }
   }
 }
 
