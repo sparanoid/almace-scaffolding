@@ -119,13 +119,16 @@ body {
 }
 
 a, button {
-  color: @textColor;
-  text-decoration: none;
-  .transition(~"color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease");
 
-  &:hover {
-    color: @linkColor;
-    .transition(~"color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease");
+  &:link, &:visited {
+    color: @textColor;
+    text-decoration: none;
+    .transition(~"color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease");
+
+    &:focus, &:hover {
+      color: @linkColor;
+      .transition(~"color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease");
+    }
   }
 }
 
@@ -463,14 +466,14 @@ article {
   background: @textColor;
   outline: none;
 
-  &:hover, &:focus {
-    color: @backgroundColor;
-    background: @linkColor;
-  }
-
   // Redefine overrides here to pass recess syntax check
-  & {
+  &:link, &:visited {
     color: @backgroundColor;
+
+    &:focus, &:hover {
+      color: @backgroundColor;
+      background: @linkColor;
+    }
   }
 }
 
@@ -529,9 +532,9 @@ article {
 }
 
 // Post list in "note"
-.list { // div.list
+.list { // ul.list
 
-  section {
+  li {
     margin: 0 0 (@space * .2);
     overflow: hidden;
 
@@ -540,6 +543,7 @@ article {
       .font-face;
 
       time {
+        margin-left: .2em;
         color: fade(@textColor, 30%);
       }
 
