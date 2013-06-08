@@ -6,7 +6,8 @@ tag: design
 excerpt: A Detailed Introduction to Municipality of Tianjin
 thumb: tianjin-project.jpg
 plugin: slider
-img-headline: tianjin-project.png
+img-headline: tianjin-project.svg
+img-headline-width: 400
 link: /lab/tianjin/
 ---
 
