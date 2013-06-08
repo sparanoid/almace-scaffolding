@@ -126,7 +126,7 @@ module.exports = (grunt) ->
         command: "jekyll serve --watch"
 
       dist:
-        command: "jekyll build"
+        command: "jekyll build --baseurl <%= core.cfg.base %>/ -d <%= core.cfg.destination %><%= core.cfg.base %>/"
 
       sync:
         command: "rsync -avz --delete <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_user %>:<%= core.cfg.remote_dir %> > rsync.log"
