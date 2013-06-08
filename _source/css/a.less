@@ -45,9 +45,8 @@
   font-size: @baseFontSize / 2;
   font-weight: normal;
   line-height: @baseLineHeight * .9;
-  letter-spacing: .25em;
+  letter-spacing: .45em;
   color: fade(@textColor, 40%);
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -69,9 +68,7 @@
 
 // This fix some peformance issues in WebKit, such as transform, webkit-filter in retina displays, and more.
 .webkit-fix {
-  // -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
-  // -webkit-perspective: 1000;
 }
 
 // Basic reset
@@ -91,13 +88,12 @@ hr {
 }
 
 body {
-  padding: 0 0  @space * 1.5;
+  padding: 0 (@space * 2)  (@space * 1.5);
   margin: 0 auto 0;
   font-family: @serif;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   color: @textColor;
-  text-align: center;
   text-rendering: optimizelegibility;
   background: @backgroundColor;
   image-rendering: optimizequality;
@@ -109,7 +105,7 @@ body {
     left: 0;
     z-index: 9999;
     width: 100%;
-    height: 15px;
+    height: 8px;
     pointer-events: none;
     background: fade(@textColor, 2%);
     border-bottom: 1px solid fade(@textColor, 2%);
@@ -120,8 +116,7 @@ body {
 // Global fixed width wrapper
 .wrapper {
   max-width: @thumbSize * 5 + @thumbPadding * 8; // Defined at work-list
-  padding: 0 @space * 1.2;
-  margin: 0 auto;
+  margin: 0 0 @space;
 }
 
 a, button {
@@ -157,7 +152,7 @@ del {
   display: block;
   width: 0;
   height: 0;
-  margin: -29px auto @space / 5;
+  margin: -36px 0 @space / 5;
   text-indent: -9999em;
   border-color: transparent;
   border-bottom-color: @textColor;
@@ -166,46 +161,6 @@ del {
 
   &:hover {
     border-bottom-color: @linkColor;
-  }
-}
-
-// A different logo only available in homepage
-.index { // header.index
-  margin: 0 0 @space / 5;
-  // .vertical(#9475d1, #b67fd6); // tianjin-project-wef
-  .vertical(#f86621, #f86621); // corner-bracket-lover
-
-  .logo {
-    margin: @space / 2 auto 0;
-    border-bottom-color: @backgroundColor;
-
-    &:hover {
-      border-bottom-color: fade(@backgroundColor, 70%);
-    }
-  }
-
-  // Post title
-  h2 {
-    padding: 0 5%;
-
-    a {
-      .font-face;
-      font-size: @baseFontSize * 1.5;
-      color: @backgroundColor;
-      border-bottom: transparent 1px solid; // We have to define a transparent border in order to make transition work
-
-      &:hover {
-        border-bottom-color: @backgroundColor;
-      }
-    }
-  }
-
-  // "LATEST WORK"
-  h3 {
-    padding-top: 64px;
-    .helvetica;
-    color: @backgroundColor;
-    opacity: .6;
   }
 }
 
@@ -227,6 +182,13 @@ nav {
     a {
       padding: 3px 1em;
       font-weight: bold;
+    }
+  }
+
+  &:first-child {
+
+    a {
+      padding-left: 0;
     }
   }
 }
@@ -318,13 +280,12 @@ hgroup {
 // Article wrapper
 article {
   max-width: @wrapperWidth;
-  margin: 0 auto @space * 1.35;
   .cf; // For some specified posts in work category
 
   img, video, iframe {
     display: block;
     max-width: 100%;
-    margin: 0 auto 40px;
+    margin: 0 0 40px;
   }
 }
 
@@ -334,7 +295,6 @@ article {
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
           hyphens: auto;
-  text-align: left;
 
   a {
     border-bottom: 1px dotted fade(@textColor, 30%); // Set larger value for invert color
@@ -428,7 +388,7 @@ article {
       display: block;
       width: 100%;
       padding: 7px;
-      margin: 0 auto @space * .3;
+      margin: 0 0 (@space * .3);
       .helvetica;
       border: 1px solid fade(@textColor, 20%);
       border-radius: 0; // Remove border-radius for ios devices
@@ -466,7 +426,8 @@ article {
     max-height: auto;
     // Override default WebKit styles
     min-width: 100%;
-    padding: 20px 0;
+    padding: 20px (@space * .5);
+    margin: 0;
     color: @backgroundColor;
     background: fade(@linkColor, 95%);
     border: none;
@@ -506,10 +467,8 @@ article {
 // Button styles
 .btn {
   display: inline-block;
-  padding: 7px 10px;
+  padding: 6px 20px;
   .helvetica;
-  font-size: @baseFontSize / 2 - 2px;
-  color: @backgroundColor;
   cursor: pointer;
   background: @textColor;
   outline: none;
@@ -518,6 +477,14 @@ article {
     color: @backgroundColor;
     background: @linkColor;
   }
+
+  // Redefine overrides here to pass recess syntax check
+  & {
+    color: @backgroundColor;
+  }
+}
+
+.btn {
 }
 
 // Broser frame for images in category "work"
@@ -581,7 +548,6 @@ article {
 
 .work-list { // ul.work-list
   margin: -@thumbPadding;
-  text-align: left;
   .cf;
 
   li {
@@ -607,9 +573,12 @@ article {
   a {
     display: block;
     width: @thumbSize;
-    height: @thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px; // 1px to make the contianer safer
+    height: (@thumbSize + @thumbFontSize * 2 + @thumbPadding * 1.4 + 1px); // 1px to make the contianer safer
     overflow: hidden; // For text
     .font-face;
+  }
+
+  a {
     font-size: @thumbFontSize;
   }
 
@@ -626,7 +595,7 @@ article {
   }
 
   p {
-    margin: @thumbPadding * 1.4 0 0;
+    margin: (@thumbPadding * 1.4) 0 0;
   }
 
   time {
@@ -635,7 +604,7 @@ article {
 
   // Better margin between to work lists
   & ~ .txt {
-    margin: @space * .5 0 0;
+    margin: (@space * .5) 0 0;
   }
 }
 
@@ -643,27 +612,31 @@ article {
 .note-list { // div.note-list
 
   section {
-    margin: 0 0 @space * .2;
+    margin: 0 0 (@space * .2);
     overflow: hidden;
 
     h2 {
       margin: 0 0 .1em;
       .font-face;
-      font-size: @baseFontSize * 2;
-      font-weight: normal;
 
       time {
         color: fade(@textColor, 30%);
       }
 
       time + a {
+        margin-left: .2em;
         line-height: 0; // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
         vertical-align: 3px;
       }
     }
 
+    h2 {
+      font-size: (@baseFontSize * 2);
+      font-weight: normal;
+    }
+
     .txt {
-      margin: @space / 5 auto @space;
+      margin: (@space / 5) 0 @space;
     }
   }
 
@@ -719,7 +692,10 @@ article {
 
 footer {
   .helvetica;
-  font-size: @baseFontSize / 2 - 1px;
+
+  & {
+    font-size: (@baseFontSize / 2) - 1px;
+  }
 }
 
 // FlexSlider Necessary Styles
@@ -740,8 +716,8 @@ footer {
     }
 
     .flex-caption {
-      .helvetica;
       margin: -30px 0 30px;
+      .helvetica;
     }
   }
 }
@@ -752,20 +728,24 @@ footer {
 
 // Four thumbnails in a row
 @media (max-width: 1238px) {
-  .wrapper {
-    max-width: @thumbSize * 4 + @thumbPadding * 6; // Defined at .work-list
+  body {
+    padding: 0 (@space * 1.2) (@space * 1.5);
   }
 }
 
 // Three thumbnails in a row
 @media (max-width: 1018px) {
-  .wrapper {
-    max-width: @thumbSize * 3 + @thumbPadding * 4; // Defined at .work-list
+  body {
+    padding: 0 (@space * .96) (@space * 1.5);
   }
 }
 
 // Small screen
 @media (max-width: 640px) {
+  body {
+    padding: 0 (@space * .5) (@space * 1.5);
+  }
+
   article .txt {
     font-size: 80%;
   }
@@ -787,10 +767,6 @@ footer {
       }
     }
   }
-
-  .next, .prev {
-    display: none;
-  }
 }
 
 // All iOS devices, the easiest way
@@ -804,32 +780,5 @@ footer {
       -webkit-filter: none;
               filter: none;
     }
-  }
-}
-
-// iPad and iPhone portrait {
-@media (max-device-width: 1024px) and (orientation: portrait) {
-  .wrapper {
-    @padding: 69px;
-    padding-left: @padding;
-    padding-right: @padding;
-  }
-}
-
-// iPhone
-@media (max-device-width: 480px) {
-  .wrapper {
-    @padding: 32px;
-    padding-left: @padding;
-    padding-right: @padding;
-  }
-}
-
-// iPhone portrait
-@media (max-device-width: 480px) and (orientation: portrait) {
-  .wrapper {
-    @padding: 15px;
-    padding-left: @padding;
-    padding-right: @padding;
   }
 }
