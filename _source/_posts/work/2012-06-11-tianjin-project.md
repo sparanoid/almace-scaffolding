@@ -7,6 +7,7 @@ excerpt: A Detailed Introduction to Municipality of Tianjin
 thumb: tianjin-project.jpg
 plugin: slider
 img-headline: tianjin-project.png
+link: /lab/tianjin/
 ---
 
 <div class=txt>
