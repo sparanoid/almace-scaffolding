@@ -1,2 +1,2 @@
 # Exclude search list
-excludeInFolderSearch = "_site"
+excludeInFolderSearch = "{_site,node_modules}"
