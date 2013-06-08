@@ -180,16 +180,13 @@ nav {
     list-style: none;
 
     a {
-      padding: 3px 1em;
+      padding: 3px 1.2em;
       font-weight: bold;
     }
   }
 
   &:first-child {
-
-    a {
-      padding-left: 0;
-    }
+    margin-left: -1.2em;
   }
 }
 
@@ -650,22 +647,19 @@ footer {
 // FlexSlider - No JavaScript fallback
 .no-js .flexslider ul li:first-child { display: block; }
 
-
-// Four thumbnails in a row
+// Media query stack
 @media (max-width: 1238px) {
   body {
     padding: 0 (@space * 1.2) (@space * 1.5);
   }
 }
 
-// Three thumbnails in a row
 @media (max-width: 1018px) {
   body {
     padding: 0 (@space * .96) (@space * 1.5);
   }
 }
 
-// Small screen
 @media (max-width: 640px) {
   body {
     padding: 0 (@space * .5) (@space * 1.5);
@@ -673,6 +667,12 @@ footer {
 
   article .txt {
     font-size: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 (@space * .2) (@space * 1.5);
   }
 }
 
