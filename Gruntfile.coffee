@@ -126,6 +126,9 @@ module.exports = (grunt) ->
         command: "jekyll serve --watch"
 
       dist:
+        command: "jekyll build"
+
+      archive:
         command: "jekyll build --baseurl <%= core.cfg.base %>/ -d <%= core.cfg.destination %><%= core.cfg.base %>/"
 
       sync:
@@ -150,6 +153,7 @@ module.exports = (grunt) ->
   grunt.registerTask "server", ["less:server", "concurrent"]
   grunt.registerTask "test", ["coffeelint", "recess"]
   grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
+  grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
   grunt.registerTask "sync", ["build", "shell:sync"]
   grunt.registerTask "s3", ["shell:s3"]
   grunt.registerTask "default", ["build"]
