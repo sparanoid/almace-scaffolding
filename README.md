@@ -1,4 +1,4 @@
-# Sparanoid [![Build Status](https://travis-ci.org/sparanoid/sparanoid.com.png)](https://travis-ci.org/sparanoid/sparanoid.com) [![Node Dependencies](https://david-dm.org/sparanoid/sparanoid.com.png)](https://david-dm.org/sparanoid/sparanoid.com)
+# Sparanoid [![Build Status](https://travis-ci.org/sparanoid/sparanoid.com.png)](https://travis-ci.org/sparanoid/sparanoid.com) [![devDependency Status](https://david-dm.org/sparanoid/path-menu/dev-status.png)](https://david-dm.org/sparanoid/path-menu#info=devDependencies)
 
 [Jekyll](https://github.com/mojombo/jekyll) runing on [sparanoid.com](http://sparanoid.com/), codename `Tyrfing`, version 22.
 
