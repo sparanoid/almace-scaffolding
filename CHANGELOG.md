@@ -19,6 +19,8 @@
 - Re-init `package.json`
 - Change gallery image order for post “Antiskill, Judgment Screensaver”
 - Use my awsome version number
+- New grunt task `log` - List current git commit log using `grunt log`
+- Reserve back to original version number, bump version to 22.0.1
 
 ## 22.0.0 (Jun 13, 2013) [#][22.0.0]
 
