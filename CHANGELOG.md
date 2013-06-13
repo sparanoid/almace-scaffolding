@@ -1,6 +1,27 @@
 # Changelog
 
 ## Head [#][head]
+
+## 22.0.1 (Jun 13, 2013)
+
+- More info for post “DOLLARS Chat Room”
+- Fix version number in readme
+- Update grunt-contrib-less to v0.6.0
+- Yay my .less is already 1.4.0 compatible.
+- Update enviroment requirement
+- Updat Gruntfile
+  - Fix cssmin task working directory
+  - Better concurrent task ouput
+  - Optimize concurrent order
+- Update Jekyll settings
+- Remove unused comments in Gruntfile
+- Update `.™_properties` indent
+- Re-init `package.json`
+- Change gallery image order for post “Antiskill, Judgment Screensaver”
+- Use my awsome version number
+
+## 22.0.0 (Jun 13, 2013) [#][22.0.0]
+
 - Move all element to align left
 - Better Textmate exclude list
 - Better work list
@@ -33,6 +54,12 @@
 - Simplify Atom feed structure, no more `post.thumb` determination
 - Better navigation styles for small devices
 - Add excludeInFileChooser for `.tm_properties`
+- Update changelog
+- Bump version 21-finale --> 22
+- Update changelog
+- Better Grunt server task with more Jekyll options support
+- Fix buid task, create a new task `grunt archive` to create old design archive
+- Update codename
 
 ## 21-finale (Jun 7, 2013) [#][21-finale]
 
@@ -646,6 +673,7 @@ Source code not available
 - Initial release
 
 [head]:         http://sparanoid.com/
+[22]:           http://sparanoid.com/lab/version/22.0.0/
 [21-finale]:    http://sparanoid.com/lab/version/21-finale/
 [20.1-finale]:  http://sparanoid.com/lab/version/20.1-finale/
 [20.1]:         http://sparanoid.com/lab/version/20.1/
