@@ -40,15 +40,6 @@ module.exports = (grunt) ->
           src: ["Gruntfile.coffee"]
 
     recess:
-      # options:
-      #   # See: https://github.com/twitter/bootstrap/issues/6517
-      #   strictPropertyOrder: false
-      #   noOverqualifying: false
-      #   noUniversalSelectors: false
-      #   noIDs: false
-      #   noUnderscores: false
-      #   zeroUnits: false
-
       test:
         files:
           src: ["<%= core.app %>/css/a.less"]
