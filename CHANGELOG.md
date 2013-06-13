@@ -2,6 +2,8 @@
 
 ## Head [#][head]
 
+- Upate changelog
+
 ## 22.0.1 (Jun 13, 2013)
 
 - More info for post “DOLLARS Chat Room”
