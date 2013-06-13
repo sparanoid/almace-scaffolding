@@ -18,10 +18,10 @@ plugin: slider
 <div class="flexslider">
   <ul class="slides">
     <li>
-      <img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-00.png" alt="Judgment Icon from Academy City">
+      <img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-02.png" alt="Judgment Screensaver from Academy City Screenshot">
     </li>
     <li>
-      <img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-02.png" alt="Judgment Screensaver from Academy City Screenshot">
+      <img src="{{ site.file }}/judgment-screensaver-icon-from-academy-city-00.png" alt="Judgment Icon from Academy City">
     </li>
     <li>
       <img src="{{ site.file }}/antiskill-screensaver-from-academy-city-02.jpg" alt="Original Antiskill Screensaver from Academy City">
