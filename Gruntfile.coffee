@@ -51,7 +51,7 @@ module.exports = (grunt) ->
 
       test:
         files:
-          src: ["<%= core.assets %>/a.less"]
+          src: ["<%= core.app %>/css/a.less"]
 
     watch:
       coffee:
@@ -69,23 +69,14 @@ module.exports = (grunt) ->
           dumpLineNumbers: "all"
 
         files:
-          "<%= core.assets %>/a.css": ["<%= core.assets %>/a.less"]
+          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
 
       dist:
         options:
           paths: ["<%= core.assets %>"]
 
         files:
-          "<%= core.assets %>/a.css": ["<%= core.assets %>/a.less"]
-
-    cssmin:
-      dist:
-        options:
-          banner: "<%= core.banner %>"
-          report: "gzip"
-
-        files:
-          "<%= core.assets %>/a.css": ["<%= core.assets %>/*.css"]
+          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
 
     htmlmin:
       dist:
@@ -118,6 +109,15 @@ module.exports = (grunt) ->
           dest: "<%= core.dist %>/"
         ]
 
+    cssmin:
+      dist:
+        options:
+          banner: "<%= core.banner %>"
+          report: "gzip"
+
+        files:
+          "<%= core.dist %>/css/a.css": ["<%= core.dist %>/css/*.css"]
+
     shell:
       options:
         stdout: true
@@ -138,14 +138,11 @@ module.exports = (grunt) ->
         command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
 
     concurrent:
-      options:
-        logConcurrentOutput: true
-
       server:
         tasks: ["shell:server", "watch"]
 
       dist:
-        tasks: ["cssmin", "htmlmin", "xmlmin"]
+        tasks: ["htmlmin", "xmlmin", "cssmin"]
 
 
     clean: [".tmp", "<%= core.dist %>/*"]
