@@ -22,7 +22,7 @@ port:         4321
 future:       false
 
 #
-# Custom site settings
+# Custom site variables
 #
 
 domain:       sparanoid.com # In atom feed in `id` tag
@@ -40,7 +40,7 @@ availability: free # In homepage
 base:         "" # Example: /lab/version/21 without trailing slash
 
 #
-# Custom distribution settings
+# Custom distribution variables
 #
 
 remote_user:  root@sparanoid.com # SSH user used by rsync
