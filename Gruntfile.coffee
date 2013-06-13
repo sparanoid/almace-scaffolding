@@ -128,6 +128,9 @@ module.exports = (grunt) ->
       s3:
         command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
 
+      log:
+        command: "git log <%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
+
     concurrent:
       server:
         tasks: ["shell:server", "watch"]
@@ -144,4 +147,5 @@ module.exports = (grunt) ->
   grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
   grunt.registerTask "sync", ["build", "shell:sync"]
   grunt.registerTask "s3", ["shell:s3"]
+  grunt.registerTask "log", ["shell:log"]
   grunt.registerTask "default", ["build"]
