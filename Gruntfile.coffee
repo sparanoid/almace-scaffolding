@@ -10,7 +10,6 @@ module.exports = (grunt) ->
     cfg: grunt.file.readYAML("_config.yml")
     pkg: grunt.file.readJSON("package.json")
     app: "<%= core.cfg.source %>"
-    assets: "<%= core.cfg.source %>/css"
     dist: "<%= core.cfg.destination %>"
     banner: do ->
       banner = "/*!\n"
@@ -56,7 +55,7 @@ module.exports = (grunt) ->
     less:
       server:
         options:
-          paths: ["<%= core.assets %>"]
+          paths: ["<%= core.app %>/css"]
           dumpLineNumbers: "all"
 
         files:
@@ -64,7 +63,7 @@ module.exports = (grunt) ->
 
       dist:
         options:
-          paths: ["<%= core.assets %>"]
+          paths: ["<%= core.app %>/css"]
 
         files:
           "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
