@@ -1,6 +1,6 @@
 # Sparanoid [![Build Status](https://travis-ci.org/sparanoid/sparanoid.com.png)](https://travis-ci.org/sparanoid/sparanoid.com) [![devDependency Status](https://david-dm.org/sparanoid/sparanoid.com/dev-status.png)](https://david-dm.org/sparanoid/sparanoid.com#info=devDependencies)
 
-[Jekyll](https://github.com/mojombo/jekyll) runing on [sparanoid.com](http://sparanoid.com/), version 22.
+[Jekyll](https://github.com/mojombo/jekyll) runing on [sparanoid.com](http://sparanoid.com/).
 
 ## License
 
