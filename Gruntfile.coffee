@@ -131,6 +131,9 @@ module.exports = (grunt) ->
         command: "git log <%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
 
     concurrent:
+      options:
+        logConcurrentOutput: true
+
       server:
         tasks: ["shell:server", "watch"]
 
