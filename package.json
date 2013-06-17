@@ -35,7 +35,7 @@
     "grunt-contrib-htmlmin": "~0.1.3",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-coffeelint": "0.0.6",
-    "grunt-concurrent": "~0.2.0",
+    "grunt-concurrent": "~0.3.0",
     "grunt-recess": "~0.3.3",
     "grunt-xmlmin": "~0.1.1",
     "grunt-shell": "~0.2.2",
