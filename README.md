@@ -2,6 +2,13 @@
 
 [Jekyll](https://github.com/mojombo/jekyll) runing on [sparanoid.com](http://sparanoid.com/).
 
+## Author
+
+**Sparanoid**
+
+- Twitter: @[sparanoid](http://twitter.com/sparanoid)
+- GitHub: @[sparanoid](http://github.com/sparanoid)
+
 ## License
 
 Following files, directories and their contents are copyright Sparanoid and licensed under a [CC BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
