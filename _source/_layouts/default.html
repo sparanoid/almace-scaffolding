@@ -38,13 +38,13 @@
   </style>
 {% endif %}
 
-<!-- Header, just a logo at the moment -->
-<header>
-  <h1><a href={{ site.base }}/ class=logo accesskey=x>Sparanoid</a></h1>
-</header>
-
 <!-- Wrap in all width sensitive elements -->
 <div class="wrapper">
+
+  <!-- Header, just a logo at the moment -->
+  <header>
+    <h1><a href={{ site.base }}/ class=logo accesskey=x>Sparanoid</a></h1>
+  </header>
 
   <!-- Main navigation with current page / categoriy highlighted -->
   <nav class=navigation>
@@ -64,22 +64,21 @@
   <!-- All dynamic, user generated content go here. It's linked with page.html and post.html at the moment -->
   {{ content }}
 
+  <!-- Footer and sponsor ad section -->
+  {% if page.title != 'Sparanoid' %}
+    <!-- Insert ad here -->
+
+    <footer>
+      <p>
+        <a href={{ site.base }}/>{{ site.name }}</a> /
+        <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>
+      </p>
+      <p>
+        <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
+      </p>
+    </footer>
+  {% endif %}
 </div><!-- .wrapper -->
-
-<!-- Footer and sponsor ad section -->
-{% if page.title != 'Sparanoid' %}
-  <!-- Insert ad here -->
-
-  <footer>
-    <p>
-      <a href={{ site.base }}/>{{ site.name }}</a> /
-      <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>
-    </p>
-    <p>
-      <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
-    </p>
-  </footer>
-{% endif %}
 
 <!-- Add FlexSlider script for posts with sliders -->
 {% if page.plugin == 'slider' %}

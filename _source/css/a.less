@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  padding: 0 (@space * 2)  (@space * 1.5);
+  padding: 0 8%  (@space * 1.5);
   margin: 0 auto 0;
   font-family: @serif;
   font-size: @baseFontSize;
@@ -114,8 +114,8 @@ body {
 
 // Global fixed width wrapper
 .wrapper {
-  max-width: 1070;
-  margin: 0 0 (@space * 1.35);
+  max-width: 710px;
+  margin: 0 auto;
 }
 
 a, button {
@@ -174,6 +174,7 @@ nav {
 // Main navigation
 .navigation { // nav.navigation
   margin: 0 0 (@space * 1.5);
+  margin-left: -1.1em;
   .cf;
 
   li {
@@ -186,10 +187,6 @@ nav {
       font-weight: bold;
     }
   }
-
-  &:first-child {
-    margin-left: -1.2em;
-  }
 }
 
 // Currently activated page or category a post it belongs to
@@ -200,30 +197,33 @@ nav {
 }
 
 // Titles wrapper
-.wrapper { // Wrap them all in .wrapper to avoid overriding site header
+.wrapper {
 
-  header {
-    padding-bottom: (@space * 1.35);
+  article { // Define them into .wrapper > article to avoid overriding site main header
 
-    h1 {
-      margin: 0 0 .1em;
-      .font-face;
+    header {
+      padding-bottom: (@space * 1.35);
 
-      // Override margin from article img
-      img {
-        margin-bottom: (@baseFontSize * .6);
+      h1 {
+        margin: 0 0 .1em;
+        .font-face;
+
+        // Override margin from article img
+        img {
+          margin-bottom: (@baseFontSize * .6);
+        }
       }
-    }
 
-    small {
-      display: block;
-      .helvetica;
-    }
+      small {
+        display: block;
+        .helvetica;
+      }
 
-    // TODO: performance opti.
-    & + .txt :first-child { // For example, hgroup + .txt h3:first-child
-      padding-top: 0;
-      margin-top: 0;
+      // TODO: performance opti.
+      & + .txt :first-child { // For example, hgroup + .txt h3:first-child
+        padding-top: 0;
+        margin-top: 0;
+      }
     }
   }
 }
@@ -287,6 +287,7 @@ nav {
 // Article wrapper
 article {
   max-width: @wrapperWidth;
+  margin-bottom: (@space * 1.35);
   .cf; // For some specified posts in work category
 
   img, video, iframe {
@@ -310,6 +311,10 @@ article {
   p {
     margin: 0 0 1.1em;
     line-height: @baseLineHeight;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   h3 {
@@ -540,7 +545,7 @@ article {
   }
 }
 
-// Post list in "note"
+// Post list in "work" and "note"
 .list { // ul.list
 
   li {
@@ -570,8 +575,11 @@ article {
     }
   }
 
-  section:last-child {
-    margin-bottom: 0;
+  &:last-child {
+
+    li:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -594,7 +602,7 @@ footer {
   li {
     display: none;
     cursor: pointer;
-    -webkit-backface-visibility: hidden; // Hide the slides before the JS is loaded. Avoids image jumping
+    -webkit-backface-visibility: hidden; // Hide the slides before the JS is loaded, this avoids image flashing
 
     &:first-child {
       display: block; // Display the first image when scripts are not ready
@@ -611,33 +619,13 @@ footer {
 .no-js .flexslider ul li:first-child { display: block; }
 
 // Media query stack
-@media (max-width: 1238px) {
-  body {
-    padding: 0 (@space * 1.2) (@space * 1.5);
-  }
-}
-
-@media (max-width: 1018px) {
-  body {
-    padding: 0 (@space * .96) (@space * 1.5);
-  }
-}
-
 @media (max-width: 640px) {
   body {
-    padding: 0 (@space * .5) (@space * 1.5);
-  }
-
-  article .txt {
-    font-size: 80%;
+    font-size: (@baseFontSize * 0.8);
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    padding: 0 (@space * .2) (@space * 1.5);
-  }
-
   .navigation li {
     display: block;
 
