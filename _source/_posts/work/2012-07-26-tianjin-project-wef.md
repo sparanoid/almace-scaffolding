@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tianjin Project × The World Economic Forum
+title: Tianjin Project × WEF
 category: work
 tag: design
 excerpt: A Detailed Introduction to Municipality of Tianjin featured on the World Economic Forum
@@ -10,7 +10,7 @@ img-headline-width: 600
 ---
 
 <div class=txt>
-<p><a href="{% post_url /work/2012-06-11-tianjin-project %}/">Tianjin Project</a> is now featured on the World Economic Forum - Tianjin Davos 2012. Created using iBooks Author, for iPad only.</p>
+<p><a href="{% post_url /work/2012-06-11-tianjin-project %}/">Tianjin Project</a> is now featured on the World Economic Forum (WEF) - Tianjin Davos 2012. Created using iBooks Author, for iPad only.</p>
 </div>
 
 <div class=txt>
