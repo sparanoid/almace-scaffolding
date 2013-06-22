@@ -2,7 +2,22 @@
 
 ## Head [#][head]
 
-- Upate changelog
+## 22.0.2 (Jun 22, 2013)
+
+- Update changelog
+- Use dev deps badege
+- Update dev deps badge
+- Better post title line height
+- Add new post “Start Page”
+- Remove CSS *margin hack*, `time` elements shouldn’t be colapsed since it’s an inline element.
+- More info: https://github.com/kangax/html-minifier/pull/67
+- So you should wait html-minifier to fix that.
+- No more codename
+- No more `core.assets` variable
+- Update readme
+- Update grunt-concurrent, better log handling
+- Update readme
+- Optimize template structure, better central style, many more fixes
 
 ## 22.0.1 (Jun 13, 2013)
 
