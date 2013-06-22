@@ -15,7 +15,7 @@
   "bugs": {
     "url": "http://github.com/sparanoid/sparanoid.com/issues"
   },
-  "license": {
+  "licenses": {
     "type": "MIT",
     "url": "http://github.com/sparanoid/sparanoid.com/blob/master/LICENSE"
   },
