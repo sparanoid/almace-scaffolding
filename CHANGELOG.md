@@ -44,12 +44,12 @@
 - Move all element to align left
 - Better Textmate exclude list
 - Better work list
-	- Remove image thumbnals, the same as Note page
-	- No more `.width-unfixed` class for normal pages
+  - Remove image thumbnals, the same as Note page
+  - No more `.width-unfixed` class for normal pages
 - Shorten some post tiles
 - Update posts structures for new design
-	- Move Path Menu post from Note to Work
-	- Add relative links for some posts in Work category
+  - Move Path Menu post from Note to Work
+  - Add relative links for some posts in Work category
 - Make it compatible with less 1.4 beta or greater
 - Revert adding more margin space for `.tweet` button
 - More details about post “ReadWise”
