@@ -38,7 +38,7 @@
     "grunt-concurrent": "~0.3.0",
     "grunt-recess": "~0.3.3",
     "grunt-xmlmin": "~0.1.1",
-    "grunt-shell": "~0.2.2",
+    "grunt-shell": "~0.3.0",
     "matchdep": "~0.1.2"
   }
 }
