@@ -16,7 +16,7 @@ module.exports = (grunt) ->
       banner += " * (c) <%= core.pkg.author %>.\n *\n"
       banner += " * <%= core.pkg.name %> - v<%= core.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
       # banner += " * <%= core.pkg.homepage %>\n"
-      banner += " * <%= core.pkg.license.type %> - <%= core.pkg.license.url %>\n"
+      banner += " * <%= core.pkg.licenses.type %> - <%= core.pkg.licenses.url %>\n"
       banner += " */"
       banner
 
