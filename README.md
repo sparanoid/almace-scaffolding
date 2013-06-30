@@ -9,7 +9,7 @@
 - Twitter: @[tunghsiao](http://twitter.com/tunghsiao)
 - GitHub: @[sparanoid](http://github.com/sparanoid)
 
-## License
+## Licenses
 
 Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [CC BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
 
