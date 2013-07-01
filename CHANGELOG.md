@@ -721,7 +721,7 @@ Source code not available
 - Initial release
 
 [head]:         http://sparanoid.com/
-[22.0.0]:       http://sparanoid.com/lab/version/22.0.0/
+[22.0.0]:       http://sparanoid.com/lab/version/22/
 [21-finale]:    http://sparanoid.com/lab/version/21-finale/
 [20.1-finale]:  http://sparanoid.com/lab/version/20.1-finale/
 [20.1]:         http://sparanoid.com/lab/version/20.1/
