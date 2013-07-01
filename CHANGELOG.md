@@ -2,6 +2,9 @@
 
 ## Head [#][head]
 
+
+### 22.0.5 (Jul 1, 2013)
+
 - Fix about page indents
 - Remove theme previews from Postholic
 - Adds post “7-Zip Chinese Simplified”
@@ -10,7 +13,7 @@
 - Updates todo
 - Fix `grunt log` task
 
-## 22.0.4 (Jun 26, 2013)
+### 22.0.4 (Jun 26, 2013)
 
 - Fix Gruntfile error
 - Update packages
