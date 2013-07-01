@@ -2,7 +2,6 @@
 
 ## Head [#][head]
 
-
 ### 22.0.5 (Jul 1, 2013)
 
 - Fix about page indents
