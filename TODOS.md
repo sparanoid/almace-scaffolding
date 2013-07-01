@@ -1,3 +1,4 @@
 # Todos
 
-- Better grunt workflow from start page
+- Better grunt workflow for homepage page
+- Remove `.txt` class
