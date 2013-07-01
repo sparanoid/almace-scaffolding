@@ -2,7 +2,33 @@
 
 ## Head [#][head]
 
-## 22.0.2 (Jun 22, 2013)
+- Fix about page indents
+- Remove theme previews from Postholic
+- Adds post “7-Zip Chinese Simplified”
+- License --> Licenses
+- Adds new post “Notational Velocity”
+- Updates todo
+- Fix `grunt log` task
+
+## 22.0.4 (Jun 26, 2013)
+
+- Fix Gruntfile error
+- Update packages
+- Update homepage copywriting
+- Fix tab indents
+- Changelog: tab indents to space indents
+- Update copywriting for homepage and about page
+
+### 22.0.3 (Jun 26, 2013)
+
+- license -> licenses
+- Update .tm_properties
+- Remove `feed.atom` -> `feed-atom.xml`
+- Fix tab indents
+- Changelog: tab indents to space indents
+- Update copywriting for homepage and about page
+
+### 22.0.2 (Jun 22, 2013)
 
 - Update changelog
 - Use dev deps badege
@@ -18,8 +44,9 @@
 - Update grunt-concurrent, better log handling
 - Update readme
 - Optimize template structure, better central style, many more fixes
+- Update changelog, bump version to 22.0.2
 
-## 22.0.1 (Jun 13, 2013)
+### 22.0.1 (Jun 13, 2013)
 
 - More info for post “DOLLARS Chat Room”
 - Fix version number in readme
