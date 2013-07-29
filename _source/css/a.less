@@ -1,26 +1,18 @@
 // Global variables
 @space: 70px;
-@wrapperWidth: 750px;
-@baseFontSize: 24px;
-@baseLineHeight: 1.7;
-@linkColor: #e34; // #2ed for invert color
-@backgroundColor: #fff;
-@textColor: #000;
-@sansSerif: "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+@wrapper-width: 750px;
+@base-font-size: 24px;
+@base-line-height: 1.7;
+@link-color: #e34; // #2ed for invert color
+@background-color: #fff;
+@text-color: #000;
+@sans-serif: "Helvetica Neue", "Hiragino Sans GB", sans-serif;
 @serif: Palatino, "Hiragino Mincho ProN", serif;
 
 // Transition mixin
 .transition(@transition) {
   -webkit-transition: @transition;
           transition: @transition;
-}
-
-// Borrowed from Bootstrap
-.vertical(@startColor: #444, @endColor: #333) {
-  background-color: mix(@startColor, @endColor, 60%);
-  background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-  background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
-  background-repeat: repeat-x;
 }
 
 // Invert color switcher for images and videos
@@ -32,8 +24,8 @@
 }
 
 .font-face {
-  font-family: PFDTCP-M, "Avenir Next Condensed", "Arial Narrow", @sansSerif; // Add some narrow typefaces failback
-  font-size: (@baseFontSize * 7/3);
+  font-family: PFDTCP-M, "Avenir Next Condensed", "Arial Narrow", @sans-serif; // Add some narrow typefaces failback
+  font-size: (@base-font-size * 7/3);
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
   letter-spacing: -.02em;
@@ -41,12 +33,12 @@
 }
 
 .helvetica {
-  font-family: @sansSerif;
-  font-size: (@baseFontSize / 2);
+  font-family: @sans-serif;
+  font-size: (@base-font-size / 2);
   font-weight: normal;
-  line-height: (@baseLineHeight * .9);
+  line-height: (@base-line-height * .9);
   letter-spacing: .45em;
-  color: fade(@textColor, 40%);
+  color: fade(@text-color, 40%);
   text-transform: uppercase;
 }
 
@@ -90,11 +82,11 @@ body {
   padding: 0 8%  (@space * 1.5);
   margin: 0 auto 0;
   font-family: @serif;
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
-  color: @textColor;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @text-color;
   text-rendering: optimizelegibility;
-  background: @backgroundColor;
+  background: @background-color;
   image-rendering: optimizequality;
 
   // A semitranslucent bar at the top of the page
@@ -106,8 +98,8 @@ body {
     width: 100%;
     height: 8px;
     pointer-events: none;
-    background: fade(@textColor, 2%);
-    border-bottom: 1px solid fade(@textColor, 2%);
+    background: fade(@text-color, 2%);
+    border-bottom: 1px solid fade(@text-color, 2%);
     content: "";
   }
 }
@@ -121,12 +113,12 @@ body {
 a, button {
 
   &:link, &:visited {
-    color: @textColor;
+    color: @text-color;
     text-decoration: none;
     .transition(~"color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease");
 
     &:focus, &:hover {
-      color: @linkColor;
+      color: @link-color;
       .transition(~"color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease");
     }
   }
@@ -137,7 +129,7 @@ img, hr {
 }
 
 ins {
-  color: fade(@textColor, 40%);
+  color: fade(@text-color, 40%);
 }
 
 del {
@@ -145,8 +137,8 @@ del {
 }
 
 ::selection {
-  color: @linkColor;
-  background: fade(@textColor, 2%);
+  color: @link-color;
+  background: fade(@text-color, 2%);
 }
 
 // Main site logo
@@ -157,12 +149,12 @@ del {
   margin: -36px 0 (@space / 5);
   text-indent: -9999em;
   border-color: transparent;
-  border-bottom-color: @textColor;
+  border-bottom-color: @text-color;
   border-style: solid;
   border-width: 0 26px 45px 26px;
 
   &:hover {
-    border-bottom-color: @linkColor;
+    border-bottom-color: @link-color;
   }
 }
 
@@ -192,7 +184,7 @@ nav {
 // Currently activated page or category a post it belongs to
 .current { // li.current
   a {
-    color: @linkColor;
+    color: @link-color;
   }
 }
 
@@ -210,7 +202,7 @@ nav {
 
         // Override margin from article img
         img {
-          margin-bottom: (@baseFontSize * .6);
+          margin-bottom: (@base-font-size * .6);
         }
       }
 
@@ -234,7 +226,7 @@ nav {
 }
 
 :root:hover .latest {
-  color: @linkColor !important;
+  color: @link-color !important;
 }
 
 // Pserson status
@@ -248,7 +240,7 @@ nav {
       width: @size;
       height: @size;
       margin-right: @size;
-      background: fade(@textColor, 20%);
+      background: fade(@text-color, 20%);
       border-radius: 50%;
       content: "";
     }
@@ -258,7 +250,7 @@ nav {
 .available {
 
   a {
-    color: @textColor;
+    color: @text-color;
 
     &:hover {
       color: fade(green, 80%);
@@ -272,7 +264,7 @@ nav {
 .unavailable {
 
   a {
-    color: fade(@textColor, 50%);
+    color: fade(@text-color, 50%);
 
     &:hover {
       color: fade(red, 60%);
@@ -286,7 +278,7 @@ nav {
 
 // Article wrapper
 article {
-  max-width: @wrapperWidth;
+  max-width: @wrapper-width;
   margin-bottom: (@space * 1.35);
   .cf; // For some specified posts in work category
 
@@ -305,12 +297,12 @@ article {
           hyphens: auto;
 
   a {
-    border-bottom: 1px dotted fade(@textColor, 30%); // Set larger value for invert color
+    border-bottom: 1px dotted fade(@text-color, 30%); // Set larger value for invert color
   }
 
   p {
     margin: 0 0 1.1em;
-    line-height: @baseLineHeight;
+    line-height: @base-line-height;
 
     &:last-child {
       margin-bottom: 0;
@@ -326,7 +318,7 @@ article {
     margin: 0 0 1em 1.5em;
 
     li {
-      line-height: @baseLineHeight;
+      line-height: @base-line-height;
     }
   }
 
@@ -345,10 +337,10 @@ article {
       top: -16px;
       left: -8px;
       z-index: -1;
-      font-family: @sansSerif;
+      font-family: @sans-serif;
       font-size: 120px;
       font-style: normal;
-      color: fade(@textColor, 70%);
+      color: fade(@text-color, 70%);
       pointer-events: none;
       content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
     }
@@ -357,7 +349,7 @@ article {
       float: right;
       margin: 0 0 2em;
       font-size: 85%;
-      color: fade(@textColor, 80%);
+      color: fade(@text-color, 80%);
 
       &:before {
         content: "\2500\2500\00a0" // http://www.fileformat.info/info/unicode/char/2500/index.htm
@@ -402,14 +394,14 @@ article {
       padding: 7px;
       margin: 0 0 (@space * .3);
       .helvetica;
-      border: 1px solid fade(@textColor, 20%);
+      border: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
       outline: none;
       box-sizing: border-box;
       -webkit-appearance: none; // Remove ios pre-defined style
 
       &:focus {
-        border-color: @textColor;
+        border-color: @text-color;
       }
     }
   }
@@ -420,8 +412,8 @@ article {
     &:focus:required:invalid {
 
       &:focus {
-        background: fade(@linkColor, 5%);
-        border-color: @linkColor;
+        background: fade(@link-color, 5%);
+        border-color: @link-color;
         box-shadow: none; // Override Firefox default styles
       }
     }
@@ -440,8 +432,8 @@ article {
     min-width: 100%;
     padding: 20px (@space * .5);
     margin: 0;
-    color: @backgroundColor;
-    background: fade(@linkColor, 95%);
+    color: @background-color;
+    background: fade(@link-color, 95%);
     border: none;
     border-radius: 0;
     -webkit-box-shadow: none;
@@ -477,16 +469,16 @@ article {
   padding: 6px 20px;
   .helvetica;
   cursor: pointer;
-  background: @textColor;
+  background: @text-color;
   outline: none;
 
   // Redefine overrides here to pass recess syntax check
   &:link, &:visited {
-    color: @backgroundColor;
+    color: @background-color;
 
     &:focus, &:hover {
-      color: @backgroundColor;
-      background: @linkColor;
+      color: @background-color;
+      background: @link-color;
     }
   }
 }
@@ -540,8 +532,8 @@ article {
   border-bottom: none !important;
 
   &:target {
-    color: @linkColor;
-    text-shadow: 0 2px 15px @linkColor;
+    color: @link-color;
+    text-shadow: 0 2px 15px @link-color;
   }
 }
 
@@ -556,7 +548,7 @@ article {
       .font-face;
 
       time {
-        color: fade(@textColor, 30%);
+        color: fade(@text-color, 30%);
       }
 
       time + a {
@@ -566,7 +558,7 @@ article {
     }
 
     h2 {
-      font-size: (@baseFontSize * 2);
+      font-size: (@base-font-size * 2);
       font-weight: normal;
     }
 
@@ -587,7 +579,7 @@ footer {
   .helvetica;
 
   & {
-    font-size: (@baseFontSize / 2 - 1px);
+    font-size: (@base-font-size / 2 - 1px);
   }
 }
 
@@ -621,7 +613,7 @@ footer {
 // Media query stack
 @media (max-width: 640px) {
   body {
-    font-size: (@baseFontSize * 0.8);
+    font-size: (@base-font-size * 0.8);
   }
 }
 
