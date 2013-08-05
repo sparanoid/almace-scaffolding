@@ -43,7 +43,7 @@ base:         "" # Example: /lab/version/21 without trailing slash
 # Custom distribution variables
 #
 
-remote_user:  root@sparanoid.com # SSH user used by rsync
+remote_host:  caladbolg # SSH remote hostname
 remote_dir:   /srv/www/sparanoid.com/public_html # Remote root directory
 ignore_files: --exclude=lab # Prevent them from being deleted on server (rsync --delete)
 static_files: ~/Dropbox/Sites/static.sparanoid.com/ # Media assets sync'ed using s3cmd
