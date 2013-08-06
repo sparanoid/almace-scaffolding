@@ -25,29 +25,67 @@ future:       false
 # Custom site variables
 #
 
-domain:       sparanoid.com # In atom feed in `id` tag
-url:          http://sparanoid.com # In atom feed and sitemap
+# In atom feed in `id` tag
+domain:       sparanoid.com
+
+# In atom feed and sitemap
+url:          http://sparanoid.com
+
+# CSS path used in templates
+css:          css
+
+# Media assets URL used in posts, ie. href="{{ site.file }}/image.png"
 file:         http://d349cztnlupsuf.cloudfront.net
-css:          css # Specify CSS path in templates
-feed:         feed # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+
+# Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+feed:         feed
+
+# Site name
 name:         Sparanoid
+
+# Owner name
 user:         Tunghsiao Liu
+
+# Site email
 email:        t@sparanoid.com
+
+# Site slogan, used in subtitle in Atom feed
 slogan:       I make things that don't suck.
+
+# Twitter handle, without at symbol
 twitter:      sparanoid
+
+# Donate link, it's too long so I moved it here
 donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
-availability: free # In homepage
-base:         "" # Example: /lab/version/21 without trailing slash
+
+# In homepage, not implimented at the moment
+availability: free
+
+# Base URL, this is used when build with `archive` Grunt task, it will archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/. Usage example: /lab/version/21, without trailing slash
+base:         ""
 
 #
 # Custom distribution variables
 #
 
-remote_host:  caladbolg # SSH remote hostname
-remote_dir:   /srv/www/sparanoid.com/public_html # Remote root directory
-ignore_files: --exclude=lab # Prevent them from being deleted on server (rsync --delete)
-static_files: ~/Dropbox/Sites/static.sparanoid.com/ # Media assets sync'ed using s3cmd
-s3_bucket:    s3://sparanoid/ # Amazon S3 Bucket
-assets_dev:   http://sparanoid.s3-website-us-east-1.amazonaws.com # Media assets hosted on S3
-assets:       http://d349cztnlupsuf.cloudfront.net # For production site
+# SSH remote server hostname
+remote_host:  caladbolg
+
+# Remote server root directory
+remote_dir:   /srv/www/sparanoid.com/public_html
+
+# Prevent them from being deleted on server (rsync --delete), these files and directories are available on the remote server but outside this git repo. I need to ignore them.
+ignore_files: --exclude=lab
+
+# Media assets sync'ed using s3cmd
+static_files: ~/Dropbox/Sites/static.sparanoid.com/
+
+# Amazon S3 Bucket variable used by s3cmd
+s3_bucket:    s3://sparanoid/
+
+# Media assets URL, hosted on S3, without trailing slash
+assets_dev:   http://sparanoid.s3-website-us-east-1.amazonaws.com
+
+# For production site, without trailing slash
+assets:       http://d349cztnlupsuf.cloudfront.net
 # assets:       http://rsrc.sparanoid.com
