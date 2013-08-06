@@ -108,6 +108,12 @@ module.exports = (grunt) ->
         files:
           "<%= core.dist %>/css/a.css": ["<%= core.dist %>/css/*.css"]
 
+      html:
+        expand: true
+        cwd: "<%= core.dist %>"
+        src: "**/*.html"
+        dest: "<%= core.dist %>"
+
     shell:
       options:
         stdout: true
