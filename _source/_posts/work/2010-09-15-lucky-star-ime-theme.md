@@ -6,6 +6,11 @@ tag: project
 excerpt: Based on Lucky☆Star「らき☆すた」
 thumb: lucky-star-ime-theme.jpg
 bg: '#fcebef'
+scheme-text: "#ffcddb"
+scheme-link: "#fff"
+scheme-hover: "#ff1c5d"
+scheme-code: "#39beb6"
+scheme-bg: "#ff82a6"
 ---
 
 <p><img src="{{ site.file }}/lucky-star-for-sogou_large.png" alt="Lucky Star Theme for QQ/Sogou Pinyin IME"></p>
