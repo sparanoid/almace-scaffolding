@@ -143,11 +143,26 @@ module.exports = (grunt) ->
 
     clean: [".tmp", "<%= core.dist %>/*"]
 
+  # Fire up a server on local machine for development
   grunt.registerTask "server", ["less:server", "concurrent"]
+
+  # Test task
   grunt.registerTask "test", ["coffeelint", "recess"]
+
+  # Build site with `jekyll`
   grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
+
+  # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
+
+  # Build site + rsync static files to remote server
   grunt.registerTask "sync", ["build", "shell:sync"]
+
+  # Sync image assets with `s3cmd`
   grunt.registerTask "s3", ["shell:s3"]
+
+  # Dump git log
   grunt.registerTask "log", ["shell:log"]
+
+  # Default task aka. build task
   grunt.registerTask "default", ["build"]
