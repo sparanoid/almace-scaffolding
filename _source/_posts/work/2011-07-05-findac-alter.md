@@ -2,7 +2,7 @@
 layout: post
 title: find.ac Alter
 category: work
-tag: design
+tag: commerical
 excerpt: find.ac Alter merchant page for a Japanese ACG (Animations, Comics and Games) community
 thumb: find.ac-alter.png
 ---
