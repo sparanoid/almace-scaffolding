@@ -206,6 +206,11 @@ nav {
         display: block;
         .helvetica;
       }
+
+      // Used on work page
+      & + .txt > :first-child {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -370,7 +375,7 @@ article {
 
     label {
       display: block;
-      margin-bottom: (@space * .3);
+      margin-bottom: (@space * .1);
       .helvetica;
     }
 
@@ -378,7 +383,7 @@ article {
       display: block;
       width: 100%;
       padding: 7px;
-      margin: 0 0 (@space * .3);
+      margin: 0 0 (@space * .2);
       .helvetica;
       border: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
@@ -401,6 +406,19 @@ article {
         background: fade(@link-color, 5%);
         border-color: @link-color;
         box-shadow: none; // Override Firefox default styles
+      }
+    }
+  }
+
+  // Remove extra space for the last element in the container
+  & > :last-child {
+    margin-bottom: 0;
+
+    & > :last-child {
+      margin-bottom: 0;
+
+      & > :last-child {
+        margin-bottom: 0;
       }
     }
   }
