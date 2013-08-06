@@ -5,7 +5,6 @@ category: work
 tag: project
 excerpt: Tianjin Impression brochure for my college work
 thumb: tianjin-impression-brochure.jpg
-bg: '#f1eafb'
 plugin: slider
 ---
 

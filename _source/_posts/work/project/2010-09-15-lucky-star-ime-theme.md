@@ -5,7 +5,6 @@ category: work
 tag: project
 excerpt: Based on Lucky☆Star「らき☆すた」
 thumb: lucky-star-ime-theme.jpg
-bg: '#fcebef'
 scheme-text: "#ffcddb"
 scheme-link: "#fff"
 scheme-hover: "#ff1c5d"
