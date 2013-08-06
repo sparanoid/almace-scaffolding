@@ -7,6 +7,7 @@ excerpt: Adds Instagram badges to your WordPress blog that will help you link to
 thumb: instagram-badges-thumb.png
 img-headline: instagram-badges-h.svg
 link: http://wordpress.org/extend/plugins/instagram-badges/
+scheme-bg: "#e1f2fc"
 ---
 
 <div class=txt>
