@@ -113,7 +113,7 @@ module.exports = (grunt) ->
         stdout: true
 
       server:
-        command: "jekyll serve --watch"
+        command: "jekyll serve --watch --future"
 
       dist:
         command: "jekyll build"
