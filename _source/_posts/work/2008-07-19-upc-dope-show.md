@@ -7,4 +7,6 @@ excerpt: We’re all stars now, in the dope show
 thumb: upc-dope-show.jpg
 ---
 
-<p><img src="{{ site.file }}/work/upc-dope-show.jpg" alt="UPC Dope Show"></p>
+<div class="div">
+  <p><img src="{{ site.file }}/work/upc-dope-show.jpg" alt="UPC Dope Show"></p>
+</div>
