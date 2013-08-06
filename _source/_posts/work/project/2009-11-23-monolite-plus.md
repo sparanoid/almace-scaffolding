@@ -5,7 +5,6 @@ category: work
 tag: project
 excerpt: A foobar2000 theme based on Columns UI
 thumb: monolite-plus-large.jpg
-bg: '#fff9ed'
 scheme-text: "#9d162e"
 scheme-link: "#ffbdbd"
 scheme-hover: "#ffd18c"
