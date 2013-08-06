@@ -38,6 +38,90 @@
   </style>
 {% endif %}
 
+<!-- Post specified styles -->
+{% if page.scheme-bg %}
+  <style>
+    body {
+      {% if page.scheme-text %}
+      color: {{ page.scheme-text }};
+      {% endif %}
+      background-color: {{ page.scheme-bg }};
+    }
+
+    {% if page.scheme-text %}
+    a:link,
+    a:visited,
+    button:link,
+    button:visited {
+      color: {{ page.scheme-text }};
+    }
+    {% endif %}
+      {% if page.scheme-hover %}
+      a:link:focus, a:link:hover,
+      a:visited:focus, a:visited:hover,
+      button:link:focus, button:link:hover,
+      button:visited:focus, button:visited:hover {
+        color: {{ page.scheme-hover }};
+      }
+      {% endif %}
+
+    {% if page.scheme-link %}
+    ::selection {
+      color: {{ page.scheme-link }};
+    }
+    {% endif %}
+
+    {% if page.scheme-text %}
+    .logo {
+      border-bottom-color: {{ page.scheme-text }};
+    }
+    {% endif %}
+      {% if page.scheme-link %}
+      .logo:hover {
+        border-bottom-color: {{ page.scheme-link }};
+      }
+      {% endif %}
+
+    {% if page.scheme-link %}
+    .current a {
+      color: {{ page.scheme-link }};
+    }
+
+    .txt a {
+      color: {{ page.scheme-link }};
+      border-bottom: none;
+    }
+    {% endif %}
+
+    {% if page.scheme-code %}
+    .txt code,
+    .txt pre {
+      color: {{ page.scheme-code }};
+    }
+    {% endif %}
+
+    {% if page.scheme-link %}
+    .btn {
+      background:{{ page.scheme-link }};
+    }
+    {% endif %}
+
+    {% if page.scheme-bg %}
+    .btn:link, .btn:visited {
+      color: {{ page.scheme-bg }};
+    }
+    {% endif %}
+
+    .btn:link:focus, .btn:visited:focus,
+    .btn:link:hover, .btn:visited:hover {
+      color: {{ page.scheme-bg }};
+      {% if page.scheme-text %}
+      background: {{ page.scheme-text }};
+      {% endif %}
+    }
+  </style>
+{% endif %}
+
 <!-- Wrap in all width sensitive elements -->
 <div class="wrapper">
 
