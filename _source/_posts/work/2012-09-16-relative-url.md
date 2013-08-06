@@ -5,8 +5,13 @@ category: work
 tag: project
 excerpt: A WordPress plugin to apply wp_make_link_relative function to links to convert them to relative URLs.
 thumb: relative-url-thumb.png
-img-headline: relative-url-h.svg
+img-headline: relative-url-i.svg
 link: http://wordpress.org/extend/plugins/relative-url/
+scheme-text: "#00fff0"
+scheme-link: "#00706c"
+scheme-hover: "#fff"
+scheme-code: "#39beb6"
+scheme-bg: "#009990"
 ---
 
 <div class=txt>

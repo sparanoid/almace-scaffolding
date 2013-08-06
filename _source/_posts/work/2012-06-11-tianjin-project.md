@@ -2,7 +2,7 @@
 layout: post
 title: Tianjin Project
 category: work
-tag: design
+tag: commerical
 excerpt: A Detailed Introduction to Municipality of Tianjin
 thumb: tianjin-project.jpg
 plugin: slider

@@ -38,7 +38,7 @@
   font-weight: normal;
   line-height: (@base-line-height * .9);
   letter-spacing: .45em;
-  color: fade(@text-color, 40%);
+  color: fade(@text-color, 20%);
   text-transform: uppercase;
 }
 
@@ -126,10 +126,6 @@ a, button {
 
 img, hr {
   border: 0;
-}
-
-ins {
-  color: fade(@text-color, 40%);
 }
 
 del {
@@ -488,7 +484,7 @@ article {
   position: relative;
   padding-top: 20px;
   margin: 0 0 40px;
-  background: #e8e8e8;
+  background: rgba(0, 0, 0, .05);
   border-radius: 5px 5px 0 0;
 
   &:before {
@@ -498,7 +494,7 @@ article {
     display: block;
     width: 8px;
     height: 8px;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .15);
     border-radius: 50%;
     content: "";
   }

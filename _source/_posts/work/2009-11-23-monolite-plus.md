@@ -6,6 +6,11 @@ tag: project
 excerpt: A foobar2000 theme based on Columns UI
 thumb: monolite-plus-large.jpg
 bg: '#fff9ed'
+scheme-text: "#9d162e"
+scheme-link: "#ffbdbd"
+scheme-hover: "#ffd18c"
+scheme-code: "#24ebdb"
+scheme-bg: "#f1504d"
 ---
 
 <p><img src="{{ site.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>

@@ -5,7 +5,11 @@ category: work
 tag: project
 excerpt: The missing Growl styles for OS X
 thumb: slimbox-and-voxgrowl.jpg
-bg: '#fefbed'
+scheme-text: "#c28955"
+scheme-link: "#ff8500"
+scheme-hover: "#9e4614"
+scheme-code: "#39beb6"
+scheme-bg: "#fefbed"
 ---
 
 <video poster="{{ site.file }}/slimbox-voxgrowl.png" preload=none type=video/mp4 controls><source src="{{ site.file }}/slimbox-voxgrowl.mov"></video>

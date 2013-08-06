@@ -7,6 +7,11 @@ excerpt: Based on Toaru Kagaku no Railgun「とある科学の超電磁砲」
 thumb: judgment-screensaver-icon.png
 bg: '#eafbf1'
 plugin: slider
+scheme-text: "#fff"
+scheme-link: "#9ed8d8"
+scheme-hover: "#fff"
+scheme-code: "#39beb6"
+scheme-bg: "#317979"
 ---
 
 <div class=txt>
