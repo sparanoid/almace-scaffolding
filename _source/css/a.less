@@ -422,34 +422,6 @@ article {
       }
     }
   }
-
-  // Form validation message bubble, borrowed from default WebKit styles
-  // More info: http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
-  ::-webkit-validation-bubble-message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    max-height: auto;
-    // Override default WebKit styles
-    min-width: 100%;
-    padding: 20px (@space * .5);
-    margin: 0;
-    color: @background-color;
-    background: fade(@link-color, 95%);
-    border: none;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-  }
-
-  ::-webkit-validation-bubble-arrow {
-    display: none;
-  }
-
-  ::-webkit-validation-bubble-icon {
-    display: none;
-  }
 }
 
 // Posts with Chinese characters
