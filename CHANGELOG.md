@@ -2,6 +2,42 @@
 
 ## Head [#][head]
 
+### 22.0.6 (Aug 9, 2013)
+
+- Fix link in changelog
+- Fix the link points to the real location in changelog
+- `Mac OS X` --> `OS X`
+- Disable Champaign Monitor custom domain URL
+- CSS-style variables for LESS
+- Bump deps versions
+- Update license
+- Simplified homepage copywirting
+- Update homepage again
+- Bump required deps
+- Update remote hostname for Grunt deploy task
+- Adds some comments to Grunt tasks
+- More comment for Jekyll configuration file
+- Build future posts for dev env
+- Adds color scheme style
+- Update and add color scheme for some posts
+- Adds page.link for post with `page.img-headline`
+- Better post syntax
+- Simplified `.txt` paragraph style
+- Update post syntax in notes
+- Move post under work to its sub-categories
+- Update railgun post background color
+- Fixes typo
+- Adds new post “IterCast”
+- Adds space hack back
+- Fixes inline CSS in html not compressed bug
+- Fixes icons not filled with specific color scheme on some posts
+- Update todo list
+- Remove unused vars
+- Give some love to my old posts
+- Remove `::-webkit-validation-bubble` support: https://code.google.com/p/chromium/issues/detail?id=259050
+- Update link color for post “IterCast”
+- Disable HTML post compress for inline CSS, it kills normal paragraph spaces too
+
 ### 22.0.5 (Jul 1, 2013)
 
 - Fix about page indents
