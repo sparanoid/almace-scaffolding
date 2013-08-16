@@ -48,6 +48,7 @@
 // 1. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements.
 // 2. The original space content hack is removed here. No need to support Opera on my personal site.
 .cf {
+
   &:before, &:after {
     display: table; // 1
     content: ""; // 2
@@ -64,14 +65,14 @@
 }
 
 // Basic reset
-p, hr, pre, blockquote,
-ol, ul, li, dl, dt, dd,
-a, em, strong, small, s, cite, q, dfn, abbr, time, code, var, i, b, u, span, br, wbr,
-h1, h2, h3, h4, h5, h6 {
+*,
+*:before,
+*:after {
   padding: 0;
   margin: 0;
   font-size: 100%;
   line-height: 1;
+  box-sizing: border-box;
 }
 
 :root {
@@ -388,7 +389,6 @@ article {
       border: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
       outline: none;
-      box-sizing: border-box;
       -webkit-appearance: none; // Remove ios pre-defined style
 
       &:focus {
