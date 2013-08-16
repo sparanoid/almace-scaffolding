@@ -39,6 +39,9 @@ module.exports = (grunt) ->
           src: ["Gruntfile.coffee"]
 
     recess:
+      options:
+        noUniversalSelectors: false
+
       test:
         files:
           src: ["<%= core.app %>/css/a.less"]
