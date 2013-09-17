@@ -117,6 +117,25 @@ module.exports = (grunt) ->
       #   src: "**/*.html"
       #   dest: "<%= core.dist %>"
 
+    rev:
+      options:
+        encoding: "utf8"
+        algorithm: "md5"
+        length: 8
+
+      files:
+        src: ["<%= core.dist %>/css/*.{js,css,woff}"]
+
+    useminPrepare:
+      html: "<%= core.dist %>/index.html"
+
+    usemin:
+      options:
+        dirs: ["<%= core.dist %>"]
+
+      html: ["<%= core.dist %>/**/*.html"]
+      css: ["<%= core.dist %>/css/**/*.css"]
+
     manifest:
       dist:
         options:
@@ -161,7 +180,8 @@ module.exports = (grunt) ->
         tasks: ["shell:server", "watch"]
 
       dist:
-        tasks: ["htmlmin", "xmlmin", "cssmin"]
+        # tasks: ["htmlmin", "xmlmin", "cssmin"]
+        tasks: ["xmlmin"]
 
 
     clean: [".tmp", "<%= core.dist %>/*"]
@@ -173,7 +193,7 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist", "manifest"]
+  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "useminPrepare", "concurrent:dist", "rev", "usemin", "manifest"]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
