@@ -32,7 +32,7 @@ domain:       sparanoid.com
 url:          http://sparanoid.com
 
 # CSS path used in templates
-css:          css
+assets:          assets
 
 # Media assets URL used in posts, ie. href="{{ site.file }}/image.png"
 file:         http://d349cztnlupsuf.cloudfront.net
@@ -84,8 +84,8 @@ static_files: ~/Dropbox/Sites/static.sparanoid.com/
 s3_bucket:    s3://sparanoid/
 
 # Media assets URL, hosted on S3, without trailing slash
-assets_dev:   http://sparanoid.s3-website-us-east-1.amazonaws.com
+img_dev:   http://sparanoid.s3-website-us-east-1.amazonaws.com
 
 # For production site, without trailing slash
-assets:       http://d349cztnlupsuf.cloudfront.net
+img:       http://d349cztnlupsuf.cloudfront.net
 # assets:       http://rsrc.sparanoid.com

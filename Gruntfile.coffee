@@ -44,7 +44,7 @@ module.exports = (grunt) ->
 
       test:
         files:
-          src: ["<%= core.app %>/css/app.less"]
+          src: ["<%= core.app %>/assets/less/app.less"]
 
     watch:
       coffee:
@@ -58,18 +58,14 @@ module.exports = (grunt) ->
     less:
       server:
         options:
-          paths: ["<%= core.app %>/css"]
           dumpLineNumbers: "all"
 
         files:
-          "<%= core.app %>/css/app.css": ["<%= recess.test.files.src %>"]
+          "<%= core.app %>/assets/css/app.css": ["<%= recess.test.files.src %>"]
 
       dist:
-        options:
-          paths: ["<%= core.app %>/css"]
-
         files:
-          "<%= core.app %>/css/app.css": ["<%= recess.test.files.src %>"]
+          "<%= core.app %>/assets/css/app.css": ["<%= recess.test.files.src %>"]
 
     htmlmin:
       dist:
@@ -109,7 +105,7 @@ module.exports = (grunt) ->
           report: "gzip"
 
         files:
-          "<%= core.dist %>/css/app.css": ["<%= core.dist %>/css/*.css"]
+          "<%= core.dist %>/assets/css/app.css": ["<%= core.dist %>/assets/css/*.css"]
 
       # html:
       #   expand: true
@@ -124,7 +120,7 @@ module.exports = (grunt) ->
         length: 8
 
       files:
-        src: ["<%= core.dist %>/css/*.{js,css,woff}"]
+        src: ["<%= core.dist %>/assets/**/*.{js,css,png,jpg,gif,woff}"]
 
     useminPrepare:
       html: "<%= core.dist %>/index.html"
@@ -134,7 +130,7 @@ module.exports = (grunt) ->
         dirs: ["<%= core.dist %>"]
 
       html: ["<%= core.dist %>/**/*.html"]
-      css: ["<%= core.dist %>/css/**/*.css"]
+      css: ["<%= core.dist %>/assets/css/*.css"]
 
     manifest:
       dist:
@@ -147,7 +143,7 @@ module.exports = (grunt) ->
           hash: true
           master: ["index.html"]
 
-        src: ["**/*.html", "**/css/*.js", "**/css/*.css", "**/css/*.woff"]
+        src: ["**/*.html", "assets/**/*.{js,css,png,jpg,gif,woff}"]
         dest: "<%= core.dist %>/app.appcache"
 
     shell:
