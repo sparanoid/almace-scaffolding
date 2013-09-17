@@ -129,7 +129,7 @@ module.exports = (grunt) ->
           master: ["index.html"]
 
         src: ["**/*.html", "**/css/*.js", "**/css/*.css", "**/css/*.woff"]
-        dest: "<%= core.dist %>/manifest.appcache"
+        dest: "<%= core.dist %>/app.appcache"
 
     shell:
       options:
