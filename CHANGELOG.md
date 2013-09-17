@@ -2,6 +2,31 @@
 
 ## Head [#][head]
 
+### 22.0.7 (Sep 17.2013)
+
+- Bump deps version
+- Uses post thumb instead of img-headline
+- Fixes typo
+- Uppercased post title “Relative URL”
+- Update deps order
+- I LOVE UNIVERSAL SELECTORS
+- Bump reps version
+- Adds manifest grunt task
+- More aggressive cache config
+- Adds `<html>` head
+- Fixes grunt-manifest versioning
+- Rename apache manifest
+- Rename CSS filename
+- Feature: Appcache support
+- Adds usemin task
+- Remove unused dep
+- Remove debug task config
+- Reorder grunt tasks
+- Feature: Assets revving
+- Fixes compiling order
+- Updates Jekyll exclude list
+- Scalable file path
+
 ### 22.0.6 (Aug 9, 2013)
 
 - Fix link in changelog
