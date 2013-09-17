@@ -180,9 +180,7 @@ module.exports = (grunt) ->
         tasks: ["shell:server", "watch"]
 
       dist:
-        # tasks: ["htmlmin", "xmlmin", "cssmin"]
-        tasks: ["xmlmin"]
-
+        tasks: ["htmlmin", "xmlmin", "cssmin"]
 
     clean: [".tmp", "<%= core.dist %>/*"]
 
