@@ -104,8 +104,12 @@ module.exports = (grunt) ->
           banner: "<%= core.banner %>"
           report: "gzip"
 
-        files:
-          "<%= core.dist %>/assets/css/app.css": ["<%= core.dist %>/assets/css/*.css"]
+        files: [
+          expand: true
+          cwd: "<%= core.dist %>/assets/css/"
+          src: ["*.css", "!*.min.css"]
+          dest: "<%= core.dist %>/assets/css/"
+        ]
 
       # html:
       #   expand: true
@@ -187,7 +191,7 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "useminPrepare", "concurrent:dist", "rev", "usemin", "manifest"]
+  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "useminPrepare", "rev", "usemin", "concurrent:dist", "manifest"]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
