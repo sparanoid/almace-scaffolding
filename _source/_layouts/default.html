@@ -4,7 +4,11 @@
 
   <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
   <link rel=alternate href={{ site.base }}/{{ site.feed }}/ type=application/atom+xml>
-  <link rel=stylesheet href={{ site.base }}/{{ site.css }}/app.css>
+
+  <!-- build:css {{ site.base }}/{{ site.css }}/app.css -->
+    <link rel=stylesheet href={{ site.base }}/{{ site.css }}/app.css>
+  <!-- endbuild -->
+
   {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
   <!-- Define a description for better SEO result, exclude homepage -->
