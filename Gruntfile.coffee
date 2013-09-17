@@ -117,7 +117,7 @@ module.exports = (grunt) ->
       options:
         encoding: "utf8"
         algorithm: "md5"
-        length: 8
+        length: 6
 
       files:
         src: ["<%= core.dist %>/assets/**/*.{js,css,png,jpg,gif,woff}"]
