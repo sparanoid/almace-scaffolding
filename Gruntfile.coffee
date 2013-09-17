@@ -122,14 +122,14 @@ module.exports = (grunt) ->
         options:
           basePath: "<%= core.dist %>/"
           # cache: ["js/app.js", "css/app.css"]
-          network: ["//*"]
+          network: ["*"]
           preferOnline: true
           verbose: true
           timestamp: true
           hash: true
           master: ["index.html"]
 
-        src: ["css/*.js", "css/*.css", "css/*.woff"]
+        src: ["**/*.html", "**/css/*.js", "**/css/*.css", "**/css/*.woff"]
         dest: "<%= core.dist %>/manifest.appcache"
 
     shell:
