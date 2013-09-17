@@ -1,195 +1,197 @@
 <!doctype html>
-<meta name=viewport content="width=device-width, initial-scale=1">
+<html manifest=/app.appcache>
+  <meta name=viewport content="width=device-width, initial-scale=1">
 
-<title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
-<link rel=alternate href={{ site.base }}/{{ site.feed }}/ type=application/atom+xml>
-<link rel=stylesheet href={{ site.base }}/{{ site.css }}/a.css>
-{% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
+  <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+  <link rel=alternate href={{ site.base }}/{{ site.feed }}/ type=application/atom+xml>
+  <link rel=stylesheet href={{ site.base }}/{{ site.css }}/app.css>
+  {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
 
-<!-- Define a description for better SEO result, exclude homepage -->
-{% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
-{% if page.permalink != '/' %}
-  {% if page.excerpt %}
-    <meta name=description content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 160 }}">
-  {% elsif page.desc %}
-    <meta name=description content="{{ page.desc | strip_html | strip_newlines | xml_escape }}">
-  {% else %}
-    <meta name=description content="{{ content_description }}">
-  {% endif %}
-{% endif %}
-
-<!-- Twitter Cards support for category "work", more info: https://dev.twitter.com/docs/cards -->
-{% if page.category %}
-  <meta name=twitter:card content="summary">
-  <meta name=twitter:site content="@{{ site.twitter }}">
-  <meta name=twitter:creator content="@tunghsiao">
-  <meta name=twitter:url content="{{ site.url }}{{ site.base }}{{ page.url }}">
-  <meta name=twitter:title content="{{ page.title | xml_escape }}">
-  <meta name=twitter:description content="{{ content_description }}">
-  {% if page.category == 'work' %}
-  <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
-  {% endif %}
-{% endif %}
-
-<!-- Error page specified styles -->
-{% if page.title == 'Error' %}
-  <style>
-    :root { -webkit-filter: invert(100%); }
-  </style>
-{% endif %}
-
-<!-- Post specified styles -->
-{% if page.scheme-bg %}
-  <style>
-    body {
-      {% if page.scheme-text %}
-      color: {{ page.scheme-text }};
-      {% endif %}
-      background-color: {{ page.scheme-bg }};
-    }
-
-    {% if page.scheme-text %}
-    a:link,
-    a:visited,
-    button:link,
-    button:visited {
-      color: {{ page.scheme-text }};
-    }
+  <!-- Define a description for better SEO result, exclude homepage -->
+  {% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
+  {% if page.permalink != '/' %}
+    {% if page.excerpt %}
+      <meta name=description content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 160 }}">
+    {% elsif page.desc %}
+      <meta name=description content="{{ page.desc | strip_html | strip_newlines | xml_escape }}">
+    {% else %}
+      <meta name=description content="{{ content_description }}">
     {% endif %}
-      {% if page.scheme-hover %}
-      a:link:focus, a:link:hover,
-      a:visited:focus, a:visited:hover,
-      button:link:focus, button:link:hover,
-      button:visited:focus, button:visited:hover {
-        color: {{ page.scheme-hover }};
+  {% endif %}
+
+  <!-- Twitter Cards support for category "work", more info: https://dev.twitter.com/docs/cards -->
+  {% if page.category %}
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:site content="@{{ site.twitter }}">
+    <meta name=twitter:creator content="@tunghsiao">
+    <meta name=twitter:url content="{{ site.url }}{{ site.base }}{{ page.url }}">
+    <meta name=twitter:title content="{{ page.title | xml_escape }}">
+    <meta name=twitter:description content="{{ content_description }}">
+    {% if page.category == 'work' %}
+    <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
+    {% endif %}
+  {% endif %}
+
+  <!-- Error page specified styles -->
+  {% if page.title == 'Error' %}
+    <style>
+      :root { -webkit-filter: invert(100%); }
+    </style>
+  {% endif %}
+
+  <!-- Post specified styles -->
+  {% if page.scheme-bg %}
+    <style>
+      body {
+        {% if page.scheme-text %}
+        color: {{ page.scheme-text }};
+        {% endif %}
+        background-color: {{ page.scheme-bg }};
+      }
+
+      {% if page.scheme-text %}
+      a:link,
+      a:visited,
+      button:link,
+      button:visited {
+        color: {{ page.scheme-text }};
       }
       {% endif %}
+        {% if page.scheme-hover %}
+        a:link:focus, a:link:hover,
+        a:visited:focus, a:visited:hover,
+        button:link:focus, button:link:hover,
+        button:visited:focus, button:visited:hover {
+          color: {{ page.scheme-hover }};
+        }
+        {% endif %}
 
-    {% if page.scheme-link %}
-    ::selection {
-      color: {{ page.scheme-link }};
-    }
-    {% endif %}
-
-    {% if page.scheme-text %}
-    .logo {
-      border-bottom-color: {{ page.scheme-text }};
-    }
-    {% endif %}
       {% if page.scheme-link %}
-      .logo:hover {
-        border-bottom-color: {{ page.scheme-link }};
+      ::selection {
+        color: {{ page.scheme-link }};
       }
       {% endif %}
 
-    {% if page.scheme-link %}
-    .current a {
-      color: {{ page.scheme-link }};
-    }
-
-    .txt a {
-      color: {{ page.scheme-link }};
-      border-bottom: none;
-    }
-    {% endif %}
-
-    {% if page.scheme-code %}
-    .txt code,
-    .txt pre {
-      color: {{ page.scheme-code }};
-    }
-    {% endif %}
-
-    {% if page.scheme-link %}
-    .btn {
-      background:{{ page.scheme-link }};
-    }
-    {% endif %}
-
-    {% if page.scheme-bg %}
-    .btn:link, .btn:visited {
-      color: {{ page.scheme-bg }};
-    }
-    {% endif %}
-
-    .btn:link:focus, .btn:visited:focus,
-    .btn:link:hover, .btn:visited:hover {
-      color: {{ page.scheme-bg }};
       {% if page.scheme-text %}
-      background: {{ page.scheme-text }};
-      {% endif %}
-    }
-
-    {% if page.scheme-text %}
-    .note     { background-image: url("data:image/svg+xml,<svg width='40' height='40' fill='{{ page.scheme-text }}' xmlns='http://www.w3.org/2000/svg'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>"); }
-    .store    { background-image: url("data:image/svg+xml,<svg width='40' height='40' fill='{{ page.scheme-text }}' xmlns='http://www.w3.org/2000/svg'><path d='M20,0C8.954,0,0,8.954,0,20s8.954,20,20,20s20-8.954,20-20S31.046,0,20,0z M5,20c0-7.806,5.964-14.214,13.583-14.929 v3.574c-3.852,0.757-6.083,3.24-6.083,6.407c0,3.492,2.627,5.292,6.479,6.588c2.664,0.899,3.816,1.764,3.816,3.131 c0,1.44-1.404,2.232-3.456,2.232c-2.34,0-4.463-0.756-5.975-1.584l-1.08,4.211c1.368,0.792,3.708,1.44,6.119,1.548v3.734 C10.87,34.115,5,27.744,5,20z M21.931,34.862v-3.936c4.14-0.72,6.407-3.455,6.407-6.659c0-3.239-1.729-5.219-6.012-6.73 c-3.059-1.152-4.319-1.908-4.319-3.096c0-1.008,0.756-2.016,3.095-2.016c2.592,0,4.247,0.827,5.184,1.224l1.044-4.067 c-1.188-0.576-2.808-1.08-5.22-1.188V5.166C29.393,6.194,35,12.434,35,20C35,27.629,29.301,33.912,21.931,34.862z'/></svg>"); }
-    .download { background-image: url("data:image/svg+xml,<svg width='40' height='40' fill='{{ page.scheme-text }}' xmlns='http://www.w3.org/2000/svg'><path d='M29.982,5.825c-0.469,0-0.922,0.074-1.375,0.142C26.867,2.87,23.65,0.808,20,0.808c-3.729,0-6.948,2.093-8.661,5.14 c-0.439-0.059-0.875-0.122-1.321-0.122C4.513,5.825,0,10.468,0,16c0,5.533,4.495,10,10,10h7v6h-5l8,8l8-8h-5v-6h7 c5.508,0,10-4.467,10-10C40,10.469,35.489,5.825,29.982,5.825z M30,21H10c-2.751,0-5-2.398-5-5.167c0-2.749,2.124-5.09,5.051-5.09 c1.73-0.001,2.464,0.587,3.394,1.203c0-1.807,2.229-6.122,6.555-6.122c2.496,0,3.952,2.242,4.441,2.735 c-1.945,1.957-2.845,4.457-2.412,7.752h0.691c0.573-2.291,2.455-5.557,7.279-5.557c2.749,0,5,2.311,5,5.078 C35,18.602,32.749,21,30,21z'/></svg>"); }
-    {% endif %}
-  </style>
-{% endif %}
-
-<!-- Wrap in all width sensitive elements -->
-<div class="wrapper">
-
-  <!-- Header, just a logo at the moment -->
-  <header>
-    <h1><a href={{ site.base }}/ class=logo accesskey=x>Sparanoid</a></h1>
-  </header>
-
-  <!-- Main navigation with current page / categoriy highlighted -->
-  <nav class=navigation>
-    {% if page.permalink == '/'                                   %}<ul class=nav-home>{% endif %}
-    {% if page.permalink == '/work/'  or page.category == 'work'  %}<ul class=nav-work>{% endif %}
-    {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
-    {% if page.permalink == '/note/'  or page.category == 'note'  %}<ul class=nav-note>{% endif %}
-    {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
-      <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href={{ site.base }}/>Home</a></li>
-      <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href={{ site.base }}/work/>Work</a></li>
-      <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href={{ site.base }}/store/>Store</a></li>
-      <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href={{ site.base }}/note/>Note</a></li>
-      <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href={{ site.base }}/about/>About</a></li>
-    </ul>
-  </nav>
-
-  <!-- All dynamic, user generated content go here. It's linked with page.html and post.html at the moment -->
-  {{ content }}
-
-  <!-- Footer and sponsor ad section -->
-  {% if page.title != 'Sparanoid' %}
-    <!-- Insert ad here -->
-
-    <footer>
-      <p>
-        <a href={{ site.base }}/>{{ site.name }}</a> /
-        <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>
-      </p>
-      <p>
-        <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
-      </p>
-    </footer>
-  {% endif %}
-</div><!-- .wrapper -->
-
-<!-- Add FlexSlider script for posts with sliders -->
-{% if page.plugin == 'slider' %}
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="{{ site.base }}/{{ site.css }}/jquery.flexslider-min.js"></script>
-  <script>
-  $(window).load(function() {
-    $('.flexslider').flexslider({
-      smoothHeight: true,
-      slideshowSpeed: 4000,
-      animationSpeed: 400,
-      pauseOnHover: true,
-      controlNav: false,
-      directionNav: false,
-      start: function(slider) {
-        $('.slides li').click(function(event){
-          event.preventDefault();
-          slider.flexAnimate(slider.getTarget("next"));
-        });
+      .logo {
+        border-bottom-color: {{ page.scheme-text }};
       }
+      {% endif %}
+        {% if page.scheme-link %}
+        .logo:hover {
+          border-bottom-color: {{ page.scheme-link }};
+        }
+        {% endif %}
+
+      {% if page.scheme-link %}
+      .current a {
+        color: {{ page.scheme-link }};
+      }
+
+      .txt a {
+        color: {{ page.scheme-link }};
+        border-bottom: none;
+      }
+      {% endif %}
+
+      {% if page.scheme-code %}
+      .txt code,
+      .txt pre {
+        color: {{ page.scheme-code }};
+      }
+      {% endif %}
+
+      {% if page.scheme-link %}
+      .btn {
+        background:{{ page.scheme-link }};
+      }
+      {% endif %}
+
+      {% if page.scheme-bg %}
+      .btn:link, .btn:visited {
+        color: {{ page.scheme-bg }};
+      }
+      {% endif %}
+
+      .btn:link:focus, .btn:visited:focus,
+      .btn:link:hover, .btn:visited:hover {
+        color: {{ page.scheme-bg }};
+        {% if page.scheme-text %}
+        background: {{ page.scheme-text }};
+        {% endif %}
+      }
+
+      {% if page.scheme-text %}
+      .note     { background-image: url("data:image/svg+xml,<svg width='40' height='40' fill='{{ page.scheme-text }}' xmlns='http://www.w3.org/2000/svg'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>"); }
+      .store    { background-image: url("data:image/svg+xml,<svg width='40' height='40' fill='{{ page.scheme-text }}' xmlns='http://www.w3.org/2000/svg'><path d='M20,0C8.954,0,0,8.954,0,20s8.954,20,20,20s20-8.954,20-20S31.046,0,20,0z M5,20c0-7.806,5.964-14.214,13.583-14.929 v3.574c-3.852,0.757-6.083,3.24-6.083,6.407c0,3.492,2.627,5.292,6.479,6.588c2.664,0.899,3.816,1.764,3.816,3.131 c0,1.44-1.404,2.232-3.456,2.232c-2.34,0-4.463-0.756-5.975-1.584l-1.08,4.211c1.368,0.792,3.708,1.44,6.119,1.548v3.734 C10.87,34.115,5,27.744,5,20z M21.931,34.862v-3.936c4.14-0.72,6.407-3.455,6.407-6.659c0-3.239-1.729-5.219-6.012-6.73 c-3.059-1.152-4.319-1.908-4.319-3.096c0-1.008,0.756-2.016,3.095-2.016c2.592,0,4.247,0.827,5.184,1.224l1.044-4.067 c-1.188-0.576-2.808-1.08-5.22-1.188V5.166C29.393,6.194,35,12.434,35,20C35,27.629,29.301,33.912,21.931,34.862z'/></svg>"); }
+      .download { background-image: url("data:image/svg+xml,<svg width='40' height='40' fill='{{ page.scheme-text }}' xmlns='http://www.w3.org/2000/svg'><path d='M29.982,5.825c-0.469,0-0.922,0.074-1.375,0.142C26.867,2.87,23.65,0.808,20,0.808c-3.729,0-6.948,2.093-8.661,5.14 c-0.439-0.059-0.875-0.122-1.321-0.122C4.513,5.825,0,10.468,0,16c0,5.533,4.495,10,10,10h7v6h-5l8,8l8-8h-5v-6h7 c5.508,0,10-4.467,10-10C40,10.469,35.489,5.825,29.982,5.825z M30,21H10c-2.751,0-5-2.398-5-5.167c0-2.749,2.124-5.09,5.051-5.09 c1.73-0.001,2.464,0.587,3.394,1.203c0-1.807,2.229-6.122,6.555-6.122c2.496,0,3.952,2.242,4.441,2.735 c-1.945,1.957-2.845,4.457-2.412,7.752h0.691c0.573-2.291,2.455-5.557,7.279-5.557c2.749,0,5,2.311,5,5.078 C35,18.602,32.749,21,30,21z'/></svg>"); }
+      {% endif %}
+    </style>
+  {% endif %}
+
+  <!-- Wrap in all width sensitive elements -->
+  <div class="wrapper">
+
+    <!-- Header, just a logo at the moment -->
+    <header>
+      <h1><a href={{ site.base }}/ class=logo accesskey=x>Sparanoid</a></h1>
+    </header>
+
+    <!-- Main navigation with current page / categoriy highlighted -->
+    <nav class=navigation>
+      {% if page.permalink == '/'                                   %}<ul class=nav-home>{% endif %}
+      {% if page.permalink == '/work/'  or page.category == 'work'  %}<ul class=nav-work>{% endif %}
+      {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
+      {% if page.permalink == '/note/'  or page.category == 'note'  %}<ul class=nav-note>{% endif %}
+      {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
+        <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href={{ site.base }}/>Home</a></li>
+        <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href={{ site.base }}/work/>Work</a></li>
+        <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href={{ site.base }}/store/>Store</a></li>
+        <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href={{ site.base }}/note/>Note</a></li>
+        <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href={{ site.base }}/about/>About</a></li>
+      </ul>
+    </nav>
+
+    <!-- All dynamic, user generated content go here. It's linked with page.html and post.html at the moment -->
+    {{ content }}
+
+    <!-- Footer and sponsor ad section -->
+    {% if page.title != 'Sparanoid' %}
+      <!-- Insert ad here -->
+
+      <footer>
+        <p>
+          <a href={{ site.base }}/>{{ site.name }}</a> /
+          <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>
+        </p>
+        <p>
+          <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
+        </p>
+      </footer>
+    {% endif %}
+  </div><!-- .wrapper -->
+
+  <!-- Add FlexSlider script for posts with sliders -->
+  {% if page.plugin == 'slider' %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="{{ site.base }}/{{ site.css }}/jquery.flexslider-min.js"></script>
+    <script>
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        smoothHeight: true,
+        slideshowSpeed: 4000,
+        animationSpeed: 400,
+        pauseOnHover: true,
+        controlNav: false,
+        directionNav: false,
+        start: function(slider) {
+          $('.slides li').click(function(event){
+            event.preventDefault();
+            slider.flexAnimate(slider.getTarget("next"));
+          });
+        }
+      });
     });
-  });
-  </script>
-{% endif %}
+    </script>
+  {% endif %}
+</html>

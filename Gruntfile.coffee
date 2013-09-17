@@ -44,7 +44,7 @@ module.exports = (grunt) ->
 
       test:
         files:
-          src: ["<%= core.app %>/css/a.less"]
+          src: ["<%= core.app %>/css/app.less"]
 
     watch:
       coffee:
@@ -62,14 +62,14 @@ module.exports = (grunt) ->
           dumpLineNumbers: "all"
 
         files:
-          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
+          "<%= core.app %>/css/app.css": ["<%= recess.test.files.src %>"]
 
       dist:
         options:
           paths: ["<%= core.app %>/css"]
 
         files:
-          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
+          "<%= core.app %>/css/app.css": ["<%= recess.test.files.src %>"]
 
     htmlmin:
       dist:
@@ -109,13 +109,27 @@ module.exports = (grunt) ->
           report: "gzip"
 
         files:
-          "<%= core.dist %>/css/a.css": ["<%= core.dist %>/css/*.css"]
+          "<%= core.dist %>/css/app.css": ["<%= core.dist %>/css/*.css"]
 
       # html:
       #   expand: true
       #   cwd: "<%= core.dist %>"
       #   src: "**/*.html"
       #   dest: "<%= core.dist %>"
+
+    manifest:
+      dist:
+        options:
+          basePath: "<%= core.dist %>/"
+          network: ["*"]
+          preferOnline: false
+          verbose: false
+          timestamp: false
+          hash: true
+          master: ["index.html"]
+
+        src: ["**/*.html", "**/css/*.js", "**/css/*.css", "**/css/*.woff"]
+        dest: "<%= core.dist %>/app.appcache"
 
     shell:
       options:
@@ -159,7 +173,7 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
+  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist", "manifest"]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
