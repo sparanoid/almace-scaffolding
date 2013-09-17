@@ -117,6 +117,21 @@ module.exports = (grunt) ->
       #   src: "**/*.html"
       #   dest: "<%= core.dist %>"
 
+    manifest:
+      dist:
+        options:
+          basePath: "<%= core.dist %>/"
+          # cache: ["js/app.js", "css/app.css"]
+          network: ["//*"]
+          preferOnline: true
+          verbose: true
+          timestamp: true
+          hash: true
+          master: ["index.html"]
+
+        src: ["css/*.js", "css/*.css", "css/*.woff"]
+        dest: "<%= core.dist %>/manifest.appcache"
+
     shell:
       options:
         stdout: true
@@ -159,7 +174,7 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
+  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist", "manifest"]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
