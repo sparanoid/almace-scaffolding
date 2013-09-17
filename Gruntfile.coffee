@@ -121,11 +121,10 @@ module.exports = (grunt) ->
       dist:
         options:
           basePath: "<%= core.dist %>/"
-          # cache: ["js/app.js", "css/app.css"]
           network: ["*"]
-          preferOnline: true
-          verbose: true
-          timestamp: true
+          preferOnline: false
+          verbose: false
+          timestamp: false
           hash: true
           master: ["index.html"]
 
