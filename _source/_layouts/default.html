@@ -3,13 +3,13 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
 
   <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
-  <link rel=alternate href={{ site.base }}/{{ site.feed }}/ type=application/atom+xml>
+  <link rel=alternate href="{{ site.base }}/{{ site.feed }}/" type=application/atom+xml>
 
   <!-- build:css {{ site.base }}/{{ site.assets }}/css/app.css -->
-    <link rel=stylesheet href={{ site.base }}/{{ site.assets }}/css/app.css>
+    <link rel=stylesheet href="{{ site.base }}/{{ site.assets }}/css/app.css">
   <!-- endbuild -->
 
-  {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href={{ site.file }}>{% endif %}
+  {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
 
   <!-- Define a description for better SEO result, exclude homepage -->
   {% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
@@ -138,7 +138,7 @@
 
     <!-- Header, just a logo at the moment -->
     <header>
-      <h1><a href={{ site.base }}/ class=logo accesskey=x>Sparanoid</a></h1>
+      <h1><a href="{{ site.base }}/" class=logo accesskey=x>Sparanoid</a></h1>
     </header>
 
     <!-- Main navigation with current page / categoriy highlighted -->
@@ -148,11 +148,11 @@
       {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
       {% if page.permalink == '/note/'  or page.category == 'note'  %}<ul class=nav-note>{% endif %}
       {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
-        <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href={{ site.base }}/>Home</a></li>
-        <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href={{ site.base }}/work/>Work</a></li>
-        <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href={{ site.base }}/store/>Store</a></li>
-        <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href={{ site.base }}/note/>Note</a></li>
-        <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href={{ site.base }}/about/>About</a></li>
+        <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href="{{ site.base }}/">Home</a></li>
+        <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href="{{ site.base }}/work/">Work</a></li>
+        <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href="{{ site.base }}/store/">Store</a></li>
+        <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href="{{ site.base }}/note/">Note</a></li>
+        <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href="{{ site.base }}/about/">About</a></li>
       </ul>
     </nav>
 
@@ -165,8 +165,8 @@
 
       <footer>
         <p>
-          <a href={{ site.base }}/>{{ site.name }}</a> /
-          <a href={{ site.base }}/{{ site.feed }}/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>
+          <a href="{{ site.base }}/">{{ site.name }}</a> /
+          <a href="{{ site.base }}/{{ site.feed }}/" title="Feed - Atom (The Atom Syndication Format)">Atom</a>
         </p>
         <p>
           <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
