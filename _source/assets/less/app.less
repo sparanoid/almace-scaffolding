@@ -26,7 +26,7 @@
   letter-spacing: -.06em;
 }
 
-.helvetica {
+.sub-heading {
   font-family: @sans-serif;
   font-size: (@base-font-size / 2);
   font-weight: normal;
@@ -142,7 +142,7 @@ del {
 
 // Global navigations font styles
 nav {
-  .helvetica;
+  .sub-heading;
 }
 
 // Main navigation
@@ -190,7 +190,7 @@ nav {
 
       small {
         display: block;
-        .helvetica;
+        .sub-heading;
       }
 
       // Used on work page
@@ -288,7 +288,7 @@ article {
 
   h3 {
     margin: @space 0 1.6em;
-    .helvetica;
+    .sub-heading;
   }
 
   ul, ol {
@@ -340,7 +340,7 @@ article {
 
   hr {
     margin: @space 0 1.6em;
-    .helvetica;
+    .sub-heading;
 
     &:before {
       content: attr(data-placeholder);
@@ -362,7 +362,7 @@ article {
     label {
       display: block;
       margin-bottom: (@space * .1);
-      .helvetica;
+      .sub-heading;
     }
 
     input {
@@ -370,7 +370,7 @@ article {
       width: 100%;
       padding: 7px;
       margin: 0 0 (@space * .2);
-      .helvetica;
+      .sub-heading;
       border: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
       outline: none;
@@ -428,7 +428,7 @@ article {
 .btn {
   display: inline-block;
   padding: 6px 20px;
-  .helvetica;
+  .sub-heading;
   cursor: pointer;
   background: @text-color;
   outline: none;
@@ -510,9 +510,9 @@ article {
 
       time {
         font-size: (@base-font-size * 1.5);
-        // font-weight: 200;
         color: fade(@text-color, 30%);
         opacity: 0;
+        .transition(opacity .5s ease);
       }
 
       time + a {
@@ -542,6 +542,7 @@ article {
 
         time {
           opacity: 1;
+          .transition(opacity .1s ease);
         }
       }
     }
@@ -556,7 +557,7 @@ article {
 }
 
 footer {
-  .helvetica;
+  .sub-heading;
 
   & {
     font-size: (@base-font-size / 2 - 1px);
@@ -583,7 +584,7 @@ footer {
 
     .flex-caption {
       margin: -30px 0 30px;
-      .helvetica;
+      .sub-heading;
     }
   }
 }
