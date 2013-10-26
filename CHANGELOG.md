@@ -2,6 +2,26 @@
 
 ## Head [#][head]
 
+### 23.0.0 (Oct 27.2013)
+- Shorter hash filename
+- Fixes *min and usemin tasks order
+- Remove `-webkit-backface-visibility: hidden;`, doesn't compatible with `position: sticky;`
+- Bump deps version
+- Update post color scheme for “DOLLARS Chat Room”
+- Better external link (link post) handle
+- Adds quote marks for href links
+- Middot style fix
+- New (brighter) assets for IterCast
+- Update font stack
+- Remove appcache support, too buggy
+- Remove custom font face
+- Sub heading transition
+- Update todo
+- Update heading on mobile device
+- Update upcoming post
+- Retrieve old content from Time Machine
+- Larger wrapper width
+
 ### 22.0.7 (Sep 17.2013)
 
 - Bump deps version
