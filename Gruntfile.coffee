@@ -136,7 +136,7 @@ module.exports = (grunt) ->
 
     usemin:
       options:
-        dirs: ["<%= core.dist %>"]
+        assetsDirs: ["<%= core.dist %>"]
 
       html: ["<%= core.dist %>/**/*.html"]
       css: ["<%= core.dist %>/assets/css/*.css"]
@@ -191,10 +191,10 @@ module.exports = (grunt) ->
   grunt.registerTask "build", [
       "clean"
     , "test"
+    , "useminPrepare"
     , "less:dist"
     , "autoprefixer"
     , "shell:dist"
-    , "useminPrepare"
     , "rev"
     , "usemin"
     , "concurrent:dist"
