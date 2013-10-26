@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Delicious Redesign
+title: Delicious.com
 category: work
 tag: commercial
 link: http://itercast.com/
