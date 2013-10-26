@@ -53,7 +53,7 @@ module.exports = (grunt) ->
 
       less:
         files: ["<%= recess.test.files.src %>"]
-        tasks: ["less:server", "recess"]
+        tasks: ["less:server", "autoprefixer", "recess"]
 
     less:
       server:
@@ -66,6 +66,11 @@ module.exports = (grunt) ->
       dist:
         files:
           "<%= core.app %>/assets/css/app.css": ["<%= recess.test.files.src %>"]
+
+    autoprefixer:
+      dist:
+        files:
+          "<%= core.app %>/assets/css/app.css": ["<%= core.app %>/assets/css/app.css"]
 
     htmlmin:
       dist:
@@ -171,19 +176,43 @@ module.exports = (grunt) ->
     clean: [".tmp", "<%= core.dist %>/*"]
 
   # Fire up a server on local machine for development
-  grunt.registerTask "server", ["less:server", "concurrent"]
+  grunt.registerTask "server", [
+      "less:server"
+      "autoprefixer"
+    , "concurrent"
+  ]
 
   # Test task
-  grunt.registerTask "test", ["coffeelint", "recess"]
+  grunt.registerTask "test", [
+      "coffeelint"
+    , "recess"
+  ]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "useminPrepare", "rev", "usemin", "concurrent:dist"]
+  grunt.registerTask "build", [
+      "clean"
+    , "test"
+    , "less:dist"
+    , "autoprefixer"
+    , "shell:dist"
+    , "useminPrepare"
+    , "rev"
+    , "usemin"
+    , "concurrent:dist"
+  ]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
-  grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
+  grunt.registerTask "archive", [
+      "build"
+    , "shell:archive"
+    , "concurrent:dist"
+  ]
 
   # Build site + rsync static files to remote server
-  grunt.registerTask "sync", ["build", "shell:sync"]
+  grunt.registerTask "sync", [
+      "build"
+    , "shell:sync"
+  ]
 
   # Sync image assets with `s3cmd`
   grunt.registerTask "s3", ["shell:s3"]
