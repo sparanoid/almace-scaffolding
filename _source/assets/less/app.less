@@ -18,18 +18,12 @@
 // Invert color switcher for images and videos
 // :root { -webkit-filter: invert(100%); }
 
-@font-face {
-  font-family: PFDTCP-M; // PFDinTextCompPro-Medium.ttf
-  src: url(../font/app.woff) format('woff');
-}
-
-.font-face {
-  font-family: PFDTCP-M, "Avenir Next Condensed", "Arial Narrow", @sans-serif; // Add some narrow typefaces failback
-  font-size: (@base-font-size * 7/3);
+.heading {
+  font-family: @sans-serif;
+  font-size: (@base-font-size * 10/3);
   -webkit-font-smoothing: antialiased;
-  font-weight: normal;
-  letter-spacing: -.02em;
-  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -.06em;
 }
 
 .helvetica {
@@ -98,7 +92,7 @@ body {
 
 // Global fixed width wrapper
 .wrapper {
-  max-width: 710px;
+  max-width: 810px;
   margin: 0 auto;
 }
 
@@ -186,7 +180,7 @@ nav {
 
       h1 {
         margin: 0 0 .1em;
-        .font-face;
+        .heading;
 
         // Override margin from article img
         img {
@@ -506,16 +500,19 @@ article {
 
 // Post list in "work" and "note"
 .list { // ul.list
+  list-style: none;
 
   li {
     margin: 0 0 (@space * .2);
-    overflow: hidden;
 
     h2 {
-      .font-face;
+      .heading;
 
       time {
+        font-size: (@base-font-size * 1.5);
+        // font-weight: 200;
         color: fade(@text-color, 30%);
+        opacity: 0;
       }
 
       time + a {
@@ -532,11 +529,21 @@ article {
 
     h2 {
       font-size: (@base-font-size * 2);
-      font-weight: normal;
     }
 
     .txt {
       margin: (@space / 5) 0 @space;
+    }
+
+    &:hover,
+    &:focus {
+
+      h2 {
+
+        time {
+          opacity: 1;
+        }
+      }
     }
   }
 

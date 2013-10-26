@@ -19,7 +19,7 @@ layout: default
         {% endif %}
       </h1>
     {% else %}
-      <h1>{% if page.link %}<a href="{{ page.link }}">{{ page.title }} &rarr;</a>{% else %}{{ page.title }}{% endif %}</h1>
+      <h1>{% if page.link %}<a href="{{ page.link }}">{{ page.title }} &middot;</a>{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
     {% if page.date %}<small>By <a rel=author>{{ site.user }}</a> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
     {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
