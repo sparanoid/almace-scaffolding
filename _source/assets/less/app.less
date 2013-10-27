@@ -297,7 +297,7 @@ article {
 
   p {
     margin: 0 0 1.1em;
-    line-height: @base-line-height;
+    line-height: (@base-line-height * 1.2);
   }
 
   h3 {
@@ -309,7 +309,7 @@ article {
     margin: 0 0 1em 1.5em;
 
     li {
-      line-height: @base-line-height;
+      line-height: (@base-line-height * 1.2);
     }
   }
 
@@ -331,6 +331,7 @@ article {
       font-family: @sans-serif;
       font-size: 120px;
       font-style: normal;
+      line-height: 1;
       color: fade(@text-color, 70%);
       pointer-events: none;
       content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
