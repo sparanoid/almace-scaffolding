@@ -2,7 +2,7 @@
 
 ## Head [#][head]
 
-### 23.0.0 (Oct 27.2013)
+### 23.0.0 (Oct 27.2013) [#][23.0.0]
 - Shorter hash filename
 - Fixes *min and usemin tasks order
 - Remove `-webkit-backface-visibility: hidden;`, doesn't compatible with `position: sticky;`
@@ -802,6 +802,7 @@ Source code not available
 - Initial release
 
 [head]:         http://sparanoid.com/
+[23.0.0]:       http://sparanoid.com/lab/version/23/
 [22.0.0]:       http://sparanoid.com/lab/version/22/
 [21-finale]:    http://sparanoid.com/lab/version/21-finale/
 [20.1-finale]:  http://sparanoid.com/lab/version/20.1-finale/
