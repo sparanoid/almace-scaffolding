@@ -152,7 +152,7 @@ module.exports = (grunt) ->
         command: "jekyll build"
 
       archive:
-        command: "jekyll build --baseurl <%= core.cfg.base %>/ -d <%= core.cfg.destination %><%= core.cfg.base %>/"
+        command: "jekyll build -d <%= core.cfg.destination %><%= core.cfg.base %>/"
 
       sync:
         command: "rsync -avz --delete --progress <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_host %>:<%= core.cfg.remote_dir %> > rsync.log"
@@ -202,7 +202,10 @@ module.exports = (grunt) ->
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", [
-      "build"
+      "clean"
+    , "test"
+    , "less:dist"
+    , "autoprefixer"
     , "shell:archive"
     , "concurrent:dist"
   ]
