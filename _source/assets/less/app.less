@@ -2,7 +2,7 @@
 @space: 70px;
 @wrapper-width: 750px;
 @base-font-size: 24px;
-@base-line-height: 1.7;
+@base-line-height: (20 / 14); // ~ 1.428571429
 @link-color: #e34; // #2ed for invert color
 @background-color: #fff;
 @text-color: #000;
@@ -53,8 +53,6 @@
 *:after {
   padding: 0;
   margin: 0;
-  font-size: 100%;
-  line-height: 1;
   box-sizing: border-box;
 }
 
@@ -82,6 +80,26 @@ body {
     border-bottom: 1px solid fade(@text-color, 2%);
     content: "";
   }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Reset unusual Firefox-on-Android default style.
+//
+// See https://github.com/necolas/normalize.css/issues/214
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
 }
 
 // Global fixed width wrapper
@@ -180,6 +198,10 @@ nav {
         img {
           margin-bottom: (@base-font-size * .6);
         }
+      }
+
+      h1 {
+        line-height: 1;
       }
 
       small {
@@ -360,15 +382,19 @@ article {
     input {
       display: block;
       width: 100%;
-      padding: 7px;
+      padding: 7px 0;
       margin: 0 0 (@space * .2);
-      .sub-heading;
-      border: 1px solid fade(@text-color, 20%);
+      // .sub-heading;
+      border: none;
+      border-bottom: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
       outline: none;
+      transition: padding .2s ease;
       -webkit-appearance: none; // Remove ios pre-defined style
 
       &:focus {
+        padding: 7px;
+        background: fade(@text-color, 2%);
         border-color: @text-color;
       }
     }
@@ -419,7 +445,7 @@ article {
 // Button styles
 .btn {
   display: inline-block;
-  padding: 6px 20px;
+  padding: 7px 20px 6px; // Spacing minor offset since I use uppercased type here
   .sub-heading;
   cursor: pointer;
   background: @text-color;
@@ -521,6 +547,7 @@ article {
 
     h2 {
       font-size: (@base-font-size * 2);
+      line-height: 1;
     }
 
     .txt {
