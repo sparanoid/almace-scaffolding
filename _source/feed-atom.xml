@@ -18,7 +18,7 @@ permalink: /feed/index.xml
     <email>{{ site.email }}</email>
   </author>
 
-  {% for post in site.posts limit:15 %}
+  {% for post in site.posts limit:300 %}
     <entry>
       <title>{{ post.title | xml_escape }}</title>
       <id>tag:{{ site.domain }}{{ site.base }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
