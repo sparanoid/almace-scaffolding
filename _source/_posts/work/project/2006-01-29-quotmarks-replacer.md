@@ -14,12 +14,16 @@ link: http://wordpress.org/extend/plugins/quotmarks-replacer/
 
   <blockquote cite="http://www.apple.com/stevejobs/">
     <p>It’s absolutely amazing. One of my all-time favorites.</p>
-    <cite>Steve Jobs</cite>
+    <footer>
+      <cite>Steve Jobs</cite>
+    </footer>
   </blockquote>
 
   <blockquote cite="http://wordpress.org/">
     <p>Shut up, Matt.</p>
-    <cite>WordPress</cite>
+    <footer>
+      <cite>WordPress</cite>
+    </footer>
   </blockquote>
 
   <hr data-placeholder="Chinese">
@@ -28,7 +32,9 @@ link: http://wordpress.org/extend/plugins/quotmarks-replacer/
 
   <blockquote cite="http://www.hecaitou.net/?p=64">
     <p lang=zh>我──一個網絡民工──當然有人會覺得這是謙虛，終於擁有了強悍的標點符號插件──也可能是世界上最棒的！我可以這樣雙引號“”，也可以這樣""，還可以這樣"──無論是哪一樣，都是最自由的表達！</p>
-    <cite><a href="http://www.hecaitou.com/blogs/hecaitou/archives/119925.aspx">和菜頭</a></cite>
+    <footer>
+      <cite><a href="http://www.hecaitou.com/blogs/hecaitou/archives/119925.aspx">和菜頭</a></cite>
+    </footer>
   </blockquote>
 
   <p class=download><a href="http://wordpress.org/extend/plugins/quotmarks-replacer/">Download</a> it at WordPress.org</p>
