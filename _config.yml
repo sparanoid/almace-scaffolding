@@ -36,6 +36,7 @@ assets:          assets
 
 # Media assets URL used in posts, ie. href="{{ site.file }}/image.png"
 file:         http://d349cztnlupsuf.cloudfront.net
+# file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
 
 # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
 feed:         feed
