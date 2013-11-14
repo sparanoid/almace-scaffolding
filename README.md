@@ -2,6 +2,10 @@
 
 [Jekyll](https://github.com/mojombo/jekyll) running on [sparanoid.com](http://sparanoid.com/).
 
+## Setup
+
+    bundle install && npm install && grunt server
+
 ## Author
 
 **Tunghsiao Liu**
