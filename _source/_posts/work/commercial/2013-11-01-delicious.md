@@ -37,6 +37,7 @@ plugin: slider
   <p>Some fun facts:</p>
 
   <ul>
+    <li>Brand-new brighter version of Delicious logo. (Time took: 5 minutes)</li>
     <li>No images used on this project. all styles are served by a ~23 KB gzipped CSS file. Hum, okay, there’s only one icon font and some SVG graphics and&hellip;</li>
     <li>The new design is responsive, I even spent more time on the mobile viewport, or I can say, it’s a mobile-first design. Try it out on your iPhone, it works smooth and intuitive.</li>
     <li>Delicious logo is made of pure CSS.</li>
