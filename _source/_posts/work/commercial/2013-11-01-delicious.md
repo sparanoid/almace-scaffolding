@@ -24,6 +24,10 @@ plugin: slider
         <p class="flex-caption">Delicious New Logo</p>
       </li>
       <li>
+        <p><img src="{{ site.file }}/delicious.com-iconset.png" alt="Delicious Iconset"></p>
+        <p class="flex-caption">Delicious Iconset</p>
+      </li>
+      <li>
         <p><img src="{{ site.file }}/delicious.com.png" alt="Delicious UI Preview"></p>
         <p class="flex-caption">Delicious UI Preview</p>
       </li>
