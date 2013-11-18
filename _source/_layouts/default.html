@@ -39,7 +39,10 @@
   <!-- Error page specified styles -->
   {% if page.title == 'Error' %}
     <style>
-      :root { -webkit-filter: invert(100%); }
+      :root {
+        -webkit-filter: invert(100%);
+        -webkit-backface-visibility: hidden;
+      }
     </style>
   {% endif %}
 
