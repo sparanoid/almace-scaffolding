@@ -2,7 +2,7 @@
 <html>
   <meta name=viewport content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+  <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
   <link rel=alternate href="{{ site.base }}/{{ site.feed }}/" type=application/atom+xml>
 
   <!-- build:css {{ site.base }}/{{ site.assets }}/css/app.css -->
@@ -29,7 +29,7 @@
     <meta name=twitter:site content="@{{ site.twitter }}">
     <meta name=twitter:creator content="@tunghsiao">
     <meta name=twitter:url content="{{ site.url }}{{ site.base }}{{ page.url }}">
-    <meta name=twitter:title content="{{ page.title | xml_escape }}">
+    <meta name=twitter:title content="{{ page.title | strip_html | xml_escape }}">
     <meta name=twitter:description content="{{ content_description }}">
     {% if page.category == 'work' %}
     <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
