@@ -28,7 +28,7 @@
   "readmeFilename": "README.md",
   "gitHead": "7d1fc96cf780dcd5412e32266b933d78dd7a2a26",
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-htmlmin": "~0.1.3",
