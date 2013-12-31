@@ -27,7 +27,3 @@ Following files, directories and their contents are copyright Tunghsiao Liu and 
 All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
 Copyright (c) 2005-2013 Tunghsiao Liu. Rights reserved as indicated above.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sparanoid/sparanoid.com/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
