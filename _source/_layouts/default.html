@@ -2,7 +2,7 @@
 <html>
   <meta name=viewport content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
+  <title>{% if page.title != site.name %}{{ site.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
   <link rel=alternate href="{{ site.base }}/{{ site.feed }}/" type=application/atom+xml>
 
   <!-- build:css {{ site.base }}/{{ site.assets }}/css/app.css -->
@@ -163,7 +163,7 @@
     {{ content }}
 
     <!-- Footer and sponsor ad section -->
-    {% if page.title != 'Sparanoid' %}
+    {% if page.title != site.name %}
       <!-- Insert ad here -->
 
       <footer class="footer">
