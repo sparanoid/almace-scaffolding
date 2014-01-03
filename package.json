@@ -3,7 +3,7 @@
   "version": "23.0.1",
   "description": "Jekyll Scaffolding, sleek default theme, livereload, LESS auto-compile, prefix-free",
   "author": "Tunghsiao Liu",
-  "homepage": "http://sparanoid.com/work/jekyll-scaffolding",
+  "homepage": "http://sparanoid.com/work/jekyll-scaffolding/",
   "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
