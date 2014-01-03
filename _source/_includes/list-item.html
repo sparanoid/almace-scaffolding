@@ -12,4 +12,7 @@
     <!-- Item timestamp -->
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%y" }}</time>
   </h2>
+
+  {{ post.content }}
+
 </li>
