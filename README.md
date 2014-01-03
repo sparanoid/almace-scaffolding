@@ -5,6 +5,18 @@
 
 Jekyll Scaffolding with sleek default theme MFEO, LESS auto-compile, prefix-free.
 
+## Feature
+
+- A sleek default theme, MFEO
+  - Responsive design
+  - Tumblr-like link blog template
+  - Work smooth for personal blog, product blog and portfolio
+  - Error pages
+  - Atom feed template
+- Built with Grunt.js
+  - Styling with LESS, CSS file is automatically compiled on the fly
+  - CSS prefix-free
+
 ## Setup
 
     bundle install && npm install && grunt server
