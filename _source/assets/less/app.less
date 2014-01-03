@@ -1,0 +1,670 @@
+// Global variables
+@space: 70px;
+@wrapper-width: 750px;
+@base-font-size: 24px;
+@base-line-height: (20 / 14); // ~ 1.428571429
+@link-color: #e34; // #2ed for invert color
+@background-color: #fff;
+@text-color: #000;
+@sans-serif: "Helvetica Neue", Arial, "Hiragino Sans GB", sans-serif;
+@serif: Georgia, "Hiragino Mincho ProN", serif;
+
+// Invert color switcher for images and videos
+// :root { filter: invert(100%); }
+
+.heading {
+  font-family: @sans-serif;
+  font-size: (@base-font-size * 10/3);
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  letter-spacing: -.06em;
+}
+
+.sub-heading {
+  font-family: @sans-serif;
+  font-size: (@base-font-size / 2);
+  font-weight: normal;
+  line-height: (@base-line-height * .9);
+  letter-spacing: .45em;
+  color: fade(@text-color, 20%);
+  text-transform: uppercase;
+}
+
+// http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements.
+// 2. The original space content hack is removed here. No need to support Opera on my personal site.
+.cf {
+
+  &:before, &:after {
+    display: table; // 1
+    content: ""; // 2
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Basic reset
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 8% (@space * 1.5);
+  margin: 0 auto 0;
+  font-family: @serif;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @text-color;
+  text-rendering: optimizelegibility;
+  background: @background-color;
+  image-rendering: optimizequality;
+
+  // A semitranslucent bar at the top of the page
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 8px;
+    pointer-events: none;
+    background: fade(@text-color, 2%);
+    border-bottom: 1px solid fade(@text-color, 2%);
+    content: "";
+  }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Reset unusual Firefox-on-Android default style.
+//
+// See https://github.com/necolas/normalize.css/issues/214
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+
+// Global fixed width wrapper
+.wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+a, button {
+
+  &:link, &:visited {
+    color: @text-color;
+    text-decoration: none;
+    transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
+
+    &:focus, &:hover {
+      color: @link-color;
+      transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
+    }
+  }
+}
+
+img, hr {
+  border: 0;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+::selection {
+  color: @link-color;
+  background: fade(@text-color, 2%);
+}
+
+// Main site logo
+.logo {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: -37px 0 (@space / 5);
+  text-indent: -9999em;
+  border-color: transparent;
+  border-bottom-color: @text-color;
+  border-style: solid;
+  border-width: 0 26px 45px 26px;
+
+  &:hover {
+    border-bottom-color: @link-color;
+  }
+}
+
+// Global navigations font styles
+nav {
+  .sub-heading;
+}
+
+// Main navigation
+.navigation { // nav.navigation
+  margin: 0 0 (@space * 1.5);
+  margin-left: -1.1em;
+  .cf;
+
+  li {
+    display: inline-block;
+    line-height: 2;
+    list-style: none;
+
+    a {
+      padding: 3px 1.2em;
+      font-weight: bold;
+    }
+  }
+}
+
+// Currently activated page or category a post it belongs to
+.current { // li.current
+  a {
+    color: @link-color;
+  }
+}
+
+// Titles wrapper
+.wrapper {
+
+  article { // Define them into .wrapper > article to avoid overriding site main header
+
+    header {
+      padding-bottom: (@space * 1.35);
+
+      h1 {
+        margin: 0 0 .1em;
+        hyphens: auto;
+        line-height: 1;
+
+        // Override margin from article img
+        img {
+          margin-bottom: (@base-font-size * .6);
+        }
+      }
+
+      h1 {
+        .heading;
+      }
+
+      small {
+        display: block;
+        .sub-heading;
+      }
+
+      // Used on work page
+      & + .txt > :first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// Animate latest work link
+.latest {
+  transition: color .3s ease;
+}
+
+:root:hover .latest {
+  color: @link-color !important;
+}
+
+// Pserson status
+.status { // h2.status
+
+  a {
+
+    &:before {
+      @size: 9px;
+      display: inline-block;
+      width: @size;
+      height: @size;
+      margin-right: @size;
+      background: fade(@text-color, 20%);
+      border-radius: 50%;
+      content: "";
+    }
+  }
+}
+
+.available {
+
+  a {
+    color: @text-color;
+
+    &:hover {
+      color: fade(green, 80%);
+    }
+
+    &:before {
+      background: fade(green, 60%);
+    }
+  }
+}
+.unavailable {
+
+  a {
+    color: fade(@text-color, 50%);
+
+    &:hover {
+      color: fade(red, 60%);
+    }
+
+    &:before {
+      background: fade(red, 20%);
+    }
+  }
+}
+
+// Article wrapper
+article {
+  max-width: @wrapper-width;
+  margin-bottom: (@space * 1.35);
+  .cf; // For some specified posts in work category
+
+  img, video, iframe {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 40px;
+  }
+}
+
+// Basic staff inside article .txt
+.txt {
+  overflow: hidden;
+  hyphens: auto;
+
+  a {
+    border-bottom: 1px dotted fade(@text-color, 30%); // Set larger value for invert color
+  }
+
+  p {
+    margin: 0 0 1.1em;
+    line-height: (@base-line-height * 1.2);
+  }
+
+  h3 {
+    margin: @space 0 1.6em;
+    .sub-heading;
+  }
+
+  ul, ol {
+    margin: 0 0 1em 1.5em;
+
+    li {
+      line-height: (@base-line-height * 1.2);
+    }
+  }
+
+  ol {
+    margin-left: 1.75em;
+  }
+
+  blockquote {
+    position: relative;
+    padding-left: (@space * .75);
+    font-style: italic;
+    .cf;
+
+    &:before {
+      position: absolute;
+      top: -16px;
+      left: -8px;
+      z-index: -1;
+      font-family: @sans-serif;
+      font-size: 120px;
+      font-style: normal;
+      line-height: 1;
+      color: fade(@text-color, 70%);
+      pointer-events: none;
+      content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
+    }
+
+    cite {
+      float: right;
+      margin: 0 0 2em;
+      font-size: 85%;
+      color: fade(@text-color, 80%);
+
+      &:before {
+        content: "\2500\2500\00a0" // http://www.fileformat.info/info/unicode/char/2500/index.htm
+      }
+    }
+  }
+
+  sup {
+    font-size: 75%;
+  }
+
+  hr {
+    margin: @space 0 1.6em;
+    .sub-heading;
+
+    &:before {
+      content: attr(data-placeholder);
+    }
+  }
+
+  abbr:after {
+    content: " (" attr(title) ")";
+  }
+
+  code, pre {
+    font-family: Menlo, monospace;
+    color: #68a;
+  }
+
+  // Newsletter subscription form in page "store"
+  form {
+
+    label {
+      display: block;
+      margin-bottom: (@space * .1);
+      .sub-heading;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 7px 0;
+      margin: 0 0 (@space * .2);
+      // .sub-heading;
+      border: none;
+      border-bottom: 1px solid fade(@text-color, 20%);
+      border-radius: 0; // Remove border-radius for ios devices
+      outline: none;
+      transition: padding .2s ease;
+      -webkit-appearance: none; // Remove ios pre-defined style
+
+      &:focus {
+        padding: 7px;
+        background: fade(@text-color, 2%);
+        border-color: @text-color;
+      }
+    }
+  }
+
+  // Rest form validation styles, borrowed from Bootstrap
+  input, textarea, select {
+
+    &:focus:required:invalid {
+
+      &:focus {
+        background: fade(@link-color, 5%);
+        border-color: @link-color;
+        box-shadow: none; // Override Firefox default styles
+      }
+    }
+  }
+
+  // Remove extra space for the last element in the container
+  & > :last-child {
+    margin-bottom: 0;
+
+    & > :last-child {
+      margin-bottom: 0;
+
+      & > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Posts with Chinese characters
+[lang=zh] {
+  text-align: justify; // Workaround solution for post with chinese
+}
+
+// Fix empty space when a paragraph starts with some asian punctuation marks
+.margin-fix:first-letter {
+  margin-left: -.6em;
+}
+
+// Tweet button margin fix
+.tweet {
+  margin-top: @space;
+}
+
+// Button styles
+.btn {
+  display: inline-block;
+  padding: 7px 20px 6px; // Spacing minor offset since I use uppercased type here
+  .sub-heading;
+  cursor: pointer;
+  background: @text-color;
+  outline: none;
+
+  // Redefine overrides here to pass recess syntax check
+  &:link, &:visited {
+    color: @background-color;
+
+    &:focus, &:hover {
+      color: @background-color;
+      background: @link-color;
+    }
+  }
+}
+
+// Broser frame for images in category "work"
+.browser {
+  position: relative;
+  padding-top: 20px;
+  margin: 0 0 40px !important;
+  background: rgba(0, 0, 0, .05);
+  border-radius: 5px 5px 0 0;
+
+  &:before {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, .15);
+    border-radius: 50%;
+    content: "";
+  }
+
+  img {
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, .05) 0 -1px 0 0;
+  }
+}
+
+// Special paragraph with an icon
+.note, .store, .download {
+  @iconSize: 40px;
+  padding-left: (@iconSize * 1.25);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: @iconSize @iconSize;
+}
+
+.note     { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M27,0H4v40h32V9L27,0z M31,35H9V5h15l7,7V35z'/></svg>"); }
+.store    { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M20,0C8.954,0,0,8.954,0,20s8.954,20,20,20s20-8.954,20-20S31.046,0,20,0z M5,20c0-7.806,5.964-14.214,13.583-14.929 v3.574c-3.852,0.757-6.083,3.24-6.083,6.407c0,3.492,2.627,5.292,6.479,6.588c2.664,0.899,3.816,1.764,3.816,3.131 c0,1.44-1.404,2.232-3.456,2.232c-2.34,0-4.463-0.756-5.975-1.584l-1.08,4.211c1.368,0.792,3.708,1.44,6.119,1.548v3.734 C10.87,34.115,5,27.744,5,20z M21.931,34.862v-3.936c4.14-0.72,6.407-3.455,6.407-6.659c0-3.239-1.729-5.219-6.012-6.73 c-3.059-1.152-4.319-1.908-4.319-3.096c0-1.008,0.756-2.016,3.095-2.016c2.592,0,4.247,0.827,5.184,1.224l1.044-4.067 c-1.188-0.576-2.808-1.08-5.22-1.188V5.166C29.393,6.194,35,12.434,35,20C35,27.629,29.301,33.912,21.931,34.862z'/></svg>"); }
+.download { background-image: url("data:image/svg+xml,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><path d='M29.982,5.825c-0.469,0-0.922,0.074-1.375,0.142C26.867,2.87,23.65,0.808,20,0.808c-3.729,0-6.948,2.093-8.661,5.14 c-0.439-0.059-0.875-0.122-1.321-0.122C4.513,5.825,0,10.468,0,16c0,5.533,4.495,10,10,10h7v6h-5l8,8l8-8h-5v-6h7 c5.508,0,10-4.467,10-10C40,10.469,35.489,5.825,29.982,5.825z M30,21H10c-2.751,0-5-2.398-5-5.167c0-2.749,2.124-5.09,5.051-5.09 c1.73-0.001,2.464,0.587,3.394,1.203c0-1.807,2.229-6.122,6.555-6.122c2.496,0,3.952,2.242,4.441,2.735 c-1.945,1.957-2.845,4.457-2.412,7.752h0.691c0.573-2.291,2.455-5.557,7.279-5.557c2.749,0,5,2.311,5,5.078 C35,18.602,32.749,21,30,21z'/></svg>"); }
+
+// Reference notes and links in post
+.reflist {
+  font-size: .9em;
+  font-style: italic;
+}
+
+.cite, .ref {
+  border-bottom: none !important;
+
+  &:target {
+    color: @link-color;
+    text-shadow: 0 2px 15px @link-color;
+  }
+}
+
+// Post list in "work" and "note"
+.list { // ul.list
+  list-style: none;
+
+  li {
+    margin: 0 0 (@space * .2);
+
+    h2 {
+      .heading;
+
+      time {
+        font-size: (@base-font-size * 1.5);
+        color: fade(@text-color, 30%);
+        opacity: 0;
+        transition: opacity .5s ease;
+      }
+
+      time + a {
+        line-height: 0; // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
+        vertical-align: 3px;
+      }
+
+      span {
+        display: inline-block;
+        width: .5em;
+        text-align: center;
+      }
+    }
+
+    h2 {
+      font-size: (@base-font-size * 2);
+      line-height: 1;
+    }
+
+    .txt {
+      margin: (@space / 5) 0 @space;
+    }
+
+    &:hover,
+    &:focus {
+
+      h2 {
+
+        time {
+          opacity: 1;
+          transition: opacity .1s ease;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer {
+  .sub-heading;
+
+  & {
+    font-size: (@base-font-size / 2 - 1px);
+  }
+}
+
+// FlexSlider Necessary Styles
+.flexslider {
+
+  // Slides
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: none;
+    cursor: pointer;
+    backface-visibility: hidden; // Hide the slides before the JS is loaded, this avoids image flashing
+
+    &:first-child {
+      display: block; // Display the first image when scripts are not ready
+    }
+
+    .flex-caption {
+      margin: -30px 0 30px;
+      .sub-heading;
+    }
+  }
+}
+
+// FlexSlider - No JavaScript fallback
+.no-js .flexslider ul li:first-child { display: block; }
+
+// Media query stack
+@media (max-width: 640px) {
+  body {
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: (@base-font-size * 0.8);
+  }
+
+  .wrapper {
+
+    article {
+
+      header {
+
+        h1 {
+          font-size: (@base-font-size * 2.4);
+        }
+      }
+    }
+  }
+
+  .list {
+
+    li {
+
+      h2 {
+        font-size: (@base-font-size * 1.5);
+
+        time {
+          opacity: 1;
+          font-size: (@base-font-size * 1.2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation li {
+    display: block;
+
+    a {
+      display: block;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+// All iOS devices, the easiest way
+@media (max-device-width: 480px), (max-device-width: 1024px) {
+  .wrapper {
+    -webkit-text-size-adjust: none;
+  }
+}
