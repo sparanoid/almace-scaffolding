@@ -3,7 +3,7 @@
 [![devDependency Status](https://david-dm.org/sparanoid/jekyll-scaffolding/dev-status.png)](https://david-dm.org/sparanoid/jekyll-scaffolding#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sparanoid/jekyll-scaffolding/trend.png)](https://bitdeli.com/free)
 
-Jekyll Scaffolding, sleek default theme, livereload, LESS auto-compile, prefix-free.
+Jekyll Scaffolding with sleek default theme MFEO, LESS auto-compile, prefix-free.
 
 ## Setup
 
