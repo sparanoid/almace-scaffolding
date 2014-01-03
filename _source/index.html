@@ -1,0 +1,25 @@
+---
+layout: default
+title: Sparanoid
+permalink: /
+---
+
+<!-- Article wrapper, limit width -->
+<article>
+
+  <!-- Post title -->
+  <header>
+    <h1>
+      I&rsquo;m Tunghsiao Liu.<br>
+      {% for post in site.categories.work limit:1 %}
+        I recently redesigned <a href="{{ site.base }}{{ post.url }}/" class=latest>{{ post.title }}</a>
+      {% endfor %}
+    </h1>
+
+    {% if site.availability == 'free' %}
+      <small class="status available"><a href="mailto:{{ site.email }}">Currently available for freelance</a></small>
+    {% else %}
+      <small class="status unavailable"><a href="mailto:{{ site.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></small>
+    {% endif %}
+  </header>
+</article>

@@ -1,0 +1,12 @@
+---
+layout: page
+title: Note
+permalink: /note/
+desc: 筆記·ノート·TL;DR
+---
+
+<ul class=list>
+  {% for post in site.categories.note %}
+    {% include list-item.html %}
+  {% endfor %}
+</ul>

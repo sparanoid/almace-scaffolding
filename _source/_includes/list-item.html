@@ -1,0 +1,15 @@
+<!-- List snippets -->
+<li{% if post.lang %} lang={{ post.lang }}{% endif %}>
+  <h2>
+    <!-- Item title -->
+    <a href="{{ site.base }}{{ post.url }}/">{{ post.title }}</a>
+
+    <!-- External link indicator -->
+    {% if post.link %}
+      <a href="{{ post.link }}"><span>&middot;</span></a>
+    {% endif %}
+
+    <!-- Item timestamp -->
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%y" }}</time>
+  </h2>
+</li>
