@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /lab/version/
+Sitemap: http://sparanoid.com/sitemap.xml

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<!-- Article wrapper, limit width -->
+<article>
+
+  <!-- Page title -->
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}<small><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %Y" }}</time></small>{% endif %}
+    {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
+  </header>
+
+  <!-- Page content -->
+  {{ content }}
+</article>
