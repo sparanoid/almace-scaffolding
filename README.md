@@ -1,4 +1,4 @@
-# ▲ Jekyll Scaffolding
+# Jekyll Scaffolding
 [![Build Status](https://travis-ci.org/sparanoid/jekyll-scaffolding.png)](https://travis-ci.org/sparanoid/jekyll-scaffolding)
 [![devDependency Status](https://david-dm.org/sparanoid/jekyll-scaffolding/dev-status.png)](https://david-dm.org/sparanoid/jekyll-scaffolding#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sparanoid/jekyll-scaffolding/trend.png)](https://bitdeli.com/free)
@@ -38,6 +38,8 @@ Jekyll Scaffolding with sleek default theme, LESS auto-compile, prefix-free, HTM
 - Please keep the credit in template file, thanks.
 
 ## Demo
+
+<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/01-jekyll-scaffolding.png" alt="Jekyll Scaffolding Preview">
 
 You can see a more complex setup using this framework at [my site](https://github.com/sparanoid/sparanoid.com).
 
