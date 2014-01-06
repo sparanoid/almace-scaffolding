@@ -1,3 +1,5 @@
+---
+layout: nil
+---
 User-agent: *
-Disallow: /lab/version/
-Sitemap: http://sparanoid.com/sitemap.xml
+Sitemap: {{ site.url }}{{ site.base }}/sitemap.xml
