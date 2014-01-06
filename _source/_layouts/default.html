@@ -9,7 +9,7 @@
     <link rel=stylesheet href="{{ site.base }}/{{ site.assets }}/css/app.css">
   <!-- endbuild -->
 
-  {% if page.title == 'Sparanoid' %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
+  {% if page.title == site.name %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
 
   <!-- Define a description for better SEO result, exclude homepage -->
   {% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
