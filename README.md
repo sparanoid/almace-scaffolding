@@ -1,4 +1,4 @@
-# Jekyll Scaffolding
+# ▲ Jekyll Scaffolding
 [![Build Status](https://travis-ci.org/sparanoid/jekyll-scaffolding.png)](https://travis-ci.org/sparanoid/jekyll-scaffolding)
 [![devDependency Status](https://david-dm.org/sparanoid/jekyll-scaffolding/dev-status.png)](https://david-dm.org/sparanoid/jekyll-scaffolding#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sparanoid/jekyll-scaffolding/trend.png)](https://bitdeli.com/free)
