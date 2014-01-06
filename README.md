@@ -23,7 +23,7 @@ Jekyll Scaffolding with sleek default theme MFEO, LESS auto-compile, prefix-free
 
 ## Setup
 
-1. [https://github.com/sparanoid/jekyll-scaffolding/fork](Fork) this project.
+1. [Fork](https://github.com/sparanoid/jekyll-scaffolding/fork) this project.
 2. Checkout to your local machine.
 3. Run `bundle install && npm install` to install required dependencies. Ruby gem `bundler` and Node.js package manager `npm` must be installed before running this command.
 4. Run `grunt server` to fire up a server on your localhost.
