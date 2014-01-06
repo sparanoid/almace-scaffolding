@@ -3,7 +3,7 @@
 [![devDependency Status](https://david-dm.org/sparanoid/sparanoid.com/dev-status.png)](https://david-dm.org/sparanoid/sparanoid.com#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sparanoid/sparanoid.com/trend.png)](https://bitdeli.com/free)
 
-[Jekyll](https://github.com/mojombo/jekyll) running on [sparanoid.com](http://sparanoid.com/).
+[Jekyll](https://github.com/mojombo/jekyll) running on [sparanoid.com](http://sparanoid.com/). Codename `MFEO`.
 
 ## Setup
 
