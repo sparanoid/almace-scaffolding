@@ -7,10 +7,10 @@ Jekyll Scaffolding with sleek default theme MFEO, LESS auto-compile, prefix-free
 
 ## Feature
 
-- A sleek default theme, codename `MFEO`, a variant of sparanoid.com
+- A sleek default theme, codename `MFEO`, a variant of [sparanoid.com](http://sparanoid.com/)
   - Mobile-friendly, works great on your iPhone and iPad
   - Minimalism design, No jQuery library, No JavaScript
-    - It only generates two HTTP requests (well, only if your posts don't have external media files)
+    - It generates only two HTTP requests (well, only if your posts don't have external media files)
   - Work smooth for personal blog, portfolio, product blog and Tumblr-like link blog
   - HTTP error page
   - Atom feed template
