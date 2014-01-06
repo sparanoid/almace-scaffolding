@@ -30,6 +30,13 @@ Jekyll Scaffolding with sleek default theme MFEO, LESS auto-compile, prefix-free
 5. Open `http://localhost:4321` in your browser.
 6. Edit, edit, delete, delete, commit, push, done.
 
+## Setup Notes
+
+- You should change the URLs and other variables in `package.json` according to yours.
+- You should also change `favicon.ico` and `apple-touch-icon-precomposed.png` to yours.
+- Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own repo for my website, I'll keep them untouched in case you need these.
+- Please keep the credit in template file, thanks.
+
 ## Demo
 
 You can see a more complex setup using this framework at [my site](https://github.com/sparanoid/sparanoid.com).
@@ -40,6 +47,10 @@ You can see a more complex setup using this framework at [my site](https://githu
 
 - Twitter: @[tunghsiao](http://twitter.com/tunghsiao)
 - GitHub: @[sparanoid](http://github.com/sparanoid)
+
+## Donate
+
+Wanna buy me a cup of coffee? [Great](http://sparanoid.com/donate/).
 
 ## Licenses
 
