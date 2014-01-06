@@ -61,16 +61,19 @@ module.exports = (grunt) ->
           dumpLineNumbers: "all"
 
         files:
-          "<%= core.app %>/assets/css/app.css": ["<%= recess.test.files.src %>"]
+          src: ["<%= recess.test.files.src %>"]
+          dest: "<%= core.app %>/assets/css/app.css"
 
       dist:
         files:
-          "<%= core.app %>/assets/css/app.css": ["<%= recess.test.files.src %>"]
+          src: ["<%= recess.test.files.src %>"]
+          dest: "<%= less.server.files.dest %>"
 
     autoprefixer:
       dist:
         files:
-          "<%= core.app %>/assets/css/app.css": ["<%= core.app %>/assets/css/app.css"]
+          src: ["<%= less.server.files.dest %>"]
+          dest: "<%= less.server.files.dest %>"
 
     htmlmin:
       dist:
