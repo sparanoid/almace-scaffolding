@@ -43,8 +43,7 @@ module.exports = (grunt) ->
         noUniversalSelectors: false
 
       test:
-        files:
-          src: ["<%= core.app %>/assets/less/app.less"]
+        src: ["<%= core.app %>/assets/less/app.less"]
 
     watch:
       coffee:
@@ -52,7 +51,7 @@ module.exports = (grunt) ->
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= recess.test.files.src %>"]
+        files: ["<%= recess.test.src %>"]
         tasks: ["less:server", "autoprefixer", "recess"]
 
     less:
@@ -60,20 +59,18 @@ module.exports = (grunt) ->
         options:
           dumpLineNumbers: "all"
 
-        files:
-          src: ["<%= recess.test.files.src %>"]
-          dest: "<%= core.app %>/assets/css/app.css"
+        src: ["<%= recess.test.src %>"]
+        dest: "<%= core.app %>/assets/css/app.css"
 
       dist:
-        files:
-          src: ["<%= recess.test.files.src %>"]
-          dest: "<%= less.server.files.dest %>"
+        src: ["<%= recess.test.src %>"]
+        dest: "<%= less.server.dest %>"
 
     autoprefixer:
       dist:
         files:
-          src: ["<%= less.server.files.dest %>"]
-          dest: "<%= less.server.files.dest %>"
+          src: ["<%= less.server.dest %>"]
+          dest: "<%= less.server.dest %>"
 
     htmlmin:
       dist:
