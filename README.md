@@ -34,7 +34,7 @@ Jekyll Scaffolding with sleek default theme, LESS auto-compile, prefix-free, HTM
 
 - You should change the URLs and other variables in `package.json` according to yours.
 - You should also change `favicon.ico` and `apple-touch-icon-precomposed.png` to yours.
-- Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](http://sparanoid.com/), I'll keep them untouched in case you need these.
+- Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 - Please keep the credit in template file, thanks.
 
 ## Demo
