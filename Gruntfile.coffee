@@ -8,6 +8,7 @@ module.exports = (grunt) ->
   # Configurable paths
   coreConfig =
     cfg: grunt.file.readYAML("_config.yml")
+    var: grunt.file.readYAML("./_source/_data/var.yml")
     pkg: grunt.file.readJSON("package.json")
     app: "<%= core.cfg.source %>"
     dist: "<%= core.cfg.destination %>"
@@ -150,13 +151,13 @@ module.exports = (grunt) ->
         command: "jekyll build"
 
       archive:
-        command: "jekyll build -d <%= core.cfg.destination %><%= core.cfg.base %>/"
+        command: "jekyll build -d <%= core.cfg.destination %><%= core.var.base %>/"
 
       sync:
-        command: "rsync -avz --delete --progress <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_host %>:<%= core.cfg.remote_dir %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= core.var.ignore_files %> <%= core.dist %>/ <%= core.var.remote_host %>:<%= core.var.remote_dir %> > rsync.log"
 
       s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
+        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.var.static_files %> <%= core.var.s3_bucket %>"
 
       log:
         command: "git log v<%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"

@@ -8,5 +8,5 @@ thumb: backlighting.jpg
 ---
 
 <div class="txt">
-  <p><img src="{{ site.file }}/backlighting.jpg" alt="Backlighting"></p>
+  <p><img src="{{ site.data.var.file }}/backlighting.jpg" alt="Backlighting"></p>
 </div>

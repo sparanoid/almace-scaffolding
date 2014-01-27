@@ -20,19 +20,19 @@ plugin: slider
   <div class="flexslider">
     <ul class="slides">
       <li>
-        <p><img src="{{ site.file }}/delicious.com-logo.png" alt="Delicious New Logo"></p>
+        <p><img src="{{ site.data.var.file }}/delicious.com-logo.png" alt="Delicious New Logo"></p>
         <p class="flex-caption">Delicious New Logo</p>
       </li>
       <li>
-        <p><img src="{{ site.file }}/delicious.com-iconset.png" alt="Delicious Iconset"></p>
+        <p><img src="{{ site.data.var.file }}/delicious.com-iconset.png" alt="Delicious Iconset"></p>
         <p class="flex-caption">Delicious Iconset</p>
       </li>
       <li>
-        <p><img src="{{ site.file }}/delicious.com.png" alt="Delicious UI Preview"></p>
+        <p><img src="{{ site.data.var.file }}/delicious.com.png" alt="Delicious UI Preview"></p>
         <p class="flex-caption">Delicious UI Preview</p>
       </li>
       <li>
-        <p class="browser"><img src="{{ site.file }}/delicious.com-homepage.png" alt="Delicious Landing Page"></p>
+        <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-homepage.png" alt="Delicious Landing Page"></p>
         <p class="flex-caption">Delicious Landing Page</p>
       </li>
     </ul>

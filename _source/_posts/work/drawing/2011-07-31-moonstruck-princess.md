@@ -9,9 +9,9 @@ thumb: moonstruck-princess.jpg
 
 
 <div class=txt>
-  <p><img src="{{ site.file }}/moonstruck-princess.jpg"></p>
+  <p><img src="{{ site.data.var.file }}/moonstruck-princess.jpg"></p>
 
   <p>Inspired by my dream.</p>
 
-  <p class=download><a href="{{ site.file }}/moonstruck-princess-wallpaper.png">Wallpaper ver.</a> (2560 x 1440)</p>
+  <p class=download><a href="{{ site.data.var.file }}/moonstruck-princess-wallpaper.png">Wallpaper ver.</a> (2560 x 1440)</p>
 </div>

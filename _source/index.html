@@ -12,14 +12,14 @@ permalink: /
     <h1>
       I&rsquo;m Tunghsiao Liu.<br>
       {% for post in site.categories.work limit:1 %}
-        I recently made <a href="{{ site.base }}{{ post.url }}/" class=latest>{{ post.title }}</a>
+        I recently made <a href="{{ site.data.var.base }}{{ post.url }}/" class=latest>{{ post.title }}</a>
       {% endfor %}
     </h1>
 
     {% if site.availability == 'free' %}
-      <small class="status available"><a href="mailto:{{ site.email }}">Currently available for freelance</a></small>
+      <small class="status available"><a href="mailto:{{ site.data.var.email }}">Currently available for freelance</a></small>
     {% else %}
-      <small class="status unavailable"><a href="mailto:{{ site.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></small>
+      <small class="status unavailable"><a href="mailto:{{ site.data.var.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></small>
     {% endif %}
   </header>
 </article>

@@ -8,5 +8,5 @@ thumb: upc-dope-show.jpg
 ---
 
 <div class="div">
-  <p><img src="{{ site.file }}/work/upc-dope-show.jpg" alt="UPC Dope Show"></p>
+  <p><img src="{{ site.data.var.file }}/work/upc-dope-show.jpg" alt="UPC Dope Show"></p>
 </div>
