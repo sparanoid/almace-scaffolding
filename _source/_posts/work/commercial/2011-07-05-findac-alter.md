@@ -8,5 +8,5 @@ thumb: find.ac-alter.png
 ---
 
 <div class="txt">
-  <p class=browser><img src="{{ site.file }}/find.ac-alter.jpg"></p>
+  <p class=browser><img src="{{ site.data.var.file }}/find.ac-alter.jpg"></p>
 </div>

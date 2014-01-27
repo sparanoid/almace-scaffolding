@@ -5,10 +5,10 @@
   {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
   {% if page.permalink == '/note/'  or page.category == 'note'  %}<ul class=nav-note>{% endif %}
   {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
-    <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href="{{ site.base }}/">Home</a></li>
-    <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href="{{ site.base }}/work/">Work</a></li>
-    <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href="{{ site.base }}/store/">Store</a></li>
-    <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href="{{ site.base }}/note/">Note</a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href="{{ site.base }}/about/">About</a></li>
+    <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href="{{ site.data.var.base }}/">Home</a></li>
+    <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href="{{ site.data.var.base }}/work/">Work</a></li>
+    <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href="{{ site.data.var.base }}/store/">Store</a></li>
+    <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href="{{ site.data.var.base }}/note/">Note</a></li>
+    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href="{{ site.data.var.base }}/about/">About</a></li>
   </ul>
 </nav>
