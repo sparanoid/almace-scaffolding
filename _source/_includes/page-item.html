@@ -2,7 +2,7 @@
 <li{% if post.lang %} lang={{ post.lang }}{% endif %}>
   <h2>
     <!-- Item title -->
-    <a href="{{ site.base }}{{ post.url }}/">{{ post.title }}</a>
+    <a href="{{ site.data.var.base }}{{ post.url }}/">{{ post.title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}
