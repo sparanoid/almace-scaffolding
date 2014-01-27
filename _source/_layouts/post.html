@@ -13,9 +13,9 @@ layout: default
           h1 img { width: {% if page.img-headline-width %}{{ page.img-headline-width }}px{% else %}500px{% endif %};}
         </style>
         {% if page.link %}
-          <a href="{{ page.link }}"><img src="{{ site.file }}/{{ page.img-headline }}" alt="{{ page.title | strip_html | xml_escape }}"></a>
+          <a href="{{ page.link }}"><img src="{{ site.data.var.file }}/{{ page.img-headline }}" alt="{{ page.title | strip_html | xml_escape }}"></a>
         {% else %}
-          <img src="{{ site.file }}/{{ page.img-headline }}" alt="{{ page.title | strip_html | xml_escape }}">
+          <img src="{{ site.data.var.file }}/{{ page.img-headline }}" alt="{{ page.title | strip_html | xml_escape }}">
         {% endif %}
       </h1>
     {% else %}
@@ -27,7 +27,7 @@ layout: default
         {% endif %}
       </h1>
     {% endif %}
-    {% if page.date %}<small>By <a rel=author>{{ site.user }}</a> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
+    {% if page.date %}<small>By <a rel=author>{{ site.data.var.user }}</a> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
     {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
   </header>
 
@@ -35,5 +35,5 @@ layout: default
   {{ content }}
 
   <!-- A tweet button at then end of each post -->
-  <a href="http://twitter.com/home?status={{ page.title | strip_html | cgi_escape }}{{ " by @" | cgi_escape }}{{ site.twitter | cgi_escape }}{{ " " | cgi_escape }}{{ site.url | cgi_escape }}{{ site.base | cgi_escape }}{{ page.url | cgi_escape }}{{ "/" | cgi_escape }}" class="tweet btn" target=_blank>Tweet it</a>
+  <a href="http://twitter.com/home?status={{ page.title | strip_html | cgi_escape }}{{ " by @" | cgi_escape }}{{ site.data.var.twitter | cgi_escape }}{{ " " | cgi_escape }}{{ site.data.var.url | cgi_escape }}{{ site.data.var.base | cgi_escape }}{{ page.url | cgi_escape }}{{ "/" | cgi_escape }}" class="tweet btn" target=_blank>Tweet it</a>
 </article>

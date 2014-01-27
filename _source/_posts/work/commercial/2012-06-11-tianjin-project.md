@@ -23,22 +23,22 @@ link: /lab/tianjin/
   <div class="flexslider">
     <ul class="slides">
       <li>
-        <img src="{{ site.file }}/tianjin-project-preview-01.jpg" alt="Tianjin Project Book Preview #1">
+        <img src="{{ site.data.var.file }}/tianjin-project-preview-01.jpg" alt="Tianjin Project Book Preview #1">
       </li>
       <li>
-        <img src="{{ site.file }}/tianjin-project-preview-02.jpg" alt="Tianjin Project Book Preview #2">
+        <img src="{{ site.data.var.file }}/tianjin-project-preview-02.jpg" alt="Tianjin Project Book Preview #2">
       </li>
       <li>
-        <img src="{{ site.file }}/tianjin-project-preview-03.jpg" alt="Tianjin Project Book Preview #3">
+        <img src="{{ site.data.var.file }}/tianjin-project-preview-03.jpg" alt="Tianjin Project Book Preview #3">
       </li>
       <li>
-        <img src="{{ site.file }}/tianjin-project-preview-04.jpg" alt="Tianjin Project Book Preview #4">
+        <img src="{{ site.data.var.file }}/tianjin-project-preview-04.jpg" alt="Tianjin Project Book Preview #4">
       </li>
       <li>
-        <img src="{{ site.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5">
+        <img src="{{ site.data.var.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5">
       </li>
       <li>
-        <img src="{{ site.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6">
+        <img src="{{ site.data.var.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6">
       </li>
     </ul>
   </div><!-- .flexslider -->
