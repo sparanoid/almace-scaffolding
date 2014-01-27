@@ -1,0 +1,14 @@
+<!-- Footer and sponsor ad section -->
+{% if page.title != site.name %}
+  <!-- Insert ad here -->
+
+  <footer class=footer>
+    <p>
+      <a href="{{ site.base }}/">{{ site.name }}</a> /
+      <a href="{{ site.base }}/{{ site.feed }}/" title="Feed - Atom (The Atom Syndication Format)">Atom</a>
+    </p>
+    <p>
+      <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
+    </p>
+  </footer>
+{% endif %}
