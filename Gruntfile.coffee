@@ -67,9 +67,8 @@ module.exports = (grunt) ->
 
     autoprefixer:
       dist:
-        files:
-          src: ["<%= less.server.dest %>"]
-          dest: "<%= less.server.dest %>"
+        src: ["<%= less.server.dest %>"]
+        dest: "<%= less.server.dest %>"
 
     htmlmin:
       dist:
