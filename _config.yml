@@ -7,7 +7,8 @@ destination:  ./_site
 exclude:      ['app.less']
 timezone:     Asia/Hong_Kong
 permalink:    /:categories/:title
-markdown:     rdiscount
+markdown:     redcarpet
+highlighter:  pygments
 
 #
 # Jekyll serve settings
