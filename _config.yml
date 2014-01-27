@@ -2,7 +2,7 @@
 # Jekyll basic configurations
 #
 
-source:       ./_source
+source:       ./_app
 destination:  ./_site
 exclude:      ['app.less']
 timezone:     Asia/Hong_Kong

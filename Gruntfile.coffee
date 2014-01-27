@@ -8,7 +8,7 @@ module.exports = (grunt) ->
   # Configurable paths
   coreConfig =
     cfg: grunt.file.readYAML("_config.yml")
-    var: grunt.file.readYAML("./_source/_data/var.yml")
+    var: grunt.file.readYAML("./_app/_data/var.yml")
     pkg: grunt.file.readJSON("package.json")
     app: "<%= core.cfg.source %>"
     dist: "<%= core.cfg.destination %>"
