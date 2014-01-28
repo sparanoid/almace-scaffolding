@@ -2,6 +2,71 @@
 
 ## Head [#][head]
 
+### 24.0.0 (Jan 28.2014)
+- Bump deps version
+- Readme badges update
+- Remove Grunt badge
+- Add a Bitdeli Badge to README
+- Remove duplicated badge
+- Update copyright date
+- Use variables instead of hand-coded strings
+- Gitkeep for img folder
+- More variable fix
+- Remove quotes
+- Add codename
+- Update robot.txt
+- Remove unused post excerpt
+- Add new post “Moonstruck Princess Extended”
+- Correct margin right space
+- Smaller block quote decoration for mobile devices
+- Use src-dest format
+- Simplified grunt task
+- Update license year
+- Fix typo, props @gordianz
+- Draft folder, more info: http://jekyllrb.com/docs/drafts/
+- Switch to Jekyll default markdown template
+- Split main template into multiple partials
+- `list-item.html` -> `page-item.html`
+- Move custom variables into `_data`, more info: http://jekyllrb.com/docs/datafiles/
+- `_source` -> `_app`
+- Fix variable condition
+- Better nav solution is here
+- Site main style update
+  - New header
+  - New logo (favicon, etc.)
+  - New color scheme
+  - Typography minor tweak (Now sans-serif FTW)
+- Add full width banner back
+
+### 23.0.1 (Dec 14.2013)
+- Uses autoprefixer
+- Update server task
+- Update `usemin`
+- Bump Flexslider version
+- Store page minor update
+- Fix line-height since refactor
+- Update `archive` grunt
+- Update changelog
+- Add `cite` for blockquotes, more info see http://html5doctor.com/cite-and-blockquote-reloaded/
+- Increase feed post limit
+- Adds setup instructions
+- Update post “Delicious.com”
+- Bump cssmin version
+- Adds icon set image for post “Delicious.com”
+- Fix “Delicious.com” title wrapper on small devices
+- Add hyphens support for headings
+- Fix logo position
+- Strip HTML in title section for Atom feed
+- Update post “Tianjin Project Revision”
+- Fix error page blur issue on retina display
+- Bump dep version
+- Update post “Tianjin Project Revision”
+- Bump grunt version
+- Update first post date
+- Add a funny interrobang symbol
+- Bump deps version
+- Bump version, prepared for Assemble rework
+
 ### 23.0.0 (Oct 27.2013) [#][23.0.0]
 - Shorter hash filename
 - Fixes *min and usemin tasks order
