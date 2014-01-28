@@ -1,0 +1,5 @@
+---
+layout: nil
+---
+User-agent: *
+Sitemap: {{ site.data.var.url }}{{ site.data.var.base }}/sitemap.xml
