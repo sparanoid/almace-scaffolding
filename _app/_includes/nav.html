@@ -1,14 +1,12 @@
 <!-- Main navigation with current page / categoriy highlighted -->
 <nav class=navigation>
-  {% if page.permalink == '/'                                   %}<ul class=nav-home>{% endif %}
-  {% if page.permalink == '/work/'  or page.category == 'work'  %}<ul class=nav-work>{% endif %}
-  {% if page.permalink == '/store/' or page.category == 'store' %}<ul class=nav-store>{% endif %}
-  {% if page.permalink == '/note/'  or page.category == 'note'  %}<ul class=nav-note>{% endif %}
-  {% if page.permalink == '/about/' or page.category == 'about' %}<ul class=nav-about>{% endif %}
-    <li{% if page.permalink == '/'       or page.category == 'home'  %} class=current{% endif %}><a href="{{ site.data.var.base }}/">Home</a></li>
-    <li{% if page.permalink == '/work/'  or page.category == 'work'  %} class=current{% endif %}><a href="{{ site.data.var.base }}/work/">Work</a></li>
-    <li{% if page.permalink == '/store/' or page.category == 'store' %} class=current{% endif %}><a href="{{ site.data.var.base }}/store/">Store</a></li>
-    <li{% if page.permalink == '/note/'  or page.category == 'note'  %} class=current{% endif %}><a href="{{ site.data.var.base }}/note/">Note</a></li>
-    <li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href="{{ site.data.var.base }}/about/">About</a></li>
+  <ul>
+    {% for item in site.data.nav %}
+      <li {% if page.permalink == item.url or page.category == item.cate %}class=current{% endif %}>
+        <a href="{{ site.data.var.base }}{{ item.url }}">
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </nav>
