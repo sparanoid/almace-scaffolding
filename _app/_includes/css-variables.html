@@ -43,12 +43,12 @@
 
     {% if page.scheme-text %}
     .logo {
-      border-bottom-color: {{ page.scheme-text }};
+      background: {{ page.scheme-text }};
     }
     {% endif %}
       {% if page.scheme-link %}
       .logo:hover {
-        border-bottom-color: {{ page.scheme-link }};
+        background: {{ page.scheme-link }};
       }
       {% endif %}
 
