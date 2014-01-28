@@ -2,14 +2,14 @@
 
 <meta name=viewport content="width=device-width, initial-scale=1">
 
-<title>{% if page.title != site.name %}{{ site.data.var.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
+<title>{% if page.title != site.data.var.name %}{{ site.data.var.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
 <link rel=alternate href="{{ site.data.var.base }}/{{ site.data.var.feed }}/" type=application/atom+xml>
 
 <!-- build:css {{ site.data.var.base }}/{{ site.data.var.assets }}/css/app.css -->
   <link rel=stylesheet href="{{ site.data.var.base }}/{{ site.data.var.assets }}/css/app.css">
 <!-- endbuild -->
 
-{% if page.title == site.name %}<link rel=dns-prefetch href="{{ site.data.var.file }}">{% endif %}
+{% if page.title == site.data.var.name %}<link rel=dns-prefetch href="{{ site.data.var.file }}">{% endif %}
 
 <!-- Define a description for better SEO result, exclude homepage -->
 {% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
