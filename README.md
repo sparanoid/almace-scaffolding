@@ -22,9 +22,9 @@ Need a simpler setup using this theme? Try [Jekyll Scaffolding](http://github.co
 
 Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [CC BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
 
-- `_/source/_posts/`
-- `_/source/apple-touch-icon-precomposed.png`
-- `_/source/favicon.ico`
+- `./_app/_posts/`
+- `./_app/apple-touch-icon.png`
+- `./_app/favicon.ico`
 
 All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
