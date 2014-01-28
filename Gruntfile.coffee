@@ -8,6 +8,7 @@ module.exports = (grunt) ->
   # Configurable paths
   coreConfig =
     cfg: grunt.file.readYAML("_config.yml")
+    var: grunt.file.readYAML("./_app/_data/var.yml")
     pkg: grunt.file.readJSON("package.json")
     app: "<%= core.cfg.source %>"
     dist: "<%= core.cfg.destination %>"
@@ -35,24 +36,22 @@ module.exports = (grunt) ->
           level: "ignore"
 
       test:
-        files:
-          src: ["Gruntfile.coffee"]
+        src: ["Gruntfile.coffee"]
 
     recess:
       options:
         noUniversalSelectors: false
 
       test:
-        files:
-          src: ["<%= core.app %>/assets/less/app.less"]
+        src: ["<%= core.app %>/assets/less/app.less"]
 
     watch:
       coffee:
-        files: ["<%= coffeelint.test.files.src %>"]
+        files: ["<%= coffeelint.test.src %>"]
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= recess.test.files.src %>"]
+        files: ["<%= recess.test.src %>"]
         tasks: ["less:server", "autoprefixer", "recess"]
 
     less:
@@ -60,20 +59,17 @@ module.exports = (grunt) ->
         options:
           dumpLineNumbers: "all"
 
-        files:
-          src: ["<%= recess.test.files.src %>"]
-          dest: "<%= core.app %>/assets/css/app.css"
+        src: ["<%= recess.test.src %>"]
+        dest: "<%= core.app %>/assets/css/app.css"
 
       dist:
-        files:
-          src: ["<%= recess.test.files.src %>"]
-          dest: "<%= less.server.files.dest %>"
+        src: ["<%= recess.test.src %>"]
+        dest: "<%= less.server.dest %>"
 
     autoprefixer:
       dist:
-        files:
-          src: ["<%= less.server.files.dest %>"]
-          dest: "<%= less.server.files.dest %>"
+        src: ["<%= less.server.dest %>"]
+        dest: "<%= less.server.dest %>"
 
     htmlmin:
       dist:
@@ -155,13 +151,13 @@ module.exports = (grunt) ->
         command: "jekyll build"
 
       archive:
-        command: "jekyll build -d <%= core.cfg.destination %><%= core.cfg.base %>/"
+        command: "jekyll build -d <%= core.cfg.destination %><%= core.var.base %>/"
 
       sync:
-        command: "rsync -avz --delete --progress <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_host %>:<%= core.cfg.remote_dir %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= core.var.ignore_files %> <%= core.dist %>/ <%= core.var.remote_host %>:<%= core.var.remote_dir %> > rsync.log"
 
       s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
+        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.var.static_files %> <%= core.var.s3_bucket %>"
 
       log:
         command: "git log v<%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
