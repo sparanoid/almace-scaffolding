@@ -143,10 +143,16 @@ del {
   margin: 0 0 (@space / 5);
   text-indent: -9999em;
   background: @link-color;
+  opacity: 0;
+  transition: background .3s ease;
 
   &:hover {
     background: @text-color;
   }
+}
+
+body:hover .logo {
+  opacity: 1 !important;
 }
 
 // Global navigations font styles
@@ -222,7 +228,7 @@ nav {
   transition: color .3s ease;
 }
 
-:root:hover .latest {
+body:hover .latest {
   color: @link-color !important;
 }
 
