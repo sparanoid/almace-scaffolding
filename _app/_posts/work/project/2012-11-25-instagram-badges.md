@@ -11,6 +11,7 @@ scheme-text: "#3f729b"
 scheme-link: "#20262b"
 scheme-hover: "#5299d2"
 scheme-bg: "#e1f2fc"
+scheme-bg-light: true
 ---
 
 <div class=txt>

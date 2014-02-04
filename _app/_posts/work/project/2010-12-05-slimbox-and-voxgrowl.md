@@ -10,6 +10,7 @@ scheme-link: "#ff8500"
 scheme-hover: "#9e4614"
 scheme-code: "#39beb6"
 scheme-bg: "#fefbed"
+scheme-bg-light: true
 ---
 
 <div class=txt>
