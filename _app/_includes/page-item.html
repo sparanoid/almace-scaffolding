@@ -1,8 +1,19 @@
 <!-- List snippets -->
 <li{% if post.lang %} lang={{ post.lang }}{% endif %}>
   <h2>
+    <!-- Dynamic link color based on post color scheme -->
+    {% capture post_link_color %}
+      {% if post.scheme-bg %}
+        {% if post.scheme-bg-light %}
+          {{ post.scheme-text }}
+        {% else %}
+          {{ post.scheme-bg }}
+        {% endif %}
+      {% endif %}
+    {% endcapture %}
+
     <!-- Item title -->
-    <a href="{{ site.data.var.base }}{{ post.url }}/">{{ post.title }}</a>
+    <a href="{{ site.data.var.base }}{{ post.url }}/" style="color: {{ post_link_color }};">{{ post.title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}
