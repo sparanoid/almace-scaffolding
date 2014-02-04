@@ -5,15 +5,15 @@
     {% capture post_link_color %}
       {% if post.scheme-bg %}
         {% if post.scheme-bg-light %}
-          {{ post.scheme-text }}
+          style="color: {{ post.scheme-text }};"
         {% else %}
-          {{ post.scheme-bg }}
+          style="color: {{ post.scheme-bg }};"
         {% endif %}
       {% endif %}
     {% endcapture %}
 
     <!-- Item title -->
-    <a href="{{ site.data.var.base }}{{ post.url }}/" style="color: {{ post_link_color }};">{{ post.title }}</a>
+    <a href="{{ site.data.var.base }}{{ post.url }}/" {{ post_link_color }}>{{ post.title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}
