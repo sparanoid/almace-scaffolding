@@ -36,8 +36,11 @@ email:        t@sparanoid.com
 # Site slogan, used in subtitle in Atom feed
 slogan:       I make things that don't suck.
 
-# Twitter handle, without at symbol
+# Twitter handle for website, without at symbol
 twitter:      sparanoid
+
+# Twitter handle for author, without at symbol
+twtr_author:  tunghsiao
 
 # Donate link, it's too long so I moved it here
 donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
