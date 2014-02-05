@@ -535,10 +535,19 @@ article {
         vertical-align: 3px;
       }
 
-      span {
-        display: inline-block;
-        width: .5em;
-        text-align: center;
+      .external {
+
+        span {
+          display: inline-block;
+          width: .5em;
+          text-align: center;
+        }
+
+        &:hover,
+        &:focus {
+          color: @link-color;
+          border: none;
+        }
       }
     }
 
