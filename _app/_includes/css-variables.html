@@ -27,10 +27,10 @@
     }
     {% endif %}
       {% if page.scheme-hover %}
-      a:link:focus, a:link:hover,
-      a:visited:focus, a:visited:hover,
-      button:link:focus, button:link:hover,
-      button:visited:focus, button:visited:hover {
+      a:link:hover, a:link:focus,
+      a:visited:hover, a:visited:focus,
+      button:link:hover, button:link:focus,
+      button:visited:hover, button:visited:focus {
         color: {{ page.scheme-hover }};
       }
       {% endif %}
@@ -51,6 +51,13 @@
         background: {{ page.scheme-link }};
       }
       {% endif %}
+
+    {% if page.scheme-hover %}
+    .navigation li a:hover,
+    .navigation li a:focus {
+      color:{{ page.scheme-hover }};
+    }
+    {% endif %}
 
     {% if page.scheme-link %}
     .current a {
