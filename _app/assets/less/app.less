@@ -22,12 +22,9 @@
 
 .sub-heading {
   font-family: @sans-serif;
-  font-size: (@base-font-size / 2);
+  font-size: (@base-font-size / 1.4);
   font-weight: normal;
-  line-height: (@base-line-height * .9);
-  letter-spacing: .45em;
-  color: fade(@text-color, 20%);
-  text-transform: uppercase;
+  opacity: .5;
 }
 
 // http://nicolasgallagher.com/micro-clearfix-hack/
@@ -110,13 +107,15 @@ textarea {
 
 a, button {
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: @text-color;
     text-decoration: none;
     transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
 
-    &:focus, &:hover {
-      color: @link-color;
+    &:hover,
+    &:focus {
+      border-bottom: .1em solid;
       transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
     }
   }
@@ -155,16 +154,15 @@ body:hover .logo {
   opacity: 1 !important;
 }
 
-// Global navigations font styles
-nav {
-  .sub-heading;
-}
-
 // Main navigation
 .navigation { // nav.navigation
   margin: 0 0 (@space * 1.5);
   margin-right: -1.1em;
   margin-left: -1.1em;
+  font-size: (@base-font-size / 2);
+  font-weight: bold;
+  letter-spacing: .45em;
+  text-transform: uppercase;
   .cf;
 
   li {
@@ -174,7 +172,12 @@ nav {
 
     a {
       padding: 3px 1.2em;
-      font-weight: bold;
+
+      &:hover,
+      &:focus {
+        color: @link-color;
+        border: none;
+      }
     }
   }
 }
@@ -198,7 +201,7 @@ nav {
       h1 {
         margin: 0 0 .1em;
         hyphens: auto;
-        line-height: 1;
+        line-height: 1.1;
 
         // Override margin from article img
         img {
@@ -210,9 +213,20 @@ nav {
         .heading;
       }
 
+      .latest-post {
+        margin-top: 110px;
+        font-size: (@base-font-size * .8);
+        font-weight: normal;
+        line-height: 1.2;
+
+        a {
+          font-weight: bold;
+        }
+      }
+
       small {
         display: block;
-        .sub-heading;
+        margin: 20px 0 0;
       }
 
       // Used on work page
@@ -234,18 +248,25 @@ body:hover .latest {
 
 // Pserson status
 .status { // h2.status
+  margin: 10px 0 0;
+  font-size: (@base-font-size * .8);
 
   a {
 
     &:before {
-      @size: 9px;
+      @size: 14px;
       display: inline-block;
       width: @size;
       height: @size;
-      margin-right: @size;
+      margin-right: 10px;
       background: fade(@text-color, 20%);
       border-radius: 50%;
       content: "";
+    }
+
+    &:hover,
+    &:focus {
+      border: none;
     }
   }
 }
@@ -307,7 +328,7 @@ article {
   }
 
   h3 {
-    margin: @space 0 1.6em;
+    margin: @space 0 1.2em;
     .sub-heading;
   }
 
@@ -380,18 +401,11 @@ article {
   // Newsletter subscription form in page "store"
   form {
 
-    label {
-      display: block;
-      margin-bottom: (@space * .1);
-      .sub-heading;
-    }
-
     input {
       display: block;
       width: 100%;
       padding: 7px 0;
       margin: 0 0 (@space * .2);
-      // .sub-heading;
       border: none;
       border-bottom: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
@@ -420,17 +434,9 @@ article {
     }
   }
 
-  // Remove extra space for the last element in the container
-  & > :last-child {
+  // Remove extra space for the last paragraph in the container
+  & > p:last-child {
     margin-bottom: 0;
-
-    & > :last-child {
-      margin-bottom: 0;
-
-      & > :last-child {
-        margin-bottom: 0;
-      }
-    }
   }
 }
 
@@ -452,19 +458,22 @@ article {
 // Button styles
 .btn {
   display: inline-block;
-  padding: 7px 20px 6px; // Spacing minor offset since I use uppercased type here
-  .sub-heading;
+  padding: 20px 40px;
   cursor: pointer;
   background: @text-color;
+  border: none;
   outline: none;
 
   // Redefine overrides here to pass recess syntax check
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: @background-color;
 
-    &:focus, &:hover {
+    &:hover,
+    &:focus {
       color: @background-color;
       background: @link-color;
+      border: none;
     }
   }
 }
@@ -554,7 +563,7 @@ article {
 
     h2 {
       font-size: (@base-font-size * 2);
-      line-height: 1;
+      line-height: 1.2;
     }
 
     .txt {
@@ -583,11 +592,8 @@ article {
 }
 
 .footer {
-  .sub-heading;
-
-  & {
-    font-size: (@base-font-size / 2 - 1px);
-  }
+  font-size: (@base-font-size / 1.4);
+  text-transform: lowercase;
 }
 
 // FlexSlider Necessary Styles
@@ -610,7 +616,7 @@ article {
 
     .flex-caption {
       margin: -30px 0 30px;
-      .sub-heading;
+      font-weight: bold;
     }
   }
 }
