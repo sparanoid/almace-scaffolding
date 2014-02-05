@@ -10,16 +10,19 @@ permalink: /
   <!-- Post title -->
   <header>
     <h1>
-      I&rsquo;m Tunghsiao Liu.<br>
-      {% for post in site.categories.work limit:1 %}
-        I recently made <a href="{{ site.data.var.base }}{{ post.url }}/" class=latest>{{ post.title }}</a>
-      {% endfor %}
+      Tunghsiao Liu
     </h1>
 
+    <h2 class=latest-post>
+      {% for post in site.categories.work limit:1 %}
+        Recently made <a href="{{ site.data.var.base }}{{ post.url }}/" class=latest>{{ post.title }}</a>
+      {% endfor %}
+    </h2>
+
     {% if site.availability == 'free' %}
-      <small class="status available"><a href="mailto:{{ site.data.var.email }}">Currently available for freelance</a></small>
+      <p class="status available"><a href="mailto:{{ site.data.var.email }}">Currently available for freelance</a></p>
     {% else %}
-      <small class="status unavailable"><a href="mailto:{{ site.data.var.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></small>
+      <p class="status unavailable"><a href="mailto:{{ site.data.var.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></p>
     {% endif %}
   </header>
 </article>
