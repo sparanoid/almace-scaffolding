@@ -249,54 +249,40 @@ body:hover .latest {
 // Pserson status
 .status { // h2.status
   margin: 10px 0 0;
-  font-size: (@base-font-size * .8);
+  font-size: (@base-font-size * .75);
+  font-weight: bold;
 
-  a {
-
-    &:before {
-      @size: 14px;
-      display: inline-block;
-      width: @size;
-      height: @size;
-      margin-right: 10px;
-      background: fade(@text-color, 20%);
-      border-radius: 50%;
-      content: "";
-    }
-
-    &:hover,
-    &:focus {
-      border: none;
-    }
+  &:before {
+    @size: 12px;
+    display: inline-block;
+    width: @size;
+    height: @size;
+    margin-right: 8px;
+    background: fade(@text-color, 20%);
+    border-radius: 50%;
+    content: "";
   }
 }
 
 .available {
 
+  &:before {
+    background: green;
+  }
+
   a {
-    color: @text-color;
-
-    &:hover {
-      color: fade(green, 80%);
-    }
-
-    &:before {
-      background: fade(green, 60%);
-    }
+    color: green;
   }
 }
+
 .unavailable {
 
+  &:before {
+    background: red;
+  }
+
   a {
-    color: fade(@text-color, 50%);
-
-    &:hover {
-      color: fade(red, 60%);
-    }
-
-    &:before {
-      background: fade(red, 20%);
-    }
+    color: red;
   }
 }
 
