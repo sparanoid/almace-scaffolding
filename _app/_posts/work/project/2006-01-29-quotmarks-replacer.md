@@ -26,7 +26,7 @@ link: http://wordpress.org/extend/plugins/quotmarks-replacer/
     </footer>
   </blockquote>
 
-  <hr data-placeholder="Chinese">
+  <h3>Chinese Description</h3>
 
   <p lang=zh><strong>Quotmarks Replacer</strong> 通過禁用 <code>wptexturize</code> 函數，解決 WordPress 自動將半形的單引號、雙引號和省略號轉換爲全形標點的問題。使後台輸入的標點格式與前台讀者瀏覽的標點格式保持一致。並且對 multisite 多站點（WordPress Mu）有良好的支持</p>
 
