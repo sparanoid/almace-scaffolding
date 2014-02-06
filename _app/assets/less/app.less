@@ -332,28 +332,18 @@ article {
 
   blockquote {
     position: relative;
-    padding-left: (@space * .75);
-    font-style: italic;
+    margin-bottom: 2em;
     .cf;
 
-    &:before {
-      position: absolute;
-      top: -16px;
-      left: -8px;
-      z-index: -1;
-      font-family: @sans-serif;
-      font-size: 120px;
-      font-style: normal;
-      line-height: 1;
-      color: fade(@text-color, 70%);
-      pointer-events: none;
-      content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
+    > p {
+      padding-left: (@space * .4);
+      border-left: 2px solid;
     }
 
     cite {
       float: right;
-      margin: 0 0 2em;
       font-size: 85%;
+      font-style: normal;
       color: fade(@text-color, 80%);
 
       &:before {
@@ -619,7 +609,7 @@ article {
   body {
     padding-left: 4%;
     padding-right: 4%;
-    font-size: (@base-font-size * 0.8);
+    font-size: (@base-font-size * .8);
   }
 
   .wrapper {
@@ -636,12 +626,9 @@ article {
       .txt {
 
         blockquote {
-          padding-left: 32.5px;
 
-          &:before {
-            top: -1px;
-            left: 0px;
-            font-size: 60px;
+          > p {
+            padding-left: (@space * .2);
           }
         }
       }
