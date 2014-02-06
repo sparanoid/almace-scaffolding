@@ -13,11 +13,11 @@ permalink: /
       Tunghsiao Liu
     </h1>
 
-    <h2 class=latest-post>
+    <small class=latest-post>
       {% for post in site.categories.work limit:1 %}
         Recently made <a href="{{ site.data.var.base }}{{ post.url }}/" class=latest>{{ post.title }}</a>
       {% endfor %}
-    </h2>
+    </small>
 
     {% if site.availability == 'free' %}
       <p class="status available"><a href="mailto:{{ site.data.var.email }}">Currently available for freelance</a></p>
