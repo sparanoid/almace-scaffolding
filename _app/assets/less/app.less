@@ -1,7 +1,5 @@
 // Global variables
-@space: 70px;
-@wrapper-width: 750px;
-@base-font-size: 24px;
+@base-font-size: 2vw;
 @base-line-height: (20 / 14); // ~ 1.428571429
 @link-color: #a212d1;
 @background-color: #fff;
@@ -11,22 +9,6 @@
 
 // Invert color switcher for images and videos
 // :root { filter: invert(100%); }
-
-.heading {
-  font-family: @sans-serif;
-  font-size: (@base-font-size * 10/3);
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold;
-  letter-spacing: -.06em;
-}
-
-.sub-heading {
-  font-family: @sans-serif;
-  font-size: (@base-font-size / 1.4);
-  font-weight: normal;
-  letter-spacing: .08em;
-  opacity: .5;
-}
 
 // http://nicolasgallagher.com/micro-clearfix-hack/
 //
@@ -55,7 +37,7 @@
 }
 
 body {
-  padding: 0 8% (@space * 1.5);
+  padding: 0 16% 16vh;
   margin: 0 auto 0;
   font-family: @sans-serif;
   font-size: @base-font-size;
@@ -80,6 +62,23 @@ body {
   }
 }
 
+// Essential mixins
+.heading {
+  font-family: @sans-serif;
+  font-size: (1em / .3);
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  letter-spacing: -.06em;
+}
+
+.sub-heading {
+  font-family: @sans-serif;
+  font-size: (1em / 1.4);
+  font-weight: normal;
+  letter-spacing: .08em;
+  opacity: .5;
+}
+
 // Reset fonts for relevant elements
 input,
 button,
@@ -100,12 +99,7 @@ textarea {
   background-image: none;
 }
 
-// Global fixed width wrapper
-.wrapper {
-  max-width: 860px;
-  margin: 0 auto;
-}
-
+// Reset comment elements
 a, button {
 
   &:link,
@@ -140,7 +134,7 @@ del {
   display: block;
   width: 100%;
   height: 8px;
-  margin: 0 0 (@space / 5);
+  margin: 0 0 1.4vh;
   text-indent: -9999em;
   background: @link-color;
   opacity: 0;
@@ -157,10 +151,10 @@ body:hover .logo {
 
 // Main navigation
 .navigation { // nav.navigation
-  margin: 0 0 (@space * 1.5);
+  margin: 0 0 16vh;
   margin-right: -1.1em;
   margin-left: -1.1em;
-  font-size: (@base-font-size / 2);
+  font-size: .5em;
   font-weight: bold;
   letter-spacing: .45em;
   text-transform: uppercase;
@@ -191,54 +185,6 @@ body:hover .logo {
   }
 }
 
-// Titles wrapper
-.wrapper {
-
-  article { // Define them into .wrapper > article to avoid overriding site main header
-
-    header {
-      padding-bottom: (@space * 1.35);
-
-      h1 {
-        margin: 0 0 .1em;
-        hyphens: auto;
-        line-height: 1.1;
-
-        // Override margin from article img
-        img {
-          margin-bottom: (@base-font-size * .6);
-        }
-      }
-
-      h1 {
-        .heading;
-      }
-
-      .latest-post {
-        margin-top: 110px;
-        font-size: (@base-font-size * .8);
-        font-weight: normal;
-        line-height: 1.2;
-
-        a {
-          font-weight: bold;
-        }
-      }
-
-      small {
-        display: block;
-        margin: 20px 0 0;
-        letter-spacing: .1em;
-      }
-
-      // Used on work page
-      & + .txt > :first-child {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
 // Animate latest work link
 .latest {
   transition: color .3s ease;
@@ -251,7 +197,7 @@ body:hover .latest {
 // Pserson status
 .status { // h2.status
   margin: 10px 0 0;
-  font-size: (@base-font-size * .75);
+  font-size: .75em;
   font-weight: bold;
 
   &:before {
@@ -290,14 +236,54 @@ body:hover .latest {
 
 // Article wrapper
 article {
-  max-width: @wrapper-width;
-  margin-bottom: (@space * 1.35);
+  margin-bottom: 16vh;
   .cf; // For some specified posts in work category
 
   img, video, iframe {
     display: block;
     max-width: 100%;
     margin: 0 0 40px;
+  }
+
+  header {
+    padding-bottom: 16vh;
+
+    h1 {
+      margin: 0 0 .1em;
+      hyphens: auto;
+      line-height: 1.1;
+
+      // Override margin from article img
+      img {
+        margin-bottom: .6em;
+      }
+    }
+
+    h1 {
+      .heading;
+    }
+
+    .latest-post {
+      margin-top: 16vh;
+      font-size: .8em;
+      font-weight: normal;
+      line-height: 1.2;
+
+      a {
+        font-weight: bold;
+      }
+    }
+
+    small {
+      display: block;
+      margin: 20px 0 0;
+      letter-spacing: .1em;
+    }
+
+    // Used on work page
+    & + .txt > :first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -316,7 +302,7 @@ article {
   }
 
   h3 {
-    margin: @space 0 1.2em;
+    margin: 10vh 0 1em;
     .sub-heading;
   }
 
@@ -338,7 +324,7 @@ article {
     .cf;
 
     > p {
-      padding-left: (@space * .4);
+      padding-left: .8em;
       border-left: 2px solid;
     }
 
@@ -358,10 +344,6 @@ article {
     font-size: 75%;
   }
 
-  hr {
-    margin: @space 0 1.6em;
-  }
-
   abbr:after {
     content: " (" attr(title) ")";
   }
@@ -378,7 +360,7 @@ article {
       display: block;
       width: 100%;
       padding: 7px 0;
-      margin: 0 0 (@space * .2);
+      margin: 0 0 1vh;
       border: none;
       border-bottom: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
@@ -425,7 +407,7 @@ article {
 
 // Tweet button margin fix
 .tweet {
-  margin-top: @space;
+  margin-top: 10vh;
 }
 
 // Button styles
@@ -510,13 +492,13 @@ article {
   list-style: none;
 
   li {
-    margin: 0 0 (@space * .2);
+    margin: 0 0 1.4vh;
 
     h2 {
       .heading;
 
       time {
-        font-size: (@base-font-size * 1.5);
+        font-size: 75%; // Avoid em unit here, it causes font size double caculating from parents node.
         color: fade(@text-color, 30%);
         opacity: 0;
         transition: opacity .5s ease;
@@ -544,12 +526,12 @@ article {
     }
 
     h2 {
-      font-size: (@base-font-size * 2);
+      font-size: 2em;
       line-height: 1.2;
     }
 
     .txt {
-      margin: (@space / 5) 0 @space;
+      margin: 2vh 0 10vh;
     }
 
     &:hover,
@@ -574,7 +556,7 @@ article {
 }
 
 .footer {
-  font-size: (@base-font-size / 1.4);
+  font-size: (1em / 1.4);
   text-transform: lowercase;
 }
 
@@ -607,34 +589,19 @@ article {
 .no-js .flexslider ul li:first-child { display: block; }
 
 // Media query stack
+@media (max-width: 1000px) {
+  body {
+    padding-left: 8%;
+    padding-right: 8%;
+    font-size: (@base-font-size * 1.4);
+  }
+}
+
 @media (max-width: 640px) {
   body {
     padding-left: 4%;
     padding-right: 4%;
-    font-size: (@base-font-size * .8);
-  }
-
-  .wrapper {
-
-    article {
-
-      header {
-
-        h1 {
-          font-size: (@base-font-size * 2.4);
-        }
-      }
-
-      .txt {
-
-        blockquote {
-
-          > p {
-            padding-left: (@space * .2);
-          }
-        }
-      }
-    }
+    font-size: (@base-font-size * 2);
   }
 
   .list {
@@ -642,7 +609,6 @@ article {
     li {
 
       h2 {
-        font-size: (@base-font-size * 1.5);
 
         time {
           display: none;
@@ -652,21 +618,15 @@ article {
   }
 }
 
-@media (max-width: 480px) {
-  .navigation li {
-    display: block;
-
-    a {
-      display: block;
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
+@media (max-width: 400px) {
+  body {
+    font-size: (@base-font-size * 2.8);
   }
 }
 
 // All iOS devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
-  .wrapper {
+  body {
     -webkit-text-size-adjust: none;
   }
 }
