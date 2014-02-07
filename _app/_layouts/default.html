@@ -4,16 +4,12 @@
 
 {% include css-variables.html %}
 
-<div class=wrapper>
+{% include header.html %}
 
-  {% include header.html %}
+{% include nav.html %}
 
-  {% include nav.html %}
+{{ content }}
 
-  {{ content }}
-
-  {% include footer.html %}
-
-</div>
+{% include footer.html %}
 
 {% include js.html %}
