@@ -556,9 +556,29 @@ article {
 .footer {
   font-size: (1em / 1.4);
   text-transform: lowercase;
+
+  ul {
+
+    li {
+      display: inline;
+
+      &:after {
+        padding: 0 4px;
+        content: " / ";
+        opacity: .3;
+      }
+
+      &:last-child {
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
 }
 
-// FlexSlider Necessary Styles
+// FlexSlider necessary styles
 .flexslider {
 
   // Slides
