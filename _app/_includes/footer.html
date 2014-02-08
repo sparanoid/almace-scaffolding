@@ -3,13 +3,13 @@
   <!-- Insert ad here -->
 
   <footer class=footer>
-    <p>
-      <a href="{{ site.data.var.base }}/">{{ site.data.var.name }}</a> /
-      <a href="http://twitter.com/{{ site.data.var.twtr_author}}">@{{ site.data.var.twtr_author }}</a> /
-      <a href="{{ site.data.var.base }}/{{ site.data.var.feed }}/" title="Feed - Atom (The Atom Syndication Format)">Atom Feed</a>
-    </p>
-    <p>
-      <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author style="display: none;">Google+</a>
+    <ul>
+      <li><a href="{{ site.data.var.base }}/">{{ site.data.var.name }}</a></li>
+      <li><a href="http://twitter.com/{{ site.data.var.twtr_author}}">@{{ site.data.var.twtr_author }}</a></li>
+      <li><a href="{{ site.data.var.base }}/{{ site.data.var.feed }}/" title="Feed - Atom (The Atom Syndication Format)">Atom Feed</a></li>
+    </ul>
+    <p style="display: none;">
+      <a href="https://plus.google.com/104661024366024122505?rel=author" rel=author>Google+</a>
     </p>
   </footer>
 {% endif %}
