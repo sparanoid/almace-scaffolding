@@ -47,16 +47,15 @@ module.exports = (grunt) ->
 
     validation:
       options:
+        reset: true
         charset: "utf-8"
         doctype: "HTML5"
-        failHard: true
-        reset: true
         relaxerror: [
           "Bad value X-UA-Compatible for attribute http-equiv on element meta."
-          "Element img is missing required attribute src."
+          "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
         ]
       dist:
-        src: ["<%= core.dist %>/*.html"]
+        src: ["<%= core.dist %>/**/*.html"]
 
     watch:
       coffee:
@@ -64,7 +63,7 @@ module.exports = (grunt) ->
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= core.app %>/assets/less/*.less"]
+        files: ["<%= core.app %>/assets/less/**/*.less"]
         tasks: ["less:server", "autoprefixer", "csslint"]
 
     less:
