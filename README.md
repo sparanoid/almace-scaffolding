@@ -33,7 +33,8 @@ Jekyll Scaffolding with sleek default theme, LESS auto-compile, prefix-free, HTM
 ## Setup Notes
 
 - Additional variables are stored in `./_app/_data/` directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
-- You should also change `favicon.ico` and `apple-touch-icon-precomposed.png` to yours.
+- You should also change `favicon.ico` and `apple-touch-icon.png` to yours.
+- Customize your site using `custom.less`.
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 - Please keep the credit in template file, thanks.
 
@@ -72,6 +73,7 @@ Copyright (c) Tunghsiao Liu. Rights reserved as indicated above.
   - Date: 2014-02-16
   - Changes:
     - Better test task
+    - Add `custom.less`
     - Sync templates from sparanoid.com
       - Logo update
       - Now use viewport units
