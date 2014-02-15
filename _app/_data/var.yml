@@ -42,11 +42,17 @@ twitter:      sparanoid
 # Twitter handle for author, without at symbol
 twtr_author:  tunghsiao
 
+# Google Plus account URL
+google_plus:  https://plus.google.com/+TunghsiaoLiu?rel=author
+
 # Donate link, it's too long so I moved it here
 donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
 
 # In homepage, not implimented at the moment
 availability: free
+
+# Demo mode, demo environment for parallel project Jekyll Scaffolding
+demo:         false
 
 #
 # Custom distribution variables
