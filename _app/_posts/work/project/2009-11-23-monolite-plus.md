@@ -126,7 +126,7 @@ scheme-bg: "#f1504d"
     <li>光盤圖標由 PaulEnsane 制作 <a href="http://paulensane.deviantart.com/art/CD-Icon-115783933">#</a></li>
     <li>心形圖標由 Tango Desktop Project 制作 <a href="http://tango.freedesktop.org/Tango_Desktop_Project">#</a></li>
     <li>感歎號圖標由 Yusuke Kamiyamane 制作 <a href="http://www.pinvoke.com/">#</a></li>
-    <li>媒體庫查看方式代碼基于 hydrogenaudio.org 論壇的 2E7AH 修改 <a href="http://www.hydrogenaudio.org/forums/index.php?s=&showtopic=68552&view=findpost&p=684400">#</a></li>
+    <li>媒體庫查看方式代碼基于 hydrogenaudio.org 論壇的 2E7AH 修改 <a href="http://www.hydrogenaudio.org/forums/index.php?s=&amp;showtopic=68552&amp;view=findpost&amp;p=684400">#</a></li>
   </ul>
 
   <p class=note>該主題基于 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商業性使用-相同方式共享 3.0 發布</a></p>

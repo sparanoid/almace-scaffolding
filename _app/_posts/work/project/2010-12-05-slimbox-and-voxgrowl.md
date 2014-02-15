@@ -14,7 +14,9 @@ scheme-bg-light: true
 ---
 
 <div class=txt>
-  <video poster="{{ site.data.var.file }}/slimbox-voxgrowl.png" preload=none type=video/mp4 controls><source src="{{ site.data.var.file }}/slimbox-voxgrowl.mov"></video>
+  <video poster="{{ site.data.var.file }}/slimbox-voxgrowl.png" preload=none controls>
+    <source src="{{ site.data.var.file }}/slimbox-voxgrowl.mov" type=video/mp4>
+  </video>
 
   <p>Yes, These two <a href="http://growl.info/">Growl</a> styles are now updated, I’m fed up with the white one so I change the SlimBox to a dark one in this version. VoxGrowl is used for <a href="http://www.voxapp.uni.cc/">Vox</a> music player for OS X, but it also can be used by any other music player that displays album art. You can have a quick preview here:</p>
 
