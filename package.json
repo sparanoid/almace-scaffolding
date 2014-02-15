@@ -39,6 +39,7 @@
     "grunt-coffeelint": "0.0.8",
     "grunt-concurrent": "~0.4.3",
     "grunt-csscomb": "~2.0.1",
+    "grunt-html-validation": "~0.1.13",
     "grunt-rev": "~0.1.0",
     "grunt-shell": "~0.6.4",
     "grunt-usemin": "~2.0.2",
