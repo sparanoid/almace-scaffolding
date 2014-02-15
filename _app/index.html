@@ -19,7 +19,7 @@ permalink: /
       {% endfor %}
     </small>
 
-    {% if site.availability == 'free' %}
+    {% if site.data.var.availability == 'free' %}
       <p class="status available"><a href="mailto:{{ site.data.var.email }}">Currently available for freelance</a></p>
     {% else %}
       <p class="status unavailable"><a href="mailto:{{ site.data.var.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></p>
