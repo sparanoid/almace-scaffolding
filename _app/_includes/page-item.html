@@ -13,7 +13,7 @@
     {% endcapture %}
 
     <!-- Item title -->
-    <a href="{{ site.data.var.base }}{{ post.url }}/" {{ post_link_color }}>{{ post.title }}</a>
+    <a href="{{ site.data.var.base }}{{ post.url }}" {{ post_link_color }}>{{ post.title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}
@@ -23,4 +23,9 @@
     <!-- Item timestamp -->
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%y" }}</time>
   </h2>
+
+  {% if site.data.var.demo %}
+    {{ post.content }}
+  {% endif %}
+
 </li>
