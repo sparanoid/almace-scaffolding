@@ -3,5 +3,5 @@ _site
 Gemfile.lock
 *.log
 
-# ./_source/css/a.css
-app.css
+# Project specified
+_app/assets/css
