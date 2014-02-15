@@ -1,9 +1,7 @@
 // Global variables
-@space: 70px;
-@wrapper-width: 750px;
-@base-font-size: 24px;
+@base-font-size: 2vw;
 @base-line-height: (20 / 14); // ~ 1.428571429
-@link-color: #e34; // #2ed for invert color
+@link-color: #a212d1;
 @background-color: #fff;
 @text-color: #000;
 @sans-serif: "Helvetica Neue", Arial, "Hiragino Sans GB", sans-serif;
@@ -11,24 +9,6 @@
 
 // Invert color switcher for images and videos
 // :root { filter: invert(100%); }
-
-.heading {
-  font-family: @sans-serif;
-  font-size: (@base-font-size * 10/3);
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold;
-  letter-spacing: -.06em;
-}
-
-.sub-heading {
-  font-family: @sans-serif;
-  font-size: (@base-font-size / 2);
-  font-weight: normal;
-  line-height: (@base-line-height * .9);
-  letter-spacing: .45em;
-  color: fade(@text-color, 20%);
-  text-transform: uppercase;
-}
 
 // http://nicolasgallagher.com/micro-clearfix-hack/
 //
@@ -57,7 +37,7 @@
 }
 
 body {
-  padding: 0 8% (@space * 1.5);
+  padding: 0 16% 16vmin;
   margin: 0 auto 0;
   font-family: @sans-serif;
   font-size: @base-font-size;
@@ -72,14 +52,31 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: -9999;
     width: 100%;
     height: 8px;
     pointer-events: none;
-    background: fade(@text-color, 2%);
-    border-bottom: 1px solid fade(@text-color, 2%);
+    background: @link-color;
     content: "";
+    opacity: .2;
   }
+}
+
+// Essential mixins
+.heading {
+  font-family: @sans-serif;
+  font-size: (1em / .3);
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  letter-spacing: -.06em;
+}
+
+.sub-heading {
+  font-family: @sans-serif;
+  font-size: (1em / 1.4);
+  font-weight: normal;
+  letter-spacing: .08em;
+  opacity: .5;
 }
 
 // Reset fonts for relevant elements
@@ -102,21 +99,18 @@ textarea {
   background-image: none;
 }
 
-// Global fixed width wrapper
-.wrapper {
-  max-width: 860px;
-  margin: 0 auto;
-}
-
+// Reset comment elements
 a, button {
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: @text-color;
     text-decoration: none;
     transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
 
-    &:focus, &:hover {
-      color: @link-color;
+    &:hover,
+    &:focus {
+      border-bottom: .1em solid;
       transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
     }
   }
@@ -138,31 +132,32 @@ del {
 // Main site logo
 .logo {
   display: block;
-  width: 0;
-  height: 0;
-  margin: -37px 0 (@space / 5);
+  width: 100%;
+  height: 8px;
+  margin: 0 0 1.4vmin;
   text-indent: -9999em;
-  border-color: transparent;
-  border-bottom-color: @text-color;
-  border-style: solid;
-  border-width: 0 26px 45px 26px;
+  background: @link-color;
+  opacity: 0;
+  transition: background .3s ease;
 
   &:hover {
-    border-bottom-color: @link-color;
+    background: @text-color;
   }
 }
 
-// Global navigations font styles
-nav {
-  .sub-heading;
+body:hover .logo {
+  opacity: 1 !important;
 }
 
 // Main navigation
 .navigation { // nav.navigation
-  margin: 0 0 (@space * 1.5);
+  margin: 0 0 16vmin;
   margin-right: -1.1em;
   margin-left: -1.1em;
-  .cf;
+  font-size: .5em;
+  font-weight: bold;
+  letter-spacing: .45em;
+  text-transform: uppercase;
 
   li {
     display: inline-block;
@@ -171,51 +166,21 @@ nav {
 
     a {
       padding: 3px 1.2em;
-      font-weight: bold;
+
+      &:hover,
+      &:focus {
+        color: @link-color;
+        border: none;
+      }
     }
   }
 }
 
 // Currently activated page or category a post it belongs to
 .current { // li.current
+
   a {
     color: @link-color;
-  }
-}
-
-// Titles wrapper
-.wrapper {
-
-  article { // Define them into .wrapper > article to avoid overriding site main header
-
-    header {
-      padding-bottom: (@space * 1.35);
-
-      h1 {
-        margin: 0 0 .1em;
-        hyphens: auto;
-        line-height: 1;
-
-        // Override margin from article img
-        img {
-          margin-bottom: (@base-font-size * .6);
-        }
-      }
-
-      h1 {
-        .heading;
-      }
-
-      small {
-        display: block;
-        .sub-heading;
-      }
-
-      // Used on work page
-      & + .txt > :first-child {
-        margin-top: 0;
-      }
-    }
   }
 }
 
@@ -224,67 +189,100 @@ nav {
   transition: color .3s ease;
 }
 
-:root:hover .latest {
+body:hover .latest {
   color: @link-color !important;
 }
 
 // Pserson status
 .status { // h2.status
+  margin: 10px 0 0;
+  font-size: .75em;
+  font-weight: bold;
 
-  a {
-
-    &:before {
-      @size: 9px;
-      display: inline-block;
-      width: @size;
-      height: @size;
-      margin-right: @size;
-      background: fade(@text-color, 20%);
-      border-radius: 50%;
-      content: "";
-    }
+  &:before {
+    @size: 12px;
+    display: inline-block;
+    width: @size;
+    height: @size;
+    margin-right: 8px;
+    background: fade(@text-color, 20%);
+    border-radius: 50%;
+    content: "";
   }
 }
 
 .available {
 
+  &:before {
+    background: green;
+  }
+
   a {
-    color: @text-color;
-
-    &:hover {
-      color: fade(green, 80%);
-    }
-
-    &:before {
-      background: fade(green, 60%);
-    }
+    color: green;
   }
 }
+
 .unavailable {
 
+  &:before {
+    background: red;
+  }
+
   a {
-    color: fade(@text-color, 50%);
-
-    &:hover {
-      color: fade(red, 60%);
-    }
-
-    &:before {
-      background: fade(red, 20%);
-    }
+    color: red;
   }
 }
 
 // Article wrapper
 article {
-  max-width: @wrapper-width;
-  margin-bottom: (@space * 1.35);
+  margin-bottom: 16vmin;
   .cf; // For some specified posts in work category
 
   img, video, iframe {
     display: block;
     max-width: 100%;
     margin: 0 0 40px;
+  }
+
+  header {
+    padding-bottom: 16vmin;
+
+    h1 {
+      margin: 0 0 .1em;
+      hyphens: auto;
+      line-height: 1.1;
+
+      // Override margin from article img
+      img {
+        margin-bottom: .6em;
+      }
+    }
+
+    h1 {
+      .heading;
+    }
+
+    .latest-post {
+      margin-top: 16vmin;
+      font-size: .8em;
+      font-weight: normal;
+      line-height: 1.2;
+
+      a {
+        font-weight: bold;
+      }
+    }
+
+    small {
+      display: block;
+      margin: 20px 0 0;
+      letter-spacing: .1em;
+    }
+
+    // Used on work page
+    & + .txt > :first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -294,7 +292,7 @@ article {
   hyphens: auto;
 
   a {
-    border-bottom: 1px dotted fade(@text-color, 30%); // Set larger value for invert color
+    font-weight: bold;
   }
 
   p {
@@ -303,7 +301,7 @@ article {
   }
 
   h3 {
-    margin: @space 0 1.6em;
+    margin: 10vmin 0 1em;
     .sub-heading;
   }
 
@@ -321,28 +319,17 @@ article {
 
   blockquote {
     position: relative;
-    padding-left: (@space * .75);
-    font-style: italic;
-    .cf;
+    margin-bottom: 2em;
 
-    &:before {
-      position: absolute;
-      top: -16px;
-      left: -8px;
-      z-index: -1;
-      font-family: @sans-serif;
-      font-size: 120px;
-      font-style: normal;
-      line-height: 1;
-      color: fade(@text-color, 70%);
-      pointer-events: none;
-      content: "\201c"; // http://www.fileformat.info/info/unicode/char/201c/index.htm
+    > p {
+      padding-left: .8em;
+      border-left: 2px solid;
     }
 
     cite {
       float: right;
-      margin: 0 0 2em;
       font-size: 85%;
+      font-style: normal;
       color: fade(@text-color, 80%);
 
       &:before {
@@ -353,15 +340,6 @@ article {
 
   sup {
     font-size: 75%;
-  }
-
-  hr {
-    margin: @space 0 1.6em;
-    .sub-heading;
-
-    &:before {
-      content: attr(data-placeholder);
-    }
   }
 
   abbr:after {
@@ -376,18 +354,11 @@ article {
   // Newsletter subscription form in page "store"
   form {
 
-    label {
-      display: block;
-      margin-bottom: (@space * .1);
-      .sub-heading;
-    }
-
     input {
       display: block;
       width: 100%;
       padding: 7px 0;
-      margin: 0 0 (@space * .2);
-      // .sub-heading;
+      margin: 0 0 1vmin;
       border: none;
       border-bottom: 1px solid fade(@text-color, 20%);
       border-radius: 0; // Remove border-radius for ios devices
@@ -416,17 +387,9 @@ article {
     }
   }
 
-  // Remove extra space for the last element in the container
-  & > :last-child {
+  // Remove extra space for the last paragraph in the container
+  & > p:last-child {
     margin-bottom: 0;
-
-    & > :last-child {
-      margin-bottom: 0;
-
-      & > :last-child {
-        margin-bottom: 0;
-      }
-    }
   }
 }
 
@@ -442,25 +405,28 @@ article {
 
 // Tweet button margin fix
 .tweet {
-  margin-top: @space;
+  margin-top: 10vmin;
 }
 
 // Button styles
 .btn {
   display: inline-block;
-  padding: 7px 20px 6px; // Spacing minor offset since I use uppercased type here
-  .sub-heading;
+  padding: 20px 40px;
   cursor: pointer;
   background: @text-color;
+  border: none;
   outline: none;
 
   // Redefine overrides here to pass recess syntax check
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: @background-color;
 
-    &:focus, &:hover {
+    &:hover,
+    &:focus {
       color: @background-color;
       background: @link-color;
+      border: none;
     }
   }
 }
@@ -524,13 +490,13 @@ article {
   list-style: none;
 
   li {
-    margin: 0 0 (@space * .2);
+    margin: 0 0 1.4vmin;
 
     h2 {
       .heading;
 
       time {
-        font-size: (@base-font-size * 1.5);
+        font-size: 75%; // Avoid em unit here, it causes font size double caculating from parents node.
         color: fade(@text-color, 30%);
         opacity: 0;
         transition: opacity .5s ease;
@@ -541,20 +507,29 @@ article {
         vertical-align: 3px;
       }
 
-      span {
-        display: inline-block;
-        width: .5em;
-        text-align: center;
+      .external {
+        padding: 0 .2em;
+
+        span {
+          display: inline-block;
+          width: 14px;
+        }
+
+        &:hover,
+        &:focus {
+          color: @link-color;
+          border: none;
+        }
       }
     }
 
     h2 {
-      font-size: (@base-font-size * 2);
-      line-height: 1;
+      font-size: 2em;
+      line-height: 1.2;
     }
 
     .txt {
-      margin: (@space / 5) 0 @space;
+      margin: 2vmin 0 10vmin;
     }
 
     &:hover,
@@ -579,14 +554,31 @@ article {
 }
 
 .footer {
-  .sub-heading;
+  font-size: (1em / 1.4);
+  text-transform: lowercase;
 
-  & {
-    font-size: (@base-font-size / 2 - 1px);
+  ul {
+
+    li {
+      display: inline;
+
+      &:after {
+        padding: 0 4px;
+        content: " / ";
+        opacity: .3;
+      }
+
+      &:last-child {
+
+        &:after {
+          content: none;
+        }
+      }
+    }
   }
 }
 
-// FlexSlider Necessary Styles
+// FlexSlider necessary styles
 .flexslider {
 
   // Slides
@@ -606,7 +598,7 @@ article {
 
     .flex-caption {
       margin: -30px 0 30px;
-      .sub-heading;
+      font-weight: bold;
     }
   }
 }
@@ -615,37 +607,19 @@ article {
 .no-js .flexslider ul li:first-child { display: block; }
 
 // Media query stack
+@media (max-width: 1000px) {
+  body {
+    padding-left: 8%;
+    padding-right: 8%;
+    font-size: (@base-font-size * 1.4);
+  }
+}
+
 @media (max-width: 640px) {
   body {
     padding-left: 4%;
     padding-right: 4%;
-    font-size: (@base-font-size * 0.8);
-  }
-
-  .wrapper {
-
-    article {
-
-      header {
-
-        h1 {
-          font-size: (@base-font-size * 2.4);
-        }
-      }
-
-      .txt {
-
-        blockquote {
-          padding-left: 32.5px;
-
-          &:before {
-            top: -2px;
-            left: 0px;
-            font-size: 60px;
-          }
-        }
-      }
-    }
+    font-size: (@base-font-size * 2);
   }
 
   .list {
@@ -653,32 +627,24 @@ article {
     li {
 
       h2 {
-        font-size: (@base-font-size * 1.5);
 
         time {
-          opacity: 1;
-          font-size: (@base-font-size * 1.2);
+          display: none;
         }
       }
     }
   }
 }
 
-@media (max-width: 480px) {
-  .navigation li {
-    display: block;
-
-    a {
-      display: block;
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
+@media (max-width: 400px) {
+  body {
+    font-size: (@base-font-size * 2.8);
   }
 }
 
 // All iOS devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
-  .wrapper {
+  body {
     -webkit-text-size-adjust: none;
   }
 }
