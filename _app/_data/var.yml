@@ -46,7 +46,7 @@ twtr_author:  tunghsiao
 google_plus:  https://plus.google.com/+TunghsiaoLiu?rel=author
 
 # Donate link, it's too long so I moved it here
-donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LTXZ835Y6T95S
+donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
 
 # In homepage, not implimented at the moment
 availability: free

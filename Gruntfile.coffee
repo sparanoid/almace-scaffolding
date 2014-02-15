@@ -50,7 +50,6 @@ module.exports = (grunt) ->
         reset: true
         charset: "utf-8"
         doctype: "HTML5"
-        failHard: true
         relaxerror: [
           "Bad value X-UA-Compatible for attribute http-equiv on element meta."
           "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
