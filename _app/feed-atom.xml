@@ -22,7 +22,7 @@ permalink: /feed/index.xml
     <entry>
       <title>{{ post.title | strip_html | xml_escape }}</title>
       <id>tag:{{ site.data.var.domain }}{{ site.data.var.base }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
-      <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site.data.var.url }}{{ site.data.var.base }}{{ post.url }}/{% endif %}" />
+      <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site.data.var.url }}{{ site.data.var.base }}{{ post.url }}{% endif %}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <author>
         <name>{{ site.data.var.user }}</name>
@@ -38,7 +38,7 @@ permalink: /feed/index.xml
           {{ post.content | xml_escape }}
         {% endif %}
         {% if post.link %}
-          &lt;p&gt;&lt;a href=&quot;{{ site.data.var.url }}{{ site.data.var.base }}{{ post.url }}/&quot; title=&quot;Permalink to &#8216;{{ post.title | strip_html | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;{{ site.data.var.url }}{{ site.data.var.base }}{{ post.url }}&quot; title=&quot;Permalink to &#8216;{{ post.title | strip_html | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;
         {% endif %}
       </content>
     </entry>
