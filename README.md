@@ -41,7 +41,7 @@ Jekyll Scaffolding with sleek default theme, LESS auto-compile, prefix-free, HTM
 
 <img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/01-jekyll-scaffolding.png" alt="Jekyll Scaffolding Preview">
 
-You can see a more complex setup using this framework at [my site](https://github.com/sparanoid/sparanoid.com).
+You can see a more complex live demo using this framework at [my site](http://sparanoid.com/).
 
 ## Donate
 
@@ -67,6 +67,16 @@ All other files and directories are licensed under the [MIT](http://www.opensour
 Copyright (c) Tunghsiao Liu. Rights reserved as indicated above.
 
 ## Release History
+
+- v0.0.3
+  - Date: 2014-02-16
+  - Changes:
+    - Better test task
+    - Sync templates from sparanoid.com
+      - Logo update
+      - Now use viewport units
+    - Add HTML validation task
+    - Use `grunt-contrib-less` instead of `grunt-recess`
 
 - v0.0.2
   - Date: 2014-01-28
