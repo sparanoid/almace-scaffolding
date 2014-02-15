@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Delicious.<wbr>com
+title: Delicious.com
 category: work
 tag: commercial
 link: http://delicious.com/

@@ -7,15 +7,26 @@ layout: default
 
   <!-- Post title -->
   <header>
+    {% capture image_header %}
+      <img
+        src="{{ site.data.var.file }}/{{ page.img-headline }}"
+        alt="{{ page.title | strip_html | xml_escape }}"
+        {% if page.img-headline-width %}
+          width={{ page.img-headline-width }}
+        {% else %}
+          width=500
+        {% endif %}
+      >
+    {% endcapture %}
+
     {% if page.img-headline %}
       <h1>
-        <style scoped>
-          h1 img { width: {% if page.img-headline-width %}{{ page.img-headline-width }}px{% else %}500px{% endif %};}
-        </style>
         {% if page.link %}
-          <a href="{{ page.link }}"><img src="{{ site.data.var.file }}/{{ page.img-headline }}" alt="{{ page.title | strip_html | xml_escape }}"></a>
+          <a href="{{ page.link }}">
+            {{ image_header }}
+          </a>
         {% else %}
-          <img src="{{ site.data.var.file }}/{{ page.img-headline }}" alt="{{ page.title | strip_html | xml_escape }}">
+          {{ image_header }}
         {% endif %}
       </h1>
     {% else %}
