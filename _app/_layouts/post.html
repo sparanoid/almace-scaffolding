@@ -34,6 +34,4 @@ layout: default
   <!-- Post content -->
   {{ content }}
 
-  <!-- A tweet button at then end of each post -->
-  <a href="http://twitter.com/home?status={{ page.title | strip_html | cgi_escape }}{{ " by @" | cgi_escape }}{{ site.data.var.twitter | cgi_escape }}{{ " " | cgi_escape }}{{ site.data.var.url | cgi_escape }}{{ site.data.var.base | cgi_escape }}{{ page.url | cgi_escape }}{{ "/" | cgi_escape }}" class="tweet btn" target=_blank>Tweet it</a>
 </article>
