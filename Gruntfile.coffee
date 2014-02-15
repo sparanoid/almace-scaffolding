@@ -45,14 +45,27 @@ module.exports = (grunt) ->
       test:
         src: ["<%= core.app %>/assets/css/app.css"]
 
+    validation:
+      options:
+        reset: true
+        charset: "utf-8"
+        doctype: "HTML5"
+        failHard: true
+        relaxerror: [
+          "Bad value X-UA-Compatible for attribute http-equiv on element meta."
+          "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
+        ]
+      dist:
+        src: ["<%= core.dist %>/**/*.html"]
+
     watch:
       coffee:
         files: ["<%= coffeelint.test.src %>"]
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= core.app %>/assets/less/*.less"]
-        tasks: ["less:server", "autoprefixer"]
+        files: ["<%= core.app %>/assets/less/**/*.less"]
+        tasks: ["less:server", "autoprefixer", "csslint"]
 
     less:
       server:
@@ -194,14 +207,15 @@ module.exports = (grunt) ->
 
   # Test task
   grunt.registerTask "test", [
-      "coffeelint"
+      "build"
     , "csslint"
+    , "validation"
   ]
 
   # Build site with `jekyll`
   grunt.registerTask "build", [
       "clean"
-    , "test"
+    , "coffeelint"
     , "useminPrepare"
     , "less:dist"
     , "autoprefixer"
@@ -215,7 +229,6 @@ module.exports = (grunt) ->
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", [
       "clean"
-    , "test"
     , "less:dist"
     , "autoprefixer"
     , "csscomb"
