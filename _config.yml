@@ -1,4 +1,7 @@
 #
+# More configuration examples at:
+# http://jekyllrb.com/docs/configuration/
+#
 # Jekyll basic configurations
 #
 
@@ -6,7 +9,7 @@ source:       ./_app
 destination:  ./_site
 exclude:      ['app.less']
 timezone:     Asia/Hong_Kong
-permalink:    /:categories/:title
+permalink:    /:categories/:title/
 markdown:     redcarpet
 highlighter:  pygments
 
