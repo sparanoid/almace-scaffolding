@@ -7,7 +7,7 @@
 
 source:       ./_app
 destination:  ./_site
-exclude:      ['app.less']
+exclude:      ['less']
 timezone:     Asia/Hong_Kong
 permalink:    /:categories/:title/
 markdown:     redcarpet

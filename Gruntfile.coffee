@@ -38,12 +38,12 @@ module.exports = (grunt) ->
       test:
         src: ["Gruntfile.coffee"]
 
-    recess:
+    csslint:
       options:
-        noUniversalSelectors: false
+        csslintrc: "<%= core.app %>/assets/less/.csslintrc"
 
       test:
-        src: ["<%= core.app %>/assets/less/app.less"]
+        src: ["<%= core.app %>/assets/css/app.css"]
 
     watch:
       coffee:
@@ -51,22 +51,34 @@ module.exports = (grunt) ->
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= recess.test.src %>"]
-        tasks: ["less:server", "autoprefixer", "recess"]
+        files: ["<%= core.app %>/assets/less/*.less"]
+        tasks: ["less:server", "autoprefixer"]
 
     less:
       server:
         options:
-          dumpLineNumbers: "all"
+          strictMath: true
+          sourceMap: true
+          outputSourceFiles: true
+          sourceMapURL: "app.css.map"
+          sourceMapFilename: "<%= core.app %>/assets/css/app.css.map"
 
-        src: ["<%= recess.test.src %>"]
+        src: ["<%= core.app %>/assets/less/app.less"]
         dest: "<%= core.app %>/assets/css/app.css"
 
       dist:
-        src: ["<%= recess.test.src %>"]
+        src: ["<%= less.server.src %>"]
         dest: "<%= less.server.dest %>"
 
     autoprefixer:
+      dist:
+        src: ["<%= less.server.dest %>"]
+        dest: "<%= less.server.dest %>"
+
+    csscomb:
+      options:
+        config: "<%= core.app %>/assets/less/.csscomb.json"
+
       dist:
         src: ["<%= less.server.dest %>"]
         dest: "<%= less.server.dest %>"
@@ -183,7 +195,7 @@ module.exports = (grunt) ->
   # Test task
   grunt.registerTask "test", [
       "coffeelint"
-    , "recess"
+    , "csslint"
   ]
 
   # Build site with `jekyll`
@@ -193,6 +205,7 @@ module.exports = (grunt) ->
     , "useminPrepare"
     , "less:dist"
     , "autoprefixer"
+    , "csscomb"
     , "shell:dist"
     , "rev"
     , "usemin"
@@ -205,6 +218,7 @@ module.exports = (grunt) ->
     , "test"
     , "less:dist"
     , "autoprefixer"
+    , "csscomb"
     , "shell:archive"
     , "concurrent:dist"
   ]
