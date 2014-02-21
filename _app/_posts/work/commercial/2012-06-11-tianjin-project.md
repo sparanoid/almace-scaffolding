@@ -14,7 +14,7 @@ link: /lab/tianjin/
 <div class=txt>
   <p class=note>There&rsquo;s a <a href="{% post_url /work/commercial/2013-10-29-tianjin-project-revision %}">newer revision</a> of this project.</p>
 
-  <p class=note>Now this project is featured on <a href="{% post_url /work/commercial/2012-07-26-tianjin-project-wef %}/">The World Economic Forum - Tianjin Davos 2012</a>. You can also check out the <a href="/lab/tianjin/">project page</a>.</p>
+  <p class=note>Now this project is featured on <a href="{% post_url /work/commercial/2012-07-26-tianjin-project-wef %}">The World Economic Forum - Tianjin Davos 2012</a>. You can also check out the <a href="/lab/tianjin/">project page</a>.</p>
 
   <p class=download><a href="http://dl.sparanoid.com/Tianjin.ibooks">Download</a> it for iPad. (No iPad? Here’s a <a href="http://dl.sparanoid.com/Tianjin.pdf">PDF version</a>)</p>
 
