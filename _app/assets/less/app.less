@@ -408,27 +408,10 @@ article {
   margin-top: 10vmin;
 }
 
-// Button styles
-.btn {
-  display: inline-block;
-  padding: 20px 40px;
-  cursor: pointer;
-  background: @text-color;
-  border: none;
-  outline: none;
-
-  // Redefine overrides here to pass recess syntax check
-  &:link,
-  &:visited {
-    color: @background-color;
-
-    &:hover,
-    &:focus {
-      color: @background-color;
-      background: @link-color;
-      border: none;
-    }
-  }
+// Largetype styles (replaces button styles)
+.largetype {
+  .heading;
+  font-size: (1em / .5);
 }
 
 // Broser frame for images in category "work"
