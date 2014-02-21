@@ -35,6 +35,10 @@ plugin: slider
         <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-homepage.png" alt="Delicious Landing Page"></p>
         <p class="flex-caption">Delicious Landing Page</p>
       </li>
+      <li>
+        <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-homepage-hover.png" alt="Delicious Landing Page (Mouseover)"></p>
+        <p class="flex-caption">Delicious Landing Page (Mouseover)</p>
+      </li>
     </ul>
   </div><!-- .flexslider -->
 
