@@ -3,7 +3,6 @@ layout: post
 title: Tianjin Project Revision
 category: work
 tag: commercial
-plugin: slider
 ---
 
 <div class=txt>
@@ -11,40 +10,29 @@ plugin: slider
 
   <p class="download"><a href="{{ site.data.var.download }}/Tianjin%20Revision.ibooks">Read it on your Mac</a>.</p>
 
-  <p><img src="{{ site.data.var.file }}/tianjin-revision-01.jpg" alt="Tianjin Revision for iBooks"></p>
+  <h3>Index Overview</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-01.jpg" alt="Index Overview"></p>
 
-  <div class="flexslider">
-    <ul class="slides">
-      <li>
-        <p><img src="{{ site.data.var.file }}/tianjin-revision-02.jpg" alt="Tianjin Revision"></p>
-        <p class="flex-caption">Table of Contents</p>
-      </li>
-      <li>
-        <p><img src="{{ site.data.var.file }}/tianjin-revision-03.jpg" alt="Tianjin Revision"></p>
-        <p class="flex-caption">Bookmarks</p>
-      </li>
-      <li>
-        <p><img src="{{ site.data.var.file }}/tianjin-revision-04.jpg" alt="Tianjin Revision"></p>
-        <p class="flex-caption">Full-context Search</p>
-      </li>
-      <li>
-        <p><img src="{{ site.data.var.file }}/tianjin-revision-05.jpg" alt="Tianjin Revision"></p>
-        <p class="flex-caption">Sharing note</p>
-      </li>
-      <li>
-        <p><img src="{{ site.data.var.file }}/tianjin-revision-06.jpg" alt="Tianjin Revision"></p>
-        <p class="flex-caption">Glossary</p>
-      </li>
-      <li>
-        <p><img src="{{ site.data.var.file }}/tianjin-revision-07.jpg" alt="Tianjin Revision"></p>
-        <p class="flex-caption">Glossary List</p>
-      </li>
-      <li>
-        <p><img src="{{ site.data.var.file }}/tianjin-revision-08.jpg" alt="Tianjin Revision"></p>
-        <p class="flex-caption">Study Cards</p>
-      </li>
-    </ul>
-  </div><!-- .flexslider -->
+  <h3>Table of Contents</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-02.jpg" alt="Table of Contents"></p>
+
+  <h3>Bookmarks</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-03.jpg" alt="Bookmarks"></p>
+
+  <h3>Full-context Search</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-04.jpg" alt="Full-context Search"></p>
+
+  <h3>Sharing notes</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-05.jpg" alt="Sharing notes"></p>
+
+  <h3>Glossary</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-06.jpg" alt="Glossary"></p>
+
+  <h3>Glossary List</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-07.jpg" alt="Glossary List"></p>
+
+  <h3>Study Cards</h3>
+  <p><img src="{{ site.data.var.file }}/tianjin-revision-08.jpg" alt="Study Cards"></p>
 
   <p class=note>You can also view the <a href="{% post_url /work/commercial/2012-06-11-tianjin-project %}">original version</a> of this project.</p>
 </div>
