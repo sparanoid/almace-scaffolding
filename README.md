@@ -66,29 +66,3 @@ Following files, directories and their contents are copyright Tunghsiao Liu and 
 All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
 Copyright (c) Tunghsiao Liu. Rights reserved as indicated above.
-
-## Release History
-
-- v0.0.3
-  - Date: 2014-02-16
-  - Changes:
-    - Better test task
-    - Add `custom.less`
-    - Sync templates from sparanoid.com
-      - Logo update
-      - Now use viewport units
-    - Add HTML validation task
-    - Use `grunt-contrib-less` instead of `grunt-recess`
-
-- v0.0.2
-  - Date: 2014-01-28
-  - Changes:
-    - Bump Jekyll required version
-    - Update file structure
-    - Sync Gruntfile from sparanoid.com
-    - Sync styles from sparanoid.com
-
-- v0.0.1
-  - Date: 2014-01-06
-  - Changes:
-    - First usable version
