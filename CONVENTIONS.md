@@ -3,8 +3,7 @@
 These rules are adopted from [the AngularJS commit conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/).
 
 ### Commit Message Format
-Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
-format that includes a **type**, a **scope** and a **subject**:
+Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special format that includes a **type**, a **scope** and a **subject**:
 
 ```
 <type>(<scope>): <subject>
@@ -46,26 +45,23 @@ to read on github as well as in various git tools.
 ### Type
 Is recommended to be one of these. Only **feat** and **fix** show up in the changelog, in addition to breaking changes (see breaking changes section at bottom).
 
-* **feat**: A new feature
-* **fix**: A bug fix
-* **docs**: Documentation only changes
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing
-  semi-colons, etc)
-* **refactor**: A code change that neither fixes a bug or adds a feature
-* **test**: Adding missing tests
-* **chore**: Changes to the build process or auxiliary tools and libraries such as documentation
-  generation
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **refactor**: A code change that neither fixes a bug or adds a feature
+- **test**: Adding missing tests
+- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 ### Scope
-The scope could be anything specifying place of the commit change. For example `$location`,
-`$browser`, `$compile`, `$rootScope`, `ngHref`, `ngClick`, `ngView`, etc...
+The scope could be anything specifying place of the commit change. For example `$location`, `$browser`, `$compile`, `$rootScope`, `ngHref`, `ngClick`, `ngView`, etc...
 
 ### Subject
 The subject contains succinct description of the change:
 
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize first letter
-* no dot (.) at the end
+- Use the imperative, present tense: "change" not "changed" nor "changes"
+- Don't capitalize first letter
+- No dot (.) at the end
 
 ### Breaking Changes
 Put any breaking changes with migration instructions in the commit footer.
