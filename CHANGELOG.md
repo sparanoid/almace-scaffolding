@@ -1,8 +1,8 @@
-# Changelog
+<a name="23.0.3"></a>
+### 23.0.3 (2014-02-24)
 
-## Head [#][head]
 
-### 24.0.0 (Jan 28.2014)
+### 24.0.0 (Jan 28, 2014)
 - Bump deps version
 - Readme badges update
 - Remove Grunt badge
@@ -38,7 +38,7 @@
   - Typography minor tweak (Now sans-serif FTW)
 - Add full width banner back
 
-### 23.0.1 (Dec 14.2013)
+### 23.0.1 (Dec 14, 2013)
 - Uses autoprefixer
 - Update server task
 - Update `usemin`
@@ -67,7 +67,7 @@
 - Bump deps version
 - Bump version, prepared for Assemble rework
 
-### 23.0.0 (Oct 27.2013) [#][23.0.0]
+### 23.0.0 (Oct 27, 2013) [#][23.0.0]
 - Shorter hash filename
 - Fixes *min and usemin tasks order
 - Remove `-webkit-backface-visibility: hidden;`, doesn't compatible with `position: sticky;`
@@ -87,7 +87,7 @@
 - Retrieve old content from Time Machine
 - Larger wrapper width
 
-### 22.0.7 (Sep 17.2013)
+### 22.0.7 (Sep 17, 2013)
 
 - Bump deps version
 - Uses post thumb instead of img-headline
