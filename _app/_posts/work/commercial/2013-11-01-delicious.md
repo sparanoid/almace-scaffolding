@@ -31,14 +31,6 @@ plugin: slider
         <p><img src="{{ site.data.var.file }}/delicious.com.png" alt="Delicious UI Preview"></p>
         <p class="flex-caption">Delicious UI Preview</p>
       </li>
-      <li>
-        <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-homepage.png" alt="Delicious Landing Page"></p>
-        <p class="flex-caption">Delicious Landing Page</p>
-      </li>
-      <li>
-        <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-homepage-hover.png" alt="Delicious Landing Page (Mouseover)"></p>
-        <p class="flex-caption">Delicious Landing Page (Mouseover)</p>
-      </li>
     </ul>
   </div><!-- .flexslider -->
 
@@ -54,4 +46,44 @@ plugin: slider
     <li>We use <a href="http://gruntjs.com/">Grunt</a>.</li>
     <li>I worked remotely (from home) for all these things.</li>
   </ul>
+
+  <h3>Delicious Landing Page</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-homepage.png" alt="Delicious Landing Page"></p>
+
+  <h3>Delicious Landing Page (Mouseover)</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-homepage-hover.png" alt="Delicious Landing Page (Mouseover)"></p>
+
+  <h3>More Screenshots: Delicious Login Window</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-01.png" alt="Delicious Login Window"></p>
+
+  <h3>Delicious Signup Form</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-02.png" alt="Delicious Signup Form"></p>
+
+  <h3>Delicious - Useful Tools</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-03.png" alt="Delicious - Useful Tools"></p>
+
+  <h3>Delicious - Developing for Delicious</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-04.png" alt="Delicious - Developing for Delicious"></p>
+
+  <h3>Delicious - About</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-05.png" alt="Delicious - About"></p>
+
+  <h3>Delicious - My Links</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-06.png" alt="Delicious - My Links"></p>
+
+  <h3>Delicious - Manage Subscriptions</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-07.png" alt="Delicious - Manage Subscriptions"></p>
+
+  <h3>Delicious - Search</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-08.png" alt="Delicious - Search"></p>
+
+  <h3>Delicious - Share a Link</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-09.png" alt="Delicious - Share a Link"></p>
+
+  <h3>Delicious - Edit a Link</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-10.png" alt="Delicious - Edit a Link"></p>
+
+  <h3>Delicious - Mass Edit Links</h3>
+  <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-11.png" alt="Delicious - Mass Edit Links"></p>
+
 </div>
