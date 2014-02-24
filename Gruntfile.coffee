@@ -183,9 +183,6 @@ module.exports = (grunt) ->
       s3:
         command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.var.static_files %> <%= core.var.s3_bucket %>"
 
-      log:
-        command: "git log v<%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
-
     concurrent:
       options:
         logConcurrentOutput: true
@@ -243,9 +240,6 @@ module.exports = (grunt) ->
 
   # Sync image assets with `s3cmd`
   grunt.registerTask "s3", ["shell:s3"]
-
-  # Dump git log
-  grunt.registerTask "log", ["shell:log"]
 
   # Default task aka. build task
   grunt.registerTask "default", ["build"]
