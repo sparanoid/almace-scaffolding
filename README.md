@@ -27,4 +27,4 @@ Following files, directories and their contents are copyright Tunghsiao Liu and 
 
 All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
-Copyright (c) Tunghsiao Liu. Rights reserved as indicated above.
+© Tunghsiao Liu. Rights reserved as indicated above.
