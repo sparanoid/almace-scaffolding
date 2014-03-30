@@ -2,8 +2,10 @@
 module.exports = (grunt) ->
 
   # Load all grunt tasks
-  matchdep = require("matchdep")
-  matchdep.filterDev("grunt-*").forEach grunt.loadNpmTasks
+  require("matchdep").filterDev("grunt-*").forEach grunt.loadNpmTasks
+
+  # Track tasks load time
+  require("time-grunt") grunt
 
   # Configurable paths
   coreConfig =
@@ -13,12 +15,12 @@ module.exports = (grunt) ->
     app: "<%= core.cfg.source %>"
     dist: "<%= core.cfg.destination %>"
     banner: do ->
-      banner = "/*!\n"
-      banner += " * (c) <%= core.pkg.author %>.\n *\n"
-      banner += " * <%= core.pkg.name %> - v<%= core.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
-      # banner += " * <%= core.pkg.homepage %>\n"
-      banner += " * <%= core.pkg.licenses.type %> - <%= core.pkg.licenses.url %>\n"
-      banner += " */"
+      banner = "<!--\n"
+      banner += " © <%= core.pkg.author %>.\n\n"
+      banner += " <%= core.pkg.name %> - v<%= core.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
+      # banner += " <%= core.pkg.homepage %>\n"
+      banner += " <%= core.pkg.licenses.type %> - <%= core.pkg.licenses.url %>\n"
+      banner += " -->"
       banner
 
   # Project configurations
@@ -129,7 +131,6 @@ module.exports = (grunt) ->
     cssmin:
       dist:
         options:
-          banner: "<%= core.banner %>"
           report: "gzip"
 
         files: [
@@ -164,6 +165,28 @@ module.exports = (grunt) ->
       html: ["<%= core.dist %>/**/*.html"]
       css: ["<%= core.dist %>/assets/css/*.css"]
 
+    smoosher:
+      options:
+        jsDir: "<%= core.dist %>"
+        cssDir: "<%= core.dist %>"
+
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= core.dist %>"
+          src: "**/*.html"
+          dest: "<%= core.dist %>/"
+        ]
+
+    usebanner:
+      options:
+        position: "bottom"
+        banner: "<%= core.banner %>"
+
+      dist:
+        files:
+          src: ["<%= core.dist %>/**/*.html"]
+
     shell:
       options:
         stdout: true
@@ -193,10 +216,19 @@ module.exports = (grunt) ->
       dist:
         tasks: ["htmlmin", "xmlmin", "cssmin"]
 
-    clean: [".tmp", "<%= core.dist %>/*"]
+    clean:
+      dist:
+        src: [".tmp", "<%= core.dist %>"]
+
+      postDist:
+        src: ["<%= core.dist %>/assets/css/", "<%= core.dist %>/assets/js/"]
+
+    cleanempty:
+      dist:
+        src: ["<%= core.dist %>/**/*"]
 
   # Fire up a server on local machine for development
-  grunt.registerTask "server", [
+  grunt.registerTask "serve", [
       "clean"
     , "concurrent:server"
   ]
@@ -204,7 +236,7 @@ module.exports = (grunt) ->
   # Test task
   grunt.registerTask "test", [
       "build"
-    , "csslint"
+    # , "csslint"
     , "validation"
   ]
 
@@ -220,6 +252,9 @@ module.exports = (grunt) ->
     , "rev"
     , "usemin"
     , "concurrent:dist"
+    , "smoosher"
+    , "usebanner"
+    , "clean:postDist"
   ]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
