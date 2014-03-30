@@ -2,8 +2,7 @@
 module.exports = (grunt) ->
 
   # Load all grunt tasks
-  matchdep = require("matchdep")
-  matchdep.filterDev("grunt-*").forEach grunt.loadNpmTasks
+  require("matchdep").filterDev("grunt-*").forEach grunt.loadNpmTasks
 
   # Track tasks load time
   require("time-grunt") grunt
