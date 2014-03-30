@@ -8,6 +8,7 @@ Jekyll Scaffolding with sleek default theme, LESS auto-compile, prefix-free, HTM
 
 - A sleek default theme, codename `MFEO`, a variant of [sparanoid.com](http://sparanoid.com/)
   - (Maybe) the first template that uses [viewport relative units](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
+  - No Bootstrap or other bloated frameworks used
   - Predefined LESS variables make it easier to define different color schemes
   - Mobile-friendly, works great on your iPhone and iPad
   - Minimalism design, No jQuery library, No JavaScript
