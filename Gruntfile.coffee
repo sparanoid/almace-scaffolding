@@ -4,6 +4,7 @@ module.exports = (grunt) ->
   # Load all grunt tasks
   matchdep = require("matchdep")
   matchdep.filterDev("grunt-*").forEach grunt.loadNpmTasks
+  matchdep = require("time-grunt") grunt
 
   # Configurable paths
   coreConfig =

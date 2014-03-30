@@ -46,6 +46,7 @@
     "grunt-shell": "~0.6.4",
     "grunt-usemin": "^2.1.0",
     "grunt-xmlmin": "~0.1.1",
-    "matchdep": "~0.3.0"
+    "matchdep": "~0.3.0",
+    "time-grunt": "^0.3.1"
   }
 }
