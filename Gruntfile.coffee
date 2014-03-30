@@ -225,7 +225,7 @@ module.exports = (grunt) ->
   # Test task
   grunt.registerTask "test", [
       "build"
-    , "csslint"
+    # , "csslint"
     , "validation"
   ]
 
