@@ -19,7 +19,7 @@
 
 #### Breaking Changes
 
-* This will remove a SVG icon decorations for `.note`, `.store`, and `.download`
+* This will remove all SVG icon decorations for `.note`, `.store`, and `.download`
  ([860f6b4b](http://github.com/sparanoid/sparanoid.com/commit/860f6b4bf85671628b9329ecd6a074a5d37447b7))
 * `smoosher` task will inline all `.css` and .js` files to reduce HTTP requests and increase load performance. It's ideal for small website with some basic styles just like this project.
  ([9d4dcb25](http://github.com/sparanoid/sparanoid.com/commit/9d4dcb25ee6c94da76945f151f0bc7385454a701))
