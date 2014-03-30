@@ -2,16 +2,16 @@
 [![Build Status](https://travis-ci.org/sparanoid/jekyll-scaffolding.png)](https://travis-ci.org/sparanoid/jekyll-scaffolding)
 [![devDependency Status](https://david-dm.org/sparanoid/jekyll-scaffolding/dev-status.png)](https://david-dm.org/sparanoid/jekyll-scaffolding#info=devDependencies)
 
-`jksf`, a.k.a. Jekyll Scaffolding, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more.
+`jksf`, a.k.a. **Jekyll Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more.
 
 ## Feature
 
 - **Jekyll Scaffolding** ships a sleek responsive theme, a variant of [sparanoid.com](http://sparanoid.com/)
 - Every minified page generates only one HTTP request *
 - Minimalism design, No jQuery library, No JavaScript, No `everybody-shake-ur-body.js`
-- (Maybe) the first template that uses [**viewport relative units**](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
+- (Maybe) the first template that uses [viewport relative units](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
 - No Bootstrap or other bloated frameworks are used, CSS < 9 KB
-- Predefined LESS variables make it easier to define color schemes for different posts
+- Predefined LESS variables make it easier to change color schemes for different posts
 - Ideal for personal blog, portfolio, product blog and Tumblr-like link blog
 - Well-defined Atom feed template
 - No Internet Explorer support
