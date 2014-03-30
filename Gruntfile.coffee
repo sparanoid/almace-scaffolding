@@ -145,6 +145,18 @@ module.exports = (grunt) ->
       #   src: "**/*.html"
       #   dest: "<%= core.dist %>"
 
+    smoosher:
+      options:
+        jsDir: "<%= core.dist %>"
+        cssDir: "<%= core.dist %>"
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= core.dist %>"
+          src: "**/*.html"
+          dest: "<%= core.dist %>/"
+        ]
+
     rev:
       options:
         encoding: "utf8"
@@ -193,7 +205,16 @@ module.exports = (grunt) ->
       dist:
         tasks: ["htmlmin", "xmlmin", "cssmin"]
 
-    clean: [".tmp", "<%= core.dist %>/*"]
+    clean:
+      dist:
+        src: [".tmp", "<%= core.dist %>"]
+
+      postDist:
+        src: ["<%= core.dist %>/assets/css/", "<%= core.dist %>/assets/js/"]
+
+    cleanempty:
+      dist:
+        src: ["<%= core.dist %>/**/*"]
 
   # Fire up a server on local machine for development
   grunt.registerTask "serve", [
@@ -204,7 +225,7 @@ module.exports = (grunt) ->
   # Test task
   grunt.registerTask "test", [
       "build"
-    , "csslint"
+    # , "csslint"
     , "validation"
   ]
 
@@ -220,6 +241,8 @@ module.exports = (grunt) ->
     , "rev"
     , "usemin"
     , "concurrent:dist"
+    , "smoosher"
+    , "clean:postDist"
   ]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
