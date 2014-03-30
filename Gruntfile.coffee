@@ -196,7 +196,7 @@ module.exports = (grunt) ->
     clean: [".tmp", "<%= core.dist %>/*"]
 
   # Fire up a server on local machine for development
-  grunt.registerTask "server", [
+  grunt.registerTask "serve", [
       "clean"
     , "concurrent:server"
   ]
