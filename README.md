@@ -8,7 +8,7 @@
 
     bundle install && npm install && grunt serve
 
-Need a simpler setup using this theme? Try [Jekyll Scaffolding](http://github.com/sparanoid/jekyll-scaffolding/).
+Need a simpler setup using this theme? Try [jksf](http://github.com/sparanoid/jekyll-scaffolding/).
 
 ## Author
 
