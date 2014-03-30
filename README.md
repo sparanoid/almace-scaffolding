@@ -2,32 +2,32 @@
 [![Build Status](https://travis-ci.org/sparanoid/jekyll-scaffolding.png)](https://travis-ci.org/sparanoid/jekyll-scaffolding)
 [![devDependency Status](https://david-dm.org/sparanoid/jekyll-scaffolding/dev-status.png)](https://david-dm.org/sparanoid/jekyll-scaffolding#info=devDependencies)
 
-Jekyll Scaffolding with sleek default theme, LESS auto-compile, prefix-free, HTML minification and more.
+`jksf`, a.k.a. Jekyll Scaffolding, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more.
 
 ## Feature
 
-- A sleek default theme, codename `MFEO`, a variant of [sparanoid.com](http://sparanoid.com/)
-  - (Maybe) the first template that uses [viewport relative units](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
-  - No Bootstrap or other bloated frameworks used
-  - Predefined LESS variables make it easier to define different color schemes
-  - Mobile-friendly, works great on your iPhone and iPad
-  - Minimalism design, No jQuery library, No JavaScript
-    - It generates only two HTTP requests (well, only if your posts don't have external media files)
-  - Work smooth for personal blog, portfolio, product blog and Tumblr-like link blog
-  - HTTP error page
-  - Atom feed template
-  - No Internet Explorer support
+- **Jekyll Scaffolding** ships a sleek responsive theme, a variant of [sparanoid.com](http://sparanoid.com/)
+- Every minified page generates only one HTTP request *
+- Minimalism design, No jQuery library, No JavaScript, No `everybody-shake-ur-body.js`
+- (Maybe) the first template that uses [**viewport relative units**](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
+- No Bootstrap or other bloated frameworks are used, CSS < 9 KB
+- Predefined LESS variables make it easier to define color schemes for different posts
+- Ideal for personal blog, portfolio, product blog and Tumblr-like link blog
+- Well-defined Atom feed template
+- No Internet Explorer support
 - Built with Grunt.js
   - Styling with LESS, CSS file is automatically compiled on the fly
   - CSS prefix-free
   - HTML, CSS, and XML minification
   - Assets files revving
 
+*: Well, only when your posts don’t have fancy sliders or other external media files.
+
 ## Setup
 
 1. [Fork](https://github.com/sparanoid/jekyll-scaffolding/fork) this project, checkout to your local machine.
 2. Run `bundle install && npm install` to install required dependencies. Ruby gem `bundler` and Node.js package manager `npm` must be installed before running this command.
-3. Run `grunt server` to fire up a server on your localhost, then open `http://localhost:4321` in your browser.
+3. Run `grunt serve` to fire up a server on your localhost, then open `http://localhost:4321` in your browser.
 4. Edit, edit, delete, delete, commit, push, done.
 
 ## Setup Notes
@@ -36,7 +36,7 @@ Jekyll Scaffolding with sleek default theme, LESS auto-compile, prefix-free, HTM
 - You should also change `favicon.ico` and `apple-touch-icon.png` to yours.
 - Customize your site using `custom.less`.
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
-- Please keep the credit in template file, thanks.
+- Please keep the credits in template file, thanks.
 
 ## Demo
 
@@ -65,4 +65,4 @@ Following files, directories and their contents are copyright Tunghsiao Liu and 
 
 All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
-Copyright (c) Tunghsiao Liu. Rights reserved as indicated above.
+© Tunghsiao Liu. Rights reserved as indicated above.
