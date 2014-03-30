@@ -205,7 +205,16 @@ module.exports = (grunt) ->
       dist:
         tasks: ["htmlmin", "xmlmin", "cssmin"]
 
-    clean: [".tmp", "<%= core.dist %>/*"]
+    clean:
+      dist:
+        src: [".tmp", "<%= core.dist %>"]
+
+      postDist:
+        src: ["<%= core.dist %>/assets/css/", "<%= core.dist %>/assets/js/"]
+
+    cleanempty:
+      dist:
+        src: ["<%= core.dist %>/**/*"]
 
   # Fire up a server on local machine for development
   grunt.registerTask "serve", [
@@ -233,6 +242,7 @@ module.exports = (grunt) ->
     , "usemin"
     , "concurrent:dist"
     , "smoosher"
+    , "clean:postDist"
   ]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
