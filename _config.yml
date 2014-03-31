@@ -24,3 +24,10 @@ port:         4321
 #
 
 future:       false
+
+#
+# Additional markdown settings
+#
+
+redcarpet:
+  extensions: [no_intra_emphasis, smart, space_after_headers, superscript, tables]
