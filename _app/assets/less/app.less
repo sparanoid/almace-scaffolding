@@ -135,13 +135,19 @@ del {
   width: 100%;
   height: 8px;
   margin: 0 0 1.4vmin;
-  text-indent: -9999em;
   background: @link-color;
   opacity: 0;
   transition: background .3s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    border-bottom: none !important;
     background: @text-color;
+  }
+
+  h1 {
+    height: 0;
+    text-indent: -99999em;
   }
 }
 
