@@ -2,5 +2,7 @@
 
 - Better grunt workflow for homepage page
 - Slider indicator
-- A highlighter theme for `jksf` [#](https://github.com/richleland/pygments-css)
 - Redcarpet `footnotes` support
+- Table style
+- Fix LESS source map
+- Make highlighter theme works for all color scheme (hint: LESS color functions)
