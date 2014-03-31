@@ -7,6 +7,4 @@ excerpt: Cuntryroad
 thumb: countryroad.jpg
 ---
 
-<div class="txt">
-  <p><img src="{{ site.data.var.file }}/countryroad.jpg" alt="Countryroad"></p>
-</div>
+<p><img src="{{ site.data.var.file }}/countryroad.jpg" alt="Countryroad"></p>

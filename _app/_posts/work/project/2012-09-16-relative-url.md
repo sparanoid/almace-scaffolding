@@ -14,8 +14,6 @@ scheme-code: "#39beb6"
 scheme-bg: "#009990"
 ---
 
-<div class=txt>
-  <p><b>Relative URL</b> is a WordPress plugin to apply <code>wp_make_link_relative</code> function to links (posts, categories, pages and etc.) to convert them to relative URLs. Useful for developers when debugging local WordPress instance on a mobile device (iPad. iPhone, etc.). If you love this plugin, please consider <a href="{{ site.data.var.donate }}">buying me a cup of coffee</a>.</p>
+<p><b>Relative URL</b> is a WordPress plugin to apply <code>wp_make_link_relative</code> function to links (posts, categories, pages and etc.) to convert them to relative URLs. Useful for developers when debugging local WordPress instance on a mobile device (iPad. iPhone, etc.). If you love this plugin, please consider <a href="{{ site.data.var.donate }}">buying me a cup of coffee</a>.</p>
 
-  <p class=download><a href="http://wordpress.org/extend/plugins/relative-url/">Download</a> it at WordPress.org</p>
-</div>
+<p class=download><a href="http://wordpress.org/extend/plugins/relative-url/">Download</a> it at WordPress.org</p>

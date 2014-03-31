@@ -7,7 +7,4 @@ excerpt: Gouache - Trees
 thumb: gouache-trees.jpg
 ---
 
-<div class="txt">
-  <p><img src="{{ site.data.var.file }}/gouache-trees.jpg" alt="Gouache - Trees"></p>
-</div>
-
+<p><img src="{{ site.data.var.file }}/gouache-trees.jpg" alt="Gouache - Trees"></p>

@@ -12,12 +12,10 @@ scheme-code: "#39beb6"
 scheme-bg: "#ff82a6"
 ---
 
-<div class=txt>
-  <p><img src="{{ site.data.var.file }}/lucky-star-for-sogou_large.png" alt="Lucky Star Theme for QQ/Sogou Pinyin IME"></p>
+<p><img src="{{ site.data.var.file }}/lucky-star-for-sogou_large.png" alt="Lucky Star Theme for QQ/Sogou Pinyin IME"></p>
 
-  <p>Lucky Star skin for QQ Pinyin IME (QQ 拼音輸入法) <i>&amp;</i> Sougou Pinyin IME (搜狗拼音輸入法)</p>
+<p>Lucky Star skin for QQ Pinyin IME (QQ 拼音輸入法) <i>&amp;</i> Sougou Pinyin IME (搜狗拼音輸入法)</p>
 
-  <p class=download><a href="http://shuru.qq.com/skin/skin_detail?skin_id=4293199403">lucky-star.qpys</a> (? KB) / <a href="http://pinyin.sogou.com/skins/sv_307818.html">lucky-star.ssf</a> (? KB)</p>
+<p class=download><a href="http://shuru.qq.com/skin/skin_detail?skin_id=4293199403">lucky-star.qpys</a> (? KB) / <a href="http://pinyin.sogou.com/skins/sv_307818.html">lucky-star.ssf</a> (? KB)</p>
 
-  <p class=store>Love this skin? please consider <a href="{{ site.data.var.donate }}">making a donation</a></p>
-</div>
+<p class=store>Love this skin? please consider <a href="{{ site.data.var.donate }}">making a donation</a></p>
