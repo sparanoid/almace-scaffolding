@@ -38,6 +38,39 @@
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 - Please keep the credits in template file, thanks.
 
+## Avaiable Styles and Scripts
+
+### `.note`, `.store`, and `.download`
+
+A paragraph block with a thin border line
+
+Useage:
+
+```html
+<p class=download><a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub</p>
+<p class=store>Love this plugin? please consider <a href="{{ site.data.var.donate }}">buying me a cup of coffee.</a></p>
+```
+
+### `.reflist`, `.cite`, and `.ref`
+
+WIP
+
+### `.browser`
+
+WIP
+
+### `.margin-fix`
+
+WIP
+
+### `.largetype`
+
+WIP
+
+### `.flexslider`
+
+WIP
+
 ## Demo
 
 <img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/01-jekyll-scaffolding.png" alt="Jekyll Scaffolding Preview">
