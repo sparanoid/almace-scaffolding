@@ -7,6 +7,4 @@ excerpt: Start Page for your browser. The best browser homepage in the world, pr
 link: /lab/start/
 ---
 
-<div class=txt>
-  <p>Start Page for your browser. The best browser homepage in the world, probably. Inspired by <a href="http://lifepath.me/">Lifepath</a>.</p>
-</div>
+<p>Start Page for your browser. The best browser homepage in the world, probably. Inspired by <a href="http://lifepath.me/">Lifepath</a>.</p>
