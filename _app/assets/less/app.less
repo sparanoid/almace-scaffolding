@@ -101,18 +101,14 @@ textarea {
 
 // Reset common elements
 a, button {
+  color: @text-color;
+  text-decoration: none;
+  transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
 
-  &:link,
-  &:visited {
-    color: @text-color;
-    text-decoration: none;
-    transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
-
-    &:hover,
-    &:focus {
-      border-bottom: .1em solid;
-      transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
-    }
+  &:hover,
+  &:focus {
+    border-bottom: .1em solid;
+    transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
   }
 }
 
@@ -362,6 +358,12 @@ body:hover .latest {
     color: #68a;
   }
 
+  pre {
+    padding: 1em;
+    margin: 0 0 1em;
+    background: fade(#08f, 4%);
+  }
+
   // Newsletter subscription form in page "store"
   form {
 
@@ -547,7 +549,7 @@ article .list { // ul.list
 }
 
 .footer {
-  padding: 0 0 16vmin 0;
+  padding: 0 0 16vmin;
   font-size: (1em / 1.4);
   text-transform: lowercase;
 
@@ -643,4 +645,5 @@ article .list { // ul.list
 }
 
 // Import custom styles
+@import "syntax";
 @import "custom";
