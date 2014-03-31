@@ -11,15 +11,11 @@
 // :root { filter: invert(100%); }
 
 // http://nicolasgallagher.com/micro-clearfix-hack/
-//
-// For modern browsers
-// 1. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements.
-// 2. The original space content hack is removed here. No need to support Opera on my personal site.
 .cf {
 
   &:before, &:after {
-    display: table; // 1
-    content: ""; // 2
+    display: table;
+    content: "";
   }
 
   &:after {
@@ -90,7 +86,6 @@ textarea {
 }
 
 // Reset unusual Firefox-on-Android default style.
-//
 // See https://github.com/necolas/normalize.css/issues/214
 button,
 input,
@@ -152,7 +147,7 @@ body:hover .logo {
 }
 
 // Main navigation
-.navigation { // nav.navigation
+.navigation {
   margin: 0 0 16vmin;
   margin-right: -1.1em;
   margin-left: -1.1em;
@@ -178,8 +173,8 @@ body:hover .logo {
   }
 }
 
-// Currently activated page or category a post it belongs to
-.current { // li.current
+// Currently activated page or category class
+.current {
 
   a {
     color: @link-color;
@@ -196,7 +191,7 @@ body:hover .latest {
 }
 
 // Pserson status
-.status { // h2.status
+.status {
   margin: 10px 0 0;
   font-size: .75em;
   font-weight: bold;
@@ -240,13 +235,28 @@ body:hover .latest {
   margin-bottom: 16vmin;
   overflow: hidden;
   hyphens: auto;
-  .cf; // For some specified posts in work category
+  // For some specified posts in work category
+  .cf;
 
+  // Remove extra space for the last paragraph in the container
   article {
 
+    // article > p
     > *:last-child {
       padding-bottom: 0;
       margin-bottom: 0;
+
+      // article > ul > li
+      > *:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+        // article > ul > li > p
+        > *:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
@@ -340,7 +350,8 @@ body:hover .latest {
       color: fade(@text-color, 80%);
 
       &:before {
-        content: "\2500\2500\00a0" // http://www.fileformat.info/info/unicode/char/2500/index.htm
+        // http://www.fileformat.info/info/unicode/char/2500/index.htm
+        content: "\2500\2500\00a0"
       }
     }
   }
@@ -375,10 +386,12 @@ body:hover .latest {
       margin: 0 0 1vmin;
       border: none;
       border-bottom: 1px solid fade(@text-color, 20%);
-      border-radius: 0; // Remove border-radius for ios devices
+      // Remove border-radius for iOS devices
+      border-radius: 0;
       outline: none;
       transition: padding .2s ease;
-      -webkit-appearance: none; // Remove ios pre-defined style
+      // Remove iOS pre-defined style
+      -webkit-appearance: none;
 
       &:focus {
         padding: 7px;
@@ -396,7 +409,8 @@ body:hover .latest {
       &:focus {
         background: fade(@link-color, 5%);
         border-color: @link-color;
-        box-shadow: none; // Override Firefox default styles
+        // Override Firefox default styles
+        box-shadow: none;
       }
     }
   }
@@ -420,11 +434,6 @@ body:hover .latest {
     td {
       border-top: 1px solid fade(@text-color, 4%);
     }
-  }
-
-  // Remove extra space for the last paragraph in the container
-  & > p:last-child {
-    margin-bottom: 0;
   }
 }
 
@@ -501,7 +510,7 @@ body:hover .latest {
 }
 
 // Post list in "work" and "note"
-article .list { // ul.list
+article .list {
   list-style: none;
   margin: 0;
 
@@ -514,14 +523,16 @@ article .list { // ul.list
       line-height: 1.2;
 
       time {
-        font-size: 75%; // Avoid em unit here, it causes font size double caculating from parents node.
+        // Avoid em unit here, it causes font size double caculating from parents node.
+        font-size: 75%;
         color: fade(@text-color, 30%);
         opacity: 0;
         transition: opacity .5s ease;
       }
 
       time + a {
-        line-height: 0; // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
+        // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
+        line-height: 0;
         vertical-align: 3px;
       }
 
@@ -541,10 +552,6 @@ article .list { // ul.list
       }
     }
 
-    .content {
-      margin: 2vmin 0 10vmin;
-    }
-
     &:hover,
     &:focus {
 
@@ -554,17 +561,6 @@ article .list { // ul.list
           opacity: 1;
           transition: opacity .1s ease;
         }
-      }
-    }
-  }
-
-  &:last-child {
-
-    li:last-child {
-      margin-bottom: 0;
-
-      .content {
-        margin-bottom: 0; // Post list margin fix for Jekyll Scaffolding
       }
     }
   }
@@ -607,10 +603,12 @@ article .list { // ul.list
 
   li {
     display: none;
-    backface-visibility: hidden; // Hide the slides before the JS is loaded, this avoids image flashing
+    // Hide the slides before the JS is loaded, this avoids image flashing
+    backface-visibility: hidden;
 
     &:first-child {
-      display: block; // Display the first image when scripts are not ready
+      // Display the first image when scripts are not ready
+      display: block;
     }
 
     .flex-caption {
