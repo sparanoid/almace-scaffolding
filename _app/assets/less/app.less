@@ -37,7 +37,7 @@
 }
 
 body {
-  padding: 0 16% 16vmin;
+  padding: 0 16%;
   margin: 0 auto 0;
   font-family: @sans-serif;
   font-size: @base-font-size;
@@ -99,20 +99,16 @@ textarea {
   background-image: none;
 }
 
-// Reset comment elements
+// Reset common elements
 a, button {
+  color: @text-color;
+  text-decoration: none;
+  transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
 
-  &:link,
-  &:visited {
-    color: @text-color;
-    text-decoration: none;
-    transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
-
-    &:hover,
-    &:focus {
-      border-bottom: .1em solid;
-      transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
-    }
+  &:hover,
+  &:focus {
+    border-bottom: .1em solid;
+    transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
   }
 }
 
@@ -129,7 +125,7 @@ del {
   background: fade(@text-color, 2%);
 }
 
-// Main site logo
+// Site logo
 .logo {
   display: block;
   width: 100%;
@@ -239,15 +235,28 @@ body:hover .latest {
   }
 }
 
-// Article wrapper
-article {
+// Main content
+.content {
   margin-bottom: 16vmin;
+  overflow: hidden;
+  hyphens: auto;
   .cf; // For some specified posts in work category
 
-  img, video, iframe {
-    display: block;
-    max-width: 100%;
-    margin: 0 0 40px;
+  article {
+
+    > *:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0 0 1.1em;
+    line-height: (@base-line-height * 1.2);
   }
 
   header {
@@ -255,17 +264,14 @@ article {
 
     h1 {
       margin: 0 0 .1em;
+      .heading;
       hyphens: auto;
       line-height: 1.1;
 
       // Override margin from article img
       img {
-        margin-bottom: .6em;
+        margin-bottom: .3em;
       }
-    }
-
-    h1 {
-      .heading;
     }
 
     .latest-post {
@@ -286,24 +292,9 @@ article {
     }
 
     // Used on work page
-    & + .txt > :first-child {
-      margin-top: 0;
+    & + * {
+      margin-top: 0 !important;
     }
-  }
-}
-
-// Basic staff inside article .txt
-.txt {
-  overflow: hidden;
-  hyphens: auto;
-
-  a {
-    font-weight: bold;
-  }
-
-  p {
-    margin: 0 0 1.1em;
-    line-height: (@base-line-height * 1.2);
   }
 
   h3 {
@@ -323,6 +314,12 @@ article {
     margin-left: 1.75em;
   }
 
+  img, video, iframe {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 40px;
+  }
+
   blockquote {
     position: relative;
     margin-bottom: 2em;
@@ -330,6 +327,10 @@ article {
     > p {
       padding-left: .8em;
       border-left: 2px solid;
+    }
+
+    footer {
+      .cf;
     }
 
     cite {
@@ -355,6 +356,13 @@ article {
   code, pre {
     font-family: Menlo, monospace;
     color: #68a;
+  }
+
+  pre {
+    padding: 1em;
+    margin: 0 0 1em;
+    overflow-x: scroll;
+    background: fade(#08f, 4%);
   }
 
   // Newsletter subscription form in page "store"
@@ -393,15 +401,37 @@ article {
     }
   }
 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 80%;
+    width: 100%;
+
+    th,
+    td {
+      padding: .6em;
+    }
+
+    th {
+      border-bottom: 2px solid fade(@text-color, 6%);
+      text-align: left;
+    }
+
+    td {
+      border-top: 1px solid fade(@text-color, 4%);
+    }
+  }
+
   // Remove extra space for the last paragraph in the container
   & > p:last-child {
     margin-bottom: 0;
   }
 }
 
-// Posts with Chinese characters
-[lang=zh] {
-  text-align: justify; // Workaround solution for post with chinese
+// Posts with Asian characters
+[lang=zh],
+[lang=ja] {
+  text-align: justify;
 }
 
 // Fix empty space when a paragraph starts with some asian punctuation marks
@@ -446,7 +476,7 @@ article {
   }
 }
 
-// Special paragraph with an icon
+// Special paragraph with border line
 .note,
 .store,
 .download {
@@ -471,14 +501,17 @@ article {
 }
 
 // Post list in "work" and "note"
-.list { // ul.list
+article .list { // ul.list
   list-style: none;
+  margin: 0;
 
   li {
     margin: 0 0 1.4vmin;
 
     h2 {
       .heading;
+      font-size: 2em;
+      line-height: 1.2;
 
       time {
         font-size: 75%; // Avoid em unit here, it causes font size double caculating from parents node.
@@ -508,12 +541,7 @@ article {
       }
     }
 
-    h2 {
-      font-size: 2em;
-      line-height: 1.2;
-    }
-
-    .txt {
+    .content {
       margin: 2vmin 0 10vmin;
     }
 
@@ -535,7 +563,7 @@ article {
     li:last-child {
       margin-bottom: 0;
 
-      .txt {
+      .content {
         margin-bottom: 0; // Post list margin fix for Jekyll Scaffolding
       }
     }
@@ -543,6 +571,7 @@ article {
 }
 
 .footer {
+  padding: 0 0 16vmin;
   font-size: (1em / 1.4);
   text-transform: lowercase;
 
@@ -638,4 +667,5 @@ article {
 }
 
 // Import custom styles
+@import "syntax";
 @import "custom";
