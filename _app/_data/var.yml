@@ -15,7 +15,8 @@ url:          http://sparanoid.com
 assets:       assets
 
 # Media assets URL used in posts, ie. href="{{ site.data.var.file }}/image.png"
-file:         http://d349cztnlupsuf.cloudfront.net
+file:         http://rsrc.sparanoid.com
+# file:         http://d349cztnlupsuf.cloudfront.net
 # file:         http://sparanoid.s3-website-us-east-1.amazonaws.com
 
 # Download files URL used in posts, ie. href="{{ site.data.var.download }}/package.zip"
