@@ -37,7 +37,7 @@
 }
 
 body {
-  padding: 0 16% 16vmin;
+  padding: 0 16%;
   margin: 0 auto 0;
   font-family: @sans-serif;
   font-size: @base-font-size;
@@ -99,7 +99,7 @@ textarea {
   background-image: none;
 }
 
-// Reset comment elements
+// Reset common elements
 a, button {
 
   &:link,
@@ -129,7 +129,7 @@ del {
   background: fade(@text-color, 2%);
 }
 
-// Main site logo
+// Site logo
 .logo {
   display: block;
   width: 100%;
@@ -239,15 +239,28 @@ body:hover .latest {
   }
 }
 
-// Article wrapper
-article {
+// Main content
+.content {
   margin-bottom: 16vmin;
+  overflow: hidden;
+  hyphens: auto;
   .cf; // For some specified posts in work category
 
-  img, video, iframe {
-    display: block;
-    max-width: 100%;
-    margin: 0 0 40px;
+  article {
+
+    > *:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0 0 1.1em;
+    line-height: (@base-line-height * 1.2);
   }
 
   header {
@@ -255,6 +268,7 @@ article {
 
     h1 {
       margin: 0 0 .1em;
+      .heading;
       hyphens: auto;
       line-height: 1.1;
 
@@ -262,10 +276,6 @@ article {
       img {
         margin-bottom: .3em;
       }
-    }
-
-    h1 {
-      .heading;
     }
 
     .latest-post {
@@ -286,24 +296,9 @@ article {
     }
 
     // Used on work page
-    & + .txt > :first-child {
-      margin-top: 0;
+    & + * {
+      margin-top: 0 !important;
     }
-  }
-}
-
-// Basic staff inside article .txt
-.txt {
-  overflow: hidden;
-  hyphens: auto;
-
-  a {
-    font-weight: bold;
-  }
-
-  p {
-    margin: 0 0 1.1em;
-    line-height: (@base-line-height * 1.2);
   }
 
   h3 {
@@ -321,6 +316,12 @@ article {
 
   ol {
     margin-left: 1.75em;
+  }
+
+  img, video, iframe {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 40px;
   }
 
   blockquote {
@@ -403,9 +404,10 @@ article {
   }
 }
 
-// Posts with Chinese characters
-[lang=zh] {
-  text-align: justify; // Workaround solution for post with chinese
+// Posts with Asian characters
+[lang=zh],
+[lang=ja] {
+  text-align: justify;
 }
 
 // Fix empty space when a paragraph starts with some asian punctuation marks
@@ -450,7 +452,7 @@ article {
   }
 }
 
-// Special paragraph with an icon
+// Special paragraph with border line
 .note,
 .store,
 .download {
@@ -475,14 +477,17 @@ article {
 }
 
 // Post list in "work" and "note"
-.list { // ul.list
+article .list { // ul.list
   list-style: none;
+  margin: 0;
 
   li {
     margin: 0 0 1.4vmin;
 
     h2 {
       .heading;
+      font-size: 2em;
+      line-height: 1.2;
 
       time {
         font-size: 75%; // Avoid em unit here, it causes font size double caculating from parents node.
@@ -512,12 +517,7 @@ article {
       }
     }
 
-    h2 {
-      font-size: 2em;
-      line-height: 1.2;
-    }
-
-    .txt {
+    .content {
       margin: 2vmin 0 10vmin;
     }
 
@@ -539,7 +539,7 @@ article {
     li:last-child {
       margin-bottom: 0;
 
-      .txt {
+      .content {
         margin-bottom: 0; // Post list margin fix for Jekyll Scaffolding
       }
     }
@@ -547,6 +547,7 @@ article {
 }
 
 .footer {
+  padding: 0 0 16vmin 0;
   font-size: (1em / 1.4);
   text-transform: lowercase;
 
