@@ -401,6 +401,27 @@ body:hover .latest {
     }
   }
 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 80%;
+    width: 100%;
+
+    th,
+    td {
+      padding: .6em;
+    }
+
+    th {
+      border-bottom: 2px solid fade(@text-color, 6%);
+      text-align: left;
+    }
+
+    td {
+      border-top: 1px solid fade(@text-color, 4%);
+    }
+  }
+
   // Remove extra space for the last paragraph in the container
   & > p:last-child {
     margin-bottom: 0;
