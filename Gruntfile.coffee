@@ -7,25 +7,22 @@ module.exports = (grunt) ->
   # Track tasks load time
   require("time-grunt") grunt
 
-  # Configurable paths
-  coreConfig =
-    cfg: grunt.file.readYAML("_config.yml")
-    var: grunt.file.readYAML("./_app/_data/var.yml")
-    pkg: grunt.file.readJSON("package.json")
-    app: "<%= core.cfg.source %>"
-    dist: "<%= core.cfg.destination %>"
-    banner: do ->
-      banner = "<!--\n"
-      banner += " © <%= core.pkg.author %>.\n\n"
-      banner += " <%= core.pkg.name %> - v<%= core.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
-      # banner += " <%= core.pkg.homepage %>\n"
-      banner += " <%= core.pkg.licenses.type %> - <%= core.pkg.licenses.url %>\n"
-      banner += " -->"
-      banner
-
   # Project configurations
   grunt.initConfig
-    core: coreConfig
+    config:
+      cfg: grunt.file.readYAML("_config.yml")
+      var: grunt.file.readYAML("./_app/_data/var.yml")
+      pkg: grunt.file.readJSON("package.json")
+      app: "<%= config.cfg.source %>"
+      dist: "<%= config.cfg.destination %>"
+      banner: do ->
+        banner = "<!--\n"
+        banner += " © <%= config.pkg.author %>.\n\n"
+        banner += " <%= config.pkg.name %> - v<%= config.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
+        # banner += " <%= config.pkg.homepage %>\n"
+        banner += " <%= config.pkg.licenses.type %> - <%= config.pkg.licenses.url %>\n"
+        banner += " -->"
+        banner
 
     coffeelint:
       options:
@@ -42,10 +39,10 @@ module.exports = (grunt) ->
 
     csslint:
       options:
-        csslintrc: "<%= core.app %>/assets/less/.csslintrc"
+        csslintrc: "<%= config.app %>/assets/less/.csslintrc"
 
       test:
-        src: ["<%= core.app %>/assets/css/app.css"]
+        src: ["<%= config.app %>/assets/css/app.css"]
 
     validation:
       options:
@@ -57,7 +54,7 @@ module.exports = (grunt) ->
           "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
         ]
       dist:
-        src: ["<%= core.dist %>/**/*.html"]
+        src: ["<%= config.dist %>/**/*.html"]
 
     watch:
       coffee:
@@ -65,7 +62,7 @@ module.exports = (grunt) ->
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= core.app %>/assets/less/**/*.less"]
+        files: ["<%= config.app %>/assets/less/**/*.less"]
         tasks: ["less:server", "autoprefixer", "csslint"]
 
     less:
@@ -75,10 +72,10 @@ module.exports = (grunt) ->
           sourceMap: true
           outputSourceFiles: true
           sourceMapURL: "app.css.map"
-          sourceMapFilename: "<%= core.app %>/assets/css/app.css.map"
+          sourceMapFilename: "<%= config.app %>/assets/css/app.css.map"
 
-        src: ["<%= core.app %>/assets/less/app.less"]
-        dest: "<%= core.app %>/assets/css/app.css"
+        src: ["<%= config.app %>/assets/less/app.less"]
+        dest: "<%= config.app %>/assets/css/app.css"
 
       dist:
         src: ["<%= less.server.src %>"]
@@ -91,7 +88,7 @@ module.exports = (grunt) ->
 
     csscomb:
       options:
-        config: "<%= core.app %>/assets/less/.csscomb.json"
+        config: "<%= config.app %>/assets/less/.csscomb.json"
 
       dist:
         src: ["<%= less.server.dest %>"]
@@ -114,18 +111,18 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= core.dist %>"
+          cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= core.dist %>/"
+          dest: "<%= config.dist %>/"
         ]
 
     xmlmin:
       dist:
         files: [
           expand: true
-          cwd: "<%= core.dist %>"
+          cwd: "<%= config.dist %>"
           src: "**/*.xml"
-          dest: "<%= core.dist %>/"
+          dest: "<%= config.dist %>/"
         ]
 
     cssmin:
@@ -135,16 +132,16 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= core.dist %>/assets/css/"
+          cwd: "<%= config.dist %>/assets/css/"
           src: ["*.css", "!*.min.css"]
-          dest: "<%= core.dist %>/assets/css/"
+          dest: "<%= config.dist %>/assets/css/"
         ]
 
       # html:
       #   expand: true
-      #   cwd: "<%= core.dist %>"
+      #   cwd: "<%= config.dist %>"
       #   src: "**/*.html"
-      #   dest: "<%= core.dist %>"
+      #   dest: "<%= config.dist %>"
 
     rev:
       options:
@@ -153,39 +150,39 @@ module.exports = (grunt) ->
         length: 6
 
       files:
-        src: ["<%= core.dist %>/assets/**/*.{js,css,png,jpg,gif,woff}"]
+        src: ["<%= config.dist %>/assets/**/*.{js,css,png,jpg,gif,woff}"]
 
     useminPrepare:
-      html: "<%= core.dist %>/index.html"
+      html: "<%= config.dist %>/index.html"
 
     usemin:
       options:
-        assetsDirs: ["<%= core.dist %>"]
+        assetsDirs: ["<%= config.dist %>"]
 
-      html: ["<%= core.dist %>/**/*.html"]
-      css: ["<%= core.dist %>/assets/css/*.css"]
+      html: ["<%= config.dist %>/**/*.html"]
+      css: ["<%= config.dist %>/assets/css/*.css"]
 
     smoosher:
       options:
-        jsDir: "<%= core.dist %>"
-        cssDir: "<%= core.dist %>"
+        jsDir: "<%= config.dist %>"
+        cssDir: "<%= config.dist %>"
 
       dist:
         files: [
           expand: true
-          cwd: "<%= core.dist %>"
+          cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= core.dist %>/"
+          dest: "<%= config.dist %>/"
         ]
 
     usebanner:
       options:
         position: "bottom"
-        banner: "<%= core.banner %>"
+        banner: "<%= config.banner %>"
 
       dist:
         files:
-          src: ["<%= core.dist %>/**/*.html"]
+          src: ["<%= config.dist %>/**/*.html"]
 
     shell:
       options:
@@ -198,13 +195,13 @@ module.exports = (grunt) ->
         command: "jekyll build"
 
       archive:
-        command: "jekyll build -d <%= core.cfg.destination %><%= core.var.base %>/"
+        command: "jekyll build -d <%= config.cfg.destination %><%= config.var.base %>/"
 
       sync:
-        command: "rsync -avz --delete --progress <%= core.var.ignore_files %> <%= core.dist %>/ <%= core.var.remote_host %>:<%= core.var.remote_dir %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= config.var.ignore_files %> <%= config.dist %>/ <%= config.var.remote_host %>:<%= config.var.remote_dir %> > rsync.log"
 
       s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.var.static_files %> <%= core.var.s3_bucket %>"
+        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= config.var.static_files %> <%= config.var.s3_bucket %>"
 
     concurrent:
       options:
@@ -218,14 +215,14 @@ module.exports = (grunt) ->
 
     clean:
       dist:
-        src: [".tmp", "<%= core.dist %>"]
+        src: [".tmp", "<%= config.dist %>"]
 
       postDist:
-        src: ["<%= core.dist %>/assets/css/", "<%= core.dist %>/assets/js/"]
+        src: ["<%= config.dist %>/assets/css/", "<%= config.dist %>/assets/js/"]
 
     cleanempty:
       dist:
-        src: ["<%= core.dist %>/**/*"]
+        src: ["<%= config.dist %>/**/*"]
 
   # Fire up a server on local machine for development
   grunt.registerTask "serve", [
