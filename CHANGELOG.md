@@ -1,3 +1,29 @@
+<a name="24.0.5"></a>
+### 24.0.5 (2014-04-01)
+
+
+#### Bug Fixes
+
+* **post:** remove unwanted HTML comments for posts ([f5ffc0ee](http://github.com/sparanoid/sparanoid.com/commit/f5ffc0ee55a32cbcbd8710d36d65006a44ec95e2))
+* **style:** more aggressive “last-child” reset ([7b55093d](http://github.com/sparanoid/sparanoid.com/commit/7b55093d13e357a72d370b00db529424fba4fc27))
+
+
+#### Features
+
+* **style:**
+  * remove unused `.btn` class ([600121ff](http://github.com/sparanoid/sparanoid.com/commit/600121ff0b16426c1898dbaf526b88c91c88e6fe))
+  * simplified transition ([3e8baa82](http://github.com/sparanoid/sparanoid.com/commit/3e8baa82165dae2542ee30fd2b49bfbda8ba1a6f))
+* **template:** add Redcarpet footnote support ([2c9d67f4](http://github.com/sparanoid/sparanoid.com/commit/2c9d67f439dbd17c2514475679d40ad515aaa895))
+
+
+#### Breaking Changes
+
+* New Redcarpet footnote will break existing footnote markup. Update your posts to avoid unwanted breaks.
+
+You can read more about the footnote syntax at https://github.com/vmg/redcarpet
+ ([2c9d67f4](http://github.com/sparanoid/sparanoid.com/commit/2c9d67f439dbd17c2514475679d40ad515aaa895))
+
+
 <a name="24.0.4"></a>
 ### 24.0.4 (2014-04-01)
 
