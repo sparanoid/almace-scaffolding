@@ -98,12 +98,12 @@ textarea {
 a, button {
   color: @text-color;
   text-decoration: none;
-  transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
+  transition: color .5s ease, border-color .5s ease, background .5s ease, opacity 1.5s ease;
 
   &:hover,
   &:focus {
     border-bottom: .1em solid;
-    transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
+    transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
   }
 }
 
@@ -128,7 +128,6 @@ del {
   margin: 0 0 1.4vmin;
   background: @link-color;
   opacity: 0;
-  transition: background .3s ease;
 
   &:hover,
   &:focus {
@@ -181,11 +180,7 @@ body:hover .logo {
   }
 }
 
-// Animate latest work link
-.latest {
-  transition: color .3s ease;
-}
-
+// Latest work link
 body:hover .latest {
   color: @link-color !important;
 }
@@ -243,18 +238,18 @@ body:hover .latest {
 
     // article > p
     > *:last-child {
-      padding-bottom: 0;
-      margin-bottom: 0;
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
 
       // article > ul > li
       > *:last-child {
-        padding-bottom: 0;
-        margin-bottom: 0;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
 
         // article > ul > li > p
         > *:last-child {
-          padding-bottom: 0;
-          margin-bottom: 0;
+          padding-bottom: 0 !important;
+          margin-bottom: 0 !important;
         }
       }
     }
@@ -495,18 +490,16 @@ body:hover .latest {
 }
 
 // Reference notes and links in post
-.reflist {
+.footnotes {
   font-size: 90%;
   font-style: italic;
 }
 
-.cite,
-.ref {
-  border-bottom: none !important;
+:target {
 
-  &:target {
+  [rev=footnote],
+  [rel=footnote] {
     color: @link-color;
-    text-shadow: 0 2px 15px @link-color;
   }
 }
 
