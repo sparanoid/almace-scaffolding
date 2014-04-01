@@ -29,7 +29,7 @@ scheme-bg: "#317979"
       <img src="{{ site.data.var.file }}/antiskill-screensaver-from-academy-city-02.jpg" alt="Original Antiskill Screensaver from Academy City">
     </li>
   </ul>
-</div><!-- .flexslider -->
+</div>
 
 <p lang=zh>來自學園都市風紀委員 177 支部的屏保，網上之前貌似有人做過，但效果不理想，重新做一下，自適應寬高比，最大測試過 2560x1600 的顯示器。另外做安裝包的同時順帶做了個圖標，<a href="{{ site.data.var.file }}/judgment-screensaver-icon-from-academy-city-01.png">內含七種顔色</a></p>
 

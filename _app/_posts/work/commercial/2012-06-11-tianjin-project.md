@@ -40,7 +40,7 @@ link: /lab/tianjin/
       <img src="{{ site.data.var.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6">
     </li>
   </ul>
-</div><!-- .flexslider -->
+</div>
 
 <h3>Promo Video</h3>
 <iframe src="http://player.vimeo.com/video/54786277?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ee3344" width="750" height="422" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

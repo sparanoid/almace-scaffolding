@@ -31,7 +31,7 @@ plugin: slider
       <p class="flex-caption">Delicious UI Preview</p>
     </li>
   </ul>
-</div><!-- .flexslider -->
+</div>
 
 <p>Some fun facts:</p>
 
