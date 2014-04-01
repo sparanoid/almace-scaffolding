@@ -55,7 +55,7 @@
     {% if page.scheme-hover %}
     .navigation li a:hover,
     .navigation li a:focus {
-      color:{{ page.scheme-hover }};
+      color: {{ page.scheme-hover }};
     }
     {% endif %}
 
@@ -79,7 +79,7 @@
 
     {% if page.scheme-link %}
     .btn {
-      background:{{ page.scheme-link }};
+      background: {{ page.scheme-link }};
     }
     {% endif %}
 
@@ -102,6 +102,13 @@
     .store,
     .download {
       border-left-color: {{ page.scheme-link }};
+    }
+    {% endif %}
+
+    {% if page.scheme-hover %}
+    :target [rev=footnote],
+    :target [rel=footnote] {
+      color: {{ page.scheme-hover }};
     }
     {% endif %}
   </style>
