@@ -38,7 +38,13 @@
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 - Please keep the credits in template file, thanks.
 
-## Avaiable Styles and Scripts
+## Avaiable Styles, Scripts, and Tips
+
+Not familer with [Markdown](http://daringfireball.net/projects/markdown/)? Try [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
+- You can use Jekyll's [built-in syntax highlighting](http://jekyllrb.com/docs/templates/#code_snippet_highlighting), I've included a default theme for this project
+- [Tables](https://help.github.com/articles/github-flavored-markdown#tables) and [footnotes](https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use) are also avaiables to use
+- I've written some useful CSS classes for you, see below:
 
 ### `.note`, `.store`, and `.download`
 
@@ -50,10 +56,6 @@ Useage:
 <p class=download><a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub</p>
 <p class=store>Love this plugin? please consider <a href="{{ site.data.var.donate }}">buying me a cup of coffee.</a></p>
 ```
-
-### `.reflist`, `.cite`, and `.ref`
-
-WIP
 
 ### `.browser`
 
