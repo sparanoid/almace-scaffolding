@@ -98,12 +98,12 @@ textarea {
 a, button {
   color: @text-color;
   text-decoration: none;
-  transition: color .5s ease, border-color .5s ease, background-color .5s ease, opacity 1.5s ease;
+  transition: color .5s ease, border-color .5s ease, background .5s ease, opacity 1.5s ease;
 
   &:hover,
   &:focus {
     border-bottom: .1em solid;
-    transition: color .1s ease, border-color .1s ease, background-color .1s ease, opacity .1s ease;
+    transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
   }
 }
 
@@ -128,7 +128,6 @@ del {
   margin: 0 0 1.4vmin;
   background: @link-color;
   opacity: 0;
-  transition: background .3s ease;
 
   &:hover,
   &:focus {
@@ -181,11 +180,7 @@ body:hover .logo {
   }
 }
 
-// Animate latest work link
-.latest {
-  transition: color .3s ease;
-}
-
+// Latest work link
 body:hover .latest {
   color: @link-color !important;
 }
