@@ -106,8 +106,13 @@ module.exports = (grunt) ->
           removeRedundantAttributes: true
           useShortDoctype: false
           removeEmptyAttributes: true
-          removeOptionalTags: false
+          removeOptionalTags: true
           removeEmptyElements: false
+          lint: false
+          keepClosingSlash: false
+          caseSensitive: true
+          minifyJS: true
+          minifyCSS: true
 
         files: [
           expand: true
