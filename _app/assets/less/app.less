@@ -490,18 +490,16 @@ body:hover .latest {
 }
 
 // Reference notes and links in post
-.reflist {
+.footnotes {
   font-size: 90%;
   font-style: italic;
 }
 
-.cite,
-.ref {
-  border-bottom: none !important;
+:target {
 
-  &:target {
+  [rev=footnote],
+  [rel=footnote] {
     color: @link-color;
-    text-shadow: 0 2px 15px @link-color;
   }
 }
 
