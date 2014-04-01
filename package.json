@@ -1,7 +1,7 @@
 {
   "name": "jekyll-scaffolding",
-  "version": "0.0.6",
-  "description": "Jekyll Scaffolding, sleek default theme, livereload, LESS auto-compile, prefix-free",
+  "version": "0.0.7",
+  "description": "Jekyll Scaffolding, a sleek and super-fast responsive theme with only one HTTP request",
   "author": "Tunghsiao Liu",
   "homepage": "http://sparanoid.com/work/jekyll-scaffolding/",
   "main": "Gruntfile.coffee",
