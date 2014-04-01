@@ -77,26 +77,6 @@
     }
     {% endif %}
 
-    {% if page.scheme-link %}
-    .btn {
-      background: {{ page.scheme-link }};
-    }
-    {% endif %}
-
-    {% if page.scheme-bg %}
-    .btn:link, .btn:visited {
-      color: {{ page.scheme-bg }};
-    }
-    {% endif %}
-
-    .btn:link:focus, .btn:visited:focus,
-    .btn:link:hover, .btn:visited:hover {
-      color: {{ page.scheme-bg }};
-      {% if page.scheme-text %}
-      background: {{ page.scheme-text }};
-      {% endif %}
-    }
-
     {% if page.scheme-text %}
     .note,
     .store,
