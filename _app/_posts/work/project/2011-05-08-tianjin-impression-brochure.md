@@ -26,6 +26,6 @@ plugin: slider
       <img src="{{ site.data.var.file }}/tianjin-impression-brochure-05.jpg">
     </li>
   </ul>
-</div><!-- .flexslider -->
+</div>
 
 <p>Tianjin Impression brochure for my college work. Thanks to BK HAN, pomphorhynchus, Bad Jim, kilroy238, Takayuki Shiraiwa and I.S.S</p>
