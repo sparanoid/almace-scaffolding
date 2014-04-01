@@ -75,7 +75,13 @@ WIP
 
 ## Demo
 
-<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/01-jekyll-scaffolding.png" alt="Jekyll Scaffolding Preview">
+<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-01.png" alt="Jekyll Scaffolding Preview">
+
+<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-02.png" alt="Jekyll Scaffolding Preview">
+
+<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-03.png" alt="Jekyll Scaffolding Preview">
+
+<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-04.png" alt="Jekyll Scaffolding Preview" width="414">
 
 You can see a more complex live demo using this framework at [my site](http://sparanoid.com/).
 
