@@ -1,5 +1,4 @@
 # Numerous always-ignore extensions
-Gemfile.lock
 *.diff
 *.err
 *.orig
