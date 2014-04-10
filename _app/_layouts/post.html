@@ -52,7 +52,7 @@ layout: default
     {% else %}
       <h1>
         {% if page.link %}
-          <a href="{{ page.link }}">{{ page.title }} &middot;</a>
+          <a href="{{ page.link }}" class=external>{{ page.title }} <span></span></a>
         {% else %}
           {{ page.title }}
         {% endif %}

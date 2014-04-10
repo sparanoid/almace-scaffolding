@@ -12,16 +12,24 @@
       {% endif %}
     {% endcapture %}
 
+    <!-- Dynamic background color based on post color scheme -->
+    {% capture post_link_bg %}
+      {% if post.scheme-bg %}
+        {% if post.scheme-bg-light %}
+          style="background: {{ post.scheme-text }};"
+        {% else %}
+          style="background: {{ post.scheme-bg }};"
+        {% endif %}
+      {% endif %}
+    {% endcapture %}
+
     <!-- Item title -->
     <a href="{{ site.data.var.base }}{{ post.url }}" {{ post_link_color }}>{{ post.title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}
-      <a href="{{ post.link }}" class=external><span>&middot;</span></a>
+      <a href="{{ post.link }}" class=external><span {{ post_link_bg }}></span></a>
     {% endif %}
-
-    <!-- Item timestamp -->
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%y" }}</time>
   </h2>
 
   {% if site.data.var.demo %}
