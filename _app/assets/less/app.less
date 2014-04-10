@@ -519,45 +519,42 @@ article .list {
       line-height: 1.2;
 
       time {
-        // Avoid em unit here, it causes font size double caculating from parents node.
-        font-size: 75%;
-        color: fade(@text-color, 30%);
+        font-size: 50%;
+        color: lighten(@text-color, 70%);
         opacity: 0;
         transition: opacity .5s ease;
       }
-
-      time + a {
-        // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
-        line-height: 0;
-        vertical-align: 3px;
-      }
-
-      .external {
-        padding: 0 .2em;
-
-        span {
-          display: inline-block;
-          width: 14px;
-        }
-
-        &:hover,
-        &:focus {
-          color: @link-color;
-          border: none;
-        }
-      }
     }
+  }
+
+  .external {
 
     &:hover,
     &:focus {
+      border: none;
+    }
+  }
+}
 
-      h2 {
+.external {
+  line-height: 1;
 
-        time {
-          opacity: 1;
-          transition: opacity .1s ease;
-        }
-      }
+  span {
+    display: inline-block;
+    width: .2em;
+    height: .2em;
+    margin: 0 .1em;
+    vertical-align: middle;
+    background: @text-color;
+    border-radius: 50%;
+    transition: transform .4s ease;
+  }
+
+  &:hover,
+  &:focus {
+
+    span {
+      transform: scale(1.4);
     }
   }
 }
@@ -639,7 +636,7 @@ article .list {
 
       h2 {
 
-        time {
+        .external {
           display: none;
         }
       }
