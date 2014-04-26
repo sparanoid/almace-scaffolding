@@ -7,6 +7,7 @@ layout: default
 
   <!-- Post title -->
   <header>
+    <!-- Prepare for image headers -->
     {% capture image_header %}
       <img
         src="{{ site.data.var.file }}/{{ page.img-headline }}"
@@ -19,6 +20,7 @@ layout: default
       >
     {% endcapture %}
 
+    <!-- Prepare for SVG headers -->
     {% capture svg_header %}
       <style scoped>
         article h1 svg {
@@ -26,7 +28,9 @@ layout: default
           height: {{ page.svg-headline-height }}px;
         }
       </style>
-      {{ page.svg-headline }}
+      {% for i in page.svg-headline %}
+        {% include {{ i }} %}
+      {% endfor %}
     {% endcapture %}
 
     {% if page.img-headline %}
