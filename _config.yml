@@ -7,7 +7,6 @@
 
 source:       ./_app
 destination:  ./_site
-exclude:      ['less']
 timezone:     Asia/Hong_Kong
 permalink:    /:categories/:title/
 markdown:     redcarpet
@@ -30,4 +29,10 @@ future:       false
 #
 
 redcarpet:
-  extensions: [footnotes, no_intra_emphasis, smart, space_after_headers, superscript, tables]
+  extensions:
+    - footnotes
+    - no_intra_emphasis
+    - smart
+    - space_after_headers
+    - superscript
+    - tables
