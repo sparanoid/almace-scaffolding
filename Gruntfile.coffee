@@ -34,12 +34,12 @@ module.exports = (grunt) ->
         max_line_length:
           level: "ignore"
 
-      test:
+      gruntfile:
         src: ["Gruntfile.coffee"]
 
     csslint:
       options:
-        csslintrc: "<%= config.app %>/assets/less/.csslintrc"
+        csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
 
       test:
         src: ["<%= config.app %>/assets/css/app.css"]
@@ -58,12 +58,16 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ["<%= coffeelint.test.src %>"]
-        tasks: ["coffeelint"]
+        files: ["<%= coffeelint.gruntfile.src %>"]
+        tasks: ["coffeelint:gruntfile"]
 
       less:
-        files: ["<%= config.app %>/assets/less/**/*.less"]
-        tasks: ["less:server", "autoprefixer", "csslint"]
+        files: ["<%= config.app %>/assets/_less/**/*.less"]
+        tasks: [
+          "less:server"
+          "autoprefixer"
+          # "csslint"
+        ]
 
     less:
       server:
@@ -74,7 +78,7 @@ module.exports = (grunt) ->
           sourceMapURL: "app.css.map"
           sourceMapFilename: "<%= config.app %>/assets/css/app.css.map"
 
-        src: ["<%= config.app %>/assets/less/app.less"]
+        src: ["<%= config.app %>/assets/_less/app.less"]
         dest: "<%= config.app %>/assets/css/app.css"
 
       dist:
@@ -88,7 +92,7 @@ module.exports = (grunt) ->
 
     csscomb:
       options:
-        config: "<%= config.app %>/assets/less/.csscomb.json"
+        config: "<%= config.app %>/assets/_less/.csscomb.json"
 
       dist:
         src: ["<%= less.server.dest %>"]
@@ -102,14 +106,14 @@ module.exports = (grunt) ->
           removeCDATASectionsFromCDATA: true
           collapseWhitespace: true
           collapseBooleanAttributes: true
-          removeAttributeQuotes: true
+          removeAttributeQuotes: false
           removeRedundantAttributes: true
           useShortDoctype: false
           removeEmptyAttributes: true
           removeOptionalTags: true
           removeEmptyElements: false
           lint: false
-          keepClosingSlash: false
+          keepClosingSlash: true
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
@@ -213,17 +217,30 @@ module.exports = (grunt) ->
         logConcurrentOutput: true
 
       server:
-        tasks: ["shell:server", "watch"]
+        tasks: [
+          "shell:server"
+          "watch"
+        ]
 
       dist:
-        tasks: ["htmlmin", "xmlmin", "cssmin"]
+        tasks: [
+          "htmlmin"
+          "xmlmin"
+          "cssmin"
+        ]
 
     clean:
       dist:
-        src: [".tmp", "<%= config.dist %>"]
+        src: [
+          ".tmp"
+          "<%= config.dist %>"
+        ]
 
       postDist:
-        src: ["<%= config.dist %>/assets/css/", "<%= config.dist %>/assets/js/"]
+        src: [
+          "<%= config.dist %>/assets/css/"
+          "<%= config.dist %>/assets/js/"
+        ]
 
     cleanempty:
       dist:
@@ -231,48 +248,49 @@ module.exports = (grunt) ->
 
   # Fire up a server on local machine for development
   grunt.registerTask "serve", [
-      "clean"
-    , "concurrent:server"
+    "clean"
+    "less:server"
+    "concurrent:server"
   ]
 
   # Test task
   grunt.registerTask "test", [
-      "build"
-    # , "csslint"
-    , "validation"
+    "build"
+    # "csslint"
+    "validation"
   ]
 
   # Build site with `jekyll`
   grunt.registerTask "build", [
-      "clean"
-    , "coffeelint"
-    , "useminPrepare"
-    , "less:dist"
-    , "autoprefixer"
-    , "csscomb"
-    , "shell:dist"
-    , "rev"
-    , "usemin"
-    , "concurrent:dist"
-    , "smoosher"
-    , "usebanner"
-    , "clean:postDist"
+    "clean"
+    "coffeelint"
+    "useminPrepare"
+    "less:dist"
+    "autoprefixer"
+    "csscomb"
+    "shell:dist"
+    "rev"
+    "usemin"
+    "concurrent:dist"
+    "smoosher"
+    "usebanner"
+    "clean:postDist"
   ]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", [
-      "clean"
-    , "less:dist"
-    , "autoprefixer"
-    , "csscomb"
-    , "shell:archive"
-    , "concurrent:dist"
+    "clean"
+    "less:dist"
+    "autoprefixer"
+    "csscomb"
+    "shell:archive"
+    "concurrent:dist"
   ]
 
   # Build site + rsync static files to remote server
   grunt.registerTask "sync", [
-      "build"
-    , "shell:sync"
+    "build"
+    "shell:sync"
   ]
 
   # Sync image assets with `s3cmd`
