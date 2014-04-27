@@ -12,10 +12,13 @@
 {% if page.title == site.data.var.name %}<link rel=dns-prefetch href="{{ site.data.var.file }}">{% endif %}
 
 <!-- Define a description for better SEO result, exclude homepage -->
-{% capture content_description %}{{ page.content | strip_html | strip_newlines | xml_escape | truncate: 240 }}{% endcapture %}
+{% capture content_description %}
+  {{ page.content | strip_html | strip_newlines | xml_escape | truncatewords: 50 | replace: '  ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' | append: '…' }}
+{% endcapture %}
+
 {% if page.permalink != '/' %}
   {% if page.excerpt %}
-    <meta name=description content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 160 }}">
+    <meta name=description content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncatewords: 30 }}">
   {% elsif page.desc %}
     <meta name=description content="{{ page.desc | strip_html | strip_newlines | xml_escape }}">
   {% else %}
