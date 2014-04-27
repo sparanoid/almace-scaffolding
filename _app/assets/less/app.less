@@ -616,6 +616,7 @@ article .list {
 
 // Media query stack
 @media (max-width: 1000px) {
+
   body {
     padding-left: 8%;
     padding-right: 8%;
@@ -624,27 +625,27 @@ article .list {
 }
 
 @media (max-width: 640px) {
+
   body {
     padding-left: 4%;
     padding-right: 4%;
     font-size: (@base-font-size * 2);
   }
 
-  .list {
+  // Override viewport units defined in post.html
+  article h1 svg {
+    width: 100% !important;
+    height: 100% !important;
+  }
 
-    li {
-
-      h2 {
-
-        .external {
-          display: none;
-        }
-      }
-    }
+  // Hide external link for post list
+  .list li h2 .external {
+    display: none;
   }
 }
 
 @media (max-width: 400px) {
+
   body {
     font-size: (@base-font-size * 2.8);
   }
@@ -652,6 +653,8 @@ article .list {
 
 // All iOS devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
+
+  // Avoid font-size smart alec
   body {
     -webkit-text-size-adjust: none;
   }
