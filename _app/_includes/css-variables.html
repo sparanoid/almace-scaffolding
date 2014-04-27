@@ -19,21 +19,11 @@
     }
 
     {% if page.scheme-text %}
-    a:link,
-    a:visited,
-    button:link,
-    button:visited {
+    a,
+    button {
       color: {{ page.scheme-text }};
     }
     {% endif %}
-      {% if page.scheme-hover %}
-      a:link:hover, a:link:focus,
-      a:visited:hover, a:visited:focus,
-      button:link:hover, button:link:focus,
-      button:visited:hover, button:visited:focus {
-        color: {{ page.scheme-hover }};
-      }
-      {% endif %}
 
     {% if page.scheme-link %}
     ::selection {
@@ -66,7 +56,6 @@
 
     .content a {
       color: {{ page.scheme-link }};
-      border-bottom: none;
     }
     {% endif %}
 
@@ -82,6 +71,12 @@
     .store,
     .download {
       border-left-color: {{ page.scheme-link }};
+    }
+    {% endif %}
+
+    {% if page.scheme-link %}
+    .external span {
+      background: {{ page.scheme-link }};
     }
     {% endif %}
 

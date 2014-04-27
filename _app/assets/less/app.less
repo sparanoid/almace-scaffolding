@@ -228,7 +228,6 @@ body:hover .latest {
 // Main content
 .content {
   margin-bottom: 16vmin;
-  overflow: hidden;
   hyphens: auto;
   // For some specified posts in work category
   .cf;
@@ -270,7 +269,13 @@ body:hover .latest {
       hyphens: auto;
       line-height: 1.1;
 
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
       // Override margin from article img
+      svg,
       img {
         margin-bottom: .3em;
       }
@@ -514,45 +519,42 @@ article .list {
       line-height: 1.2;
 
       time {
-        // Avoid em unit here, it causes font size double caculating from parents node.
-        font-size: 75%;
-        color: fade(@text-color, 30%);
+        font-size: 50%;
+        color: lighten(@text-color, 70%);
         opacity: 0;
         transition: opacity .5s ease;
       }
-
-      time + a {
-        // An infinite symbol next to the post date, need line-height: 0 to make vertical-align work
-        line-height: 0;
-        vertical-align: 3px;
-      }
-
-      .external {
-        padding: 0 .2em;
-
-        span {
-          display: inline-block;
-          width: 14px;
-        }
-
-        &:hover,
-        &:focus {
-          color: @link-color;
-          border: none;
-        }
-      }
     }
+  }
+
+  .external {
 
     &:hover,
     &:focus {
+      border: none;
+    }
+  }
+}
 
-      h2 {
+.external {
+  line-height: 1;
 
-        time {
-          opacity: 1;
-          transition: opacity .1s ease;
-        }
-      }
+  span {
+    display: inline-block;
+    width: .2em;
+    height: .2em;
+    margin: 0 .1em;
+    vertical-align: middle;
+    background: @text-color;
+    border-radius: 50%;
+    transition: transform .4s ease;
+  }
+
+  &:hover,
+  &:focus {
+
+    span {
+      transform: scale(1.4);
     }
   }
 }
@@ -614,6 +616,7 @@ article .list {
 
 // Media query stack
 @media (max-width: 1000px) {
+
   body {
     padding-left: 8%;
     padding-right: 8%;
@@ -622,27 +625,27 @@ article .list {
 }
 
 @media (max-width: 640px) {
+
   body {
     padding-left: 4%;
     padding-right: 4%;
     font-size: (@base-font-size * 2);
   }
 
-  .list {
+  // Override viewport units defined in post.html
+  article h1 svg {
+    width: 100% !important;
+    height: 100% !important;
+  }
 
-    li {
-
-      h2 {
-
-        time {
-          display: none;
-        }
-      }
-    }
+  // Hide external link for post list
+  .list li h2 .external {
+    display: none;
   }
 }
 
 @media (max-width: 400px) {
+
   body {
     font-size: (@base-font-size * 2.8);
   }
@@ -650,6 +653,8 @@ article .list {
 
 // All iOS devices, the easiest way
 @media (max-device-width: 480px), (max-device-width: 1024px) {
+
+  // Avoid font-size smart alec
   body {
     -webkit-text-size-adjust: none;
   }
