@@ -1,3 +1,47 @@
+<a name="24.0.6"></a>
+### 24.0.6 (2014-04-27)
+
+
+#### Bug Fixes
+
+* include the missing gem lock file ([2a546df9](http://github.com/sparanoid/sparanoid.com/commit/2a546df94bdeea1ead054ef653627fb9b92a4e2e))
+* **style:**
+  * avoid smoosh container edge ([75f66dfc](http://github.com/sparanoid/sparanoid.com/commit/75f66dfcfc60ef3e17f26c652a5e9e32006b835f))
+  * remove padding reset for last child elements ([62caf45f](http://github.com/sparanoid/sparanoid.com/commit/62caf45fc00132192694a9994a36ba168bf2cf1c))
+
+
+#### Features
+
+* better external link post indicator ([6393ea07](http://github.com/sparanoid/sparanoid.com/commit/6393ea07d74672599b9cf7dd17ec5a3becb65174))
+* **style:** SVG headlines got viewport units support ([f818a7b1](http://github.com/sparanoid/sparanoid.com/commit/f818a7b1d626a4581c4a1d81df06d17d7c9b4dd1))
+* **template:**
+  * better inline SVG post title support ([6c33d1d6](http://github.com/sparanoid/sparanoid.com/commit/6c33d1d678d9a5228f160bae82be8748c966501a))
+  * inline SVG headline support ([89d3dac3](http://github.com/sparanoid/sparanoid.com/commit/89d3dac3413e11e5139cf8c96e2adc490d27ad9a))
+  * better Twitter Cards support ([39d5c5e9](http://github.com/sparanoid/sparanoid.com/commit/39d5c5e9670c9bedb32bff8f4c807eb156cc1f8f))
+
+
+#### Breaking Changes
+
+* Now I dynamically include headline SVG based on post front-matter data `svg-headline`:
+
+```
+---
+title: Hello World!
+category: work
+svg-headline: svg/post-title.svg
+svg-headline-width: 400
+svg-headline-height: 145
+---
+```
+
+Note:
+
+- The method to include SVG files has been changed since ([89d3dac341](http://github.com/sparanoid/sparanoid.com/commit/89d3dac3413e11e5139cf8c96e2adc490d27ad9a)), instead of embedding SVG into post files, now it include SVGs from external files using Liquid template tags `include`
+- I use `for` loop here to include SVG file, it doesn't mean you can define multiple SVG header here, it's just a workaround since include files in a sub-directory with variable seems buggy: https://github.com/jekyll/jekyll/pull/1495
+- In most cases, you have to define `svg-headline-width` and `svg-headline-height` in order to make your SVG title responsive to your viewport.
+ ([6c33d1d6](http://github.com/sparanoid/sparanoid.com/commit/6c33d1d678d9a5228f160bae82be8748c966501a))
+
+
 <a name="24.0.5"></a>
 ### 24.0.5 (2014-04-01)
 
