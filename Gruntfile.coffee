@@ -63,7 +63,11 @@ module.exports = (grunt) ->
 
       less:
         files: ["<%= config.app %>/assets/less/**/*.less"]
-        tasks: ["less:server", "autoprefixer", "csslint"]
+        tasks: [
+          "less:server"
+          "autoprefixer"
+          # "csslint"
+        ]
 
     less:
       server:
@@ -102,14 +106,14 @@ module.exports = (grunt) ->
           removeCDATASectionsFromCDATA: true
           collapseWhitespace: true
           collapseBooleanAttributes: true
-          removeAttributeQuotes: true
+          removeAttributeQuotes: false
           removeRedundantAttributes: true
           useShortDoctype: false
           removeEmptyAttributes: true
           removeOptionalTags: true
           removeEmptyElements: false
           lint: false
-          keepClosingSlash: false
+          keepClosingSlash: true
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
@@ -231,48 +235,48 @@ module.exports = (grunt) ->
 
   # Fire up a server on local machine for development
   grunt.registerTask "serve", [
-      "clean"
-    , "concurrent:server"
+    "clean"
+    "concurrent:server"
   ]
 
   # Test task
   grunt.registerTask "test", [
-      "build"
-    # , "csslint"
-    , "validation"
+    "build"
+    # "csslint"
+    "validation"
   ]
 
   # Build site with `jekyll`
   grunt.registerTask "build", [
-      "clean"
-    , "coffeelint"
-    , "useminPrepare"
-    , "less:dist"
-    , "autoprefixer"
-    , "csscomb"
-    , "shell:dist"
-    , "rev"
-    , "usemin"
-    , "concurrent:dist"
-    , "smoosher"
-    , "usebanner"
-    , "clean:postDist"
+    "clean"
+    "coffeelint"
+    "useminPrepare"
+    "less:dist"
+    "autoprefixer"
+    "csscomb"
+    "shell:dist"
+    "rev"
+    "usemin"
+    "concurrent:dist"
+    "smoosher"
+    "usebanner"
+    "clean:postDist"
   ]
 
   # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
   grunt.registerTask "archive", [
-      "clean"
-    , "less:dist"
-    , "autoprefixer"
-    , "csscomb"
-    , "shell:archive"
-    , "concurrent:dist"
+    "clean"
+    "less:dist"
+    "autoprefixer"
+    "csscomb"
+    "shell:archive"
+    "concurrent:dist"
   ]
 
   # Build site + rsync static files to remote server
   grunt.registerTask "sync", [
-      "build"
-    , "shell:sync"
+    "build"
+    "shell:sync"
   ]
 
   # Sync image assets with `s3cmd`
