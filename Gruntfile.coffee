@@ -34,12 +34,12 @@ module.exports = (grunt) ->
         max_line_length:
           level: "ignore"
 
-      test:
+      gruntfile:
         src: ["Gruntfile.coffee"]
 
     csslint:
       options:
-        csslintrc: "<%= config.app %>/assets/less/.csslintrc"
+        csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
 
       test:
         src: ["<%= config.app %>/assets/css/app.css"]
@@ -58,11 +58,11 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ["<%= coffeelint.test.src %>"]
-        tasks: ["coffeelint"]
+        files: ["<%= coffeelint.gruntfile.src %>"]
+        tasks: ["coffeelint:gruntfile"]
 
       less:
-        files: ["<%= config.app %>/assets/less/**/*.less"]
+        files: ["<%= config.app %>/assets/_less/**/*.less"]
         tasks: [
           "less:server"
           "autoprefixer"
@@ -78,7 +78,7 @@ module.exports = (grunt) ->
           sourceMapURL: "app.css.map"
           sourceMapFilename: "<%= config.app %>/assets/css/app.css.map"
 
-        src: ["<%= config.app %>/assets/less/app.less"]
+        src: ["<%= config.app %>/assets/_less/app.less"]
         dest: "<%= config.app %>/assets/css/app.css"
 
       dist:
@@ -92,7 +92,7 @@ module.exports = (grunt) ->
 
     csscomb:
       options:
-        config: "<%= config.app %>/assets/less/.csscomb.json"
+        config: "<%= config.app %>/assets/_less/.csscomb.json"
 
       dist:
         src: ["<%= less.server.dest %>"]
@@ -217,17 +217,30 @@ module.exports = (grunt) ->
         logConcurrentOutput: true
 
       server:
-        tasks: ["shell:server", "watch"]
+        tasks: [
+          "shell:server"
+          "watch"
+        ]
 
       dist:
-        tasks: ["htmlmin", "xmlmin", "cssmin"]
+        tasks: [
+          "htmlmin"
+          "xmlmin"
+          "cssmin"
+        ]
 
     clean:
       dist:
-        src: [".tmp", "<%= config.dist %>"]
+        src: [
+          ".tmp"
+          "<%= config.dist %>"
+        ]
 
       postDist:
-        src: ["<%= config.dist %>/assets/css/", "<%= config.dist %>/assets/js/"]
+        src: [
+          "<%= config.dist %>/assets/css/"
+          "<%= config.dist %>/assets/js/"
+        ]
 
     cleanempty:
       dist:
@@ -236,6 +249,7 @@ module.exports = (grunt) ->
   # Fire up a server on local machine for development
   grunt.registerTask "serve", [
     "clean"
+    "less:server"
     "concurrent:server"
   ]
 
