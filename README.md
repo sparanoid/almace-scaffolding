@@ -38,6 +38,17 @@
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 - Please keep the credits in template file, thanks.
 
+## Manage Media
+
+Media files are located in `./assets/` and grouped by different formats:
+
+- `./_less/`: LESS stylesheets, the leading underscore makes sure this directory is excluded from Jekyll generated site.
+- `./css/`:  CSS and its sourcemap files generated from LESS, it's gitignored.
+- `./font/`: Web fonts
+- `./img/`: Image assets, images used by template, personally I don't recommend put post images here, use a CDN instead.
+- `./js/`: JavaScript files, put all needed sctipts in this directoy will just work fine. I don't expect to have many scripts so no complex `vender`, `lib`, or other fancy structures used for this project.
+- `./svg/`: The same as `./img/`.
+
 ## Avaiable Styles, Scripts, and Tips
 
 Not familer with [Markdown](http://daringfireball.net/projects/markdown/)? Try [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
