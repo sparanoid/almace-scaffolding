@@ -61,7 +61,7 @@ If you'd like to keep all things under Git control, you can try the following fi
     ├── *.html (Jekyll-generated static pages)
     └── README.md (your own readme)
 
-You can see this [live demo](http://jksf.github.io/) how to make them friends.
+You can see this [live demo](http://github.com/jksf/jksf.github.io/) how to make them friends.
 
 ## Managing Media
 
@@ -132,6 +132,8 @@ Usage:
 See [woothemes/flexslider](https://github.com/woothemes/flexslider)
 
 ## Demo
+
+Live demo available at [jksf.github.io](http://jksf.github.io/)
 
 <img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-01.png" alt="Jekyll Scaffolding Preview">
 
