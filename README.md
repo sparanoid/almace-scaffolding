@@ -61,6 +61,8 @@ If you'd like to keep all things under Git control, you can try the following fi
     ├── *.html (Jekyll-generated static pages)
     └── README.md (your own readme)
 
+You can see this [live demo](http://jksf.github.io/) how to make them friends.
+
 ## Managing Media
 
 Media files are located in `./assets/` and grouped by different formats:
@@ -86,9 +88,9 @@ Not familer with [Markdown](http://daringfireball.net/projects/markdown/)? Try [
 
 ### `.note`, `.store`, and `.download`
 
-A paragraph block with a thin border line
+A paragraph block with a thin border line.
 
-Useage:
+Usage:
 
 ```html
 <p class=download><a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub</p>
@@ -97,19 +99,37 @@ Useage:
 
 ### `.browser`
 
-WIP
+A simple browser frame using pure CSS.
 
-### `.margin-fix`
+Usage:
 
-WIP
+```html
+<p class="browser">
+  <img src="/delicious.com-homepage.png" alt="Delicious Landing Page">
+</p>
+```
 
 ### `.largetype`
 
-WIP
+Make normal paragraph text large enough.
+
+Usage:
+
+```html
+<p class="largetype">
+  <a href="{{ site.data.var.donate }}">PayPal</a>
+  or
+  <a href="http://me.alipay.com/sparanoid">Alipay</a>
+</p>
+```
 
 ### `.flexslider`
 
-WIP
+Flexslider plugin class.
+
+Usage:
+
+See [woothemes/flexslider](https://github.com/woothemes/flexslider)
 
 ## Demo
 
