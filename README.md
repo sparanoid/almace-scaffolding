@@ -38,7 +38,30 @@
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 - Please keep the credits in template file, thanks.
 
-## Manage Media
+## GitHub Pages Guide
+
+### The Problem
+
+Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for projects. There're some factors that prevent it from generating pages:
+
+- Many features Jekyll Scaffolding provides like LESS support, inline SVG, and HTML minification are implemented using [Grunt.js](http://gruntjs.com/), it's not supported by GitHub Pages.
+- Jekyll Scaffolding uses the latest pre-release Jekyll, so not all features are supported by GitHub Pages renderers.
+- GItHub Pages build server [overwrites the `source` settings](https://help.github.com/articles/pages-don-t-build-unable-to-run-jekyll#source-setting). This prevent it generating pages from current file structure.
+
+### The Solution
+
+I know this can be tricky and more verbose than uploading your Jekyll site directly to your repository. However GitHub Pages support static HTML pages, a workaround solution for using Jekyll Scaffolding on GitHub Pages is treating your Jekyll site as static pages:
+
+- Build your site locally (`grunt build`).
+- Upload Jekyll generateed static files to your `username.github.io` repository.
+
+If you'd like to keep all things under Git control, you can try the following file structure:
+
+    ├── _jksf/ (Jekyll Scaffolding source code)
+    ├── *.html (Jekyll-generated static pages)
+    └── README.md (your own readme)
+
+## Managing Media
 
 Media files are located in `./assets/` and grouped by different formats:
 
@@ -48,6 +71,10 @@ Media files are located in `./assets/` and grouped by different formats:
 - `./img/`: Image assets, images used by template, personally I don't recommend put post images here, use a CDN instead.
 - `./js/`: JavaScript files, put all needed sctipts in this directoy will just work fine. I don't expect to have many scripts so no complex `vender`, `lib`, or other fancy structures used for this project.
 - `./svg/`: The same as `./img/`.
+
+## Upgrading
+
+Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every template file untouched. Just copy and paste all template files in `_assets`, `_includes`, and `_layouts`. If you change the templates directly, you have to compare them side to side.
 
 ## Avaiable Styles, Scripts, and Tips
 
