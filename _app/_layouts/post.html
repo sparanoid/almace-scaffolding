@@ -24,8 +24,8 @@ layout: default
     {% capture svg_header %}
       <style scoped>
         article h1 svg {
-          width: {{ page.svg-headline-width }}px;
-          height: {{ page.svg-headline-height }}px;
+          width: {{ page.svg-headline-width | times: 0.1 }}vw;
+          height: {{ page.svg-headline-height | times: 0.1 }}vw;
         }
       </style>
       {% for i in page.svg-headline %}
