@@ -93,8 +93,13 @@ A paragraph block with a thin border line.
 Usage:
 
 ```html
-<p class=download><a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub</p>
-<p class=store>Love this plugin? please consider <a href="{{ site.data.var.donate }}">buying me a cup of coffee.</a></p>
+<p class=download>
+  <a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub
+</p>
+
+<p class=store>
+  Love this plugin? please consider <a href="{{ site.data.var.donate }}">buying me a cup of coffee.</a>
+</p>
 ```
 
 ### `.browser`
@@ -104,7 +109,7 @@ A simple browser frame using pure CSS.
 Usage:
 
 ```html
-<p class="browser">
+<p class=browser>
   <img src="/delicious.com-homepage.png" alt="Delicious Landing Page">
 </p>
 ```
@@ -116,7 +121,7 @@ Make normal paragraph text large enough.
 Usage:
 
 ```html
-<p class="largetype">
+<p class=largetype>
   <a href="{{ site.data.var.donate }}">PayPal</a>
   or
   <a href="http://me.alipay.com/sparanoid">Alipay</a>
