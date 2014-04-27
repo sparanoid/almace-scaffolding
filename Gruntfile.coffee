@@ -63,7 +63,11 @@ module.exports = (grunt) ->
 
       less:
         files: ["<%= config.app %>/assets/less/**/*.less"]
-        tasks: ["less:server", "autoprefixer", "csslint"]
+        tasks: [
+          "less:server"
+          "autoprefixer"
+          # "csslint"
+        ]
 
     less:
       server:
@@ -238,7 +242,7 @@ module.exports = (grunt) ->
   # Test task
   grunt.registerTask "test", [
     "build"
-    "csslint"
+    # "csslint"
     "validation"
   ]
 
