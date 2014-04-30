@@ -50,7 +50,7 @@ body {
     left: 0;
     z-index: -9999;
     width: 100%;
-    height: 8px;
+    height: 1vmax;
     pointer-events: none;
     background: @link-color;
     content: "";
@@ -124,8 +124,8 @@ del {
 .logo {
   display: block;
   width: 100%;
-  height: 8px;
-  margin: 0 0 1.4vmin;
+  height: 1vmax;
+  margin: 0 0 1.4vmax;
   background: @link-color;
   opacity: 0;
 
@@ -161,7 +161,7 @@ body:hover .logo {
     list-style: none;
 
     a {
-      padding: 3px 1.2em;
+      padding: .5em 1.2em;
 
       &:hover,
       &:focus {
@@ -186,42 +186,42 @@ body:hover .latest {
 }
 
 // Pserson status
-.status {
-  margin: 10px 0 0;
+.content .status {
+  margin: 1vmin 0 0;
   font-size: 75%;
   font-weight: bold;
 
   &:before {
-    @size: 12px;
+    @size: .8em;
     display: inline-block;
     width: @size;
     height: @size;
-    margin-right: 8px;
+    margin-right: .8vw;
     background: fade(@text-color, 20%);
     border-radius: 50%;
     content: "";
   }
-}
 
-.available {
+  &.available {
 
-  &:before {
-    background: green;
+    &:before {
+      background: green;
+    }
+
+    a {
+      color: green;
+    }
   }
 
-  a {
-    color: green;
-  }
-}
+  &.unavailable {
 
-.unavailable {
+    &:before {
+      background: red;
+    }
 
-  &:before {
-    background: red;
-  }
-
-  a {
-    color: red;
+    a {
+      color: red;
+    }
   }
 }
 
@@ -294,7 +294,7 @@ body:hover .latest {
 
     small {
       display: block;
-      margin: 20px 0 0;
+      margin: 2vmin 0 0;
       letter-spacing: .1em;
     }
 
@@ -324,7 +324,7 @@ body:hover .latest {
   img, video, iframe {
     display: block;
     max-width: 100%;
-    margin: 0 0 40px;
+    margin: 0 0 4vmin;
   }
 
   blockquote {
@@ -381,7 +381,7 @@ body:hover .latest {
     input {
       display: block;
       width: 100%;
-      padding: 7px 0;
+      padding: 1vmin 0;
       margin: 0 0 1vmin;
       border: none;
       border-bottom: 1px solid fade(@text-color, 20%);
@@ -393,7 +393,7 @@ body:hover .latest {
       -webkit-appearance: none;
 
       &:focus {
-        padding: 7px;
+        padding: 1vmin;
         background: fade(@text-color, 2%);
         border-color: @text-color;
       }
@@ -462,7 +462,7 @@ body:hover .latest {
 .browser {
   position: relative;
   padding-top: 20px;
-  margin: 0 0 40px !important;
+  margin: 0 0 4vmin !important;
   background: rgba(0, 0, 0, .05);
   border-radius: 5px 5px 0 0;
 
@@ -571,7 +571,7 @@ article .list {
       display: inline;
 
       &:after {
-        padding: 0 4px;
+        padding: 0 .6vw;
         content: " / ";
         opacity: .3;
       }
@@ -606,7 +606,7 @@ article .list {
     }
 
     .flex-caption {
-      margin: -30px 0 30px;
+      margin: -3vmin 0 3vmin;
       font-weight: bold;
     }
   }
