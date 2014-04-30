@@ -16,22 +16,14 @@ plugin: slider
 
 <p>This year, to celebrate its ten year anniversary, AVOS invited me to join the Delicious team, I do designs and front-end stuff, collaborated with the developer <a href="http://sunng.info/">Ning Sun</a> (<a href="{% post_url /work/commercial/2012-12-13-readwise %}">again</a>) from AVOS on this project.</p>
 
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <p><img src="{{ site.data.var.file }}/delicious.com-logo.png" alt="Delicious New Logo"></p>
-      <p class="flex-caption">Delicious New Logo</p>
-    </li>
-    <li>
-      <p><img src="{{ site.data.var.file }}/delicious.com-iconset.png" alt="Delicious Iconset"></p>
-      <p class="flex-caption">Delicious Iconset</p>
-    </li>
-    <li>
-      <p><img src="{{ site.data.var.file }}/delicious.com.png" alt="Delicious UI Preview"></p>
-      <p class="flex-caption">Delicious UI Preview</p>
-    </li>
-  </ul>
-</div>
+<h3>Delicious New Logo</h3>
+<p><img src="{{ site.data.var.file }}/delicious.com-logo.png" alt="Delicious New Logo"></p>
+
+<h3>Delicious Iconset</h3>
+<p><img src="{{ site.data.var.file }}/delicious.com-iconset.png" alt="Delicious Iconset"></p>
+
+<h3>Delicious UI Preview</h3>
+<p><img src="{{ site.data.var.file }}/delicious.com.png" alt="Delicious UI Preview"></p>
 
 <p>Some fun facts:</p>
 

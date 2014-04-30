@@ -5,7 +5,6 @@ category: work
 tag: commercial
 excerpt: A Detailed Introduction to Municipality of Tianjin
 thumb: tianjin-project.jpg
-plugin: slider
 svg-headline: svg/tianjin-project.svg
 svg-headline-width: 400
 svg-headline-height: 145
@@ -20,28 +19,17 @@ link: /lab/tianjin/
 
 <h3>Book Preview</h3>
 
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <img src="{{ site.data.var.file }}/tianjin-project-preview-01.jpg" alt="Tianjin Project Book Preview #1">
-    </li>
-    <li>
-      <img src="{{ site.data.var.file }}/tianjin-project-preview-02.jpg" alt="Tianjin Project Book Preview #2">
-    </li>
-    <li>
-      <img src="{{ site.data.var.file }}/tianjin-project-preview-03.jpg" alt="Tianjin Project Book Preview #3">
-    </li>
-    <li>
-      <img src="{{ site.data.var.file }}/tianjin-project-preview-04.jpg" alt="Tianjin Project Book Preview #4">
-    </li>
-    <li>
-      <img src="{{ site.data.var.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5">
-    </li>
-    <li>
-      <img src="{{ site.data.var.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6">
-    </li>
-  </ul>
-</div>
+<p><img src="{{ site.data.var.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6"></p>
+
+<p><img src="{{ site.data.var.file }}/tianjin-project-preview-01.jpg" alt="Tianjin Project Book Preview #1"></p>
+
+<p><img src="{{ site.data.var.file }}/tianjin-project-preview-02.jpg" alt="Tianjin Project Book Preview #2"></p>
+
+<p><img src="{{ site.data.var.file }}/tianjin-project-preview-03.jpg" alt="Tianjin Project Book Preview #3"></p>
+
+<p><img src="{{ site.data.var.file }}/tianjin-project-preview-04.jpg" alt="Tianjin Project Book Preview #4"></p>
+
+<p><img src="{{ site.data.var.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5"></p>
 
 <h3>Promo Video</h3>
 <iframe src="http://player.vimeo.com/video/54786277?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ee3344" width="750" height="422" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
