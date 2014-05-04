@@ -105,6 +105,7 @@ module.exports = (grunt) ->
           removeCommentsFromCDATA: true
           removeCDATASectionsFromCDATA: true
           collapseWhitespace: true
+          conservativeCollapse: true
           collapseBooleanAttributes: true
           removeAttributeQuotes: false
           removeRedundantAttributes: true
