@@ -8,7 +8,7 @@
       {% if site.data.var.demo %}
         <li><a href="https://github.com/sparanoid/jekyll-scaffolding/" title="Jekyll Scaffolding">jksf</a></li>
       {% endif %}
-      <li><a href="{{ site.data.var.base }}/{{ site.data.var.feed }}/" title="Feed - Atom (The Atom Syndication Format)">Atom Feed</a></li>
+      <li><a href="{{ site.data.var.feed | prepend: site.data.var.base }}/" title="Feed - Atom (The Atom Syndication Format)">Atom Feed</a></li>
     </ul>
     {% if site.data.var.google_plus %}
       <p style="display: none;">

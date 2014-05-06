@@ -25,7 +25,7 @@ port:         4321
 future:       false
 
 #
-# Additional markdown settings
+# Additional Markdown settings
 #
 
 redcarpet:
