@@ -15,7 +15,7 @@ permalink: /
 
     <small class=latest-post>
       {% for post in site.categories.work limit:1 %}
-        Recently made <a href="{{ site.data.var.base }}{{ post.url }}" class=latest>{{ post.title }}</a>
+        Recently made <a href="{{ post.url | prepend: site.data.var.base }}" class=latest>{{ post.title }}</a>
       {% endfor %}
     </small>
 
