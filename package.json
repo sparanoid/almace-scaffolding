@@ -27,7 +27,7 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "^0.4.4",
+    "grunt": "^0.4.5",
     "grunt-autoprefixer": "^0.7.3",
     "grunt-banner": "^0.2.2",
     "grunt-cleanempty": "^0.2.0",
