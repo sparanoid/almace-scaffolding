@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/sparanoid/sparanoid.com.svg)](https://travis-ci.org/sparanoid/sparanoid.com)
 [![devDependency Status](https://david-dm.org/sparanoid/sparanoid.com/dev-status.svg)](https://david-dm.org/sparanoid/sparanoid.com#info=devDependencies)
 
-[Jekyll](https://github.com/mojombo/jekyll) running on [sparanoid.com](http://sparanoid.com/).
+[Jekyll](https://github.com/jekyll/jekyll) running on [sparanoid.com](http://sparanoid.com/).
 
 ## Setup
 
