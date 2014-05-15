@@ -9,28 +9,28 @@ permalink: /feed/index.xml
   <subtitle>{{ site.data.var.description }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>tag:{{ site.data.var.domain }},2005:/</id>
-  <link rel="alternate" type="text/html" hreflang="en" href="{{ site.data.var.url | append: site.data.var.base }}/" />
-  <link rel="self" type="application/atom+xml" href="{{ site.data.var.url | append: site.data.var.base }}{{ site.data.var.feed }}/" />
+  <link rel="alternate" type="text/html" hreflang="en" href="{{ site.data.var.base | prepend: site.data.var.url }}/" />
+  <link rel="self" type="application/atom+xml" href="{{ site.data.var.feed | prepend: site.data.var.base | prepend: site.data.var.url }}/" />
   <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.data.var.user }}</rights>
 
   <author>
     <name>{{ site.data.var.user }}</name>
-    <uri>{{ site.data.var.url | append: site.data.var.base }}/</uri>
+    <uri>{{ site.data.var.base | prepend: site.data.var.url }}/</uri>
     <email>{{ site.data.var.email }}</email>
   </author>
 
   {% for post in site.posts limit:300 %}
     <entry>
       <title>{{ post.title | strip_html | xml_escape }}</title>
-      <id>tag:{{ site.data.var.domain | append: site.data.var.base }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
-      <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site.data.var.url | append: site.data.var.base }}{{ post.url }}{% endif %}" />
+      <id>tag:{{ site.data.var.base | prepend: site.data.var.domain }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+      <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}{% endif %}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <author>
         <name>{{ site.data.var.user }}</name>
-        <uri>{{ site.data.var.url | append: site.data.var.base }}/</uri>
+        <uri>{{ site.data.var.base | prepend: site.data.var.url }}/</uri>
         <email>{{ site.data.var.email }}</email>
       </author>
-      <content type="html" xml:base="{{ site.data.var.url | append: site.data.var.base }}/">
+      <content type="html" xml:base="{{ site.data.var.base | prepend: site.data.var.url }}/">
         {% if post.thumb %}
           &lt;img src=&quot;{{ site.data.var.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | strip_html | xml_escape }}&quot; width=&quot;500&quot;&gt;
         {% endif %}
@@ -40,7 +40,7 @@ permalink: /feed/index.xml
           {{ post.content | xml_escape }}
         {% endif %}
         {% if post.link %}
-          &lt;p&gt;&lt;a href=&quot;{{ site.data.var.url | append: site.data.var.base }}{{ post.url }}&quot; title=&quot;Permalink to &#8216;{{ post.title | strip_html | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}&quot; title=&quot;Permalink to &#8216;{{ post.title | strip_html | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;
         {% endif %}
       </content>
     </entry>

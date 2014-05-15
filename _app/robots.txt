@@ -3,4 +3,4 @@ layout: nil
 ---
 User-agent: *
 Disallow: /lab/version/
-Sitemap: {{ site.data.var.url | append: site.data.var.base }}/sitemap.xml
+Sitemap: {{ site.data.var.base | prepend: site.data.var.url }}/sitemap.xml
