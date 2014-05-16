@@ -2,4 +2,4 @@
 layout: nil
 ---
 User-agent: *
-Sitemap: {{ site.data.var.url }}{{ site.data.var.base }}/sitemap.xml
+Sitemap: {{ /sitemap.xml | prepend: site.data.var.base | prepend: site.data.var.url }}/sitemap.xml
