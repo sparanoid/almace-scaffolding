@@ -55,6 +55,8 @@
 3. Run `grunt serve` to fire up a server on your localhost, then open `http://localhost:4321` in your browser.
 4. Edit, edit, delete, delete, commit, push, done.
 
+Still can't get things working? Why not try my [video tutorials](http://www.youtube.com/watch?v=5NV6Rdv1a3I).
+
 <a name="c3"></a>
 ## Managing Media
 
