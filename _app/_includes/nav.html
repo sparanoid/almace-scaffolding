@@ -3,7 +3,7 @@
   <ul>
     {% for item in site.data.nav %}
       <li {% if page.permalink == item.url or page.category == item.cate %}class=current{% endif %}>
-        <a href="{{ site.data.var.base }}{{ item.url }}">
+        <a href="{{ item.url | prepend: site.data.var.base }}">
           {{ item.title }}
         </a>
       </li>
