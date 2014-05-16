@@ -1,6 +1,7 @@
 # Jekyll Scaffolding
 [![Build Status](https://travis-ci.org/sparanoid/jekyll-scaffolding.svg)](https://travis-ci.org/sparanoid/jekyll-scaffolding)
 [![devDependency Status](https://david-dm.org/sparanoid/jekyll-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/jekyll-scaffolding#info=devDependencies)
+[![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#c7)
 
 `jksf`, a.k.a. **Jekyll Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more.
 
