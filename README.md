@@ -32,12 +32,12 @@
 - Minimalism design, No jQuery library, No JavaScript, No `everybody-shake-ur-body.js`
 - Ideal for personal blog, portfolio, product blog and Tumblr-like link blog
 - (Maybe) the first template that uses [viewport relative units](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
-- [Handcrafted stylesheets](blob/master/_app/assets/_less/app.less). No Bootstrap or other bloated frameworks are used, CSS < 12 KB (Unminified)
+- [Handcrafted stylesheets](_app/assets/_less/app.less). No Bootstrap or other bloated frameworks are used, CSS < 12 KB (Unminified)
 - Predefined LESS variables make it easier to change color schemes for different posts
-- Well-defined [Atom feed template](blob/master/_app/feed-atom.xml)
-- [Sitemap template](blob/master/_app/sitemap.xml) for search engines
+- Well-defined [Atom feed template](_app/feed-atom.xml)
+- [Sitemap template](_app/sitemap.xml) for search engines
 - [Twitter Cards](https://dev.twitter.com/docs/cards) support
-- [Default stylesheets](blob/master/_app/assets/_less/syntax.less) for Pygments code highlighting
+- [Default stylesheets](_app/assets/_less/syntax.less) for Pygments code highlighting
 - Redcarpet as Markdown renderer, tables, footnotes, GFM, smart quotes are supported
 - Built with Grunt.js for easy development:
   - Styling with LESS, CSS file is automatically compiled on the fly
@@ -141,15 +141,7 @@ Usage:
 
 Live demo available at [jksf.github.io](http://jksf.github.io/)
 
-<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-01.png" alt="Jekyll Scaffolding Preview">
-
-<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-02.png" alt="Jekyll Scaffolding Preview">
-
-<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-03.png" alt="Jekyll Scaffolding Preview">
-
-<img src="https://raw.github.com/sparanoid/rsrc/jekyll-scaffolding/jekyll-scaffolding-04.png" alt="Jekyll Scaffolding Preview" width="414">
-
-You can see a more complex live demo using this framework at [my site](http://sparanoid.com/).
+You can also see a more complex live demo using this framework at [my site](http://sparanoid.com/).
 
 <a name="c8"></a>
 ## GitHub Pages Setup Guide
