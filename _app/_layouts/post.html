@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% if page.css %}
+  <style>
+    {{ page.css }}
+  </style>
+{% endif %}
+
 <!-- Article wrapper, limit width -->
 <article>
 
@@ -13,9 +19,9 @@ layout: default
         src="{{ site.data.var.file }}/{{ page.img-headline }}"
         alt="{{ page.title | strip_html | xml_escape }}"
         {% if page.img-headline-width %}
-          width={{ page.img-headline-width }}
+          style="width: {{ page.img-headline-width | times: 0.1 }}vw;"
         {% else %}
-          width=500
+          style="width: 50vw;"
         {% endif %}
       >
     {% endcapture %}
