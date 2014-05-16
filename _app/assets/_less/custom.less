@@ -11,3 +11,32 @@ ul.list.has-content {
     }
   }
 }
+
+// FlexSlider styles
+.flexslider {
+
+  // Slides
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: none;
+    // Hide the slides before the JS is loaded, this avoids image flashing
+    backface-visibility: hidden;
+
+    &:first-child {
+      // Display the first image when scripts are not ready
+      display: block;
+    }
+
+    .flex-caption {
+      margin: -3vmin 0 3vmin;
+      font-weight: bold;
+    }
+  }
+}
+
+// FlexSlider - No JavaScript fallback
+.no-js .flexslider ul li:first-child { display: block; }
