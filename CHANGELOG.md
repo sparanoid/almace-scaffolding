@@ -1,3 +1,13 @@
+<a name="0.0.10"></a>
+### 0.0.10 (2014-05-16)
+
+
+#### Features
+
+* **style** add FlesSlider example ([33859332](http://github.com/sparanoid/jekyll-scaffolding/commit/338593320f0f0c07ba150c5b5834a6916cd8f608))
+* **docs:** addd video tutorials link ([96379d27](http://github.com/sparanoid/jekyll-scaffolding/commit/96379d27455bd7e5304b08641d8309a5af6858a4))
+
+
 <a name="0.0.9"></a>
 ### 0.0.9 (2014-05-16)
 
