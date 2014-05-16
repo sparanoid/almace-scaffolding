@@ -78,7 +78,7 @@ Upgrading templates is hard, it will be easy if you are're a casual blogger and 
 <a name="c5"></a>
 ## Tips
 
-- Additional variables are stored in [`./_app/_data/`](/tree/master/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
+- Additional variables are stored in [`./_app/_data/`](/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
 - Not familer with [Markdown](http://daringfireball.net/projects/markdown/)? Try [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 - You can use Jekyll's [built-in syntax highlighting](http://jekyllrb.com/docs/templates/#code_snippet_highlighting), I've included a default theme for this project.
 - [Tables](https://help.github.com/articles/github-flavored-markdown#tables) and [footnotes](https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use) are also avaiables to use.
@@ -131,8 +131,6 @@ Usage:
 ```html
 <p class=largetype>
   <a href="{{ site.data.var.donate }}">PayPal</a>
-  or
-  <a href="http://me.alipay.com/sparanoid">Alipay</a>
 </p>
 ```
 
