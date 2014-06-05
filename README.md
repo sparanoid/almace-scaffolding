@@ -16,10 +16,11 @@
   - [`.note`, `.store`, and `.download`](#c6-1)
   - [`.browser`](#c6-2)
   - [`.largetype`](#c6-3)
-- [Demo](#c7)
-- [GitHub Pages Setup Guide](#c8)
-  - [The Problem](#c8-1)
-  - [The Solution](#c8-2)
+- [Avaiable Settings](#c7)
+- [Demo](#c8)
+- [GitHub Pages Setup Guide](#c9)
+  - [The Problem](#c9-1)
+  - [The Solution](#c9-2)
 - [Donate](#donate)
 - [Author](#author)
 - [Licenses](#licenses)
@@ -136,16 +137,21 @@ Usage:
 ```
 
 <a name="c7"></a>
+## Avaiable Settings
+
+All custom settings can be configured at [_app/_data/var.yml](_app/_data/var.yml), it's well commented so you should really check it out.
+
+<a name="c8"></a>
 ## Demo
 
 Live demo available at [jksf.github.io](http://jksf.github.io/)
 
 You can also see a more complex live demo using this framework at [my site](http://sparanoid.com/).
 
-<a name="c8"></a>
+<a name="c9"></a>
 ## GitHub Pages Setup Guide
 
-<a name="c8-1"></a>
+<a name="c9-1"></a>
 ### The Problem
 
 Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for projects. There're some factors that prevent it from generating pages:
@@ -154,7 +160,7 @@ Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for pr
 - Jekyll Scaffolding uses the latest pre-release Jekyll, so not all features are supported by GitHub Pages renderers.
 - GItHub Pages build server [overwrites the `source` settings](https://help.github.com/articles/pages-don-t-build-unable-to-run-jekyll#source-setting). This prevent it generating pages from current file structure.
 
-<a name="c8-2"></a>
+<a name="c9-2"></a>
 ### The Solution
 
 I know this can be tricky and more verbose than uploading your Jekyll site directly to your repository. However GitHub Pages support static HTML pages, a workaround solution for using Jekyll Scaffolding on GitHub Pages is treating your Jekyll site as static pages:
