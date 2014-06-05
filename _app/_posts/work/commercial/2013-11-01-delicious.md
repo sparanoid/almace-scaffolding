@@ -16,6 +16,8 @@ plugin: slider
 
 <p>This year, to celebrate its ten year anniversary, AVOS invited me to join the Delicious team, I do designs and front-end stuff, collaborated with the developer <a href="http://sunng.info/">Ning Sun</a> (<a href="{% post_url /work/commercial/2012-12-13-readwise %}">again</a>) from AVOS on this project.</p>
 
+Update: Delicious now has been acquired by [Science Inc.](http://science-inc.com/) [^1]
+
 <h3>Delicious New Logo</h3>
 <p><img src="{{ site.data.var.file }}/delicious.com-logo.png" alt="Delicious New Logo"></p>
 
@@ -76,3 +78,5 @@ plugin: slider
 
 <h3>Delicious - Mass Edit Links</h3>
 <p class="browser"><img src="{{ site.data.var.file }}/delicious.com-screenshot-11.png" alt="Delicious - Mass Edit Links"></p>
+
+[^1]: Science Inc., a tech advisory firm run by former Myspace chief Michael Jones, confirmed the deal in a [blog post](http://science-inc.com/about/blog/2014/05/08/welcome-delicious-as-the-cornerstone-asset-of-our-new-data-content-group/).
