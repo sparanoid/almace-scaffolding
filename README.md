@@ -32,6 +32,7 @@
 - Minimalism design, No jQuery library, No JavaScript, No `everybody-shake-ur-body.js`
 - Ideal for personal blog, portfolio, product blog and Tumblr-like link blog
 - (Maybe) [the first](https://github.com/sparanoid/sparanoid.com/commit/9b44b4c0f57c3dd1e828d828a95cc21b992785ce) template that uses [viewport relative units](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
+- [Tons of configurable settings](_app/_data/var.yml) for your posts and site customization
 - [Handcrafted stylesheets](_app/assets/_less/app.less). No Bootstrap or other bloated frameworks are used, CSS < 12 KB (Unminified)
 - Predefined LESS variables make it easier to change color schemes for different posts
 - Well-defined [Atom feed template](_app/feed-atom.xml)
