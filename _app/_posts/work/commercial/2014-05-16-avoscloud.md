@@ -16,7 +16,7 @@ scheme-bg: "#fff"
 scheme-bg-light: true
 ---
 
-<p><a href="http://avoscloud.com">AVOS Cloud</a>, one of the most famous Chinese local (m)BaaS platform. Me and the whole team have been working on this project since last year before it was separated from <a href="http://avos.com/">AVOS Systems, Inc.</a>. Now the AVOS Cloud team focuses on tech startups and local companies in China.</p>
+<p><a href="http://avoscloud.com">AVOS Cloud</a>, one of the most famous Chinese local (m)BaaS platform. Me and the whole team have been working on this project since last year. Now it's a spin-off of <a href="http://avos.com/">AVOS Systems, Inc.</a> focuses on tech startups and local companies in China.</p>
 
 <p>I'm working on this site as a "hybird" designer to create eye-catching interactions and provide easy-to-use dashboard for every developer.</p>
 
