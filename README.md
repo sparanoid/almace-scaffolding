@@ -139,7 +139,7 @@ Usage:
 <a name="c7"></a>
 ## Avaiable Settings
 
-All custom settings can be configured at [_app/_data/var.yml](_app/_data/var.yml), it's well commented so you should really check it out.
+All custom settings can be configured at [`_app/_data/var.yml`](_app/_data/var.yml), it's well commented so you should really check it out.
 
 <a name="c8"></a>
 ## Demo
