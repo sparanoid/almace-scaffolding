@@ -11,10 +11,9 @@
 
 #### Breaking Changes
 
-* Now you can use `link_blog` and `rss_excerpt` for your Atom feed:
+* Now you can use `link_blog` and `rss_excerpt` for your Atom feed ([73c236bf](http://github.com/sparanoid/sparanoid.com/commit/73c236bfabfcdb9f2628ff382ae6b3534c9bedc2)):
   - `link_blog`: Enable this settings to make your feed Daring Fireball-like link blog. This basically change your <link> value to external link you defined in your posts.
   - `rss_excerpt`: Use post excerpt instead of full content for RSS feeds, just like WordPress RSS feed output option
-   ([73c236bf](http://github.com/sparanoid/sparanoid.com/commit/73c236bfabfcdb9f2628ff382ae6b3534c9bedc2))
 
 
 <a name="24.0.7"></a>
