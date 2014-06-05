@@ -20,10 +20,29 @@ permalink: /feed/index.xml
   </author>
 
   {% for post in site.posts limit:300 %}
+    <!-- TODO: need a better solution
+      See https://github.com/Shopify/liquid/issues/216
+     -->
+    {% capture entry_link %}
+      {% if site.data.var.link_blog and post.link %}
+        <link rel="alternate" type="text/html" href="{{ post.link }}" />
+      {% else %}
+        <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}" />
+      {% endif %}
+    {% endcapture %}
+
+    {% capture entry_permalink %}
+      {% if site.data.var.link_blog and post.link %}
+        <p><a href="{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”">◉ Permalink</a></p>
+      {% elsif site.data.var.link_blog != true and post.link %}
+        <p><a href="{{ post.link }}">◉ Direct Link to Original Site</a></p>
+      {% endif %}
+    {% endcapture %}
+
     <entry>
       <title>{{ post.title | strip_html | xml_escape }}</title>
       <id>tag:{{ site.data.var.base | prepend: site.data.var.domain }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
-      <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}{% endif %}" />
+      {{ entry_link }}
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <author>
         <name>{{ site.data.var.user }}</name>
@@ -31,17 +50,12 @@ permalink: /feed/index.xml
         <email>{{ site.data.var.email }}</email>
       </author>
       <content type="html" xml:base="{{ site.data.var.base | prepend: site.data.var.url }}/">
-        {% if post.thumb %}
-          &lt;img src=&quot;{{ site.data.var.file }}/thumb/{{ post.thumb }}&quot; alt=&quot;{{ post.title | strip_html | xml_escape }}&quot; width=&quot;500&quot;&gt;
-        {% endif %}
-        {% if post.excerpt %}
-          &lt;p&gt;{{ post.excerpt | xml_escape }}&lt;/p&gt;
+        {% if site.data.var.rss_excerpt %}
+          {{ post.excerpt | xml_escape }}
         {% else %}
           {{ post.content | xml_escape }}
         {% endif %}
-        {% if post.link %}
-          &lt;p&gt;&lt;a href=&quot;{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}&quot; title=&quot;Permalink to &#8216;{{ post.title | strip_html | xml_escape }}&#8217;&quot;>&#9650;&lt;/a&gt;&lt;/p&gt;
-        {% endif %}
+        {{ entry_permalink | xml_escape}}
       </content>
     </entry>
   {% endfor %}
