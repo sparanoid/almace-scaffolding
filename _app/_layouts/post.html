@@ -27,13 +27,16 @@ layout: default
     {% endcapture %}
 
     <!-- Prepare for SVG headers -->
-    {% capture svg_header %}
+    {% capture svg_header_style %}
       <style scoped>
-        svg {
+        h1 svg {
           width: {{ page.svg-headline-width | times: 0.1 }}vw;
           height: {{ page.svg-headline-height | times: 0.1 }}vw;
         }
       </style>
+    {% endcapture %}
+
+    {% capture svg_header %}
       {% for i in page.svg-headline %}
         {% include {{ i }} %}
       {% endfor %}
@@ -50,6 +53,7 @@ layout: default
         {% endif %}
       </h1>
     {% elsif page.svg-headline %}
+      {{ svg_header_style }}
       <h1>
         {% if page.link %}
           <a href="{{ page.link }}">
