@@ -52,6 +52,13 @@ donate:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_but
 # In homepage, not implimented at the moment
 availability: free
 
+# Enable this settings to make your feed Daring Fireball-like link blog
+# (This basically change your <link> value to external link you defined in your posts)
+link_blog:    false
+
+# Use post excerpt or full content for RSS feeds
+rss_excerpt:  false
+
 # Demo mode, demo environment for parallel project Jekyll Scaffolding
 demo:         false
 
