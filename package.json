@@ -1,23 +1,23 @@
 {
-  "name": "jekyll-scaffolding",
+  "name": "almace-scaffolding",
   "version": "0.0.11",
-  "description": "Jekyll Scaffolding, a sleek and super-fast responsive theme with only one HTTP request",
+  "description": "Almace Scaffolding, a sleek and super-fast responsive theme with only one HTTP request",
   "author": "Tunghsiao Liu",
-  "homepage": "http://sparanoid.com/work/jekyll-scaffolding/",
+  "homepage": "http://sparanoid.com/work/almace-scaffolding/",
   "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sparanoid/jekyll-scaffolding.git"
+    "url": "git://github.com/sparanoid/almace-scaffolding.git"
   },
   "bugs": {
-    "url": "http://github.com/sparanoid/jekyll-scaffolding/issues"
+    "url": "http://github.com/sparanoid/almace-scaffolding/issues"
   },
   "licenses": {
     "type": "MIT",
-    "url": "http://github.com/sparanoid/jekyll-scaffolding/blob/master/LICENSE"
+    "url": "http://github.com/sparanoid/almace-scaffolding/blob/master/LICENSE"
   },
   "keywords": [
     "jekyll",
