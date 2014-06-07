@@ -3,7 +3,7 @@
 [![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
 [![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#c8)
 
-`jksf`, a.k.a. **Almace Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
+`amsf`, a.k.a. **Almace Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
 
 **Table of Contents**
 
@@ -144,7 +144,7 @@ All custom settings can be configured at [`_app/_data/var.yml`](_app/_data/var.y
 <a name="c8"></a>
 ## Demo
 
-Live demo available at [jksf.github.io](http://jksf.github.io/)
+Live demo available at [amsf.github.io](http://amsf.github.io/)
 
 You can also see a more complex live demo using this framework at [my site](http://sparanoid.com/).
 
@@ -174,7 +174,7 @@ If you'd like to keep all things under Git control, you can try the following fi
     ├── *.html (Jekyll-generated static pages)
     └── README.md (your own readme)
 
-You can see this [live demo](http://github.com/jksf/jksf.github.io/) how to make them friends.
+You can see this [live demo](http://github.com/amsf/amsf.github.io/) how to make them friends.
 
 <a name="donate"></a>
 ## Donate
