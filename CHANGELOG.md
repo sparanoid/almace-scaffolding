@@ -22,8 +22,8 @@
 
 #### Features
 
-* **style** add FlesSlider example ([33859332](http://github.com/sparanoid/jekyll-scaffolding/commit/338593320f0f0c07ba150c5b5834a6916cd8f608))
-* **docs:** addd video tutorials link ([96379d27](http://github.com/sparanoid/jekyll-scaffolding/commit/96379d27455bd7e5304b08641d8309a5af6858a4))
+* **style** add FlesSlider example ([33859332](http://github.com/sparanoid/almace-scaffolding/commit/338593320f0f0c07ba150c5b5834a6916cd8f608))
+* **docs:** addd video tutorials link ([96379d27](http://github.com/sparanoid/almace-scaffolding/commit/96379d27455bd7e5304b08641d8309a5af6858a4))
 
 
 <a name="0.0.9"></a>
@@ -35,7 +35,7 @@
 * **post:** fix post grammar ([d1cdebdd](http://github.com/sparanoid/sparanoid.com/commit/d1cdebdd92a1d38ef81195a21a03346a03b46c1f))
 * **style:**
   * fix wrong scoped style use ([79e71de0](http://github.com/sparanoid/sparanoid.com/commit/79e71de08a1be4f7a404c94d8d77889af111497f))
-  * avoid line-height override for `jksf` ([d24663fd](http://github.com/sparanoid/sparanoid.com/commit/d24663fddbc4fdac012edd32aab86ad549632d5b))
+  * avoid line-height override for `amsf` ([d24663fd](http://github.com/sparanoid/sparanoid.com/commit/d24663fddbc4fdac012edd32aab86ad549632d5b))
 
 
 #### Features
@@ -84,9 +84,9 @@ css: |
 #### Features
 
 * better external link post indicator ([6393ea07](http://github.com/sparanoid/sparanoid.com/commit/6393ea07d74672599b9cf7dd17ec5a3becb65174))
-* change error page permalink for GitHub Pages ([b03097ce](http://github.com/sparanoid/jekyll-scaffolding/commit/b03097cef9baf7c9ea238e2eeca848cefb0c8718))
+* change error page permalink for GitHub Pages ([b03097ce](http://github.com/sparanoid/almace-scaffolding/commit/b03097cef9baf7c9ea238e2eeca848cefb0c8718))
 * **style:** SVG headlines got viewport units support ([f818a7b1](http://github.com/sparanoid/sparanoid.com/commit/f818a7b1d626a4581c4a1d81df06d17d7c9b4dd1))
-* **grunt:** better grunt tasks excluding files those need post-process ([b1dd8c01](http://github.com/sparanoid/jekyll-scaffolding/commit/b1dd8c017912abe908602439881f8627be112803))
+* **grunt:** better grunt tasks excluding files those need post-process ([b1dd8c01](http://github.com/sparanoid/almace-scaffolding/commit/b1dd8c017912abe908602439881f8627be112803))
 * **template:**
   * better inline SVG post title support ([6c33d1d6](http://github.com/sparanoid/sparanoid.com/commit/6c33d1d678d9a5228f160bae82be8748c966501a))
   * inline SVG headline support ([89d3dac3](http://github.com/sparanoid/sparanoid.com/commit/89d3dac3413e11e5139cf8c96e2adc490d27ad9a))
@@ -162,10 +162,10 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
   * add a simple table style ([7b01cf56](http://github.com/sparanoid/sparanoid.com/commit/7b01cf56a56d369f00dd0cd03681a795233e6fb9))
   * add syntax highlight support ([006e14f1](http://github.com/sparanoid/sparanoid.com/commit/006e14f1d9ca04260c6d519ef737f203bf1cdd2e))
   * smaller margin space for image post title ([4eac0fda](http://github.com/sparanoid/sparanoid.com/commit/4eac0fdab6adcd68ddaf40451dd22dc034c83c07))
-  * split `jksf` specified styles into `custom.less` ([27061574](http://github.com/sparanoid/jekyll-scaffolding/commit/27061574d7d2b0ac42b3f0887f4ccfcfacafb8f9))
+  * split `amsf` specified styles into `custom.less` ([27061574](http://github.com/sparanoid/almace-scaffolding/commit/27061574d7d2b0ac42b3f0887f4ccfcfacafb8f9))
 * **template:**
   * remove `.txt` wrapper ([1f400475](http://github.com/sparanoid/sparanoid.com/commit/1f400475e3f3611919299fdcccad73779539fd16))
-  * update footer and read me for new jksf (a.k.a. Jekyll Scaffolding) branding ([13de5820](http://github.com/sparanoid/sparanoid.com/commit/13de58207961f52204545bf9ac91a03bb5f0bdf5))
+  * update footer and read me for new amsf (a.k.a. Almace Scaffolding) branding ([13de5820](http://github.com/sparanoid/sparanoid.com/commit/13de58207961f52204545bf9ac91a03bb5f0bdf5))
 
 
 #### Breaking Changes
@@ -188,7 +188,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 * **template:**
   * remove SVG icons ([860f6b4b](http://github.com/sparanoid/sparanoid.com/commit/860f6b4bf85671628b9329ecd6a074a5d37447b7))
   * try `minimal-ui` for iOS 7.1+ ([0215e148](http://github.com/sparanoid/sparanoid.com/commit/0215e148837ecf2ce701ee4da7af950fe76635eb))
-  * sync from sparanoid.com ([19680a25](http://github.com/sparanoid/jekyll-scaffolding/commit/19680a252a6fcda363b58d9f42dd3efd25497cba))
+  * sync from sparanoid.com ([19680a25](http://github.com/sparanoid/almace-scaffolding/commit/19680a252a6fcda363b58d9f42dd3efd25497cba))
 
 
 #### Breaking Changes
@@ -205,8 +205,8 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 
 #### Features
 
-* **package:** add grunt-conventional-changelog support ([8346b783](http://github.com/sparanoid/jekyll-scaffolding/commit/8346b783c2c8f3634d0d3e21e97aa340c5457bd1))
-* **styles:** new `.largetype` class, replaces old button styles ([532bf5f2](http://github.com/sparanoid/jekyll-scaffolding/commit/532bf5f21a32601dbb26fa75864effbfeb16f659))
+* **package:** add grunt-conventional-changelog support ([8346b783](http://github.com/sparanoid/almace-scaffolding/commit/8346b783c2c8f3634d0d3e21e97aa340c5457bd1))
+* **styles:** new `.largetype` class, replaces old button styles ([532bf5f2](http://github.com/sparanoid/almace-scaffolding/commit/532bf5f21a32601dbb26fa75864effbfeb16f659))
 
 ### 0.0.3 (2014-02-16)
 
