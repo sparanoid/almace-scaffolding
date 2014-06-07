@@ -1,9 +1,9 @@
-# Jekyll Scaffolding
-[![Build Status](https://travis-ci.org/sparanoid/jekyll-scaffolding.svg)](https://travis-ci.org/sparanoid/jekyll-scaffolding)
-[![devDependency Status](https://david-dm.org/sparanoid/jekyll-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/jekyll-scaffolding#info=devDependencies)
-[![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#c7)
+# Almace Scaffolding
+[![Build Status](https://travis-ci.org/sparanoid/almace-scaffolding.svg)](https://travis-ci.org/sparanoid/almace-scaffolding)
+[![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
+[![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#c8)
 
-`jksf`, a.k.a. **Jekyll Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more.
+`jksf`, a.k.a. **Almace Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
 
 **Table of Contents**
 
@@ -28,7 +28,7 @@
 <a name="c1"></a>
 ## Features
 
-- **Jekyll Scaffolding** ships a sleek responsive theme, a variant of [sparanoid.com](http://sparanoid.com/), looking great on any mordern browsers
+- **Almace Scaffolding** ships a sleek responsive theme, a variant of [sparanoid.com](http://sparanoid.com/), looking great on any mordern browsers
 - Every minified page generates only one HTTP request *
 - Minimalism design, No jQuery library, No JavaScript, No `everybody-shake-ur-body.js`
 - Ideal for personal blog, portfolio, product blog and Tumblr-like link blog
@@ -53,7 +53,7 @@
 <a name="c2"></a>
 ## Setup
 
-1. [Fork](https://github.com/sparanoid/jekyll-scaffolding/fork) this project, checkout to your local machine.
+1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) this project, checkout to your local machine.
 2. Run `bundle install && npm install` to install required dependencies. Ruby gem `bundler` and Node.js package manager `npm` must be installed before running this command.
 3. Run `grunt serve` to fire up a server on your localhost, then open `http://localhost:4321` in your browser.
 4. Edit, edit, delete, delete, commit, push, done.
@@ -156,21 +156,21 @@ You can also see a more complex live demo using this framework at [my site](http
 
 Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for projects. There're some factors that prevent it from generating pages:
 
-- Many features Jekyll Scaffolding provides like LESS support, inline SVG, and HTML minification are implemented using [Grunt.js](http://gruntjs.com/), it's not supported by GitHub Pages.
-- Jekyll Scaffolding uses the latest pre-release Jekyll, so not all features are supported by GitHub Pages renderers.
+- Many features Almace Scaffolding provides like LESS support, inline SVG, and HTML minification are implemented using [Grunt.js](http://gruntjs.com/), it's not supported by GitHub Pages.
+- Almace Scaffolding uses the latest pre-release Jekyll, so not all features are supported by GitHub Pages renderers.
 - GItHub Pages build server [overwrites the `source` settings](https://help.github.com/articles/pages-don-t-build-unable-to-run-jekyll#source-setting). This prevent it generating pages from current file structure.
 
 <a name="c9-2"></a>
 ### The Solution
 
-I know this can be tricky and more verbose than uploading your Jekyll site directly to your repository. However GitHub Pages support static HTML pages, a workaround solution for using Jekyll Scaffolding on GitHub Pages is treating your Jekyll site as static pages:
+I know this can be tricky and more verbose than uploading your Jekyll site directly to your repository. However GitHub Pages support static HTML pages, a workaround solution for using Almace Scaffolding on GitHub Pages is treating your Jekyll site as static pages:
 
 - Build your site locally (`grunt build`).
 - Upload Jekyll generateed static files to your `username.github.io` repository.
 
 If you'd like to keep all things under Git control, you can try the following file structure:
 
-    ├── _jksf/ (Jekyll Scaffolding source code)
+    ├── _amsf/ (Almace Scaffolding source code)
     ├── *.html (Jekyll-generated static pages)
     └── README.md (your own readme)
 

@@ -59,7 +59,7 @@ link_blog:    false
 # Use post excerpt or full content for RSS feeds
 rss_excerpt:  false
 
-# Demo mode, demo environment for parallel project Jekyll Scaffolding
+# Demo mode, demo environment for parallel project Almace Scaffolding
 demo:         true
 
 #
