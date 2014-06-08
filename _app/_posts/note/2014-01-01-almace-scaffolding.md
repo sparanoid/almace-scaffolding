@@ -4,7 +4,7 @@ title: Welcome to Almace Scaffolding
 category: note
 ---
 
-<p>This is a Almace Scaffolding demo, you can view documentation and source code at <a href="https://github.com/sparanoid/almace-scaffolding">GitHub</a></p>
+<p>This is an Almace Scaffolding demo, you can view documentation and source code at <a href="https://github.com/sparanoid/almace-scaffolding">GitHub</a></p>
 
 ```ruby
 def show
