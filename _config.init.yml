@@ -1,4 +1,45 @@
 #
+# More configuration examples at:
+# http://jekyllrb.com/docs/configuration/
+#
+
+#
+# Jekyll basic configurations
+#
+
+source:         ./_app
+destination:    ./_site
+timezone:       Asia/Hong_Kong
+permalink:      /:categories/:title/
+markdown:       redcarpet
+highlighter:    pygments
+
+#
+# Jekyll serve settings
+#
+
+port:           4321
+
+#
+# Jekyll build settings
+#
+
+future:         false
+
+#
+# Additional Markdown settings
+#
+
+redcarpet:
+  extensions:
+    - footnotes
+    - no_intra_emphasis
+    - smart
+    - space_after_headers
+    - superscript
+    - tables
+
+#
 # User defined settings
 #
 
@@ -54,9 +95,9 @@ link_blog:      false
 # Default:      false
 rss_excerpt:    false
 
-# Demo mode, demo environment for parallel project Jekyll Scaffolding
+# Almace Scalffolding mode, enable post content for homepage and adding credit for site footer
 # Default:      false
-demo:           false
+amsf:           false
 
 #
 # Custom distribution variables
