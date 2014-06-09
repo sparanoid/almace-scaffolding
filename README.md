@@ -7,25 +7,24 @@
 
 **Table of Contents**
 
-- [Features](#c1)
-- [Setup](#c2)
-- [Managing Media](#c3)
-- [Upgrading](#c4)
-- [Tips](#c5)
-- [Avaiable Styles](#c6)
-  - [`.note`, `.store`, and `.download`](#c6-1)
-  - [`.browser`](#c6-2)
-  - [`.largetype`](#c6-3)
-- [Avaiable Settings](#c7)
-- [Demo](#c8)
-- [GitHub Pages Setup Guide](#c9)
-  - [The Problem](#c9-1)
-  - [The Solution](#c9-2)
+- [Features](#features)
+- [Setup](#setup)
+- [Managing Media](#managing-media)
+- [Upgrading](#upgrading)
+- [Tips](#tips)
+- [Avaiable Styles](#avaiable-styles)
+  - [`.note`, `.store`, and `.download`](#note-store-and-download)
+  - [`.browser`](#browser)
+  - [`.largetype`](#largetype)
+- [Avaiable Settings](#avaiable-settings)
+- [Demo](#demo)
+- [GitHub Pages Setup Guide](#github-pages-setup-guide)
+  - [The Problem](#the-problem)
+  - [The Solution](#the-solution)
 - [Donate](#donate)
 - [Author](#author)
 - [Licenses](#licenses)
 
-<a name="c1"></a>
 ## Features
 
 - **Almace Scaffolding** ships a sleek responsive theme, a variant of [sparanoid.com](http://sparanoid.com/), looking great on any mordern browsers
@@ -50,7 +49,6 @@
 
 *: Well, only when your posts don’t have fancy sliders or other external media files.
 
-<a name="c2"></a>
 ## Setup
 
 1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) this project, checkout to your local machine.
@@ -60,7 +58,6 @@
 
 Still can't get things working? Why not try my [video tutorials](http://www.youtube.com/watch?v=5NV6Rdv1a3I).
 
-<a name="c3"></a>
 ## Managing Media
 
 Media files are located in `./assets/` and grouped by different formats:
@@ -72,12 +69,10 @@ Media files are located in `./assets/` and grouped by different formats:
 - `./js/`: JavaScript files, put all needed sctipts in this directoy will just work fine. I don't expect to have many scripts so no complex `vender`, `lib`, or other fancy structures used for this project.
 - `./svg/`: The same as `./img/`.
 
-<a name="c4"></a>
 ## Upgrading
 
 Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every template file untouched. Just copy and paste all template files in `_assets`, `_includes`, and `_layouts`. If you change the templates directly, you have to compare them side to side.
 
-<a name="c5"></a>
 ## Tips
 
 - Additional variables are stored in [`./_app/_data/`](/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
@@ -88,12 +83,10 @@ Upgrading templates is hard, it will be easy if you are're a casual blogger and 
 - Customize your site using `custom.less`.
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 
-<a name="c6"></a>
 ## Avaiable Styles
 
 I've written some useful CSS classes for you, see below:
 
-<a name="c6-1"></a>
 ### `.note`, `.store`, and `.download`
 
 A paragraph block with a thin border line.
@@ -110,7 +103,6 @@ Usage:
 </p>
 ```
 
-<a name="c6-2"></a>
 ### `.browser`
 
 A simple browser frame using pure CSS.
@@ -123,7 +115,6 @@ Usage:
 </p>
 ```
 
-<a name="c6-3"></a>
 ### `.largetype`
 
 Make normal paragraph text large enough.
@@ -136,22 +127,18 @@ Usage:
 </p>
 ```
 
-<a name="c7"></a>
 ## Avaiable Settings
 
 All custom settings can be configured at [`_app/_data/var.yml`](_app/_data/var.yml), it's well commented so you should really check it out.
 
-<a name="c8"></a>
 ## Demo
 
 Live demo available at [amsf.github.io](http://amsf.github.io/)
 
 You can also see a more complex live demo using this framework at [my site](http://sparanoid.com/).
 
-<a name="c9"></a>
 ## GitHub Pages Setup Guide
 
-<a name="c9-1"></a>
 ### The Problem
 
 Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for projects. There're some factors that prevent it from generating pages:
@@ -160,7 +147,6 @@ Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for pr
 - Almace Scaffolding uses the latest pre-release Jekyll, so not all features are supported by GitHub Pages renderers.
 - GItHub Pages build server [overwrites the `source` settings](https://help.github.com/articles/pages-don-t-build-unable-to-run-jekyll#source-setting). This prevent it generating pages from current file structure.
 
-<a name="c9-2"></a>
 ### The Solution
 
 I know this can be tricky and more verbose than uploading your Jekyll site directly to your repository. However GitHub Pages support static HTML pages, a workaround solution for using Almace Scaffolding on GitHub Pages is treating your Jekyll site as static pages:
@@ -176,12 +162,10 @@ If you'd like to keep all things under Git control, you can try the following fi
 
 You can see this [live demo](http://github.com/amsf/amsf.github.io/) how to make them friends.
 
-<a name="donate"></a>
 ## Donate
 
 Wanna buy me a cup of coffee? [Great](http://sparanoid.com/donate/).
 
-<a name="author"></a>
 ## Author
 
 **Tunghsiao Liu**
@@ -189,7 +173,6 @@ Wanna buy me a cup of coffee? [Great](http://sparanoid.com/donate/).
 - Twitter: @[tunghsiao](http://twitter.com/tunghsiao)
 - GitHub: @[sparanoid](http://github.com/sparanoid)
 
-<a name="licenses"></a>
 ## Licenses
 
 Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [CC BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
