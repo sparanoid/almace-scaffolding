@@ -10,7 +10,7 @@
 source:         ./_app
 destination:    ./_site
 timezone:       Asia/Hong_Kong
-permalink:      /:categories/:title/
+permalink:      /:title.html
 markdown:       redcarpet
 highlighter:    pygments
 
@@ -44,7 +44,7 @@ redcarpet:
 #
 
 # Site name
-name:           Sparanoid
+name:           Almace Scaffolding
 
 # Site description, will appear in the document meta and Atom feed subtitle
 description:    I make things that don’t suck.
@@ -97,7 +97,7 @@ rss_excerpt:    false
 
 # Almace Scaffolding mode, enable post content for homepage and adding credit for site footer
 # Default:      false
-amsf:           false
+amsf:           true
 
 #
 # Custom distribution variables
