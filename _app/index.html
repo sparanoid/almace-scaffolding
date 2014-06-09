@@ -15,14 +15,14 @@ permalink: /
 
     <small class=latest-post>
       {% for post in site.categories.work limit:1 %}
-        Recently redesigned <a href="{{ post.url | prepend: site.data.var.base }}" class=latest>{{ post.title }}</a>
+        Recently redesigned <a href="{{ post.url | prepend: site.base }}" class=latest>{{ post.title }}</a>
       {% endfor %}
     </small>
 
-    {% if site.data.var.availability == 'free' %}
-      <p class="status available"><a href="mailto:{{ site.data.var.email }}">Currently available for freelance</a></p>
+    {% if site.data.availability.free %}
+      <p class="status available"><a href="mailto:{{ site.profile.email }}">Currently available for freelance</a></p>
     {% else %}
-      <p class="status unavailable"><a href="mailto:{{ site.data.var.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></p>
+      <p class="status unavailable"><a href="mailto:{{ site.profile.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></p>
     {% endif %}
   </header>
 </article>

@@ -1,15 +1,11 @@
 - title: Home
   url:   /
-  cate:  home
 
 - title: Work
   url:   /work/
-  cate:  work
 
 - title: Note
   url:   /note/
-  cate:  note
 
 - title: About
   url:   /about/
-  cate:  about

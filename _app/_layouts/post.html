@@ -16,7 +16,7 @@ layout: default
     <!-- Prepare for image headers -->
     {% capture image_header %}
       <img
-        src="{{ site.data.var.file }}/{{ page.img-headline }}"
+        src="{{ site.file }}/{{ page.img-headline }}"
         alt="{{ page.title | strip_html | xml_escape }}"
         {% if page.img-headline-width %}
           style="width: {{ page.img-headline-width | times: 0.1 }}vw;"
@@ -73,7 +73,7 @@ layout: default
       </h1>
     {% endif %}
 
-    {% if page.date %}<small>By <span rel=author>{{ site.data.var.user }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
+    {% if page.date %}<small>By <span rel=author>{{ site.profile.user }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
     {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
   </header>
 

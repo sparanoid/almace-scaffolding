@@ -7,4 +7,4 @@ excerpt: Another Alley [Mod]
 thumb: another-alley-mod.jpg
 ---
 
-<p><img src="{{ site.data.var.file }}/work/another-alley-mod.jpg" alt="Another Alley [Mod]"></p>
+<p><img src="{{ site.file }}/work/another-alley-mod.jpg" alt="Another Alley [Mod]"></p>
