@@ -32,7 +32,7 @@
 - Minimalism design, No jQuery library, No JavaScript, No `everybody-shake-ur-body.js`
 - Ideal for personal blog, portfolio, product blog and Tumblr-like link blog
 - (Maybe) [the first](https://github.com/sparanoid/sparanoid.com/commit/9b44b4c0f57c3dd1e828d828a95cc21b992785ce) template that uses [viewport relative units](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
-- [Tons of configurable settings](_app/_data/var.yml) for your posts and site customization
+- [Tons of configurable settings](_config.init.yml) for your posts and site customization
 - [Handcrafted stylesheets](_app/assets/_less/app.less). No Bootstrap or other bloated frameworks are used, CSS < 12 KB (Unminified)
 - Predefined LESS variables make it easier to change color schemes for different posts
 - Well-defined [Atom feed template](_app/feed-atom.xml)
@@ -53,8 +53,18 @@
 
 1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) this project, checkout to your local machine.
 2. Run `bundle install && npm install` to install required dependencies. Ruby gem `bundler` and Node.js package manager `npm` must be installed before running this command.
+3. Copy [`_config.init.yml`](_config.init.yml) to `_config.yml` as your default configuration file.
 3. Run `grunt serve` to fire up a server on your localhost, then open `http://localhost:4321` in your browser.
 4. Edit, edit, delete, delete, commit, push, done.
+
+So in short for geeks:
+
+```shell
+git clone git@github.com:sparanoid/almace-scaffolding.git
+bundle install && npm install
+cp _config.init.yml _config.yml
+grunt serve
+```
 
 Still can't get things working? Why not try my [video tutorials](http://www.youtube.com/watch?v=5NV6Rdv1a3I).
 
@@ -129,7 +139,7 @@ Usage:
 
 ## Avaiable Settings
 
-All custom settings can be configured at [`_app/_data/var.yml`](_app/_data/var.yml), it's well commented so you should really check it out.
+All custom settings can be configured at `_config.yml` (a copy of [`_config.init.yml`](_config.init.yml) you just duplicated since your first setup), it's well commented so you should really check it out.
 
 ## Demo
 
