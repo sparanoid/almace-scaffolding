@@ -656,7 +656,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Simplified iOS media query
 - Adds media query to detect different screen resolution for `.work-list`
 - Adds freelance status on homepage
-- Uses `site.email` variable on About page
+- Uses `site.profile.email` variable on About page
 - Adds `feed-note.atom` and `feed-work.atom` (Temporary)
 - Update `.btn` styles
 
