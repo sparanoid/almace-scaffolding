@@ -233,7 +233,6 @@ module.exports = (grunt) ->
       dist:
         src: [
           ".tmp"
-          "<%= config.dist %>"
         ]
 
       postDist:
