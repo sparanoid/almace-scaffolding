@@ -1,3 +1,28 @@
+<a name="24.0.9"></a>
+### 24.0.9 (2014-06-09)
+
+
+#### Bug Fixes
+
+* **template:**
+  * update footer credit ([2f3aec23](http://github.com/sparanoid/sparanoid.com/commit/2f3aec23fa75072649cece89218045570fea305f))
+  * fix SVG title for Safari Reader mode ([8b7cc843](http://github.com/sparanoid/sparanoid.com/commit/8b7cc843f419c6935c806ccc462dac8e82c3c4b4))
+
+
+#### Features
+
+* split configuration files into 3 files for better user experience ([d5db218f](http://github.com/sparanoid/sparanoid.com/commit/d5db218fdb08862c2e736ab5a3a7ba7d4c414184))
+* **style:** make highlighter theme works for all color scheme (hint: LESS color functions) ([5556eef4](http://github.com/sparanoid/sparanoid.com/commit/5556eef4c0dab2458e7e452dd22f45b660355ede))
+* **template:**
+  * move all custom variables to default `_config.yml` ([92a69fb0](http://github.com/sparanoid/sparanoid.com/commit/92a69fb0944451cbb098b9ae2c696d7c2e81d808))
+  * use assign statement for post link ([2b79f39b](http://github.com/sparanoid/sparanoid.com/commit/2b79f39babd38a46b594f342c5bd604b54a92347))
+
+
+#### Breaking Changes
+
+* Now all custom variables go to `_config.yml`, original `var.yml` will no longer available. all related template tags have been update for new variable structure. ([92a69fb0](http://github.com/sparanoid/sparanoid.com/commit/92a69fb0944451cbb098b9ae2c696d7c2e81d808))
+
+
 <a name="24.0.8"></a>
 ### 24.0.8 (2014-06-05)
 
