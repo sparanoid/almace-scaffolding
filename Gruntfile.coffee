@@ -198,10 +198,10 @@ module.exports = (grunt) ->
         stdout: true
 
       server:
-        command: "jekyll serve --watch --future --drafts --config _config.yml,_config.dev.yml"
+        command: "jekyll serve --watch --future --drafts --config _config.yml,_config.user.yml,_config.dev.yml"
 
       dist:
-        command: "jekyll build"
+        command: "jekyll build --config _config.yml,_config.user.yml"
 
       archive:
         command: "jekyll build -d <%= config.cfg.destination %><%= config.cfg.base %>/"
