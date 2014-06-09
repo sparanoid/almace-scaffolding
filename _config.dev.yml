@@ -1,0 +1,7 @@
+#
+# Jekyll serve settings
+#
+
+# CDN location for development
+file:           http://sparanoid.s3-website-us-east-1.amazonaws.com
+# file:           http://d349cztnlupsuf.cloudfront.net

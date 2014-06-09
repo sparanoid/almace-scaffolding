@@ -4,7 +4,7 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ site.data.var.base | prepend: site.data.var.url }}/</loc>
+    <loc>{{ site.base | prepend: site.url }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -12,7 +12,7 @@ layout: nil
 
 {% for post in site.posts %}
   <url>
-    <loc>{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}</loc>
+    <loc>{{ post.url | prepend: site.base | prepend: site.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
