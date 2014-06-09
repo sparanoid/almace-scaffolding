@@ -8,6 +8,6 @@ thumb: old-high-school.jpg
 ---
 
 
-<p><img src="{{ site.data.var.file }}/work/old_high_school.jpg" alt="Old High School"></p>
+<p><img src="{{ site.file }}/work/old_high_school.jpg" alt="Old High School"></p>
 
 <p lang=zh>My old high school, before we moved to a new one. 學校搬家前的校舍，正在上最後一課</p>

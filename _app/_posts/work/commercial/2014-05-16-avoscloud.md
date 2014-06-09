@@ -22,24 +22,24 @@ scheme-bg-light: true
 
 <h3>AVOS Cloud Homepage</h3>
 <p>The background cubes are animated and written in pure CSS, the color schemes of the page can also be changed according to different slices. You can check out <a href="http://codepen.io/sparanoid/pen/axiKF">this pen</a> for a simple 3D cubes demo.</p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-01-cropped.png" alt="AVOS Cloud Homepage Slides #1"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-02-cropped.png" alt="AVOS Cloud Homepage Slides #2"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-03-cropped.png" alt="AVOS Cloud Homepage Slides #3"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-04-cropped.png" alt="AVOS Cloud Homepage Slides #4"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-05-cropped.png" alt="AVOS Cloud Homepage Slides #5"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-01-cropped.png" alt="AVOS Cloud Homepage Slides #1"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-02-cropped.png" alt="AVOS Cloud Homepage Slides #2"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-03-cropped.png" alt="AVOS Cloud Homepage Slides #3"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-04-cropped.png" alt="AVOS Cloud Homepage Slides #4"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-05-cropped.png" alt="AVOS Cloud Homepage Slides #5"></p>
 
 <h3>AVOS Cloud Features Page</h3>
 <p>A full features list providing Overview, How it Works, and Resources.</p>
-<p><img src="{{ site.data.var.file }}/avoscloud-features-small-merged.jpg" alt="AVOS Cloud Features Overview"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-features-01.png" alt="AVOS Cloud Features Slides #1"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-features-02.png" alt="AVOS Cloud Features Slides #2"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-features-03.png" alt="AVOS Cloud Features Slides #3"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-features-04.png" alt="AVOS Cloud Features Slides #4"></p>
+<p><img src="{{ site.file }}/avoscloud-features-small-merged.jpg" alt="AVOS Cloud Features Overview"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-features-01.png" alt="AVOS Cloud Features Slides #1"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-features-02.png" alt="AVOS Cloud Features Slides #2"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-features-03.png" alt="AVOS Cloud Features Slides #3"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-features-04.png" alt="AVOS Cloud Features Slides #4"></p>
 
 <h3>AVOS Cloud Pricing Page</h3>
 <p>The pricing modal can slide out without redirecting to another page. Color schemes of this modal are dynamic, too.</p>
-<p><img src="{{ site.data.var.file }}/avoscloud-pricing-merged.png" alt="Delicious Landing Page"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-pricing-01.png" alt="AVOS Cloud Pricing Slides #1"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-pricing-02.png" alt="AVOS Cloud Pricing Slides #2"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-pricing-03.png" alt="AVOS Cloud Pricing Slides #3"></p>
-<p class="browser"><img src="{{ site.data.var.file }}/avoscloud-homepage-pricing-04.png" alt="AVOS Cloud Pricing Slides #4"></p>
+<p><img src="{{ site.file }}/avoscloud-pricing-merged.png" alt="Delicious Landing Page"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-01.png" alt="AVOS Cloud Pricing Slides #1"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-02.png" alt="AVOS Cloud Pricing Slides #2"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-03.png" alt="AVOS Cloud Pricing Slides #3"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-04.png" alt="AVOS Cloud Pricing Slides #4"></p>

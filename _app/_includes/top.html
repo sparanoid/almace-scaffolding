@@ -1,16 +1,16 @@
 <!doctype html>
 
 <meta name=viewport content="width=device-width, initial-scale=1, minimal-ui">
-<meta name="description" content="{{ site.data.var.description }}">
+<meta name="description" content="{{ site.description }}">
 
-<title>{% if page.title != site.data.var.name %}{{ site.data.var.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
-<link rel=alternate href="{{ site.data.var.feed | prepend: site.data.var.base }}/" type=application/atom+xml>
+<title>{% if page.title != site.name %}{{ site.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
+<link rel=alternate href="{{ site.feed | prepend: site.base }}/" type=application/atom+xml>
 
-<!-- build:css {{ site.data.var.assets | prepend: site.data.var.base }}/css/app.css -->
-  <link rel=stylesheet href="{{ '/css/app.css' | prepend: site.data.var.assets | prepend: site.data.var.base }}">
+<!-- build:css {{ site.assets | prepend: site.base }}/css/app.css -->
+  <link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets | prepend: site.base }}">
 <!-- endbuild -->
 
-{% if page.title == site.data.var.name %}<link rel=dns-prefetch href="{{ site.data.var.file }}">{% endif %}
+{% if page.title == site.name %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
 
 <!-- Define a description for better SEO result, exclude homepage -->
 {% capture content_description %}

@@ -45,6 +45,7 @@
     "grunt-html-validation": "^0.1.16",
     "grunt-rev": "^0.1.0",
     "grunt-shell": "^0.7.0",
+    "grunt-text-replace": "^0.3.12",
     "grunt-usemin": "^2.1.1",
     "grunt-xmlmin": "^0.1.1",
     "matchdep": "^0.3.0",

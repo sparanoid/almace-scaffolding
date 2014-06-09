@@ -12,7 +12,7 @@ scheme-code: "#24ebdb"
 scheme-bg: "#f1504d"
 ---
 
-<p><img src="{{ site.data.var.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>
+<p><img src="{{ site.file }}/monolite-plus-04.jpg" alt="MonoLite Plus"></p>
 
 <p class=note>Lastest Version: <strong>0.4.3</strong> for foobar2000 1.0 / <strong>0.2</strong> for foobar2000 0.9.6.9</p>
 
@@ -35,22 +35,22 @@ scheme-bg: "#f1504d"
 
 <p>
 <strong>MonoLite Plus 0.4.* 界面截圖：</strong>
-  <a href="{{ site.data.var.file }}/monolite-plus-04-01.png">#1</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-04-02.png">#2</a>
+  <a href="{{ site.file }}/monolite-plus-04-01.png">#1</a>
+  <a href="{{ site.file }}/monolite-plus-04-02.png">#2</a>
 <br>
 <strong>MonoLite Plus 0.2 / 0.3.* 界面截圖：</strong>
-  <a href="{{ site.data.var.file }}/monolite-plus-02-01.png">#1</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-02-02.png">#2</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-02-03.png">#3</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-02-04.png">#4</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-02-05.png">#5</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-02-06.png">#6</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-02-07.png">#7</a>
+  <a href="{{ site.file }}/monolite-plus-02-01.png">#1</a>
+  <a href="{{ site.file }}/monolite-plus-02-02.png">#2</a>
+  <a href="{{ site.file }}/monolite-plus-02-03.png">#3</a>
+  <a href="{{ site.file }}/monolite-plus-02-04.png">#4</a>
+  <a href="{{ site.file }}/monolite-plus-02-05.png">#5</a>
+  <a href="{{ site.file }}/monolite-plus-02-06.png">#6</a>
+  <a href="{{ site.file }}/monolite-plus-02-07.png">#7</a>
 <br>
 <strong>MonoLite Plus 0.1 界面截圖：</strong>
-  <a href="{{ site.data.var.file }}/monolite-plus-01.png">#1</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-02.png">#2</a>
-  <a href="{{ site.data.var.file }}/monolite-plus-03.png">#3</a>
+  <a href="{{ site.file }}/monolite-plus-01.png">#1</a>
+  <a href="{{ site.file }}/monolite-plus-02.png">#2</a>
+  <a href="{{ site.file }}/monolite-plus-03.png">#3</a>
 </p>
 
 <h3>MonoLite Plus 安裝向導 (Portable 模式)</h3>
@@ -106,7 +106,7 @@ scheme-bg: "#f1504d"
   <li>隱藏菜單欄、狀態欄會有更好的視覺效果。菜單欄可以在需要的時候點擊右上角的按鈕顯示</li>
   <li>在播放列表任意位置點擊右鍵，即可修改 Sort 與 Group by 類型</li>
   <li>當修改了 Group by 類型後，專輯封面大小會發生變化，導致專輯封面顯示模糊，此時右鍵點擊列表任意位置選 Refresh all 即可</li>
-  <li>建議 <a href="{{ site.data.var.file }}/monolite-plus-04.png">如圖修改</a> 快捷鍵設置，從此敲擊空格即可定位到正在播放的曲目</li>
+  <li>建議 <a href="{{ site.file }}/monolite-plus-04.png">如圖修改</a> 快捷鍵設置，從此敲擊空格即可定位到正在播放的曲目</li>
 </ul>
 
 <h3>Windows XP 用戶</h3>
@@ -130,11 +130,11 @@ scheme-bg: "#f1504d"
 
 <p class=note>該主題基于 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商業性使用-相同方式共享 3.0 發布</a></p>
 
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-043.7z</p>
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-042.7z</p>
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-041.7z</p>
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-04.7z</p>
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-031.7z</p>
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-03.7z</p>
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-02.7z</p>
-<p class=download><a href="{{ site.data.var.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-01.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-043.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-042.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-041.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-04.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-031.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-03.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-02.7z</p>
+<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-01.7z</p>

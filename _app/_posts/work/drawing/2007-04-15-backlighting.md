@@ -7,4 +7,4 @@ excerpt: Backlighting
 thumb: backlighting.jpg
 ---
 
-<p><img src="{{ site.data.var.file }}/backlighting.jpg" alt="Backlighting"></p>
+<p><img src="{{ site.file }}/backlighting.jpg" alt="Backlighting"></p>

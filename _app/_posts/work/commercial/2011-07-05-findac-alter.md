@@ -7,4 +7,4 @@ excerpt: find.ac Alter merchant page for a Japanese ACG (Animations, Comics and 
 thumb: find.ac-alter.png
 ---
 
-<p class=browser><img src="{{ site.data.var.file }}/find.ac-alter.jpg"></p>
+<p class=browser><img src="{{ site.file }}/find.ac-alter.jpg"></p>
