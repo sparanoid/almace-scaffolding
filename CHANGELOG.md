@@ -152,7 +152,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
   * smaller margin space for image post title ([4eac0fda](http://github.com/sparanoid/sparanoid.com/commit/4eac0fdab6adcd68ddaf40451dd22dc034c83c07))
 * **template:**
   * remove `.txt` wrapper ([1f400475](http://github.com/sparanoid/sparanoid.com/commit/1f400475e3f3611919299fdcccad73779539fd16))
-  * update footer and read me for new jksf (a.k.a. Jekyll Scaffolding) branding ([13de5820](http://github.com/sparanoid/sparanoid.com/commit/13de58207961f52204545bf9ac91a03bb5f0bdf5))
+  * update footer and read me for new jksf (a.k.a. Almace Scaffolding) branding ([13de5820](http://github.com/sparanoid/sparanoid.com/commit/13de58207961f52204545bf9ac91a03bb5f0bdf5))
 
 
 #### Breaking Changes
