@@ -2,4 +2,5 @@
 layout: nil
 ---
 User-agent: *
-Sitemap: {{ /sitemap.xml | prepend: site.data.var.base | prepend: site.data.var.url }}/sitemap.xml
+Disallow: /lab/version/
+Sitemap: {{ /sitemap.xml | prepend: site.base | prepend: site.url }}/sitemap.xml

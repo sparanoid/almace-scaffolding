@@ -5,47 +5,48 @@ permalink: /feed/index.xml
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.data.var.name }}</title>
-  <subtitle>{{ site.data.var.description }}</subtitle>
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.description }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>tag:{{ site.data.var.domain }},2005:/</id>
-  <link rel="alternate" type="text/html" hreflang="en" href="{{ site.data.var.base | prepend: site.data.var.url }}/"/>
-  <link rel="self" type="application/atom+xml" href="{{ site.data.var.feed | prepend: site.data.var.base | prepend: site.data.var.url }}/"/>
-  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.data.var.user }}</rights>
+  {% assign site_domain = site.url | replace:'http://', '' | replace:'https://', '' %}
+  <id>tag:{{ site_domain }},2005:/</id>
+  <link rel="alternate" type="text/html" hreflang="en" href="{{ site.base | prepend: site.url }}/"/>
+  <link rel="self" type="application/atom+xml" href="{{ site.feed | prepend: site.base | prepend: site.url }}/"/>
+  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.profile.user }}</rights>
 
   <author>
-    <name>{{ site.data.var.user }}</name>
-    <uri>{{ site.data.var.base | prepend: site.data.var.url }}/</uri>
-    <email>{{ site.data.var.email }}</email>
+    <name>{{ site.profile.user }}</name>
+    <uri>{{ site.base | prepend: site.url }}/</uri>
+    <email>{{ site.profile.email }}</email>
   </author>
 
   {% for post in site.posts limit:300 %}
-    {% if site.data.var.link_blog and post.link %}
+    {% if site.link_blog and post.link %}
       {% assign entry_link = post.link %}
     {% else %}
-      {% assign entry_link = post.url | prepend: site.data.var.base | prepend: site.data.var.url %}
+      {% assign entry_link = post.url | prepend: site.base | prepend: site.url %}
     {% endif %}
 
     {% capture entry_permalink %}
-      {% if site.data.var.link_blog and post.link %}
-        <p><a href="{{ post.url | prepend: site.data.var.base | prepend: site.data.var.url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”">◉ Permalink</a></p>
-      {% elsif site.data.var.link_blog != true and post.link %}
+      {% if site.link_blog and post.link %}
+        <p><a href="{{ post.url | prepend: site.base | prepend: site.url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”">◉ Permalink</a></p>
+      {% elsif site.link_blog != true and post.link %}
         <p><a href="{{ post.link }}">◉ Direct Link to Original Site</a></p>
       {% endif %}
     {% endcapture %}
 
     <entry>
       <title>{{ post.title | strip_html | xml_escape }}</title>
-      <id>tag:{{ site.data.var.base | prepend: site.data.var.domain }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+      <id>tag:{{ site.base | prepend: site_domain }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
       <link rel="alternate" type="text/html" href="{{ entry_link }}"/>
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <author>
-        <name>{{ site.data.var.user }}</name>
-        <uri>{{ site.data.var.base | prepend: site.data.var.url }}/</uri>
-        <email>{{ site.data.var.email }}</email>
+        <name>{{ site.profile.user }}</name>
+        <uri>{{ site.base | prepend: site.url }}/</uri>
+        <email>{{ site.profile.email }}</email>
       </author>
-      <content type="html" xml:base="{{ site.data.var.base | prepend: site.data.var.url }}/">
-        {% if site.data.var.rss_excerpt %}
+      <content type="html" xml:base="{{ site.base | prepend: site.url }}/">
+        {% if site.rss_excerpt %}
           {{ post.excerpt | xml_escape }}
         {% else %}
           {{ post.content | xml_escape }}

@@ -24,7 +24,7 @@
     {% endcapture %}
 
     <!-- Item title -->
-    <a href="{{ post.url | prepend: site.data.var.base }}" {{ post_link_color }}>{{ post.title }}</a>
+    <a href="{{ post.url | prepend: site.base }}" {{ post_link_color }}>{{ post.title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}
@@ -32,7 +32,7 @@
     {% endif %}
   </h2>
 
-  {% if site.data.var.demo %}
+  {% if site.amsf %}
     {{ post.content }}
   {% endif %}
 

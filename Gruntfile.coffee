@@ -11,7 +11,6 @@ module.exports = (grunt) ->
   grunt.initConfig
     config:
       cfg: grunt.file.readYAML("_config.yml")
-      var: grunt.file.readYAML("./_app/_data/var.yml")
       pkg: grunt.file.readJSON("package.json")
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
@@ -105,6 +104,7 @@ module.exports = (grunt) ->
           removeCommentsFromCDATA: true
           removeCDATASectionsFromCDATA: true
           collapseWhitespace: true
+          conservativeCollapse: true
           collapseBooleanAttributes: true
           removeAttributeQuotes: false
           removeRedundantAttributes: true
@@ -198,19 +198,19 @@ module.exports = (grunt) ->
         stdout: true
 
       server:
-        command: "jekyll serve --watch --future"
+        command: "jekyll serve --watch --future --drafts --config _config.yml,_config.dev.yml"
 
       dist:
         command: "jekyll build"
 
       archive:
-        command: "jekyll build -d <%= config.cfg.destination %><%= config.var.base %>/"
+        command: "jekyll build -d <%= config.cfg.destination %><%= config.cfg.base %>/"
 
       sync:
-        command: "rsync -avz --delete --progress <%= config.var.ignore_files %> <%= config.dist %>/ <%= config.var.remote_host %>:<%= config.var.remote_dir %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
 
       s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= config.var.static_files %> <%= config.var.s3_bucket %>"
+        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= config.cfg.static_files %> <%= config.cfg.s3_bucket %>"
 
     concurrent:
       options:
@@ -233,7 +233,6 @@ module.exports = (grunt) ->
       dist:
         src: [
           ".tmp"
-          "<%= config.dist %>"
         ]
 
       postDist:
@@ -246,39 +245,56 @@ module.exports = (grunt) ->
       dist:
         src: ["<%= config.dist %>/**/*"]
 
-  # Fire up a server on local machine for development
-  grunt.registerTask "serve", [
+    replace:
+      availability:
+        src: ["<%= config.app %>/_data/availability.yml"]
+        dest: "<%= config.app %>/_data/availability.yml"
+        replacements: [
+          {
+            from: /(free:)(.+)/g
+            to: "$1 true"
+          }
+        ]
+
+  grunt.registerTask "reset", "Reset user availability", (target) ->
+    grunt.config.set "replace.availability.replacements.0.to", "$1 true"
+    grunt.task.run [
+      "replace"
+    ]
+
+  grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean"
     "less:server"
     "concurrent:server"
   ]
 
-  # Test task
-  grunt.registerTask "test", [
+  grunt.registerTask "test", "Build test task", [
     "build"
     # "csslint"
     "validation"
   ]
 
-  # Build site with `jekyll`
-  grunt.registerTask "build", [
-    "clean"
-    "coffeelint"
-    "useminPrepare"
-    "less:dist"
-    "autoprefixer"
-    "csscomb"
-    "shell:dist"
-    "rev"
-    "usemin"
-    "concurrent:dist"
-    "smoosher"
-    "usebanner"
-    "clean:postDist"
-  ]
+  grunt.registerTask "build", "Build site with `jekyll`, use `--busy` to set availability to false", (target) ->
+    grunt.config.set "replace.availability.replacements.0.to", "$1 false" if grunt.option("busy")
+    grunt.task.run [
+      "replace"
+      "clean"
+      "coffeelint"
+      "useminPrepare"
+      "less:dist"
+      "autoprefixer"
+      "csscomb"
+      "shell:dist"
+      "rev"
+      "usemin"
+      "concurrent:dist"
+      "smoosher"
+      "usebanner"
+      "clean:postDist"
+      "reset"
+    ]
 
-  # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
-  grunt.registerTask "archive", [
+  grunt.registerTask "archive", "Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/", [
     "clean"
     "less:dist"
     "autoprefixer"
@@ -287,14 +303,15 @@ module.exports = (grunt) ->
     "concurrent:dist"
   ]
 
-  # Build site + rsync static files to remote server
-  grunt.registerTask "sync", [
+  grunt.registerTask "sync", "Build site + rsync static files to remote server", [
     "build"
     "shell:sync"
   ]
 
-  # Sync image assets with `s3cmd`
-  grunt.registerTask "s3", ["shell:s3"]
+  grunt.registerTask "s3", "Sync image assets with `s3cmd`", [
+    "shell:s3"
+  ]
 
-  # Default task aka. build task
-  grunt.registerTask "default", ["build"]
+  grunt.registerTask "default", "Default task aka. build task", [
+    "build"
+  ]

@@ -1,12 +1,12 @@
 <!-- Twitter Cards support, more info: https://dev.twitter.com/docs/cards -->
 {% if page.category %}
   <meta name=twitter:card content="summary">
-  <meta name=twitter:site content="@{{ site.data.var.twitter }}">
-  <meta name=twitter:creator content="@{{ site.data.var.twtr_author }}">
-  <meta name=twitter:url content="{{ page.url | prepend: site.data.var.base | prepend: site.data.var.url }}">
+  <meta name=twitter:site content="@{{ site.profile.twitter.site }}">
+  <meta name=twitter:creator content="@{{ site.profile.twitter.creator }}">
+  <meta name=twitter:url content="{{ page.url | prepend: site.base | prepend: site.url }}">
   <meta name=twitter:title content="{{ page.title | strip_html | xml_escape }}">
   <meta name=twitter:description content="{{ content_description }}">
   {% if page.thumb %}
-    <meta name=twitter:image content="{{ site.data.var.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
+    <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
   {% endif %}
 {% endif %}

@@ -2,8 +2,9 @@
 <nav class=navigation>
   <ul>
     {% for item in site.data.nav %}
-      <li {% if page.permalink == item.url or page.category == item.cate %}class=current{% endif %}>
-        <a href="{{ item.url | prepend: site.data.var.base }}">
+      {% assign lowercased_title = item.title | downcase %}
+      <li {% if page.permalink == item.url or page.category == lowercased_title %}class=current{% endif %}>
+        <a href="{{ item.url | prepend: site.base }}">
           {{ item.title }}
         </a>
       </li>

@@ -35,3 +35,6 @@ bower_components
 # Project specified
 _site
 _app/assets/css
+
+# Uncomment the following if you want to gitignore current user config
+# _config.yml
