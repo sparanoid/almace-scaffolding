@@ -95,7 +95,7 @@ link_blog:      false
 # Default:      false
 rss_excerpt:    false
 
-# Almace Scalffolding mode, enable post content for homepage and adding credit for site footer
+# Almace Scaffolding mode, enable post content for homepage and adding credit for site footer
 # Default:      false
 amsf:           false
 
