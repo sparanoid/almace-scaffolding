@@ -461,26 +461,34 @@ body:hover .latest {
 // Broser frame for images in category "work"
 .browser {
   position: relative;
-  padding-top: 20px;
+  padding-top: 24px;
   margin: 0 0 4vmin !important;
-  background: rgba(0, 0, 0, .05);
+  background: rgba(255, 255, 255, .1);
   border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .05);
 
   &:before {
     position: absolute;
-    top: 6px;
-    left: 8px;
+    top: 8px;
+    left: 10px;
     display: block;
     width: 8px;
     height: 8px;
-    background: rgba(0, 0, 0, .15);
+    background: lighten(#f24e59, 30%);
     border-radius: 50%;
     content: "";
+    box-shadow:
+        16px 0 0 0   fade(lighten(#fac536, 30%), 96%)
+      , 32px 0 0 0   fade(lighten(#26e93d, 30%), 96%)
+      ,  0px 0 0 1px fade(darken(#f24e59, 30%), 30%)
+      , 16px 0 0 1px fade(darken(#fac536, 30%), 30%)
+      , 32px 0 0 1px fade(darken(#26e93d, 30%), 30%)
+    ;
   }
 
   img {
     margin: 0;
-    box-shadow: rgba(0, 0, 0, .05) 0 -1px 0 0;
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .05);
   }
 }
 
