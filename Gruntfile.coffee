@@ -276,7 +276,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask "build", "Build site with `jekyll`, use `--busy` to set availability to false", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 false" if grunt.option("busy")
-    grunt.config.set "shell.dist.command", "jekyll build --config _config.init.yml" if grunt.option("init")
     grunt.task.run [
       "replace"
       "clean"
