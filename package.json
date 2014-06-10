@@ -6,7 +6,7 @@
   "homepage": "http://sparanoid.com/work/almace-scaffolding/",
   "main": "Gruntfile.coffee",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test --init"
   },
   "repository": {
     "type": "git",
