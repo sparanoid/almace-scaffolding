@@ -20,6 +20,7 @@
 - [GitHub Pages Setup Guide](#github-pages-setup-guide)
   - [The Problem](#the-problem)
   - [The Solution](#the-solution)
+- [Other Notes](#other-notes)
 - [Donate](#donate)
 - [Author](#author)
 - [Licenses](#licenses)
