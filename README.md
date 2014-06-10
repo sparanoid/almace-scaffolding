@@ -1,6 +1,5 @@
 # Almace Scaffolding
 [![Build Status](https://travis-ci.org/sparanoid/almace-scaffolding.svg)](https://travis-ci.org/sparanoid/almace-scaffolding)
-[![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
 [![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#c8)
 
 `amsf`, a.k.a. **Almace Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
@@ -92,6 +91,7 @@ Upgrading templates is hard, it will be easy if you are're a casual blogger and 
 - You should also change `favicon.ico` and `apple-touch-icon.png` to yours.
 - Customize your site using `custom.less`.
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
+- You can add Travis support for this project, simplly rename [`.travis.init.yml`](.travis.init.yml) to `.travis.yml`.
 
 ## Avaiable Styles
 
@@ -171,6 +171,10 @@ If you'd like to keep all things under Git control, you can try the following fi
     └── README.md (your own readme)
 
 You can see this [live demo](http://github.com/amsf/amsf.github.io/) how to make them friends.
+
+## Other Notes
+
+- `_config.yml` is git ignored from `.git/info/exclude` file
 
 ## Donate
 
