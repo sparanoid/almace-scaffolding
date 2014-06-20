@@ -38,8 +38,9 @@ scheme-bg-light: true
 
 <h3>AVOS Cloud Pricing Page</h3>
 <p>The pricing modal can slide out without redirecting to another page. Color schemes of this modal are dynamic, too.</p>
-<p><img src="{{ site.file }}/avoscloud-pricing-merged.png" alt="Delicious Landing Page"></p>
-<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-01.png" alt="AVOS Cloud Pricing Slides #1"></p>
-<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-02.png" alt="AVOS Cloud Pricing Slides #2"></p>
-<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-03.png" alt="AVOS Cloud Pricing Slides #3"></p>
-<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-04.png" alt="AVOS Cloud Pricing Slides #4"></p>
+<p><img src="{{ site.file }}/avoscloud-pricing-merged-new.jpg" alt="Delicious Landing Page"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-new-01.png" alt="AVOS Cloud Pricing Slides #1"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-new-02.png" alt="AVOS Cloud Pricing Slides #2"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-new-03.png" alt="AVOS Cloud Pricing Slides #3"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-new-04.png" alt="AVOS Cloud Pricing Slides #4"></p>
+<p class="browser"><img src="{{ site.file }}/avoscloud-homepage-pricing-new-05.png" alt="AVOS Cloud Pricing Slides #5"></p>
