@@ -1,10 +1,12 @@
 # Almace Scaffolding
 [![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
-[![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#c8)
+[![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#demo)
 
 `amsf`, a.k.a. **Almace Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
 
-**Table of Contents**
+-----
+
+## Table of Contents
 
 - [Features](#features)
 - [Setup](#setup)
