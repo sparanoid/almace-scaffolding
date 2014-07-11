@@ -29,7 +29,7 @@ layout: default
     <!-- Prepare for SVG headers -->
     {% capture svg_header_style %}
       <style scoped>
-        h1 svg {
+        h2 svg {
           width: {{ page.svg-headline-width | times: 0.1 }}vw;
           height: {{ page.svg-headline-height | times: 0.1 }}vw;
         }
@@ -43,7 +43,7 @@ layout: default
     {% endcapture %}
 
     {% if page.img-headline %}
-      <h1>
+      <h2>
         {% if page.link %}
           <a href="{{ page.link }}">
             {{ image_header }}
@@ -51,10 +51,10 @@ layout: default
         {% else %}
           {{ image_header }}
         {% endif %}
-      </h1>
+      </h2>
     {% elsif page.svg-headline %}
       {{ svg_header_style }}
-      <h1>
+      <h2>
         {% if page.link %}
           <a href="{{ page.link }}">
             {{ svg_header }}
@@ -62,15 +62,15 @@ layout: default
         {% else %}
           {{ svg_header }}
         {% endif %}
-      </h1>
+      </h2>
     {% else %}
-      <h1>
+      <h2>
         {% if page.link %}
           <a href="{{ page.link }}" class=external>{{ page.title }} <span></span></a>
         {% else %}
           {{ page.title }}
         {% endif %}
-      </h1>
+      </h2>
     {% endif %}
 
     {% if page.date %}<small>By <span rel=author>{{ site.profile.user }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
