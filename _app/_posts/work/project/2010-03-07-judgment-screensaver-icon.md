@@ -11,6 +11,7 @@ scheme-link: "#9ed8d8"
 scheme-hover: "#fff"
 scheme-code: "#39beb6"
 scheme-bg: "#317979"
+plugin: intense
 ---
 
 <p>Antiskill <i>&amp;</i> Judgment Section 177 screensaver and icons, auto-scale screensaver tested up to 2560 &times; 1600.</p>
