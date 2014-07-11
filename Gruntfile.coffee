@@ -181,25 +181,6 @@ module.exports = (grunt) ->
       #   src: "**/*.html"
       #   dest: "<%= config.dist %>"
 
-    rev:
-      options:
-        encoding: "utf8"
-        algorithm: "md5"
-        length: 6
-
-      files:
-        src: ["<%= config.dist %>/assets/**/*.{js,css,png,jpg,gif,woff}"]
-
-    useminPrepare:
-      html: "<%= config.dist %>/index.html"
-
-    usemin:
-      options:
-        assetsDirs: ["<%= config.dist %>"]
-
-      html: ["<%= config.dist %>/**/*.html"]
-      css: ["<%= config.dist %>/assets/css/*.css"]
-
     smoosher:
       options:
         jsDir: "<%= config.dist %>"
@@ -310,14 +291,11 @@ module.exports = (grunt) ->
       "replace"
       "clean"
       "coffeelint"
-      "useminPrepare"
       "uglify:dist"
       "less:dist"
       "autoprefixer"
       "csscomb"
       "shell:dist"
-      "rev"
-      "usemin"
       "concurrent:dist"
       "smoosher"
       "usebanner"
