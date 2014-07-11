@@ -9,7 +9,7 @@ scheme-link: "#fff"
 scheme-hover: "#00edff"
 scheme-code: "#32d5db"
 scheme-bg: "#39f"
-plugin: slider
+plugin: intense
 ---
 
 <p><a href="http://delicious.com/">Delicious</a> (aka. del.icio.us) is a social bookmarking web service for storing, sharing, and discovering web bookmarks that first launched back in 2003. In 2005 it was acquired by Yahoo and later sold to AVOS Systems Inc. The website’s design hasn’t changed very much since its last redesign in 2011.</p>

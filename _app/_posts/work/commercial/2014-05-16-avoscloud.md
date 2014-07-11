@@ -14,6 +14,7 @@ scheme-hover: "#fa9324"
 scheme-code: "#32d5db"
 scheme-bg: "#fff"
 scheme-bg-light: true
+plugin: intense
 ---
 
 <p><a href="http://avoscloud.com">AVOS Cloud</a>, one of the most famous Chinese local (m)BaaS platform. Me and the whole team have been working on this project since last year. Now it's a spin-off of <a href="http://avos.com/">AVOS Systems, Inc.</a> focuses on tech startups and local companies in China.</p>

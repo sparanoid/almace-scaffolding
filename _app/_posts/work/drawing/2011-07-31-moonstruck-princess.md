@@ -5,6 +5,7 @@ category: work
 tag: drawing
 excerpt: Moonstruck princess in my dream, inspired by you.
 thumb: moonstruck-princess.jpg
+plugin: intense
 ---
 
 <p><img src="{{ site.file }}/moonstruck-princess.jpg"></p>
