@@ -9,6 +9,7 @@ svg-headline: svg/tianjin-project.svg
 svg-headline-width: 400
 svg-headline-height: 145
 link: /lab/tianjin/
+plugin: intense
 ---
 
 <p class=note>There&rsquo;s a <a href="{% post_url /work/commercial/2013-10-29-tianjin-project-revision %}">newer revision</a> of this project.</p>

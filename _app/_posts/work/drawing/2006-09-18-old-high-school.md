@@ -5,6 +5,7 @@ category: work
 tag: drawing
 excerpt: My old high school, before we moved to a new one.
 thumb: old-high-school.jpg
+plugin: intense
 ---
 
 

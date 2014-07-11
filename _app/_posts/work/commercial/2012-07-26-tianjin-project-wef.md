@@ -8,6 +8,7 @@ thumb: tianjin-project-wef.jpg
 svg-headline: svg/tianjin-project-wef.svg
 svg-headline-width: 600
 svg-headline-height: 125
+plugin: intense
 ---
 
 <p class=note>There&rsquo;s a <a href="{% post_url /work/commercial/2013-10-29-tianjin-project-revision %}">newer revision</a> of this project.</p>
