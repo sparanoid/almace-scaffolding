@@ -3,6 +3,7 @@ layout: post
 title: Tianjin Project Revision
 category: work
 tag: commercial
+plugin: intense
 ---
 
 <p>This is just another revision for the original <a href="{% post_url /work/commercial/2012-06-11-tianjin-project %}">Tianjin Project</a>, optimized for recently introduced iBooks for OS X. I also redesigned a new cover for it.</p>

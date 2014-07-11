@@ -60,12 +60,41 @@ module.exports = (grunt) ->
         files: ["<%= coffeelint.gruntfile.src %>"]
         tasks: ["coffeelint:gruntfile"]
 
+      js:
+        files: ["<%= config.app %>/assets/_js/**/*.js"]
+        tasks: [
+          "uglify:server"
+        ]
+
       less:
         files: ["<%= config.app %>/assets/_less/**/*.less"]
         tasks: [
           "less:server"
           "autoprefixer"
           # "csslint"
+        ]
+
+    uglify:
+      server:
+        options:
+          sourceMap: true
+
+        files: [
+          expand: true
+          cwd: "<%= config.app %>/assets/_js/"
+          src: ["*.js", "!*.min.js"]
+          dest: "<%= config.app %>/assets/js/"
+        ]
+
+      dist:
+        options:
+          report: "gzip"
+
+        files: [
+          expand: true
+          cwd: "<%= config.app %>/assets/js/"
+          src: ["*.js", "!*.min.js"]
+          dest: "<%= config.app %>/assets/js/"
         ]
 
     less:
@@ -264,6 +293,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean"
+    "uglify:server"
     "less:server"
     "concurrent:server"
   ]
@@ -281,6 +311,7 @@ module.exports = (grunt) ->
       "clean"
       "coffeelint"
       "useminPrepare"
+      "uglify:dist"
       "less:dist"
       "autoprefixer"
       "csscomb"

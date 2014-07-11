@@ -5,7 +5,7 @@ category: work
 tag: project
 excerpt: Tianjin Impression brochure for my college work
 thumb: tianjin-impression-brochure.jpg
-plugin: slider
+plugin: intense
 ---
 
 <img src="{{ site.file }}/tianjin-impression-brochure-01.jpg">
