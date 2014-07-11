@@ -1,5 +1,10 @@
 <!-- Insert scripts here -->
 {% if page.plugin == 'intense' %}
   <script src="{{ '/js/intense.js' | prepend: site.assets | prepend: site.base }}"></script>
-  <script src="{{ '/js/app.js' | prepend: site.assets | prepend: site.base }}"></script>
+  <script>
+    window.onload = function() {
+      var elements = document.querySelectorAll( 'p > img' );
+      Intense( elements );
+    }
+  </script>
 {% endif %}
