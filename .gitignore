@@ -34,4 +34,5 @@ bower_components
 
 # Project specified
 _site
+_app/assets/js
 _app/assets/css
