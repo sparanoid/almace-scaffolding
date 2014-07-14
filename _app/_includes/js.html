@@ -1,1 +1,18 @@
 <!-- Insert scripts here -->
+{% if page.plugin == 'intense' %}
+  <script src="{{ '/js/intense.js' | prepend: site.assets }}"></script>
+  <script>
+    window.onload = function() {
+      var fx = document.querySelectorAll('p > img');
+      var el = document.body;
+      var cl = 'loaded'
+
+      if (el.classList)
+        el.classList.add(cl);
+      else
+        el.className += ' ' + cl;
+
+      Intense(fx);
+    }
+  </script>
+{% endif %}
