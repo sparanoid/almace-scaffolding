@@ -3,8 +3,16 @@
   <script src="{{ '/js/intense.js' | prepend: site.assets | prepend: site.base }}"></script>
   <script>
     window.onload = function() {
-      var elements = document.querySelectorAll( 'p > img' );
-      Intense( elements );
+      var fx = document.querySelectorAll('p > img');
+      var el = document.body;
+      var cl = 'loaded'
+
+      if (el.classList)
+        el.classList.add(cl);
+      else
+        el.className += ' ' + cl;
+
+      Intense(fx);
     }
   </script>
 {% endif %}
