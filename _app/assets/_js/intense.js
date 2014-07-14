@@ -134,11 +134,13 @@ var Intense = (function() {
 
       overflowValue = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('intense-open');
     }
 
     // Unlock scroll on the document body.
     function unlockBody() {
       document.body.style.overflow = overflowValue;
+      document.body.classList.remove('intense-open');
     }
 
     function createViewer( title, caption, background ) {
@@ -166,7 +168,7 @@ var Intense = (function() {
       applyProperties( container, containerProperties );
 
       var imageProperties = {
-        'cursor': 'pointer'
+        'cursor': 'zoom-out',
       }
       applyProperties( target, imageProperties );
 
