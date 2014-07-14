@@ -276,6 +276,7 @@ module.exports = (grunt) ->
     "clean"
     "uglify:server"
     "less:server"
+    "autoprefixer"
     "concurrent:server"
   ]
 
