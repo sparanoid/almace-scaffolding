@@ -213,9 +213,6 @@ module.exports = (grunt) ->
       dist:
         command: "jekyll build"
 
-      archive:
-        command: "jekyll build -d <%= config.cfg.destination %><%= config.cfg.base %>/"
-
       sync:
         command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
 
@@ -303,15 +300,6 @@ module.exports = (grunt) ->
       "clean:postDist"
       "reset"
     ]
-
-  grunt.registerTask "archive", "Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/", [
-    "clean"
-    "less:dist"
-    "autoprefixer"
-    "csscomb"
-    "shell:archive"
-    "concurrent:dist"
-  ]
 
   grunt.registerTask "sync", "Build site + rsync static files to remote server", [
     "build"
