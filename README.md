@@ -10,14 +10,14 @@
 
 - [Features](#features)
 - [Setup](#setup)
-- [Managing Media](#managing-media)
 - [Upgrading](#upgrading)
-- [Tips](#tips)
+- [Customizing](#customizing)
+- [Managing Media](#managing-media)
 - [Avaiable Styles](#avaiable-styles)
   - [`.note`, `.store`, and `.download`](#note-store-and-download)
   - [`.browser`](#browser)
   - [`.largetype`](#largetype)
-- [Avaiable Settings](#avaiable-settings)
+- [Tips](#tips)
 - [Demo](#demo)
 - [GitHub Pages Setup Guide](#github-pages-setup-guide)
   - [The Problem](#the-problem)
@@ -70,6 +70,19 @@ grunt serve
 
 Still can't get things working? Why not try my [video tutorials](http://www.youtube.com/watch?v=5NV6Rdv1a3I).
 
+## Upgrading
+
+Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every template file untouched. Just copy and paste all template files in `_assets`, `_includes`, and `_layouts`. If you change the templates directly, you have to compare them side to side.
+
+## Customizing
+
+- All custom settings can be configured at `_config.yml` (a copy of [`_config.init.yml`](_config.init.yml) you just duplicated since your first setup), it's well commented so you should really check it out.
+- Additional variables are stored in [`./_app/_data/`](/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
+- You should also change `favicon.ico` and `apple-touch-icon.png` to yours.
+- Customize your site using `custom.less`.
+- You can add Travis support for this project, simplly rename [`.travis.init.yml`](.travis.init.yml) to `.travis.yml`.
+- Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
+
 ## Managing Media
 
 Media files are located in `./assets/` and grouped by different formats:
@@ -80,21 +93,6 @@ Media files are located in `./assets/` and grouped by different formats:
 - `./img/`: Image assets, images used by template, personally I don't recommend put post images here, use a CDN instead.
 - `./js/`: JavaScript files, put all needed sctipts in this directoy will just work fine. I don't expect to have many scripts so no complex `vender`, `lib`, or other fancy structures used for this project.
 - `./svg/`: The same as `./img/`.
-
-## Upgrading
-
-Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every template file untouched. Just copy and paste all template files in `_assets`, `_includes`, and `_layouts`. If you change the templates directly, you have to compare them side to side.
-
-## Tips
-
-- Additional variables are stored in [`./_app/_data/`](/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
-- Not familer with [Markdown](http://daringfireball.net/projects/markdown/)? Try [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-- You can use Jekyll's [built-in syntax highlighting](http://jekyllrb.com/docs/templates/#code_snippet_highlighting), I've included a default theme for this project.
-- [Tables](https://help.github.com/articles/github-flavored-markdown#tables) and [footnotes](https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use) are also avaiables to use.
-- You should also change `favicon.ico` and `apple-touch-icon.png` to yours.
-- Customize your site using `custom.less`.
-- Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
-- You can add Travis support for this project, simplly rename [`.travis.init.yml`](.travis.init.yml) to `.travis.yml`.
 
 ## Avaiable Styles
 
@@ -140,9 +138,11 @@ Usage:
 </p>
 ```
 
-## Avaiable Settings
+## Tips
 
-All custom settings can be configured at `_config.yml` (a copy of [`_config.init.yml`](_config.init.yml) you just duplicated since your first setup), it's well commented so you should really check it out.
+- Not familer with [Markdown](http://daringfireball.net/projects/markdown/)? Try [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+- You can use Jekyll's [built-in syntax highlighting](http://jekyllrb.com/docs/templates/#code_snippet_highlighting), I've included a default theme for this project.
+- [Tables](https://help.github.com/articles/github-flavored-markdown#tables) and [footnotes](https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use) are also avaiables to use.
 
 ## Demo
 
