@@ -12,7 +12,7 @@
 
 <!-- Define a description for better SEO result, exclude homepage -->
 {% capture content_description %}
-  {{ page.content | strip_html | strip_newlines | xml_escape | truncatewords: 50 | replace: '  ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' | append: '…' }}
+  {{ page.content | markdownify | strip_html | strip_newlines | xml_escape | truncatewords: 50 | truncate: 210 | replace: '  ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' }}
 {% endcapture %}
 
 {% if page.permalink != '/' %}
