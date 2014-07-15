@@ -79,7 +79,8 @@ Upgrading templates is hard, it will be easy if you are're a casual blogger and 
 - All custom settings can be configured at `_config.yml` (a copy of [`_config.init.yml`](_config.init.yml) you just duplicated since your first setup), it's well commented so you should really check it out.
 - Additional variables are stored in [`./_app/_data/`](/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
 - You should also change `favicon.ico` and `apple-touch-icon.png` to yours.
-- Customize your site using `custom.less`.
+- Customize your site's look and fell by changing [`./_app/assets/_less/custom.less`](/_app/assets/_less/custom.less).
+- Use your custom JavaScript snippets (Google Analytics, Typekit, etc.) in [`./_app/_includes/js.html`](/_app/_includes/js.html).
 - You can add Travis support for this project, simplly rename [`.travis.init.yml`](.travis.init.yml) to `.travis.yml`.
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 
@@ -87,11 +88,11 @@ Upgrading templates is hard, it will be easy if you are're a casual blogger and 
 
 Media files are located in `./assets/` and grouped by different formats:
 
+- `./_js/`: JavaScript files, put all needed sctipts in this directoy will just work fine. All files in this directory will be automatically uglified and copied into `./js/`. I don't expect to have many scripts so no complex `vender`, `lib`, or other fancy structures used for this project.
 - `./_less/`: LESS stylesheets, the leading underscore makes sure this directory is excluded from Jekyll generated site.
 - `./css/`:  CSS and its sourcemap files generated from LESS, it's gitignored.
 - `./font/`: Web fonts
 - `./img/`: Image assets, images used by template, personally I don't recommend put post images here, use a CDN instead.
-- `./js/`: JavaScript files, put all needed sctipts in this directoy will just work fine. I don't expect to have many scripts so no complex `vender`, `lib`, or other fancy structures used for this project.
 - `./svg/`: The same as `./img/`.
 
 ## Avaiable Styles
