@@ -6,6 +6,7 @@
 @text-color: #000;
 @sans-serif: "Helvetica Neue", Arial, "Hiragino Sans GB", sans-serif;
 @serif: Georgia, "Hiragino Mincho ProN", serif;
+@monospace: Menlo, monospace;
 
 // Invert color switcher for images and videos
 // :root { filter: invert(100%); }
@@ -239,13 +240,18 @@ body:hover .latest {
     > *:last-child {
       margin-bottom: 0 !important;
 
-      // article > ul > li
+      // article > ul > li, article > .footnotes > ol
       > *:last-child {
         margin-bottom: 0 !important;
 
-        // article > ul > li > p
+        // article > ul > li > p, article > .footnotes > ol > li
         > *:last-child {
           margin-bottom: 0 !important;
+
+          // article > .footnotes > ol > li > p
+          > *:last-child {
+            margin-bottom: 0 !important;
+          }
         }
       }
     }
@@ -304,7 +310,7 @@ body:hover .latest {
     }
   }
 
-  h3 {
+  h3, h4, h5, h6 {
     margin: 10vmin 0 1em;
     .sub-heading;
   }
@@ -314,6 +320,10 @@ body:hover .latest {
 
     li {
       line-height: (@base-line-height * 1.2);
+
+      > ul {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -362,7 +372,7 @@ body:hover .latest {
   }
 
   code, pre {
-    font-family: Menlo, monospace;
+    font-family: @monospace;
     color: #68a;
   }
 
@@ -519,7 +529,7 @@ article .list {
   list-style: none;
   margin: 0;
 
-  li {
+  > li {
     margin: 0 0 1.4vmin;
 
     h2 {
@@ -606,6 +616,25 @@ article .list {
 
   &.intense-open {
     cursor: zoom-out;
+  }
+}
+
+// GitHub Gist reset
+.gist {
+
+  code, pre {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .gist-file {
+    font-family: @monospace !important;
+    font-size: 80% !important;
+  }
+
+  .markdown-body {
+    padding: 1em;
   }
 }
 
