@@ -95,9 +95,13 @@ link_blog:      false
 # Default:      false
 rss_excerpt:    false
 
-# Almace Scaffolding mode, enable post content for homepage and adding credit for site footer
+# Hide footer from your homepage, example: sparanoid.com
 # Default:      false
-amsf:           true
+clean_homepage: false
+
+# Show generator credits
+# Default:      true
+credits:        true
 
 #
 # Custom distribution variables
