@@ -4,7 +4,7 @@
   <script src="{{ '/js/intense.js' | prepend: site.assets }}"></script>
   <script>
     window.onload = function() {
-      var fx = document.querySelectorAll('p > img');
+      var fx = document.querySelectorAll('p > img:not(.nointense)');
       var el = document.body;
       var cl = 'loaded'
 

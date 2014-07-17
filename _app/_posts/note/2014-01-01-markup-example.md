@@ -84,7 +84,7 @@ Use the `gist` tag to easily embed a GitHub Gist onto your site. This works with
 
 ### Browser Frame
 
-<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview"></p>
+<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class=nointense></p>
 
 You can add a browser frame to your images by simply using the following markup:
 
