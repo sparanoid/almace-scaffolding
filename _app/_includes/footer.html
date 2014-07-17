@@ -1,10 +1,10 @@
 <!-- Footer section -->
-{% if page.title == site.name and site.amsf == false %}
+{% if page.title == site.name and site.clean_homepage %}
 {% else %}
   <footer class=footer>
     <ul>
       <li><a href="{{ site.base }}/">{{ site.name }}</a></li>
-      {% if site.amsf %}
+      {% if site.credits %}
         <li><a href="https://github.com/sparanoid/almace-scaffolding/" title="Almace Scaffolding">amsf</a></li>
       {% endif %}
       <li><a href="{{ site.feed | prepend: site.base }}/" title="Feed - Atom (The Atom Syndication Format)">Atom</a></li>
