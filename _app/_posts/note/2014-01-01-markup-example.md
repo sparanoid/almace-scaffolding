@@ -90,7 +90,7 @@ You can add a browser frame to your images by simply using the following markup:
 
 ```html
 <p class="browser">
-  <img src="http://rsrc.sparanoid.com/photo.jpg" alt="Image">
+  <img src="http://sparanoid.com/photo.jpg" alt="Image">
 </p>
 ```
 
@@ -109,14 +109,22 @@ plugin: intense
 Markdown markup:
 
 ```
-![Image](http://rsrc.sparanoid.com/photo.jpg)
+![Image](http://sparanoid.com/photo.jpg)
 ```
 
 Or simply use HTML:
 
 ```html
 <p>
-  <img src="http://rsrc.sparanoid.com/photo.jpg" alt="Image">
+  <img src="http://sparanoid.com/photo.jpg" alt="Image">
+</p>
+```
+
+`intense.js` is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.nointense` CSS class to your `<img>`:
+
+```html
+<p>
+  <img src="http://sparanoid.com/photo.jpg" class="nointense" alt="Image">
 </p>
 ```
 
