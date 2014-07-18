@@ -311,7 +311,7 @@ body:hover .latest {
   }
 
   h3, h4, h5, h6 {
-    margin: 10vmin 0 1em;
+    margin: 10vmin 0 1rem;
     .sub-heading;
   }
 
@@ -354,7 +354,6 @@ body:hover .latest {
       float: right;
       font-size: 90%;
       font-style: normal;
-      color: fade(@text-color, 80%);
 
       &:before {
         // http://www.fileformat.info/info/unicode/char/2500/index.htm
@@ -536,13 +535,6 @@ article .list {
       .heading;
       font-size: 200%;
       line-height: 1.2;
-
-      time {
-        font-size: 50%;
-        color: lighten(@text-color, 70%);
-        opacity: 0;
-        transition: opacity .5s ease;
-      }
     }
   }
 

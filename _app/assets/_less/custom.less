@@ -52,44 +52,11 @@
 // .content { li h2 a, header h1, header h1 a { color: @link-color; } }
 // .external span { background: @link-color; }
 
-// Custom post list
-ul.list.has-content {
-
-  > li {
-    margin-bottom: 14vmin;
-
-    h2 {
-      margin-bottom: 2vmin;
-    }
-  }
+// Alternative title size
+// By default all heading levels have the same font size, but many people may not like this, so here's an alternative font size stack:
+.content {
+  h3 { font-size: 110%; }
+  h4 { font-size: 100%; }
+  h5 { font-size: 90%; }
+  h6 { font-size: 80%; }
 }
-
-// FlexSlider plugin
-// Demo styles for Almace Scaffolding, safe to remove
-.flexslider {
-
-  // Slides
-  ul {
-    margin: 0;
-    list-style: none;
-  }
-
-  li {
-    display: none;
-    // Hide the slides before the JS is loaded, this avoids image flashing
-    backface-visibility: hidden;
-
-    &:first-child {
-      // Display the first image when scripts are not ready
-      display: block;
-    }
-
-    .flex-caption {
-      margin: -3vmin 0 3vmin;
-      font-weight: bold;
-    }
-  }
-}
-
-// FlexSlider - No JavaScript fallback
-.no-js .flexslider ul li:first-child { display: block; }
