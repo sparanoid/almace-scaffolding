@@ -4,6 +4,7 @@
 @link-color: #a212d1;
 @background-color: #fff;
 @text-color: #000;
+@code-color: spin(@link-color, 180);
 @sans-serif: "Helvetica Neue", Arial, "Hiragino Sans GB", sans-serif;
 @serif: Georgia, "Hiragino Mincho ProN", serif;
 @monospace: Menlo, monospace;
@@ -372,7 +373,7 @@ body:hover .latest {
 
   code, pre {
     font-family: @monospace;
-    color: #68a;
+    color: @code-color;
   }
 
   pre {
