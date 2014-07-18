@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Delicious.com
+title: Delicious Redesign
 category: work
 tag: commercial
 link: http://delicious.com/
@@ -38,6 +38,7 @@ Update: Delicious now has been acquired by [Science Inc.](http://science-inc.com
   <li>We use Application Cache to speed up the page load times.</li>
   <li>We use <a href="http://gruntjs.com/">Grunt</a>.</li>
   <li>I worked remotely (from home) for all these things.</li>
+  <li>The author of <a href="http://www.abookapart.com/products/mobile-first">Mobile First</a>, former Yahoo! design architect, <a href="http://www.lukew.com/">Luke Wroblewski</a> also <a href="https://twitter.com/lukew/status/384744062361686017">tweeted</a> about it.</li>
 </ul>
 
 <h3>Delicious Landing Page</h3>
