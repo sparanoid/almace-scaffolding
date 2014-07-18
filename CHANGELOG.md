@@ -1,3 +1,37 @@
+<a name="24.1.1"></a>
+### 24.1.1 (2014-07-18)
+
+
+#### Bug Fixes
+
+* **post:** fix error page links for post “IterCast” ([da1a5fd5](http://github.com/sparanoid/sparanoid.com/commit/da1a5fd5bc85d5e2e8c60375a7564d73693c115c))
+* **style:**
+  * remove heading hyphens support ([e46edbc3](http://github.com/sparanoid/sparanoid.com/commit/e46edbc368bcc847d29b5d70638b2b1844a4f81f))
+  * use `rem` for alternative title font size ([5e77e4e5](http://github.com/sparanoid/sparanoid.com/commit/5e77e4e50cd3bacfc9c8d37dd5d1f9b2a7f1dca8))
+  * remove deprecated styles, fix cite footer font color ([61bc2cce](http://github.com/sparanoid/sparanoid.com/commit/61bc2cce2bb76c41d90ef3f15841b1b0ad71008c))
+* **template:**
+  * apply markdownify for post description ([91e00249](http://github.com/sparanoid/sparanoid.com/commit/91e0024914dd6ffaf553c1d8155e213036536119))
+  * correct error page title ([3821c6b2](http://github.com/sparanoid/sparanoid.com/commit/3821c6b2b2796527e698367c4bcb9489aa57ef31))
+
+
+#### Features
+
+* **script:** add `intense.js` exclude rule ([73a8e250](http://github.com/sparanoid/sparanoid.com/commit/73a8e2501d4fefc6975d3dd3b1d995b4c71d7a0b))
+* **style:**
+  * dynamic text color for `code` and `pre` ([e153b87a](http://github.com/sparanoid/sparanoid.com/commit/e153b87a87b5e5ede358f928e8f7062d6a8d7f67))
+  * update alternative title font size ([416c4161](http://github.com/sparanoid/sparanoid.com/commit/416c4161ee291664e3b3899a0e84798722e5445d))
+  * add alternative title font size. By default all heading levels have the same font size, but many people may not like this, so here's an alternative font size stack. ([277ead44](http://github.com/sparanoid/sparanoid.com/commit/277ead44fed62c13f31bdc5b9bfcd76aaf47d8a6))
+  * fix GitHub Gist default style, more layout padding and list nesting fixes ([32bb4053](http://github.com/sparanoid/sparanoid.com/commit/32bb4053626ba5be624674ab4be671654d249448))
+  * better custom color scheme support, syntax highlighting also support different c ([e17eb740](http://github.com/sparanoid/sparanoid.com/commit/e17eb740516b99abb60c888091e9757eaf9e43fc))
+* **template:** remove `amsf` option, add `clean_homepage` and `credits` options ([89016b8d](http://github.com/sparanoid/sparanoid.com/commit/89016b8d0d84c162e2c22fcb4a4af8f0377a0f06))
+
+
+#### Breaking Changes
+
+* Please note that templates should be updated for new options
+ ([89016b8d](http://github.com/sparanoid/sparanoid.com/commit/89016b8d0d84c162e2c22fcb4a4af8f0377a0f06))
+
+
 <a name="24.1.0"></a>
 ## 24.1.0 (2014-07-14)
 
