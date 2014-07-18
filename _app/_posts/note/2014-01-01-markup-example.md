@@ -60,6 +60,18 @@ end
 
 You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
 
+#### Headings
+
+You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
+
+##### Headings
+
+You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
+
+###### Headings
+
+You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
+
 ```
 ### H3 Heading
 #### H4 Heading
@@ -81,6 +93,21 @@ Totals  | 21 | 23 | 7
 Use the `gist` tag to easily embed a GitHub Gist onto your site. This works with public or secret gists:
 
 {% gist sparanoid/55c3dd64f94881017a7b gist.md %}
+
+### Unique Post Styling
+
+You can simply use `css` key to your post YAML front-matter head:
+
+```
+---
+layout: post
+title: Welcome to Almace Scaffolding
+css: |
+  body {
+    font-size: 1.8vw;
+  }
+---
+```
 
 ### Browser Frame
 
