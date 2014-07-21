@@ -3,6 +3,7 @@ layout: post
 title: Markup Example
 category: note
 plugin: intense
+hidden: true
 ---
 
 Lorem lean startup ipsum **product market fit customer development** acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying [crowded market](#) pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor.
