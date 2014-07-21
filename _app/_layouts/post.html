@@ -81,7 +81,7 @@ layout: default
       </h2>
     {% endif %}
 
-    {% if page.date %}<small>Last updated on <time datetime="{% last_modified_at %FT%X+08:00 %}">{% last_modified_at %b %d, %Y %}</time></small>{% endif %}
+    {% if page.date %}<small>By <span rel=author>{{ site.profile.user }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
     {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
   </header>
 
