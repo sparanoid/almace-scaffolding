@@ -8,40 +8,48 @@ layout: default
   </style>
 {% endif %}
 
+<!-- Prepare for `lang` tag -->
+{% capture lang_meta %}
+  {% if page.lang %}
+    lang={{ page.lang }}
+  {% endif %}
+{% endcapture %}
+
+<!-- Prepare for image headers -->
+{% capture image_header %}
+  <img
+    src="{{ site.file }}/{{ page.img-headline }}"
+    alt="{{ page.title | strip_html | xml_escape }}"
+    {% if page.img-headline-width %}
+      style="width: {{ page.img-headline-width | times: 0.1 }}vw;"
+    {% else %}
+      style="width: 50vw;"
+    {% endif %}
+  >
+{% endcapture %}
+
+<!-- Prepare for SVG header styles -->
+{% capture svg_header_style %}
+  <style scoped>
+    h2 svg {
+      width: {{ page.svg-headline-width | times: 0.1 }}vw;
+      height: {{ page.svg-headline-height | times: 0.1 }}vw;
+    }
+  </style>
+{% endcapture %}
+
+<!-- Prepare for SVG header -->
+{% capture svg_header %}
+  {% for i in page.svg-headline %}
+    {% include {{ i }} %}
+  {% endfor %}
+{% endcapture %}
+
 <!-- Article wrapper, limit width -->
-<article>
+<article {{ lang_meta }}>
 
   <!-- Post title -->
   <header>
-    <!-- Prepare for image headers -->
-    {% capture image_header %}
-      <img
-        src="{{ site.file }}/{{ page.img-headline }}"
-        alt="{{ page.title | strip_html | xml_escape }}"
-        {% if page.img-headline-width %}
-          style="width: {{ page.img-headline-width | times: 0.1 }}vw;"
-        {% else %}
-          style="width: 50vw;"
-        {% endif %}
-      >
-    {% endcapture %}
-
-    <!-- Prepare for SVG headers -->
-    {% capture svg_header_style %}
-      <style scoped>
-        h2 svg {
-          width: {{ page.svg-headline-width | times: 0.1 }}vw;
-          height: {{ page.svg-headline-height | times: 0.1 }}vw;
-        }
-      </style>
-    {% endcapture %}
-
-    {% capture svg_header %}
-      {% for i in page.svg-headline %}
-        {% include {{ i }} %}
-      {% endfor %}
-    {% endcapture %}
-
     {% if page.img-headline %}
       <h2>
         {% if page.link %}
@@ -73,7 +81,7 @@ layout: default
       </h2>
     {% endif %}
 
-    {% if page.date %}<small>By <span rel=author>{{ site.profile.user }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
+    {% if page.date %}<small>Last updated on <time datetime="{% last_modified_at %FT%X+08:00 %}">{% last_modified_at %b %d, %Y %}</time></small>{% endif %}
     {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
   </header>
 
