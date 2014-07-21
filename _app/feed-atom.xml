@@ -21,38 +21,40 @@ permalink: /feed/index.xml
   </author>
 
   {% for post in site.posts limit:300 %}
-    {% if site.link_blog and post.link %}
-      {% assign entry_link = post.link %}
-    {% else %}
-      {% assign entry_link = post.url | prepend: site.base | prepend: site.url %}
-    {% endif %}
-
-    {% capture entry_permalink %}
+    {% if post.hidden != true %}
       {% if site.link_blog and post.link %}
-        <p><a href="{{ post.url | prepend: site.base | prepend: site.url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”">◉ Permalink</a></p>
-      {% elsif site.link_blog != true and post.link %}
-        <p><a href="{{ post.link }}">◉ Direct Link to Original Site</a></p>
+        {% assign entry_link = post.link %}
+      {% else %}
+        {% assign entry_link = post.url | prepend: site.base | prepend: site.url %}
       {% endif %}
-    {% endcapture %}
 
-    <entry>
-      <title>{{ post.title | strip_html | xml_escape }}</title>
-      <id>tag:{{ site.base | prepend: site_domain }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
-      <link rel="alternate" type="text/html" href="{{ entry_link }}"/>
-      <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <author>
-        <name>{{ site.profile.user }}</name>
-        <uri>{{ site.base | prepend: site.url }}/</uri>
-        <email>{{ site.profile.email }}</email>
-      </author>
-      <content type="html" xml:base="{{ site.base | prepend: site.url }}/">
-        {% if site.rss_excerpt %}
-          {{ post.excerpt | xml_escape }}
-        {% else %}
-          {{ post.content | xml_escape }}
+      {% capture entry_permalink %}
+        {% if site.link_blog and post.link %}
+          <p><a href="{{ post.url | prepend: site.base | prepend: site.url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”">◉ Permalink</a></p>
+        {% elsif site.link_blog != true and post.link %}
+          <p><a href="{{ post.link }}">◉ Direct Link to Original Site</a></p>
         {% endif %}
-        {{ entry_permalink | xml_escape}}
-      </content>
-    </entry>
+      {% endcapture %}
+
+      <entry>
+        <title>{{ post.title | strip_html | xml_escape }}</title>
+        <id>tag:{{ site.base | prepend: site_domain }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
+        <link rel="alternate" type="text/html" href="{{ entry_link }}"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <author>
+          <name>{{ site.profile.user }}</name>
+          <uri>{{ site.base | prepend: site.url }}/</uri>
+          <email>{{ site.profile.email }}</email>
+        </author>
+        <content type="html" xml:base="{{ site.base | prepend: site.url }}/">
+          {% if site.rss_excerpt %}
+            {{ post.excerpt | xml_escape }}
+          {% else %}
+            {{ post.content | xml_escape }}
+          {% endif %}
+          {{ entry_permalink | xml_escape}}
+        </content>
+      </entry>
+    {% endif %}
   {% endfor %}
 </feed>
