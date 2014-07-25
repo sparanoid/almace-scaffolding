@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% if page.css %}
+  <style>
+    {{ page.css }}
+  </style>
+{% endif %}
+
 <!-- Article wrapper, limit width -->
 <article>
 
