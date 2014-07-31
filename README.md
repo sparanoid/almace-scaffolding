@@ -39,7 +39,6 @@
 - [Tons of configurable settings](_config.init.yml) for your posts and site customization
 - [Handcrafted stylesheets](_app/assets/_less/app.less). No Bootstrap or other bloated frameworks are used, CSS < 12 KB (Unminified)
 - Predefined LESS variables make it easier to change color schemes for different posts
--
 - [Default stylesheets](_app/assets/_less/syntax.less) for Pygments code highlighting
 - Redcarpet as Markdown renderer, tables, footnotes, GFM, smart quotes are supported
 - Built with Grunt.js for easy development:
