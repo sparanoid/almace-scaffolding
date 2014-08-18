@@ -1,7 +1,7 @@
 <!-- Insert scripts here -->
 <!-- The following code is an example use of including external JavaScript libraries -->
 {% if page.plugin == 'intense' %}
-  <script src="{{ '/js/intense.js' | prepend: site.assets }}"></script>
+  <script src="{{ '/js/intense.js' | prepend: site.assets | prepend: site.base }}"></script>
   <script>
     window.onload = function() {
       var fx = document.querySelectorAll('p > img:not(.nointense)');
