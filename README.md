@@ -6,7 +6,7 @@
 
 ## Setup
 
-```shell
+```sh
 $ bundle install && npm install && grunt serve
 ```
 
