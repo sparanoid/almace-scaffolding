@@ -60,11 +60,11 @@
 
 So in short for geeks:
 
-```shell
-git clone git@github.com:sparanoid/almace-scaffolding.git
-bundle install && npm install
-cp _config.init.yml _config.yml
-grunt serve
+```sh
+$ git clone git@github.com:sparanoid/almace-scaffolding.git
+$ bundle install && npm install
+$ cp _config.init.yml _config.yml
+$ grunt serve
 ```
 
 Still can't get things working? Why not try my [video tutorials](http://www.youtube.com/watch?v=5NV6Rdv1a3I).
@@ -184,9 +184,11 @@ I know this can be tricky and more verbose than uploading your Jekyll site direc
 
 If you'd like to keep all things under Git control, you can try the following file structure:
 
-    ├── _amsf/ (Almace Scaffolding source code)
-    ├── *.html (Jekyll-generated static pages)
-    └── README.md (your own readme)
+```
+├── _amsf/ (Almace Scaffolding source code)
+├── *.html (Jekyll-generated static pages)
+└── README.md (your own readme)
+```
 
 You can see this [live demo](http://github.com/amsf/amsf.github.io/) how to make them friends.
 
