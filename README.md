@@ -6,7 +6,9 @@
 
 ## Setup
 
-    bundle install && npm install && grunt serve
+```shell
+$ bundle install && npm install && grunt serve
+```
 
 Need a simpler setup using this theme? Try [amsf](http://github.com/sparanoid/almace-scaffolding/).
 
