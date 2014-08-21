@@ -1,3 +1,52 @@
+<a name="24.1.2"></a>
+### 24.1.2 (2014-08-21)
+
+
+#### Bug Fixes
+
+* **post:** update times symbol for post "Antiskill, Judgment Icon Set and Screensaver" ([8f053ae5](http://github.com/sparanoid/sparanoid.com/commit/8f053ae5b18636cdd98959818d345eaeaa97b3fc))
+* **style:** correct sub list margin ([e01d8830](http://github.com/sparanoid/sparanoid.com/commit/e01d8830ac1e7d95a99af2fe674cffe213e928d4))
+* **template:**
+  * correct style and script paths for subdirectory setup ([20f9a50f](http://github.com/sparanoid/sparanoid.com/commit/20f9a50fbcbc8cf2aafa705d38dbbda59851b5c8))
+  * avoid “layout not found” error introduced since Jekyll 2.2.0 ([b4f86289](http://github.com/sparanoid/sparanoid.com/commit/b4f86289a084343a28d1dff5f4f6d2a56ad35d94))
+  * use Katakana middle dots ([cc0f0720](http://github.com/sparanoid/sparanoid.com/commit/cc0f0720ae99f05311ecc087afa7a0493c33241e))
+  * use original post subheading ([e528b137](http://github.com/sparanoid/sparanoid.com/commit/e528b137a000da1c844045236af2da366b41549a))
+
+
+#### Features
+
+* **style:**
+  * move `syntax.less` to `custom.less` ([b6fdb462](http://github.com/sparanoid/sparanoid.com/commit/b6fdb462c95b269cab2e50726dab5534f04e47e0))
+  * add some space for tables ([35cd7830](http://github.com/sparanoid/sparanoid.com/commit/35cd78309ed85af069ab6392c686fa9e2be2f49c))
+* **template:**
+  * add custom CSS support for pages ([742cbfcd](http://github.com/sparanoid/sparanoid.com/commit/742cbfcde3a37206a4a9a0d7c7fd94179979458f))
+  * add `lang` YAML front-matter data ([a3d25f97](http://github.com/sparanoid/sparanoid.com/commit/a3d25f978638d42cbd1e8ce5ee55895c66bc92cc))
+  * add `lang` YAML front-matter data ([911353f1](http://github.com/sparanoid/sparanoid.com/commit/911353f1b5dabed81d13eb247262673abe382e14))
+  * hide post from Atom feed ([32f36de7](http://github.com/sparanoid/sparanoid.com/commit/32f36de79c44a6fc181b328a7489ed35a3bce2ff))
+
+
+#### Breaking Changes
+
+* Now you can define `lang` tag for your post, simply add `lang` to your post front-matter data. ([a3d25f97](http://github.com/sparanoid/sparanoid.com/commit/a3d25f978638d42cbd1e8ce5ee55895c66bc92cc)):
+
+for example:
+
+```
+lang: ar
+```
+
+then define your own styles in `custom.less`:
+
+```css
+[lang=ar] {
+  direction: rtl;
+}
+```
+
+* Add `hidden: true` as YAML front-matter data to the post you want to hide from your feed output.
+ ([32f36de7](http://github.com/sparanoid/sparanoid.com/commit/32f36de79c44a6fc181b328a7489ed35a3bce2ff))
+
+
 <a name="24.1.1"></a>
 ### 24.1.1 (2014-07-18)
 
