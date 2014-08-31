@@ -6,7 +6,9 @@
 <title>{% if page.title != site.name %}{{ site.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
 
 <link rel=alternate href="{{ site.feed | prepend: site.base }}/" type=application/atom+xml>
-<link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets | prepend: site.base }}">
+
+<!-- There is no prepend: site.base here, it'll cause error 404 when site.base it defined -->
+<link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets }}">
 
 {% if page.title == site.name %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
 

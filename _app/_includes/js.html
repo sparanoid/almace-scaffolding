@@ -1,7 +1,9 @@
 <!-- Insert scripts here -->
 <!-- The following code is an example use of including external JavaScript libraries -->
 {% if page.plugin == 'intense' %}
-  <script src="{{ '/js/intense.js' | prepend: site.assets | prepend: site.base }}"></script>
+
+  <!-- There is no prepend: site.base here, it'll cause error 404 when site.base it defined -->
+  <script src="{{ '/js/intense.js' | prepend: site.assets }}"></script>
   <script>
     window.onload = function() {
       var fx = document.querySelectorAll('p > img:not(.nointense)');
