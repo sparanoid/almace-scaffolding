@@ -1,3 +1,12 @@
+<a name="0.0.15"></a>
+### 0.0.15 (2014-09-01)
+
+
+#### Features
+
+* **template:** better demo site ([bc731d4c](http://github.com/sparanoid/almace-scaffolding/commit/bc731d4c8da388cbfcb66a2e78b19867ae48c308))
+
+
 <a name="0.0.14"></a>
 ### 0.0.14 (2014-08-21)
 
