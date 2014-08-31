@@ -24,11 +24,11 @@
     {% endcapture %}
 
     <!-- Item title -->
-    <a href="{{ post.url | prepend: site.base }}" {{ post_link_color }}>{{ post.title }}</a>
+    <a href="{{ post.url | prepend: site.base }}" {% if site.colorful_list %}{{ post_link_color }}{% endif %}>{{ post.title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}
-      <a href="{{ post.link }}" class=external><span {{ post_link_bg }}></span></a>
+      <a href="{{ post.link }}" class=external><span {% if site.colorful_list %}{{ post_link_bg }}{% endif %}></span></a>
     {% endif %}
   </h2>
 </li>
