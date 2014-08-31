@@ -99,6 +99,10 @@ rss_excerpt:    false
 # Default:      false
 clean_homepage: true
 
+# Style post link color (if defined) for article list
+# Default:      false
+colorful_list:  true
+
 # Show generator credits
 # Default:      true
 credits:        false
