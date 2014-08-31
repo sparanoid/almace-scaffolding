@@ -63,3 +63,37 @@
   h5 { font-size: 84%;  opacity: .4; }
   h6 { font-size: 72%;  opacity: .3; }
 }
+
+// amsf.github.io color scheme
+@link-color: #ff00b4;
+@background-color: #fff;
+@text-color: #000;
+@code-color: darken(spin(@link-color, 180), 10%);
+
+// amsf.github.io homepage logo
+.amsf-logo {
+  display: inline-block;
+  @s: 8.6vw;
+  width: @s;
+  height: @s;
+  margin: 1vw;
+  margin-left: 0;
+  vertical-align: middle;
+
+  @media (max-width: 640px) {
+    width: (@s * 2.4);
+    height: (@s * 2.4);
+  }
+
+  path,
+  circle {
+    stroke-width: 76px;
+    stroke-linecap: square;
+  }
+}
+
+.amsf-title {
+  display: inline-block;
+  color: @link-color;
+  vertical-align: middle;
+}
