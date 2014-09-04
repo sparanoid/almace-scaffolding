@@ -2,18 +2,17 @@
 [![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
 [![Demo Available](https://img.shields.io/badge/demo-available-brightgreen.svg)](#demo)
 
-`amsf`, a.k.a. **Almace Scaffolding**, a sleek and super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
+`amsf`, a.k.a. **Almace Scaffolding**, a super-fast responsive theme with only one HTTP request, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
 
 -----
 
 ## Table of Contents
 
-- [Features](#features)
-- [Setup](#setup)
+- [Quick Start](#quick-start)
 - [Upgrading](#upgrading)
 - [Customizing](#customizing)
-- [Unique Post Styling](#unique-post-styling)
 - [Managing Media](#managing-media)
+- [Advanced Usages](#advanced-usages)
 - [Avaiable Styles](#avaiable-styles)
   - [`.note`, `.store`, and `.download`](#note-store-and-download)
   - [`.browser`](#browser)
@@ -28,35 +27,12 @@
 - [Author](#author)
 - [Licenses](#licenses)
 
-## Features
+## Quick Start
 
-- A basic, fully configured Jekyll setup with well-defined [Atom feed](_app/feed-atom.xml), [sitemap](_app/sitemap.xml), and [Twitter Cards](https://dev.twitter.com/docs/cards) support
-- **Almace Scaffolding** ships a sleek responsive theme, a variant of [sparanoid.com](http://sparanoid.com/), looking great on any mordern browsers
-- Every minified page generates only one HTTP request *
-- Minimalism design, No jQuery, no `everybody-shake-ur-body.js`
-- Ideal for personal blog, portfolio, product blog and Tumblr-like link blog
-- (Maybe) [the first](https://github.com/sparanoid/sparanoid.com/commit/9b44b4c0f57c3dd1e828d828a95cc21b992785ce) template that uses [viewport relative units](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)
-- [Tons of configurable settings](_config.init.yml) for your posts and site customization
-- [Handcrafted stylesheets](_app/assets/_less/app.less). No Bootstrap or other bloated frameworks are used, CSS < 12 KB (Unminified)
-- Predefined LESS variables make it easier to change color schemes for different posts
-- [Default stylesheets](_app/assets/_less/syntax.less) for Pygments code highlighting
-- Redcarpet as Markdown renderer, tables, footnotes, GFM, smart quotes are supported
-- Built with Grunt.js for easy development:
-  - Styling with LESS, CSS file is automatically compiled on the fly
-  - CSS prefix-free
-  - HTML, CSS, and XML minification
-  - Assets files revving
-- No Internet Explorer support
-
-*: Well, only when your posts don’t have fancy sliders or other external media files.
-
-## Setup
-
-1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) this project, checkout to your local machine.
-2. Run `bundle install && npm install` to install required dependencies. Ruby gem `bundler` and Node.js package manager `npm` must be installed before running this command.
-3. Copy [`_config.init.yml`](_config.init.yml) to `_config.yml` as your default configuration file.
-3. Run `grunt serve` to fire up a server on your localhost, then open `http://localhost:4321` in your browser.
-4. Edit, edit, delete, delete, commit, push, done.
+1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) or clone the repo: `git clone git@github.com:sparanoid/almace-scaffolding.git`.
+2. Install dependencies with Ruby gem [`bundler`](http://bundler.io/) and Node.js package manager [`npm`](https://www.npmjs.org/): `bundle install && npm install`.
+3. Copy `_config.init.yml` to `_config.yml` as your default configuration file.
+3. Run `grunt serve` and then open `http://localhost:4321` in your browser.
 
 So in short for geeks:
 
@@ -83,21 +59,6 @@ Upgrading templates is hard, it will be easy if you are're a casual blogger and 
 - You can add Travis support for this project, simplly rename [`.travis.init.yml`](.travis.init.yml) to `.travis.yml`.
 - Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
 
-## Unique Post Styling
-
-You can simply use `css` key to your post YAML front-matter head:
-
-```
----
-layout: post
-title: Welcome to Almace Scaffolding
-css: |
-  body {
-    font-size: 1.8vw;
-  }
----
-```
-
 ## Managing Media
 
 Media files are located in `./assets/` and grouped by different formats:
@@ -108,6 +69,14 @@ Media files are located in `./assets/` and grouped by different formats:
 - `./font/`: Web fonts
 - `./img/`: Image assets, images used by template, personally I don't recommend put post images here, use a CDN instead.
 - `./svg/`: The same as `./img/`.
+
+## Advanced Usages
+
+- [Markup Example](http://sparanoid.com/lab/amsf/markup-example.html)
+- [SVG Post Ttile](http://sparanoid.com/lab/amsf/svg-post-title.html)
+- [Unique Post Styling via Custom CSS](http://sparanoid.com/lab/amsf/custom-css.html)
+- [Custom Color Scheme](http://sparanoid.com/lab/amsf/custom-color-scheme.html)
+- [External Link Post](http://sparanoid.com/lab/amsf/external-link-post.html)
 
 ## Avaiable Styles
 
@@ -125,7 +94,7 @@ Usage:
 </p>
 
 <p class=store>
-  Love this plugin? please consider <a href="{{ site.data.var.donate }}">buying me a cup of coffee.</a>
+  Love this plugin? please consider <a href="{{ site.profile.donate }}">buying me a cup of coffee.</a>
 </p>
 ```
 
@@ -149,7 +118,7 @@ Usage:
 
 ```html
 <p class=largetype>
-  <a href="{{ site.data.var.donate }}">PayPal</a>
+  <a href="{{ site.profile.donate }}">PayPal</a>
 </p>
 ```
 
