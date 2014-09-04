@@ -5,7 +5,7 @@
 
 -----
 
-### [Getting Started](http://sparanoid.com/lab/amsf/getting-started.html)
+## [Getting Started](http://sparanoid.com/lab/amsf/getting-started.html)
 
 ## Donate
 
