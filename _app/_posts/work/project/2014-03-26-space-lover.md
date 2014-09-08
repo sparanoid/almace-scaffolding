@@ -3,7 +3,7 @@ layout: post
 title: Space Lover
 category: work
 tag: project
-excerpt: This plugin magically adds an extra space between Chinese characters and English letters / numbers / common punctuation marks
+excerpt: This WordPress plugin magically adds an extra space between Chinese characters and English letters / numbers / common punctuation marks
 link: http://wordpress.org/extend/plugins/corner-bracket-lover/
 scheme-text: "#000"
 scheme-link: "#ca3921"
