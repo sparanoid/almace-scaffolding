@@ -3,7 +3,7 @@ layout: post
 title: Disable WYSIWYG
 category: work
 tag: project
-excerpt: A WordPress plugin to convert all curly quotation marks in your posts to traditional corner brackets.
+excerpt: A WordPress plugin that sets user_can_richedit to false to disable WYSIWYG totally completely permanently forever.
 thumb: disable-wysiwyg-thumb.png
 svg-headline: svg/disable-wysiwyg.svg
 svg-headline-width: 581
