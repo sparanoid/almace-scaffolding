@@ -1,3 +1,18 @@
+<a name="0.0.16"></a>
+### 0.0.16 (2014-09-19)
+
+
+#### Bug Fixes
+
+* collar container width ([03c37eb3](http://github.com/sparanoid/almace-scaffolding/commit/03c37eb304049d87dddc2b34d2ba625e21294440))
+
+
+#### Features
+
+* **docs:** update readme ([c02d22ec](http://github.com/sparanoid/almace-scaffolding/commit/c02d22ec08eb5e360f977010660b8c267b3b5803))
+* **template:** better docs for project site ([25414bc7](http://github.com/sparanoid/almace-scaffolding/commit/25414bc739b34b2e4c21d6a27e5d03dda9291934))
+
+
 <a name="0.0.15"></a>
 ### 0.0.15 (2014-09-01)
 
