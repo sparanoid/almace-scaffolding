@@ -6,22 +6,16 @@ desc: 作品・ワークス・TBC
 ---
 
 <h3>Personal Projects</h3>
-<ul class=list>
-  {% for post in site.tags.project %}
-    {% include page-item.html %}
-  {% endfor %}
-</ul>
+{% for post in site.tags.project %}
+  {% include page-item.html %}
+{% endfor %}
 
 <h3>Commercial Work</h3>
-<ul class=list>
-  {% for post in site.tags.commercial %}
-    {% include page-item.html %}
-  {% endfor %}
-</ul>
+{% for post in site.tags.commercial %}
+  {% include page-item.html %}
+{% endfor %}
 
 <h3>Paintings / Sketches</h3>
-<ul class=list>
-  {% for post in site.tags.drawing %}
-    {% include page-item.html %}
-  {% endfor %}
-</ul>
+{% for post in site.tags.drawing %}
+  {% include page-item.html %}
+{% endfor %}
