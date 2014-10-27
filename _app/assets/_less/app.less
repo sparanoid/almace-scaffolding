@@ -533,17 +533,13 @@ body:hover .latest {
 
 // Post list in "work" and "note"
 article .list {
-  list-style: none;
-  margin: 0;
+  display: block;
+  margin: 0 0 1.4vmin;
 
-  > li {
-    margin: 0 0 1.4vmin;
-
-    h2 {
-      .heading;
-      font-size: 200%;
-      line-height: 1.2;
-    }
+  h2 {
+    .heading;
+    font-size: 200%;
+    line-height: 1.2;
   }
 
   .external {
@@ -664,7 +660,7 @@ article .list {
   }
 
   // Hide external link for post list
-  .list li h2 .external {
+  .list h2 .external {
     display: none;
   }
 }
