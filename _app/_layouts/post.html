@@ -46,7 +46,7 @@ layout: default
 {% endcapture %}
 
 <!-- Article wrapper, limit width -->
-<article class=post-content {{ lang_meta }}>
+<article {{ lang_meta }}>
 
   <!-- Post title -->
   <header>
@@ -86,6 +86,8 @@ layout: default
   </header>
 
   <!-- Post content -->
-  {{ content }}
+  <div class="post-content">
+    {{ content }}
+  </div>
 
 </article>
