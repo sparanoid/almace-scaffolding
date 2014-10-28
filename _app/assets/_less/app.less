@@ -126,7 +126,7 @@ del {
 // Site logo
 .logo {
   display: block;
-  width: 100%;
+  width: 50%;
   height: 1vmax;
   margin: 0 0 1.4vmax;
   background: @link-color;
@@ -136,6 +136,7 @@ del {
   &:focus {
     border-bottom: none !important;
     background: @text-color;
+    opacity: 1;
   }
 
   h1 {
@@ -144,15 +145,9 @@ del {
   }
 }
 
-body:hover .logo {
-  opacity: 1 !important;
-}
-
 // Main navigation
 .navigation {
   margin: 0 0 16vmin;
-  margin-right: -1.1em;
-  margin-left: -1.1em;
   font-size: 50%;
   font-weight: bold;
   letter-spacing: .45em;
@@ -259,6 +254,19 @@ body:hover .latest {
     }
   }
 
+  // Post / page content first element fix
+  .post-content,
+  .page-content {
+
+    > *:first-child {
+      margin-top: 0;
+
+      > *:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
   a {
     font-weight: bold;
   }
@@ -306,10 +314,6 @@ body:hover .latest {
       letter-spacing: .1em;
     }
 
-    // Used on work page
-    & + * {
-      margin-top: 0 !important;
-    }
   }
 
   h3, h4, h5, h6 {

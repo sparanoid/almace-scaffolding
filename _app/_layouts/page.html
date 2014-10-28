@@ -9,7 +9,7 @@ layout: default
 {% endif %}
 
 <!-- Article wrapper, limit width -->
-<article class=page-content>
+<article>
 
   <!-- Page title -->
   <header>
@@ -18,5 +18,8 @@ layout: default
   </header>
 
   <!-- Page content -->
-  {{ content }}
+  <div class=page-content>
+    {{ content }}
+  </div>
+
 </article>
