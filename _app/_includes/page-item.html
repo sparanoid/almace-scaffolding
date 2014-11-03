@@ -1,5 +1,5 @@
 <!-- List snippets -->
-<div class=list {% if post.lang %} lang={{ post.lang }}{% endif %}>
+<section class=list {% if post.lang %} lang={{ post.lang }}{% endif %}>
   <h2>
     <!-- Dynamic link color based on post color scheme -->
     {% capture post_link_color %}
@@ -31,4 +31,4 @@
       <a href="{{ post.link }}" class=external><span {% if site.colorful_list %}{{ post_link_bg }}{% endif %}></span></a>
     {% endif %}
   </h2>
-</div>
+</section>
