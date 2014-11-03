@@ -1,6 +1,10 @@
 <!doctype html>
 
-<meta name=viewport content="width=device-width, initial-scale=1, minimal-ui">
+{% if site.force_utf_8 %}
+  <meta charset=utf-8>
+{% endif %}
+
+<meta name=viewport content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ site.description }}">
 
 <title>{% if page.title != site.name %}{{ site.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>

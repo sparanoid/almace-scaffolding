@@ -107,6 +107,10 @@ colorful_list:  false
 # Default:      true
 credits:        true
 
+# Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages
+# Default:      false
+force_utf_8:    false
+
 #
 # Custom distribution variables
 #
