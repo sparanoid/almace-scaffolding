@@ -1,0 +1,43 @@
+// Plugn-Ins
+
+// intense.js
+.loaded {
+
+  .intense-wrap {
+
+    article p > img:not(.nointense) {
+      cursor: zoom-in;
+    }
+  }
+
+  &.intense-open {
+    cursor: zoom-out;
+  }
+}
+
+// GitHub Gist
+.gist {
+  font-size: 100% !important;
+
+  code, pre {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .gist-data {
+    font-family: @monospace !important;
+
+    .file-data {
+      font-size: 100% !important;
+
+      > table {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .markdown-body {
+    padding: 1em !important;
+  }
+}

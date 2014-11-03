@@ -44,6 +44,7 @@ body {
   text-rendering: optimizelegibility;
   background: @background-color;
   image-rendering: optimizequality;
+  transition: all .3s ease .2s;
 
   // A semitranslucent bar at the top of the page
   &:before {
@@ -125,7 +126,6 @@ del {
 // Site logo
 .logo {
   display: block;
-  width: 100%;
   height: 1vmax;
   margin: 0 0 1.4vmax;
   background: @link-color;
@@ -135,16 +135,13 @@ del {
   &:focus {
     border-bottom: none !important;
     background: @text-color;
+    opacity: 1;
   }
 
   h1 {
     height: 0;
     text-indent: -99999em;
   }
-}
-
-body:hover .logo {
-  opacity: 1 !important;
 }
 
 // Main navigation
@@ -258,6 +255,19 @@ body:hover .latest {
     }
   }
 
+  // Post / page content first element fix
+  .post-content,
+  .page-content {
+
+    > *:first-child {
+      margin-top: 0;
+
+      > *:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
   a {
     font-weight: bold;
   }
@@ -270,7 +280,7 @@ body:hover .latest {
   header {
     padding-bottom: 16vmin;
 
-    h2 {
+    h1 {
       margin: 0 0 .1em;
       .heading;
       hyphens: none;
@@ -305,13 +315,9 @@ body:hover .latest {
       letter-spacing: .1em;
     }
 
-    // Used on work page
-    & + * {
-      margin-top: 0 !important;
-    }
   }
 
-  h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
     margin: 10vmin 0 1rem;
     .sub-heading;
   }
@@ -531,18 +537,17 @@ body:hover .latest {
 }
 
 // Post list in "work" and "note"
-article .list {
-  list-style: none;
-  margin: 0;
+.list {
+  display: block;
+  margin: 0 0 1.4vmin;
 
-  > li {
-    margin: 0 0 1.4vmin;
-
-    h2 {
-      .heading;
-      font-size: 200%;
-      line-height: 1.2;
-    }
+  h1 {
+    .heading;
+    font-size: 200%;
+    line-height: 1.2;
+    // Override heading defines in .content
+    opacity: 1;
+    margin: 0;
   }
 
   .external {
@@ -603,40 +608,6 @@ article .list {
   }
 }
 
-// Plugn-Ins
-.loaded {
-
-  .intense-wrap {
-
-    article p > img:not(.nointense) {
-      cursor: zoom-in;
-    }
-  }
-
-  &.intense-open {
-    cursor: zoom-out;
-  }
-}
-
-// GitHub Gist reset
-.gist {
-
-  code, pre {
-    padding: 0;
-    color: inherit;
-    background-color: transparent;
-  }
-
-  .gist-file {
-    font-family: @monospace !important;
-    font-size: 80% !important;
-  }
-
-  .markdown-body {
-    padding: 1em;
-  }
-}
-
 // Media query stack
 @media (max-width: 1000px) {
 
@@ -656,14 +627,18 @@ article .list {
   }
 
   // Override viewport units defined in post.html
-  article h2 svg,
-  article h2 img {
-    width: 100% !important;
-    height: 100% !important;
+  .content header h1 {
+    font-size: 280%;
+
+    svg,
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
   // Hide external link for post list
-  .list li h2 .external {
+  .list h1 .external {
     display: none;
   }
 }
