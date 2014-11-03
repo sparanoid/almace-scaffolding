@@ -18,13 +18,13 @@ plugin: intense
 
 Update: Delicious now has been acquired by [Science Inc.](http://science-inc.com/) [^1]
 
-<h3>Delicious New Logo</h3>
+<h2>Delicious New Logo</h2>
 <p><img src="{{ site.file }}/delicious.com-logo.png" alt="Delicious New Logo"></p>
 
-<h3>Delicious Iconset</h3>
+<h2>Delicious Iconset</h2>
 <p><img src="{{ site.file }}/delicious.com-iconset.png" alt="Delicious Iconset"></p>
 
-<h3>Delicious UI Preview</h3>
+<h2>Delicious UI Preview</h2>
 <p><img src="{{ site.file }}/delicious.com.png" alt="Delicious UI Preview"></p>
 
 <p>Some fun facts:</p>
@@ -41,43 +41,43 @@ Update: Delicious now has been acquired by [Science Inc.](http://science-inc.com
   <li>The author of <a href="http://www.abookapart.com/products/mobile-first">Mobile First</a>, former Yahoo! design architect, <a href="http://www.lukew.com/">Luke Wroblewski</a> also <a href="https://twitter.com/lukew/status/384744062361686017">tweeted</a> about it.</li>
 </ul>
 
-<h3>Delicious Landing Page</h3>
+<h2>Delicious Landing Page</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-homepage.png" alt="Delicious Landing Page"></p>
 
-<h3>Delicious Landing Page (Mouseover)</h3>
+<h2>Delicious Landing Page (Mouseover)</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-homepage-hover.png" alt="Delicious Landing Page (Mouseover)"></p>
 
-<h3>More Screenshots: Delicious Login Window</h3>
+<h2>More Screenshots: Delicious Login Window</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-01.png" alt="Delicious Login Window"></p>
 
-<h3>Delicious Signup Form</h3>
+<h2>Delicious Signup Form</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-02.png" alt="Delicious Signup Form"></p>
 
-<h3>Delicious - Useful Tools</h3>
+<h2>Delicious - Useful Tools</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-03.png" alt="Delicious - Useful Tools"></p>
 
-<h3>Delicious - Developing for Delicious</h3>
+<h2>Delicious - Developing for Delicious</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-04.png" alt="Delicious - Developing for Delicious"></p>
 
-<h3>Delicious - About</h3>
+<h2>Delicious - About</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-05.png" alt="Delicious - About"></p>
 
-<h3>Delicious - My Links</h3>
+<h2>Delicious - My Links</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-06.png" alt="Delicious - My Links"></p>
 
-<h3>Delicious - Manage Subscriptions</h3>
+<h2>Delicious - Manage Subscriptions</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-07.png" alt="Delicious - Manage Subscriptions"></p>
 
-<h3>Delicious - Search</h3>
+<h2>Delicious - Search</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-08.png" alt="Delicious - Search"></p>
 
-<h3>Delicious - Share a Link</h3>
+<h2>Delicious - Share a Link</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-09.png" alt="Delicious - Share a Link"></p>
 
-<h3>Delicious - Edit a Link</h3>
+<h2>Delicious - Edit a Link</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-10.png" alt="Delicious - Edit a Link"></p>
 
-<h3>Delicious - Mass Edit Links</h3>
+<h2>Delicious - Mass Edit Links</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-11.png" alt="Delicious - Mass Edit Links"></p>
 
 [^1]: Science Inc., a tech advisory firm run by former Myspace chief Michael Jones, confirmed the deal in a [blog post](http://science-inc.com/about/blog/2014/05/08/welcome-delicious-as-the-cornerstone-asset-of-our-new-data-content-group/).

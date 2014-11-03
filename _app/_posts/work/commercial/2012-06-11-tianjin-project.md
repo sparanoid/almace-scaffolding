@@ -18,7 +18,7 @@ plugin: intense
 
 <p class=download><a href="http://dl.sparanoid.com/Tianjin.ibooks">Download</a> it for iPad. (No iPad? Here’s a <a href="http://dl.sparanoid.com/Tianjin.pdf">PDF version</a>)</p>
 
-<h3>Book Preview</h3>
+<h2>Book Preview</h2>
 
 <p><img src="{{ site.file }}/tianjin-project-preview-merged.jpg" alt="Tianjin Project Book Preview #6"></p>
 
@@ -32,5 +32,5 @@ plugin: intense
 
 <p><img src="{{ site.file }}/tianjin-project-preview-05.jpg" alt="Tianjin Project Book Preview #5"></p>
 
-<h3>Promo Video</h3>
+<h2>Promo Video</h2>
 <iframe src="http://player.vimeo.com/video/54786277?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ee3344" width="750" height="422" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
