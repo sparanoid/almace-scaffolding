@@ -1,3 +1,46 @@
+<a name="24.1.3"></a>
+### 24.1.3 (2014-11-03)
+
+
+#### Bug Fixes
+
+* collar container width ([89e4eac6](http://github.com/sparanoid/sparanoid.com/commit/89e4eac6780decebe9fb2f0c52e06fce92f58387))
+* **post:** remove intense support for "Moonstruck Princess Extended" ([b263b5c9](http://github.com/sparanoid/sparanoid.com/commit/b263b5c97182ce33e683302cbeca82ea5e537619))
+* **style:** reset header text align for justified text ([70d49911](http://github.com/sparanoid/sparanoid.com/commit/70d49911ea90d31bb578e7e13c1d11f084621f6e))
+* **template:** remove deprecated minimal-ui ([db466892](http://github.com/sparanoid/sparanoid.com/commit/db466892ac59908c6853afe0b5400c3a65c3bfdb))
+
+
+#### Features
+
+* add `force_utf_8` option ([0fb4c702](http://github.com/sparanoid/sparanoid.com/commit/0fb4c702aeaa5dd5306f0b19f40aaacb3f2f5b5f))
+* update logo ([8666ee91](http://github.com/sparanoid/sparanoid.com/commit/8666ee917456620ec863c989b15496e47530ae43))
+* **post:**
+  * update post heading ([9be83090](http://github.com/sparanoid/sparanoid.com/commit/9be83090995ad8986a8a723033f062035af346cc))
+  * new post “Chinese Copywriting Guidelines” ([67e3ea35](http://github.com/sparanoid/sparanoid.com/commit/67e3ea3571926cbc02e3fbe1443f41771ed79a73))
+  * update external link for “Free” Dribbble Invite ([f5763fe8](http://github.com/sparanoid/sparanoid.com/commit/f5763fe837bcacfe404da626344c134e2c003dab))
+  * update post excerpts ([f57c1f46](http://github.com/sparanoid/sparanoid.com/commit/f57c1f460ee809e4bb498d3b7dd505a602a4ff5b))
+  * add new post “Space Lover” and “Disable WYSIWYG” ([f9b5f4ad](http://github.com/sparanoid/sparanoid.com/commit/f9b5f4ad945ee42da13cb983c2e1a1dab00b32fe))
+* **style:**
+  * tweak font size for small devices ([66394316](http://github.com/sparanoid/sparanoid.com/commit/663943163a3a523952b0e0e1084938c2d8255dbc))
+  * update header font size for small devices ([52e3ebd7](http://github.com/sparanoid/sparanoid.com/commit/52e3ebd72c4210da504629824b331c9d808d8c78))
+  * add a fun transition ([6692e032](http://github.com/sparanoid/sparanoid.com/commit/6692e032de7e599fd088411e0528e4d6fe4dec1e))
+  * remove custom CSS background check ([fbfff18c](http://github.com/sparanoid/sparanoid.com/commit/fbfff18c3b537972d7cba35397a239ea2d9227d8))
+  * add `colorful_list` option that styles post link color (if defined) for article list ([f2412163](http://github.com/sparanoid/sparanoid.com/commit/f24121635fd1d6b4e3cdb5576794a0323cb388c1))
+* **template:**
+  * reuse `h1` to post heading ([a85184a9](http://github.com/sparanoid/sparanoid.com/commit/a85184a9ce785fc679e6ce95f7f17323109ed6f5))
+  * add alternative text align mode ([008215fc](http://github.com/sparanoid/sparanoid.com/commit/008215fcbe8f47c8079dab42664771f777f42c4b))
+  * add `post-content` and `page-content` for convenient ([38be1975](http://github.com/sparanoid/sparanoid.com/commit/38be1975044dd9367fad8abb4dfb2dcfa7e862ff))
+  * update list template ([800c5ee3](http://github.com/sparanoid/sparanoid.com/commit/800c5ee3c577011a8a6ce21328b3b0afac155369))
+
+
+#### Breaking Changes
+
+* Now `<h1>` become the primary post / page title instead of `<h2>`, you should update your post to use the new structure
+ ([a85184a9](http://github.com/sparanoid/sparanoid.com/commit/a85184a9ce785fc679e6ce95f7f17323109ed6f5))
+* Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages, it's useful for local development since local server doesn't send charset in their respond header.
+ ([0fb4c702](http://github.com/sparanoid/sparanoid.com/commit/0fb4c702aeaa5dd5306f0b19f40aaacb3f2f5b5f))
+
+
 <a name="24.1.2"></a>
 ### 24.1.2 (2014-08-21)
 
