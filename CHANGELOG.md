@@ -1,3 +1,14 @@
+<a name="24.1.4"></a>
+### 24.1.4 (2014-11-03)
+
+
+#### Bug Fixes
+
+* **config:** add missing `force_utf_8` option ([2ef2dc44](http://github.com/sparanoid/sparanoid.com/commit/2ef2dc44a4e4a38572e40a708312886aa3d904b0))
+* **style:** re-apply navigation margin fix for align left layout ([77b5fc19](http://github.com/sparanoid/sparanoid.com/commit/77b5fc197e65f80c0864b8e9d921bcd8ba2d3f46))
+* **template:** add missing `site.colorful_list ` scope ([8575c197](http://github.com/sparanoid/sparanoid.com/commit/8575c19739b83af154b99fee029c026a9cf359e8))
+
+
 <a name="24.1.3"></a>
 ### 24.1.3 (2014-11-03)
 
