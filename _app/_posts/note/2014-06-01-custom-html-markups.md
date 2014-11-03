@@ -6,11 +6,11 @@ plugin: intense
 hidden: true
 ---
 
-### `.note`, `.store`, and `.download`
+## `.note`, `.store`, and `.download`
 
 A paragraph block with a thin border line.
 
-#### Usage
+### Usage
 
 ```html
 <p class=download>
@@ -24,7 +24,7 @@ A paragraph block with a thin border line.
 
 Please note that you can’t apply CSS classes in Markdown, so you have to use HTML markup.
 
-#### Example
+### Example
 
 <p class=download>
   <a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub
@@ -34,11 +34,11 @@ Please note that you can’t apply CSS classes in Markdown, so you have to use H
   Love this plugin? please consider <a href="{{ site.profile.donate }}">buying me a cup of coffee.</a>
 </p>
 
-### `.largetype`
+## `.largetype`
 
 Make normal paragraph text large enough.
 
-#### Usage
+### Usage
 
 ```html
 <p class=largetype>
@@ -48,17 +48,17 @@ Make normal paragraph text large enough.
 
 Please note that you can’t apply CSS classes in Markdown, so you have to use HTML markup.
 
-#### Example
+### Example
 
 <p class=largetype>
   <a href="{{ site.profile.donate }}">PayPal</a>
 </p>
 
-### `.browser`
+## `.browser`
 
 A simple browser frame using pure CSS.
 
-#### Usage
+### Usage
 
 ```html
 <p class=browser>
@@ -68,15 +68,15 @@ A simple browser frame using pure CSS.
 
 Please note that you can't apply CSS classes in Markdown, so you have to use HTML markup.
 
-#### Example
+### Example
 
 <p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class=nointense></p>
 
-### [intense.js](http://github.com/tholman/intense-images)
+## [intense.js](http://github.com/tholman/intense-images)
 
 A simple library by [Tim Holman](https://github.com/tholman) to view large images up close using simple mouse interaction, and the full screen.
 
-#### Usage
+### Usage
 
 Add the folloing setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
 
@@ -108,6 +108,6 @@ Or simply use HTML:
 
 Please note that if you're using HTML markup, you should wrap your images into a `<p>` container.
 
-#### Example
+### Example
 
 ![Moonstruck Princess Extended - Red](http://rsrc.sparanoid.com/moonstruck-princess-ext-red.jpg)

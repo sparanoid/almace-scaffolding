@@ -12,7 +12,7 @@ category: note
 
 Go to the [GitHub](https://github.com/sparanoid/almace-scaffolding) page for downloads, bug reports, and feature requests.
 
-### Features
+## Features
 
 - A basic, fully configured Jekyll setup with well-defined [Atom feed](https://github.com/sparanoid/almace-scaffolding/blob/master/_app/feed-atom.xml), [sitemap](https://github.com/sparanoid/almace-scaffolding/blob/master/_app/sitemap.xml), and [Twitter Cards](https://dev.twitter.com/docs/cards) support
 - **Almace Scaffolding** ships a sleek responsive theme, a variant of [sparanoid.com](http://sparanoid.com/), looking great on any mordern browsers

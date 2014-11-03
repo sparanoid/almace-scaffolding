@@ -19,7 +19,7 @@ Lorem lean startup ipsum **product market fit customer development** acquihire t
 
 Good afterble constanoon, this sweet hongi is as bung as a stuffed morepork. Mean while, in the marae, Dr Ropata and Hairy Maclary from Donaldson's Dairy were up to no good with a bunch of bloody troties.
 
-### Inline HTML elements
+## Inline HTML elements
 
 HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
@@ -34,7 +34,7 @@ Most of these elements are styled by browsers with few modifications on our part
 
 Maui and his rough as guts piece of pounamu, what a stink buzz. Bro, quater-acre patches are really naff good with bung mates, aye. You have no idea how beached as our random kais were aye. Every time I see those beautiful lengths of number 8 wire it's like Castle Hill all over again aye, do you happen to have a bucket or a hose bro?
 
-### Code Highlighting
+## Code Highlighting
 Code highlighting demo, powered by Pygments. More info about code highlighting can be found at [Jekyll's documentation](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
 
 ```ruby
@@ -57,30 +57,35 @@ end
 }
 ```
 
-### Headings
+## H2 Headings
 
 You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
 
-#### Headings
+### H3 Headings
 
 You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
 
-##### Headings
+#### H4 Headings
 
 You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
 
-###### Headings
+##### H5 Headings
+
+You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
+
+###### H6 Headings
 
 You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
 
 ```
+## H2 Heading
 ### H3 Heading
 #### H4 Heading
 ##### H5 Heading
 ###### H6 Heading
 ```
 
-### Tables
+## Tables
 
 Name | Upvotes | Downvotes | Abstentions
 --- | --- | --- | ---
@@ -89,8 +94,10 @@ Bob     | 4  | 3  | 1
 Charlie | 7  | 9  | 4
 Totals  | 21 | 23 | 7
 
-### Gists via GitHub Pages
+## Gists via GitHub Pages
 
 Use the `gist` tag to easily embed a GitHub Gist onto your site. This works with public or secret gists:
 
 {% gist sparanoid/55c3dd64f94881017a7b gist.md %}
+
+{% gist sparanoid/87b4b3ec181e90146c74 %}
