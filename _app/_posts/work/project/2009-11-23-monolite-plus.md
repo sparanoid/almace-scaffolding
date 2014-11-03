@@ -19,11 +19,11 @@ plugin: intense
 
 <p class=note>0.4.* 版本的 Last.fm 同步功能可能會在退出 foobar2000 時隨機出現錯誤提示，但不會影響正常使用</p>
 
-<h3>什麽是 MonoLite Plus？</h3>
+<h2>什麽是 MonoLite Plus？</h2>
 
 <p>MonoLite Plus 是一款基于 <a href="http://yuo.be/columns.php">Columns UI</a> 組件創建的 <a href="http://www.foobar2000.org/">foobar2000</a> 皮膚</p>
 
-<h3>與原版 MonoLite 有什麽不同？</h3>
+<h2>與原版 MonoLite 有什麽不同？</h2>
 
 <ul>
   <li>增加歌詞顯示功能，支持自動下載歌詞</li>
@@ -54,7 +54,7 @@ plugin: intense
   <a href="{{ site.file }}/monolite-plus-03.png">#3</a>
 </p>
 
-<h3>MonoLite Plus 安裝向導 (Portable 模式)</h3>
+<h2>MonoLite Plus 安裝向導 (Portable 模式)</h2>
 
 <ul>
   <li>複制壓縮包中所有文件到 fooobar2000 文件夾</li>
@@ -63,7 +63,7 @@ plugin: intense
   <li>大功告成</li>
 </ul>
 
-<h3>MonoLite Plus 安裝向導 (標准模式)</h3>
+<h2>MonoLite Plus 安裝向導 (標准模式)</h2>
 
 <ul>
   <li>將配置文件位置修改爲應用程序安裝目錄，位于選項中的 General 處修改</li>
@@ -71,7 +71,7 @@ plugin: intense
   <li>然後照做 Portable 模式下的安裝方法</li>
 </ul>
 
-<h3>Last.fm 功能安裝向導</h3>
+<h2>Last.fm 功能安裝向導</h2>
 
 <ul>
   <li>首先執行 monolite_lastfm_install.bat 文件，相關組件會自動安裝</li>
@@ -80,7 +80,7 @@ plugin: intense
   <li>運行 foobar2000 並在設置窗口中的 Tools / Audioscrobbler 與 Tools / Soft Playlists 面板中輸入您的帳戶信息</li>
 </ul>
 
-<h3>Last.fm 功能移除向導</h3>
+<h2>Last.fm 功能移除向導</h2>
 
 <ul>
   <li>退出 foobar2000，然後運行 monolite_remove_lastfm.bat，所有的相關文件會被移動到 monolite_backup 文件夾</li>
@@ -88,7 +88,7 @@ plugin: intense
   <li>選中菜單中的 View / Layout / MonoLite Plus (Without Last.fm Icon) 可以去掉其圖標</li>
 </ul>
 
-<h3>會自動生成的內容</h3>
+<h2>會自動生成的內容</h2>
 
 <ul>
   <li><code>%foobar_dir%\lyrics\*</code> - 歌詞存放目錄 (foo_uie_lyrics.dl)</li>
@@ -98,7 +98,7 @@ plugin: intense
 
 <p>如果不想自動生成這些文件，可在設置中禁用</p>
 
-<h3>使用技巧</h3>
+<h2>使用技巧</h2>
 
 <ul>
   <li>左鍵雙擊專輯分類=全選該分類下的曲目；中鍵單擊曲目=打開曲目屬性窗口</li>
@@ -110,13 +110,13 @@ plugin: intense
   <li>建議 <a href="{{ site.file }}/monolite-plus-04.png">如圖修改</a> 快捷鍵設置，從此敲擊空格即可定位到正在播放的曲目</li>
 </ul>
 
-<h3>Windows XP 用戶</h3>
+<h2>Windows XP 用戶</h2>
 
 <ul>
   <li>需要安裝 Segoe UI 才能顯示正確字體，字體請從 <del datetime="2010-10-17T08:34:52+00:00">下方下載區下載</del> 網上自行搜索</li>
 </ul>
 
-<h3>聲明</h3>
+<h2>聲明</h2>
 
 <ul>
   <li>MonoLite 原作者爲 fanco86 <a href="http://fanco86.deviantart.com/art/MonoLite-122756120">#</a></li>
