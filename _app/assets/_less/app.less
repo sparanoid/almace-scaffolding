@@ -126,7 +126,6 @@ del {
 // Site logo
 .logo {
   display: block;
-  width: 50%;
   height: 1vmax;
   margin: 0 0 1.4vmax;
   background: @link-color;
@@ -279,7 +278,7 @@ body:hover .latest {
   header {
     padding-bottom: 16vmin;
 
-    h2 {
+    h1 {
       margin: 0 0 .1em;
       .heading;
       hyphens: none;
@@ -316,7 +315,7 @@ body:hover .latest {
 
   }
 
-  h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
     margin: 10vmin 0 1rem;
     .sub-heading;
   }
@@ -544,6 +543,9 @@ body:hover .latest {
     .heading;
     font-size: 200%;
     line-height: 1.2;
+    // Override heading defines in .content
+    opacity: 1;
+    margin: 0;
   }
 
   .external {
@@ -657,7 +659,7 @@ body:hover .latest {
   }
 
   // Override viewport units defined in post.html
-  .content header h2 {
+  .content header h1 {
     font-size: 240%;
 
     svg,
