@@ -1,3 +1,40 @@
+<a name="0.0.18"></a>
+### 0.0.18 (2014-11-18)
+
+
+#### Bug Fixes
+
+* **style:** images in posts are not center aligned ([a3cf785b](http://github.com/sparanoid/sparanoid.com/commit/a3cf785b97857ff189278e386fd3819aec4ced0f))
+
+
+#### Features
+
+* update `abbr` appearance, remove title hack ([a76fe931](http://github.com/sparanoid/sparanoid.com/commit/a76fe931a9056cb11a16b6fc0f8c9da90eeebda1))
+* **grunt:**
+  * rename all `server` task names to `serve` ([2697fa90](http://github.com/sparanoid/sparanoid.com/commit/2697fa90e71a4ced38d002dd88e78992b65ba8d6))
+  * add live reload support (BrowserSync) ([9f78f654](http://github.com/sparanoid/sparanoid.com/commit/9f78f654ffd943b1bb3dd669797c2ebaa969e803))
+* **print:** introduce print styles ([39fbb109](http://github.com/sparanoid/sparanoid.com/commit/39fbb10968ade3ddb79fb4d1a20508e583972182))
+* **style:** split style fixes for plug-ins into a isolated stylesheet ([8e587481](http://github.com/sparanoid/sparanoid.com/commit/8e5874815d9e2b1067e4a865d4aaf072a218054e))
+* **template:** use `<h1>` for post list ([530f63c2](http://github.com/sparanoid/sparanoid.com/commit/530f63c28093ebfc72fc5f99fbcf6440c9e70335))
+
+
+#### Breaking Changes
+
+* Now this project supports BrowserSync for page live reloading, script snippet is inserted after `<!-- BS_INSERT -->` in `top.html`
+ ([9f78f654](http://github.com/sparanoid/sparanoid.com/commit/9f78f654ffd943b1bb3dd669797c2ebaa969e803))
+
+
+<a name="24.1.4"></a>
+### 24.1.4 (2014-11-03)
+
+
+#### Bug Fixes
+
+* **config:** add missing `force_utf_8` option ([2ef2dc44](http://github.com/sparanoid/sparanoid.com/commit/2ef2dc44a4e4a38572e40a708312886aa3d904b0))
+* **style:** re-apply navigation margin fix for align left layout ([77b5fc19](http://github.com/sparanoid/sparanoid.com/commit/77b5fc197e65f80c0864b8e9d921bcd8ba2d3f46))
+* **template:** add missing `site.colorful_list ` scope ([8575c197](http://github.com/sparanoid/sparanoid.com/commit/8575c19739b83af154b99fee029c026a9cf359e8))
+
+
 <a name="0.0.17"></a>
 ### 0.0.17 (2014-11-03)
 
