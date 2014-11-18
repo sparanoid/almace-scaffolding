@@ -353,7 +353,6 @@ module.exports = (grunt) ->
   grunt.registerTask "sync", "Build site + rsync static files to remote server", [
     "build"
     "shell:sync"
-    "copy"
   ]
 
   grunt.registerTask "s3", "Sync image assets with `s3cmd`", [
