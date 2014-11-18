@@ -56,23 +56,32 @@ module.exports = (grunt) ->
         src: ["<%= config.dist %>/**/*.html"]
 
     watch:
+      options:
+        spawn: false
+
       coffee:
         files: ["<%= coffeelint.gruntfile.src %>"]
         tasks: ["coffeelint:gruntfile"]
 
       js:
         files: ["<%= config.app %>/assets/_js/**/*.js"]
-        tasks: [
-          "uglify:server"
-        ]
+        tasks: ["uglify:server"]
+        options:
+          interrupt: true
 
       less:
         files: ["<%= config.app %>/assets/_less/**/*.less"]
         tasks: [
           "less:server"
-          "autoprefixer"
+          "autoprefixer:serve"
           # "csslint"
         ]
+        options:
+          interrupt: true
+
+      jekyll:
+        files: ["<%= config.app %>/**/*", "!_*"]
+        tasks: ['jekyll:serve']
 
     uglify:
       server:
@@ -114,6 +123,12 @@ module.exports = (grunt) ->
         dest: "<%= less.server.dest %>"
 
     autoprefixer:
+      serve:
+        src: ["<%= less.server.dest %>"]
+        dest: "<%= less.server.dest %>"
+        options:
+          map: true
+
       dist:
         src: ["<%= less.server.dest %>"]
         dest: "<%= less.server.dest %>"
@@ -203,6 +218,22 @@ module.exports = (grunt) ->
         files:
           src: ["<%= config.dist %>/**/*.html"]
 
+    jekyll:
+      # options:
+      #   bundleExec: true
+
+      serve:
+        options:
+          # dest:
+          config: "_config.yml,_config.dev.yml"
+          drafts: true
+          future: true
+
+      dist:
+        options:
+          # dest:
+          config: "_config.yml"
+
     shell:
       options:
         stdout: true
@@ -225,7 +256,7 @@ module.exports = (grunt) ->
 
       server:
         tasks: [
-          "shell:server"
+          # "shell:server"
           "watch"
         ]
 
@@ -263,6 +294,36 @@ module.exports = (grunt) ->
           }
         ]
 
+    browserSync:
+      bsFiles:
+        src: ["<%= config.dist %>/**"]
+      options:
+        watchTask: true
+        server:
+          baseDir: "<%= config.dist %>"
+        port: "<%= config.cfg.port %>"
+        ghostMode:
+          clicks: true
+          scroll: true
+          location: true
+          forms: true
+        logFileChanges: false
+        snippetOptions:
+          rule:
+            match: /<!-- BS_INSERT -->/i
+            fn: (snippet, match) ->
+              match + snippet
+        # Uncomment the following options for client presentation
+        # tunnel: "<%= config.pkg.name %>"
+        # online: true
+        open: true
+        browser: [
+          "safari"
+          "google chrome"
+          "firefox"
+        ]
+        notify: true
+
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
     grunt.task.run [
@@ -273,7 +334,9 @@ module.exports = (grunt) ->
     "clean"
     "uglify:server"
     "less:server"
-    "autoprefixer"
+    "autoprefixer:serve"
+    "jekyll:serve"
+    "browserSync"
     "concurrent:server"
   ]
 
@@ -291,7 +354,7 @@ module.exports = (grunt) ->
       "coffeelint"
       "uglify:dist"
       "less:dist"
-      "autoprefixer"
+      "autoprefixer:dist"
       "csscomb"
       "shell:dist"
       "concurrent:dist"
@@ -304,6 +367,7 @@ module.exports = (grunt) ->
   grunt.registerTask "sync", "Build site + rsync static files to remote server", [
     "build"
     "shell:sync"
+    "copy"
   ]
 
   grunt.registerTask "s3", "Sync image assets with `s3cmd`", [
