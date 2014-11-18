@@ -36,12 +36,13 @@ module.exports = (grunt) ->
       gruntfile:
         src: ["Gruntfile.coffee"]
 
-    csslint:
+    lesslint:
       options:
-        csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
+        csslint:
+          csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
 
       test:
-        src: ["<%= config.app %>/assets/css/app.css"]
+        src: ["<%= less.serve.src %>"]
 
     validation:
       options:
@@ -52,30 +53,39 @@ module.exports = (grunt) ->
           "Bad value X-UA-Compatible for attribute http-equiv on element meta."
           "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
         ]
+
       dist:
         src: ["<%= config.dist %>/**/*.html"]
 
     watch:
+      options:
+        spawn: false
+
       coffee:
         files: ["<%= coffeelint.gruntfile.src %>"]
         tasks: ["coffeelint:gruntfile"]
 
       js:
         files: ["<%= config.app %>/assets/_js/**/*.js"]
-        tasks: [
-          "uglify:server"
-        ]
+        tasks: ["uglify:serve"]
+        options:
+          interrupt: true
 
       less:
         files: ["<%= config.app %>/assets/_less/**/*.less"]
         tasks: [
-          "less:server"
-          "autoprefixer"
-          # "csslint"
+          "less:serve"
+          "autoprefixer:serve"
         ]
+        options:
+          interrupt: true
+
+      jekyll:
+        files: ["<%= config.app %>/**/*", "!_*"]
+        tasks: ['jekyll:serve']
 
     uglify:
-      server:
+      serve:
         options:
           sourceMap: true
 
@@ -98,7 +108,7 @@ module.exports = (grunt) ->
         ]
 
     less:
-      server:
+      serve:
         options:
           strictMath: true
           sourceMap: true
@@ -110,24 +120,36 @@ module.exports = (grunt) ->
         dest: "<%= config.app %>/assets/css/app.css"
 
       dist:
-        src: ["<%= less.server.src %>"]
-        dest: "<%= less.server.dest %>"
+        src: ["<%= less.serve.src %>"]
+        dest: "<%= less.serve.dest %>"
 
     autoprefixer:
+      serve:
+        src: ["<%= less.serve.dest %>"]
+        dest: "<%= less.serve.dest %>"
+        options:
+          map: true
+
       dist:
-        src: ["<%= less.server.dest %>"]
-        dest: "<%= less.server.dest %>"
+        src: ["<%= less.serve.dest %>"]
+        dest: "<%= less.serve.dest %>"
 
     csscomb:
       options:
         config: "<%= config.app %>/assets/_less/.csscomb.json"
 
       dist:
-        src: ["<%= less.server.dest %>"]
-        dest: "<%= less.server.dest %>"
+        src: ["<%= less.serve.dest %>"]
+        dest: "<%= less.serve.dest %>"
 
     htmlmin:
       dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>/"
+        ]
         options:
           removeComments: true
           removeCommentsFromCDATA: true
@@ -146,13 +168,6 @@ module.exports = (grunt) ->
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
-
-        files: [
-          expand: true
-          cwd: "<%= config.dist %>"
-          src: "**/*.html"
-          dest: "<%= config.dist %>/"
-        ]
 
     xmlmin:
       dist:
@@ -203,15 +218,23 @@ module.exports = (grunt) ->
         files:
           src: ["<%= config.dist %>/**/*.html"]
 
+    jekyll:
+      # options:
+      #   bundleExec: true
+
+      serve:
+        options:
+          config: "_config.yml,_config.dev.yml"
+          drafts: true
+          future: true
+
+      dist:
+        options:
+          config: "_config.yml"
+
     shell:
       options:
         stdout: true
-
-      server:
-        command: "jekyll serve --watch --future --drafts --config _config.yml,_config.dev.yml"
-
-      dist:
-        command: "jekyll build"
 
       sync:
         command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
@@ -222,12 +245,6 @@ module.exports = (grunt) ->
     concurrent:
       options:
         logConcurrentOutput: true
-
-      server:
-        tasks: [
-          "shell:server"
-          "watch"
-        ]
 
       dist:
         tasks: [
@@ -263,6 +280,36 @@ module.exports = (grunt) ->
           }
         ]
 
+    browserSync:
+      bsFiles:
+        src: ["<%= config.dist %>/**"]
+      options:
+        watchTask: true
+        server:
+          baseDir: "<%= config.dist %>"
+        port: "<%= config.cfg.port %>"
+        ghostMode:
+          clicks: true
+          scroll: true
+          location: true
+          forms: true
+        logFileChanges: false
+        snippetOptions:
+          rule:
+            match: /<!-- BS_INSERT -->/i
+            fn: (snippet, match) ->
+              match + snippet
+        # Uncomment the following options for client presentation
+        # tunnel: "<%= config.pkg.name %>"
+        # online: true
+        open: true
+        browser: [
+          "safari"
+          "google chrome"
+          "firefox"
+        ]
+        notify: true
+
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
     grunt.task.run [
@@ -271,15 +318,17 @@ module.exports = (grunt) ->
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean"
-    "uglify:server"
-    "less:server"
-    "autoprefixer"
-    "concurrent:server"
+    "uglify:serve"
+    "less:serve"
+    "autoprefixer:serve"
+    "jekyll:serve"
+    "browserSync"
+    "watch"
   ]
 
   grunt.registerTask "test", "Build test task", [
     "build"
-    # "csslint"
+    "lesslint"
     "validation"
   ]
 
@@ -291,9 +340,9 @@ module.exports = (grunt) ->
       "coffeelint"
       "uglify:dist"
       "less:dist"
-      "autoprefixer"
+      "autoprefixer:dist"
       "csscomb"
-      "shell:dist"
+      "jekyll:dist"
       "concurrent:dist"
       "smoosher"
       "usebanner"
