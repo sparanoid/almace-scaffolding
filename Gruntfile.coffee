@@ -36,12 +36,13 @@ module.exports = (grunt) ->
       gruntfile:
         src: ["Gruntfile.coffee"]
 
-    csslint:
+    lesslint:
       options:
-        csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
+        csslint:
+          csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
 
       test:
-        src: ["<%= config.app %>/assets/css/app.css"]
+        src: ["<%= less.serve.src %>"]
 
     validation:
       options:
@@ -52,6 +53,7 @@ module.exports = (grunt) ->
           "Bad value X-UA-Compatible for attribute http-equiv on element meta."
           "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
         ]
+
       dist:
         src: ["<%= config.dist %>/**/*.html"]
 
@@ -74,7 +76,6 @@ module.exports = (grunt) ->
         tasks: [
           "less:serve"
           "autoprefixer:serve"
-          # "csslint"
         ]
         options:
           interrupt: true
@@ -143,6 +144,12 @@ module.exports = (grunt) ->
 
     htmlmin:
       dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>/"
+        ]
         options:
           removeComments: true
           removeCommentsFromCDATA: true
@@ -161,13 +168,6 @@ module.exports = (grunt) ->
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
-
-        files: [
-          expand: true
-          cwd: "<%= config.dist %>"
-          src: "**/*.html"
-          dest: "<%= config.dist %>/"
-        ]
 
     xmlmin:
       dist:
@@ -328,7 +328,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "test", "Build test task", [
     "build"
-    # "csslint"
+    "lesslint"
     "validation"
   ]
 
