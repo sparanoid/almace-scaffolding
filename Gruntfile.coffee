@@ -65,14 +65,14 @@ module.exports = (grunt) ->
 
       js:
         files: ["<%= config.app %>/assets/_js/**/*.js"]
-        tasks: ["uglify:server"]
+        tasks: ["uglify:serve"]
         options:
           interrupt: true
 
       less:
         files: ["<%= config.app %>/assets/_less/**/*.less"]
         tasks: [
-          "less:server"
+          "less:serve"
           "autoprefixer:serve"
           # "csslint"
         ]
@@ -84,7 +84,7 @@ module.exports = (grunt) ->
         tasks: ['jekyll:serve']
 
     uglify:
-      server:
+      serve:
         options:
           sourceMap: true
 
@@ -107,7 +107,7 @@ module.exports = (grunt) ->
         ]
 
     less:
-      server:
+      serve:
         options:
           strictMath: true
           sourceMap: true
@@ -119,27 +119,27 @@ module.exports = (grunt) ->
         dest: "<%= config.app %>/assets/css/app.css"
 
       dist:
-        src: ["<%= less.server.src %>"]
-        dest: "<%= less.server.dest %>"
+        src: ["<%= less.serve.src %>"]
+        dest: "<%= less.serve.dest %>"
 
     autoprefixer:
       serve:
-        src: ["<%= less.server.dest %>"]
-        dest: "<%= less.server.dest %>"
+        src: ["<%= less.serve.dest %>"]
+        dest: "<%= less.serve.dest %>"
         options:
           map: true
 
       dist:
-        src: ["<%= less.server.dest %>"]
-        dest: "<%= less.server.dest %>"
+        src: ["<%= less.serve.dest %>"]
+        dest: "<%= less.serve.dest %>"
 
     csscomb:
       options:
         config: "<%= config.app %>/assets/_less/.csscomb.json"
 
       dist:
-        src: ["<%= less.server.dest %>"]
-        dest: "<%= less.server.dest %>"
+        src: ["<%= less.serve.dest %>"]
+        dest: "<%= less.serve.dest %>"
 
     htmlmin:
       dist:
@@ -238,7 +238,7 @@ module.exports = (grunt) ->
       options:
         stdout: true
 
-      server:
+      serve:
         command: "jekyll serve --watch --future --drafts --config _config.yml,_config.dev.yml"
 
       dist:
@@ -254,9 +254,9 @@ module.exports = (grunt) ->
       options:
         logConcurrentOutput: true
 
-      server:
+      serve:
         tasks: [
-          # "shell:server"
+          # "shell:serve"
           "watch"
         ]
 
@@ -299,7 +299,7 @@ module.exports = (grunt) ->
         src: ["<%= config.dist %>/**"]
       options:
         watchTask: true
-        server:
+        serve:
           baseDir: "<%= config.dist %>"
         port: "<%= config.cfg.port %>"
         ghostMode:
@@ -332,12 +332,12 @@ module.exports = (grunt) ->
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean"
-    "uglify:server"
-    "less:server"
+    "uglify:serve"
+    "less:serve"
     "autoprefixer:serve"
     "jekyll:serve"
     "browserSync"
-    "concurrent:server"
+    "concurrent:serve"
   ]
 
   grunt.registerTask "test", "Build test task", [
