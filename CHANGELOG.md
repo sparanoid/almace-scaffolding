@@ -1,3 +1,29 @@
+<a name="24.1.5"></a>
+### 24.1.5 (2014-11-18)
+
+
+#### Bug Fixes
+
+* **style:** images in posts are not center aligned ([a3cf785b](http://github.com/sparanoid/sparanoid.com/commit/a3cf785b97857ff189278e386fd3819aec4ced0f))
+
+
+#### Features
+
+* update `abbr` appearance, remove title hack ([a76fe931](http://github.com/sparanoid/sparanoid.com/commit/a76fe931a9056cb11a16b6fc0f8c9da90eeebda1))
+* **grunt:**
+  * rename all `server` task names to `serve` ([2697fa90](http://github.com/sparanoid/sparanoid.com/commit/2697fa90e71a4ced38d002dd88e78992b65ba8d6))
+  * add live reload support (BrowserSync) ([9f78f654](http://github.com/sparanoid/sparanoid.com/commit/9f78f654ffd943b1bb3dd669797c2ebaa969e803))
+* **print:** introduce print styles ([39fbb109](http://github.com/sparanoid/sparanoid.com/commit/39fbb10968ade3ddb79fb4d1a20508e583972182))
+* **style:** split style fixes for plug-ins into a isolated stylesheet ([8e587481](http://github.com/sparanoid/sparanoid.com/commit/8e5874815d9e2b1067e4a865d4aaf072a218054e))
+* **template:** use `<h1>` for post list ([530f63c2](http://github.com/sparanoid/sparanoid.com/commit/530f63c28093ebfc72fc5f99fbcf6440c9e70335))
+
+
+#### Breaking Changes
+
+* Now this project supports BrowserSync for page live reloading, script snippet is inserted after `<!-- BS_INSERT -->` in `top.html`
+ ([9f78f654](http://github.com/sparanoid/sparanoid.com/commit/9f78f654ffd943b1bb3dd669797c2ebaa969e803))
+
+
 <a name="24.1.4"></a>
 ### 24.1.4 (2014-11-03)
 
