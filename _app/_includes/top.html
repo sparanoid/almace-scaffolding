@@ -14,6 +14,9 @@
 <!-- There is no prepend: site.base here, it'll cause error 404 when site.base it defined -->
 <link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets }}">
 
+<!-- browser-sync, don't remove this -->
+<!-- BS_INSERT -->
+
 {% if page.title == site.name %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
 
 <!-- Define a description for better SEO result, exclude homepage -->
