@@ -224,25 +224,17 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          # dest:
           config: "_config.yml,_config.dev.yml"
           drafts: true
           future: true
 
       dist:
         options:
-          # dest:
           config: "_config.yml"
 
     shell:
       options:
         stdout: true
-
-      serve:
-        command: "jekyll serve --watch --future --drafts --config _config.yml,_config.dev.yml"
-
-      dist:
-        command: "jekyll build"
 
       sync:
         command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
@@ -253,12 +245,6 @@ module.exports = (grunt) ->
     concurrent:
       options:
         logConcurrentOutput: true
-
-      serve:
-        tasks: [
-          # "shell:serve"
-          "watch"
-        ]
 
       dist:
         tasks: [
@@ -299,7 +285,7 @@ module.exports = (grunt) ->
         src: ["<%= config.dist %>/**"]
       options:
         watchTask: true
-        serve:
+        server:
           baseDir: "<%= config.dist %>"
         port: "<%= config.cfg.port %>"
         ghostMode:
@@ -337,7 +323,7 @@ module.exports = (grunt) ->
     "autoprefixer:serve"
     "jekyll:serve"
     "browserSync"
-    "concurrent:serve"
+    "watch"
   ]
 
   grunt.registerTask "test", "Build test task", [
@@ -356,7 +342,7 @@ module.exports = (grunt) ->
       "less:dist"
       "autoprefixer:dist"
       "csscomb"
-      "shell:dist"
+      "jekyll:dist"
       "concurrent:dist"
       "smoosher"
       "usebanner"
