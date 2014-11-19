@@ -4,7 +4,7 @@ title: Welcome to Almace Scaffolding
 category: note
 ---
 
-`amsf`, a.k.a. **Almace Scaffolding**, a super-fast Jekyll framework, LESS auto-compile, prefix-free, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
+`amsf`, a.k.a. **Almace Scaffolding**, a super-fast Jekyll framework, Supports live reloading (BrowserSync), LESS, HTML minification, inlined stylesheets and more. Available for [Jekyll](http://jekyllrb.com/) right now (will be available for more platforms in the future).
 
 <p class=largetype>
   <a href="http://sparanoid.com/lab/amsf/getting-started.html">Getting Started</a>
