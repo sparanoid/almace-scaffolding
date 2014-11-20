@@ -11,7 +11,7 @@ svg-headline-height: 74
 link: http://wordpress.org/extend/plugins/readability-buttons/
 ---
 
-**Readability Buttons** is a WordPress plugin to add readability.com widget on your site. A must-have plugin if you're a Readability <del>publisher</del> user [^1]. This plugin also works fine with multisite enabled WordPress (aka. WordPress Mu). If you love this plugin, please consider [buying me a cup of coffee]({{ site.profile.donate }}).
+**Readability Buttons** is a WordPress plugin to add readability.com widget on your site. A must-have plugin if you're a Readability <del>publisher</del> user [^1]. This plugin also works fine with multisite enabled WordPress (aka. WordPress Mu). If you love this plugin, please consider [buying me a cup of coffee]({{ '/donate/' | prepend: site.base }}).
 
 <p class=download><a href="http://wordpress.org/extend/plugins/readability-buttons/">Download</a> it at WordPress.org</p>
 
