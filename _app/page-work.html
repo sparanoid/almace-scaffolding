@@ -5,19 +5,17 @@ permalink: /work/
 desc: 作品・ワークス・TBC
 ---
 
-<div class=center>
-  <h2>Personal Projects</h2>
-  {% for post in site.tags.project %}
-    {% include page-item.html %}
-  {% endfor %}
+<h2>Personal Projects</h2>
+{% for post in site.tags.project %}
+  {% include page-item.html %}
+{% endfor %}
 
-  <h2>Commercial Work</h2>
-  {% for post in site.tags.commercial %}
-    {% include page-item.html %}
-  {% endfor %}
+<h2>Commercial Work</h2>
+{% for post in site.tags.commercial %}
+  {% include page-item.html %}
+{% endfor %}
 
-  <h2>Paintings / Sketches</h2>
-  {% for post in site.tags.drawing %}
-    {% include page-item.html %}
-  {% endfor %}
-</div>
+<h2>Paintings / Sketches</h2>
+{% for post in site.tags.drawing %}
+  {% include page-item.html %}
+{% endfor %}
