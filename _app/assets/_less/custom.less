@@ -114,10 +114,15 @@ body {
       margin-right: auto;
     }
 
+    // Override user agent stylesheet
+    input {
+      text-align: center;
+    }
+
     // List cannot be center aligned
     ul,
     ol {
-      text-align: left;
+      text-align: start;
     }
 
     // Unset default `justify` align
@@ -130,7 +135,7 @@ body {
       }
     }
 
-    // Unset border and padding
+    // Unset border and padding for special blocks
     .note,
     .store,
     .download {
@@ -138,7 +143,7 @@ body {
       border-left: none;
     }
 
-    //
+    // Unset border and padding for blockquotes, and make it lighter
     blockquote {
 
       > p {
@@ -151,6 +156,6 @@ body {
 
   // Apply left align to specific posts or pages
   .nocenter {
-    text-align: left;
+    text-align: start;
   }
 }
