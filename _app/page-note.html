@@ -5,8 +5,6 @@ permalink: /note/
 desc: 筆記・ノート・TL;DR
 ---
 
-<div class=center>
-  {% for post in site.categories.note %}
-    {% include page-item.html %}
-  {% endfor %}
-</div>
+{% for post in site.categories.note %}
+  {% include page-item.html %}
+{% endfor %}
