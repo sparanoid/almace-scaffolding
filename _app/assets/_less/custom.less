@@ -102,7 +102,6 @@ body {
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
 
     @media (max-width: 640px) {
       max-width: 100%;
@@ -114,15 +113,44 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
+
+    // List cannot be center aligned
+    ul,
+    ol {
+      text-align: left;
+    }
+
+    // Unset default `justify` align
+    [lang=zh],
+    [lang=ja] {
+      text-align: inherit;
+
+      header {
+        text-align: inherit;
+      }
+    }
+
+    // Unset border and padding
+    .note,
+    .store,
+    .download {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    //
+    blockquote {
+
+      > p {
+        opacity: .5;
+        padding-left: 0;
+        border-left: none;
+      }
+    }
   }
 
-  // Re-apply center style for post list (Work, Note, etc.)
-  .center {
-    text-align: center;
-  }
-
-  // Re-apply center style for largetypes (ie. Donate page)
-  .largetype {
-    text-align: center;
+  // Apply left align to specific posts or pages
+  .nocenter {
+    text-align: left;
   }
 }
