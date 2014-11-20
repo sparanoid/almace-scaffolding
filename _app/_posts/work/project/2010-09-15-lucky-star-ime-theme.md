@@ -18,4 +18,4 @@ scheme-bg: "#ff82a6"
 
 <p class=download><a href="http://shuru.qq.com/skin/skin_detail?skin_id=4293199403">lucky-star.qpys</a> (? KB) / <a href="http://pinyin.sogou.com/skins/sv_307818.html">lucky-star.ssf</a> (? KB)</p>
 
-<p class=store>Love this skin? please consider <a href="{{ site.profile.donate }}">making a donation</a></p>
+<p class=store>Love this skin? please consider <a href="{{ '/donate/' | prepend: site.base }}">making a donation</a></p>
