@@ -9,7 +9,7 @@ category: note
 1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) or clone the repo: `git clone git@github.com:sparanoid/almace-scaffolding.git`.
 2. Install dependencies with Ruby gem [`bundler`](http://bundler.io/) and Node.js package manager [`npm`](https://www.npmjs.org/): `bundle install && npm install`.
 3. Copy `_config.init.yml` to `_config.yml` as your default configuration file.
-3. Run `grunt serve` and then open `http://localhost:4321` in your browser.
+3. Run `grunt serve`.
 
 So in short for geeks:
 

@@ -219,8 +219,8 @@ module.exports = (grunt) ->
           src: ["<%= config.dist %>/**/*.html"]
 
     jekyll:
-      # options:
-      #   bundleExec: true
+      options:
+        bundleExec: true
 
       serve:
         options:
