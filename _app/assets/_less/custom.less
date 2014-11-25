@@ -119,13 +119,15 @@ body {
       text-align: center;
     }
 
-    // List cannot be center aligned
+    // Elements cannot be center aligned
     ul,
-    ol {
+    ol,
+    pre,
+    code {
       text-align: start;
     }
 
-    // Unset default `justify` align
+    // Unset `justify` align
     [lang=zh],
     [lang=ja] {
       text-align: inherit;
