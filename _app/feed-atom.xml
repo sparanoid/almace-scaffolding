@@ -48,7 +48,7 @@ permalink: /feed/index.xml
         </author>
         <content type="html" xml:base="{{ site.base | prepend: site.url }}/">
           {% if site.rss_excerpt %}
-            {{ post.excerpt | xml_escape }}
+            {{ post.excerpt | markdownify | xml_escape }}
           {% else %}
             {{ post.content | xml_escape }}
           {% endif %}
