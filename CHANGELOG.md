@@ -1,3 +1,48 @@
+<a name="0.0.19"></a>
+### 0.0.19 (2014-12-01)
+
+
+#### Bug Fixes
+
+* sync init config file ([b22cfaf3](http://github.com/sparanoid/sparanoid.com/commit/b22cfaf3c53be25d95f342a8f52ac2b9107b5bfc))
+* remove unnecessary task ([0fd0dc23](http://github.com/sparanoid/sparanoid.com/commit/0fd0dc235c4247976845a02fe8b2064a3a06b4aa))
+* **grunt:** now also watches Jekyll configuration files ([cf63e34e](http://github.com/sparanoid/sparanoid.com/commit/cf63e34ef44cb65af3413b36155ec9367cf18818))
+* **sitemap:** duplicated URL definitions ([5ee82675](http://github.com/sparanoid/sparanoid.com/commit/5ee82675f2d05bfc5e48e047d584da611f13b1ca))
+* **style:**
+  * `pre` and `code` not aligned properly ([dffc75b0](http://github.com/sparanoid/sparanoid.com/commit/dffc75b07501c54f2c4f5a79183e78a7196753f4))
+  * table align overrides by default user agent styles ([45ded474](http://github.com/sparanoid/sparanoid.com/commit/45ded474f4db91ffe32c4b7d0341cb8cfc4f4e8f))
+  * `.largetype` not centered ([c4be3b14](http://github.com/sparanoid/sparanoid.com/commit/c4be3b14df34583bef030258c38e34626baa6279))
+* **template:** excerpts should be markdownified for predefined `excerpt` YAML front matter ([654ed8d5](http://github.com/sparanoid/sparanoid.com/commit/654ed8d5fc6fd49c9b87bf87d14dfc29450e3cb6))
+
+
+#### Features
+
+* bump Jekyll version to 2.5.2, better performance ([a0294f88](http://github.com/sparanoid/sparanoid.com/commit/a0294f883f17fb30fcaca02d26db718564263251))
+* update `apple-touch-icon.png` for @3x size ([38bf31ac](http://github.com/sparanoid/sparanoid.com/commit/38bf31ac6932320adf74decdb965ce7cfc1a41d0))
+* **donate:** update copywriting ([a5f9387b](http://github.com/sparanoid/sparanoid.com/commit/a5f9387bd57b7004d06d5885ed74b747480c710c))
+* **grunt:** add `grunt-lesslint` support ([0b928803](http://github.com/sparanoid/sparanoid.com/commit/0b928803f70a301c3766e8f6029261c5d0d23099))
+* **style:**
+  * placeholder text color ([3f6fbf63](http://github.com/sparanoid/sparanoid.com/commit/3f6fbf63141a1b076353a785ed1662391b3d129c))
+  * update `text-align` method ([2665a791](http://github.com/sparanoid/sparanoid.com/commit/2665a791d7e24a62daa6b75b4e5e350776b447d9))
+  * simplified align center method ([aa0a5fbf](http://github.com/sparanoid/sparanoid.com/commit/aa0a5fbf9e977c647aff83202280b1046009ca46))
+* **template:**
+  * add feed excerpt output ([8fd053c5](http://github.com/sparanoid/sparanoid.com/commit/8fd053c5b7d4aaff66c4c52566cf06d51739e84b))
+  * remove Google+ authority support, I don't like it. ([0dd4efae](http://github.com/sparanoid/sparanoid.com/commit/0dd4efaec8a4622bdcde0b4a063361519e1c9043))
+  * add multiple authors support ([57337fa1](http://github.com/sparanoid/sparanoid.com/commit/57337fa15fa078437bff41536950b811da79cf82))
+  * new email newsletter signup page ([a0652321](http://github.com/sparanoid/sparanoid.com/commit/a0652321e3a30dac96c418b8aae6b1cd9278cf63))
+  * more centered text for pages ([2e476d91](http://github.com/sparanoid/sparanoid.com/commit/2e476d91166e961044aa21bf7475948344dfb057))
+
+
+#### Breaking Changes
+
+* Now I can use multiple users for posts, use the following variable in Front Matter:
+
+`author: tunghsiao`
+
+Author information can be added in `./_app/_data/authors.yml`
+ ([57337fa1](http://github.com/sparanoid/sparanoid.com/commit/57337fa15fa078437bff41536950b811da79cf82))
+
+
 <a name="0.0.18"></a>
 ### 0.0.18 (2014-11-18)
 
