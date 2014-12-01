@@ -44,6 +44,7 @@ module.exports = (grunt) ->
       test:
         src: ["<%= less.serve.src %>"]
 
+    # Relax, you'll get lot of warnings or errors but most of them can be ignored. They're for reference only.
     validation:
       options:
         reset: true
