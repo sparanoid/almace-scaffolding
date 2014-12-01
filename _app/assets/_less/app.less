@@ -123,6 +123,11 @@ del {
   background: fade(@text-color, 2%);
 }
 
+::-webkit-input-placeholder {
+  color: @text-color;
+  opacity: .1;
+}
+
 // Site logo
 .logo {
   display: block;
@@ -215,11 +220,11 @@ body:hover .latest {
   &.unavailable {
 
     &:before {
-      background: #f30;
+      background: #ccc;
     }
 
     a {
-      color: #f30;
+      color: #ccc;
     }
   }
 }
@@ -373,8 +378,8 @@ body:hover .latest {
     font-size: 75%;
   }
 
-  abbr:after {
-    content: " (" attr(title) ")";
+  abbr {
+    border-bottom: 1px dashed;
   }
 
   code, pre {
@@ -405,8 +410,6 @@ body:hover .latest {
       border-radius: 0;
       outline: none;
       transition: padding .2s ease;
-      // Remove iOS pre-defined style
-      -webkit-appearance: none;
 
       &:focus {
         padding: 1vmin;
@@ -444,6 +447,7 @@ body:hover .latest {
 
     th {
       border-bottom: 2px solid fade(@text-color, 6%);
+      // Override default user agent stylesheet
       text-align: left;
     }
 
@@ -459,7 +463,7 @@ body:hover .latest {
   text-align: justify;
 
   header {
-    text-align: left;
+    text-align: start;
   }
 }
 
@@ -502,7 +506,7 @@ body:hover .latest {
     box-shadow:
         16px 0 0 0   fade(lighten(#fac536, 30%), 96%)
       , 32px 0 0 0   fade(lighten(#26e93d, 30%), 96%)
-      ,  0px 0 0 1px fade(darken(#f24e59, 30%), 30%)
+      ,    0 0 0 1px fade(darken(#f24e59, 30%), 30%)
       , 16px 0 0 1px fade(darken(#fac536, 30%), 30%)
       , 32px 0 0 1px fade(darken(#26e93d, 30%), 30%)
     ;

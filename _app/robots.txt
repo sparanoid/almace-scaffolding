@@ -2,4 +2,4 @@
 ---
 User-agent: *
 Disallow: /lab/version/
-Sitemap: {{ /sitemap.xml | prepend: site.base | prepend: site.url }}/sitemap.xml
+Sitemap: {{ '/sitemap.xml' | prepend: site.base | prepend: site.url }}

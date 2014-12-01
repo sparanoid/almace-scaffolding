@@ -9,7 +9,7 @@ layout: default
 {% endif %}
 
 <!-- Prepare for `lang` tag -->
-{% capture lang_meta %}
+{% capture lang %}
   {% if page.lang %}
     lang={{ page.lang }}
   {% endif %}
@@ -45,8 +45,15 @@ layout: default
   {% endfor %}
 {% endcapture %}
 
+<!-- Prepare author meta -->
+{% if page.author %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.data.authors["default"] %}
+{% endif %}
+
 <!-- Article wrapper, limit width -->
-<article {{ lang_meta }}>
+<article {{ lang }}>
 
   <!-- Post title -->
   <header>
@@ -81,8 +88,9 @@ layout: default
       </h1>
     {% endif %}
 
-    {% if page.date %}<small>By <span rel=author>{{ site.profile.user }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
+    {% if page.date %}<small>By <span rel=author>{{ author.name }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
     {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
+
   </header>
 
   <!-- Post content -->
