@@ -20,9 +20,9 @@ permalink: /
     </small>
 
     {% if site.data.availability.free %}
-      <p class="status available"><a href="mailto:{{ site.profile.email }}">Currently available for freelance</a></p>
+      <p class="status available"><a href="mailto:{{ site.data.authors.default.email }}">Currently available for freelance</a></p>
     {% else %}
-      <p class="status unavailable"><a href="mailto:{{ site.profile.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></p>
+      <p class="status unavailable"><a href="mailto:{{ site.data.authors.default.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></p>
     {% endif %}
   </header>
 </article>
