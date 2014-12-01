@@ -91,12 +91,6 @@ layout: default
     {% if page.date %}<small>By <span rel=author>{{ author.name }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</time></small>{% endif %}
     {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
 
-    {% if author.google_plus %}
-      <small style="display: none;">
-        <a href="https://plus.google.com/+{{ author.google_plus }}?rel=author" rel=author>Google+</a>
-      </small>
-    {% endif %}
-
   </header>
 
   <!-- Post content -->

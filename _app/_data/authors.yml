@@ -6,17 +6,14 @@
 # {{ author.email }}: used in atom feed, homepage
 # {{ author.web }}: used in atom feed
 # {{ author.twitter }}: used by Twitter Cards
-# {{ author.google_plus }}: used in footer, this link is display: noned, only to pass Google+ authorship check
 default:
   name:         Tunghsiao Liu
   email:        t@sparanoid.com
   web:          http://sparanoid.com/
   twitter:      tunghsiao
-  google_plus:  tunghsiaoliu
 
 tester:
   name:         Tester
   email:        test@test.com
   web:          http://tester.com/
   twitter:      tester
-  google_plus:  tester
