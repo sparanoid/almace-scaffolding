@@ -82,7 +82,7 @@ module.exports = (grunt) ->
           interrupt: true
 
       jekyll:
-        files: ["<%= config.app %>/**/*", "!_*"]
+        files: ["<%= config.app %>/**/*", "!_*",  "_config*.yml"]
         tasks: ['jekyll:serve']
 
     uglify:
