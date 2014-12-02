@@ -44,7 +44,6 @@ module.exports = (grunt) ->
       test:
         src: ["<%= less.serve.src %>"]
 
-    # Relax, you'll get lot of warnings or errors but most of them can be ignored. They're for reference only.
     validation:
       options:
         reset: true
@@ -82,7 +81,7 @@ module.exports = (grunt) ->
           interrupt: true
 
       jekyll:
-        files: ["<%= config.app %>/**/*", "!_*",  "_config*.yml"]
+        files: ["<%= config.app %>/**/*", "!_*"]
         tasks: ['jekyll:serve']
 
     uglify:
@@ -93,7 +92,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "<%= config.app %>/assets/_js/"
-          src: ["*.js", "!*.min.js"]
+          src: ["**/*.js", "!*.min.js"]
           dest: "<%= config.app %>/assets/js/"
         ]
 
@@ -104,7 +103,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "<%= config.app %>/assets/_js/"
-          src: ["*.js", "!*.min.js"]
+          src: ["**/*.js", "!*.min.js"]
           dest: "<%= config.app %>/assets/js/"
         ]
 
@@ -187,7 +186,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "<%= config.dist %>/assets/css/"
-          src: ["*.css", "!*.min.css"]
+          src: ["**/*.css", "!*.min.css"]
           dest: "<%= config.dist %>/assets/css/"
         ]
 
