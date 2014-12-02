@@ -92,7 +92,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "<%= config.app %>/assets/_js/"
-          src: ["*.js", "!*.min.js"]
+          src: ["**/*.js", "!*.min.js"]
           dest: "<%= config.app %>/assets/js/"
         ]
 
@@ -103,7 +103,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "<%= config.app %>/assets/_js/"
-          src: ["*.js", "!*.min.js"]
+          src: ["**/*.js", "!*.min.js"]
           dest: "<%= config.app %>/assets/js/"
         ]
 
@@ -186,7 +186,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "<%= config.dist %>/assets/css/"
-          src: ["*.css", "!*.min.css"]
+          src: ["**/*.css", "!*.min.css"]
           dest: "<%= config.dist %>/assets/css/"
         ]
 
