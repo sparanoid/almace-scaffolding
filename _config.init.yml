@@ -13,6 +13,7 @@ timezone:       Asia/Hong_Kong
 permalink:      /:title.html
 markdown:       redcarpet
 highlighter:    pygments
+include:        ["_pages"]
 
 #
 # Jekyll serve settings
