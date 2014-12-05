@@ -334,21 +334,35 @@ module.exports = (grunt) ->
 
   grunt.registerTask "build", "Build site with `jekyll`, use `--busy` to set availability to false", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 false" if grunt.option("busy")
-    grunt.task.run [
-      "replace"
-      "clean"
-      "coffeelint"
-      "uglify:dist"
-      "less:dist"
-      "autoprefixer:dist"
-      "csscomb"
-      "jekyll:dist"
-      "concurrent:dist"
-      "smoosher"
-      "usebanner"
-      "clean:postDist"
-      "reset"
-    ]
+    if grunt.option("fast")
+      grunt.task.run [
+        "replace"
+        "clean"
+        "coffeelint"
+        "uglify:dist"
+        "less:dist"
+        "autoprefixer:dist"
+        "csscomb"
+        "jekyll:dist"
+        "usebanner"
+        "reset"
+      ]
+    else
+      grunt.task.run [
+        "replace"
+        "clean"
+        "coffeelint"
+        "uglify:dist"
+        "less:dist"
+        "autoprefixer:dist"
+        "csscomb"
+        "jekyll:dist"
+        "concurrent:dist"
+        "smoosher"
+        "usebanner"
+        "clean:postDist"
+        "reset"
+      ]
 
   grunt.registerTask "sync", "Build site + rsync static files to remote server", [
     "build"
