@@ -7,7 +7,9 @@
       {% if site.credits %}
         <li><a href="http://sparanoid.com/lab/amsf/" title="Almace Scaffolding">AMSF</a></li>
       {% endif %}
-      <li><a href="{{ '/email' | prepend: site.base }}/">Email</a></li>
+      {% if site.subscription %}
+        <li><a href="{{ '/email-signup' | prepend: site.base }}/">Email</a></li>
+      {% endif %}
       <li><a href="{{ site.feed | prepend: site.base }}/" title="Feed - Atom (The Atom Syndication Format)">Atom</a></li>
     </ul>
   </footer>
