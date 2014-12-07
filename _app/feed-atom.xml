@@ -30,9 +30,9 @@ permalink: /feed/index.xml
 
       {% capture entry_permalink %}
         {% if site.link_blog and post.link %}
-          <p><a href="{{ post.url | prepend: site.base | prepend: site.url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”">◉ Permalink</a></p>
+          <p><a href="{{ post.url | prepend: site.base | prepend: site.url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”"><small>◉ Permalink</small></a></p>
         {% elsif site.link_blog != true and post.link %}
-          <p><a href="{{ post.link }}">◉ Direct Link to Original Site</a></p>
+          <p><a href="{{ post.link }}"><small>◉ Direct Link to Original Site</small></a></p>
         {% endif %}
       {% endcapture %}
 
