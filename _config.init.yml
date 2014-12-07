@@ -77,6 +77,10 @@ twitter:        sparanoid
 # Site donate link, used in several posts
 donate:         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
 
+# Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages
+# Default:      false
+force_utf_8:    false
+
 # Enable this settings to make your feed Daring Fireball-like link blog
 # (This basically change your <link> value to external link you defined in your posts)
 # Default:      false
@@ -98,9 +102,9 @@ colorful_list:  false
 # Default:      true
 credits:        true
 
-# Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages
+# Show email subscription link in footer
 # Default:      false
-force_utf_8:    false
+subscription:   false
 
 #
 # Custom distribution variables
