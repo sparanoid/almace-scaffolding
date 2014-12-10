@@ -7,7 +7,15 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ site.description }}">
 
-<title>{% if page.title != site.name %}{{ site.name }} - {% endif %}{{ page.title | strip_html | xml_escape }}</title>
+{% capture site_title %}
+  {% if page.title != site.name %}
+    · {{ site.name }}
+  {% endif %}
+{% endcapture %}
+
+<title>
+  {{ page.title | strip_html | xml_escape }}{{ site_title }}
+</title>
 
 <link rel=alternate href="{{ site.feed | prepend: site.base }}/" type=application/atom+xml>
 
