@@ -42,7 +42,7 @@ module.exports = (grunt) ->
           csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
 
       test:
-        src: ["<%= less.serve.src %>"]
+        src: ["<%= watch.less.files.0 %>"]
 
     validation:
       options:
@@ -88,6 +88,7 @@ module.exports = (grunt) ->
       serve:
         options:
           sourceMap: true
+          sourceMapIncludeSources: true
 
         files: [
           expand: true
@@ -113,34 +114,39 @@ module.exports = (grunt) ->
           strictMath: true
           sourceMap: true
           outputSourceFiles: true
-          sourceMapURL: "app.css.map"
-          sourceMapFilename: "<%= config.app %>/assets/css/app.css.map"
 
-        src: ["<%= config.app %>/assets/_less/app.less"]
-        dest: "<%= config.app %>/assets/css/app.css"
+        files: [
+          expand: true
+          cwd: "<%= config.app %>/assets/_less/"
+          src: ["**/app*.less"]
+          dest: "<%= config.app %>/assets/css/"
+          ext: ".css"
+        ]
 
       dist:
-        src: ["<%= less.serve.src %>"]
-        dest: "<%= less.serve.dest %>"
+        files: "<%= less.serve.files %>"
 
     autoprefixer:
       serve:
-        src: ["<%= less.serve.dest %>"]
-        dest: "<%= less.serve.dest %>"
+        src: "<%= config.app %>/assets/css/**/*.css"
         options:
           map: true
 
       dist:
-        src: ["<%= less.serve.dest %>"]
-        dest: "<%= less.serve.dest %>"
+        src: "<%= autoprefixer.serve.src %>"
 
     csscomb:
       options:
         config: "<%= config.app %>/assets/_less/.csscomb.json"
 
       dist:
-        src: ["<%= less.serve.dest %>"]
-        dest: "<%= less.serve.dest %>"
+        files: [
+          expand: true
+          cwd: "<%= less.serve.files.0.dest %>"
+          src: ["*.css"]
+          dest: "<%= less.serve.files.0.dest %>"
+          ext: ".css"
+        ]
 
     htmlmin:
       dist:
