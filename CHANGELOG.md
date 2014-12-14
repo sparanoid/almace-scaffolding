@@ -1,3 +1,35 @@
+<a name="24.1.7"></a>
+### 24.1.7 (2014-12-14)
+
+
+#### Bug Fixes
+
+* watch files in subdirectories for grunt tasks ([2234f54b](http://github.com/sparanoid/sparanoid.com/commit/2234f54b0242637eacfb6ce5e9658a382e3b6d44))
+* **post:** typo in “Chinese Copywriting Guidelines” ([4f24b6ba](http://github.com/sparanoid/sparanoid.com/commit/4f24b6ba35aeea1eb9c9203ad08d0a7d5b80b25e))
+* **style:** update cite position for sparanoid.com ([26ef8c08](http://github.com/sparanoid/sparanoid.com/commit/26ef8c084d0b11f5d558ac14111ad985a2885b1e))
+* **test:** lesslint error ([fb341f60](http://github.com/sparanoid/sparanoid.com/commit/fb341f609fef4f332336cf191a15a4ce01af7a87))
+
+
+#### Features
+
+* reset `site.base` for local development ([cd46627b](http://github.com/sparanoid/sparanoid.com/commit/cd46627bae8d6f69b84cabb152bf559de6cf6e6e))
+* **feed:** use `<small>` for external link ([69c0abc9](http://github.com/sparanoid/sparanoid.com/commit/69c0abc9ecd5f34208d3458ad99e1b8ec12840b8))
+* **grunt:**
+  * add multiple LESS output support ([568041ec](http://github.com/sparanoid/sparanoid.com/commit/568041ec95070c2e17b198661a0e2e685c96daf4))
+  * new grunt option `--fast`, build site without minification ([073fed50](http://github.com/sparanoid/sparanoid.com/commit/073fed50ccf531b6af7669bcf038229c8849ba1b))
+* **post:** update post “Chinese Copywriting Guidelines” ([3b021f32](http://github.com/sparanoid/sparanoid.com/commit/3b021f3233518038d0d20808a239989b06a3510d))
+* **template:**
+  * modern page titles ([a1dedc01](http://github.com/sparanoid/sparanoid.com/commit/a1dedc01e5030302c31cf4e0a2c0f2819e6bdfb8))
+  * update email subscription template ([af2795d7](http://github.com/sparanoid/sparanoid.com/commit/af2795d736278cec89e6ace87e69ef2fa068fd01))
+  * move pages into `_pages` ([6d705c27](http://github.com/sparanoid/sparanoid.com/commit/6d705c274377c4b2f31f4438a74caf6a00f9f083))
+
+
+#### Breaking Changes
+
+* All pages are moved into `_pages` for better file structure management
+ ([6d705c27](http://github.com/sparanoid/sparanoid.com/commit/6d705c274377c4b2f31f4438a74caf6a00f9f083))
+
+
 <a name="24.1.6"></a>
 ### 24.1.6 (2014-12-01)
 
