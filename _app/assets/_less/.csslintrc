@@ -12,6 +12,7 @@
   "known-properties": false,
   "outline-none": false,
   "qualified-headings": false,
+  "regex-selectors": false,
   "shorthand": false,
   "text-indent": false,
   "unique-headings": false,

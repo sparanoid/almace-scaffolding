@@ -42,7 +42,7 @@ module.exports = (grunt) ->
           csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
 
       test:
-        src: ["<%= watch.less.files.0 %>"]
+        src: ["<%= config.app %>/assets/_less/**/app*.less"]
 
     validation:
       options:
