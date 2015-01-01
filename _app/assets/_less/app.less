@@ -46,6 +46,27 @@ body {
   image-rendering: optimizequality;
   transition: all .3s ease .2s;
 
+  @media (max-width: 1000px) {
+    padding-left: 8%;
+    padding-right: 8%;
+    font-size: (@base-font-size * 1.4);
+  }
+
+  @media (max-width: 640px) {
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: (@base-font-size * 2);
+  }
+
+  @media (max-width: 400px) {
+    font-size: (@base-font-size * 2.8);
+  }
+
+  // All iOS devices, the easiest way
+  @media (max-device-width: 480px), (max-device-width: 1024px) {
+    -webkit-text-size-adjust: none;
+  }
+
   // A semitranslucent bar at the top of the page
   &:before {
     position: absolute;
@@ -291,6 +312,11 @@ body:hover .latest {
       hyphens: none;
       line-height: 1.1;
 
+      @media (max-width: 640px) {
+        // Override viewport units defined in post.html
+        font-size: 280%;
+      }
+
       svg {
         display: block;
         max-width: 100%;
@@ -300,6 +326,11 @@ body:hover .latest {
       svg,
       img {
         margin-bottom: .3em;
+
+        @media (max-width: 640px) {
+          width: 100% !important;
+          height: 100% !important;
+        }
       }
     }
 
@@ -566,6 +597,11 @@ body:hover .latest {
 .external {
   line-height: 1;
 
+  @media (max-width: 640px) {
+    // Hide external link for post list
+    display: none;
+  }
+
   span {
     display: inline-block;
     width: .2em;
@@ -609,57 +645,6 @@ body:hover .latest {
         }
       }
     }
-  }
-}
-
-// Media query stack
-@media (max-width: 1000px) {
-
-  body {
-    padding-left: 8%;
-    padding-right: 8%;
-    font-size: (@base-font-size * 1.4);
-  }
-}
-
-@media (max-width: 640px) {
-
-  body {
-    padding-left: 4%;
-    padding-right: 4%;
-    font-size: (@base-font-size * 2);
-  }
-
-  // Override viewport units defined in post.html
-  .content header h1 {
-    font-size: 280%;
-
-    svg,
-    img {
-      width: 100% !important;
-      height: 100% !important;
-    }
-  }
-
-  // Hide external link for post list
-  .list h1 .external {
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-
-  body {
-    font-size: (@base-font-size * 2.8);
-  }
-}
-
-// All iOS devices, the easiest way
-@media (max-device-width: 480px), (max-device-width: 1024px) {
-
-  // Avoid font-size smart alec
-  body {
-    -webkit-text-size-adjust: none;
   }
 }
 
