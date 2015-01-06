@@ -591,16 +591,16 @@ body:hover .latest {
     &:focus {
       border: none;
     }
+
+    @media (max-width: 640px) {
+      // Hide external link for post list
+      display: none;
+    }
   }
 }
 
 .external {
   line-height: 1;
-
-  @media (max-width: 640px) {
-    // Hide external link for post list
-    display: none;
-  }
 
   span {
     display: inline-block;
