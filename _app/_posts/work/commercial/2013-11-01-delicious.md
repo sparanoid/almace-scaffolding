@@ -80,4 +80,7 @@ Update: Delicious now has been acquired by [Science Inc.](http://science-inc.com
 <h2>Delicious - Mass Edit Links</h2>
 <p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-11.png" alt="Delicious - Mass Edit Links"></p>
 
+<h2>Delicious - Keyboard Shortcuts</h2>
+<p class="browser"><img src="{{ site.file }}/delicious.com-screenshot-12.png" alt="Delicious - Keyboard Shortcuts"></p>
+
 [^1]: Science Inc., a tech advisory firm run by former Myspace chief Michael Jones, confirmed the deal in a [blog post](http://science-inc.com/about/blog/2014/05/08/welcome-delicious-as-the-cornerstone-asset-of-our-new-data-content-group/).
