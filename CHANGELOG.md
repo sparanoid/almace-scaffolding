@@ -1,3 +1,13 @@
+<a name="0.0.22"></a>
+### 0.0.22 (2015-03-06)
+
+
+#### Bug Fixes
+
+* **grunt:** cached Jekyll metadata not purged ([b935250b](http://github.com/sparanoid/almace-scaffolding/commit/b935250b74af23f6a5f846964d3c1c2a9b337ce8))
+* **homepage:** version not updated ([00d3dbca](http://github.com/sparanoid/almace-scaffolding/commit/00d3dbcaba3adce1668002ef96db715bda67176e))
+
+
 <a name="0.0.21"></a>
 ### 0.0.21 (2014-03-06)
 
