@@ -37,6 +37,7 @@ redcarpet:
     - no_intra_emphasis
     - smart
     - space_after_headers
+    - strikethrough
     - superscript
     - tables
 
