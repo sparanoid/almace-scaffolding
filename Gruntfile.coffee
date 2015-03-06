@@ -265,6 +265,12 @@ module.exports = (grunt) ->
           ".tmp"
         ]
 
+      jekyllMetadata:
+        src: [
+          "<%= config.dist %>"
+          "<%= config.app %>/.jekyll-metadata"
+        ]
+
       postDist:
         src: [
           "<%= config.dist %>/assets/css/"
