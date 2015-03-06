@@ -1,3 +1,12 @@
+<a name="24.1.9"></a>
+### 24.1.9 (2015-03-06)
+
+
+#### Bug Fixes
+
+* **grunt:** cached Jekyll metadata not purged ([44965f9a](http://github.com/sparanoid/sparanoid.com/commit/44965f9ad20ccda44e3c2f6f968537a311dcaf17))
+
+
 <a name="24.1.8"></a>
 ### 24.1.8 (2015-03-06)
 
