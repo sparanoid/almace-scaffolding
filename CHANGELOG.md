@@ -1,3 +1,26 @@
+<a name="24.1.8"></a>
+### 24.1.8 (2015-03-06)
+
+
+#### Bug Fixes
+
+* **style:**
+  * wrong .external media query directive ([cf9d5fa1](http://github.com/sparanoid/sparanoid.com/commit/cf9d5fa15d0c139721bdc722d641d2c2e65d553e))
+  * wrong GitHub Gist font size ([0544eafc](http://github.com/sparanoid/sparanoid.com/commit/0544eafca92360464589036c8fb60e2cd85f6816))
+
+
+#### Features
+
+* **config:** update assets URL, CloudFront should be better ([acb54e77](http://github.com/sparanoid/sparanoid.com/commit/acb54e773904507f328dc8a0b406d0d1917efe59))
+* **jekyll:** use latest 3.0.0.beta2 ([603069ea](http://github.com/sparanoid/sparanoid.com/commit/603069ea9b6709f5801bd40da713bad55ecc86ce))
+* **post:**
+  * add new screenshots for “Delicious” ([791566c8](http://github.com/sparanoid/sparanoid.com/commit/791566c805ab7b7fbcfb7d1a77e398cf0c371aa1))
+  * new post “Shutdown Like a Boss” ([df164f6c](http://github.com/sparanoid/sparanoid.com/commit/df164f6cb19c46c1527467fde6bd56e31bfe5b02))
+  * use markdown for pages ([59bfcb89](http://github.com/sparanoid/sparanoid.com/commit/59bfcb891815cb0179bd4e95aed633617d0cb28a))
+* **style:** update media queries position ([826c4966](http://github.com/sparanoid/sparanoid.com/commit/826c4966dbdc6c1e4b2ba015ce0b752b15d8d248))
+* **template:** update post date format ([46cf345f](http://github.com/sparanoid/sparanoid.com/commit/46cf345fc779753d89fd55ee097f9e6f92d0cf17))
+
+
 <a name="24.1.7"></a>
 ### 24.1.7 (2014-12-14)
 
