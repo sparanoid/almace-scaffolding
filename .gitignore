@@ -36,3 +36,4 @@ bower_components
 _site
 _app/assets/js
 _app/assets/css
+.jekyll-metadata
