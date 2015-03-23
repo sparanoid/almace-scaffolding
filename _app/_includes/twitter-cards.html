@@ -1,8 +1,17 @@
+<!-- Prepare author meta -->
+{% if page.author %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.data.authors["default"] %}
+{% endif %}
+
 <!-- Twitter Cards support, more info: https://dev.twitter.com/docs/cards -->
 {% if page.category %}
   <meta name=twitter:card content="summary">
   <meta name=twitter:site content="@{{ site.twitter }}">
-  <meta name=twitter:creator content="@{{ site.data.authors['default'].twitter }}">
+  {% if author.twitter %}
+    <meta name=twitter:creator content="@{{ author.twitter }}">
+  {% endif %}
   <meta name=twitter:url content="{{ page.url | prepend: site.base | prepend: site.url }}">
   <meta name=twitter:title content="{{ page.title | strip_html | xml_escape }}">
   <meta name=twitter:description content="{{ content_description }}">
