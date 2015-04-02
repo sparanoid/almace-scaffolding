@@ -67,7 +67,7 @@ module.exports = (grunt) ->
 
       js:
         files: ["<%= config.app %>/assets/_js/**/*.js"]
-        tasks: ["uglify:serve"]
+        tasks: ["copy:serve"]
         options:
           interrupt: true
 
@@ -85,6 +85,8 @@ module.exports = (grunt) ->
         tasks: ['jekyll:serve']
 
     uglify:
+      # Deprecated, pending delete
+      # Date: Apr 2, 2015, 10:56 AM
       serve:
         options:
           sourceMap: true
@@ -259,6 +261,16 @@ module.exports = (grunt) ->
           "cssmin"
         ]
 
+    copy:
+      serve:
+        files: [
+          expand: true
+          dot: true
+          cwd: "<%= config.app %>/assets/_js/"
+          src: ["*.js"]
+          dest: "<%= config.app %>/assets/js/"
+        ]
+
     clean:
       dist:
         src: [
@@ -330,7 +342,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean"
-    "uglify:serve"
+    "copy:serve"
     "less:serve"
     "autoprefixer:serve"
     "jekyll:serve"
