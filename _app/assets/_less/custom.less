@@ -96,6 +96,31 @@ body {
     margin-right: auto;
   }
 
+  // Custom inlined-style lists
+  ul, ol {
+    margin-left: 0;
+
+    li {
+      display: inline;
+      margin-right: 1em;
+
+      &:before {
+        display: inline-block;
+        content: "";
+        margin-right: .3em;
+        width: .8em;
+        height: .8em;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 3px @link-color, inset 0 0 0 5px @background-color, inset 0 0 0 7px @link-color;
+      }
+
+      // Inline footnote wrappers
+      p {
+        display: inline;
+      }
+    }
+  }
+
   // Limit post content width
   .page-content,
   .post-content {
@@ -120,8 +145,6 @@ body {
     }
 
     // Elements cannot be center aligned
-    ul,
-    ol,
     pre,
     code {
       text-align: start;
