@@ -334,6 +334,18 @@ module.exports = (grunt) ->
         ]
         notify: true
 
+    release:
+      options:
+        changelog: true,
+        file: "package.json"
+        npm: false
+        commitMessage: "chore: release <%= version %>"
+        tagName: "v<%= version %>"
+        tagMessage: "chore: tagging version <%= version %>"
+        afterBump: [
+          "changelog"
+        ]
+
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
     grunt.task.run [
