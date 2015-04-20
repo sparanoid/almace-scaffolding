@@ -60,6 +60,13 @@
   }
   {% endif %}
 
+  {% if page.scheme-link and page.scheme-bg %}
+  .content ul li:before,
+  .content ol li:before {
+    box-shadow: inset 0 0 0 3px {{ page.scheme-link }}, inset 0 0 0 5px {{ page.scheme-bg }}, inset 0 0 0 7px {{ page.scheme-link }};
+  }
+  {% endif %}
+
   {% if page.scheme-code %}
   .content code,
   .content pre {
