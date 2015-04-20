@@ -1,3 +1,23 @@
+<a name"24.1.10"></a>
+### 24.1.10 (2015-04-20)
+
+
+#### Bug Fixes
+
+* **grunt:** not detecting newly added files ([f386d870](https://github.com/sparanoid/sparanoid.com/commit/f386d870))
+* **package:** missing `grunt-html-smoosher` ([c54b001a](https://github.com/sparanoid/sparanoid.com/commit/c54b001a))
+* **template:** better Twitter Cards author support ([56f089c3](https://github.com/sparanoid/sparanoid.com/commit/56f089c3))
+
+
+#### Features
+
+* **build:**
+  * try `grunt-release` task ([7ddb2f2d](https://github.com/sparanoid/sparanoid.com/commit/7ddb2f2d))
+  * update Travis ([95910f0e](https://github.com/sparanoid/sparanoid.com/commit/95910f0e))
+* **grunt:** speed up serve task by passing JS files directly from `copy` ([0165c8db](https://github.com/sparanoid/sparanoid.com/commit/0165c8db))
+* **style:** custom inlined-style list ([aae14607](https://github.com/sparanoid/sparanoid.com/commit/aae14607))
+
+
 <a name="24.1.9"></a>
 ### 24.1.9 (2015-03-06)
 
