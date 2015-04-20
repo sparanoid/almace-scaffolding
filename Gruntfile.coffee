@@ -345,6 +345,11 @@ module.exports = (grunt) ->
         afterBump: [
           "changelog"
         ]
+        # Dev options
+        commit: false
+        tag: false
+        push: false
+        pushTags: false
 
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
