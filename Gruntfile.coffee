@@ -336,7 +336,7 @@ module.exports = (grunt) ->
 
     release:
       options:
-        changelog: true,
+        changelog: false,
         file: "package.json"
         npm: false
         commitMessage: "chore: release <%= version %>"
