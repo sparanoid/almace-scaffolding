@@ -129,6 +129,11 @@ a, button {
     border-bottom: .1em solid;
     transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
   }
+
+  &[disabled] {
+    opacity: .4;
+    cursor: not-allowed;
+  }
 }
 
 img, hr {
