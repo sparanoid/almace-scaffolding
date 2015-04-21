@@ -41,3 +41,8 @@
     <meta name=description content="{{ content_description }}">
   {% endif %}
 {% endif %}
+
+<!-- Head hooks -->
+{% if page.head %}
+  {{ page.head }}
+{% endif %}
