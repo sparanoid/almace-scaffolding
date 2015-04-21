@@ -1,3 +1,38 @@
+<a name"24.1.11"></a>
+### 24.1.11 (2015-04-21)
+
+
+#### Bug Fixes
+
+* **style:** remove unwanted margin for last-child ([68d288c0](https://github.com/sparanoid/sparanoid.com/commit/68d288c0))
+
+
+#### Features
+
+* **post:** new post “iTunes Artwork Grabber” ([6e562a32](https://github.com/sparanoid/sparanoid.com/commit/6e562a32))
+* **template:** add custom head and foot hooks ([1ee7d566](https://github.com/sparanoid/sparanoid.com/commit/1ee7d566))
+* **work:** update categories ([445de41c](https://github.com/sparanoid/sparanoid.com/commit/445de41c))
+
+
+#### Breaking Changes
+
+* Now you can insert custom code snippets into `<head>` and `<footer>` per post. Just simply use the following syntax in post front-matter:
+
+```
+head: |
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/pjdeblccplohlgedbefopohaedodcgci">
+```
+
+or:
+
+```
+foot: |
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Base64/0.3.0/base64.min.js"></script>
+```
+
+ ([1ee7d566](https://github.com/sparanoid/sparanoid.com/commit/1ee7d566))
+
+
 <a name"24.1.10"></a>
 ### 24.1.10 (2015-04-20)
 
