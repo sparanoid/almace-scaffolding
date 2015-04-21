@@ -2,6 +2,7 @@
 layout: post
 title: Lester’s Plugins in Chinese
 category: note
+tag: i18n
 ---
 
 <p lang=zh>這些基本是我在建一個私人 WPMU 時用到的插件，Lester Chan 的插件翻譯起來是相當舒服的，分離的徹底而且順序也比較有邏輯性。於是就把他大部分的插件都翻譯成了中文</p>

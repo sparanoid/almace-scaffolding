@@ -2,7 +2,7 @@
 layout: post
 title: Quotmarks Replacer
 category: work
-tag: project
+tag: wordpress
 excerpt: A plugin that disables wptexturize function
 thumb: qmr.png
 svg-headline: svg/quotmarks-replacer.svg
