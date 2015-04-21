@@ -2,7 +2,7 @@
 layout: post
 title: Corner Bracket Lover
 category: work
-tag: project
+tag: wordpress
 excerpt: A WordPress plugin to convert all curly quotation marks in your posts to traditional corner brackets.
 thumb: corner-bracket-lover-thumb.png
 svg-headline: svg/corner-bracket-lover.svg

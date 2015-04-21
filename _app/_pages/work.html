@@ -10,8 +10,18 @@ desc: 作品・ワークス・TBC
   {% include page-item.html %}
 {% endfor %}
 
+<h2>WordPress Themes / Plugins</h2>
+{% for post in site.tags.wordpress %}
+  {% include page-item.html %}
+{% endfor %}
+
 <h2>Commercial Work</h2>
 {% for post in site.tags.commercial %}
+  {% include page-item.html %}
+{% endfor %}
+
+<h2>Translation</h2>
+{% for post in site.tags.i18n %}
   {% include page-item.html %}
 {% endfor %}
 

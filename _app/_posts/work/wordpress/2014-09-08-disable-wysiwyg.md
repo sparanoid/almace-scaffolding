@@ -2,7 +2,7 @@
 layout: post
 title: Disable WYSIWYG
 category: work
-tag: project
+tag: wordpress
 excerpt: A WordPress plugin that sets user_can_richedit to false to disable TinyMCE Visual Editor (WYSIWYG editor) totally completely permanently forever.
 thumb: disable-wysiwyg-thumb.png
 svg-headline: svg/disable-wysiwyg.svg
