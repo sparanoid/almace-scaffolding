@@ -2,7 +2,7 @@
 layout: post
 title: Relative URL
 category: work
-tag: project
+tag: wordpress
 excerpt: A WordPress plugin to apply wp_make_link_relative function to links to convert them to relative URLs.
 thumb: relative-url-thumb.png
 svg-headline: svg/relative-url.svg
