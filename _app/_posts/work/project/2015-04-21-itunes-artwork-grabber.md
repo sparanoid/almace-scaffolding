@@ -50,11 +50,6 @@ Please consider [buying me a cup of coffee]({{ '/donate/' | prepend: site.base }
 <script>
 +function update_install_button() {
   var install_button = document.getElementById('install-button');
-
-  if (!chrome.app.isInstalled) {
-    install_button.removeAttribute('disabled');
-  } else {
-    install_button.removeAttribute('onclick');
-  }
+  install_button.removeAttribute(chrome.app.isInstalled ? "onclick" : "disabled");
 }();
 </script>
