@@ -1,21 +1,27 @@
-<!-- Prepare author meta -->
-{% if page.author %}
-  {% assign author = site.data.authors[page.author] %}
-{% else %}
-  {% assign author = site.data.authors["default"] %}
+<!-- Open Graph and Twitter Cards support, more info: https://dev.twitter.com/docs/cards -->
+{% if page.category %}
 {% endif %}
 
-<!-- Twitter Cards support, more info: https://dev.twitter.com/docs/cards -->
-{% if page.category %}
-  <meta name=twitter:card content="summary">
-  <meta name=twitter:site content="@{{ site.twitter }}">
-  {% if author.twitter %}
-    <meta name=twitter:creator content="@{{ author.twitter }}">
-  {% endif %}
-  <meta name=twitter:url content="{{ page.url | prepend: site.base | prepend: site.url }}">
-  <meta name=twitter:title content="{{ page.title | strip_html | xml_escape }}">
-  <meta name=twitter:description content="{{ content_description }}">
-  {% if page.thumb %}
-    <meta name=twitter:image content="{{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}">
-  {% endif %}
+<meta property="og:type" content="{{ amsf_page_type }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ amsf_page_title }}">
+<meta property="og:url" content="{{ amsf_page_url }}">
+<meta property="og:description" content="{{ amsf_site_desc }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ amsf_page_title }}">
+<meta name="twitter:url" content="{{ amsf_page_url }}">
+<meta name="twitter:description" content="{{ amsf_site_desc }}">
+
+{% if site.twitter %}
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+{% endif %}
+
+{% if author.twitter %}
+  <meta name="twitter:creator" content="@{{ author.twitter }}">
+{% endif %}
+
+{% if page.thumb %}
+  <meta name="twitter:image" content="{{ amsf_page_thumb }}">
+  <meta property="og:image" content="{{ amsf_page_thumb }}">
 {% endif %}
