@@ -1,5 +1,5 @@
 // Global variables
-@base-font-size: 2vw;
+@base-font-size: 1.8vw;
 @base-line-height: (20 / 14); // ~ 1.428571429
 @link-color: #a212d1;
 @background-color: #fff;
@@ -8,6 +8,10 @@
 @sans-serif: "Helvetica Neue", Arial, "Hiragino Sans GB", sans-serif;
 @serif: Georgia, "Hiragino Mincho ProN", serif;
 @monospace: Menlo, monospace;
+@breakpoint-lg: 1600px;
+@breakpoint-md: 1000px;
+@breakpoint-sm: 640px;
+@breakpoint-xs: 400px;
 
 // Invert color switcher for images and videos
 // :root { filter: invert(100%); }
@@ -46,19 +50,19 @@ body {
   image-rendering: optimizequality;
   transition: all .3s ease .2s;
 
-  @media (max-width: 1000px) {
+  @media (max-width: @breakpoint-md) {
     padding-left: 8%;
     padding-right: 8%;
     font-size: (@base-font-size * 1.4);
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: @breakpoint-sm) {
     padding-left: 4%;
     padding-right: 4%;
     font-size: (@base-font-size * 2);
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: @breakpoint-xs) {
     font-size: (@base-font-size * 2.8);
   }
 
@@ -317,7 +321,7 @@ body:hover .latest {
       hyphens: none;
       line-height: 1.1;
 
-      @media (max-width: 640px) {
+      @media (max-width: @breakpoint-sm) {
         // Override viewport units defined in post.html
         font-size: 280%;
       }
@@ -332,7 +336,7 @@ body:hover .latest {
       img {
         margin-bottom: .3em;
 
-        @media (max-width: 640px) {
+        @media (max-width: @breakpoint-sm) {
           width: 100% !important;
           height: 100% !important;
         }
@@ -429,7 +433,7 @@ body:hover .latest {
     padding: 1em;
     margin: 0 0 1em;
     overflow-x: scroll;
-    font-size: 90%;
+    font-size: 80%;
     line-height: (@base-line-height * 1.2);
     background: fade(#08f, 4%);
   }
@@ -586,10 +590,15 @@ body:hover .latest {
   h1 {
     .heading;
     font-size: 200%;
-    line-height: 1.2;
+    line-height: 1.1;
     // Override heading defines in .content
     opacity: 1;
     margin: 0;
+
+    @media (max-width: @breakpoint-sm) {
+      // Hide external link for post list
+      font-size: 180%;
+    }
   }
 
   .external {
@@ -599,7 +608,7 @@ body:hover .latest {
       border: none;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: @breakpoint-sm) {
       // Hide external link for post list
       display: none;
     }
