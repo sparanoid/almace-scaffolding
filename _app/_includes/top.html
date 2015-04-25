@@ -18,11 +18,14 @@
 <!-- There is no prepend: site.base here, it'll cause error 404 when site.base it defined -->
 <link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets }}">
 
-<!-- browser-sync, don't remove this -->
-<!-- BS_INSERT -->
+<!-- Canonical links, avoid duplicate content problems -->
+<link rel=canonical href="{{ amsf_page_url }}">
 
 <!-- DNS prefetching for static files -->
 {% if page.permalink == '/' %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
+
+<!-- browser-sync, don't remove this -->
+<!-- BS_INSERT -->
 
 <!-- Head hooks -->
 {% if page.head %}
