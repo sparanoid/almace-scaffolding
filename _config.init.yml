@@ -99,13 +99,13 @@ clean_homepage: false
 # Default:      false
 colorful_list:  false
 
-# Show generator credits
-# Default:      true
-credits:        true
-
 # Show email subscription link in footer
 # Default:      false
 subscription:   false
+
+# Show generator credits
+# Default:      true
+credits:        true
 
 #
 # Custom distribution variables
