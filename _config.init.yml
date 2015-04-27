@@ -59,9 +59,9 @@ base:           null
 # Default:      /assets
 assets:         /assets
 
-# Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
-# Default:      /feed
-feed:           /feed
+# Define feed path. If you use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+# Default:      /feed.xml
+feed:           /feed.xml
 
 # Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full URLs for these fields
 url:            http://sparanoid.com
