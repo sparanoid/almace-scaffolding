@@ -10,7 +10,7 @@ The first cloud provider came to my mind is Amazon S3 and CloudFront. back to th
 
 Please note that this is not a details tutorial about how to host your website to Amazon S3 and CloudFront, but my personal notes about setup pitfalls.
 
-### Transfer Everything to the Cloud?
+### Transfer everything to the Cloud?
 
 There're two methods you can choose: host static files on Amazon S3, speed up using CloudFront, or host your website on a remote server, using CloudFront as custom origin proxy. Both of them have pros and cons:
 
