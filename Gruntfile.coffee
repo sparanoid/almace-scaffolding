@@ -244,11 +244,17 @@ module.exports = (grunt) ->
       options:
         stdout: true
 
-      sync:
+      # Direct sync compiled static files to remote server
+      syncServer:
         command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
 
+      # Copy compiled static files to local directory for further post-process
+      syncLocal:
+        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ /Users/sparanoid/Dropbox/Sites/sparanoid.com/ > rsync.log"
+
+      # Sync images to a separate CloudFront
       s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= config.cfg.static_files %> <%= config.cfg.s3_bucket %>"
+        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --add-header=Cache-Control:max-age=31536000 --exclude '.DS_Store' <%= config.cfg.static_files %> <%= config.cfg.s3_bucket %>"
 
     concurrent:
       options:
@@ -407,7 +413,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "sync", "Build site + rsync static files to remote server", [
     "build"
-    "shell:sync"
+    "shell:syncLocal"
   ]
 
   grunt.registerTask "s3", "Sync image assets with `s3cmd`", [

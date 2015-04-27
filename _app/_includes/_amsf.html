@@ -37,7 +37,7 @@
 {% endcapture %}
 
 <!-- Feed URL -->
-{% capture amsf_feed_url %}{{ site.feed | prepend: site.base }}/{% endcapture %}
+{% capture amsf_feed_url %}{{ site.feed | prepend: site.base }}{% endcapture %}
 
 <!-- Page title -->
 {% capture amsf_page_title %}{{ page.title | strip_html | xml_escape }}{% endcapture %}
