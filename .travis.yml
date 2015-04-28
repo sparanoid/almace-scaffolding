@@ -5,7 +5,7 @@ node_js:
   - "0.12"
   - "0.10"
 before_install:
-  - rvm use 2.2.2 --fuzzy
+  - rvm use 2.2.2 --install --fuzzy
   - bundle install
 before_script:
   - npm install -g grunt-cli
