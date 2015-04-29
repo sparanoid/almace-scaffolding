@@ -425,6 +425,10 @@ body:hover .latest {
   code, pre {
     font-family: @monospace;
     color: @code-color;
+  }
+
+  // Only apply word breaking rule for codes in paragraphs
+  p code {
     word-break: break-word;
     word-wrap: break-word;
   }
@@ -436,6 +440,8 @@ body:hover .latest {
     font-size: 80%;
     line-height: (@base-line-height * 1.2);
     background: fade(#08f, 4%);
+    // Bouncing scroll fix for iOS
+    -webkit-overflow-scrolling: touch;
   }
 
   // Newsletter subscription form in page "store"
