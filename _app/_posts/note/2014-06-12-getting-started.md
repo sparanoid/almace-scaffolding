@@ -26,7 +26,7 @@ Go to the [GitHub repository](https://github.com/sparanoid/almace-scaffolding) f
 
 ## Upgrading
 
-Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every template file untouched. Just copy and paste all template files in `_assets`, `_includes`, and `_layouts`. If you change the templates directly, you have to compare them side to side.
+Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every template file untouched. Just copy and paste all template files in `_assets`, `_includes`, and `_layouts`. If you change the templates directly, you have to compare them side by side.
 
 ## Customizing
 
