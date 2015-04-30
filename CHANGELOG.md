@@ -1,3 +1,37 @@
+<a name"24.1.12"></a>
+### 24.1.12 (2015-04-30)
+
+
+#### Bug Fixes
+
+* **grunt:** `copy:serve` not copying scripts in subdirectories ([ccba58e9](https://github.com/sparanoid/sparanoid.com/commit/ccba58e9))
+* **style:** better code appearance ([c6e0f5c2](https://github.com/sparanoid/sparanoid.com/commit/c6e0f5c2))
+* **travis:** build error ([b1a9a0af](https://github.com/sparanoid/sparanoid.com/commit/b1a9a0af))
+
+
+#### Features
+
+* **post:** new article “Amazon S3 × CloudFront” ([347624c9](https://github.com/sparanoid/sparanoid.com/commit/347624c9))
+* **style:**
+  * disable WebKit hyphens, it sucks ([f119ccc1](https://github.com/sparanoid/sparanoid.com/commit/f119ccc1))
+  * refine font size ([7b345668](https://github.com/sparanoid/sparanoid.com/commit/7b345668))
+* **template:**
+  * update remote server deployment ([6b31c70b](https://github.com/sparanoid/sparanoid.com/commit/6b31c70b))
+  * add canonical link support ([84ab1e8d](https://github.com/sparanoid/sparanoid.com/commit/84ab1e8d))
+  * better template structures ([c3191b36](https://github.com/sparanoid/sparanoid.com/commit/c3191b36))
+  * `twitter-cards` is now `open-graph` ([e3edcff5](https://github.com/sparanoid/sparanoid.com/commit/e3edcff5))
+
+
+#### Breaking Changes
+
+* This release changes the way you push compiled files to remote servers. Now I changed my server from Linode VPS to Amazon S3 and CloudFront, I also changed my feed URL from /feed/ to /feed.xml since Amazon S3 doesn't support multiple Document Index. You can read more information from my [blog post](http://sparanoid.com/note/amazon-s3-cloudfront/).
+
+ ([6b31c70b](https://github.com/sparanoid/sparanoid.com/commit/6b31c70b))
+* Major template update, you should update all your template files if you need further updates.
+
+ ([c3191b36](https://github.com/sparanoid/sparanoid.com/commit/c3191b36))
+
+
 <a name"24.1.11"></a>
 ### 24.1.11 (2015-04-21)
 
