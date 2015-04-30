@@ -1,5 +1,5 @@
 <!-- Footer section -->
-{% if page.title == site.name and site.clean_homepage %}
+{% if page.permalink == '/' and site.clean_homepage %}
 {% else %}
   <footer class=footer>
     <ul>
@@ -10,7 +10,7 @@
       {% if site.subscription %}
         <li><a href="{{ '/email-signup' | prepend: site.base }}/">Email</a></li>
       {% endif %}
-      <li><a href="{{ site.feed | prepend: site.base }}/" title="Feed - Atom (The Atom Syndication Format)">Atom</a></li>
+      <li><a href="{{ amsf_feed_url }}" title="Feed - Atom (The Atom Syndication Format)">Atom</a></li>
     </ul>
   </footer>
 {% endif %}

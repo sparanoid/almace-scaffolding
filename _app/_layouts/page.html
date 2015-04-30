@@ -2,11 +2,10 @@
 layout: default
 ---
 
-{% if page.css %}
-  <style>
-    {{ page.css }}
-  </style>
-{% endif %}
+{% include _amsf.html %}
+
+<!-- Page-wide custom CSS -->
+{{ amsf_page_css }}
 
 <!-- Article wrapper, limit width -->
 <article>
