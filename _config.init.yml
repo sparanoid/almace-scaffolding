@@ -49,7 +49,7 @@ redcarpet:
 name:           Almace Scaffolding
 
 # Site description, will appear in the document meta and Atom feed subtitle
-description:    I make things that don’t suck.
+description:    Almace Scaffolding - Super-fast Jekyll framework
 
 # Base URL, this is useful when I need to build site in a sub-directory (like GitHub Pages for Projects), it provides a specific URL prefix, for example, if the production site URL is http://sparanoid.com/lab/version/, set `base` to `/lab/version/24`, without trailing slash.
 # Default:      null
@@ -59,9 +59,9 @@ base:           null
 # Default:      /assets
 assets:         /assets
 
-# Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
-# Default:      /feed
-feed:           /feed
+# Define feed path. If you use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+# Default:      /feed.xml
+feed:           /feed.xml
 
 # Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full URLs for these fields
 url:            http://sparanoid.com
@@ -99,13 +99,13 @@ clean_homepage: false
 # Default:      false
 colorful_list:  false
 
-# Show generator credits
-# Default:      true
-credits:        true
-
 # Show email subscription link in footer
 # Default:      false
 subscription:   false
+
+# Show generator credits
+# Default:      true
+credits:        true
 
 #
 # Custom distribution variables

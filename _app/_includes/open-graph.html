@@ -1,0 +1,27 @@
+<!-- Open Graph and Twitter Cards support, more info: https://dev.twitter.com/docs/cards -->
+{% if page.category %}
+{% endif %}
+
+<meta property="og:type" content="{{ amsf_page_type }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ amsf_page_title }}">
+<meta property="og:url" content="{{ amsf_page_url }}">
+<meta property="og:description" content="{{ amsf_site_desc }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ amsf_page_title }}">
+<meta name="twitter:url" content="{{ amsf_page_url }}">
+<meta name="twitter:description" content="{{ amsf_site_desc }}">
+
+{% if site.twitter %}
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+{% endif %}
+
+{% if author.twitter %}
+  <meta name="twitter:creator" content="@{{ author.twitter }}">
+{% endif %}
+
+{% if page.thumb %}
+  <meta name="twitter:image" content="{{ amsf_page_thumb }}">
+  <meta property="og:image" content="{{ amsf_page_thumb }}">
+{% endif %}
