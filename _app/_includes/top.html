@@ -15,8 +15,7 @@
 
 <link rel=alternate href="{{ amsf_feed_url }}" type=application/atom+xml>
 
-<!-- There is no prepend: site.base here, it'll cause error 404 when site.base it defined -->
-<link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets }}">
+<link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets | prepend: site.base }}">
 
 <!-- Canonical links, avoid duplicate content problems -->
 <link rel=canonical href="{{ amsf_page_url }}">
