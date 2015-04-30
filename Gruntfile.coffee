@@ -14,6 +14,7 @@ module.exports = (grunt) ->
       pkg: grunt.file.readJSON("package.json")
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
+      base: "<%= config.cfg.base %>"
       banner: do ->
         banner = "<!--\n"
         banner += " © <%= config.pkg.author %>.\n\n"
@@ -239,6 +240,7 @@ module.exports = (grunt) ->
       dist:
         options:
           config: "_config.yml"
+          dest: "<%= config.dist %>/<%= config.base %>"
 
     shell:
       options:
@@ -250,7 +252,7 @@ module.exports = (grunt) ->
 
       # Copy compiled static files to local directory for further post-process
       syncLocal:
-        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ /Users/sparanoid/Dropbox/Sites/sparanoid.com/ > rsync.log"
+        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= jekyll.dist.options.dest %>/ /Users/sparanoid/Dropbox/Sites/sparanoid.com<%= config.base %> > rsync.log"
 
       # Sync images to a separate CloudFront
       s3:
