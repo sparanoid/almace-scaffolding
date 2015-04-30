@@ -273,7 +273,7 @@ module.exports = (grunt) ->
           expand: true
           dot: true
           cwd: "<%= config.app %>/assets/_js/"
-          src: ["*.js"]
+          src: ["**/*.js"]
           dest: "<%= config.app %>/assets/js/"
         ]
 
