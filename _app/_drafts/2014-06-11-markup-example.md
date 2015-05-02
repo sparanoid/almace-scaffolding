@@ -6,7 +6,7 @@ plugin: intense
 hidden: true
 ---
 
-Note: this post will be hidden from production build.
+> Note: this post will be hidden from production build.
 
 Lorem lean startup ipsum **product market fit customer development** acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying [crowded market](#) pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor.
 
@@ -36,29 +36,6 @@ Most of these elements are styled by browsers with few modifications on our part
 
 Maui and his rough as guts piece of pounamu, what a stink buzz. Bro, quater-acre patches are really naff good with bung mates, aye. You have no idea how beached as our random kais were aye. Every time I see those beautiful lengths of number 8 wire it's like Castle Hill all over again aye, do you happen to have a bucket or a hose bro?
 
-## Code Highlighting
-Code highlighting demo, powered by Pygments. More info about code highlighting can be found at [Jekyll's documentation](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
-
-```ruby
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-```
-
-```css
-/* Background color function */
-.code-bg (@v) when (lightness(@v) >= 50%) {
-  @return-bg: mix(#000, lighten(@v, 30%), 10%);
-}
-.code-bg (@v) when (lightness(@v) < 50%) {
-  @return-bg: mix(#fff, darken(@v, 10%), 70%);
-}
-```
-
 ## H2 Headings
 
 You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
@@ -85,6 +62,19 @@ You have no idea how pretty suss our same same but different toasted sandwiches 
 #### H4 Heading
 ##### H5 Heading
 ###### H6 Heading
+```
+
+## Code Blocks
+Code highlighting demo, powered by Pygments. More info about code highlighting can be found at [Jekyll's documentation](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
+
+```ruby
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
 ```
 
 ## Tables
