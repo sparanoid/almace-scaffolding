@@ -16,7 +16,7 @@ There're two methods you can choose: host static files on Amazon S3, speed up us
 
 Amazon S3 + CloudFront means you don't have to buy additional servers to host your website but you have to do more work to make sure your website behaves the same as before. For example you can't use `/feed/` (`/feed/index.xml`) as your feed URL because you can set only one Document Index per bucket. If you're using `/feed/` you have to redirect it to something like `feed.xml`. gzip is also not a native feature on S3, you have to compress it manually or using other tools (I'll talk about it later).
 
-Using Amazon CloudFront with custom origin means you still need servers to store your files, you'll have more control with your website, for example you can use Nginx with complex redirects, your website can also be dynamic, CloudFront just works like a proxy. However the downside is cache control can be more tricky, you can't use invalidation easily with existing tools, so you have to set separate cache control headers [`s-maxage`](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) for CloudFront.
+Using Amazon CloudFront with custom origin means you still need servers to store your files, you'll have more control with your website, for example you can use Nginx with complex redirects, your website can also be dynamic, CloudFront just works like a proxy. However the downside is cache control can be tricky, you can't use invalidation easily with existing tools, so you have to set separate cache control headers [`s-maxage`](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) for CloudFront.
 
 To make things simple, I use Amazon S3 with CloudFront.
 
@@ -107,7 +107,7 @@ The fix is simple, you should only chain your intermediate certificates **withou
 $ cat COMODORSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt > intermediates.chained.crt
 ```
 
-Please also note that all certs should start with `file://` protocol if they're in your local machine.
+Please also note that all certs should start with `file://` protocol if they're on your local machine.
 
 If everything is right you'll get the following response:
 
