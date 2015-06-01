@@ -17,10 +17,8 @@ module.exports = (grunt) ->
       base: "<%= config.cfg.base %>"
       banner: do ->
         banner = "<!--\n"
-        banner += " © <%= config.pkg.author %>.\n\n"
+        banner += " © <%= config.pkg.author %>.\n"
         banner += " <%= config.pkg.name %> - v<%= config.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
-        # banner += " <%= config.pkg.homepage %>\n"
-        banner += " <%= config.pkg.licenses.type %> - <%= config.pkg.licenses.url %>\n"
         banner += " -->"
         banner
 
