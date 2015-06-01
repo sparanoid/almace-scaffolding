@@ -4,14 +4,12 @@
   <meta charset=utf-8>
 {% endif %}
 
-<title>
-  {{ amsf_page_title }}{{ amsf_site_title }}
-</title>
+<title>{{ amsf_page_title }}{{ amsf_site_title | strip }}</title>
 
 <meta name=viewport content="width=device-width, initial-scale=1">
 
 <!-- Define a description for better SEO result -->
-<meta name=description content="{{ amsf_site_desc }}">
+<meta name=description content="{{ amsf_site_desc | strip }}">
 
 <link rel=alternate href="{{ amsf_feed_url }}" type=application/atom+xml>
 
