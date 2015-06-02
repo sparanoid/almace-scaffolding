@@ -250,7 +250,7 @@ module.exports = (grunt) ->
 
       # Copy compiled static files to local directory for further post-process
       syncLocal:
-        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= jekyll.dist.options.dest %>/ /Users/sparanoid/Dropbox/Sites/sparanoid.com<%= config.base %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= jekyll.dist.options.dest %>/ /Users/sparanoid/Workspace/Sites/sparanoid.com<%= config.base %> > rsync.log"
 
       # Sync images to a separate CloudFront
       s3:
