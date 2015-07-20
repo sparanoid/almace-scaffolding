@@ -80,7 +80,7 @@ module.exports = (grunt) ->
           interrupt: true
 
       jekyll:
-        files: ["<%= config.app %>/**/*", "!_*"]
+        files: ["<%= config.app %>/**/*"]
         tasks: ['jekyll:serve']
 
     uglify:
@@ -101,6 +101,8 @@ module.exports = (grunt) ->
       dist:
         options:
           report: "gzip"
+          compress:
+            drop_console: true
 
         files: [
           expand: true
@@ -151,12 +153,6 @@ module.exports = (grunt) ->
 
     htmlmin:
       dist:
-        files: [
-          expand: true
-          cwd: "<%= config.dist %>"
-          src: "**/*.html"
-          dest: "<%= config.dist %>/"
-        ]
         options:
           removeComments: true
           removeCommentsFromCDATA: true
@@ -175,6 +171,13 @@ module.exports = (grunt) ->
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
+
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>/"
+        ]
 
     xmlmin:
       dist:
