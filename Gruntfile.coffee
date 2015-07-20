@@ -210,6 +210,7 @@ module.exports = (grunt) ->
       options:
         jsDir: "<%= config.dist %>"
         cssDir: "<%= config.dist %>"
+        includeTag: "[data-inline]"
 
       dist:
         files: [
@@ -281,21 +282,17 @@ module.exports = (grunt) ->
         ]
 
     clean:
-      dist:
+      default:
         src: [
           ".tmp"
+          "<%= config.app %>/assets/css/"
+          "<%= config.app %>/assets/js/"
         ]
 
       jekyllMetadata:
         src: [
           "<%= config.dist %>"
           "<%= config.app %>/.jekyll-metadata"
-        ]
-
-      postDist:
-        src: [
-          "<%= config.dist %>/assets/css/"
-          "<%= config.dist %>/assets/js/"
         ]
 
     cleanempty:
@@ -410,7 +407,6 @@ module.exports = (grunt) ->
         "concurrent:dist"
         "smoosher"
         "usebanner"
-        "clean:postDist"
         "reset"
       ]
 
