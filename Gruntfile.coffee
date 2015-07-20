@@ -80,7 +80,7 @@ module.exports = (grunt) ->
           interrupt: true
 
       jekyll:
-        files: ["<%= config.app %>/**/*", "!_*"]
+        files: ["<%= config.app %>/**/*"]
         tasks: ['jekyll:serve']
 
     uglify:
@@ -101,6 +101,8 @@ module.exports = (grunt) ->
       dist:
         options:
           report: "gzip"
+          compress:
+            drop_console: true
 
         files: [
           expand: true
@@ -151,12 +153,6 @@ module.exports = (grunt) ->
 
     htmlmin:
       dist:
-        files: [
-          expand: true
-          cwd: "<%= config.dist %>"
-          src: "**/*.html"
-          dest: "<%= config.dist %>/"
-        ]
         options:
           removeComments: true
           removeCommentsFromCDATA: true
@@ -175,6 +171,13 @@ module.exports = (grunt) ->
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
+
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>/"
+        ]
 
     xmlmin:
       dist:
@@ -207,6 +210,7 @@ module.exports = (grunt) ->
       options:
         jsDir: "<%= config.dist %>"
         cssDir: "<%= config.dist %>"
+        includeTag: "[data-inline]"
 
       dist:
         files: [
@@ -278,21 +282,17 @@ module.exports = (grunt) ->
         ]
 
     clean:
-      dist:
+      default:
         src: [
           ".tmp"
+          "<%= config.app %>/assets/css/"
+          "<%= config.app %>/assets/js/"
         ]
 
       jekyllMetadata:
         src: [
           "<%= config.dist %>"
           "<%= config.app %>/.jekyll-metadata"
-        ]
-
-      postDist:
-        src: [
-          "<%= config.dist %>/assets/css/"
-          "<%= config.dist %>/assets/js/"
         ]
 
     cleanempty:
@@ -407,7 +407,6 @@ module.exports = (grunt) ->
         "concurrent:dist"
         "smoosher"
         "usebanner"
-        "clean:postDist"
         "reset"
       ]
 
