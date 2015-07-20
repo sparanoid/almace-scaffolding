@@ -1,3 +1,35 @@
+<a name"24.1.13"></a>
+### 24.1.13 (2015-07-20)
+
+
+#### Bug Fixes
+
+* **grunt:** wrong scripts and styles URL when `site.base` is defined ([bb1e5fde](https://github.com/sparanoid/sparanoid.com/commit/bb1e5fde))
+* **post:** dead external link ([a80744bc](https://github.com/sparanoid/sparanoid.com/commit/a80744bc))
+
+
+#### Features
+
+* **grunt:**
+  * tasks minor tweak ([e070f369](https://github.com/sparanoid/sparanoid.com/commit/e070f369))
+  * simplify banner ([7b5b9b38](https://github.com/sparanoid/sparanoid.com/commit/7b5b9b38))
+* **post:**
+  * proofreading for post “Amazon S3 × CloudFront” ([5afd26dd](https://github.com/sparanoid/sparanoid.com/commit/5afd26dd))
+  * new post “Markdown Features Test” ([4a393f70](https://github.com/sparanoid/sparanoid.com/commit/4a393f70))
+  * new post “Markdown Features Test” ([6759ddd3](https://github.com/sparanoid/sparanoid.com/commit/6759ddd3))
+* **style:** monospace fonts look bigger than normal fonts, so make it smaller ([5ef4fb87](https://github.com/sparanoid/sparanoid.com/commit/5ef4fb87))
+* **template:**
+  * use custom `grunt-html-smoosher` ([94a87c95](https://github.com/sparanoid/sparanoid.com/commit/94a87c95))
+  * strip unwanted whitespaces ([0ce08c0a](https://github.com/sparanoid/sparanoid.com/commit/0ce08c0a))
+
+
+#### Breaking Changes
+
+* Now `grunt-html-smoosher` only inline files with specific data attribute.
+
+ ([94a87c95](https://github.com/sparanoid/sparanoid.com/commit/94a87c95))
+
+
 <a name"24.1.12"></a>
 ### 24.1.12 (2015-04-30)
 
