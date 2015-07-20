@@ -1,4 +1,3 @@
-<!-- Insert scripts here -->
 <!-- The following code is an example use of including external JavaScript libraries -->
 {% if page.plugin == 'intense' %}
 
@@ -18,6 +17,9 @@
     }
   </script>
 {% endif %}
+
+<!-- Custom scripts -->
+<script src="{{ '/js/app.js' | prepend: site.assets | prepend: site.base }}" data-inline></script>
 
 <!-- Foot hooks -->
 {% if page.foot %}

@@ -40,7 +40,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-conventional-changelog": "^1.2.2",
     "grunt-csscomb": "^3.0.1",
-    "grunt-html-smoosher-install-fix": "^0.1.3",
+    "grunt-html-smoosher": "sparanoid/grunt-html-smoosher",
     "grunt-html-validation": "^0.1.18",
     "grunt-jekyll": "^0.4.2",
     "grunt-lesslint": "^1.1.14",
