@@ -40,7 +40,6 @@ redcarpet:
     - strikethrough
     - superscript
     - tables
-    - with_toc_data
 
 #
 # User defined settings
