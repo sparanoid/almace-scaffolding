@@ -1,3 +1,12 @@
+<a name"0.0.26"></a>
+### 0.0.26 (2015-07-20)
+
+
+#### Bug Fixes
+
+* package not updated ([74108595](https://github.com/sparanoid/almace-scaffolding/commit/74108595))
+
+
 <a name"0.0.25"></a>
 ### 0.0.25 (2015-07-20)
 
