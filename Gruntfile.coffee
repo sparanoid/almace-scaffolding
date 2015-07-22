@@ -13,7 +13,7 @@ module.exports = (grunt) ->
       cfg: grunt.file.readYAML("_config.yml")
       pkg: grunt.file.readJSON("package.json")
       app: "<%= config.cfg.source %>"
-      dist: "<%= config.cfg.destination %>"
+      dist: "<%= config.cfg.destination %><%= config.cfg.base %>"
       base: "<%= config.cfg.base %>"
       banner: do ->
         banner = "<!--\n"
@@ -242,7 +242,7 @@ module.exports = (grunt) ->
       dist:
         options:
           config: "_config.yml"
-          dest: "<%= config.dist %>/<%= config.base %>"
+          dest: "<%= config.dist %>"
 
     shell:
       options:
