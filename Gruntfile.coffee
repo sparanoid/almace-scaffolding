@@ -211,6 +211,7 @@ module.exports = (grunt) ->
         jsDir: "<%= config.dist %>"
         cssDir: "<%= config.dist %>"
         includeTag: "[data-inline]"
+        assetsUrlPrefix: "<%= config.base %>/assets/"
 
       dist:
         files: [
@@ -242,7 +243,7 @@ module.exports = (grunt) ->
       dist:
         options:
           config: "_config.yml"
-          dest: "<%= config.dist %>"
+          dest: "<%= config.dist %><%= config.base %>"
 
     shell:
       options:
