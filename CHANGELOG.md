@@ -1,3 +1,25 @@
+<a name"24.1.14"></a>
+### 24.1.14 (2015-08-02)
+
+
+#### Bug Fixes
+
+* use more common fonts path ([c989bc49](https://github.com/sparanoid/sparanoid.com/commit/c989bc49))
+* **grunt:**
+  * missing base URL, new `grunt-html-smoosher` config ([bb02d899](https://github.com/sparanoid/sparanoid.com/commit/bb02d899))
+  * fix previous commit ([430f0a58](https://github.com/sparanoid/sparanoid.com/commit/430f0a58))
+  * css not minified if `config.cfg.base` defined ([6515c46d](https://github.com/sparanoid/sparanoid.com/commit/6515c46d))
+
+
+#### Features
+
+* **grunt:**
+  * use `grunt-bump` instead of `grunt-release` ([87597f8e](https://github.com/sparanoid/sparanoid.com/commit/87597f8e))
+  * simplify grunt buid task ([85a9d0ac](https://github.com/sparanoid/sparanoid.com/commit/85a9d0ac))
+  * remove banner timestamp ([bc20e74e](https://github.com/sparanoid/sparanoid.com/commit/bc20e74e))
+* **template:** add main content class support ([05335815](https://github.com/sparanoid/sparanoid.com/commit/05335815))
+
+
 <a name"24.1.13"></a>
 ### 24.1.13 (2015-07-20)
 
