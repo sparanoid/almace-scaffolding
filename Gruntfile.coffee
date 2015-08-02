@@ -341,22 +341,16 @@ module.exports = (grunt) ->
         ]
         notify: true
 
-    release:
+    bump:
       options:
-        changelog: false,
-        file: "package.json"
-        npm: false
-        commitMessage: "chore: release <%= version %>"
-        tagName: "v<%= version %>"
-        tagMessage: "chore: tagging version <%= version %>"
-        afterBump: [
-          "changelog"
+        files: ["package.json"]
+        commitMessage: 'chore: release v%VERSION%'
+        commitFiles: [
+          "package.json"
+          "CHANGELOG.md"
         ]
-        # Dev options
-        commit: false
-        tag: false
+        tagMessage: 'chore: create tag %VERSION%'
         push: false
-        pushTags: false
 
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
@@ -395,6 +389,14 @@ module.exports = (grunt) ->
       "smoosher"
       "usebanner"
       "reset"
+    ]
+
+  # Release new version
+  grunt.registerTask "release", "Build, bump and commit", (type) ->
+    grunt.task.run [
+      "bump-only:#{type or 'patch'}"
+      "changelog"
+      "bump-commit"
     ]
 
   grunt.registerTask "sync", "Build site + rsync static files to remote server", [
