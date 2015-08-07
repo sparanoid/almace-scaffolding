@@ -1,0 +1,89 @@
+<!-- Post-wide custom CSS -->
+{{ amsf_page_css }}
+
+<!-- Prepare for image headers -->
+{% capture amsf_page_heading_type_img %}
+  <img
+    src="{{ site.file }}/{{ page.img-headline }}"
+    alt="{{ page.title | strip_html | xml_escape }}"
+    {% if page.img-headline-width %}
+      style="width: {{ page.img-headline-width | times: 0.1 }}vw;"
+    {% else %}
+      style="width: 50vw;"
+    {% endif %}
+  >
+{% endcapture %}
+
+<!-- Prepare for SVG header -->
+{% capture amsf_page_heading_type_svg %}
+  {% for i in page.svg-headline %}
+    {% include {{ i }} %}
+  {% endfor %}
+{% endcapture %}
+
+<!-- Prepare for SVG header styles -->
+{% capture amsf_page_heading_svg_style %}
+  {% if page.svg-headline %}
+    <style scoped>
+      h1 svg {
+        width: {{ page.svg-headline-width | times: 0.1 }}vw;
+        height: {{ page.svg-headline-height | times: 0.1 }}vw;
+      }
+    </style>
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_text %}
+  {% if page.img-headline %}
+    {{ amsf_page_heading_type_img }}
+  {% elsif page.svg-headline %}
+    {{ amsf_page_heading_type_svg }}
+  {% else %}
+    {{ page.title }} <span></span>
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_external %}
+  {% if page.link %}
+    class=external
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading %}
+  {% if page.link %}
+    <a href="{{ page.link }}" class=external>
+      {{ amsf_page_heading_text }}
+    </a>
+  {% else %}
+    {{ amsf_page_heading_text }}
+  {% endif %}
+{% endcapture %}
+
+<!-- Article wrapper, limit width -->
+<article {{ amsf_page_lang }}>
+
+  <!-- Post title -->
+  <header>
+    {{ amsf_page_heading_svg_style }}
+
+    <h1>{{ amsf_page_heading }}</h1>
+
+    {% if page.date %}
+      <small>
+        By <span rel=author>{{ author.name }}</span>
+        on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      </small>
+    {% endif %}
+
+    {% if page.desc %}
+      <small>{{ page.desc }}</small>
+    {% endif %}
+
+  </header>
+
+  <!-- Post content -->
+  <div class=post-content>
+    {{ content }}
+  </div>
+
+</article>

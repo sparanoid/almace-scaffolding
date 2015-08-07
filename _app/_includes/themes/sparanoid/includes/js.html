@@ -1,7 +1,7 @@
 <!-- The following code is an example use of including external JavaScript libraries -->
 {% if page.plugin == 'intense' %}
 
-  <script src="{{ '/js/intense.js' | prepend: site.assets | prepend: site.base }}"></script>
+  <script src="{{ '/js/intense.js' | prepend: amsf_assets }}"></script>
   <script>
     window.onload = function() {
       var fx = document.querySelectorAll('p > img:not(.nointense)');
@@ -19,7 +19,7 @@
 {% endif %}
 
 <!-- Custom scripts -->
-<script src="{{ '/js/app.js' | prepend: site.assets | prepend: site.base }}" data-inline></script>
+<script src="{{ '/js/app.js' | prepend: amsf_assets }}" data-inline></script>
 
 <!-- Foot hooks -->
 {% if page.foot %}
