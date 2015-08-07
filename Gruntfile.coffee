@@ -15,6 +15,8 @@ module.exports = (grunt) ->
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
+      theme: "<%= config.cfg.theme %>"
+      assets: "<%= config.app %>/assets/themes/<%= config.theme %>"
       banner: do ->
         banner = "<!--\n"
         banner += " © <%= config.pkg.author %>.\n"
@@ -38,10 +40,10 @@ module.exports = (grunt) ->
     lesslint:
       options:
         csslint:
-          csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
+          csslintrc: "<%= config.assets %>/_less/.csslintrc"
 
       test:
-        src: ["<%= config.app %>/assets/_less/**/app*.less"]
+        src: ["<%= config.assets %>/_less/**/app*.less"]
 
     validation:
       options:
@@ -65,13 +67,13 @@ module.exports = (grunt) ->
         tasks: ["coffeelint:gruntfile"]
 
       js:
-        files: ["<%= config.app %>/assets/_js/**/*.js"]
+        files: ["<%= config.assets %>/_js/**/*.js"]
         tasks: ["copy:serve"]
         options:
           interrupt: true
 
       less:
-        files: ["<%= config.app %>/assets/_less/**/*.less"]
+        files: ["<%= config.assets %>/_less/**/*.less"]
         tasks: [
           "less:serve"
           "autoprefixer:serve"
@@ -84,20 +86,6 @@ module.exports = (grunt) ->
         tasks: ['jekyll:serve']
 
     uglify:
-      # Deprecated, pending delete
-      # Date: Apr 2, 2015, 10:56 AM
-      serve:
-        options:
-          sourceMap: true
-          sourceMapIncludeSources: true
-
-        files: [
-          expand: true
-          cwd: "<%= config.app %>/assets/_js/"
-          src: ["**/*.js", "!*.min.js"]
-          dest: "<%= config.app %>/assets/js/"
-        ]
-
       dist:
         options:
           report: "gzip"
@@ -106,9 +94,9 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= config.app %>/assets/_js/"
+          cwd: "<%= config.assets %>/_js/"
           src: ["**/*.js", "!*.min.js"]
-          dest: "<%= config.app %>/assets/js/"
+          dest: "<%= config.assets %>/js/"
         ]
 
     less:
@@ -120,9 +108,9 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= config.app %>/assets/_less/"
+          cwd: "<%= config.assets %>/_less/"
           src: ["**/app*.less"]
-          dest: "<%= config.app %>/assets/css/"
+          dest: "<%= config.assets %>/css/"
           ext: ".css"
         ]
 
@@ -131,7 +119,7 @@ module.exports = (grunt) ->
 
     autoprefixer:
       serve:
-        src: "<%= config.app %>/assets/css/**/*.css"
+        src: "<%= config.assets %>/css/*.css"
         options:
           map: true
 
@@ -140,7 +128,7 @@ module.exports = (grunt) ->
 
     csscomb:
       options:
-        config: "<%= config.app %>/assets/_less/.csscomb.json"
+        config: "<%= config.assets %>/_less/.csscomb.json"
 
       dist:
         files: [
@@ -236,13 +224,13 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          config: "_config.yml,_config.dev.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.theme %>.yml,_config.dev.yml"
           drafts: true
           future: true
 
       dist:
         options:
-          config: "_config.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.theme %>.yml"
           dest: "<%= config.dist %><%= config.base %>"
 
     shell:
@@ -277,17 +265,17 @@ module.exports = (grunt) ->
         files: [
           expand: true
           dot: true
-          cwd: "<%= config.app %>/assets/_js/"
+          cwd: "<%= config.assets %>/_js/"
           src: ["**/*.js"]
-          dest: "<%= config.app %>/assets/js/"
+          dest: "<%= config.assets %>/js/"
         ]
 
     clean:
       default:
         src: [
           ".tmp"
-          "<%= config.app %>/assets/css/"
-          "<%= config.app %>/assets/js/"
+          "<%= config.assets %>/css/"
+          "<%= config.assets %>/js/"
         ]
 
       jekyllMetadata:
@@ -302,8 +290,8 @@ module.exports = (grunt) ->
 
     replace:
       availability:
-        src: ["<%= config.app %>/_data/availability.yml"]
-        dest: "<%= config.app %>/_data/availability.yml"
+        src: ["<%= config.app %>/_data/sparanoid.yml"]
+        dest: "<%= config.app %>/_data/sparanoid.yml"
         replacements: [
           {
             from: /(free:)(.+)/g
@@ -376,10 +364,10 @@ module.exports = (grunt) ->
   grunt.registerTask "build", "Build site with `jekyll`, use `--busy` to set availability to false", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 false" if grunt.option("busy")
     grunt.task.run [
-      "replace"
+      "replace:availability"
       "clean"
       "coffeelint"
-      "uglify:dist"
+      "uglify"
       "lesslint"
       "less:dist"
       "autoprefixer:dist"
@@ -388,6 +376,7 @@ module.exports = (grunt) ->
       "concurrent:dist"
       "smoosher"
       "usebanner"
+      "cleanempty"
       "reset"
     ]
 
