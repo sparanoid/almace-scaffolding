@@ -7,11 +7,15 @@ module.exports = (grunt) ->
   # Track tasks load time
   require("time-grunt") grunt
 
+  # get deploy target
+  amsf_theme = grunt.option('theme') or 'sparanoid'
+
   # Project configurations
   grunt.initConfig
     config:
       cfg: grunt.file.readYAML("_config.yml")
       pkg: grunt.file.readJSON("package.json")
+      amsf: "_amsf"
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
@@ -289,6 +293,16 @@ module.exports = (grunt) ->
         src: ["<%= config.dist %>/**/*"]
 
     replace:
+      amsf_install:
+        src: ["<%= config.amsf %>/_config.init.yml"]
+        dest: "<%= config.amsf %>/_config.yml"
+        replacements: [
+          {
+            from: /(theme:)( +)(.+)/g
+            to: "$1$2" + amsf_theme
+          }
+        ]
+
       availability:
         src: ["<%= config.app %>/_data/sparanoid.yml"]
         dest: "<%= config.app %>/_data/sparanoid.yml"
