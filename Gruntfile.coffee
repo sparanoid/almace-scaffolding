@@ -48,19 +48,6 @@ module.exports = (grunt) ->
       test:
         src: ["<%= config.assets %>/_less/**/app*.less"]
 
-    validation:
-      options:
-        reset: true
-        charset: "utf-8"
-        doctype: "HTML5"
-        relaxerror: [
-          "Bad value X-UA-Compatible for attribute http-equiv on element meta."
-          "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
-        ]
-
-      dist:
-        src: ["<%= config.dist %>/**/*.html"]
-
     watch:
       options:
         spawn: false
@@ -415,7 +402,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask "test", "Build test task", [
     "build"
-    "validation"
   ]
 
   grunt.registerTask "theme-upgrade", "Upgrade theme from AMSF cache to app", [
