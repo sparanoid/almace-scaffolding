@@ -5,6 +5,6 @@
 - Enable Travis for AMSF by default
 - Version auto bump for AMSF home (https://github.com/jharding/grunt-sed should work)
 - add theme
-- switch theme
-- update theme
 - update amsf
+- auto theme update via git
+- try load-grunt-config
