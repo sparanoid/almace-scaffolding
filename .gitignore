@@ -32,10 +32,11 @@ validation-report.json
 node_modules
 bower_components
 
-# Project specified
+# AMSF specified
+_amsf/themes
 _site
-_app/assets/js
-_app/assets/css
+_app/assets/**/js
+_app/assets/**/css
 .jekyll-metadata
 
 # Uncomment the following if you want to gitignore current user config
