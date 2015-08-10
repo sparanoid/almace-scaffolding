@@ -7,9 +7,6 @@ module.exports = (grunt) ->
   # Track tasks load time
   require("time-grunt") grunt
 
-  # get deploy target
-  amsf_theme_new = grunt.option('theme') or 'sparanoid'
-
   # Project configurations
   grunt.initConfig
     config:
@@ -18,7 +15,7 @@ module.exports = (grunt) ->
       amsf_cfg: grunt.file.readYAML("_amsf/_config.yml")
       amsf_base: "_amsf"
       amsf_theme: "<%= config.amsf_cfg.theme %>"
-      amsf_theme_new: amsf_theme_new
+      amsf_theme_new: grunt.option('theme') or "<%= config.amsf_theme %>"
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
@@ -284,12 +281,14 @@ module.exports = (grunt) ->
           }
           {
             expand: true
+            dot: true
             cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/"
             src: ["**"]
             dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/"
           }
           {
             expand: true
+            dot: true
             cwd: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>/"
             src: ["**"]
             dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/assets/"
@@ -304,12 +303,14 @@ module.exports = (grunt) ->
           }
           {
             expand: true
+            dot: true
             cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/"
             src: ["**", "!assets/**", "!config.yml"]
             dest: "<%= config.app %>/_includes/themes/<%= config.amsf_theme_new %>/"
           }
           {
             expand: true
+            dot: true
             cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/assets/"
             src: ["**"]
             dest: "<%= config.app %>/assets/themes/<%= config.amsf_theme_new %>/"
@@ -417,9 +418,17 @@ module.exports = (grunt) ->
     "validation"
   ]
 
-  grunt.registerTask "switch", "Build test task", [
-    "copy:amsf__switch__to_cache"
+  grunt.registerTask "theme-upgrade", "Upgrade theme from AMSF cache to app", [
     "copy:amsf__switch__to_app"
+  ]
+
+  grunt.registerTask "theme-save", "Save current theme to AMSF cache", [
+    "copy:amsf__switch__to_cache"
+  ]
+
+  grunt.registerTask "switch", "Switch themes", [
+    "theme-upgrade"
+    "theme-save"
     "replace:amsf__switch__update_config"
   ]
 
