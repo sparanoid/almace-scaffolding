@@ -8,19 +8,21 @@ module.exports = (grunt) ->
   require("time-grunt") grunt
 
   # get deploy target
-  amsf_theme = grunt.option('theme') or 'sparanoid'
+  amsf_theme_new = grunt.option('theme') or 'sparanoid'
 
   # Project configurations
   grunt.initConfig
     config:
       cfg: grunt.file.readYAML("_config.yml")
       pkg: grunt.file.readJSON("package.json")
-      amsf: "_amsf"
+      amsf_cfg: grunt.file.readYAML("_amsf/_config.yml")
+      amsf_base: "_amsf"
+      amsf_theme: "<%= config.amsf_cfg.theme %>"
+      amsf_theme_new: amsf_theme_new
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
-      theme: "<%= config.cfg.theme %>"
-      assets: "<%= config.app %>/assets/themes/<%= config.theme %>"
+      assets: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>"
       banner: do ->
         banner = "<!--\n"
         banner += " © <%= config.pkg.author %>.\n"
@@ -228,13 +230,13 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.theme %>.yml,_config.dev.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.amsf_theme %>.yml,_config.dev.yml"
           drafts: true
           future: true
 
       dist:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.theme %>.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.amsf_theme %>.yml"
           dest: "<%= config.dist %><%= config.base %>"
 
     shell:
@@ -274,6 +276,46 @@ module.exports = (grunt) ->
           dest: "<%= config.assets %>/js/"
         ]
 
+      amsf__switch__to_cache:
+        files: [
+          {
+            src: ["<%= config.app %>/_data/<%= config.amsf_theme %>.yml"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/config.yml"
+          }
+          {
+            expand: true
+            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/"
+          }
+          {
+            expand: true
+            cwd: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/assets/"
+          }
+        ]
+
+      amsf__switch__to_app:
+        files: [
+          {
+            src: ["<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/config.yml"]
+            dest: "<%= config.app %>/_data/<%= config.amsf_theme_new %>.yml"
+          }
+          {
+            expand: true
+            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/"
+            src: ["**", "!assets/**", "!config.yml"]
+            dest: "<%= config.app %>/_includes/themes/<%= config.amsf_theme_new %>/"
+          }
+          {
+            expand: true
+            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/assets/"
+            src: ["**"]
+            dest: "<%= config.app %>/assets/themes/<%= config.amsf_theme_new %>/"
+          }
+        ]
+
     clean:
       default:
         src: [
@@ -293,13 +335,13 @@ module.exports = (grunt) ->
         src: ["<%= config.dist %>/**/*"]
 
     replace:
-      amsf_install:
-        src: ["<%= config.amsf %>/_config.init.yml"]
-        dest: "<%= config.amsf %>/_config.yml"
+      amsf__switch__update_config:
+        src: ["<%= config.amsf_base %>/_config.yml"]
+        dest: "<%= config.amsf_base %>/_config.yml"
         replacements: [
           {
             from: /(theme:)( +)(.+)/g
-            to: "$1$2" + amsf_theme
+            to: "$1$2<%= config.amsf_theme_new %>"
           }
         ]
 
@@ -373,6 +415,12 @@ module.exports = (grunt) ->
   grunt.registerTask "test", "Build test task", [
     "build"
     "validation"
+  ]
+
+  grunt.registerTask "switch", "Build test task", [
+    "copy:amsf__switch__to_cache"
+    "copy:amsf__switch__to_app"
+    "replace:amsf__switch__update_config"
   ]
 
   grunt.registerTask "build", "Build site with `jekyll`, use `--busy` to set availability to false", (target) ->
