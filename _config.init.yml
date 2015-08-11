@@ -11,8 +11,8 @@ source:         _app
 destination:    _site
 timezone:       Asia/Hong_Kong
 permalink:      /:title.html
-markdown:       redcarpet
-highlighter:    pygments
+markdown:       kramdown
+highlighter:    rouge
 include:        ["_pages"]
 
 #
@@ -30,6 +30,18 @@ future:         false
 #
 # Additional Markdown settings
 #
+
+kramdown:
+  input:                     GFM
+  auto_ids:                  true
+  footnote_nr:               1
+  entity_output:             as_char
+  toc_levels:                1..6
+  smart_quotes:              lsquo,rsquo,ldquo,rdquo
+  enable_coderay:            false
+  hard_wrap:                 false
+  syntax_highlighter:        rouge
+  transliterated_header_ids: true
 
 redcarpet:
   extensions:
