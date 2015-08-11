@@ -10,3 +10,4 @@
 - try load-grunt-config
 - theme custom template support
 - docs for AMSF options
+- better SVG header include handler
