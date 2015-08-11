@@ -1,3 +1,13 @@
+<a name="0.0.29"></a>
+## [0.0.29](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.27...v0.0.29) (2015-08-11)
+
+
+### Features
+
+* **grunt:** update `conventionalChangelog` ([39e8458](https://github.com/sparanoid/almace-scaffolding/commit/39e8458))
+
+
+
 <a name"0.0.28"></a>
 ### 0.0.28 (aka. 24.1.14) (2015-08-02)
 
