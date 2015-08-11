@@ -394,7 +394,6 @@ module.exports = (grunt) ->
     bump:
       options:
         files: ["package.json"]
-        updateConfigs: ["pkg"]
         commitMessage: 'chore: release v%VERSION%'
         commitFiles: ["-a"]
         tagMessage: 'chore: create tag %VERSION%'
