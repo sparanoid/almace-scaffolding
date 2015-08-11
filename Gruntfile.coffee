@@ -333,6 +333,16 @@ module.exports = (grunt) ->
           }
         ]
 
+      amsf__site__update_version:
+        src: ["<%= config.app %>/_pages/index.html"]
+        dest: "<%= config.app %>/_pages/index.html"
+        replacements: [
+          {
+            from: /("amsf-version">)\d+\.\d+\.\d+/g
+            to: "$1<%= config.pkg.version %>"
+          }
+        ]
+
       availability:
         src: ["<%= config.app %>/_data/curtana.yml"]
         dest: "<%= config.app %>/_data/curtana.yml"
@@ -383,15 +393,12 @@ module.exports = (grunt) ->
 
     bump:
       options:
-        files: [
-          "package.json"
-          "<%= config.app %>/_pages/index.html"
-        ]
+        files: ["package.json"]
+        updateConfigs: ["pkg"]
         commitMessage: 'chore: release v%VERSION%'
         commitFiles: ["-a"]
         tagMessage: 'chore: create tag %VERSION%'
         push: false
-        regExp: true
 
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
@@ -451,6 +458,7 @@ module.exports = (grunt) ->
     grunt.task.run [
       "bump-only:#{type or 'patch'}"
       "conventionalChangelog"
+      "replace:amsf__site__update_version"
       "bump-commit"
     ]
 
