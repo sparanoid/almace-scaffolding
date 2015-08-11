@@ -64,136 +64,44 @@
 
 // Alternative title size
 // By default all heading levels have the same font size, but many people may not like this, so here's an alternative font size stack:
-// .content {
-//   h2 { font-size: 108%; opacity: .6; }
-//   h3 { font-size: 96%;  opacity: .5; }
-//   h4 { font-size: 84%;  opacity: .4; }
-//   h5 { font-size: 72%;  opacity: .3; }
-//   h6 { font-size: 60%;  opacity: .2; }
-// }
-
-// Custom styles for sparanoid.com
-body {
-  text-align: center;
-}
-
-.logo {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.navigation {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .content {
+  h2 { font-size: 108%; opacity: .6; }
+  h3 { font-size: 96%;  opacity: .5; }
+  h4 { font-size: 84%;  opacity: .4; }
+  h5 { font-size: 72%;  opacity: .3; }
+  h6 { font-size: 60%;  opacity: .2; }
+}
 
-  header h1 img,
-  header h1 svg {
-    margin-left: auto;
-    margin-right: auto;
+// amsf.github.io color scheme
+@link-color: #ff00b4;
+@background-color: #fff;
+@text-color: #000;
+@code-color: darken(spin(@link-color, 180), 10%);
+
+// amsf.github.io homepage logo
+.amsf-logo {
+  display: inline-block;
+  @s: 8.6vw;
+  width: @s;
+  height: @s;
+  margin: 1vw;
+  margin-left: 0;
+  vertical-align: middle;
+
+  @media (max-width: 640px) {
+    width: (@s * 2.4);
+    height: (@s * 2.4);
   }
 
-  // Custom inlined-style lists
-  ul, ol {
-    margin-left: 0;
-
-    li {
-      display: inline;
-      margin-right: 1em;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:before {
-        display: inline-block;
-        content: "";
-        margin-right: .3em;
-        width: .8em;
-        height: .8em;
-        border-radius: 50%;
-        box-shadow: inset 0 0 0 3px @link-color, inset 0 0 0 5px @background-color, inset 0 0 0 7px @link-color;
-      }
-
-      // Inline footnote wrappers
-      p {
-        display: inline;
-      }
-    }
+  path,
+  circle {
+    stroke-width: 76px;
+    stroke-linecap: square;
   }
+}
 
-  // Limit post content width
-  .page-content,
-  .post-content {
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-
-    @media (max-width: @breakpoint-sm) {
-      max-width: 100%;
-    }
-
-    // Center images in posts
-    img,
-    table {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    // Override user agent stylesheet
-    input {
-      text-align: center;
-    }
-
-    // Elements cannot be center aligned
-    pre,
-    code {
-      text-align: start;
-    }
-
-    // Unset `justify` align
-    [lang=zh],
-    [lang=ja] {
-      text-align: inherit;
-
-      header {
-        text-align: inherit;
-      }
-    }
-
-    // Unset border and padding for special blocks
-    .note,
-    .store,
-    .download {
-      padding-left: 0;
-      border-left: none;
-    }
-
-    // Unset border and padding for blockquotes, and make it lighter
-    blockquote {
-
-      > p {
-        opacity: .5;
-        padding-left: 0;
-        border-left: none;
-      }
-
-      cite {
-        float: none;
-      }
-    }
-  }
-
-  // Re-apply text-align for GitHub Gist
-  .gist {
-    text-align: start;
-  }
-
-  // Apply left align to specific posts or pages
-  .nocenter {
-    text-align: start;
-  }
+.amsf-title {
+  display: inline-block;
+  color: @link-color;
+  vertical-align: middle;
 }
