@@ -395,7 +395,7 @@ module.exports = (grunt) ->
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
     grunt.task.run [
-      "replace"
+      "replace:availability"
     ]
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
