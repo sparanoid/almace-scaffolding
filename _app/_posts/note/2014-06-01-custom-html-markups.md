@@ -13,11 +13,11 @@ A paragraph block with a thin border line.
 ### Usage
 
 ```html
-<p class=download>
+<p class="download">
   <a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub
 </p>
 
-<p class=store>
+<p class="store">
   Love this plugin? please consider <a href="{{ "{{ site.profile.donate " }}}}">buying me a cup of coffee.</a>
 </p>
 ```
@@ -26,11 +26,11 @@ Please note that you can’t apply CSS classes in Markdown, so you have to use H
 
 ### Example
 
-<p class=download>
+<p class="download">
   <a href="https://github.com/sparanoid/sparanoid.com/">Download</a> it from GitHub
 </p>
 
-<p class=store>
+<p class="store">
   Love this plugin? please consider <a href="{{ site.profile.donate }}">buying me a cup of coffee.</a>
 </p>
 
@@ -41,7 +41,7 @@ Make normal paragraph text large enough.
 ### Usage
 
 ```html
-<p class=largetype>
+<p class="largetype">
   <a href="{{ "{{ site.profile.donate " }}}}">PayPal</a>
 </p>
 ```
@@ -50,7 +50,7 @@ Please note that you can’t apply CSS classes in Markdown, so you have to use H
 
 ### Example
 
-<p class=largetype>
+<p class="largetype">
   <a href="{{ site.profile.donate }}">PayPal</a>
 </p>
 
@@ -61,7 +61,7 @@ A simple browser frame using pure CSS.
 ### Usage
 
 ```html
-<p class=browser>
+<p class="browser">
   <img src="http://sparanoid.com/photo.jpg" alt="Image">
 </p>
 ```
