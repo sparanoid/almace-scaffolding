@@ -12,9 +12,14 @@ module.exports = (grunt) ->
     config:
       cfg: grunt.file.readYAML("_config.yml")
       pkg: grunt.file.readJSON("package.json")
+      amsf_cfg: grunt.file.readYAML("_amsf/_config.yml")
+      amsf_base: "_amsf"
+      amsf_theme: "<%= config.amsf_cfg.theme %>"
+      amsf_theme_new: grunt.option('theme') or "<%= config.amsf_theme %>"
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
+      assets: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>"
       banner: do ->
         banner = "<!--\n"
         banner += " © <%= config.pkg.author %>.\n"
@@ -38,23 +43,10 @@ module.exports = (grunt) ->
     lesslint:
       options:
         csslint:
-          csslintrc: "<%= config.app %>/assets/_less/.csslintrc"
+          csslintrc: "<%= config.assets %>/_less/.csslintrc"
 
       test:
-        src: ["<%= config.app %>/assets/_less/**/app*.less"]
-
-    validation:
-      options:
-        reset: true
-        charset: "utf-8"
-        doctype: "HTML5"
-        relaxerror: [
-          "Bad value X-UA-Compatible for attribute http-equiv on element meta."
-          "An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images."
-        ]
-
-      dist:
-        src: ["<%= config.dist %>/**/*.html"]
+        src: ["<%= config.assets %>/_less/**/app*.less"]
 
     watch:
       options:
@@ -65,13 +57,13 @@ module.exports = (grunt) ->
         tasks: ["coffeelint:gruntfile"]
 
       js:
-        files: ["<%= config.app %>/assets/_js/**/*.js"]
+        files: ["<%= config.assets %>/_js/**/*.js"]
         tasks: ["copy:serve"]
         options:
           interrupt: true
 
       less:
-        files: ["<%= config.app %>/assets/_less/**/*.less"]
+        files: ["<%= config.assets %>/_less/**/*.less"]
         tasks: [
           "less:serve"
           "autoprefixer:serve"
@@ -84,20 +76,6 @@ module.exports = (grunt) ->
         tasks: ['jekyll:serve']
 
     uglify:
-      # Deprecated, pending delete
-      # Date: Apr 2, 2015, 10:56 AM
-      serve:
-        options:
-          sourceMap: true
-          sourceMapIncludeSources: true
-
-        files: [
-          expand: true
-          cwd: "<%= config.app %>/assets/_js/"
-          src: ["**/*.js", "!*.min.js"]
-          dest: "<%= config.app %>/assets/js/"
-        ]
-
       dist:
         options:
           report: "gzip"
@@ -106,9 +84,9 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= config.app %>/assets/_js/"
+          cwd: "<%= config.assets %>/_js/"
           src: ["**/*.js", "!*.min.js"]
-          dest: "<%= config.app %>/assets/js/"
+          dest: "<%= config.assets %>/js/"
         ]
 
     less:
@@ -120,9 +98,9 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= config.app %>/assets/_less/"
+          cwd: "<%= config.assets %>/_less/"
           src: ["**/app*.less"]
-          dest: "<%= config.app %>/assets/css/"
+          dest: "<%= config.assets %>/css/"
           ext: ".css"
         ]
 
@@ -131,7 +109,7 @@ module.exports = (grunt) ->
 
     autoprefixer:
       serve:
-        src: "<%= config.app %>/assets/css/**/*.css"
+        src: "<%= config.assets %>/css/*.css"
         options:
           map: true
 
@@ -140,7 +118,7 @@ module.exports = (grunt) ->
 
     csscomb:
       options:
-        config: "<%= config.app %>/assets/_less/.csscomb.json"
+        config: "<%= config.assets %>/_less/.csscomb.json"
 
       dist:
         files: [
@@ -236,13 +214,13 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          config: "_config.yml,_config.dev.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.amsf_theme %>.yml,_config.dev.yml"
           drafts: true
           future: true
 
       dist:
         options:
-          config: "_config.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.amsf_theme %>.yml"
           dest: "<%= config.dist %><%= config.base %>"
 
     shell:
@@ -277,17 +255,61 @@ module.exports = (grunt) ->
         files: [
           expand: true
           dot: true
-          cwd: "<%= config.app %>/assets/_js/"
+          cwd: "<%= config.assets %>/_js/"
           src: ["**/*.js"]
-          dest: "<%= config.app %>/assets/js/"
+          dest: "<%= config.assets %>/js/"
+        ]
+
+      amsf__switch__to_cache:
+        files: [
+          {
+            src: ["<%= config.app %>/_data/<%= config.amsf_theme %>.yml"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/config.yml"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/assets/"
+          }
+        ]
+
+      amsf__switch__to_app:
+        files: [
+          {
+            src: ["<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/config.yml"]
+            dest: "<%= config.app %>/_data/<%= config.amsf_theme_new %>.yml"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/"
+            src: ["**", "!assets/**", "!config.yml"]
+            dest: "<%= config.app %>/_includes/themes/<%= config.amsf_theme_new %>/"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/assets/"
+            src: ["**"]
+            dest: "<%= config.app %>/assets/themes/<%= config.amsf_theme_new %>/"
+          }
         ]
 
     clean:
       default:
         src: [
           ".tmp"
-          "<%= config.app %>/assets/css/"
-          "<%= config.app %>/assets/js/"
+          "<%= config.assets %>/css/"
+          "<%= config.assets %>/js/"
         ]
 
       jekyllMetadata:
@@ -301,9 +323,19 @@ module.exports = (grunt) ->
         src: ["<%= config.dist %>/**/*"]
 
     replace:
+      amsf__switch__update_config:
+        src: ["<%= config.amsf_base %>/_config.yml"]
+        dest: "<%= config.amsf_base %>/_config.yml"
+        replacements: [
+          {
+            from: /(theme:)( +)(.+)/g
+            to: "$1$2<%= config.amsf_theme_new %>"
+          }
+        ]
+
       availability:
-        src: ["<%= config.app %>/_data/availability.yml"]
-        dest: "<%= config.app %>/_data/availability.yml"
+        src: ["<%= config.app %>/_data/curtana.yml"]
+        dest: "<%= config.app %>/_data/curtana.yml"
         replacements: [
           {
             from: /(free:)(.+)/g
@@ -370,16 +402,29 @@ module.exports = (grunt) ->
 
   grunt.registerTask "test", "Build test task", [
     "build"
-    "validation"
+  ]
+
+  grunt.registerTask "theme-upgrade", "Upgrade theme from AMSF cache to app", [
+    "copy:amsf__switch__to_app"
+  ]
+
+  grunt.registerTask "theme-save", "Save current theme to AMSF cache", [
+    "copy:amsf__switch__to_cache"
+  ]
+
+  grunt.registerTask "switch", "Switch themes", [
+    "theme-upgrade"
+    "theme-save"
+    "replace:amsf__switch__update_config"
   ]
 
   grunt.registerTask "build", "Build site with `jekyll`, use `--busy` to set availability to false", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 false" if grunt.option("busy")
     grunt.task.run [
-      "replace"
+      "replace:availability"
       "clean"
       "coffeelint"
-      "uglify:dist"
+      "uglify"
       "lesslint"
       "less:dist"
       "autoprefixer:dist"
@@ -388,6 +433,7 @@ module.exports = (grunt) ->
       "concurrent:dist"
       "smoosher"
       "usebanner"
+      "cleanempty"
       "reset"
     ]
 

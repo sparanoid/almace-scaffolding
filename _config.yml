@@ -11,8 +11,8 @@ source:         _app
 destination:    _site
 timezone:       Asia/Hong_Kong
 permalink:      /:categories/:title/
-markdown:       redcarpet
-highlighter:    pygments
+markdown:       kramdown
+highlighter:    rouge
 include:        ["_pages"]
 
 #
@@ -31,6 +31,18 @@ future:         false
 # Additional Markdown settings
 #
 
+kramdown:
+  input:                     GFM
+  auto_ids:                  true
+  footnote_nr:               1
+  entity_output:             as_char
+  toc_levels:                1..6
+  smart_quotes:              lsquo,rsquo,ldquo,rdquo
+  enable_coderay:            false
+  hard_wrap:                 false
+  syntax_highlighter:        rouge
+  transliterated_header_ids: true
+
 redcarpet:
   extensions:
     - footnotes
@@ -42,7 +54,7 @@ redcarpet:
     - tables
 
 #
-# User defined settings
+# Almace Scaffolding settings
 #
 
 # Site name
@@ -75,9 +87,6 @@ download:       http://dl.sparanoid.com
 # Site Twitter account handle
 twitter:        sparanoid
 
-# Site donate link, used in several posts
-donate:         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
-
 # Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages
 # Default:      false
 force_utf_8:    false
@@ -90,18 +99,6 @@ link_blog:      false
 # Change the value to true to use post excerpt for RSS feeds
 # Default:      false
 rss_excerpt:    false
-
-# Hide footer from your homepage, example: sparanoid.com
-# Default:      false
-clean_homepage: true
-
-# Style post link color (if defined) for article list
-# Default:      false
-colorful_list:  true
-
-# Show email subscription link in footer
-# Default:      false
-subscription:   true
 
 # Show generator credits
 # Default:      true
