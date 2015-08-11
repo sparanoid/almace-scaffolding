@@ -39,6 +39,7 @@ kramdown:
   toc_levels:                1..6
   smart_quotes:              lsquo,rsquo,ldquo,rdquo
   enable_coderay:            false
+  hard_wrap:                 false
   syntax_highlighter:        rouge
   transliterated_header_ids: true
 
@@ -51,13 +52,6 @@ redcarpet:
     - strikethrough
     - superscript
     - tables
-
-#
-# Plugins
-#
-
-gems:
-  - jekyll-gist
 
 #
 # Almace Scaffolding settings
