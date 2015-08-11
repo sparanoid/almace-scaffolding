@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sparanoid
+title: Almace Scaffolding
 permalink: /
 ---
 
@@ -9,20 +9,15 @@ permalink: /
 
   <!-- Post title -->
   <header>
-    <h1>
-      Tunghsiao Liu
+    <svg class=amsf-logo width="955" height="955" viewBox="0 0 955 955" xmlns="http://www.w3.org/2000/svg"><title>Almace Scaffolding</title><g stroke="#FF00B4" fill="none"><circle cx="478" cy="478" r="439"/><path d="M837 710L119 244M119 709l718-466M142.5 709H815M142.5 244H815"/></g></svg>
+    <h1 class=amsf-title>
+      Almace Scaffolding
     </h1>
 
-    <small class=latest-post>
-      {% for post in site.categories.work limit:1 %}
-        Recently made <a href="{{ post.url | prepend: site.base }}" class=latest>{{ post.title }}</a>
-      {% endfor %}
-    </small>
-
-    {% if site.data.curtana.free %}
-      <p class="status available"><a href="mailto:{{ site.data.authors.default.email }}">Currently available for freelance</a></p>
-    {% else %}
-      <p class="status unavailable"><a href="mailto:{{ site.data.authors.default.email }}" title="You think your project is great? try to reach me.">Not accepting freelance work now</a></p>
-    {% endif %}
+    <small>a.k.a. <b>AMSF</b>&#x30FB;ver. <b>0.0.25</b>&#x30FB;view it on <a href="https://github.com/sparanoid/almace-scaffolding">GitHub</a></small>
   </header>
+
+  {% for post in site.categories.note %}
+    {% include themes/{{ site.theme }}/includes/page-item.html %}
+  {% endfor %}
 </article>
