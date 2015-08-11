@@ -24,10 +24,6 @@ nbproject
 *.sublime-workspace
 .idea
 
-# grunt-html-validation
-validation-status.json
-validation-report.json
-
 # Folders to ignore
 node_modules
 bower_components
@@ -38,6 +34,3 @@ _site
 _app/assets/**/js
 _app/assets/**/css
 .jekyll-metadata
-
-# Uncomment the following if you want to gitignore current user config
-# _config.yml
