@@ -373,6 +373,14 @@ module.exports = (grunt) ->
         ]
         notify: true
 
+    conventionalChangelog:
+      options:
+        changelogOpts:
+          preset: "angular"
+
+      release:
+        src: "CHANGELOG.md"
+
     bump:
       options:
         files: ["package.json"]
@@ -441,7 +449,7 @@ module.exports = (grunt) ->
   grunt.registerTask "release", "Build, bump and commit", (type) ->
     grunt.task.run [
       "bump-only:#{type or 'patch'}"
-      "changelog"
+      "conventionalChangelog"
       "bump-commit"
     ]
 
