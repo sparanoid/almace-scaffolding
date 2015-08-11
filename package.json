@@ -1,22 +1,23 @@
 {
-  "name": "sparanoid",
-  "version": "24.1.14",
-  "description": "Jekyll runing on sparanoid.com",
+  "name": "almace-scaffolding",
+  "version": "0.0.26",
+  "description": "Almace Scaffolding, a super-fast Jekyll framework",
   "author": "Tunghsiao Liu",
-  "homepage": "http://sparanoid.com/",
+  "homepage": "http://sparanoid.com/lab/amsf/",
   "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sparanoid/sparanoid.com.git"
+    "url": "git://github.com/sparanoid/almace-scaffolding.git"
   },
   "bugs": {
-    "url": "http://github.com/sparanoid/sparanoid.com/issues"
+    "url": "http://github.com/sparanoid/almace-scaffolding/issues"
   },
   "license": "MIT",
   "keywords": [
+    "amsf",
     "jekyll",
     "blog",
     "less",
