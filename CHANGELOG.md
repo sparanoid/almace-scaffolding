@@ -1,4 +1,9 @@
 <a name"24.1.14"></a>
+### 0.0.28 (aka. 24.1.14) (2015-08-02)
+
+This is a special tag release merged from sparanoid.com with the same commit history.
+
+<a name"24.1.14"></a>
 ### 24.1.14 (2015-08-02)
 
 Note: the following changelog are inherited from [sparanoid/sparanoid.com](http://github.com/sparanoid/sparanoid.com).
