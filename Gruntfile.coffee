@@ -334,8 +334,8 @@ module.exports = (grunt) ->
         ]
 
       availability:
-        src: ["<%= config.app %>/_data/sparanoid.yml"]
-        dest: "<%= config.app %>/_data/sparanoid.yml"
+        src: ["<%= config.app %>/_data/curtana.yml"]
+        dest: "<%= config.app %>/_data/curtana.yml"
         replacements: [
           {
             from: /(free:)(.+)/g
