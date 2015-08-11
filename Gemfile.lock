@@ -33,6 +33,7 @@ GEM
     rouge (1.9.1)
     safe_yaml (1.0.4)
     sass (3.4.16)
+    stringex (2.5.2)
     timers (4.0.1)
       hitimes
 
@@ -42,6 +43,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (>= 3.0.0.pre.beta8)
   jekyll-gist
+  stringex
 
 BUNDLED WITH
    1.10.6
