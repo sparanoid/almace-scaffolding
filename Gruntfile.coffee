@@ -343,16 +343,6 @@ module.exports = (grunt) ->
           }
         ]
 
-      availability:
-        src: ["<%= config.app %>/_data/curtana.yml"]
-        dest: "<%= config.app %>/_data/curtana.yml"
-        replacements: [
-          {
-            from: /(free:)(.+)/g
-            to: "$1 true"
-          }
-        ]
-
     browserSync:
       bsFiles:
         src: ["<%= config.dist %>/**"]
@@ -400,12 +390,6 @@ module.exports = (grunt) ->
         tagMessage: 'chore: create tag %VERSION%'
         push: false
 
-  grunt.registerTask "reset", "Reset user availability", (target) ->
-    grunt.config.set "replace.availability.replacements.0.to", "$1 true"
-    grunt.task.run [
-      "replace:availability"
-    ]
-
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean"
     "copy:serve"
@@ -434,24 +418,20 @@ module.exports = (grunt) ->
     "replace:amsf__switch__update_config"
   ]
 
-  grunt.registerTask "build", "Build site with `jekyll`, use `--busy` to set availability to false", (target) ->
-    grunt.config.set "replace.availability.replacements.0.to", "$1 false" if grunt.option("busy")
-    grunt.task.run [
-      "replace:availability"
-      "clean"
-      "coffeelint"
-      "uglify"
-      "lesslint"
-      "less:dist"
-      "autoprefixer:dist"
-      "csscomb"
-      "jekyll:dist"
-      "concurrent:dist"
-      "smoosher"
-      "usebanner"
-      "cleanempty"
-      "reset"
-    ]
+  grunt.registerTask "build", "Build site with jekyll", [
+    "clean"
+    "coffeelint"
+    "uglify"
+    "lesslint"
+    "less:dist"
+    "autoprefixer:dist"
+    "csscomb"
+    "jekyll:dist"
+    "concurrent:dist"
+    "smoosher"
+    "usebanner"
+    "cleanempty"
+  ]
 
   # Release new version
   grunt.registerTask "release", "Build, bump and commit", (type) ->
