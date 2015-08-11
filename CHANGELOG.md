@@ -1,6 +1,7 @@
 <a name"24.1.14"></a>
 ### 24.1.14 (2015-08-02)
 
+Note: the following changelog are inherited from [sparanoid/sparanoid.com](http://github.com/sparanoid/sparanoid.com).
 
 #### Bug Fixes
 
