@@ -1,3 +1,18 @@
+<a name="0.0.30"></a>
+## [0.0.30](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.29...v0.0.30) (2015-08-11)
+
+
+### Bug Fixes
+
+* **grunt:** avoid executing other replace task ([22d130c](https://github.com/sparanoid/almace-scaffolding/commit/22d130c))
+* **grunt:** index version not bumped ([c9e9f8a](https://github.com/sparanoid/almace-scaffolding/commit/c9e9f8a))
+
+### Features
+
+* **grunt:** try version auto bump for index ([3445afb](https://github.com/sparanoid/almace-scaffolding/commit/3445afb))
+
+
+
 <a name="0.0.29"></a>
 ## [0.0.29](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.27...v0.0.29) (2015-08-11)
 
