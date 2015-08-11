@@ -28,7 +28,8 @@
   @return-bg: mix(#fff, darken(@v, 10%), 70%);
 }
 
-.highlight {
+.highlight,
+.highlighter-rouge {
 
   pre    { .code-bg(@link-color); background: fade(@return-bg, 10%); }
   code   { .code-text(@link-color, @text-color); color: mix(#888888, @return-color, @return-value); } // Normal code
