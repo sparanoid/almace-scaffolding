@@ -378,19 +378,20 @@ module.exports = (grunt) ->
         changelogOpts:
           preset: "angular"
 
-      release:
+      dist:
         src: "CHANGELOG.md"
 
     bump:
       options:
-        files: ["package.json"]
-        commitMessage: 'chore: release v%VERSION%'
-        commitFiles: [
+        files: [
           "package.json"
-          "CHANGELOG.md"
+          "<%= config.app %>/_pages/index.html"
         ]
+        commitMessage: 'chore: release v%VERSION%'
+        commitFiles: ["-a"]
         tagMessage: 'chore: create tag %VERSION%'
         push: false
+        regExp: true
 
   grunt.registerTask "reset", "Reset user availability", (target) ->
     grunt.config.set "replace.availability.replacements.0.to", "$1 true"
