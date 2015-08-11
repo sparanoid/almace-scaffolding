@@ -53,6 +53,13 @@ redcarpet:
     - tables
 
 #
+# Plugins
+#
+
+gems:
+  - jekyll-gist
+
+#
 # Almace Scaffolding settings
 #
 
