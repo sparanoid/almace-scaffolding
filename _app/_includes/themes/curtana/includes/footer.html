@@ -1,5 +1,5 @@
 <!-- Footer section -->
-{% if page.permalink == '/' and site.data.sparanoid.clean_homepage %}
+{% if page.permalink == '/' and site.data.curtana.clean_homepage %}
 {% else %}
   <footer class=footer>
     <ul>
@@ -7,7 +7,7 @@
       {% if site.credits %}
         <li><a href="http://sparanoid.com/lab/amsf/" title="Almace Scaffolding">AMSF</a></li>
       {% endif %}
-      {% if site.data.sparanoid.subscription %}
+      {% if site.data.curtana.subscription %}
         <li><a href="{{ '/email-signup' | prepend: site.base }}/">Email</a></li>
       {% endif %}
       <li><a href="{{ amsf_feed_url }}" title="Feed - Atom (The Atom Syndication Format)">Atom</a></li>
