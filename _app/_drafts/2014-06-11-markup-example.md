@@ -89,3 +89,7 @@ Totals  | 21 | 23 | 7
 ## Gists via GitHub Pages
 
 Use the `gist` tag to easily embed a GitHub Gist onto your site. This works with public or secret gists:
+
+{% gist sparanoid/55c3dd64f94881017a7b gist.md %}
+
+{% gist sparanoid/87b4b3ec181e90146c74 %}
