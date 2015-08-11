@@ -1,16 +1,16 @@
-# Sparanoid
-[![Build Status](https://travis-ci.org/sparanoid/sparanoid.com.svg)](https://travis-ci.org/sparanoid/sparanoid.com)
-[![devDependency Status](https://david-dm.org/sparanoid/sparanoid.com/dev-status.svg)](https://david-dm.org/sparanoid/sparanoid.com#info=devDependencies)
+# Almace Scaffolding
+[![Build Status](https://travis-ci.org/sparanoid/almace-scaffolding.svg)](https://travis-ci.org/sparanoid/almace-scaffolding)
+[![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
 
-[Jekyll](https://github.com/jekyll/jekyll) running on [sparanoid.com](http://sparanoid.com/).
+`AMSF`, a.k.a. **Almace Scaffolding**, a super-fast Jekyll framework. Supports live reloading (Browsersync), LESS, HTML minification, inlined stylesheets and more.
 
-## Setup
+-----
 
-```sh
-$ bundle install && npm install && grunt serve
-```
+## [Getting Started](http://sparanoid.com/lab/amsf/getting-started.html)
 
-Need a simpler setup using this theme? Try [AMSF](http://github.com/sparanoid/almace-scaffolding/).
+## Donate
+
+Wanna buy me a cup of coffee? [Great](http://sparanoid.com/donate/).
 
 ## Author
 
@@ -21,12 +21,6 @@ Need a simpler setup using this theme? Try [AMSF](http://github.com/sparanoid/al
 
 ## Licenses
 
-Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [CC BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
-
-- `./_app/_posts/`
-- `./_app/apple-touch-icon.png`
-- `./_app/favicon.ico`
-
-All other files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
+All files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
 © Tunghsiao Liu. Rights reserved as indicated above.
