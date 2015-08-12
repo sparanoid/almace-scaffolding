@@ -26,6 +26,7 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-assets-inline": "^0.1.8",
     "grunt-autoprefixer": "^3.0.0",
     "grunt-banner": "^0.4.0",
     "grunt-browser-sync": "^2.1.1",
@@ -42,7 +43,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-conventional-changelog": "^4.0.0",
     "grunt-csscomb": "^3.0.1",
-    "grunt-html-smoosher": "sparanoid/grunt-html-smoosher",
     "grunt-jekyll": "^0.4.2",
     "grunt-lesslint": "^1.1.14",
     "grunt-rev": "^0.1.0",
