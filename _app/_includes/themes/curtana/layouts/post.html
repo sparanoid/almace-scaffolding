@@ -16,21 +16,15 @@
 
 <!-- Prepare for SVG header -->
 {% capture amsf_page_heading_type_svg %}
-  {% for i in page.svg-headline %}
-    {% include {{ i }} %}
-  {% endfor %}
-{% endcapture %}
-
-<!-- Prepare for SVG header styles -->
-{% capture amsf_page_heading_svg_style %}
-  {% if page.svg-headline %}
-    <style scoped>
-      h1 svg {
-        width: {{ page.svg-headline-width | times: 0.1 }}vw;
-        height: {{ page.svg-headline-height | times: 0.1 }}vw;
-      }
-    </style>
-  {% endif %}
+  <img
+    src="{{ site.assets | prepend: site.base }}/{{ page.svg-headline }}"
+    alt="{{ page.title | strip_html | xml_escape }}"
+    {% if page.svg-headline-width %}
+      style="width: {{ page.svg-headline-width | times: 0.1 }}vw;"
+    {% else %}
+      style="width: 50vw;"
+    {% endif %}
+  >
 {% endcapture %}
 
 {% capture amsf_page_heading_text %}
@@ -64,7 +58,6 @@
 
   <!-- Post title -->
   <header>
-    {{ amsf_page_heading_svg_style }}
 
     <h1>{{ amsf_page_heading }}</h1>
 
