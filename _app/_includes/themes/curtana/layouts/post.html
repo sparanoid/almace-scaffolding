@@ -18,7 +18,6 @@
 {% capture amsf_page_heading_type_svg %}
   <img
     src="{{ site.assets | prepend: site.base }}/{{ page.svg-headline }}"
-    alt="{{ page.title | strip_html | xml_escape }}"
     {% if page.svg-headline-width %}
       style="width: {{ page.svg-headline-width | times: 0.1 }}vw;"
     {% else %}
@@ -29,11 +28,19 @@
 
 {% capture amsf_page_heading_text %}
   {% if page.img-headline %}
+    {{ page.title }}
     {{ amsf_page_heading_type_img }}
   {% elsif page.svg-headline %}
+    {{ page.title }}
     {{ amsf_page_heading_type_svg }}
   {% else %}
     {{ page.title }} <span></span>
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_class %}
+  {% if page.img-headline or page.svg-headline %}
+    image-title
   {% endif %}
 {% endcapture %}
 
@@ -59,7 +66,9 @@
   <!-- Post title -->
   <header>
 
-    <h1>{{ amsf_page_heading }}</h1>
+    <h1 class="{{ amsf_page_heading_class }}" title="{{ page.title | strip_html | xml_escape }}">
+      {{ amsf_page_heading }}
+    </h1>
 
     {% if page.date %}
       <small>
