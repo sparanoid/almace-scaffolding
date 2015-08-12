@@ -184,11 +184,15 @@ module.exports = (grunt) ->
       #   src: "**/*.html"
       #   dest: "<%= config.dist %>"
 
-    smoosher:
+    assets_inline:
       options:
         jsDir: "<%= config.dist %>"
         cssDir: "<%= config.dist %>"
-        includeTag: "[data-inline]"
+        assetsDir: "<%= config.dist %>"
+        includeTag: "?assets-inline"
+        inlineImg: false
+        inlineSvg: true
+        inlineSvgBase64: false
         assetsUrlPrefix: "<%= config.base %>/assets/"
 
       dist:
@@ -428,7 +432,7 @@ module.exports = (grunt) ->
     "csscomb"
     "jekyll:dist"
     "concurrent:dist"
-    "smoosher"
+    "assets_inline"
     "usebanner"
     "cleanempty"
   ]
