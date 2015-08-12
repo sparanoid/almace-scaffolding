@@ -343,6 +343,12 @@ body:hover .latest {
       }
     }
 
+    // Hide actual text if post title is image or SVG, the actual text helps Safari get the real post title in Reader mode.
+    .image-title {
+      text-indent: -999999px;
+      line-height: 0;
+    }
+
     .latest-post {
       margin-top: 16vmin;
       font-size: 80%;
