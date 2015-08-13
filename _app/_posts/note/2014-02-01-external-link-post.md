@@ -3,7 +3,6 @@ layout: post
 title: External Link Post
 category: note
 link: http://sparanoid.com/
-hidden: true
 tags: customization
 ---
 

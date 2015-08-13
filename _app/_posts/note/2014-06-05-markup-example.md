@@ -3,7 +3,6 @@ layout: post
 title: Markup Example
 category: note
 plugin: intense
-hidden: true
 tags: miscellaneous
 ---
 
