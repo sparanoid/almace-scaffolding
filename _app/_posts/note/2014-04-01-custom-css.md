@@ -2,7 +2,6 @@
 layout: post
 title: Unique Post Styling via Custom CSS
 category: note
-hidden: true
 tags: customization
 scheme-text: "rgba(100, 16, 0, .5)"
 scheme-code: "#fff"

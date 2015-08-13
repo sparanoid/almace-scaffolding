@@ -2,7 +2,6 @@
 layout: post
 title: Markdown Features Test
 category: note
-hidden: true
 tags: miscellaneous
 ---
 
