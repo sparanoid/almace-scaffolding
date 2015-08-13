@@ -588,13 +588,20 @@ body:hover .latest {
 
 // Reference notes and links in post
 .footnotes {
-  font-size: 90%;
+  border-top: 1px solid fade(#ccc, 20%);
+  padding-top: 2em;
+  margin-top: 2em;
+  font-size: 80%;
 }
 
 :target {
 
+  // Redcarpet-style
   [rev=footnote],
-  [rel=footnote] {
+  [rel=footnote],
+  // Kramdown-style
+  .reversefootnote,
+  .footnote {
     color: @link-color;
   }
 }
