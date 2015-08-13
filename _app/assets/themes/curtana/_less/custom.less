@@ -65,43 +65,26 @@
 // Alternative title size
 // By default all heading levels have the same font size, but many people may not like this, so here's an alternative font size stack:
 .content {
-  h2 { font-size: 108%; opacity: .6; }
-  h3 { font-size: 96%;  opacity: .5; }
-  h4 { font-size: 84%;  opacity: .4; }
-  h5 { font-size: 72%;  opacity: .3; }
-  h6 { font-size: 60%;  opacity: .2; }
+  h2 { font-size: 108%; opacity: .8; }
+  h3 { font-size: 96%;  opacity: .7; }
+  h4 { font-size: 84%;  opacity: .6; }
+  h5 { font-size: 72%;  opacity: .5; }
+  h6 { font-size: 60%;  opacity: .4; }
 }
 
 // amsf.github.io color scheme
 @link-color: #ff00b4;
 @background-color: #fff;
 @text-color: #000;
-@code-color: darken(spin(@link-color, 180), 10%);
+@code-color: darken(spin(@link-color, 200), 10%);
 
 // amsf.github.io homepage logo
 .amsf-logo {
-  display: inline-block;
-  @s: 8.6vw;
-  width: @s;
-  height: @s;
-  margin: 1vw;
-  margin-left: 0;
-  vertical-align: middle;
-
-  @media (max-width: 640px) {
-    width: (@s * 2.4);
-    height: (@s * 2.4);
-  }
-
-  path,
-  circle {
-    stroke-width: 76px;
-    stroke-linecap: square;
-  }
+  width: 80%;
+  height: auto;
 }
 
 .amsf-title {
-  display: inline-block;
-  color: @link-color;
-  vertical-align: middle;
+  text-indent: -999999px;
+  line-height: 0 !important;
 }
