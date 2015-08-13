@@ -2,6 +2,7 @@
 layout: post
 title: SVG Post Ttile
 category: note
+tags: customization
 hidden: true
 svg-headline: svg/kai.svg
 svg-headline-width: 400

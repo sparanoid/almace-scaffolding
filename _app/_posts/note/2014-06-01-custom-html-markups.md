@@ -4,6 +4,7 @@ title: Custom HTML Markups
 category: note
 plugin: intense
 hidden: true
+tags: customization
 ---
 
 ## `.note`, `.store`, and `.download`
