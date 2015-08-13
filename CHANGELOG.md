@@ -1,3 +1,29 @@
+<a name="0.0.31"></a>
+## [0.0.31](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.30...v0.0.31) (2015-08-13)
+
+
+### Bug Fixes
+
+* **style:** add missing code block background for Rouge parser ([c38e1bf](https://github.com/sparanoid/almace-scaffolding/commit/c38e1bf))
+* **template:** heading padding fix ([470b508](https://github.com/sparanoid/almace-scaffolding/commit/470b508))
+* **template:** image titles not recognized in Safari Reader mode ([9de3d64](https://github.com/sparanoid/almace-scaffolding/commit/9de3d64))
+
+### Features
+
+* **docs:** update content and try new structure ([8d4f0f4](https://github.com/sparanoid/almace-scaffolding/commit/8d4f0f4))
+* **grunt:** remove availability task from sparanoid.com ([727c601](https://github.com/sparanoid/almace-scaffolding/commit/727c601))
+* **grunt:** use `grunt-assets-inline` as a replacement of `grunt-html-smoosher` ([841a59a](https://github.com/sparanoid/almace-scaffolding/commit/841a59a))
+* **template:** update homepage ([76775ef](https://github.com/sparanoid/almace-scaffolding/commit/76775ef))
+* **theme:** add theme basic info ([21fc0c3](https://github.com/sparanoid/almace-scaffolding/commit/21fc0c3))
+* **theme:** new syntax for inline assets ([70421fe](https://github.com/sparanoid/almace-scaffolding/commit/70421fe))
+* **theme:** use dedicated svg directory outside the jekyll `_includes` ([4962189](https://github.com/sparanoid/almace-scaffolding/commit/4962189))
+
+
+### BREAKING CHANGES
+
+* This will change the way SVG titles got embeded, now SVG titles are inlined into `<img>` tags instead of putting `<svg>` directly into HTML.
+
+
 <a name="0.0.30"></a>
 ## [0.0.30](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.29...v0.0.30) (2015-08-11)
 
