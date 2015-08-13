@@ -26,7 +26,23 @@ permalink: /
     <small>a.k.a. <b>AMSF</b>&#x30FB;ver. <b class="amsf-version">0.0.30</b>&#x30FB;view it on <a href="https://github.com/sparanoid/almace-scaffolding">GitHub</a></small>
   </header>
 
-  {% for post in site.categories.note %}
+  <h2>Getting Started</h2>
+  {% for post in site.tags.getting-started %}
+    {% include themes/{{ site.theme }}/includes/page-item.html %}
+  {% endfor %}
+
+  <h2>Customization</h2>
+  {% for post in site.tags.customization %}
+    {% include themes/{{ site.theme }}/includes/page-item.html %}
+  {% endfor %}
+
+  <h2>Deployment</h2>
+  {% for post in site.tags.deployment %}
+    {% include themes/{{ site.theme }}/includes/page-item.html %}
+  {% endfor %}
+
+  <h2>Miscellaneous</h2>
+  {% for post in site.tags.miscellaneous %}
     {% include themes/{{ site.theme }}/includes/page-item.html %}
   {% endfor %}
 </article>
