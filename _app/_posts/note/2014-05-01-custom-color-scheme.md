@@ -2,7 +2,6 @@
 layout: post
 title: Custom Color Scheme
 category: note
-hidden: true
 tags: customization
 scheme-text: "#0029ff"
 scheme-link: "#ff00b4"
