@@ -70,7 +70,7 @@ Please note that you can't apply CSS classes in Markdown, so you have to use HTM
 
 ### Example
 
-<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class=nointense></p>
+<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class="nointense"></p>
 
 ## [intense.js](http://github.com/tholman/intense-images)
 
