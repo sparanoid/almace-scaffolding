@@ -14,6 +14,7 @@ module.exports = (grunt) ->
       pkg: grunt.file.readJSON("package.json")
       amsf_cfg: grunt.file.readYAML("_amsf/_config.yml")
       amsf_base: "_amsf"
+      amsf_core: "<%= config.amsf_base %>/core"
       amsf_theme: "<%= config.amsf_cfg.theme %>"
       amsf_theme_new: grunt.option('theme') or "<%= config.amsf_theme %>"
       amsf_theme_new_author: grunt.option('user') or "amsf"
@@ -265,39 +266,42 @@ module.exports = (grunt) ->
           dest: "<%= config.assets %>/js/"
         ]
 
-      amsf__theme__to_cache:
+      amsf__core__to_app:
         files: [
           {
-            src: ["<%= config.app %>/_data/<%= config.amsf_theme %>.yml"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/config.yml"
+            expand: true
+            dot: true
+            filter: "isFile"
+            cwd: "<%= config.amsf_core %>/"
+            src: [
+              ".*"
+              "*.json"
+              "*.md"
+              "*.yml"
+              "Gemfile"
+              "Gruntfile*" # Comment this when debugging this task
+              "LICENSE"
+              "package.json"
+              "!.DS_Store"
+            ]
+            dest: "./"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/includes/"
-            src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/includes/"
+            filter: "isFile"
+            cwd: "<%= config.amsf_core %>/_app/_includes/"
+            src: [
+              "_amsf.html"
+            ]
+            dest: "<%= config.app %>/_includes/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/layouts/"
+            cwd: "<%= config.amsf_core %>/_app/_layouts/"
             src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/layouts/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>/"
-            src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/assets/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= config.app %>/_pages/themes/<%= config.amsf_theme %>/"
-            src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/pages/"
+            dest: "<%= config.app %>/_layouts/"
           }
         ]
 
@@ -337,7 +341,50 @@ module.exports = (grunt) ->
           }
         ]
 
+      amsf__theme__to_cache:
+        files: [
+          {
+            src: ["<%= config.app %>/_data/<%= config.amsf_theme %>.yml"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/config.yml"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/includes/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/includes/"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/layouts/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/layouts/"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/assets/"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.app %>/_pages/themes/<%= config.amsf_theme %>/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/pages/"
+          }
+        ]
+
+
     gitclone:
+      amsf__core__add_remote:
+        options:
+          repository: "https://github.com/sparanoid/almace-scaffolding.git"
+          branch: "master"
+          directory: "<%= config.amsf_base %>/core/"
+
       amsf__theme__add_remote:
         options:
           repository: "https://github.com/<%= config.amsf_theme_new_author %>/amsf-<%= config.amsf_theme_new %>.git"
@@ -345,6 +392,10 @@ module.exports = (grunt) ->
           directory: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/"
 
     gitpull:
+      amsf__core__update_remote:
+        options:
+          cwd: "<%= config.amsf_base %>/core/"
+
       amsf__theme__update_remote:
         options:
           cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/"
@@ -471,6 +522,11 @@ module.exports = (grunt) ->
   grunt.registerTask "theme-update", "Update current theme from GitHub", [
     "gitpull:amsf__theme__update_remote"
     "theme-upgrade"
+  ]
+
+  grunt.registerTask "amsf-update", "Upgrade specific theme from AMSF cache to app", [
+    "gitpull:amsf__core__update_remote"
+    "copy:amsf__core__to_app"
   ]
 
   grunt.registerTask "build", "Build site with jekyll", [
