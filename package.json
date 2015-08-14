@@ -43,6 +43,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-conventional-changelog": "^4.0.0",
     "grunt-csscomb": "^3.0.1",
+    "grunt-git": "^0.3.5",
     "grunt-jekyll": "^0.4.2",
     "grunt-lesslint": "^1.1.14",
     "grunt-rev": "^0.1.0",
