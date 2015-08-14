@@ -31,6 +31,10 @@ Go to the [GitHub repository](https://github.com/sparanoid/almace-scaffolding) f
 
 ## Upgrading
 
-Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every core and template file untouched. Just copy and paste all files (except your `_app/_posts` and `_app/_pages`) to `_app`. If you change the core files and templates directly, you have to compare them side by side.
+Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every core and template file untouched. You can use the following command to update Almace Scaffolding core files:
 
-If you're using a custom theme, use `grunt theme-save` to backup your theme before updating and use `grunt theme-upgrade` for restoring. See [Themes](http://sparanoid.com/lab/amsf/themes.html) for more info.
+```sh
+$ grunt amsf-update
+```
+
+It checks the latest Almace Scaffolding build from GitHub and update core files automatically. Please keep in mind that if you changed some of the AMSF core files this action will **override** the changes you made. So it's recommended to keep your project under version control, you will be always be able to compare changes for Almace Scaffolding.
