@@ -525,10 +525,23 @@ module.exports = (grunt) ->
     "theme-upgrade"
   ]
 
-  grunt.registerTask "amsf-update", "Upgrade specific theme from AMSF cache to app", [
+  grunt.registerTask "amsf-update", "Upgrade AM", [
     "gitpull:amsf__core__update_remote"
     "copy:amsf__core__to_app"
   ]
+
+  grunt.registerTask "amsf-update", "Update ASMF", ->
+    # TODO: need better implement
+    if grunt.file.exists("_amsf/core/")
+      grunt.task.run [
+        "gitpull:amsf__core__update_remote"
+        "copy:amsf__core__to_app"
+      ]
+    else
+      grunt.task.run [
+        "gitclone:amsf__core__add_remote"
+        "copy:amsf__core__to_app"
+      ]
 
   grunt.registerTask "build", "Build site with jekyll", [
     "clean"
