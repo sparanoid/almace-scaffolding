@@ -1,5 +1,12 @@
 #
-# Jekyll serve settings
+# Jekyll basic configurations
+#
+
+# Re-include theme example pages for development
+exclude:        []
+
+#
+# Almace Scaffolding settings
 #
 
 # Reset base to root for localhost development
