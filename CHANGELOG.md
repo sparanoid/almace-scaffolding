@@ -1,3 +1,23 @@
+<a name="0.0.32"></a>
+## [0.0.32](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.31...v0.0.32) (2015-08-14)
+
+
+### Bug Fixes
+
+* **style:** missing footnotes styles for Kramdown ([cbd8d03](https://github.com/sparanoid/almace-scaffolding/commit/cbd8d03))
+
+### Features
+
+* **grunt:** add `theme-add` and `theme-update` support ([612ce72](https://github.com/sparanoid/almace-scaffolding/commit/612ce72))
+* **template:** add theme templates support ([50353d7](https://github.com/sparanoid/almace-scaffolding/commit/50353d7))
+* **theme:** better content margin ([6f75ecd](https://github.com/sparanoid/almace-scaffolding/commit/6f75ecd))
+
+
+### BREAKING CHANGES
+
+* Now you can include example page templates for your theme, simply put all example templates into `theme/pages/` and then you've done. All example templates will be available to end-users when they run AMSF in development mode.
+
+
 <a name="0.0.31"></a>
 ## [0.0.31](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.30...v0.0.31) (2015-08-13)
 
