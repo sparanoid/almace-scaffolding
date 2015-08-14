@@ -283,6 +283,7 @@ module.exports = (grunt) ->
               "LICENSE"
               "package.json"
               "!.DS_Store"
+              "!TODOS.md"
             ]
             dest: "./"
           }
