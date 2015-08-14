@@ -284,6 +284,13 @@ module.exports = (grunt) ->
             src: ["**"]
             dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/assets/"
           }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.app %>/_pages/themes/<%= config.amsf_theme %>/"
+            src: ["**"]
+            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/pages/"
+          }
         ]
 
       amsf__switch__to_app:
@@ -296,7 +303,7 @@ module.exports = (grunt) ->
             expand: true
             dot: true
             cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/"
-            src: ["**", "!assets/**", "!config.yml"]
+            src: ["**", "!assets/**", "!pages/**", "!config.yml"]
             dest: "<%= config.app %>/_includes/themes/<%= config.amsf_theme_new %>/"
           }
           {
@@ -305,6 +312,13 @@ module.exports = (grunt) ->
             cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/assets/"
             src: ["**"]
             dest: "<%= config.app %>/assets/themes/<%= config.amsf_theme_new %>/"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/pages/"
+            src: ["**"]
+            dest: "<%= config.app %>/_pages/themes/<%= config.amsf_theme_new %>/"
           }
         ]
 
