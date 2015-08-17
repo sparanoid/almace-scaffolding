@@ -280,7 +280,6 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            filter: "isFile"
             cwd: "<%= config.amsf_core %>/"
             src: [
               ".*"
@@ -295,6 +294,16 @@ module.exports = (grunt) ->
               "!TODOS.md"
             ]
             dest: "./"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.amsf_core %>/_app/"
+            src: [
+              "*.xml"
+              "*.txt"
+            ]
+            dest: "<%= config.app %>/"
           }
           {
             expand: true
