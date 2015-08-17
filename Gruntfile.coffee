@@ -570,17 +570,12 @@ module.exports = (grunt) ->
     "theme-upgrade"
   ]
 
-  grunt.registerTask "amsf-update", "Upgrade AM", [
-    "gitreset:amsf__core__reset_git"
-    "gitclean:amsf__core__clean_git"
-    "gitpull:amsf__core__update_remote"
-    "copy:amsf__core__to_app"
-  ]
-
   grunt.registerTask "amsf-update", "Update ASMF", ->
     # TODO: need better implement
     if grunt.file.exists("_amsf/core/")
       grunt.task.run [
+        "gitreset:amsf__core__reset_git"
+        "gitclean:amsf__core__clean_git"
         "gitpull:amsf__core__update_remote"
         "copy:amsf__core__to_app"
       ]
