@@ -97,6 +97,7 @@ module.exports = (grunt) ->
           strictMath: true
           sourceMap: true
           outputSourceFiles: true
+          dumpLineNumbers: "comments"
 
         files: [
           expand: true
@@ -113,7 +114,8 @@ module.exports = (grunt) ->
       serve:
         src: "<%= config.assets %>/css/*.css"
         options:
-          map: true
+          map:
+            inline: false
           processors: [
             require("autoprefixer-core")(browsers: "last 1 versions")
           ]
