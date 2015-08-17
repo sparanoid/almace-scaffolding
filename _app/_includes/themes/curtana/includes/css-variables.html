@@ -90,7 +90,9 @@
 
   {% if page.scheme-hover %}
   :target [rev=footnote],
-  :target [rel=footnote] {
+  :target [rel=footnote],
+  :target .reversefootnote,
+  :target .footnote {
     color: {{ page.scheme-hover }};
   }
   {% endif %}
