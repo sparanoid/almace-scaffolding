@@ -299,7 +299,6 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            filter: "isFile"
             cwd: "<%= config.amsf_core %>/_app/_includes/"
             src: [
               "_amsf.html"
