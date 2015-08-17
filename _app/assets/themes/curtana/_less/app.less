@@ -397,19 +397,25 @@ body:hover .latest {
     display: block;
     max-width: 100%;
     margin: 0 0 1.8rem;
+  }
 
-    @media (max-width: @breakpoint-md) {
-      margin-left: -@padding-md;
-      margin-right: -@padding-md;
-      max-width: calc(100% + (@padding-md * 2));
-      width: calc(100% + (@padding-md * 2));
-    }
+  .post-content {
 
-    @media (max-width: @breakpoint-sm) {
-      margin-left: -@padding-sm;
-      margin-right: -@padding-sm;
-      max-width: calc(100% + (@padding-sm * 2));
-      width: calc(100% + (@padding-sm * 2));
+    img, video, iframe {
+
+      @media (max-width: @breakpoint-md) {
+        margin-left: -@padding-md;
+        margin-right: -@padding-md;
+        max-width: calc(100% + (@padding-md * 2));
+        width: calc(100% + (@padding-md * 2));
+      }
+
+      @media (max-width: @breakpoint-sm) {
+        margin-left: -@padding-sm;
+        margin-right: -@padding-sm;
+        max-width: calc(100% + (@padding-sm * 2));
+        width: calc(100% + (@padding-sm * 2));
+      }
     }
   }
 
