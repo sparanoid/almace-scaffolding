@@ -288,7 +288,7 @@ foot: |
 * reset `site.base` for local development ([cd46627b](http://github.com/sparanoid/sparanoid.com/commit/cd46627bae8d6f69b84cabb152bf559de6cf6e6e))
 * **feed:** use `<small>` for external link ([69c0abc9](http://github.com/sparanoid/sparanoid.com/commit/69c0abc9ecd5f34208d3458ad99e1b8ec12840b8))
 * **grunt:**
-  * add multiple LESS output support ([568041ec](http://github.com/sparanoid/sparanoid.com/commit/568041ec95070c2e17b198661a0e2e685c96daf4))
+  * add multiple Less output support ([568041ec](http://github.com/sparanoid/sparanoid.com/commit/568041ec95070c2e17b198661a0e2e685c96daf4))
   * new grunt option `--fast`, build site without minification ([073fed50](http://github.com/sparanoid/sparanoid.com/commit/073fed50ccf531b6af7669bcf038229c8849ba1b))
 * **post:** update post “Chinese Copywriting Guidelines” ([3b021f32](http://github.com/sparanoid/sparanoid.com/commit/3b021f3233518038d0d20808a239989b06a3510d))
 * **template:**
@@ -559,7 +559,7 @@ then define your own styles in `custom.less`:
 #### Features
 
 * split configuration files into 3 files for better user experience ([d5db218f](http://github.com/sparanoid/sparanoid.com/commit/d5db218fdb08862c2e736ab5a3a7ba7d4c414184))
-* **style:** make highlighter theme works for all color scheme (hint: LESS color functions) ([5556eef4](http://github.com/sparanoid/sparanoid.com/commit/5556eef4c0dab2458e7e452dd22f45b660355ede))
+* **style:** make highlighter theme works for all color scheme (hint: Less color functions) ([5556eef4](http://github.com/sparanoid/sparanoid.com/commit/5556eef4c0dab2458e7e452dd22f45b660355ede))
 * **template:**
   * move all custom variables to default `_config.yml` ([92a69fb0](http://github.com/sparanoid/sparanoid.com/commit/92a69fb0944451cbb098b9ae2c696d7c2e81d808))
   * use assign statement for post link ([2b79f39b](http://github.com/sparanoid/sparanoid.com/commit/2b79f39babd38a46b594f342c5bd604b54a92347))
@@ -876,7 +876,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Fix the link points to the real location in changelog
 - `Mac OS X` --> `OS X`
 - Disable Champaign Monitor custom domain URL
-- CSS-style variables for LESS
+- CSS-style variables for Less
 - Bump deps versions
 - Update license
 - Simplified homepage copywirting
@@ -1187,7 +1187,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Update post 'Font Zomnk'
 - Update About page with microdata
 - Fix typo
-- Add `.store` style, embed SVG w/ data URI in LESS
+- Add `.store` style, embed SVG w/ data URI in Less
 - Added a workaround solution for yuicompressor bug, media query fix
 - Remove lang variable. More post in English. Better hr styles with data attr.
 - Fix `feed-all.rss` permalink
@@ -1235,7 +1235,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 ## 20 (July 16, 2012) [#][20]
 
 - First commit prepared for v20
-- Remove comments in LESS, `.work-list` minor tweak, remove text-align hook in error page
+- Remove comments in Less, `.work-list` minor tweak, remove text-align hook in error page
 - Remove WOTY specified styles and structures
 - Font updated, index updated, colophon updated, pagination position updated, infinite symbol position updated
 - Update logo size
