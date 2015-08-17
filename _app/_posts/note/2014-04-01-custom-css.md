@@ -7,7 +7,6 @@ scheme-text: "rgba(100, 16, 0, .5)"
 scheme-code: "#fff"
 css: |
   body {
-    font-size: 3vw; /* This scales up the whole page */
     background-image: linear-gradient(to bottom, #fff500, #ff8f00);
   }
 ---
@@ -19,7 +18,6 @@ scheme-text: "rgba(100, 16, 0, .5)"
 scheme-code: "#fff"
 css: |
   body {
-    font-size: 3vw; /* This scales up the whole page */
     background-image: linear-gradient(to bottom, #fff500, #ff8f00);
   }
 ```
