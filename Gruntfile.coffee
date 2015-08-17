@@ -420,6 +420,30 @@ module.exports = (grunt) ->
         options:
           cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/"
 
+    gitclean:
+      options:
+        nonstandard: true
+
+      amsf__core__clean_git:
+        options:
+          cwd: "<%= gitpull.amsf__core__update_remote.options.cwd %>"
+
+      amsf__theme__clean_git:
+        options:
+          cwd: "<%= gitpull.amsf__theme__update_remote.options.cwd %>"
+
+    gitreset:
+      options:
+        mode: "hard"
+
+      amsf__core__reset_git:
+        options:
+          cwd: "<%= gitpull.amsf__core__update_remote.options.cwd %>"
+
+      amsf__theme__reset_git:
+        options:
+          cwd: "<%= gitpull.amsf__theme__update_remote.options.cwd %>"
+
     clean:
       default:
         src: [
@@ -540,11 +564,15 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask "theme-update", "Update current theme from GitHub", [
+    "gitreset:amsf__theme__reset_git"
+    "gitclean:amsf__theme__clean_git"
     "gitpull:amsf__theme__update_remote"
     "theme-upgrade"
   ]
 
   grunt.registerTask "amsf-update", "Upgrade AM", [
+    "gitreset:amsf__core__reset_git"
+    "gitclean:amsf__core__clean_git"
     "gitpull:amsf__core__update_remote"
     "copy:amsf__core__to_app"
   ]
