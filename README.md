@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/sparanoid/almace-scaffolding.svg)](https://travis-ci.org/sparanoid/almace-scaffolding)
 [![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
 
-`AMSF`, a.k.a. **Almace Scaffolding**, a super-fast Jekyll framework. Supports live reloading (Browsersync), LESS, HTML minification, inlined stylesheets and more.
+`AMSF`, a.k.a. **Almace Scaffolding**, a super-fast Jekyll framework. Supports live reloading (Browsersync), Less, HTML minification, inlined stylesheets and more.
 
 -----
 
