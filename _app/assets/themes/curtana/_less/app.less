@@ -12,6 +12,10 @@
 @breakpoint-md: 1000px;
 @breakpoint-sm: 640px;
 @breakpoint-xs: 400px;
+@padding-lg: 16vw;
+@padding-md: 8vw;
+@padding-sm: 4vw;
+@padding-xs: 0;
 
 // Invert color switcher for images and videos
 // :root { filter: invert(100%); }
@@ -39,7 +43,7 @@
 }
 
 body {
-  padding: 0 16%;
+  padding: 0 @padding-lg;
   margin: 0 auto 0;
   font-family: @sans-serif;
   font-size: @base-font-size;
@@ -51,14 +55,14 @@ body {
   transition: all .3s ease .2s;
 
   @media (max-width: @breakpoint-md) {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: @padding-md;
+    padding-right: @padding-md;
     font-size: (@base-font-size * 1.4);
   }
 
   @media (max-width: @breakpoint-sm) {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: @padding-sm;
+    padding-right: @padding-sm;
     font-size: (@base-font-size * 2);
   }
 
@@ -184,7 +188,7 @@ del {
   margin: 0 0 16vmin;
   margin-right: -1.1em;
   margin-left: -1.1em;
-  font-size: 50%;
+  font-size: 60%;
   font-weight: bold;
   letter-spacing: .45em;
   text-transform: uppercase;
@@ -393,6 +397,20 @@ body:hover .latest {
     display: block;
     max-width: 100%;
     margin: 0 0 1.8rem;
+
+    @media (max-width: @breakpoint-md) {
+      margin-left: -@padding-md;
+      margin-right: -@padding-md;
+      max-width: calc(100% + (@padding-md * 2));
+      width: calc(100% + (@padding-md * 2));
+    }
+
+    @media (max-width: @breakpoint-sm) {
+      margin-left: -@padding-sm;
+      margin-right: -@padding-sm;
+      max-width: calc(100% + (@padding-sm * 2));
+      width: calc(100% + (@padding-sm * 2));
+    }
   }
 
   blockquote {
@@ -454,6 +472,20 @@ body:hover .latest {
     background: fade(#08f, 4%);
     // Bouncing scroll fix for iOS
     -webkit-overflow-scrolling: touch;
+
+    @media (max-width: @breakpoint-md) {
+      padding-left: 8vw;
+      padding-right: 8vw;
+      margin-left: -8vw;
+      margin-right: -8vw;
+    }
+
+    @media (max-width: @breakpoint-sm) {
+      padding-left: 4vw;
+      padding-right: 4vw;
+      margin-left: -4vw;
+      margin-right: -4vw;
+    }
   }
 
   // Newsletter subscription form in page "store"
@@ -575,6 +607,19 @@ body:hover .latest {
   img {
     margin: 0;
     box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .05);
+
+    // Reset borwser image width for small screens
+    @media (max-width: @breakpoint-md) {
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: @breakpoint-sm) {
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -663,7 +708,7 @@ body:hover .latest {
 
 .footer {
   padding: 0 0 16vmin;
-  font-size: 72%;
+  font-size: 75%;
   text-transform: lowercase;
 
   ul {
