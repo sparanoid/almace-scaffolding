@@ -1,3 +1,31 @@
+<a name="0.0.34"></a>
+## [0.0.34](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.33...v0.0.34) (2015-08-17)
+
+
+### Bug Fixes
+
+* **grunt:** `strictMath` not enabled for `dist` task ([117cbc9](https://github.com/sparanoid/almace-scaffolding/commit/117cbc9))
+* **post:** avoid the symbol conversion to an Emoji graphic on iOS ([d9d14a9](https://github.com/sparanoid/almace-scaffolding/commit/d9d14a9))
+* **theme:** missing CSS variables for Kramdown ([d665375](https://github.com/sparanoid/almace-scaffolding/commit/d665375))
+
+### Features
+
+* **docs:** LESS => Less ([4adeb27](https://github.com/sparanoid/almace-scaffolding/commit/4adeb27))
+* **grunt:** add missing templates when update AMSF ([c8941f9](https://github.com/sparanoid/almace-scaffolding/commit/c8941f9))
+* **grunt:** use `grunt-postcss` ([c678f33](https://github.com/sparanoid/almace-scaffolding/commit/c678f33))
+* **style:** better code blocks and images size on mobile devices ([524bcf8](https://github.com/sparanoid/almace-scaffolding/commit/524bcf8))
+* **theme:** add custom favicon support ([004b25b](https://github.com/sparanoid/almace-scaffolding/commit/004b25b))
+* **theme:** update theme URL ([588f1ac](https://github.com/sparanoid/almace-scaffolding/commit/588f1ac))
+
+
+### BREAKING CHANGES
+
+* Appending &#xfe0e; to the Unicode-represenation of the reversed arrow will prevent the conversion to an Emoji graphic on iOS.
+Reference:
+- https://github.com/jekyll/jekyll/issues/3751
+- https://twitter.com/jasoncodes/status/590356654790574080
+
+
 <a name="0.0.33"></a>
 ## [0.0.33](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.32...v0.0.33) (2015-08-14)
 
