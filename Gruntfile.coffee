@@ -92,9 +92,11 @@ module.exports = (grunt) ->
         ]
 
     less:
+      options:
+        strictMath: true
+
       serve:
         options:
-          strictMath: true
           sourceMap: true
           outputSourceFiles: true
           dumpLineNumbers: "comments"
