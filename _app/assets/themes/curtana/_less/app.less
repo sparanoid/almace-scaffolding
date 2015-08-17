@@ -399,9 +399,9 @@ body:hover .latest {
     margin: 0 0 1.8rem;
   }
 
-  .post-content {
+  p:not(.browser) {
 
-    img, video, iframe {
+    > img, > video, > iframe {
 
       @media (max-width: @breakpoint-md) {
         margin-left: -@padding-md;
