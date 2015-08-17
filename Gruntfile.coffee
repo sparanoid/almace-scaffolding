@@ -68,7 +68,7 @@ module.exports = (grunt) ->
         files: ["<%= config.assets %>/_less/**/*.less"]
         tasks: [
           "less:serve"
-          "autoprefixer:serve"
+          "postcss:serve"
         ]
         options:
           interrupt: true
@@ -109,14 +109,21 @@ module.exports = (grunt) ->
       dist:
         files: "<%= less.serve.files %>"
 
-    autoprefixer:
+    postcss:
       serve:
         src: "<%= config.assets %>/css/*.css"
         options:
           map: true
+          processors: [
+            require("autoprefixer-core")(browsers: "last 1 versions")
+          ]
 
       dist:
-        src: "<%= autoprefixer.serve.src %>"
+        src: "<%= postcss.serve.src %>"
+        options:
+          processors: [
+            require("autoprefixer-core")(browsers: "last 2 versions")
+          ]
 
     csscomb:
       options:
@@ -491,7 +498,7 @@ module.exports = (grunt) ->
     "clean"
     "copy:serve"
     "less:serve"
-    "autoprefixer:serve"
+    "postcss:serve"
     "jekyll:serve"
     "browserSync"
     "watch"
@@ -549,7 +556,7 @@ module.exports = (grunt) ->
     "uglify"
     "lesslint"
     "less:dist"
-    "autoprefixer:dist"
+    "postcss:dist"
     "csscomb"
     "jekyll:dist"
     "concurrent:dist"
