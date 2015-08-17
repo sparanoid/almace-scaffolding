@@ -6,17 +6,22 @@
 
 <title>{{ amsf_page_title }}{{ amsf_site_title | strip }}</title>
 
-<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Define a description for better SEO result -->
-<meta name=description content="{{ amsf_site_desc | strip }}">
+<meta name="description" content="{{ amsf_site_desc | strip }}">
 
-<link rel=alternate href="{{ amsf_feed_url }}" type=application/atom+xml>
+<link rel="alternate" href="{{ amsf_feed_url }}" type="application/atom+xml">
 
-<link rel=stylesheet href="{{ '/css/app.css?assets-inline' | prepend: amsf_assets }}">
+{% if site.base %}
+  <link rel="icon" href="{{ '/favicon.ico' | prepend: site.base }}">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | prepend: site.base }}">
+{% endif %}
+
+<link rel="stylesheet" href="{{ '/css/app.css?assets-inline' | prepend: amsf_assets }}">
 
 <!-- Canonical links, avoid duplicate content problems -->
-<link rel=canonical href="{{ amsf_page_url }}">
+<link rel="canonical" href="{{ amsf_page_url }}">
 
 <!-- DNS prefetching for static files -->
 {% if page.permalink == '/' %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
