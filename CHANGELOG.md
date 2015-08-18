@@ -1,3 +1,22 @@
+<a name="0.0.35"></a>
+## [0.0.35](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.34...v0.0.35) (2015-08-18)
+
+
+### Bug Fixes
+
+* **docs:** wrong commands ([bdb71ea](https://github.com/sparanoid/almace-scaffolding/commit/bdb71ea))
+* **grunt:** duplicated task ([95b3bbd](https://github.com/sparanoid/almace-scaffolding/commit/95b3bbd))
+* **grunt:** reset repo before updating ([335e009](https://github.com/sparanoid/almace-scaffolding/commit/335e009))
+* **style:** exclude browser image width ([99f247f](https://github.com/sparanoid/almace-scaffolding/commit/99f247f))
+* **theme:** avoid image heading margin offset ([e92543e](https://github.com/sparanoid/almace-scaffolding/commit/e92543e))
+
+### Features
+
+* **docs:** better note ([a2a8250](https://github.com/sparanoid/almace-scaffolding/commit/a2a8250))
+* **theme:** typographic tweaks ([cbc9430](https://github.com/sparanoid/almace-scaffolding/commit/cbc9430))
+
+
+
 <a name="0.0.34"></a>
 ## [0.0.34](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.33...v0.0.34) (2015-08-17)
 
