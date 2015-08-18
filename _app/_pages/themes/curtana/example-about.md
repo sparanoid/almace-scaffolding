@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /curtana-example/
+permalink: /example-about/
 desc: 關於・について・Introduction
 ---
 
