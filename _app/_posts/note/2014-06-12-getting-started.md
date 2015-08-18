@@ -29,6 +29,10 @@ $ grunt serve
 
 Go to the [GitHub repository](https://github.com/sparanoid/almace-scaffolding) for downloads, bug reports, and feature requests.
 
+## Transfer from Jekyll
+
+You can simply copy all posts from your old Jekyll setup into `_app/_posts`, you can also transfer your custom pages into `_app/_pages/`.
+
 ## Upgrading
 
 Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every core and template file untouched. You can use the following command to update Almace Scaffolding core files:
