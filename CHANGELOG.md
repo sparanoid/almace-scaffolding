@@ -40,7 +40,9 @@
 ### BREAKING CHANGES
 
 * Appending to the Unicode-represenation of the reversed arrow will prevent the conversion to an Emoji graphic on iOS.
+
 Reference:
+
 - https://github.com/jekyll/jekyll/issues/3751
 - https://twitter.com/jasoncodes/status/590356654790574080
 
