@@ -2,7 +2,12 @@
 module.exports = (grunt) ->
 
   # Load all grunt tasks
-  require("matchdep").filterDev("grunt-*").forEach grunt.loadNpmTasks
+  require("jit-grunt") grunt,
+    gitclean: "grunt-git"
+    gitclone: "grunt-git"
+    gitpull: "grunt-git"
+    gitreset: "grunt-git"
+    replace: "grunt-text-replace"
 
   # Track tasks load time
   require("time-grunt") grunt
