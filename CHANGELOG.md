@@ -1,3 +1,25 @@
+<a name="0.0.36"></a>
+## [0.0.36](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.35...v0.0.36) (2015-08-19)
+
+
+### Bug Fixes
+
+* **docs:** typos ([8619ec3](https://github.com/sparanoid/almace-scaffolding/commit/8619ec3))
+* **grunt:** `usebanner` not found ([cc245a3](https://github.com/sparanoid/almace-scaffolding/commit/cc245a3))
+
+### Features
+
+* **core:** basic custom styles and scripts support ([2b219d2](https://github.com/sparanoid/almace-scaffolding/commit/2b219d2))
+* **docs:** add simple transfer guide ([bc46c39](https://github.com/sparanoid/almace-scaffolding/commit/bc46c39))
+* **docs:** content update ([ff4d47d](https://github.com/sparanoid/almace-scaffolding/commit/ff4d47d))
+* **grunt:** better grunt task variables naming ([2c31245](https://github.com/sparanoid/almace-scaffolding/commit/2c31245))
+* **grunt:** use jit-grunt for better task performance ([4957c9b](https://github.com/sparanoid/almace-scaffolding/commit/4957c9b))
+* **post:** add new category ([2c6bbeb](https://github.com/sparanoid/almace-scaffolding/commit/2c6bbeb))
+* **theme:** rearrange assets ([16910f5](https://github.com/sparanoid/almace-scaffolding/commit/16910f5))
+* **theme:** update default page templates ([088b814](https://github.com/sparanoid/almace-scaffolding/commit/088b814))
+
+
+
 <a name="0.0.35"></a>
 ## [0.0.35](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.34...v0.0.35) (2015-08-18)
 
