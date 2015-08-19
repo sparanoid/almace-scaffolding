@@ -3,8 +3,10 @@ layout: post
 title: Unique Post Styling via Custom CSS
 category: note
 tags: customization
-scheme-text: "rgba(100, 16, 0, .5)"
-scheme-code: "#fff"
+scheme-text: "#000"
+scheme-link: "#a73300"
+scheme-hover: "#ff4e00"
+scheme-code: "#a73300"
 css: |
   body {
     background-image: linear-gradient(to bottom, #fff500, #ff8f00);
