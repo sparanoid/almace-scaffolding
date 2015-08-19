@@ -2,7 +2,7 @@
 layout: post
 title: Custom Color Scheme
 category: note
-tags: customization
+tags: curtana
 scheme-text: "#0029ff"
 scheme-link: "#ff00b4"
 scheme-hover: "#ff00b4"

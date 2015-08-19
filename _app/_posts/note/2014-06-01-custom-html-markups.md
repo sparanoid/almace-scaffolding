@@ -3,7 +3,7 @@ layout: post
 title: Custom HTML Markups
 category: note
 plugin: intense
-tags: customization
+tags: curtana
 ---
 
 ## `.note`, `.store`, and `.download`

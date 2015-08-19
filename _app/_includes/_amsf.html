@@ -40,7 +40,10 @@
 {% capture amsf_theme_base %}{{ site.theme | prepend: '/themes/' }}{% endcapture %}
 
 <!-- Theme assets base URL -->
-{% capture amsf_assets %}{{ site.theme | prepend: '/themes/' | prepend: site.assets | prepend: site.base }}{% endcapture %}
+{% capture amsf_theme_assets %}{{ site.theme | prepend: '/themes/' | prepend: site.assets | prepend: site.base }}{% endcapture %}
+
+<!-- User assets base URL -->
+{% capture amsf_user_assets %}{{ site.assets | prepend: site.base }}{% endcapture %}
 
 <!-- Feed URL -->
 {% capture amsf_feed_url %}{{ site.feed | prepend: site.base }}{% endcapture %}
