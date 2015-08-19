@@ -21,7 +21,8 @@ module.exports = (grunt) ->
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
-      assets: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>"
+      user_assets: "<%= config.app %>/assets"
+      theme_assets: "<%= config.user_assets %>/themes/<%= config.amsf_theme %>"
       banner: do ->
         banner = "<!--\n"
         banner += " © <%= config.pkg.author %>.\n"
@@ -45,10 +46,10 @@ module.exports = (grunt) ->
     lesslint:
       options:
         csslint:
-          csslintrc: "<%= config.assets %>/_less/.csslintrc"
+          csslintrc: "<%= config.theme_assets %>/_less/.csslintrc"
 
       test:
-        src: ["<%= config.assets %>/_less/**/app*.less"]
+        src: ["<%= config.theme_assets %>/_less/**/app*.less"]
 
     watch:
       options:
@@ -59,13 +60,13 @@ module.exports = (grunt) ->
         tasks: ["coffeelint:gruntfile"]
 
       js:
-        files: ["<%= config.assets %>/_js/**/*.js"]
+        files: ["<%= config.app %>/**/_js/*.js"]
         tasks: ["copy:serve"]
         options:
           interrupt: true
 
       less:
-        files: ["<%= config.assets %>/_less/**/*.less"]
+        files: ["<%= config.app %>/**/_less/*.less"]
         tasks: [
           "less:serve"
           "postcss:serve"
@@ -85,10 +86,18 @@ module.exports = (grunt) ->
             drop_console: true
 
         files: [
-          expand: true
-          cwd: "<%= config.assets %>/_js/"
-          src: ["**/*.js", "!*.min.js"]
-          dest: "<%= config.assets %>/js/"
+          {
+            expand: true
+            cwd: "<%= config.user_assets %>/_js/"
+            src: ["**/*.js", "!*.min.js"]
+            dest: "<%= config.user_assets %>/js/"
+          }
+          {
+            expand: true
+            cwd: "<%= config.theme_assets %>/_js/"
+            src: ["**/*.js", "!*.min.js"]
+            dest: "<%= config.theme_assets %>/js/"
+          }
         ]
 
     less:
@@ -103,9 +112,9 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= config.assets %>/_less/"
+          cwd: "<%= config.theme_assets %>/_less/"
           src: ["**/app*.less"]
-          dest: "<%= config.assets %>/css/"
+          dest: "<%= config.theme_assets %>/css/"
           ext: ".css"
         ]
 
@@ -114,7 +123,7 @@ module.exports = (grunt) ->
 
     postcss:
       serve:
-        src: "<%= config.assets %>/css/*.css"
+        src: "<%= config.theme_assets %>/css/*.css"
         options:
           map:
             inline: false
@@ -131,7 +140,7 @@ module.exports = (grunt) ->
 
     csscomb:
       options:
-        config: "<%= config.assets %>/_less/.csscomb.json"
+        config: "<%= config.theme_assets %>/_less/.csscomb.json"
 
       dist:
         files: [
@@ -270,11 +279,20 @@ module.exports = (grunt) ->
     copy:
       serve:
         files: [
-          expand: true
-          dot: true
-          cwd: "<%= config.assets %>/_js/"
-          src: ["**/*.js"]
-          dest: "<%= config.assets %>/js/"
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.user_assets %>/_js/"
+            src: ["**/*.js"]
+            dest: "<%= config.user_assets %>/js/"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= config.theme_assets %>/_js/"
+            src: ["**/*.js"]
+            dest: "<%= config.theme_assets %>/js/"
+          }
         ]
 
       amsf__core__to_app:
@@ -448,8 +466,9 @@ module.exports = (grunt) ->
       default:
         src: [
           ".tmp"
-          "<%= config.assets %>/css/"
-          "<%= config.assets %>/js/"
+          "<%= config.theme_assets %>/css/"
+          "<%= config.theme_assets %>/js/"
+          "<%= config.user_assets %>/js/"
         ]
 
       jekyllMetadata:
