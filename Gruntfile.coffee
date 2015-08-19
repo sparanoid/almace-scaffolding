@@ -8,6 +8,7 @@ module.exports = (grunt) ->
     gitpull: "grunt-git"
     gitreset: "grunt-git"
     replace: "grunt-text-replace"
+    usebanner: "grunt-banner"
 
   # Track tasks load time
   require("time-grunt") grunt
