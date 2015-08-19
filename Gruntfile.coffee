@@ -427,7 +427,6 @@ module.exports = (grunt) ->
           }
         ]
 
-
     gitclone:
       amsf__core__add_remote:
         options:
@@ -479,15 +478,20 @@ module.exports = (grunt) ->
       default:
         src: [
           ".tmp"
+          "<%= config.dist %>"
+          "<%= config.app %>/.jekyll-metadata"
           "<%= amsf.theme.assets %>/css/"
           "<%= amsf.theme.assets %>/js/"
+          "<%= amsf.user.assets %>/css/"
           "<%= amsf.user.assets %>/js/"
         ]
 
-      jekyllMetadata:
+      amsf__theme__cleanup:
         src: [
-          "<%= config.dist %>"
-          "<%= config.app %>/.jekyll-metadata"
+          "<%= copy.amsf__theme__to_cache.files.1.cwd %>"
+          "<%= copy.amsf__theme__to_cache.files.2.cwd %>"
+          "<%= copy.amsf__theme__to_cache.files.3.cwd %>"
+          "<%= copy.amsf__theme__to_cache.files.4.cwd %>"
         ]
 
     cleanempty:
@@ -563,7 +567,7 @@ module.exports = (grunt) ->
         push: false
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
-    "clean"
+    "clean:default"
     "copy:serve"
     "less:serve"
     "postcss:serve"
@@ -599,6 +603,7 @@ module.exports = (grunt) ->
     "gitreset:amsf__theme__reset_git"
     "gitclean:amsf__theme__clean_git"
     "gitpull:amsf__theme__update_remote"
+    "clean:amsf__theme__cleanup"
     "theme-upgrade"
   ]
 
@@ -618,7 +623,7 @@ module.exports = (grunt) ->
       ]
 
   grunt.registerTask "build", "Build site with jekyll", [
-    "clean"
+    "clean:default"
     "coffeelint"
     "uglify"
     "lesslint"
