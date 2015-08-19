@@ -3,6 +3,8 @@ module.exports = (grunt) ->
 
   # Load all grunt tasks
   require("jit-grunt") grunt,
+    "bump-commit": "grunt-bump"
+    "bump-only": "grunt-bump"
     gitclean: "grunt-git"
     gitclone: "grunt-git"
     gitpull: "grunt-git"
@@ -264,11 +266,11 @@ module.exports = (grunt) ->
         stdout: true
 
       # Direct sync compiled static files to remote server
-      syncServer:
+      sync_server:
         command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
 
       # Copy compiled static files to local directory for further post-process
-      syncLocal:
+      sync_local:
         command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= jekyll.dist.options.dest %>/ /Users/sparanoid/Workspace/Sites/sparanoid.com<%= config.base %> > rsync.log"
 
       # Sync images to a separate CloudFront
@@ -640,7 +642,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "sync", "Build site + rsync static files to remote server", [
     "build"
-    "shell:syncLocal"
+    "shell:sync_local"
   ]
 
   grunt.registerTask "s3", "Sync image assets with `s3cmd`", [
