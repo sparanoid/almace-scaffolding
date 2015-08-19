@@ -37,6 +37,11 @@ permalink: /
       {% include themes/{{ site.theme }}/includes/page-item.html %}
     {% endfor %}
 
+    <h2>Theme Curtana</h2>
+    {% for post in site.tags.curtana %}
+      {% include themes/{{ site.theme }}/includes/page-item.html %}
+    {% endfor %}
+
     <h2>Deployment</h2>
     {% for post in site.tags.deployment %}
       {% include themes/{{ site.theme }}/includes/page-item.html %}
