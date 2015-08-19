@@ -453,6 +453,7 @@ module.exports = (grunt) ->
     gitclean:
       options:
         nonstandard: true
+        directories: true
 
       amsf__core__clean_git:
         options:
