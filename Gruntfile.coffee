@@ -12,23 +12,27 @@ module.exports = (grunt) ->
     config:
       cfg: grunt.file.readYAML("_config.yml")
       pkg: grunt.file.readJSON("package.json")
-      amsf_cfg: grunt.file.readYAML("_amsf/_config.yml")
-      amsf_base: "_amsf"
-      amsf_core: "<%= config.amsf_base %>/core"
-      amsf_theme: "<%= config.amsf_cfg.theme %>"
-      amsf_theme_new: grunt.option('theme') or "<%= config.amsf_theme %>"
-      amsf_theme_new_author: grunt.option('user') or "amsf"
+      amsf: grunt.file.readYAML("_amsf/_config.yml")
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
-      user_assets: "<%= config.app %>/assets"
-      theme_assets: "<%= config.user_assets %>/themes/<%= config.amsf_theme %>"
       banner: do ->
         banner = "<!--\n"
         banner += " © <%= config.pkg.author %>.\n"
         banner += " <%= config.pkg.name %> - v<%= config.pkg.version %>\n"
         banner += " -->"
         banner
+
+    amsf:
+      base: "_amsf"
+      core: "<%= amsf.base %>/core"
+      user:
+        assets: "<%= config.app %>/assets"
+      theme:
+        assets: "<%= amsf.user.assets %>/themes/<%= amsf.theme.current %>"
+        current: "<%= config.amsf.theme %>"
+        new_name: grunt.option('theme') or "<%= amsf.theme.current %>"
+        new_author: grunt.option('user') or "amsf"
 
     coffeelint:
       options:
@@ -46,10 +50,10 @@ module.exports = (grunt) ->
     lesslint:
       options:
         csslint:
-          csslintrc: "<%= config.theme_assets %>/_less/.csslintrc"
+          csslintrc: "<%= amsf.theme.assets %>/_less/.csslintrc"
 
       test:
-        src: ["<%= config.theme_assets %>/_less/**/app*.less"]
+        src: ["<%= amsf.theme.assets %>/_less/**/app*.less"]
 
     watch:
       options:
@@ -88,15 +92,15 @@ module.exports = (grunt) ->
         files: [
           {
             expand: true
-            cwd: "<%= config.user_assets %>/_js/"
+            cwd: "<%= amsf.user.assets %>/_js/"
             src: ["**/*.js", "!*.min.js"]
-            dest: "<%= config.user_assets %>/js/"
+            dest: "<%= amsf.user.assets %>/js/"
           }
           {
             expand: true
-            cwd: "<%= config.theme_assets %>/_js/"
+            cwd: "<%= amsf.theme.assets %>/_js/"
             src: ["**/*.js", "!*.min.js"]
-            dest: "<%= config.theme_assets %>/js/"
+            dest: "<%= amsf.theme.assets %>/js/"
           }
         ]
 
@@ -112,9 +116,9 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= config.theme_assets %>/_less/"
+          cwd: "<%= amsf.theme.assets %>/_less/"
           src: ["**/app*.less"]
-          dest: "<%= config.theme_assets %>/css/"
+          dest: "<%= amsf.theme.assets %>/css/"
           ext: ".css"
         ]
 
@@ -123,7 +127,7 @@ module.exports = (grunt) ->
 
     postcss:
       serve:
-        src: "<%= config.theme_assets %>/css/*.css"
+        src: "<%= amsf.theme.assets %>/css/*.css"
         options:
           map:
             inline: false
@@ -140,7 +144,7 @@ module.exports = (grunt) ->
 
     csscomb:
       options:
-        config: "<%= config.theme_assets %>/_less/.csscomb.json"
+        config: "<%= amsf.theme.assets %>/_less/.csscomb.json"
 
       dist:
         files: [
@@ -240,13 +244,13 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.amsf_theme %>.yml,_config.dev.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.dev.yml"
           drafts: true
           future: true
 
       dist:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= config.amsf_theme %>.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml"
           dest: "<%= config.dist %><%= config.base %>"
 
     shell:
@@ -282,16 +286,16 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            cwd: "<%= config.user_assets %>/_js/"
+            cwd: "<%= amsf.user.assets %>/_js/"
             src: ["**/*.js"]
-            dest: "<%= config.user_assets %>/js/"
+            dest: "<%= amsf.user.assets %>/js/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.theme_assets %>/_js/"
+            cwd: "<%= amsf.theme.assets %>/_js/"
             src: ["**/*.js"]
-            dest: "<%= config.theme_assets %>/js/"
+            dest: "<%= amsf.theme.assets %>/js/"
           }
         ]
 
@@ -300,7 +304,7 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_core %>/"
+            cwd: "<%= amsf.core %>/"
             src: [
               ".*"
               "*.json"
@@ -318,7 +322,7 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_core %>/_app/"
+            cwd: "<%= amsf.core %>/_app/"
             src: [
               "*.xml"
               "*.txt"
@@ -328,7 +332,7 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_core %>/_app/_includes/"
+            cwd: "<%= amsf.core %>/_app/_includes/"
             src: [
               "_amsf.html"
             ]
@@ -337,7 +341,7 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_core %>/_app/_layouts/"
+            cwd: "<%= amsf.core %>/_app/_layouts/"
             src: ["**"]
             dest: "<%= config.app %>/_layouts/"
           }
@@ -346,72 +350,72 @@ module.exports = (grunt) ->
       amsf__theme__to_app:
         files: [
           {
-            src: ["<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/config.yml"]
-            dest: "<%= config.app %>/_data/<%= config.amsf_theme_new %>.yml"
+            src: ["<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/config.yml"]
+            dest: "<%= config.app %>/_data/<%= amsf.theme.new_name %>.yml"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/includes/"
+            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/includes/"
             src: ["**"]
-            dest: "<%= config.app %>/_includes/themes/<%= config.amsf_theme_new %>/includes/"
+            dest: "<%= config.app %>/_includes/themes/<%= amsf.theme.new_name %>/includes/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/layouts/"
+            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/layouts/"
             src: ["**"]
-            dest: "<%= config.app %>/_includes/themes/<%= config.amsf_theme_new %>/layouts/"
+            dest: "<%= config.app %>/_includes/themes/<%= amsf.theme.new_name %>/layouts/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/assets/"
+            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/assets/"
             src: ["**"]
-            dest: "<%= config.app %>/assets/themes/<%= config.amsf_theme_new %>/"
+            dest: "<%= config.app %>/assets/themes/<%= amsf.theme.new_name %>/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/pages/"
+            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/pages/"
             src: ["**"]
-            dest: "<%= config.app %>/_pages/themes/<%= config.amsf_theme_new %>/"
+            dest: "<%= config.app %>/_pages/themes/<%= amsf.theme.new_name %>/"
           }
         ]
 
       amsf__theme__to_cache:
         files: [
           {
-            src: ["<%= config.app %>/_data/<%= config.amsf_theme %>.yml"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/config.yml"
+            src: ["<%= config.app %>/_data/<%= amsf.theme.current %>.yml"]
+            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/config.yml"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/includes/"
+            cwd: "<%= config.app %>/_includes/themes/<%= amsf.theme.current %>/includes/"
             src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/includes/"
+            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/includes/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.app %>/_includes/themes/<%= config.amsf_theme %>/layouts/"
+            cwd: "<%= config.app %>/_includes/themes/<%= amsf.theme.current %>/layouts/"
             src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/layouts/"
+            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/layouts/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.app %>/assets/themes/<%= config.amsf_theme %>/"
+            cwd: "<%= config.app %>/assets/themes/<%= amsf.theme.current %>/"
             src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/assets/"
+            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/assets/"
           }
           {
             expand: true
             dot: true
-            cwd: "<%= config.app %>/_pages/themes/<%= config.amsf_theme %>/"
+            cwd: "<%= config.app %>/_pages/themes/<%= amsf.theme.current %>/"
             src: ["**"]
-            dest: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/pages/"
+            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/pages/"
           }
         ]
 
@@ -421,22 +425,22 @@ module.exports = (grunt) ->
         options:
           repository: "https://github.com/sparanoid/almace-scaffolding.git"
           branch: "master"
-          directory: "<%= config.amsf_base %>/core/"
+          directory: "<%= amsf.base %>/core/"
 
       amsf__theme__add_remote:
         options:
-          repository: "https://github.com/<%= config.amsf_theme_new_author %>/amsf-<%= config.amsf_theme_new %>.git"
+          repository: "https://github.com/<%= amsf.theme.new_author %>/amsf-<%= amsf.theme.new_name %>.git"
           branch: "master"
-          directory: "<%= config.amsf_base %>/themes/<%= config.amsf_theme_new %>/"
+          directory: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/"
 
     gitpull:
       amsf__core__update_remote:
         options:
-          cwd: "<%= config.amsf_base %>/core/"
+          cwd: "<%= amsf.base %>/core/"
 
       amsf__theme__update_remote:
         options:
-          cwd: "<%= config.amsf_base %>/themes/<%= config.amsf_theme %>/"
+          cwd: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/"
 
     gitclean:
       options:
@@ -466,9 +470,9 @@ module.exports = (grunt) ->
       default:
         src: [
           ".tmp"
-          "<%= config.theme_assets %>/css/"
-          "<%= config.theme_assets %>/js/"
-          "<%= config.user_assets %>/js/"
+          "<%= amsf.theme.assets %>/css/"
+          "<%= amsf.theme.assets %>/js/"
+          "<%= amsf.user.assets %>/js/"
         ]
 
       jekyllMetadata:
@@ -483,12 +487,12 @@ module.exports = (grunt) ->
 
     replace:
       amsf__theme__update_config:
-        src: ["<%= config.amsf_base %>/_config.yml"]
-        dest: "<%= config.amsf_base %>/_config.yml"
+        src: ["<%= amsf.base %>/_config.yml"]
+        dest: "<%= amsf.base %>/_config.yml"
         replacements: [
           {
             from: /(theme:)( +)(.+)/g
-            to: "$1$2<%= config.amsf_theme_new %>"
+            to: "$1$2<%= amsf.theme.new_name %>"
           }
         ]
 
