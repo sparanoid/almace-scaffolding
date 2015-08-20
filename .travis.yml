@@ -6,7 +6,7 @@ node_js:
   - "0.12"
   - iojs
 before_install:
-  - rvm use 2.2.2 --fuzzy
+  - rvm use 2.2.2 --install --fuzzy
   - bundle install
 before_script:
   - npm install -g grunt-cli
