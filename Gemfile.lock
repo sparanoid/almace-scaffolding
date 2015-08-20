@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    celluloid (0.16.1)
+    celluloid (0.16.0)
       timers (~> 4.0.0)
     colorator (0.1)
     ffi (1.9.10)
