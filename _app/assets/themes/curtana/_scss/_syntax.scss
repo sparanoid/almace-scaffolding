@@ -1,0 +1,96 @@
+// Pygments highlight theme
+// https://github.com/mojombo/tpw/blob/master/css/syntax.css
+// https://github.com/less/less.js/issues/2071
+
+// Text color function
+.code-text (@link, @text) when (lightness(@link) >= 50%) and (lightness(@link) >= lightness(@text)) {
+  @return-color: lighten(@link, 20%);
+  @return-value: 30%;
+}
+.code-text (@link, @text) when (lightness(@link) >= 50%) and (lightness(@link) < lightness(@text)) {
+  @return-color: lighten(@text, 20%);
+  @return-value: 30%;
+}
+.code-text (@link, @text) when (lightness(@link) < 50%) and (lightness(@link) >= lightness(@text)) {
+  @return-color: darken(@link, 6%);
+  @return-value: 40%;
+}
+.code-text (@link, @text) when (lightness(@link) < 50%) and (lightness(@link) < lightness(@text)) {
+  @return-color: darken(@text, 6%);
+  @return-value: 40%;
+}
+
+// Background color function
+.code-bg (@v) when (lightness(@v) >= 50%) {
+  @return-bg: mix(#000, lighten(@v, 30%), 10%);
+}
+.code-bg (@v) when (lightness(@v) < 50%) {
+  @return-bg: mix(#fff, darken(@v, 10%), 70%);
+}
+
+.highlight,
+.highlighter-rouge {
+
+  pre    { .code-bg(@link-color); background: fade(@return-bg, 10%); }
+  code   { .code-text(@link-color, @text-color); color: mix(#888888, @return-color, @return-value); } // Normal code
+
+  .c     { .code-text(@link-color, @text-color); color: mix(#999988, @return-color, @return-value); font-style: italic } // Comment
+  .err   { .code-text(@link-color, @text-color); color: mix(#a61717, @return-color, @return-value); background-color: #e3d2d2 } // Error
+  .cm    { .code-text(@link-color, @text-color); color: mix(#999988, @return-color, @return-value); font-style: italic } // Comment.Multiline
+  .cp    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); font-weight: bold } // Comment.Preproc
+  .c1    { .code-text(@link-color, @text-color); color: mix(#999988, @return-color, @return-value); font-style: italic } // Comment.Single
+  .cs    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); font-weight: bold; font-style: italic } // Comment.Special
+  .gd    { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #ffdddd } // Generic.Deleted
+  .gd .x { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #ffaaaa } // Generic.Deleted.Specific
+  .gr    { .code-text(@link-color, @text-color); color: mix(#aa0000, @return-color, @return-value); } // Generic.Error
+  .gh    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); } // Generic.Heading
+  .gi    { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #ddffdd } // Generic.Inserted
+  .gi .x { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #aaffaa } // Generic.Inserted.Specific
+  .go    { .code-text(@link-color, @text-color); color: mix(#888888, @return-color, @return-value); } // Generic.Output
+  .gp    { .code-text(@link-color, @text-color); color: mix(#555555, @return-color, @return-value); } // Generic.Prompt
+  .gu    { .code-text(@link-color, @text-color); color: mix(#aaaaaa, @return-color, @return-value); } // Generic.Subheading
+  .gt    { .code-text(@link-color, @text-color); color: mix(#aa0000, @return-color, @return-value); } // Generic.Traceback
+  .kt    { .code-text(@link-color, @text-color); color: mix(#445588, @return-color, @return-value); font-weight: bold } // Keyword.Type
+  .m     { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number
+  .s     { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String
+  .na    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Attribute
+  .nb    { .code-text(@link-color, @text-color); color: mix(#0086B3, @return-color, @return-value); } // Name.Builtin
+  .nc    { .code-text(@link-color, @text-color); color: mix(#445588, @return-color, @return-value); font-weight: bold } // Name.Class
+  .no    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Constant
+  .ni    { .code-text(@link-color, @text-color); color: mix(#800080, @return-color, @return-value); } // Name.Entity
+  .ne    { .code-text(@link-color, @text-color); color: mix(#990000, @return-color, @return-value); font-weight: bold } // Name.Exception
+  .nf    { .code-text(@link-color, @text-color); color: mix(#990000, @return-color, @return-value); font-weight: bold } // Name.Function
+  .nn    { .code-text(@link-color, @text-color); color: mix(#555555, @return-color, @return-value); } // Name.Namespace
+  .nt    { .code-text(@link-color, @text-color); color: mix(#000080, @return-color, @return-value); } // Name.Tag
+  .nv    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable
+  .w     { .code-text(@link-color, @text-color); color: mix(#bbbbbb, @return-color, @return-value); } // Text.Whitespace
+  .mf    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Float
+  .mh    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Hex
+  .mi    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Integer
+  .mo    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Oct
+  .sb    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Backtick
+  .sc    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Char
+  .sd    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Doc
+  .s2    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Double
+  .se    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Escape
+  .sh    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Heredoc
+  .si    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Interpol
+  .sx    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Other
+  .sr    { .code-text(@link-color, @text-color); color: mix(#009926, @return-color, @return-value); } // Literal.String.Regex
+  .s1    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Single
+  .ss    { .code-text(@link-color, @text-color); color: mix(#990073, @return-color, @return-value); } // Literal.String.Symbol
+  .bp    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); } // Name.Builtin.Pseudo
+  .vc    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable.Class
+  .vg    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable.Global
+  .vi    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable.Instance
+  .il    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Integer.Long
+  .k     { font-weight: bold } // Keyword
+  .o     { font-weight: bold } // Operator
+  .gs    { font-weight: bold } // Generic.Strong
+  .kc    { font-weight: bold } // Keyword.Constant
+  .kd    { font-weight: bold } // Keyword.Declaration
+  .kp    { font-weight: bold } // Keyword.Pseudo
+  .kr    { font-weight: bold } // Keyword.Reserved
+  .ow    { font-weight: bold } // Operator.Word
+  .ge    { font-style: italic } // Generic.Emph
+}

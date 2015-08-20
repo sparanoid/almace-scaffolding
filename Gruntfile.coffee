@@ -86,6 +86,15 @@ module.exports = (grunt) ->
         options:
           interrupt: true
 
+      sass:
+        files: ["<%= config.app %>/**/_scss/*.scss"]
+        tasks: [
+          "sass:serve"
+          "postcss:serve"
+        ]
+        options:
+          interrupt: true
+
       jekyll:
         files: ["<%= config.app %>/**/*", "!_*"]
         tasks: ['jekyll:serve']
@@ -132,6 +141,25 @@ module.exports = (grunt) ->
 
       dist:
         files: "<%= less.serve.files %>"
+
+    sass:
+      options:
+        precision: 6
+
+      serve:
+        options:
+          sourceMap: true
+
+        files: [
+          expand: true
+          cwd: "<%= amsf.theme.assets %>/_scss/"
+          src: ["**/app*.scss"]
+          dest: "<%= amsf.theme.assets %>/css/"
+          ext: ".css"
+        ]
+
+      dist:
+        files: "<%= sass.serve.files %>"
 
     postcss:
       serve:
@@ -570,6 +598,7 @@ module.exports = (grunt) ->
     "clean:default"
     "copy:serve"
     "less:serve"
+    "sass:serve"
     "postcss:serve"
     "jekyll:serve"
     "browserSync"
@@ -628,6 +657,7 @@ module.exports = (grunt) ->
     "uglify"
     "lesslint"
     "less:dist"
+    "sass:dist"
     "postcss:dist"
     "csscomb"
     "jekyll:dist"
