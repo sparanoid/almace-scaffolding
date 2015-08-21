@@ -248,6 +248,15 @@ This allow your user to define page / post specific CSS blocks in front-matter d
 {% raw %}{{ amsf_page_css }}{% endraw %}
 ```
 
+### Google Analytics Support
+
+This allow your user to be able to use Google Analytics for their site, tracking ID can be changed in config file:
+
+```html
+<!-- Google Analytics tracking code -->
+{{ amsf_google_analytics }}
+```
+
 ## Publishing Themes
 
 You really like your custom design and wanna show it off to the world? Cool, you can create (pack) you own theme by the following command:
