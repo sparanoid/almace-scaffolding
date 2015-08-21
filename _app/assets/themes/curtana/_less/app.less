@@ -312,7 +312,7 @@ body:hover .latest {
   }
 
   p {
-    margin: 0 0 1.6rem;
+    margin-bottom: 1.6rem;
     line-height: (@base-line-height * 1.2);
   }
 
@@ -422,10 +422,22 @@ body:hover .latest {
   blockquote {
     position: relative;
     margin-bottom: 2.8rem;
+    margin-left: calc(-.8em - 2px);
+
+    @media (max-width: @breakpoint-sm) {
+      margin-left: 0;
+    }
 
     > p {
       padding-left: .8em;
       border-left: 2px solid;
+
+      @media (max-width: @breakpoint-sm) {
+        padding-left: calc(4vw - 2px);
+        padding-right: 4vw;
+        margin-left: -4vw;
+        margin-right: -4vw;
+      }
     }
 
     footer {
@@ -565,9 +577,9 @@ body:hover .latest {
   }
 }
 
-// Fix empty space when a paragraph starts with some asian punctuation marks
-.margin-fix:first-letter {
-  margin-left: -.6em;
+// Fix empty space when a paragraph starts with quote marks and some asian punctuation marks
+.leading-indent-fix {
+  text-indent: -.39em;
 }
 
 // Tweet button margin fix
@@ -634,7 +646,15 @@ body:hover .latest {
 .store,
 .download {
   padding-left: .8em;
+  margin-left: calc(-.8em - 2px);
   border-left: 2px solid @link-color;
+
+  @media (max-width: @breakpoint-sm) {
+    padding-left: calc(4vw - 2px);
+    padding-right: 4vw;
+    margin-left: -4vw;
+    margin-right: -4vw;
+  }
 }
 
 // Reference notes and links in post
