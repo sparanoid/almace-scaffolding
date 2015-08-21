@@ -74,6 +74,10 @@ This is the 2^(nd) time.
 
 This[^1] is[^2] a sentence[^3].
 
+## ID 日本語タイトル
+
+Expected id should be `id-ri-ben-yu-taitoru`.
+
 ## ID 中文標題
 
 Expected id should be `id-zhong-wen-biao-ti`.
