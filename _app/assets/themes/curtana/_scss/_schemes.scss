@@ -1,0 +1,54 @@
+// Custom color schemes
+
+// Change @link-color can change to whole theme color scheme
+// All other vaiables in `app.less` can be overwritten here
+
+// tan #D2B48C rgb(210,180,140)
+// @link-color: darken(@background-color, 50%);
+// @background-color: tan;
+// @text-color: darken(@background-color, 30%);
+
+// mediumvioletred #C71585 rgb(199,21,133)
+// @link-color: mediumvioletred;
+// @background-color: #fff;
+// @text-color: #000;
+
+// orangered #FF4500 rgb(255,69,0)
+// @link-color: orangered;
+// @background-color: #fff;
+// @text-color: #000;
+
+// indigo (invert) #4B0082 rgb(75,0,130)
+// @link-color: #fff;
+// @background-color: indigo;
+// @text-color: lighten(@background-color, 60%);
+
+// indigo #4B0082 rgb(75,0,130)
+// @link-color: indigo;
+// @background-color: #fff;
+// @text-color: #000;
+
+// limegreen #32CD32 rgb(rgb(50,205,50))
+// @link-color: limegreen;
+// @background-color: #fff;
+// @text-color: darken(@link-color, 30%);
+
+// yellow #FFFF00 rgb(255,255,0)
+// @link-color: #000;
+// @background-color: yellow;
+// @text-color: darken(@background-color, 40%);
+
+// paleturquoise #AFEEEE rgb(175,238,238)
+// @link-color: darken(@background-color, 60%);
+// @background-color: paleturquoise;
+// @text-color: darken(@background-color, 50%);
+
+// crimson #DC143C rgb(220,20,60) × gold #FFD700 rgb(255,215,0)
+// @link-color: crimson;
+// @background-color: gold;
+// @text-color: #000;
+
+// Alternative title color switch
+// Uncomment the following style will enalbe alternative post title color, this is useful when you're using the custom theme from above.
+// .content { .list h2 a, header h1, header h1 a { color: @link-color; } }
+// .external span { background: @link-color; }

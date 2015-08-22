@@ -1,0 +1,49 @@
+// Plugn-Ins
+
+// intense.js
+.loaded {
+
+  .intense-wrap {
+
+    article p > img:not(.nointense) {
+      cursor: zoom-in;
+    }
+  }
+
+  &.intense-open {
+    cursor: zoom-out;
+  }
+}
+
+// GitHub Gist
+.gist {
+  font-size: 80% !important;
+
+  code, pre {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .gist-data {
+    font-family: $monospace !important;
+
+    .file-data {
+      font-size: 100% !important;
+
+      > table {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  // Monospace fonts look bigger than normal fonts, so make it smaller.
+  .highlight {
+    font-size: 90% !important;
+  }
+
+  .markdown-body {
+    font-size: 100% !important;
+    padding: 1em !important;
+  }
+}
