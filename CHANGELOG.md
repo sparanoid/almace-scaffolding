@@ -29,7 +29,7 @@
 
 ### BREAKING CHANGES
 
-* S: this may make all your posts reappeared in some RSS readers, sorry for the inconvenience.
+* This may make all your posts reappeared in some RSS readers, sorry for the inconvenience.
 
 
 <a name="0.0.36"></a>
