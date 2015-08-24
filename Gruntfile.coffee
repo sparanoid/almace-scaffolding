@@ -342,8 +342,9 @@ module.exports = (grunt) ->
             dot: true
             cwd: "<%= amsf.core %>/_app/"
             src: [
-              "*.xml"
+              "*.json"
               "*.txt"
+              "*.xml"
             ]
             dest: "<%= config.app %>/"
           }
