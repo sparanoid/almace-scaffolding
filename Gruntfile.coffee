@@ -200,6 +200,15 @@ module.exports = (grunt) ->
           dest: "<%= config.dist %>/"
         ]
 
+    minjson:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.json"
+          dest: "<%= config.dist %>/"
+        ]
+
     cssmin:
       dist:
         options:
@@ -285,6 +294,7 @@ module.exports = (grunt) ->
         tasks: [
           "htmlmin"
           "xmlmin"
+          "minjson"
           "cssmin"
         ]
 
