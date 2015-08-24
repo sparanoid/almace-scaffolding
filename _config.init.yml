@@ -87,7 +87,7 @@ download:       http://dl.sparanoid.com
 
 # Google Analytics tracking code
 google_analytics:
-  enabled:      true
+  enabled:      false
   id:           UA-xxxxxxx
   url:          //www.google-analytics.com/analytics.js
 
