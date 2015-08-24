@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started
 category: note
-tag: getting-started
+tags: getting-started
 ---
 
 ## Requirements
