@@ -55,6 +55,13 @@ redcarpet:
     - tables
 
 #
+# Jekyll plugins
+#
+
+gems:
+  - jekyll-last-modified-at
+
+#
 # Almace Scaffolding settings
 #
 
