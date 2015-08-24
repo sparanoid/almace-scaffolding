@@ -11,9 +11,9 @@ permalink: /feed.xml
   <subtitle>{{ site.description }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   {% assign site_domain = site.url | replace:'http://', '' | replace:'https://', '' %}
-  <id>tag:{{ site_domain }},2005:/</id>
-  <link rel="alternate" type="text/html" hreflang="en" href="{{ amsf_site_base }}/"/>
-  <link rel="self" type="application/atom+xml" href="{{ site.feed | prepend: amsf_site_base }}"/>
+  <id>{{ site.feed | prepend: amsf_site_base | xml_escape }}</id>
+  <link rel="alternate" type="text/html" hreflang="en" href="{{ amsf_site_base }}/" />
+  <link rel="self" type="application/atom+xml" href="{{ site.feed | prepend: amsf_site_base }}" />
   <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.data.authors.default.name }}</rights>
 
   <author>
@@ -46,8 +46,8 @@ permalink: /feed.xml
 
       <entry>
         <title>{{ post.title | strip_html | xml_escape }}</title>
-        <id>tag:{{ site.base | prepend: site_domain }},{{ post.date | date: "%Y" }}:{{ post.id }}/</id>
-        <link rel="alternate" type="text/html" href="{{ entry_link }}"/>
+        <id>{{ post.url | prepend: amsf_site_base | xml_escape }}</id>
+        <link rel="alternate" type="text/html" href="{{ entry_link }}" />
         <published>{{ post.date | date_to_xmlschema }}</published>
 
         {% if post.last_modified_at %}
