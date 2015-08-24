@@ -1,3 +1,37 @@
+<a name="0.0.37"></a>
+## [0.0.37](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.36...v0.0.37) (2015-08-24)
+
+
+### Bug Fixes
+
+* **bundle:** celluloid release was pulled (yanked) ([78d8f3d](https://github.com/sparanoid/almace-scaffolding/commit/78d8f3d))
+* **grunt:** remove untracked directories when cleaning cache ([2486cac](https://github.com/sparanoid/almace-scaffolding/commit/2486cac))
+* **post:** wrong URL ([2c5506a](https://github.com/sparanoid/almace-scaffolding/commit/2c5506a))
+* **style:** some images not stretched on mobile devices ([6776c4b](https://github.com/sparanoid/almace-scaffolding/commit/6776c4b))
+
+### Features
+
+* **grunt:** cleanup theme files before updating ([21099b7](https://github.com/sparanoid/almace-scaffolding/commit/21099b7))
+* **grunt:** minify JSON for production ([b26e182](https://github.com/sparanoid/almace-scaffolding/commit/b26e182))
+* **grunt:** watch config changes ([eeb9e38](https://github.com/sparanoid/almace-scaffolding/commit/eeb9e38))
+* **jekyll:** include `jekyll-last-modified-at` by default ([6cf59bd](https://github.com/sparanoid/almace-scaffolding/commit/6cf59bd))
+* **sitemap:** hide posts with `hidden` attributes ([a81046b](https://github.com/sparanoid/almace-scaffolding/commit/a81046b))
+* **style:** list minor tweaks ([5d0e9f4](https://github.com/sparanoid/almace-scaffolding/commit/5d0e9f4))
+* **tempalte:** update Atom feed `id` tags ([0553e2d](https://github.com/sparanoid/almace-scaffolding/commit/0553e2d))
+* **template:** add Google Analytics support ([adde9c7](https://github.com/sparanoid/almace-scaffolding/commit/adde9c7))
+* **template:** add JSON output support ([8c88fec](https://github.com/sparanoid/almace-scaffolding/commit/8c88fec))
+* **template:** remove excerpt feed ([554d3ba](https://github.com/sparanoid/almace-scaffolding/commit/554d3ba))
+* **theme:** simplify custom styles ([0362e62](https://github.com/sparanoid/almace-scaffolding/commit/0362e62))
+* update Atom feed / sitemap structure ([a5ca52b](https://github.com/sparanoid/almace-scaffolding/commit/a5ca52b))
+* **theme:** update blockquotes style ([99ffe5a](https://github.com/sparanoid/almace-scaffolding/commit/99ffe5a))
+* **travis:** update build notification ([f35c467](https://github.com/sparanoid/almace-scaffolding/commit/f35c467))
+
+
+### BREAKING CHANGES
+
+* S: this may make all your posts reappeared in some RSS readers, sorry for the inconvenience.
+
+
 <a name="0.0.36"></a>
 ## [0.0.36](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.35...v0.0.36) (2015-08-19)
 
