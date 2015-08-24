@@ -38,12 +38,6 @@ permalink: /feed.xml
         {% endif %}
       {% endcapture %}
 
-      {% if post.author %}
-        {% assign author = site.data.authors[post.author] %}
-      {% else %}
-        {% assign author = site.data.authors["default"] %}
-      {% endif %}
-
       <entry>
         <title>{{ post.title | strip_html | xml_escape }}</title>
         <id>{{ post.url | prepend: amsf_site_base | xml_escape }}</id>

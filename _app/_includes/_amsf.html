@@ -1,4 +1,13 @@
 {% comment %}
+  Post author meta
+{% endcomment %}
+{% if post.author %}
+  {% assign author = site.data.authors[post.author] %}
+{% else %}
+  {% assign author = site.data.authors["default"] %}
+{% endif %}
+
+{% comment %}
   Page author meta
 {% endcomment %}
 {% if page.author %}

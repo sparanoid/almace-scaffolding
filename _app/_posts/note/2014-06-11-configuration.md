@@ -2,7 +2,7 @@
 layout: post
 title: Configuration
 category: note
-tag: getting-started
+tags: getting-started
 ---
 
 ## Configuration SettingsPermalink
