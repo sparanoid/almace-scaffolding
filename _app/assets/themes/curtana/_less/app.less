@@ -338,6 +338,8 @@ body:hover .latest {
       // Override margin from article img
       svg,
       img {
+        // avoid images inside .browser stretched by global img styles
+        margin: 0;
         margin-bottom: .3em;
 
         @media (max-width: @breakpoint-sm) {
@@ -397,25 +399,19 @@ body:hover .latest {
     display: block;
     max-width: 100%;
     margin: 0 0 1.8rem;
-  }
 
-  p:not(.browser) {
+    @media (max-width: @breakpoint-md) {
+      margin-left: -@padding-md;
+      margin-right: -@padding-md;
+      max-width: calc(100% + (@padding-md * 2));
+      width: calc(100% + (@padding-md * 2));
+    }
 
-    img, video, iframe {
-
-      @media (max-width: @breakpoint-md) {
-        margin-left: -@padding-md;
-        margin-right: -@padding-md;
-        max-width: calc(100% + (@padding-md * 2));
-        width: calc(100% + (@padding-md * 2));
-      }
-
-      @media (max-width: @breakpoint-sm) {
-        margin-left: -@padding-sm;
-        margin-right: -@padding-sm;
-        max-width: calc(100% + (@padding-sm * 2));
-        width: calc(100% + (@padding-sm * 2));
-      }
+    @media (max-width: @breakpoint-sm) {
+      margin-left: -@padding-sm;
+      margin-right: -@padding-sm;
+      max-width: calc(100% + (@padding-sm * 2));
+      width: calc(100% + (@padding-sm * 2));
     }
   }
 
@@ -598,7 +594,6 @@ body:hover .latest {
 .browser {
   position: relative;
   padding-top: 24px;
-  margin: 0 0 1.8rem !important;
   background: rgba(255, 255, 255, .1);
   border-radius: 5px 5px 0 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .05);
@@ -623,18 +618,12 @@ body:hover .latest {
   }
 
   img {
+    // avoid images inside .browser stretched by global img styles
     margin: 0;
     box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .05);
 
     // Reset borwser image width for small screens
-    @media (max-width: @breakpoint-md) {
-      margin: 0;
-      max-width: 100%;
-      width: 100%;
-    }
-
-    @media (max-width: @breakpoint-sm) {
-      margin: 0;
+    @media (max-width: @breakpoint-md), (max-width: @breakpoint-sm) {
       max-width: 100%;
       width: 100%;
     }
