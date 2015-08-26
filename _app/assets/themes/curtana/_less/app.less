@@ -338,8 +338,9 @@ body:hover .latest {
       // Override margin from article img
       svg,
       img {
-        // avoid images inside .browser stretched by global img styles
-        margin: 0;
+        // avoid header stretched by global img styles
+        margin-left: 0;
+        margin-right: 0;
         margin-bottom: .3em;
 
         @media (max-width: @breakpoint-sm) {
@@ -400,6 +401,7 @@ body:hover .latest {
     max-width: 100%;
     margin: 0 0 1.8rem;
 
+
     @media (max-width: @breakpoint-md) {
       margin-left: -@padding-md;
       margin-right: -@padding-md;
@@ -412,6 +414,14 @@ body:hover .latest {
       margin-right: -@padding-sm;
       max-width: calc(100% + (@padding-sm * 2));
       width: calc(100% + (@padding-sm * 2));
+    }
+
+    // avoid images with `.no-enlarge` stretched by global img styles
+    &.no-enlarge {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+      width: auto;
     }
   }
 
@@ -619,7 +629,8 @@ body:hover .latest {
 
   img {
     // avoid images inside .browser stretched by global img styles
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
     box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .05);
 
     // Reset borwser image width for small screens
