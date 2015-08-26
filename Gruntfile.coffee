@@ -39,8 +39,8 @@ module.exports = (grunt) ->
       theme:
         assets: "<%= amsf.user.assets %>/themes/<%= amsf.theme.current %>"
         current: "<%= config.amsf.theme %>"
-        new_name: grunt.option('theme') or "<%= amsf.theme.current %>"
-        new_author: grunt.option('user') or "amsf"
+        new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
+        new_author: grunt.option("user") or "amsf"
 
     coffeelint:
       options:
@@ -88,7 +88,7 @@ module.exports = (grunt) ->
 
       jekyll:
         files: ["<%= config.app %>/**/*", "!_*", "_config*.yml"]
-        tasks: ['jekyll:serve']
+        tasks: ["jekyll:serve"]
 
     uglify:
       dist:
@@ -285,6 +285,9 @@ module.exports = (grunt) ->
       # Sync images to a separate CloudFront
       s3:
         command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --add-header=Cache-Control:max-age=31536000 --exclude '.DS_Store' <%= config.cfg.static_files %> <%= config.cfg.s3_bucket %>"
+
+      amsf__theme__to_dev_repo:
+        command: "rsync -avz --delete --progress --exclude=.git <%= amsf.base %>/themes/<%= amsf.theme.current %>/ /Users/sparanoid/Git/amsf-<%= amsf.theme.current %> > rsync-theme-dev.log"
 
     concurrent:
       options:
@@ -572,9 +575,9 @@ module.exports = (grunt) ->
       options:
         files: ["package.json"]
         updateConfigs: ["config.pkg"]
-        commitMessage: 'chore: release v%VERSION%'
+        commitMessage: "chore: release v%VERSION%"
         commitFiles: ["-a"]
-        tagMessage: 'chore: create tag %VERSION%'
+        tagMessage: "chore: create tag %VERSION%"
         push: false
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
@@ -595,9 +598,16 @@ module.exports = (grunt) ->
     "copy:amsf__theme__to_app"
   ]
 
-  grunt.registerTask "theme-save", "Save current (previously activated) theme to AMSF cache", [
-    "copy:amsf__theme__to_cache"
-  ]
+  grunt.registerTask "theme-save", "Save current (previously activated) theme to AMSF cache", ->
+    if grunt.option("dev")
+      grunt.task.run [
+        "copy:amsf__theme__to_cache"
+        "shell:amsf__theme__to_dev_repo"
+      ]
+    else
+      grunt.task.run [
+        "copy:amsf__theme__to_cache"
+      ]
 
   grunt.registerTask "theme-activate", "Activate specific theme", [
     "theme-upgrade"
