@@ -207,6 +207,41 @@ Template:
 
 There're some features can be integrated into your theme.
 
+### (Basic) Multi-Language Support
+
+You can define post / page language in your front-matter field:
+
+```yaml
+languages:
+  - zh-tw
+```
+
+An additional `lang` HTML attribute will be added to your final rendering:
+
+```html
+<article lang="zh-tw">
+  ...
+</article>
+```
+
+If your post / page content is multilingual, you can also define multiple languages in array:
+
+```yaml
+languages:
+  - zh-tw
+  - en-us
+```
+
+Please note that only the first item defined in `languages` array will be used in final `lang` ouput, the additional languages will be available in JSON feed output:
+
+```json
+{
+  "languages": ["zh-tw", "en-us"],
+  "categories": ["note"],
+  "tags": ["miscellaneous"]
+}
+```
+
 ### Smooshing Assets
 
 For better performance, Almace Scaffolding will find all the CSS, script links and images in compiled HTML, and outputs a version with all the CSS, scripts and images (Base64) written inline. Sounds cool? but it needs theme support. Here's how:
@@ -254,7 +289,7 @@ This allow your user to be able to use Google Analytics for their site, tracking
 
 ```html
 <!-- Google Analytics tracking code -->
-{{ amsf_google_analytics }}
+{% raw %}{{ amsf_google_analytics }}{% endraw %}
 ```
 
 ## Publishing Themes
