@@ -1,3 +1,32 @@
+<a name="0.0.38"></a>
+## [0.0.38](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.37...v0.0.38) (2015-08-26)
+
+
+### Bug Fixes
+
+* **grunt:** JSON template not updated ([92487a9](https://github.com/sparanoid/almace-scaffolding/commit/92487a9))
+* **style:** add `.no-enlarge` to exclude specific images ([9a78b77](https://github.com/sparanoid/almace-scaffolding/commit/9a78b77))
+* **style:** better image, video, and iframe handling ([1e68a60](https://github.com/sparanoid/almace-scaffolding/commit/1e68a60))
+* **template:** missing post language tag ([ed468ee](https://github.com/sparanoid/almace-scaffolding/commit/ed468ee))
+* **theme:** code not break in list ([486372e](https://github.com/sparanoid/almace-scaffolding/commit/486372e))
+
+### Features
+
+* **grunt:** add theme dev task ([d8380d4](https://github.com/sparanoid/almace-scaffolding/commit/d8380d4))
+* **style:** use `no-intense` instead of `nointese` ([5076db8](https://github.com/sparanoid/almace-scaffolding/commit/5076db8))
+* **template:** better post / page language support ([6dd7a77](https://github.com/sparanoid/almace-scaffolding/commit/6dd7a77))
+* **template:** rename JSON output ([87dfd51](https://github.com/sparanoid/almace-scaffolding/commit/87dfd51))
+
+
+### BREAKING CHANGES
+
+* This will break your current layout if you're using `nointense` for your images, please rename the classes to `no-intense`, sorry for the inconvenience.
+* Now you can add `.no-enlarge` to images that you'd like to keep it in normal width in smaller devices:
+```html
+<img class="no-enlarge" src="/ipad-frame-01.png">
+```
+
+
 <a name="0.0.37"></a>
 ## [0.0.37](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.36...v0.0.37) (2015-08-24)
 
