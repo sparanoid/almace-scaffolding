@@ -1,28 +1,40 @@
 <!-- List snippets -->
-<section class=list {% if post.lang %} lang={{ post.lang }}{% endif %}>
+
+<!-- Post language -->
+{% capture amsf_post_lang %}
+  {% if post.languages %}
+    {% if post.languages[0] != null %}
+      lang="{{ post.languages | first }}"
+    {% else %}
+      lang="{{ post.languages }}"
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+<!-- Dynamic link color based on post color scheme -->
+{% capture post_link_color %}
+  {% if post.scheme-bg %}
+    {% if post.scheme-bg-light %}
+      style="color: {{ post.scheme-text }};"
+    {% else %}
+      style="color: {{ post.scheme-bg }};"
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+<!-- Dynamic background color based on post color scheme -->
+{% capture post_link_bg %}
+  {% if post.scheme-bg %}
+    {% if post.scheme-bg-light %}
+      style="background: {{ post.scheme-text }};"
+    {% else %}
+      style="background: {{ post.scheme-bg }};"
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+<section class=list {{ amsf_post_lang }}>
   <h1>
-    <!-- Dynamic link color based on post color scheme -->
-    {% capture post_link_color %}
-      {% if post.scheme-bg %}
-        {% if post.scheme-bg-light %}
-          style="color: {{ post.scheme-text }};"
-        {% else %}
-          style="color: {{ post.scheme-bg }};"
-        {% endif %}
-      {% endif %}
-    {% endcapture %}
-
-    <!-- Dynamic background color based on post color scheme -->
-    {% capture post_link_bg %}
-      {% if post.scheme-bg %}
-        {% if post.scheme-bg-light %}
-          style="background: {{ post.scheme-text }};"
-        {% else %}
-          style="background: {{ post.scheme-bg }};"
-        {% endif %}
-      {% endif %}
-    {% endcapture %}
-
     <!-- Item title -->
     <a href="{{ post.url | prepend: site.base }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ post.title }}</a>
 
