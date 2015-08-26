@@ -101,7 +101,7 @@ google_analytics:
 # Site Twitter account handle
 twitter:        sparanoid
 
-# Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages
+# Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to the head of your pages
 # Default:      false
 force_utf_8:    false
 

@@ -529,7 +529,7 @@ Author information can be added in `./_app/_data/authors.yml`
 
 * Now `<h1>` become the primary post / page title instead of `<h2>`, you should update your post to use the new structure
  ([a85184a9](http://github.com/sparanoid/sparanoid.com/commit/a85184a9ce785fc679e6ce95f7f17323109ed6f5))
-* Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages, it's useful for local development since local server doesn't send charset in their respond header.
+* Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to the head of your pages, it's useful for local development since local server doesn't send charset in their respond header.
  ([0fb4c702](http://github.com/sparanoid/sparanoid.com/commit/0fb4c702aeaa5dd5306f0b19f40aaacb3f2f5b5f))
 
 
@@ -834,7 +834,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 
 #### Breaking Changes
 
-* Removal of `.txt` CSS class may break your existing post layout. Now `.txt` is replaced with `main.content`, a global content wrapper. To fix layout breaks for your existing site: simply remove all `<div class=txt>` containers from your posts
+* Removal of `.txt` CSS class may break your existing post layout. Now `.txt` is replaced with `main.content`, a global content wrapper. To fix layout breaks for your existing site: simply remove all `<div class="txt">` containers from your posts
  ([1f400475](http://github.com/sparanoid/sparanoid.com/commit/1f400475e3f3611919299fdcccad73779539fd16))
 
 

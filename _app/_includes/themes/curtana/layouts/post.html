@@ -72,7 +72,7 @@
 
     {% if page.date %}
       <small>
-        By <span rel=author>{{ author.name }}</span>
+        By <span rel="author">{{ author.name }}</span>
         on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
       </small>
     {% endif %}
@@ -84,7 +84,7 @@
   </header>
 
   <!-- Post content -->
-  <div class=post-content>
+  <div class="post-content">
     {{ content }}
   </div>
 
