@@ -1,3 +1,13 @@
+<a name="0.0.39"></a>
+## [0.0.39](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.38...v0.0.39) (2015-08-26)
+
+
+### Bug Fixes
+
+* **grunt:** avoid removing dev deps ([5e1fdde](https://github.com/sparanoid/almace-scaffolding/commit/5e1fdde))
+
+
+
 <a name="0.0.38"></a>
 ## [0.0.38](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.37...v0.0.38) (2015-08-26)
 
