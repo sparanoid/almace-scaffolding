@@ -92,8 +92,10 @@
   Page language tag
 {% endcomment %}
 {% capture amsf_page_lang %}
-  {% if page.lang %}
-    lang={{ page.lang }}
+  {% if page.languages and page.languages[0] != null %}
+    lang="{{ page.languages | first }}"
+  {% else %}
+    lang="{{ page.languages }}"
   {% endif %}
 {% endcapture %}
 
