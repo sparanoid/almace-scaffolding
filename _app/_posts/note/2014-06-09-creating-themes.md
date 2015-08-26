@@ -193,13 +193,13 @@ Output:
 
 ### `site.force_utf_8`
 
-Force UTF-8 encoding, enable this will simply add `<meta charset=utf-8>` to the head of your pages.
+Force UTF-8 encoding, enable this will simply add `<meta charset="utf-8">` to the head of your pages.
 
 Template:
 
 ```html
 {{ '{% if site.force_utf_8 ' }}%}
-  <meta charset=utf-8>
+  <meta charset="utf-8">
 {{ '{% endif ' }}%}
 ```
 
