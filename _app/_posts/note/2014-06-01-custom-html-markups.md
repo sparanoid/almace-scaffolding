@@ -70,7 +70,7 @@ Please note that you can't apply CSS classes in Markdown, so you have to use HTM
 
 ### Example
 
-<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class="nointense"></p>
+<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class="no-intense"></p>
 
 ## [intense.js](http://github.com/tholman/intense-images)
 
@@ -98,11 +98,11 @@ Or simply use HTML:
 </p>
 ```
 
-`intense.js` is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.nointense` CSS class to your `<img>`:
+`intense.js` is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.no-intense` CSS class to your `<img>`:
 
 ```html
 <p>
-  <img src="http://sparanoid.com/photo.jpg" class="nointense" alt="Image">
+  <img src="http://sparanoid.com/photo.jpg" class="no-intense" alt="Image">
 </p>
 ```
 
