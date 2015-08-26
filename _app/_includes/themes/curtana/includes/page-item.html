@@ -33,7 +33,7 @@
   {% endif %}
 {% endcapture %}
 
-<section class=list {{ amsf_post_lang }}>
+<section class="list" {{ amsf_post_lang }}>
   <h1>
     <!-- Item title -->
     <a href="{{ post.url | prepend: site.base }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ post.title }}</a>
