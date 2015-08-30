@@ -1,3 +1,15 @@
+<a name="0.0.40"></a>
+## [0.0.40](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.39...v0.0.40) (2015-08-30)
+
+
+### Features
+
+* **grunt:** cleanup syntax ([2aab508](https://github.com/sparanoid/almace-scaffolding/commit/2aab508))
+* **grunt:** use hashes for assets, help reduce CloudFront invalidation cost ([d54e8ff](https://github.com/sparanoid/almace-scaffolding/commit/d54e8ff))
+* **sitemap:** simpler timestamps ([aa09ab7](https://github.com/sparanoid/almace-scaffolding/commit/aa09ab7))
+
+
+
 <a name="0.0.39"></a>
 ## [0.0.39](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.38...v0.0.39) (2015-08-26)
 
