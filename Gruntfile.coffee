@@ -546,6 +546,10 @@ module.exports = (grunt) ->
 
   grunt.registerTask "test", "Build test task", [
     "build"
+    "theme-add"
+    "theme-update"
+    "theme-save"
+    "amsf-update"
   ]
 
   grunt.registerTask "theme-upgrade", "Upgrade specific theme from AMSF cache to app", [
