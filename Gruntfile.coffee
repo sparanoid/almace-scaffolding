@@ -188,7 +188,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
     xmlmin:
@@ -197,7 +197,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: "**/*.xml"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
     minjson:
@@ -206,7 +206,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: "**/*.json"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
     cssmin:
@@ -218,7 +218,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: ["**/*.css", "!*.min.css"]
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
       # html:
@@ -243,7 +243,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
     cacheBust:
@@ -259,7 +259,7 @@ module.exports = (grunt) ->
           baseDir: "<%= config.dist %>"
           cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
     usebanner:
@@ -342,7 +342,7 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            cwd: "<%= amsf.core %>/"
+            cwd: "<%= amsf.core %>"
             src: [
               ".*"
               "*.json"
@@ -366,7 +366,7 @@ module.exports = (grunt) ->
               "*.txt"
               "*.xml"
             ]
-            dest: "<%= config.app %>/"
+            dest: "<%= config.app %>"
           }
           {
             expand: true
