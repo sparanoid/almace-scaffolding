@@ -246,6 +246,22 @@ module.exports = (grunt) ->
           dest: "<%= config.dist %>/"
         ]
 
+    cacheBust:
+      options:
+        encoding: "utf8"
+        algorithm: "md5"
+        length: 8
+        deleteOriginals: true
+
+      dist:
+        files: [
+          expand: true
+          baseDir: "<%= config.dist %>"
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>/"
+        ]
+
     usebanner:
       options:
         position: "bottom"
@@ -286,6 +302,7 @@ module.exports = (grunt) ->
       s3:
         command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --add-header=Cache-Control:max-age=31536000 --exclude '.DS_Store' <%= config.cfg.static_files %> <%= config.cfg.s3_bucket %>"
 
+      # Copy saved theme to external repository
       amsf__theme__to_dev_repo:
         command: "rsync -avz --delete --progress --exclude=.git --exclude=node_modules <%= amsf.base %>/themes/<%= amsf.theme.current %>/ /Users/sparanoid/Git/amsf-<%= amsf.theme.current %> > rsync-theme-dev.log"
 
@@ -654,6 +671,7 @@ module.exports = (grunt) ->
     "jekyll:dist"
     "concurrent:dist"
     "assets_inline"
+    "cacheBust"
     "usebanner"
     "cleanempty"
   ]
