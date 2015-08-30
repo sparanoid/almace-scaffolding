@@ -8,7 +8,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ amsf_site_base }}/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>
 
   {% for page in site.html_pages %}
@@ -16,7 +16,7 @@
       <url>
         <loc>{{ page.url | replace:'/index.html', '/' | prepend: amsf_site_base }}</loc>
         {% if page.last_modified_at %}
-          <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+          <lastmod>{{ page.last_modified_at | date: "%F" }}</lastmod>
         {% endif %}
       </url>
     {% endif %}
@@ -27,9 +27,9 @@
       <url>
         <loc>{{ post.url | prepend: amsf_site_base }}</loc>
         {% if post.last_modified_at %}
-          <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+          <lastmod>{{ post.last_modified_at | date: "%F" }}</lastmod>
         {% else %}
-          <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+          <lastmod>{{ post.date | date: "%F" }}</lastmod>
         {% endif %}
       </url>
     {% endif %}
