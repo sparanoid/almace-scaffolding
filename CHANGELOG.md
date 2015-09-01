@@ -1,3 +1,17 @@
+<a name="0.0.41"></a>
+## [0.0.41](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.40...v0.0.41) (2015-09-01)
+
+
+### Features
+
+* **grunt:** add `update` command ([fc013d3](https://github.com/sparanoid/almace-scaffolding/commit/fc013d3))
+* **grunt:** remove originals after assets being smooshed ([95e8b22](https://github.com/sparanoid/almace-scaffolding/commit/95e8b22))
+* **grunt:** use rsync for them operations ([58ed513](https://github.com/sparanoid/almace-scaffolding/commit/58ed513))
+* **template:** simplify template structure ([8c9d31f](https://github.com/sparanoid/almace-scaffolding/commit/8c9d31f))
+* **travis:** update test tasks ([0dd2cc5](https://github.com/sparanoid/almace-scaffolding/commit/0dd2cc5))
+
+
+
 <a name="0.0.40"></a>
 ## [0.0.40](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.39...v0.0.40) (2015-08-30)
 
