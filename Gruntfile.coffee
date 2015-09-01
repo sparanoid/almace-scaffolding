@@ -237,6 +237,7 @@ module.exports = (grunt) ->
         inlineSvg: true
         inlineSvgBase64: false
         assetsUrlPrefix: "<%= config.base %>/assets/"
+        deleteOriginals: true
 
       dist:
         files: [
