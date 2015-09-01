@@ -601,6 +601,11 @@ module.exports = (grunt) ->
         "copy:amsf__core__to_app"
       ]
 
+  grunt.registerTask "update", "Update AMSF and the activated theme", [
+    "amsf-update"
+    "theme-update"
+  ]
+
   grunt.registerTask "build", "Build site with jekyll", [
     "clean:default"
     "coffeelint"
