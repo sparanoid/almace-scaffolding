@@ -591,9 +591,13 @@ module.exports = (grunt) ->
       grunt.task.run [
         "gitreset:amsf__core__reset_git"
         "gitclean:amsf__core__clean_git"
+        "gitpull:amsf__core__update_remote"
+      ]
+    else
+      grunt.task.run [
+        "gitclone:amsf__core__add_remote"
       ]
     grunt.task.run [
-      "gitclone:amsf__core__add_remote"
       "copy:amsf__core__to_app"
     ]
 
