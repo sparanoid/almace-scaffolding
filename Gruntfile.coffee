@@ -256,7 +256,7 @@ module.exports = (grunt) ->
         class: "leading-indent-fix"
         verbose: true
 
-      serve:
+      default:
         files: [
           expand: true
           cwd: "<%= config.dist %>"
