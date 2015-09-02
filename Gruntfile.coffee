@@ -631,6 +631,7 @@ module.exports = (grunt) ->
     "postcss:dist"
     "csscomb"
     "jekyll:dist"
+    "leading_quotes"
     "concurrent:dist"
     "assets_inline"
     "cacheBust"
