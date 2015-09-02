@@ -552,24 +552,6 @@ module.exports = (grunt) ->
         tagMessage: "chore: create tag %VERSION%"
         push: false
 
-  grunt.registerTask "serve", "Fire up a server on local machine for development", [
-    "clean:default"
-    "copy:serve"
-    "less:serve"
-    "postcss:serve"
-    "jekyll:serve"
-    "browserSync"
-    "watch"
-  ]
-
-  grunt.registerTask "test", "Build test task", [
-    "build"
-    "theme-add"
-    "theme-update"
-    "theme-save"
-    "amsf-update"
-  ]
-
   grunt.registerTask "theme-upgrade", "Upgrade specific theme from AMSF cache to app", [
     "shell:amsf__theme__to_app"
   ]
@@ -617,6 +599,25 @@ module.exports = (grunt) ->
       "copy:amsf__core__to_app"
     ]
 
+  grunt.registerTask "serve", "Fire up a server on local machine for development", [
+    "clean:default"
+    "copy:serve"
+    "less:serve"
+    "postcss:serve"
+    "jekyll:serve"
+    "leading_quotes:default"
+    "browserSync"
+    "watch"
+  ]
+
+  grunt.registerTask "test", "Build test task", [
+    "build"
+    "theme-add"
+    "theme-update"
+    "theme-save"
+    "amsf-update"
+  ]
+
   grunt.registerTask "update", "Update AMSF and the activated theme", [
     "amsf-update"
     "theme-update"
@@ -631,7 +632,7 @@ module.exports = (grunt) ->
     "postcss:dist"
     "csscomb"
     "jekyll:dist"
-    "leading_quotes"
+    "leading_quotes:default"
     "concurrent:dist"
     "assets_inline"
     "cacheBust"
