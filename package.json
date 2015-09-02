@@ -46,6 +46,7 @@
     "grunt-csscomb": "^3.1.0",
     "grunt-git": "^0.3.5",
     "grunt-jekyll": "^0.4.2",
+    "grunt-leading-quotes": "0.0.3",
     "grunt-lesslint": "^1.2.0",
     "grunt-minjson": "^0.3.0",
     "grunt-postcss": "^0.6.0",
