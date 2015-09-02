@@ -298,14 +298,11 @@ module.exports = (grunt) ->
 
       # Copy compiled static files to local directory for further post-process
       sync_local:
-        command: [
-          "rsync -avz --delete --progress <%= config.deploy.ignore_files %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.dest %>/site/<%= config.base %> > rsync-s3_website.log"
-          "sh <%= config.deploy.s3_website.dest %>/auto-commit"
-        ].join("&&")
+        command: "rsync -avz --delete --progress <%= config.deploy.ignore_files %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.dest %>/site/<%= config.base %> > rsync-s3_website.log"
 
-      # Sync images to a separate CloudFront
-      s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --add-header=Cache-Control:max-age=31536000 --exclude '.DS_Store' <%= config.deploy.s3.cwd %> <%= config.deploy.s3.bucket %>"
+      # Auto commit untracked files sync'ed from sync_local
+      sync_commit:
+        command: "sh <%= config.deploy.s3_website.dest %>/auto-commit"
 
       amsf__theme__to_app:
         command: [
@@ -562,14 +559,12 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask "theme-save", "Save current (previously activated) theme to AMSF cache", ->
+    grunt.task.run [
+      "shell:amsf__theme__to_cache"
+    ]
     if grunt.option("dev")
       grunt.task.run [
-        "shell:amsf__theme__to_cache"
         "shell:amsf__theme__to_dev_repo"
-      ]
-    else
-      grunt.task.run [
-        "shell:amsf__theme__to_cache"
       ]
 
   grunt.registerTask "theme-activate", "Activate specific theme", [
@@ -596,14 +591,11 @@ module.exports = (grunt) ->
       grunt.task.run [
         "gitreset:amsf__core__reset_git"
         "gitclean:amsf__core__clean_git"
-        "gitpull:amsf__core__update_remote"
-        "copy:amsf__core__to_app"
       ]
-    else
-      grunt.task.run [
-        "gitclone:amsf__core__add_remote"
-        "copy:amsf__core__to_app"
-      ]
+    grunt.task.run [
+      "gitclone:amsf__core__add_remote"
+      "copy:amsf__core__to_app"
+    ]
 
   grunt.registerTask "update", "Update AMSF and the activated theme", [
     "amsf-update"
@@ -635,14 +627,15 @@ module.exports = (grunt) ->
       "bump-commit"
     ]
 
-  grunt.registerTask "sync", "Build site + rsync static files to remote server", [
-    "build"
-    "shell:sync_local"
-  ]
-
-  grunt.registerTask "s3", "Sync image assets with `s3cmd`", [
-    "shell:s3"
-  ]
+  grunt.registerTask "sync", "Build site + rsync static files to remote server",  ->
+    grunt.task.run [
+      "build"
+      "shell:sync_local"
+    ]
+    if grunt.option("deploy")
+      grunt.task.run [
+        "shell:sync_commit"
+      ]
 
   grunt.registerTask "default", "Default task aka. build task", [
     "build"

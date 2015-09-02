@@ -9,9 +9,5 @@ sftp:
   host: caladbolg
   dest: /srv/www/sparanoid.com/public_html
 
-s3:
-  cwd: ~/Workspace/Sites/static.sparanoid.com
-  bucket: s3://sparanoid/
-
 s3_website:
   dest: ~/Git/sparanoid.com-prod
