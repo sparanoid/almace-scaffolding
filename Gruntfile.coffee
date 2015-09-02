@@ -89,7 +89,10 @@ module.exports = (grunt) ->
 
       jekyll:
         files: ["<%= config.app %>/**/*", "!_*", "_config*.yml"]
-        tasks: ["jekyll:serve"]
+        tasks: [
+          "jekyll:serve"
+          "leading_quotes"
+        ]
 
     uglify:
       dist:
@@ -241,6 +244,19 @@ module.exports = (grunt) ->
         deleteOriginals: true
 
       dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
+        ]
+
+    leading_quotes:
+      options:
+        class: "leading-indent-fix"
+        verbose: true
+
+      serve:
         files: [
           expand: true
           cwd: "<%= config.dist %>"
