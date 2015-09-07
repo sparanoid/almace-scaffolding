@@ -91,7 +91,7 @@ module.exports = (grunt) ->
         files: ["<%= config.app %>/**/*", "!_*", "_config*.yml"]
         tasks: [
           "jekyll:serve"
-          "leading_quotes"
+          "newer:leading_quotes"
         ]
 
     uglify:
