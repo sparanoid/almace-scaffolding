@@ -1,3 +1,23 @@
+<a name="0.0.42"></a>
+## [0.0.42](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.41...v0.0.42) (2015-09-07)
+
+
+### Bug Fixes
+
+* **grunt:** `leading_quotes` not invoked for `serve` task ([2bb107a](https://github.com/sparanoid/almace-scaffolding/commit/2bb107a))
+* **grunt:** missing `leading_quotes` for build ([2fb2862](https://github.com/sparanoid/almace-scaffolding/commit/2fb2862))
+* **grunt:** wrong `amsf-update` task ([ea0c0ce](https://github.com/sparanoid/almace-scaffolding/commit/ea0c0ce))
+
+### Features
+
+* **grunt:** deploy sites conditionally ([3c5c2aa](https://github.com/sparanoid/almace-scaffolding/commit/3c5c2aa))
+* **grunt:** move deployment variables to a separate file ([80fe55b](https://github.com/sparanoid/almace-scaffolding/commit/80fe55b))
+* **grunt:** preprocess leading quotes ([aa640bf](https://github.com/sparanoid/almace-scaffolding/commit/aa640bf))
+* **grunt:** update config options ([483e08f](https://github.com/sparanoid/almace-scaffolding/commit/483e08f))
+* **grunt:** use `newer` for `leading_quotes` ([4cd149c](https://github.com/sparanoid/almace-scaffolding/commit/4cd149c))
+
+
+
 <a name="0.0.41"></a>
 ## [0.0.41](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.40...v0.0.41) (2015-09-01)
 
