@@ -321,6 +321,12 @@ module.exports = (grunt) ->
       sync_commit:
         command: "sh <%= config.deploy.s3_website.dest %>/auto-commit"
 
+      amsf__core__update_deps:
+        command: [
+          "bundle install"
+          "npm install"
+        ].join("&&")
+
       amsf__theme__to_app:
         command: [
           "rsync -avz --delete --progress <%= amsf.base %>/themes/<%= amsf.theme.new_name %>/config.yml <%= config.app %>/_data/<%= amsf.theme.new_name %>.yml"
@@ -598,6 +604,7 @@ module.exports = (grunt) ->
       ]
     grunt.task.run [
       "copy:amsf__core__to_app"
+      "shell:amsf__core__update_deps"
     ]
 
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
