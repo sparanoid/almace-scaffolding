@@ -9,13 +9,29 @@
 {% endif %}
 
 <!-- Post specified styles -->
-<style>
+<style data-assets-inline>
   body {
     {% if page.scheme-text %}
     color: {{ page.scheme-text }};
     {% endif %}
+
     {% if page.scheme-bg %}
     background-color: {{ page.scheme-bg }};
+    {% endif %}
+
+    {% if page.scheme-bg-img %}
+      {% assign first = true %}
+      background-image:
+        {% for image in page.scheme-bg-img %}
+          {% unless first %},{% endunless %}
+          {% if page.scheme-bg-img-local == true %}
+            url("{{ site.assets | prepend: site.base }}/{{ page.scheme-bg-img[forloop.index0] }}")
+          {% else %}
+            url("{{ site.file }}/{{ page.scheme-bg-img[forloop.index0] }}")
+          {% endif %}
+          {% assign first = false %}
+        {% endfor %}
+      ;
     {% endif %}
   }
 
