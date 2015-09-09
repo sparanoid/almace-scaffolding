@@ -176,14 +176,14 @@ module.exports = (grunt) ->
           collapseWhitespace: true
           conservativeCollapse: true
           collapseBooleanAttributes: true
-          removeAttributeQuotes: false
+          removeAttributeQuotes: true
           removeRedundantAttributes: true
           useShortDoctype: false
           removeEmptyAttributes: true
           removeOptionalTags: true
           removeEmptyElements: false
           lint: false
-          keepClosingSlash: true
+          keepClosingSlash: false
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
@@ -357,7 +357,6 @@ module.exports = (grunt) ->
           "htmlmin"
           "xmlmin"
           "minjson"
-          "cssmin"
         ]
 
     copy:
@@ -645,9 +644,10 @@ module.exports = (grunt) ->
     "csscomb"
     "jekyll:dist"
     "leading_quotes:main"
-    "concurrent:dist"
+    "cssmin"
     "assets_inline"
     "cacheBust"
+    "concurrent:dist"
     "usebanner"
     "cleanempty"
   ]
