@@ -5,7 +5,7 @@ category: note
 tags: getting-started
 ---
 
-## Configuration SettingsPermalink
+## Configuration Settings
 
 - All AMSF built-in settings can be configured at [`_config.yml`](https://github.com/sparanoid/almace-scaffolding/blob/master/_config.yml).
 - Theme specific variables can be found at `./_app/_data/theme-name.yml`.
