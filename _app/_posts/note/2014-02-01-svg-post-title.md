@@ -21,7 +21,7 @@ svg-headline-width: 400
 svg-headline-height: 86
 ```
 
-Image defined for `svg-headline` should be stored at `_app/_includes/svg/`, you can simply keep these title images under Git control, they will be smooshed into the HTML pages using Grunt.js in production environment. The `svg-headline-width` and `svg-headline-height` can be omitted if you have correct dimensions for your images.
+Image defined for `svg-headline` should be stored at `_app/assets/svg/kai.svg`, you can simply keep these title images under Git control, they will be smooshed into the HTML pages using Grunt.js in production builds. The `svg-headline-width` and `svg-headline-height` are optional if you have correct dimensions for your images.
 
 There's also an option for common raster images, but please note that these files should be stored at where you define `site.file`.
 
@@ -30,7 +30,7 @@ img-headline: imouto-logo-large.png
 img-headline-width: 500
 ```
 
-**Pro Tips**: Keep a `<title>` tag for your SVG can help Safari generate correct post title for its Reader mode:
+> **Pro Tips**: Keep a `<title>` tag for your SVG can help Safari generate correct post title for its Reader mode:
 
 ```
 <svg xmlns="http://www.w3.org/2000/svg" width="2175" height="465" viewBox="0 0 2175 465">
