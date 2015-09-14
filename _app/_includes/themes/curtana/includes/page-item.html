@@ -1,16 +1,5 @@
 <!-- List snippets -->
 
-<!-- Post language -->
-{% capture amsf_post_lang %}
-  {% if post.languages %}
-    {% if post.languages[0] != null %}
-      lang="{{ post.languages | first }}"
-    {% else %}
-      lang="{{ post.languages }}"
-    {% endif %}
-  {% endif %}
-{% endcapture %}
-
 <!-- Dynamic link color based on post color scheme -->
 {% capture post_link_color %}
   {% if post.scheme-bg %}
@@ -33,7 +22,7 @@
   {% endif %}
 {% endcapture %}
 
-<section class="list" {{ amsf_post_lang }}>
+<section class="list">
   <h1>
     <!-- Item title -->
     <a href="{{ post.url | prepend: site.base }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ post.title }}</a>
