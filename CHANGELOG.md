@@ -1,3 +1,25 @@
+<a name="0.0.43"></a>
+## [0.0.43](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.42...v0.0.43) (2015-09-15)
+
+
+### Bug Fixes
+
+* **docs:** wrong heading ([8b7dc00](https://github.com/sparanoid/almace-scaffolding/commit/8b7dc00))
+* **grunt:** wrong build order ([1ae038d](https://github.com/sparanoid/almace-scaffolding/commit/1ae038d))
+* **package:** wrong dep version ([deaed34](https://github.com/sparanoid/almace-scaffolding/commit/deaed34))
+
+### Features
+
+* **docs:** update SVG title guide ([e1c39bd](https://github.com/sparanoid/almace-scaffolding/commit/e1c39bd))
+* **grunt:** update dependencies ([9702f97](https://github.com/sparanoid/almace-scaffolding/commit/9702f97))
+* **style:** avoid transition delay ([a00cc6d](https://github.com/sparanoid/almace-scaffolding/commit/a00cc6d))
+* **style:** minor tweak ([de7ddfb](https://github.com/sparanoid/almace-scaffolding/commit/de7ddfb))
+* **template:** disable language tag for post list ([c2824da](https://github.com/sparanoid/almace-scaffolding/commit/c2824da))
+* **template:** use `data-assets-inline` attribute for `grunt-assets-inline` ([02c96e0](https://github.com/sparanoid/almace-scaffolding/commit/02c96e0))
+* **travis:** remove iojs (now stable) ([3b2873c](https://github.com/sparanoid/almace-scaffolding/commit/3b2873c))
+
+
+
 <a name="0.0.42"></a>
 ## [0.0.42](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.41...v0.0.42) (2015-09-07)
 
