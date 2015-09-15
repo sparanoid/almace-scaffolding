@@ -606,6 +606,15 @@ module.exports = (grunt) ->
       "shell:amsf__core__update_deps"
     ]
 
+  grunt.registerTask "init", "Initialize new project", [
+    "theme-add"
+  ]
+
+  grunt.registerTask "update", "Update AMSF and the activated theme", [
+    "amsf-update"
+    "theme-update"
+  ]
+
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean:main"
     "copy:serve"
@@ -628,11 +637,6 @@ module.exports = (grunt) ->
         "theme-save"
         "amsf-update"
       ]
-
-  grunt.registerTask "update", "Update AMSF and the activated theme", [
-    "amsf-update"
-    "theme-update"
-  ]
 
   grunt.registerTask "build", "Build site with jekyll", [
     "clean:main"
