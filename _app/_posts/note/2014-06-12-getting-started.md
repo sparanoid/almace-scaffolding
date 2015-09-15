@@ -13,13 +13,15 @@ Almace Scaffolding has exactly the same requirements as Jekyll. For more info pl
 
 1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) or clone the repo.
 2. Install dependencies with Ruby gem [`bundler`](http://bundler.io/) and Node.js package manager [`npm`](https://www.npmjs.org/).
-3. Run `grunt serve`.
+3. Run `grunt init` to initialize your project.
+3. Run `grunt serve` to fire up a local server.
 
 So in short for geeks:
 
 ```sh
 $ git clone git@github.com:sparanoid/almace-scaffolding.git
 $ bundle install && npm install
+$ grunt init
 $ grunt serve
 ```
 
