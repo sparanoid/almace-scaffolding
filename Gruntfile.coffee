@@ -123,8 +123,8 @@ module.exports = (grunt) ->
       serve:
         options:
           sourceMap: true
+          sourceMapFileInline: true
           outputSourceFiles: true
-          dumpLineNumbers: "comments"
 
         files: [
           expand: true
@@ -142,7 +142,7 @@ module.exports = (grunt) ->
         src: "<%= amsf.theme.assets %>/css/*.css"
         options:
           map:
-            inline: false
+            inline: true
           processors: [
             require("autoprefixer")(browsers: "last 1 versions")
           ]
