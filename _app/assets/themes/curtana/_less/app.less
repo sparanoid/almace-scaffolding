@@ -5,7 +5,7 @@
 @background-color: #fff;
 @text-color: #000;
 @code-color: spin(@link-color, 180);
-@sans-serif: "Helvetica Neue", Arial, "Hiragino Sans GB", sans-serif;
+@sans-serif: "Helvetica Neue",  "Hiragino Sans GB", Arial, sans-serif;
 @serif: Georgia, "Hiragino Mincho ProN", serif;
 @monospace: Menlo, monospace;
 @breakpoint-lg: 1600px;
@@ -15,7 +15,8 @@
 @padding-lg: 22vw;
 @padding-md: 8vw;
 @padding-sm: 4vw;
-@padding-xs: 0;
+@padding-xs: .8em;
+@blockquote-border: 2px;
 
 // Invert color switcher for images and videos
 // :root { filter: invert(100%); }
@@ -133,8 +134,9 @@ a, button {
 
   &:hover,
   &:focus {
-    border-bottom: .1em solid;
     transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
+    text-decoration: underline;
+    text-decoration-skip: ink;
   }
 
   &[disabled] {
@@ -203,7 +205,7 @@ del {
       &:hover,
       &:focus {
         color: @link-color;
-        border: none;
+        text-decoration: none;
       }
     }
   }
@@ -394,23 +396,20 @@ body:hover .latest {
     margin-left: 1.75em;
   }
 
-  img, video, iframe {
+  img, video, iframe, .browser {
     display: block;
-    max-width: 100%;
-    margin: 0 0 1.8rem;
-
+    width: calc(100% + (@padding-xs * 2) + (@blockquote-border * 2));
+    margin: 0 calc(-@padding-xs - @blockquote-border) 1.8rem;
 
     @media (max-width: @breakpoint-md) {
       margin-left: -@padding-md;
       margin-right: -@padding-md;
-      max-width: calc(100% + (@padding-md * 2));
       width: calc(100% + (@padding-md * 2));
     }
 
     @media (max-width: @breakpoint-sm) {
       margin-left: -@padding-sm;
       margin-right: -@padding-sm;
-      max-width: calc(100% + (@padding-sm * 2));
       width: calc(100% + (@padding-sm * 2));
     }
 
@@ -426,7 +425,7 @@ body:hover .latest {
   blockquote {
     position: relative;
     margin-bottom: 2.8rem;
-    margin-left: calc(-.8em - 2px);
+    margin-left: calc(-@padding-xs - @blockquote-border);
 
     @media (max-width: @breakpoint-sm) {
       margin-left: 0;
@@ -610,6 +609,11 @@ body:hover .latest {
   border-radius: 5px 5px 0 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .05);
 
+  // Reset browser border-radius for small screens
+  @media (max-width: @breakpoint-md), (max-width: @breakpoint-sm) {
+    border-radius: 0;
+  }
+
   &:before {
     position: absolute;
     top: 8px;
@@ -633,13 +637,20 @@ body:hover .latest {
     // avoid images inside .browser stretched by global img styles
     margin-left: 0;
     margin-right: 0;
+    width: auto;
+    max-width: 100%;
     box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .05);
+  }
+}
 
-    // Reset borwser image width for small screens
-    @media (max-width: @breakpoint-md), (max-width: @breakpoint-sm) {
-      max-width: 100%;
-      width: 100%;
-    }
+// Extra offset for OS X screenshots
+.screenshot-mac {
+  margin-left: -56px;
+  margin-right: -56px;
+
+  @media (max-width: @breakpoint-md), (max-width: @breakpoint-sm) {
+    margin-left: 0;
+    margin-right: 0
   }
 }
 
@@ -648,7 +659,7 @@ body:hover .latest {
 .store,
 .download {
   padding-left: .8em;
-  margin-left: calc(-.8em - 2px);
+  margin-left: calc(-@padding-xs - @blockquote-border);
   border-left: 2px solid @link-color;
 
   @media (max-width: @breakpoint-sm) {
@@ -700,11 +711,6 @@ body:hover .latest {
 
   .external {
 
-    &:hover,
-    &:focus {
-      border: none;
-    }
-
     @media (max-width: @breakpoint-sm) {
       // Hide external link for post list
       display: none;
@@ -714,7 +720,7 @@ body:hover .latest {
 
 .external {
 
-  span {
+  .dot {
     display: inline-block;
     width: .7rem;
     height: .7rem;
@@ -723,12 +729,17 @@ body:hover .latest {
     background: @text-color;
     border-radius: 50%;
     transition: transform .4s ease;
+
+    // Extra margin for external symbol in singular
+    &--post {
+      margin-left: 1rem;
+    }
   }
 
   &:hover,
   &:focus {
 
-    span {
+    .dot {
       transform: scale(1.4);
     }
   }
