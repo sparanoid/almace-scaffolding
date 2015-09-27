@@ -1,3 +1,23 @@
+<a name="0.0.44"></a>
+## [0.0.44](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.43...v0.0.44) (2015-09-27)
+
+
+### Bug Fixes
+
+* **grunt:** Less sourcemaps not recognized ([5357aab](https://github.com/sparanoid/almace-scaffolding/commit/5357aab))
+
+### Features
+
+* **grunt:** add new task `grunt init` for initializing new projects ([d026cb5](https://github.com/sparanoid/almace-scaffolding/commit/d026cb5))
+* **style:** better fontstack variables ([5af01d9](https://github.com/sparanoid/almace-scaffolding/commit/5af01d9))
+* **styles:** update text decoration ([5f604ba](https://github.com/sparanoid/almace-scaffolding/commit/5f604ba))
+
+
+### BREAKING CHANGES
+
+* You have to double check if you're overriding `@sans-serif`, `@serif`, or `@monospace` to use custom fontstacks, these variables have been changed to `@fontstack-sans-serif`, `@fontstack-serif`, and `@fontstack-monospace`.
+
+
 <a name="0.0.43"></a>
 ## [0.0.43](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.42...v0.0.43) (2015-09-15)
 
