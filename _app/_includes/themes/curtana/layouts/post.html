@@ -86,6 +86,20 @@
   <!-- Post content -->
   <div class="post-content">
     {{ content }}
+
+    {% assign date_publish = page.date | date: "%b %-d, %Y" %}
+    {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
+
+    {% if date_publish != date_update %}
+      <footer class="post-modified-date">
+        <p>
+          Updated
+          <time datetime="{{ page.last_modified_at | date: " %FT%X+08:00 " }}">
+            {{ page.last_modified_at | date: "%A, %b %d, %Y" }}
+          </time>
+        </p>
+      </footer>
+    {% endif %}
   </div>
 
 </article>
