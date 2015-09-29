@@ -18,7 +18,7 @@ Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for pr
 I know this can be tricky and more verbose than uploading your Jekyll site directly to your repository. However GitHub Pages support static HTML pages, a workaround solution for using Almace Scaffolding on GitHub Pages is treating your Jekyll site as static pages:
 
 - Build your site locally (`grunt build`).
-- Upload Jekyll generateed static files to your `username.github.io` repository.
+- Upload Jekyll generated static files to your `username.github.io` repository.
 
 If you'd like to keep all things under Git control, you can try the following file structure:
 
