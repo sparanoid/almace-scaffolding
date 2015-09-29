@@ -232,7 +232,7 @@ languages:
   - en-us
 ```
 
-Please note that only the first item defined in `languages` array will be used in final `lang` ouput, the additional languages will be available in JSON feed output:
+Please note that only the first item defined in `languages` array will be used in final `lang` output, the additional languages will be available in JSON feed output:
 
 ```json
 {
@@ -246,13 +246,13 @@ Please note that only the first item defined in `languages` array will be used i
 
 For better performance, Almace Scaffolding will find all the CSS, script links and images in compiled HTML, and outputs a version with all the CSS, scripts and images (Base64) written inline. Sounds cool? but it needs theme support. Here's how:
 
-You can simply add the query string `?assets-inline` at the end of the file you'd like to be smooshed in production site:
+You can simply add the query string `?assets-inline` at the end of the file you'd like to be inlined in production site:
 
 ```html
-<!-- This CSS will be smooshed into HTML -->
+<!-- This CSS will be inlined into HTML -->
 <link rel="stylesheet" href="{% raw %}{{ '/css/app.css?assets-inline' | prepend: amsf_theme_assets }}{% endraw %}">
 
-<!-- This script will be smooshed into HTML -->
+<!-- This script will be inlined into HTML -->
 <script src="{% raw %}{{ '/js/app.js?assets-inline' | prepend: amsf_theme_assets }}{% endraw %}"></script>
 ```
 

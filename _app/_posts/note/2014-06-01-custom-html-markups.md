@@ -78,7 +78,7 @@ A simple library by [Tim Holman](https://github.com/tholman) to view large image
 
 ### Usage
 
-Add the folloing setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
+Add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
 
 ```
 plugin: intense

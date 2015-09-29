@@ -35,7 +35,7 @@ You can simply copy all posts from your old Jekyll setup into `_app/_posts`, you
 
 ## Upgrading
 
-Upgrading templates is hard, it will be easy if you are're a casual blogger and keep every core and template file untouched. You can use the following command to update Almace Scaffolding core files:
+It will be easy if you're a casual blogger and keep every core and template file untouched. You can use the following command to update Almace Scaffolding core files:
 
 ```sh
 $ grunt amsf-update

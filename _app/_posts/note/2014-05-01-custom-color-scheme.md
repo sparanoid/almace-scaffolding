@@ -10,7 +10,7 @@ scheme-code: "#ad00ff"
 scheme-bg: "#00ebff"
 ---
 
-This is an example how to change your post color scheme for specific posts. You can simply add the folloing variables to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
+This is an example how to change your post color scheme for specific posts. You can simply add the following variables to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
 
 ```
 scheme-text: "#0029ff"
