@@ -1,3 +1,20 @@
+<a name="0.0.45"></a>
+## [0.0.45](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.44...v0.0.45) (2015-09-29)
+
+
+### Features
+
+* **gemfile:** use 3.0.0.pre.beta9 ([b6d3b7b](https://github.com/sparanoid/almace-scaffolding/commit/b6d3b7b))
+* **jekyll:** add `config.user.js` support ([555a5db](https://github.com/sparanoid/almace-scaffolding/commit/555a5db))
+* **template:** add modified date support ([ffbb3f3](https://github.com/sparanoid/almace-scaffolding/commit/ffbb3f3))
+* **template:** use `user.less` and `user.js` ([00e0d72](https://github.com/sparanoid/almace-scaffolding/commit/00e0d72))
+
+
+### BREAKING CHANGES
+
+* Now you can define your custom config in `config.user.js` without touching the built-in configuration.
+
+
 <a name="0.0.44"></a>
 ## [0.0.44](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.43...v0.0.44) (2015-09-27)
 
