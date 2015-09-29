@@ -323,6 +323,7 @@ module.exports = (grunt) ->
 
       amsf__core__update_deps:
         command: [
+          "bundle update"
           "bundle install"
           "npm install"
         ].join("&&")
