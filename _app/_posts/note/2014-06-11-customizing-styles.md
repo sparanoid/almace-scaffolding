@@ -5,15 +5,15 @@ category: note
 tags: customization
 ---
 
-You can customize the basic look and feel without touching the theme files by changing `custom.js` and `custom.less`:
+You can customize the basic look and feel without touching the theme files by changing `user.js` and `user.less`:
 
 ```
 ├── _app/
 |   ├── assets/
 |   |   └── _js/
-|   |   |   └── custom.js
+|   |   |   └── user.js
 |   |   └── _less/
-|   |   |   └── custom.less
+|   |   |   └── user.less
 |   |   └── themes/
 |   |   |   └── ...
 ```

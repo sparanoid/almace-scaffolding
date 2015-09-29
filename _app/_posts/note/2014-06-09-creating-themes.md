@@ -271,7 +271,7 @@ Define the following code snippet into your theme template (it's recommended to 
 
 ```html
 <!-- User custom scripts -->
-<script src="{% raw %}{{ '/js/custom.js?assets-inline' | prepend: amsf_user_assets }}{% endraw %}"></script>
+<script src="{% raw %}{{ '/js/user.js?assets-inline' | prepend: amsf_user_assets }}{% endraw %}"></script>
 ```
 
 ### Page / Post Specific CSS Block Support
