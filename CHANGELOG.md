@@ -1,3 +1,14 @@
+<a name="0.0.46"></a>
+## [0.0.46](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.45...v0.0.46) (2015-09-29)
+
+
+### Bug Fixes
+
+* **docs:** typos ([613d4ae](https://github.com/sparanoid/almace-scaffolding/commit/613d4ae))
+* **grunt:** bundle should update ([72b840e](https://github.com/sparanoid/almace-scaffolding/commit/72b840e))
+
+
+
 <a name="0.0.45"></a>
 ## [0.0.45](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.44...v0.0.45) (2015-09-29)
 
