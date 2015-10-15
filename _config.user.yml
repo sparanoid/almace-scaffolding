@@ -1,3 +1,7 @@
 #
 # Jekyll user configurations
 #
+
+# Jekyll has a bug that if a config file is empty it stops processing later configs
+# Ref: https://github.com/jekyll/jekyll/issues/4030
+dummy:          []
