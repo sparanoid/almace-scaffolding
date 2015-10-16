@@ -268,6 +268,10 @@ module.exports = (grunt) ->
     cacheBust:
       options:
         encoding: "utf8"
+        filters: {
+          "link[rel*=icon]": ->
+            @attribs.href
+        }
         algorithm: "md5"
         length: 8
         deleteOriginals: true
