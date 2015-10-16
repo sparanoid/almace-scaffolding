@@ -11,13 +11,19 @@
 <!-- Define a description for better SEO result -->
 <meta name="description" content="{{ amsf_site_desc | strip }}">
 
+<!-- Feed URL -->
 <link rel="alternate" href="{{ amsf_feed_url }}" type="application/atom+xml">
 
+<!-- Site icons -->
 {% if site.base %}
   <link rel="icon" href="{{ '/favicon.ico' | prepend: site.base }}">
   <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | prepend: site.base }}">
 {% endif %}
 
+<!-- Pinned icon for Safari -->
+<link rel="mask-icon" href="{{ '/favicon.svg' | prepend: site.base }}" color="#ff00b4">
+
+<!-- Main CSS -->
 <link rel="stylesheet" href="{{ '/css/app.css?assets-inline' | prepend: amsf_theme_assets }}">
 
 <!-- Canonical links, avoid duplicate content problems -->
