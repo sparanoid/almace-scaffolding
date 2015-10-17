@@ -51,6 +51,7 @@
     "grunt-minjson": "^0.3.0",
     "grunt-newer": "^1.1.1",
     "grunt-postcss": "^0.6.0",
+    "grunt-pubsubhubbub_publish": "^0.2.1",
     "grunt-rev": "^0.1.0",
     "grunt-shell": "^1.1.2",
     "grunt-text-replace": "^0.4.0",

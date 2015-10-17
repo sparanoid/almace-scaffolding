@@ -11,6 +11,7 @@ module.exports = (grunt) ->
     gitreset: "grunt-git"
     replace: "grunt-text-replace"
     usebanner: "grunt-banner"
+    pubsubhubbub_publish: "grunt-pubsubhubbub_publish"
 
   # Track tasks load time
   require("time-grunt") grunt
@@ -563,6 +564,13 @@ module.exports = (grunt) ->
         tagMessage: "chore: create tag %VERSION%"
         push: false
 
+    pubsubhubbub_publish:
+      dist:
+        options:
+          hub: "<%= config.cfg.pshh %>"
+
+        hubUrl: "<%= config.cfg.url %><%= config.cfg.feed %>"
+
   grunt.registerTask "theme-upgrade", "Upgrade specific theme from AMSF cache to app", [
     "shell:amsf__theme__to_app"
   ]
@@ -678,6 +686,7 @@ module.exports = (grunt) ->
     if grunt.option("deploy")
       grunt.task.run [
         "shell:sync_commit"
+        "pubsubhubbub_publish"
       ]
 
   grunt.registerTask "default", "Default task aka. build task", [
