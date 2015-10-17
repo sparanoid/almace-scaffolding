@@ -569,7 +569,7 @@ module.exports = (grunt) ->
         options:
           hub: "<%= config.cfg.pshh %>"
 
-        hubUrl: "<%= config.cfg.url %><%= config.cfg.feed %>"
+        hubUrl: "<%= config.cfg.url %><%= config.cfg.base %><%= config.cfg.feed %>"
 
   grunt.registerTask "theme-upgrade", "Upgrade specific theme from AMSF cache to app", [
     "shell:amsf__theme__to_app"
