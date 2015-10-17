@@ -83,6 +83,10 @@ assets:         /assets
 # Default:      /feed.xml
 feed:           /feed.xml
 
+# PubSubHubbub Hub
+# Default:      https://pubsubhubbub.appspot.com/
+pshh:           https://pubsubhubbub.appspot.com/
+
 # Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full URLs for these fields
 url:            http://sparanoid.com
 
