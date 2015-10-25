@@ -1,3 +1,28 @@
+<a name="0.0.47"></a>
+## [0.0.47](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.46...v0.0.47) (2015-10-25)
+
+
+### Bug Fixes
+
+* **amsf:** missing title whitespace ([abd7f2f](https://github.com/sparanoid/almace-scaffolding/commit/abd7f2f))
+* **feed:** missing base url for PSHH ([54271c4](https://github.com/sparanoid/almace-scaffolding/commit/54271c4))
+* **jekyll:** empty config causes Jekyll ignoring later configs ([86decb2](https://github.com/sparanoid/almace-scaffolding/commit/86decb2))
+
+### Features
+
+* **feed:** basic PubSubHubbub support ([0d72326](https://github.com/sparanoid/almace-scaffolding/commit/0d72326))
+* **feed:** remove PubSubHubbub support ([6df22eb](https://github.com/sparanoid/almace-scaffolding/commit/6df22eb))
+* **gem:** bump and test latest Jeklly release ([190a5fe](https://github.com/sparanoid/almace-scaffolding/commit/190a5fe))
+* **grunt:** add `mask-icon` support for Safari ([2560253](https://github.com/sparanoid/almace-scaffolding/commit/2560253))
+* **grunt:** pass project name when deploy ([3f60155](https://github.com/sparanoid/almace-scaffolding/commit/3f60155))
+* **style:** remove abbr styles ([bde59df](https://github.com/sparanoid/almace-scaffolding/commit/bde59df))
+* **style:** smaller blockquotes font size ([e5da89e](https://github.com/sparanoid/almace-scaffolding/commit/e5da89e))
+* **style:** tweak default code color ([b1535a1](https://github.com/sparanoid/almace-scaffolding/commit/b1535a1))
+* **template:** disable `jekyll-last-modified-at` for dev mod for better performance ([0b30446](https://github.com/sparanoid/almace-scaffolding/commit/0b30446))
+* **template:** use variable for mask-icon color ([be3d208](https://github.com/sparanoid/almace-scaffolding/commit/be3d208))
+
+
+
 <a name="0.0.46"></a>
 ## [0.0.46](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.45...v0.0.46) (2015-09-29)
 
