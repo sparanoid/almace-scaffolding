@@ -90,7 +90,7 @@
     {% assign date_publish = page.date | date: "%b %-d, %Y" %}
     {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
 
-    {% if date_publish != date_update %}
+    {% if date_publish != date_update and site.dev == false %}
       <footer class="post-modified-date">
         <p>
           Updated

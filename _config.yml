@@ -65,6 +65,9 @@ gems:
 # Almace Scaffolding settings
 #
 
+# Development mode
+dev:            false
+
 # Site name
 name:           Almace Scaffolding
 
