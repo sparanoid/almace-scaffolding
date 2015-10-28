@@ -105,32 +105,10 @@ Careful Skippy, you really aren’t as convincing as you think you are.
 
 <p lang="ja">『雪国』の主な舞台は、上越国境の清水トンネルを抜けた湯沢温泉であるが、この作品も『伊豆の踊子』同様に、川端康成の旅の出会いから生まれたもので、雪中の火事も実際に起ったことだと川端は語っている。川端は作品内で故意に地名を隠しているが、1934 年（昭和 9 年）6 月 13 日より 1937 年まで新潟県湯沢町の高半旅館（現：高半ホテル）に逗留していたことを随筆『「雪国」の旅』で述べている。</p>
 
-```
+```markdown
 ## H2 Heading
 ### H3 Heading
 #### H4 Heading
 ##### H5 Heading
 ###### H6 Heading
 ```
-
-## Code Blocks
-Code highlighting demo, powered by Pygments. More info about code highlighting can be found at [Jekyll's documentation](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
-
-```ruby
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-```
-
-## Tables
-
-Name | Upvotes | Downvotes | Abstentions
---- | --- | --- | ---
-Alice   | 10 | 11 | 2
-Bob     | 4  | 3  | 1
-Charlie | 7  | 9  | 4
-Totals  | 21 | 23 | 7
