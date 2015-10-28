@@ -1,96 +1,167 @@
-// Pygments highlight theme
-// https://github.com/mojombo/tpw/blob/master/css/syntax.css
-// https://github.com/less/less.js/issues/2071
+// Rouge / Pygments automatic highlight theme
 
-// Text color function
-.code-text (@link, @text) when (lightness(@link) >= 50%) and (lightness(@link) >= lightness(@text)) {
-  @return-color: lighten(@link, 20%);
-  @return-value: 30%;
-}
-.code-text (@link, @text) when (lightness(@link) >= 50%) and (lightness(@link) < lightness(@text)) {
-  @return-color: lighten(@text, 20%);
-  @return-value: 30%;
-}
-.code-text (@link, @text) when (lightness(@link) < 50%) and (lightness(@link) >= lightness(@text)) {
-  @return-color: darken(@link, 6%);
-  @return-value: 40%;
-}
-.code-text (@link, @text) when (lightness(@link) < 50%) and (lightness(@link) < lightness(@text)) {
-  @return-color: darken(@text, 6%);
-  @return-value: 40%;
+// Calculate code background color based on the lightness of link color
+.calc-bg (@v) when (lightness(@v) >= 80%) {
+  @calc-bg: mix(#fff, @v, 90%);
 }
 
-// Background color function
-.code-bg (@v) when (lightness(@v) >= 50%) {
-  @return-bg: mix(#000, lighten(@v, 30%), 10%);
-}
-.code-bg (@v) when (lightness(@v) < 50%) {
-  @return-bg: mix(#fff, darken(@v, 10%), 70%);
+.calc-bg (@v) when (lightness(@v) < 80%) {
+  @calc-bg: mix(#000, @v, 70%);
 }
 
-.highlight,
-.highlighter-rouge {
+.highlight {
 
-  pre    { .code-bg(@link-color); background: fade(@return-bg, 10%); }
-  code   { .code-text(@link-color, @text-color); color: mix(#888888, @return-color, @return-value); } // Normal code
+  // Reset background
+  // .highlight > pre for common liquid method
+  // .highlighter-rouge .highlight for GFM method
+  // Ref: https://github.com/jekyll/jekyll/pull/4053
+  @highlighter-tint: @link-color;
+  > pre,
+  .highlighter-rouge & {
+    .calc-bg(@highlighter-tint);
+    background: fade(@calc-bg, 1.5%);
+  }
 
-  .c     { .code-text(@link-color, @text-color); color: mix(#999988, @return-color, @return-value); font-style: italic } // Comment
-  .err   { .code-text(@link-color, @text-color); color: mix(#a61717, @return-color, @return-value); background-color: #e3d2d2 } // Error
-  .cm    { .code-text(@link-color, @text-color); color: mix(#999988, @return-color, @return-value); font-style: italic } // Comment.Multiline
-  .cp    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); font-weight: bold } // Comment.Preproc
-  .c1    { .code-text(@link-color, @text-color); color: mix(#999988, @return-color, @return-value); font-style: italic } // Comment.Single
-  .cs    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); font-weight: bold; font-style: italic } // Comment.Special
-  .gd    { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #ffdddd } // Generic.Deleted
-  .gd .x { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #ffaaaa } // Generic.Deleted.Specific
-  .gr    { .code-text(@link-color, @text-color); color: mix(#aa0000, @return-color, @return-value); } // Generic.Error
-  .gh    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); } // Generic.Heading
-  .gi    { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #ddffdd } // Generic.Inserted
-  .gi .x { .code-text(@link-color, @text-color); color: mix(#000000, @return-color, @return-value); background-color: #aaffaa } // Generic.Inserted.Specific
-  .go    { .code-text(@link-color, @text-color); color: mix(#888888, @return-color, @return-value); } // Generic.Output
-  .gp    { .code-text(@link-color, @text-color); color: mix(#555555, @return-color, @return-value); } // Generic.Prompt
-  .gu    { .code-text(@link-color, @text-color); color: mix(#aaaaaa, @return-color, @return-value); } // Generic.Subheading
-  .gt    { .code-text(@link-color, @text-color); color: mix(#aa0000, @return-color, @return-value); } // Generic.Traceback
-  .kt    { .code-text(@link-color, @text-color); color: mix(#445588, @return-color, @return-value); font-weight: bold } // Keyword.Type
-  .m     { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number
-  .s     { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String
-  .na    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Attribute
-  .nb    { .code-text(@link-color, @text-color); color: mix(#0086B3, @return-color, @return-value); } // Name.Builtin
-  .nc    { .code-text(@link-color, @text-color); color: mix(#445588, @return-color, @return-value); font-weight: bold } // Name.Class
-  .no    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Constant
-  .ni    { .code-text(@link-color, @text-color); color: mix(#800080, @return-color, @return-value); } // Name.Entity
-  .ne    { .code-text(@link-color, @text-color); color: mix(#990000, @return-color, @return-value); font-weight: bold } // Name.Exception
-  .nf    { .code-text(@link-color, @text-color); color: mix(#990000, @return-color, @return-value); font-weight: bold } // Name.Function
-  .nn    { .code-text(@link-color, @text-color); color: mix(#555555, @return-color, @return-value); } // Name.Namespace
-  .nt    { .code-text(@link-color, @text-color); color: mix(#000080, @return-color, @return-value); } // Name.Tag
-  .nv    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable
-  .w     { .code-text(@link-color, @text-color); color: mix(#bbbbbb, @return-color, @return-value); } // Text.Whitespace
-  .mf    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Float
-  .mh    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Hex
-  .mi    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Integer
-  .mo    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Oct
-  .sb    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Backtick
-  .sc    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Char
-  .sd    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Doc
-  .s2    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Double
-  .se    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Escape
-  .sh    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Heredoc
-  .si    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Interpol
-  .sx    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Other
-  .sr    { .code-text(@link-color, @text-color); color: mix(#009926, @return-color, @return-value); } // Literal.String.Regex
-  .s1    { .code-text(@link-color, @text-color); color: mix(#dd1144, @return-color, @return-value); } // Literal.String.Single
-  .ss    { .code-text(@link-color, @text-color); color: mix(#990073, @return-color, @return-value); } // Literal.String.Symbol
-  .bp    { .code-text(@link-color, @text-color); color: mix(#999999, @return-color, @return-value); } // Name.Builtin.Pseudo
-  .vc    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable.Class
-  .vg    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable.Global
-  .vi    { .code-text(@link-color, @text-color); color: mix(#008080, @return-color, @return-value); } // Name.Variable.Instance
-  .il    { .code-text(@link-color, @text-color); color: mix(#009999, @return-color, @return-value); } // Literal.Number.Integer.Long
-  .k     { font-weight: bold } // Keyword
-  .o     { font-weight: bold } // Operator
-  .gs    { font-weight: bold } // Generic.Strong
-  .kc    { font-weight: bold } // Keyword.Constant
-  .kd    { font-weight: bold } // Keyword.Declaration
-  .kp    { font-weight: bold } // Keyword.Pseudo
-  .kr    { font-weight: bold } // Keyword.Reserved
-  .ow    { font-weight: bold } // Operator.Word
-  .ge    { font-style: italic } // Generic.Emph
+  // Reset default `code`
+  code { color: desaturate(@link-color, 95%); } // Normal code
+
+  // Special background for syntax errors
+  .err { background-color: fade(saturate(@highlighter-tint, 10%), 10%) } // Error
+
+  .c   { font-style: italic } // Comment
+  .cm  { font-style: italic } // Comment.Multiline
+  .cp  { font-weight: bold } // Comment.Preproc
+  .c1  { font-style: italic } // Comment.Single
+  .cs  { font-weight: bold; font-style: italic } // Comment.Special
+
+  .nc  { font-weight: bold } // Name.Class
+  .ne  { font-weight: bold } // Name.Exception
+  .nf  { font-weight: bold } // Name.Function
+
+  .o   { font-weight: bold } // Operator
+  .ow  { font-weight: bold } // Operator.Word
+
+  .gs  { font-weight: bold } // Generic.Strong
+  .ge  { font-style: italic } // Generic.Emph
+
+  .k   { font-weight: bold } // Keyword
+  .kt  { font-weight: bold } // Keyword.Type
+  .kc  { font-weight: bold } // Keyword.Constant
+  .kd  { font-weight: bold } // Keyword.Declaration
+  .kp  { font-weight: bold } // Keyword.Pseudo
+  .kr  { font-weight: bold } // Keyword.Reserved
+
+  @token-main:
+    err // Error
+    x // Other
+
+    n // Name
+    na // Name.Attribute
+    nb // Name.Builtin
+    bp // Name.Builtin.Pseudo
+    nc // Name.Class
+    no // Name.Constant
+    nd // Name.Decorator
+    ni // Name.Entity
+    ne // Name.Exception
+    nf // Name.Function
+    nl // Name.Label
+    nn // Name.Namespace
+    nx // Name.Other
+    nt // Name.Tag
+    nv // Name.Variable
+    vc // Name.Variable.Class
+    vg // Name.Variable.Global
+    vi // Name.Variable.Instance
+
+    g // Generic
+    gd // Generic.Deleted
+    ge // Generic.Emph
+    gr // Generic.Error
+    gh // Generic.Heading
+    gi // Generic.Inserted
+    go // Generic.Output
+    gp // Generic.Prompt
+    gs // Generic.Strong
+    gu // Generic.Subheading
+    gt // Generic.Traceback
+    gl // Generic.Lineno
+
+    k // Keyword
+    kc // Keyword.Constant
+    kd // Keyword.Declaration
+    kn // Keyword.Namespace
+    kp // Keyword.Pseudo
+    kr // Keyword.Reserved
+    kt // Keyword.Type
+    kv // Keyword.Variable
+
+    w // Text.Whitespace
+
+    l // Literal
+
+    ld // Literal.Date
+
+    s // Literal.String
+    sb // Literal.String.Backtick
+    sc // Literal.String.Char
+    sd // Literal.String.Doc
+    s2 // Literal.String.Double
+    se // Literal.String.Escape
+    sh // Literal.String.Heredoc
+    si // Literal.String.Interpol
+    sx // Literal.String.Other
+    sr // Literal.String.Regex
+    s1 // Literal.String.Single
+    ss // Literal.String.Symbol
+
+    m // Literal.Number
+    mf // Literal.Number.Float
+    mh // Literal.Number.Hex
+    mi // Literal.Number.Integer
+    il // Literal.Number.Integer.Long
+    mo // Literal.Number.Oct
+    mb // Literal.Number.Bin
+    mx // Literal.Number.Other
+
+    o // Operator
+    ow // Operator.Word
+
+    p // Punctuation
+    pi // Punctuation.Indicator
+  ;
+
+  // Generate main highlights
+  // Ref: https://github.com/less/less.js/issues/2071
+  .loop-main (@i) when (@i < (length(@token-main) + 1)) {
+    @token: extract(@token-main, @i);
+
+    .@{token} {
+      color: mix(spin(@code-color, (@i * 360 / length(@token-main))), @link-color, 80%);
+    }
+    .loop-main((@i + 1));
+  }
+  .loop-main(1);
+
+  @token-comments:
+    c // Comment
+    cd // Comment.Multiline
+    cm // Comment.Multiline
+    cp // Comment.Preproc
+    c1 // Comment.Single
+    cs // Comment.Special
+  ;
+
+  // Generate highlight for comments
+  .loop-comments (@i) when (@i < (length(@token-comments) + 1)) {
+    @token: extract(@token-comments, @i);
+
+    .@{token} {
+      color: mix(desaturate(spin(@code-color, (@i * 360 / length(@token-comments))), 70%), @link-color, 90%);
+      opacity: .6;
+    }
+    .loop-comments((@i + 1));
+  }
+  .loop-comments(1);
+
 }
