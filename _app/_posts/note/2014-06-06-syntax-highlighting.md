@@ -262,3 +262,16 @@ and [regular links too](http://example.com)
 
 [ref 1]: http://example.com
 ```
+
+```yaml
+- name: set PHP-FPM parameters
+  lineinfile:
+    dest: /etc/php-fpm.conf
+    regexp: "^{{ item.param }}"
+    insertafter: "^;{{ item.param }}"
+    line: "{{ item.param }} = {{ item.value }}"
+  with_items:
+    - { param: 'error_log', value: '/var/log/php-fpm/error.log' }
+    - { param: 'log_level', value: 'error' }
+    - { param: 'emergency_restart_threshold', value: '10' }
+```
