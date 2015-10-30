@@ -40,7 +40,7 @@
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-htmlmin": "^0.6.0",
     "grunt-contrib-less": "^1.0.1",
-    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-contrib-uglify": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-conventional-changelog": "^5.0.0",
     "grunt-csscomb": "^3.1.0",
