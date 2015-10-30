@@ -38,7 +38,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.1",
     "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-contrib-htmlmin": "^0.5.0",
+    "grunt-contrib-htmlmin": "^0.6.0",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
