@@ -124,3 +124,13 @@ rss_excerpt:    false
 # Show generator credits
 # Default:      true
 credits:        true
+
+# Items in robots.txt
+# For example:
+# robots:
+#   - "User-agent: *"
+#   - "Disallow: /ajax/"
+#   - "Disallow: /@async"
+#   - "Disallow: /log/"
+# Default:      "User-agent: *"
+robots:         "User-agent: *"

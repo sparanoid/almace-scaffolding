@@ -55,6 +55,13 @@ redcarpet:
     - tables
 
 #
+# Jekyll plugins
+#
+
+gems:
+  - jekyll-last-modified-at
+
+#
 # Almace Scaffolding settings
 #
 
@@ -117,3 +124,13 @@ rss_excerpt:    false
 # Show generator credits
 # Default:      true
 credits:        true
+
+# Custom records in robots.txt
+# For example:
+# robots:
+#   - "User-agent: *"
+#   - "Disallow: /ajax/"
+#   - "Disallow: /@async"
+#   - "Disallow: /log/"
+# Default:      "User-agent: *"
+robots:         "User-agent: *"

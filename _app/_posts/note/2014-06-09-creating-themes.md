@@ -203,6 +203,20 @@ Template:
 {{ '{% endif ' }}%}
 ```
 
+### `site.robots`
+
+You can define your own records in `robots.txt`.
+
+Config:
+
+```yaml
+robots:
+  - "User-agent: *"
+  - "Disallow: /ajax/"
+  - "Disallow: /@async"
+  - "Disallow: /log/"
+```
+
 ## Theme Features
 
 There're some features can be integrated into your theme.
