@@ -82,7 +82,7 @@ base:           null
 # Default:      /assets
 assets:         /assets
 
-# Define feed path. If you use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+# Define your main feed URL, this will be only used in your templates
 # Default:      /feed.xml
 feed:           /feed.xml
 
