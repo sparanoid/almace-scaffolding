@@ -15,9 +15,9 @@ tags: miscellaneous
       end
     end
 
-## GFM Code Blocks (`fenced_code_blocks`)
+## Liquid Tag with `linenos` Support
 
-```ruby
+{% highlight ruby linenos %}
 def show
   @widget = Widget(params[:id])
   respond_to do |format|
@@ -25,7 +25,9 @@ def show
     format.json { render json: @widget }
   end
 end
-```
+{% endhighlight %}
+
+## GFM Code Blocks (`fenced_code_blocks`)
 
 ```css
 /* Background color function */
