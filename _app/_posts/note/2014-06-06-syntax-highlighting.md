@@ -25,12 +25,19 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-{% highlight ruby linenos %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight html linenos %}
+<!doctype html>
+<html>
+  <head>
+    <title>Title!</title>
+  </head>
+  <body>
+    <h1 id="title" class="heading">Example</h1>
+    <p id="foo">Hello, World!</p>
+    <script type="text/javascript">var a = 1;</script>
+    <style type="text/css">#foo { font-weight: bold; }</style>
+  </body>
+</html>
 {% endhighlight %}
 
 ```js
