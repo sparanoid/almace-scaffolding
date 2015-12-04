@@ -1,3 +1,59 @@
+<a name="0.0.48"></a>
+## [0.0.48](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.47...v0.0.48) (2015-12-04)
+
+
+### Bug Fixes
+
+* **deps:** Add peer dependency for grunt-coffeelint ([3132689](https://github.com/sparanoid/almace-scaffolding/commit/3132689))
+* **jekyll:** avoid `footnote_backlink` conversion to an Emoji graphic on iOS ([170dd42](https://github.com/sparanoid/almace-scaffolding/commit/170dd42))
+* **style:** avoid unwanted scrollers for `pre` blocks ([82f25e2](https://github.com/sparanoid/almace-scaffolding/commit/82f25e2))
+* **styles:** make line numbers not selectable ([8f28573](https://github.com/sparanoid/almace-scaffolding/commit/8f28573))
+
+### Features
+
+* **config:** remove `_config.user.yml` support ([64ee055](https://github.com/sparanoid/almace-scaffolding/commit/64ee055))
+* **docs:** better highlighting examples ([f93d80a](https://github.com/sparanoid/almace-scaffolding/commit/f93d80a))
+* **gem:** use jekyll 3.0.0 stable ([4475503](https://github.com/sparanoid/almace-scaffolding/commit/4475503))
+* **style:** gapless border for blockquotes, fixes https://github.com/amsf/amsf-curtana/issue ([9aeb5df](https://github.com/sparanoid/almace-scaffolding/commit/9aeb5df))
+* **styles:** add basic `lineno` support ([9b09e93](https://github.com/sparanoid/almace-scaffolding/commit/9b09e93))
+* **styles:** avoid calculating code color ([4273000](https://github.com/sparanoid/almace-scaffolding/commit/4273000))
+* **styles:** update default code color ([dc290bb](https://github.com/sparanoid/almace-scaffolding/commit/dc290bb))
+* **styles:** use brand-new fully automatic generated syntax highlighting ([426c09d](https://github.com/sparanoid/almace-scaffolding/commit/426c09d))
+* **template:** add `site.robots` support ([0ddab1b](https://github.com/sparanoid/almace-scaffolding/commit/0ddab1b))
+* **template:** update base urls for feeds ([3c13efe](https://github.com/sparanoid/almace-scaffolding/commit/3c13efe))
+* **travis:** test node.js 4 ([ccd2399](https://github.com/sparanoid/almace-scaffolding/commit/ccd2399))
+
+
+### BREAKING CHANGES
+
+* style: Now paragraphs in a blockquote will get a single gapless border on the left side, you don't need special markup to achieve this now:
+
+```markdown
+> … these mean that in many fields the rule will be: Build it, and they will come.
+>
+> Paul Graham
+```
+* jekyll: Appending &#xfe0e; to the Unicode-represenation of the reversed arrow will prevent the conversion to an Emoji graphic on iOS. You should update Kramdown settings `footnote_backlink` in your exisitng config.
+
+Reference:
+
+- https://github.com/jekyll/jekyll/issues/3751
+- https://twitter.com/jasoncodes/status/590356654790574080
+- https://github.com/sparanoid/almace-scaffolding/commit/d9d14a9f9088e66407c8c82098fcc02bfa1d2c10
+* config: `_config.user.yml` is deprecated and no longer supported in the future, please keep config changes in `_config.yml`.
+* template: Now you can define your custom `robots.txt` records in configuration file:
+
+```yaml
+robots:
+  - "User-agent: *"
+  - "Disallow: /ajax/"
+  - "Disallow: /@async"
+  - "Disallow: /log/"
+```
+* styles: This will change your syntax highlighting color scheme, you can now tweak it with `@code-color`, have fun.
+
+
+
 <a name="0.0.47"></a>
 ## [0.0.47](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.46...v0.0.47) (2015-10-25)
 
