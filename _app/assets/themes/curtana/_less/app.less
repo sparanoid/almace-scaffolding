@@ -38,20 +38,20 @@
   }
 }
 
-.heading {
+.heading() {
   font-size: 330%;
   -webkit-font-smoothing: antialiased;
   font-weight: bold;
   letter-spacing: -.06em;
 }
 
-.sub-heading {
+.sub-heading() {
   font-size: 72%;
   font-weight: normal;
   opacity: .5;
 }
 
-.spliter {
+.spliter() {
   @size: 4px;
   @color: @text-color;
 
@@ -339,7 +339,7 @@ body:hover .latest {
 
     h1 {
       margin: 0 0 .1em;
-      .heading;
+      .heading();
       hyphens: none;
       line-height: 1.1;
 
@@ -393,7 +393,7 @@ body:hover .latest {
 
   h2, h3, h4, h5, h6 {
     margin: 10vmin 0 1rem;
-    .sub-heading;
+    .sub-heading();
   }
 
   ul, ol {
@@ -489,7 +489,7 @@ body:hover .latest {
   }
 
   hr {
-    .spliter;
+    .spliter();
   }
 
   sup {
@@ -620,7 +620,7 @@ body:hover .latest {
 
 // Largetype styles (replaces button styles)
 .largetype {
-  .heading;
+  .heading();
   font-size: 200%;
   margin-bottom: 1.8rem !important;
 }
@@ -696,7 +696,7 @@ body:hover .latest {
 
 // Reference notes and links in post
 .footnotes {
-  .spliter;
+  .spliter();
   font-size: 80%;
 }
 
@@ -719,7 +719,7 @@ body:hover .latest {
   margin: 0 0 .4rem;
 
   h1 {
-    .heading;
+    .heading();
     font-size: 200%;
     line-height: 1.1;
     // Override heading defines in .content
