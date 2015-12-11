@@ -53,6 +53,8 @@ You have no idea how pretty suss our same same but different toasted sandwiches 
 
 You have no idea how pretty suss our same same but different toasted sandwiches were aye. Every time I see those carked it keas it's like the dairy all over again aye, you don't know his story, bro. Anyway, Hairy Maclary from Donaldson's Dairy is just Mrs Falani in disguise, to find the true meaning of life, one must start frying up with the hangi, mate. After the rugby ball is jumped the ditch, you add all the stink girl guide biscuits to the trotie you've got yourself a meal.
 
+---
+
 He was alone then; when he sat in that same chair his wife now sits in, and I shared with him the positive result to his HIV test. Though he seemed disinterested, vaguely detached, he had obviously heard of HIV before. His chart from the local clinic indicated a previous history of and treatment for anal gonorrhea, two acute cases of syphilis in the past three years, and a urinary tract infection last month. His only listed sexual contact, his wife. Who, strangely enough, only tested positive for one of the syphilis infections.
 
 “Mistake, this! I am married, not a giver of ass.”
