@@ -306,6 +306,66 @@ This allow your user to be able to use Google Analytics for their site, tracking
 {% raw %}{{ amsf_google_analytics }}{% endraw %}
 ```
 
+### Post Published Time
+
+This allow you to get the published time of current post.
+
+Template:
+
+```html
+<meta property="article:published_time" content="{% raw %}{{ amsf_page_pubdate | date_to_xmlschema }}{% endraw %}">
+```
+
+Output:
+
+```html
+<meta property="article:published_time" content="2014-01-01T00:00:00+08:00">
+```
+
+### Post Modified Time
+
+This allow you to get the modified time of current post.
+
+Template:
+
+```html
+<meta property="article:modified_time" content="{% raw %}{{ amsf_page_update | date_to_xmlschema }}{% endraw %}">
+```
+
+Output:
+
+```html
+<meta property="article:modified_time" content="2014-01-03T03:17:49+08:00">
+```
+
+### Post Reading Time
+
+This allow you to show average reading time of current post.
+
+Template:
+
+```html
+Reading time: {% raw %}{{ amsf_page_reading_time | strip }}{% endraw %}
+```
+
+Output:
+
+```md
+# Less than 200 words
+Reading time: Less than 1 min
+
+# Around 200 words
+Reading time: 1 min
+
+# More than 200 words
+Reading time: 34 mins
+
+# More than 1 hour
+Reading time: 1 hr
+Reading time: 1 hr 1 min
+Reading time: 3 hrs 20 mins
+```
+
 ## Publishing Themes
 
 You really like your custom design and wanna show it off to the world? Cool, you can create (pack) you own theme by the following command:
