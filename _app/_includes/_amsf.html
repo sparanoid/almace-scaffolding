@@ -74,6 +74,25 @@
 {% capture amsf_page_url %}{{ page.url | prepend: amsf_site_base | replace: '/index.html', '/' | replace: '/index.htm', '/' | replace: '/index.xml', '/' }}{% endcapture %}
 
 {% comment %}
+  Page publish date
+{% endcomment %}
+{% capture amsf_page_pubdate %}{{ page.date }}{% endcapture %}
+
+
+{% comment %}
+  Page update date
+{% endcomment %}
+{% capture amsf_page_update %}
+  {% assign date_publish = page.date | date: "%b %-d, %Y" %}
+  {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
+
+  {% if date_publish != date_update %}
+    {{ page.last_modified_at }}
+  {% else %}
+    {{ page.date }}
+  {% endif %}
+{% endcapture %}
+
   Page type (used by Open Graph)
 {% endcomment %}
 {% capture amsf_page_type %}
