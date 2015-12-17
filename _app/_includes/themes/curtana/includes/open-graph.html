@@ -14,6 +14,10 @@
 <meta name="twitter:title" content="{{ amsf_page_title }}">
 <meta name="twitter:url" content="{{ amsf_page_url }}">
 <meta name="twitter:description" content="{{ amsf_site_desc | strip }}">
+<meta name="twitter:label1" value="Words">
+<meta name="twitter:data1" value="{{ amsf_page_words | strip }}">
+<meta name="twitter:label2" value="Reading time">
+<meta name="twitter:data2" value="{{ amsf_page_reading_time | strip }}">
 
 {% if site.twitter %}
   <meta name="twitter:site" content="@{{ site.twitter }}">
