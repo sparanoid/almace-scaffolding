@@ -1,0 +1,113 @@
+//
+// Reset
+// --------------------------------------------------
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 @space-lg;
+  margin: 0 auto 0;
+  font-family: @fontstack-default;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @text-color;
+  text-rendering: optimizelegibility;
+  background: @background-color;
+  image-rendering: optimizequality;
+  transition: all .2s ease;
+
+  @media (max-width: @breakpoint-md) {
+    .padding-offset(@space-md, @space-md);
+    font-size: (@font-size * 1.4);
+  }
+
+  @media (max-width: @breakpoint-sm) {
+    .padding-offset(@space-sm, @space-sm);
+    font-size: (@font-size * 2.4);
+  }
+
+  @media (max-width: @breakpoint-xs) {
+    font-size: (@font-size * 3.2);
+  }
+
+  // All iOS devices, the easiest way
+  @media (max-device-width: 480px), (max-device-width: 1024px) {
+    -webkit-text-size-adjust: none;
+  }
+
+  // A semitranslucent bar at the top of the page
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+    width: 100%;
+    height: 1vmax;
+    pointer-events: none;
+    background: @link-color;
+    content: "";
+    opacity: .2;
+  }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Reset unusual Firefox-on-Android default style.
+// See https://github.com/necolas/normalize.css/issues/214
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+
+// Reset common elements
+a, button {
+  color: @text-color;
+  text-decoration: none;
+  transition: color .5s ease, border-color .5s ease, background .5s ease, opacity 1.5s ease;
+
+  &:hover,
+  &:focus {
+    transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+
+  &[disabled] {
+    opacity: .4;
+    cursor: not-allowed;
+  }
+}
+
+img, hr {
+  border: 0;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+::selection {
+  color: @link-color;
+  background: fade(@text-color, 2%);
+}
+
+::-webkit-input-placeholder {
+  color: @text-color;
+  opacity: .1;
+}
