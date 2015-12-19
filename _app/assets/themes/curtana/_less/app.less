@@ -15,11 +15,18 @@
 @breakpoint-md: 1000px;
 @breakpoint-sm: 640px;
 @breakpoint-xs: 400px;
-@padding-lg: 22vw;
-@padding-md: 8vw;
-@padding-sm: 4vw;
-@padding-xs: .8em;
-@blockquote-border: 2px;
+@breakpoint-default: @breakpoint-md;
+
+@space-lg: 22vw;
+@space-md: 8vw;
+@space-sm: 4vw;
+@space-xs: .8em;
+@space-default: @space-md;
+
+@border-lg: 4px;
+@border-md: 2px;
+@border-sm: 1px;
+@border-default: @border-md;
 
 // Invert color switcher for images and videos
 // :root { filter: invert(100%); }
@@ -51,6 +58,16 @@
   opacity: .5;
 }
 
+.padding-offset(@padding-left, @padding-right) {
+  padding-left: @padding-left;
+  padding-right: @padding-right;
+}
+
+.margin-offset(@margin-left, @margin-right) {
+  margin-left: @margin-left;
+  margin-right: @margin-right;
+}
+
 .spliter() {
   @size: 4px;
   @color: @text-color;
@@ -77,7 +94,7 @@
 }
 
 body {
-  padding: 0 @padding-lg;
+  padding: 0 @space-lg;
   margin: 0 auto 0;
   font-family: @fontstack-default;
   font-size: @font-size;
@@ -89,14 +106,12 @@ body {
   transition: all .2s ease;
 
   @media (max-width: @breakpoint-md) {
-    padding-left: @padding-md;
-    padding-right: @padding-md;
+    .padding-offset(@space-md, @space-md);
     font-size: (@font-size * 1.4);
   }
 
   @media (max-width: @breakpoint-sm) {
-    padding-left: @padding-sm;
-    padding-right: @padding-sm;
+    .padding-offset(@space-sm, @space-sm);
     font-size: (@font-size * 2.4);
   }
 
@@ -415,19 +430,17 @@ body:hover .latest {
 
   img, video, iframe, .browser {
     display: block;
-    width: calc(100% + (@padding-xs * 2) + (@blockquote-border * 2));
-    margin: 0 calc(-@padding-xs - @blockquote-border) 1.8rem;
+    width: calc(100% + (@space-xs * 2) + (@blockquote-border * 2));
+    margin: 0 calc(-@space-xs - @blockquote-border) 1.8rem;
 
     @media (max-width: @breakpoint-md) {
-      margin-left: -@padding-md;
-      margin-right: -@padding-md;
-      width: calc(100% + (@padding-md * 2));
+      .margin-offset(-@space-md, -@space-md);
+      width: calc(100% + (@space-md * 2));
     }
 
     @media (max-width: @breakpoint-sm) {
-      margin-left: -@padding-sm;
-      margin-right: -@padding-sm;
-      width: calc(100% + (@padding-sm * 2));
+      .margin-offset(-@space-sm, -@space-sm);
+      width: calc(100% + (@space-sm * 2));
     }
 
     // avoid images with `.no-enlarge` stretched by global img styles
@@ -442,7 +455,7 @@ body:hover .latest {
   blockquote {
     position: relative;
     margin-bottom: 2.8rem;
-    margin-left: calc(-@padding-xs - @blockquote-border);
+    margin-left: calc(-@space-xs - @blockquote-border);
     font-size: 90%;
 
     @media (max-width: @breakpoint-sm) {
@@ -451,7 +464,7 @@ body:hover .latest {
 
     > p {
       padding-left: .8em;
-      border-left: 2px solid;
+      border-left: @border-default solid;
       // TODO: Need better solution
       // We will reset the common margin-bototm to get gapless borders for blockquotes
       // This could help fix https://github.com/amsf/amsf-curtana/issues/4
@@ -466,10 +479,8 @@ body:hover .latest {
       }
 
       @media (max-width: @breakpoint-sm) {
-        padding-left: calc(4vw - 2px);
-        padding-right: 4vw;
-        margin-left: -4vw;
-        margin-right: -4vw;
+        .padding-offset(calc(@space-sm - @border-default), @space-sm);
+        .margin-offset(-@space-sm, -@space-sm);
       }
     }
 
@@ -518,17 +529,13 @@ body:hover .latest {
     -webkit-overflow-scrolling: touch;
 
     @media (max-width: @breakpoint-md) {
-      padding-left: 8vw;
-      padding-right: 8vw;
-      margin-left: -8vw;
-      margin-right: -8vw;
+      .padding-offset(@space-md, @space-md);
+      .margin-offset(-@space-md, -@space-md);
     }
 
     @media (max-width: @breakpoint-sm) {
-      padding-left: 4vw;
-      padding-right: 4vw;
-      margin-left: -4vw;
-      margin-right: -4vw;
+      .padding-offset(@space-sm, @space-sm);
+      .margin-offset(-@space-sm, -@space-sm);
     }
   }
 
@@ -582,13 +589,13 @@ body:hover .latest {
     }
 
     th {
-      border-bottom: 2px solid fade(@text-color, 6%);
+      border-bottom: @border-default solid fade(@text-color, 6%);
       // Override default user agent stylesheet
       text-align: left;
     }
 
     td {
-      border-top: 1px solid fade(@text-color, 4%);
+      border-top: @border-sm solid fade(@text-color, 4%);
     }
   }
 }
@@ -669,12 +676,11 @@ body:hover .latest {
 
 // Extra offset for OS X screenshots
 .screenshot-mac {
-  margin-left: -56px;
-  margin-right: -56px;
+  @osx-shadow-size: 56px;
+  .margin-offset(-@osx-shadow-size, -@osx-shadow-size);
 
   @media (max-width: @breakpoint-md), (max-width: @breakpoint-sm) {
-    margin-left: 0;
-    margin-right: 0
+    .margin-offset(0, 0);
   }
 }
 
@@ -683,14 +689,12 @@ body:hover .latest {
 .store,
 .download {
   padding-left: .8em;
-  margin-left: calc(-@padding-xs - @blockquote-border);
-  border-left: 2px solid @link-color;
+  margin-left: calc(-@space-xs - @blockquote-border);
+  border-left: @border-default solid @link-color;
 
   @media (max-width: @breakpoint-sm) {
-    padding-left: calc(4vw - 2px);
-    padding-right: 4vw;
-    margin-left: -4vw;
-    margin-right: -4vw;
+    .padding-offset(calc(@space-sm - @border-default), @space-sm);
+    .margin-offset(-@space-sm, -@space-sm);
   }
 }
 
