@@ -89,6 +89,14 @@
     color: {{ page.scheme-code }};
   }
   {% endif %}
+  
+  {% if page.scheme-text %}
+  hr::before,
+  .footnotes::before {
+    background: {{ page.scheme-text }};
+    box-shadow: 20px 0 0 0 {{ page.scheme-text }}, -20px 0 0 0 {{ page.scheme-text }};
+  }
+  {% endif %}
 
   {% if page.scheme-text and page.scheme-link %}
   .note,
@@ -112,13 +120,4 @@
     color: {{ page.scheme-hover }};
   }
   {% endif %}
-
-  {% if page.scheme-text %}
-  hr::before,
-  .footnotes::before {
-    background: {{ page.scheme-text }};
-    box-shadow: 20px 0 0 0 {{ page.scheme-text }}, -20px 0 0 0 {{ page.scheme-text }};
-  }
-  {% endif %}
-
 </style>
