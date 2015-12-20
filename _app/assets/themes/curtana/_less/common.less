@@ -336,8 +336,9 @@ body:hover .latest {
   }
 
   pre {
-    padding: 1em;
-    margin: 0 0 1.8rem;
+    padding: @space-xs;
+    .margin-offset(-@space-xs, -@space-xs);
+    margin-bottom: 1.8rem;
     overflow-x: auto;
     font-size: 80%;
     line-height: (@line-height * 1.2);
@@ -400,11 +401,12 @@ body:hover .latest {
     border-spacing: 0;
     font-size: 90%;
     width: 100%;
-    margin: 0 0 1.8rem;
+    .margin-offset(-@space-xs, -@space-xs);
+    margin-bottom: 1.8rem;
 
     th,
     td {
-      padding: .6em;
+      padding: .6em @space-xs;
     }
 
     th {
