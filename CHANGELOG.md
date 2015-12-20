@@ -1,3 +1,34 @@
+<a name="0.0.49"></a>
+## [0.0.49](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.48...v0.0.49) (2015-12-20)
+
+
+### Bug Fixes
+
+* **style:** add missing variables for splitter ([410b94d](https://github.com/sparanoid/almace-scaffolding/commit/410b94d))
+* **style:** avoid redundant classes ([760bbf6](https://github.com/sparanoid/almace-scaffolding/commit/760bbf6))
+* **styles:** missing custom footnote decorations color ([03d6841](https://github.com/sparanoid/almace-scaffolding/commit/03d6841))
+* **template:** avoid extra meta for non-post page ([68a2071](https://github.com/sparanoid/almace-scaffolding/commit/68a2071))
+
+### Features
+
+* **docs:** add new variables for templates ([5a48662](https://github.com/sparanoid/almace-scaffolding/commit/5a48662))
+* **docs:** add notice for “Unique Post Styling via Custom CSS” ([b74d109](https://github.com/sparanoid/almace-scaffolding/commit/b74d109))
+* **grunt:** add ignore patterns for cache busting ([f454547](https://github.com/sparanoid/almace-scaffolding/commit/f454547))
+* **styles:** add position offset for `pre` and `table` ([1217e01](https://github.com/sparanoid/almace-scaffolding/commit/1217e01))
+* **styles:** brand new spliter for `hr` and `.footnotes` ([d3a4864](https://github.com/sparanoid/almace-scaffolding/commit/d3a4864))
+* **styles:** break Less into files ([1b993ab](https://github.com/sparanoid/almace-scaffolding/commit/1b993ab))
+* **styles:** CSS cleanup ([fad460b](https://github.com/sparanoid/almace-scaffolding/commit/fad460b))
+* **styles:** use CSS comments for branding ([edca955](https://github.com/sparanoid/almace-scaffolding/commit/edca955))
+* **template:** add `article:published_time` and `article:modified_time` support ([8f64b24](https://github.com/sparanoid/almace-scaffolding/commit/8f64b24))
+* **template:** experiments with custom data (Words and Reading time Open Graph support) ([0ff110b](https://github.com/sparanoid/almace-scaffolding/commit/0ff110b))
+
+
+### BREAKING CHANGES
+
+* template: Open Graph support with `article:published_time` and `article:modified_time` allow your site to gain better embedding support for third-party platforms. For example users will be able to see your post date in Slack chat log.
+
+
+
 <a name="0.0.48"></a>
 ## [0.0.48](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.47...v0.0.48) (2015-12-04)
 
