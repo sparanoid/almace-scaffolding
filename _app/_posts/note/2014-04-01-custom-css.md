@@ -25,3 +25,5 @@ css: |
     background-image: linear-gradient(to bottom, #fff500, #ff8f00);
   }
 ```
+
+Please note that syntax highligting may look ugly with custom background color.
