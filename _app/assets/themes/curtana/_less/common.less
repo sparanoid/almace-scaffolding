@@ -213,19 +213,25 @@ body:hover .latest {
     }
   }
 
-  h2, h3, h4, h5, h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 10vmin 0 1rem;
     .sub-heading();
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin-bottom: 1.8rem;
     margin-left: 1.2em;
 
     li {
       line-height: (@line-height * 1.2);
 
-      > ul, ol {
+      > ul,
+      > ol {
         margin-bottom: 0;
       }
     }
@@ -235,7 +241,10 @@ body:hover .latest {
     margin-left: 1.75em;
   }
 
-  img, video, iframe, .browser {
+  img,
+  video,
+  iframe,
+  .browser {
     display: block;
     width: calc(100% + (@space-xs * 2) + (@border-default * 2));
     margin: 0 calc(-@space-xs - @border-default) 1.8rem;
@@ -314,7 +323,8 @@ body:hover .latest {
     font-size: 75%;
   }
 
-  code, pre {
+  code,
+  pre {
     font-family: @fontstack-monospace;
     color: @code-color;
   }
@@ -370,7 +380,9 @@ body:hover .latest {
   }
 
   // Rest form validation styles, borrowed from Bootstrap
-  input, textarea, select {
+  input,
+  textarea,
+  select {
 
     &:focus:required:invalid {
 
