@@ -6,7 +6,9 @@
 ignore_files:   --exclude=lab
 
 sftp:
-  host: caladbolg
+  user: rsync
+  port: 2233
+  host: caladbolg.sparanoid.com
   dest: /srv/www/sparanoid.com/public_html
 
 s3_website:
