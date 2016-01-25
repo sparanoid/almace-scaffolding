@@ -49,7 +49,7 @@
     "grunt-jekyll": "^0.4.2",
     "grunt-leading-quotes": "0.0.6",
     "grunt-lesslint": "^2.0.0",
-    "grunt-minjson": "^0.3.0",
+    "grunt-minjson": "^0.4.0",
     "grunt-newer": "^1.1.1",
     "grunt-postcss": "^0.7.0",
     "grunt-rev": "^0.1.0",
