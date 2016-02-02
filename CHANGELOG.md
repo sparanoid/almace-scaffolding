@@ -1,3 +1,25 @@
+<a name="0.0.50"></a>
+## [0.0.50](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.49...v0.0.50) (2016-02-02)
+
+
+### Bug Fixes
+
+* **jekyll:** lock jekyll version https://github.com/jekyll/jekyll/issues/4427 ([dec98b3](https://github.com/sparanoid/almace-scaffolding/commit/dec98b3))
+* **jekyll:** reset config with empty strings ([c0cb69a](https://github.com/sparanoid/almace-scaffolding/commit/c0cb69a))
+* **styles:** missing padding variable for offset elements ([f83f2cb](https://github.com/sparanoid/almace-scaffolding/commit/f83f2cb))
+
+### Features
+
+* **deploy:** use traditional rsync command ([1ec5dda](https://github.com/sparanoid/almace-scaffolding/commit/1ec5dda))
+* **style:** update `::selection` style ([d721226](https://github.com/sparanoid/almace-scaffolding/commit/d721226))
+
+
+### BREAKING CHANGES
+
+* deploy: Now you have to define your SSH user, port, and host in `_deploy.yml` in order to use `rsync` deployment. It no longer uses predefined hosts in your SSH config file, however this should work for most CI/DI services.
+
+
+
 <a name="0.0.49"></a>
 ## [0.0.49](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.48...v0.0.49) (2015-12-20)
 
