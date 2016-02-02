@@ -89,9 +89,9 @@
     color: {{ page.scheme-code }};
   }
   {% endif %}
-  
+
   {% if page.scheme-text %}
-  hr::before,
+  .content hr::before,
   .footnotes::before {
     background: {{ page.scheme-text }};
     box-shadow: 20px 0 0 0 {{ page.scheme-text }}, -20px 0 0 0 {{ page.scheme-text }};
