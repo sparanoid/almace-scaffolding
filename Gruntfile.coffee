@@ -267,25 +267,18 @@ module.exports = (grunt) ->
 
     cacheBust:
       options:
-        encoding: "utf8"
-        filters: {
-          "link[rel*=icon]": ->
-            @attribs.href
-        }
-        ignorePatterns: [
-          "no-cache-bust"
-        ]
         algorithm: "md5"
-        length: 8
+        assets: ["<%= amsf.user.assets %>/**/*"]
+        baseDir: "<%= config.dist %>"
         deleteOriginals: true
+        encoding: "utf8"
+        length: 8
 
       dist:
         files: [
           expand: true
-          baseDir: "<%= config.dist %>"
           cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= config.dist %>"
         ]
 
     usebanner:
