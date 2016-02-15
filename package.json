@@ -36,7 +36,7 @@
     "grunt-cleanempty": "^1.0.3",
     "grunt-coffeelint": "^0.0.15",
     "grunt-concurrent": "^2.0.3",
-    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^0.8.1",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-htmlmin": "^0.6.0",
