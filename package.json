@@ -35,7 +35,7 @@
     "grunt-cache-bust": "^1.0.0",
     "grunt-cleanempty": "^1.0.3",
     "grunt-coffeelint": "^0.0.15",
-    "grunt-concurrent": "^2.2.0",
+    "grunt-concurrent": "^2.2.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^0.8.1",
     "grunt-contrib-cssmin": "^0.14.0",
