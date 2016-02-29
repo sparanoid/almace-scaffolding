@@ -48,7 +48,7 @@
     "grunt-git": "^0.3.5",
     "grunt-jekyll": "^0.4.2",
     "grunt-leading-quotes": "0.0.7",
-    "grunt-lesslint": "^2.0.0",
+    "grunt-lesslint": "^3.0.1",
     "grunt-minjson": "^0.4.0",
     "grunt-newer": "^1.1.1",
     "grunt-postcss": "^0.7.0",
