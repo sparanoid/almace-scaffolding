@@ -1,3 +1,17 @@
+<a name="0.0.52"></a>
+## [0.0.52](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.51...v0.0.52) (2016-03-01)
+
+
+### Bug Fixes
+
+* **styles:** missing top navbar ([3dc6d04](https://github.com/sparanoid/almace-scaffolding/commit/3dc6d04))
+
+### Features
+
+* **jekyll:** update jekyll, this fix https://github.com/sparanoid/almace-scaffolding/commit/d ([87a8f06](https://github.com/sparanoid/almace-scaffolding/commit/87a8f06))
+
+
+
 <a name="0.0.51"></a>
 ## [0.0.51](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.50...v0.0.51) (2016-03-01)
 
