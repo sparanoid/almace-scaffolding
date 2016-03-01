@@ -114,3 +114,9 @@ Careful Skippy, you really aren’t as convincing as you think you are.
 ##### H5 Heading
 ###### H6 Heading
 ```
+
+## Newsletters Signup Form
+
+<form action="http://email.sparanoid.com/t/j/s/uykhir/" method="post">
+  <input name="cm-uykhir-uykhir" type="email" placeholder="Your Email" required>
+</form>
