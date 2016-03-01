@@ -10,6 +10,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+  text-size-adjust: none;
+  text-rendering: optimizelegibility;
+  image-rendering: optimizequality;
+}
+
 body {
   padding: 0 @space-lg;
   margin: 0 auto 0;
@@ -17,9 +24,7 @@ body {
   font-size: @font-size;
   line-height: @line-height;
   color: @text-color;
-  text-rendering: optimizelegibility;
   background: @background-color;
-  image-rendering: optimizequality;
   transition: all .2s ease;
 
   @media (max-width: @breakpoint-md) {
@@ -34,11 +39,6 @@ body {
 
   @media (max-width: @breakpoint-xs) {
     font-size: (@font-size * 3.2);
-  }
-
-  // All iOS devices, the easiest way
-  @media (max-device-width: 480px), (max-device-width: 1024px) {
-    -webkit-text-size-adjust: none;
   }
 
   // A semitranslucent bar at the top of the page
