@@ -10,6 +10,17 @@
 
 <!-- Post specified styles -->
 <style data-assets-inline>
+  /*
+  TODO: You have to speicify background color for `html` in order to make `-webkit-filter` work
+  Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
+  Date: Mar 1, 2016, 5:41 PM
+   */
+  html {
+    {% if page.scheme-bg %}
+    background-color: {{ page.scheme-bg }};
+    {% endif %}
+  }
+
   body {
     {% if page.scheme-text %}
     color: {{ page.scheme-text }};
