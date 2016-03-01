@@ -1,3 +1,26 @@
+<a name="0.0.51"></a>
+## [0.0.51](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.50...v0.0.51) (2016-03-01)
+
+
+### Bug Fixes
+
+* **grunt:** update config for new version ([3dd888c](https://github.com/sparanoid/almace-scaffolding/commit/3dd888c))
+* **package:** wrong version fails test ([533a1a2](https://github.com/sparanoid/almace-scaffolding/commit/533a1a2))
+* **styles:** error page not shown correct in Chrome (possibly browser bug) ([aed0d4e](https://github.com/sparanoid/almace-scaffolding/commit/aed0d4e))
+* **styles:** missing custom `hr` css scope ([0ef9579](https://github.com/sparanoid/almace-scaffolding/commit/0ef9579))
+* **styles:** missing placeholder styles for Firefox and other browsers ([784112b](https://github.com/sparanoid/almace-scaffolding/commit/784112b))
+
+### Features
+
+* **styles:** update scope for text styles ([057fbe2](https://github.com/sparanoid/almace-scaffolding/commit/057fbe2))
+
+
+### BREAKING CHANGES
+
+* grunt: Now it will no longer bust favicons and other assets outside the `<%= amsf.user.assets %>`.
+
+
+
 <a name="0.0.50"></a>
 ## [0.0.50](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.49...v0.0.50) (2016-02-02)
 
