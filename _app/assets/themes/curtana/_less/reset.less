@@ -15,6 +15,10 @@ html {
   text-size-adjust: none;
   text-rendering: optimizelegibility;
   image-rendering: optimizequality;
+  // TODO: You have to speicify background color for `html` in order to make `-webkit-filter` work
+  // Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
+  // Date: Mar 1, 2016, 5:41 PM
+  background: @background-color;
 }
 
 body {
