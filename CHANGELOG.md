@@ -1,3 +1,13 @@
+<a name="0.0.53"></a>
+## [0.0.53](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.52...v0.0.53) (2016-03-05)
+
+
+### Features
+
+* **grunt:** checkout relase branch for AMSF update ([294594d](https://github.com/sparanoid/almace-scaffolding/commit/294594d))
+
+
+
 <a name="0.0.52"></a>
 ## [0.0.52](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.51...v0.0.52) (2016-03-01)
 
