@@ -1,3 +1,31 @@
+<a name="0.0.54"></a>
+## [0.0.54](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.53...v0.0.54) (2016-03-09)
+
+
+### Features
+
+* **docs:** cleanup todos ([62240db](https://github.com/sparanoid/almace-scaffolding/commit/62240db))
+* **scripts:** replace `intense.js` with `lightense.js` ([d66189c](https://github.com/sparanoid/almace-scaffolding/commit/d66189c))
+
+
+### BREAKING CHANGES
+
+* scripts: I've rewrote the `intense.js` from the ground up and rebranded it as `lightense.js`, a minimalism “lightbox” script less than 2 KB (not gzipped!).
+
+If you have used Intensed Images, you have to changes the plugin keyword in your front-matter fields from:
+
+```yml
+plugin: intense
+```
+
+to:
+
+```yml
+plugin: lightense
+```
+
+
+
 <a name="0.0.53"></a>
 ## [0.0.53](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.52...v0.0.53) (2016-03-05)
 
