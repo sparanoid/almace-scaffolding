@@ -20,21 +20,13 @@
 {% endif %}
 
 <!-- The following code is an example use of including external JavaScript libraries -->
-{% if page.plugin == 'intense' %}
-  <script src="{{ '/js/intense.js' | prepend: amsf_theme_assets }}"></script>
+{% if page.plugin == 'lightense' %}
+  <script src="{{ '/js/lightense.js' | prepend: amsf_theme_assets }}"></script>
   <script>
-    window.onload = function() {
-      var fx = document.querySelectorAll('p > img:not(.no-intense)');
-      var el = document.body;
-      var cl = 'loaded'
-
-      if (el.classList)
-        el.classList.add(cl);
-      else
-        el.className += ' ' + cl;
-
-      Intense(fx);
-    }
+    window.addEventListener('load', function () {
+      var el = document.querySelectorAll('p > img:not(.no-lightense)');
+      Lightense(el);
+    }, false);
   </script>
 {% endif %}
 

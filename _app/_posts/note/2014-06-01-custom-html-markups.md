@@ -2,7 +2,7 @@
 layout: post
 title: Custom HTML Markups
 category: note
-plugin: intense
+plugin: lightense
 tags: curtana
 ---
 
@@ -70,23 +70,23 @@ Please note that you can't apply CSS classes in Markdown, so you have to use HTM
 
 ### Example
 
-<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class="no-intense"></p>
+<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class="no-lightense"></p>
 
-## [intense.js](http://github.com/tholman/intense-images)
+## [lightense.js](https://github.com/sparanoid/lightense-images)
 
-A simple library by [Tim Holman](https://github.com/tholman) to view large images up close using simple mouse interaction, and the full screen.
+A simple library inspired by [Tim Holman](https://github.com/tholman) to view large images up close using simple mouse interaction, and the full screen.
 
 ### Usage
 
 Add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
 
 ```
-plugin: intense
+plugin: lightense
 ```
 
 Markdown markup:
 
-```
+```markdown
 ![Image](http://sparanoid.com/photo.jpg)
 ```
 
@@ -98,11 +98,11 @@ Or simply use HTML:
 </p>
 ```
 
-`intense.js` is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.no-intense` CSS class to your `<img>`:
+`lightense.js` is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.no-lightense` CSS class to your `<img>`:
 
 ```html
 <p>
-  <img src="http://sparanoid.com/photo.jpg" class="no-intense" alt="Image">
+  <img src="http://sparanoid.com/photo.jpg" class="no-lightense" alt="Image">
 </p>
 ```
 
