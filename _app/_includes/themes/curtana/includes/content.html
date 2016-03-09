@@ -1,10 +1,4 @@
 <!-- Main content wrap -->
-{% capture plugin_intense_class %}
-  {% if page.plugin == 'intense' %}
-    intense-wrap
-  {% endif %}
-{% endcapture %}
-
-<main class="content {{ page.class }} {{plugin_intense_class}}" role=main>
+<main class="content {{ page.class }}" role=main>
   {{ content }}
 </main>
