@@ -36,7 +36,7 @@
         {% for image in page.scheme-bg-img %}
           {% unless first %},{% endunless %}
           {% if page.scheme-bg-img-local == true %}
-            url("{{ site.assets | prepend: site.base }}/{{ page.scheme-bg-img[forloop.index0] }}")
+            url("{{ amsf_user_assets }}/{{ page.scheme-bg-img[forloop.index0] }}")
           {% else %}
             url("{{ site.file }}/{{ page.scheme-bg-img[forloop.index0] }}")
           {% endif %}
