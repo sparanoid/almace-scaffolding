@@ -67,6 +67,7 @@ var Lightense = (function() {
     var containerProperties = {
       'backgroundColor': background,
       'display': 'flex',
+      'boxSizing': 'border-box',
       'flexDirection': 'column',
       'justifyContent': 'center',
       'width': '100%',
