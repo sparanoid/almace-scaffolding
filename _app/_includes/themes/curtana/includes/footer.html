@@ -21,7 +21,7 @@
 
 <!-- The following code is an example use of including external JavaScript libraries -->
 {% if page.plugin == 'lightense' %}
-  <script src="{{ '/js/lightense.js' | prepend: amsf_theme_assets }}"></script>
+  <script src="{{ '/js/lightense.js?assets-inline' | prepend: amsf_theme_assets }}"></script>
   <script>
     window.addEventListener('load', function () {
       var el = document.querySelectorAll('p > img:not(.no-lightense)');
