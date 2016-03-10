@@ -12,7 +12,7 @@
 
 * scripts: I've rewrote the `intense.js` from the ground up and rebranded it as `lightense.js`, a minimalism “lightbox” script less than 2 KB (not gzipped!).
 
-If you have used Intensed Images, you have to changes the plugin keyword in your front-matter fields from:
+If you have used Intensed Images, you have to change the plugin keyword in your front-matter fields from:
 
 ```yml
 plugin: intense
