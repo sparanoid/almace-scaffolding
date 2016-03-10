@@ -17,7 +17,7 @@
 <!-- Prepare for SVG header -->
 {% capture amsf_page_heading_type_svg %}
   <img
-    src="{{ site.assets | prepend: site.base }}/{{ page.svg-headline }}"
+    src="{{ amsf_user_assets }}/{{ page.svg-headline }}"
     {% if page.svg-headline-width %}
       style="width: {{ page.svg-headline-width | times: 0.1 }}vw;"
     {% else %}
