@@ -5,11 +5,7 @@ module.exports = (grunt) ->
   require("jit-grunt") grunt,
     "bump-commit": "grunt-bump"
     "bump-only": "grunt-bump"
-    gitcheckout: "grunt-git"
-    gitclean: "grunt-git"
     gitclone: "grunt-git"
-    gitpull: "grunt-git"
-    gitreset: "grunt-git"
     replace: "grunt-text-replace"
     usebanner: "grunt-banner"
 
@@ -35,7 +31,7 @@ module.exports = (grunt) ->
 
     amsf:
       base: "_amsf"
-      branch: "release"
+      branch: grunt.option("branch") or "release"
       core: "<%= amsf.base %>/core"
       user:
         assets: "<%= config.app %>/assets"
@@ -436,58 +432,13 @@ module.exports = (grunt) ->
         options:
           repository: "https://github.com/sparanoid/almace-scaffolding.git"
           branch: "<%= amsf.branch %>"
-          directory: "<%= amsf.base %>/core/"
+          directory: "<%= amsf.core %>"
 
       amsf__theme__add_remote:
         options:
           repository: "https://github.com/<%= amsf.theme.new_author %>/amsf-<%= amsf.theme.new_name %>.git"
           branch: "<%= amsf.theme.branch %>"
           directory: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/"
-
-    gitpull:
-      amsf__core__update_remote:
-        options:
-          cwd: "<%= amsf.base %>/core/"
-
-      amsf__theme__update_remote:
-        options:
-          cwd: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/"
-
-    gitcheckout:
-      amsf__core__checkout_branch:
-        options:
-          cwd: "<%= gitpull.amsf__core__update_remote.options.cwd %>"
-          branch: "<%= amsf.branch %>"
-
-      amsf__theme__checkout_branch:
-        options:
-          cwd: "<%= gitpull.amsf__theme__update_remote.options.cwd %>"
-          branch: "<%= amsf.theme.branch %>"
-
-    gitclean:
-      options:
-        nonstandard: true
-        directories: true
-
-      amsf__core__clean_git:
-        options:
-          cwd: "<%= gitpull.amsf__core__update_remote.options.cwd %>"
-
-      amsf__theme__clean_git:
-        options:
-          cwd: "<%= gitpull.amsf__theme__update_remote.options.cwd %>"
-
-    gitreset:
-      options:
-        mode: "hard"
-
-      amsf__core__reset_git:
-        options:
-          cwd: "<%= gitpull.amsf__core__update_remote.options.cwd %>"
-
-      amsf__theme__reset_git:
-        options:
-          cwd: "<%= gitpull.amsf__theme__update_remote.options.cwd %>"
 
     clean:
       main:
@@ -500,6 +451,12 @@ module.exports = (grunt) ->
           "<%= amsf.user.assets %>/css/"
           "<%= amsf.user.assets %>/js/"
         ]
+
+      amsf__core__remove_repo:
+        src: "<%= amsf.core %>"
+
+      amsf__theme__remove_repo:
+        src: "<%= amsf.base %>/themes/<%= amsf.theme.current %>"
 
     cleanempty:
       dist:
@@ -598,30 +555,17 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask "theme-update", "Update current theme from GitHub", [
-    "gitreset:amsf__theme__reset_git"
-    "gitclean:amsf__theme__clean_git"
-    "gitpull:amsf__theme__update_remote"
-    "gitcheckout:amsf__theme__checkout_branch"
+    "clean:amsf__theme__remove_repo"
+    "gitclone:amsf__theme__add_remote"
     "theme-upgrade"
   ]
 
-  grunt.registerTask "amsf-update", "Update ASMF", ->
-    # TODO: need better implement
-    if grunt.file.exists("_amsf/core/")
-      grunt.task.run [
-        "gitreset:amsf__core__reset_git"
-        "gitclean:amsf__core__clean_git"
-        "gitpull:amsf__core__update_remote"
-        "gitcheckout:amsf__core__checkout_branch"
-      ]
-    else
-      grunt.task.run [
-        "gitclone:amsf__core__add_remote"
-      ]
-    grunt.task.run [
-      "copy:amsf__core__to_app"
-      "shell:amsf__core__update_deps"
-    ]
+  grunt.registerTask "amsf-update", "Update ASMF", [
+    "clean:amsf__core__remove_repo"
+    "gitclone:amsf__core__add_remote"
+    "copy:amsf__core__to_app"
+    "shell:amsf__core__update_deps"
+  ]
 
   grunt.registerTask "init", "Initialize new project", [
     "theme-add"
