@@ -22,12 +22,7 @@ module.exports = (grunt) ->
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
-      banner: do ->
-        banner = "<!--\n"
-        banner += " © <%= config.pkg.author %>.\n"
-        banner += " <%= config.pkg.name %> - v<%= config.pkg.version %>\n"
-        banner += " -->"
-        banner
+      banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
 
     amsf:
       base: "_amsf"
