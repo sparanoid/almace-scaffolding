@@ -225,20 +225,44 @@ body:hover .latest {
   ul,
   ol {
     margin-bottom: 1.8rem;
-    margin-left: 1.2em;
+    list-style: none;
+    counter-reset: list;
+
+    @media (max-width: @breakpoint-sm) {
+      margin-left: 1em;
+    }
 
     li {
       line-height: (@line-height * 1.2);
 
+      &:before {
+        position: absolute;
+        display: inline-block;
+        width: 4em;
+        margin-left: -4em;
+        font-size: 80%;
+        line-height: (@line-height * 1.2 / .8);
+        text-align: right;
+        opacity: .6;
+      }
+
       > ul,
       > ol {
+        margin-left: 1em;
         margin-bottom: 0;
       }
     }
   }
 
-  ol {
-    margin-left: 1.75em;
+  ul li:before {
+    content: "•";
+    padding-right: .6em;
+  }
+
+  ol li:before {
+    counter-increment: list;
+    content: counter(list) ".";
+    padding-right: .3em;
   }
 
   img,
@@ -439,6 +463,11 @@ body:hover .latest {
 // Fix empty space when a paragraph starts with quote marks and some asian punctuation marks
 .leading-indent-fix {
   text-indent: -.39em;
+
+  // Reset indent for list, otherwise it looks weird
+  li & {
+    text-indent: 0;
+  }
 }
 
 // Tweet button margin fix
