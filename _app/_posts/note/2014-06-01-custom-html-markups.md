@@ -72,7 +72,7 @@ Please note that you can't apply CSS classes in Markdown, so you have to use HTM
 
 <p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class="no-lightense"></p>
 
-## [lightense.js](https://github.com/sparanoid/lightense-images)
+## [Lightense Images](https://github.com/sparanoid/lightense-images)
 
 A simple library inspired by [Tim Holman](https://github.com/tholman) to view large images up close using simple mouse interaction, and the full screen.
 
@@ -98,7 +98,7 @@ Or simply use HTML:
 </p>
 ```
 
-`lightense.js` is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.no-lightense` CSS class to your `<img>`:
+Lightense Images is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.no-lightense` CSS class to your `<img>`:
 
 ```html
 <p>
