@@ -29,6 +29,38 @@ HTML defines a long list of available inline tags, a complete list of which can 
 - <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
 - Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
+* With the exception of Nietzsche, no other madman has contributed so much to human sanity as has Louis Althusser. He is mentioned twice in the Encyclopaedia Britannica as someone’s teacher. There could be no greater lapse: for two important decades (the 60s and the 70s), Althusser was at the eye of all the important cultural storms. He fathered quite a few of them.
+* This newly-found obscurity forces me to summarize his work before suggesting a few (minor) modifications to it.
+    * Society consists of practices: economic, political and ideological.
+        * Althusser defines a practice as:
+        * “Any process of transformation of a determinate product, affected by a determinate human labour, using determinate means (of production)”
+            * The economic practice (the historically specific mode of production) transforms raw materials to finished products using human labour and other means of production, all organized within defined webs of inter-relations. The political practice does the same with social relations as the raw materials. Finally, ideology is the transformation of the way that a subject relates to his real life conditions of existence.
+                * This is a rejection of the mechanistic worldview (replete with bases and superstructures). It is a rejection of the Marxist theorization of ideology. It is a rejection of the Hegelian fascist “social totality”. It is a dynamic, revealing, modern day model.
+                * “The objective internal reference … the system of questions commanding the answers given”
+            * Subjects to what? The answer: to the material practices of the ideology. This (the creation of subjects) is done by the acts of “hailing” or “interpellation”. These are acts of attracting attention (hailing) , forcing the individuals to generate meaning (interpretation) and making them participate in the practice.
+                * Subjects to what? The answer: to the material practices of the ideology. This (the creation of subjects) is done by the acts of “hailing” or “interpellation”. These are acts of attracting attention (hailing) , forcing the individuals to generate meaning (interpretation) and making them participate in the practice.
+                * What happens in a pluralistic environment rich in competing ideologies?
+                    * Clarifying the HOW, though, does not shed light on the WHY.
+                        * is the fact that in the new one, the second text is articulated with the lapses in the first text … (Marx measures) the problematic contained
+            * Ideology is a practice with lived and material dimensions. It has costumes, rituals, behaviour patterns, ways of thinking. The State employs Ideological Apparatuses (ISAs) to reproduce ideology through practices and productions: (organized) religion, the education system, the family, (organized) politics, the media, the industries of culture.
+* These theoretical tools were widely used to analyze the Advertising and the film industries.
+
+1. Ordered list
+3. Ordered list
+    1. Ordered list
+        1. Ordered list
+        2. Ordered list
+            1. Ordered list
+                1. Ordered list
+                2. Ordered list
+            2. Ordered list
+                1. Ordered list
+            3. Ordered list
+    2. Ordered list
+        1. Ordered list
+        2. Ordered list
+4. Ordered list
+
 Most of these elements are styled by browsers with few modifications on our part.
 
 Maui and his rough as guts piece of pounamu, what a stink buzz. Bro, quater-acre patches are really naff good with bung mates, aye. You have no idea how beached as our random kais were aye. Every time I see those beautiful lengths of number 8 wire it's like Castle Hill all over again aye, do you happen to have a bucket or a hose bro?
