@@ -1,3 +1,28 @@
+<a name="0.0.55"></a>
+## [0.0.55](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.54...v0.0.55) (2016-03-11)
+
+
+### Bug Fixes
+
+* **grunt:** avoid excluding minified scripts, it causes errors when building the site ([6b271d0](https://github.com/sparanoid/almace-scaffolding/commit/6b271d0))
+* **script:** missing box sizing reset for Lightense ([088995a](https://github.com/sparanoid/almace-scaffolding/commit/088995a))
+* **script:** update default image styles reset ([b5adce4](https://github.com/sparanoid/almace-scaffolding/commit/b5adce4))
+* **template:** use `amsf_user_assets` variable ([ad87e86](https://github.com/sparanoid/almace-scaffolding/commit/ad87e86))
+
+### Features
+
+* **docs:** update library URL ([0588039](https://github.com/sparanoid/almace-scaffolding/commit/0588039))
+* **grunt:** it's safe to remove empty elements ([e93ee80](https://github.com/sparanoid/almace-scaffolding/commit/e93ee80))
+* **grunt:** simplify update process ([1866305](https://github.com/sparanoid/almace-scaffolding/commit/1866305))
+* **script:** allow arbitrary element for Lightense ([488683c](https://github.com/sparanoid/almace-scaffolding/commit/488683c))
+* **script:** inline Lightense ([3a58b97](https://github.com/sparanoid/almace-scaffolding/commit/3a58b97))
+* **script:** update Lightense Images ([13300b2](https://github.com/sparanoid/almace-scaffolding/commit/13300b2))
+* **styles:** darker codeblock background ([6da2f98](https://github.com/sparanoid/almace-scaffolding/commit/6da2f98))
+* **styles:** lighter blockquotes ([53b49da](https://github.com/sparanoid/almace-scaffolding/commit/53b49da))
+* **template:** simplifed banners ([3e264d3](https://github.com/sparanoid/almace-scaffolding/commit/3e264d3))
+
+
+
 <a name="0.0.54"></a>
 ## [0.0.54](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.53...v0.0.54) (2016-03-09)
 
