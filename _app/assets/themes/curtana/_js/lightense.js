@@ -1,31 +1,13 @@
-var Lightense = (function() {
+var Lightense = function () {
   'use strict';
 
   var KEYCODE_ESC = 27;
   var target;
   var container;
+  var date;
+  var scrollY;
 
-  // Overflow variable before screen is locked
-  var overflowValue;
-
-  /* -------------------------
-  /*          UTILS
-  /* -------------------------*/
-  function touchDevice () {
-    return 'ontouchstart' in window || navigator.maxTouchPoints;
-  }
-
-  // Applys a dict of css properties to an element
-  function applyProperties (target, properties) {
-    for (var key in properties) {
-      target.style[key] = properties[key];
-    }
-  }
-
-  /* -------------------------
-  /*          APP
-  /* -------------------------*/
-  function startTracking (passedElements) {
+  function startTracking(passedElements) {
     // If passed an array of elements, assign tracking to all
     var len = passedElements.length;
     if (len) {
@@ -38,7 +20,7 @@ var Lightense = (function() {
     }
   }
 
-  function track (element) {
+  function track(element) {
     // Element needs a src at minumun
     if (element.getAttribute('data-image') || element.src) {
       element.style.cursor = 'zoom-in';
@@ -48,57 +30,28 @@ var Lightense = (function() {
     }
   }
 
-  // Lock scroll on the document body
-  function lockBody () {
-    overflowValue = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.body.classList.add('lightense-open');
+  // Create stylesheets
+  function createStyle() {
+    // Generate unique class name
+    date = new Date().getTime();
+    var css = '\n      .lightense-' + date + ' {\n        display: flex;\n        box-sizing: border-box;\n        flex-direction: column;\n        justify-content: center;\n        width: 100%;\n        height: 100%;\n        position: fixed;\n        top: 0;\n        left: 0;\n        overflow: hidden;\n        z-index: 2147483647;\n        padding: 2vw;\n        margin: 0;\n        transition: opacity 200ms ease;\n        cursor: zoom-out;\n        opacity: 0;\n        background-color: rgba(255, 255, 255, .98);\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none;\n      }\n\n      @supports (-webkit-backdrop-filter: blur(30px)) {\n        .lightense-' + date + ' {\n          background-color: rgba(255, 255, 255, .6);\n          -webkit-backdrop-filter: blur(30px);\n          backdrop-filter: blur(30px);\n        }\n      }\n\n      .lightense-' + date + ' img {\n        display: block;\n        width: auto;\n        height: auto;\n        max-width: 100%;\n        max-height: 100%;\n        min-width: 0;\n        min-height: 0;\n        padding: 0;\n        margin: 0 auto;\n      }\n    ';
+
+    var head = document.head || document.getElementsByTagName('head')[0];
+    var style = document.createElement('style');
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+    head.appendChild(style);
   }
 
-  // Unlock scroll on the document body
-  function unlockBody () {
-    document.body.style.overflow = overflowValue;
-    document.body.classList.remove('lightense-open');
-  }
-
-  function createViewer (background) {
-    var containerProperties = {
-      'backgroundColor': background,
-      'display': 'flex',
-      'boxSizing': 'border-box',
-      'flexDirection': 'column',
-      'justifyContent': 'center',
-      'width': '100%',
-      'height': '100%',
-      'position': 'fixed',
-      'top': '0',
-      'left': '0',
-      'overflow': 'hidden',
-      'zIndex': '2147483647',
-      'padding': '2vw',
-      'margin': '0',
-      'webkitTransition': 'opacity 200ms ease',
-      'MozTransition': 'opacity 200ms ease',
-      'transition': 'opacity 200ms ease',
-      'cursor': 'zoom-out',
-      'opacity': '0'
-    };
+  function createViewer(background) {
+    scrollY = window.scrollY;
     container = document.createElement('div');
+    container.className = 'lightense-wrap lightense-' + date;
     container.appendChild(target);
-    applyProperties(container, containerProperties);
-
-    var imageProperties = {
-      'display': 'block',
-      'width': 'auto',
-      'height': 'auto',
-      'maxWidth': '100%',
-      'maxHeight': '100%',
-      'minWidth': '0',
-      'minHeight': '0',
-      'padding': '0',
-      'margin': '0 auto'
-    };
-    applyProperties(target, imageProperties);
+    if (background) container.style.backgroundColor = background;
 
     document.body.appendChild(container);
     setTimeout(function () {
@@ -106,8 +59,7 @@ var Lightense = (function() {
     }, 10);
   }
 
-  function removeViewer () {
-    unlockBody();
+  function removeViewer() {
     unbindEvents();
 
     container.style.opacity = '0';
@@ -116,51 +68,57 @@ var Lightense = (function() {
     }, 200);
   }
 
-  function init (element) {
+  function checkViewer() {
+    var scrollOffset = Math.abs(scrollY - window.scrollY);
+    if (scrollOffset >= 50) {
+      removeViewer();
+    }
+  }
+
+  function init(element) {
     var imageSource = element.getAttribute('data-image') || element.src;
-    var background = element.getAttribute('data-background') || 'rgba(255, 255, 255, 1)';
+    var background = element.getAttribute('data-background') || false;
     var img = new Image();
     img.onload = function () {
       target = this;
       createViewer(background);
-      lockBody();
       bindEvents();
     };
-
     img.src = imageSource;
   }
 
-  function bindEvents () {
+  function bindEvents() {
     window.addEventListener('keyup', onKeyUp, false);
-    window.addEventListener('click', removeViewer, false);
+    window.addEventListener('scroll', checkViewer, false);
+    container.addEventListener('click', removeViewer, false);
   }
 
-  function unbindEvents () {
+  function unbindEvents() {
     window.removeEventListener('keyup', onKeyUp, false);
-    window.removeEventListener('click', removeViewer, false);
+    window.removeEventListener('scroll', checkViewer, false);
+    container.removeEventListener('click', removeViewer, false);
   }
 
   // Exit on excape key pressed
-  function onKeyUp (event) {
+  function onKeyUp(event) {
     event.preventDefault();
     if (event.keyCode === KEYCODE_ESC) {
       removeViewer();
     }
   }
 
-  function main (element) {
-    // If it's a touch enabled device, do nothing, touch devices are much easier to scale images, right?
-    if (touchDevice()) {
-      return;
-    }
-
+  function main(element) {
     // Parse arguments
     if (!element) {
       throw 'You need to pass an element!';
     }
 
+    // Prepare stylesheets
+    createStyle();
+
+    // Pass and prepare elements
     startTracking(element);
   }
 
   return main;
-})();
+}();
