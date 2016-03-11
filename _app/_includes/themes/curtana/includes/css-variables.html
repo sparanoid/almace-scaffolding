@@ -11,10 +11,10 @@
 <!-- Post specified styles -->
 <style data-assets-inline>
   /*
-  TODO: You have to speicify background color for `html` in order to make `-webkit-filter` work
-  Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
-  Date: Mar 1, 2016, 5:41 PM
-   */
+    TODO: You have to speicify background color for `html` in order to make `-webkit-filter` work
+    Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
+    Date: Mar 1, 2016, 5:41 PM
+  */
   html {
     {% if page.scheme-bg %}
     background-color: {{ page.scheme-bg }};
@@ -87,13 +87,6 @@
   }
   {% endif %}
 
-  {% if page.scheme-link and page.scheme-bg %}
-  .content ul li:before,
-  .content ol li:before {
-    box-shadow: inset 0 0 0 3px {{ page.scheme-link }}, inset 0 0 0 5px {{ page.scheme-bg }}, inset 0 0 0 7px {{ page.scheme-link }};
-  }
-  {% endif %}
-
   {% if page.scheme-code %}
   .content code,
   .content pre {
@@ -101,11 +94,15 @@
   }
   {% endif %}
 
+  /*
+    TODO: Need a better solution. I have to redefine the whole box-shadow here because no invidual box-shadow-color exists
+    Date: Mar 12, 2016, 12:09 AM
+  */
   {% if page.scheme-text %}
   .content hr::before,
   .footnotes::before {
     background: {{ page.scheme-text }};
-    box-shadow: 20px 0 0 0 {{ page.scheme-text }}, -20px 0 0 0 {{ page.scheme-text }};
+    box-shadow: 24px 0 0 0 {{ page.scheme-text }}, -24px 0 0 0 {{ page.scheme-text }};
   }
   {% endif %}
 
