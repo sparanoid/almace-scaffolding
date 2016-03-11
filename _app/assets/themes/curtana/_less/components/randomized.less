@@ -2,6 +2,10 @@
  * Randomized | © Tunghsiao Liu | MIT
  */
 
+ // variables for standalone version
+ // @link-color: #a212d1;
+ // @code-color: #00cc80;
+
 // Calculate code background color based on the lightness of link color
 .calc-bg (@v) when (lightness(@v) >= 80%) {
   @calc-bg: mix(#fff, @v, 90%);
@@ -21,7 +25,7 @@
   > pre,
   .highlighter-rouge & {
     .calc-bg(@highlighter-tint);
-    background: fade(@calc-bg, 1.5%);
+    background: fade(@calc-bg, 2%);
   }
 
   // Reset default `code`
