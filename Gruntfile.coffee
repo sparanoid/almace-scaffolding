@@ -104,13 +104,13 @@ module.exports = (grunt) ->
           {
             expand: true
             cwd: "<%= amsf.user.assets %>/_js/"
-            src: ["**/*.js", "!*.min.js"]
+            src: ["**/*.js"]
             dest: "<%= amsf.user.assets %>/js/"
           }
           {
             expand: true
             cwd: "<%= amsf.theme.assets %>/_js/"
-            src: ["**/*.js", "!*.min.js"]
+            src: ["**/*.js"]
             dest: "<%= amsf.theme.assets %>/js/"
           }
         ]
