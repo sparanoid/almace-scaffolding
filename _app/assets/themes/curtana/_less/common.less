@@ -429,9 +429,41 @@ body:hover .latest {
     .margin-offset(-@space-xs, -@space-xs);
     margin-bottom: 1.8rem;
 
+    @media (max-width: @breakpoint-md) {
+      width: calc(100% + (@space-md * 2));
+      .margin-offset(-@space-md, -@space-md);
+    }
+
+    @media (max-width: @breakpoint-sm) {
+      width: calc(100% + (@space-sm * 2));
+      .margin-offset(-@space-sm, -@space-sm);
+    }
+
     th,
     td {
       padding: .6em @space-xs;
+
+      @media (max-width: @breakpoint-md) {
+
+        &:first-child {
+          padding-left: @space-md;
+        }
+
+        &:last-child {
+          padding-right: @space-md;
+        }
+      }
+
+      @media (max-width: @breakpoint-sm) {
+
+        &:first-child {
+          padding-left: @space-sm;
+        }
+
+        &:last-child {
+          padding-right: @space-sm;
+        }
+      }
     }
 
     th {
