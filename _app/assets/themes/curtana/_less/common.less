@@ -531,13 +531,19 @@ body:hover .latest {
 
 // Fix empty space when a paragraph starts with quote marks and some asian punctuation marks
 .leading-indent-fix {
-  text-indent: -.39em;
 
-  &--double-quotes { text-indent: -.43em; }
-  &--single-quotes { text-indent: -.28em; }
-  &--chinese-corner-bracket { text-indent: -.68em; }
-  &--chinese-white-corner-bracket { text-indent: -.62em; }
-  &--fullwidth-parenthesis { text-indent: -.68em; }
+  & { text-indent: -.39em; }
+  &--double-quotes { text-indent: -.42em; }
+  &--single-quotes { text-indent: -.27em; }
+  &--chinese-corner-bracket { text-indent: -.6em; }
+  &--chinese-white-corner-bracket { text-indent: -.56em; }
+  &--fullwidth-parenthesis { text-indent: -.62em; }
+
+  // Special heading indent fix with `@heading-letter-spacing` offset
+  h1& {
+    &--double-quotes { text-indent: (-.42em - @heading-letter-spacing); }
+    &--single-quotes { text-indent: (-.27em - @heading-letter-spacing); }
+  }
 
   // Reset indent for list, otherwise it looks weird
   li & {
