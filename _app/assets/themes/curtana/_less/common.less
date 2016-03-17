@@ -429,6 +429,20 @@ body:hover .latest {
     .margin-offset(-@space-xs, -@space-xs);
     margin-bottom: 1.8rem;
 
+    // TODO: responsive table support
+    // display: inline-block;
+    // overflow-x: auto;
+    // white-space: nowrap;
+
+    // TODO: table shadow support
+    // background-image: radial-gradient(ellipse at left, rgba(0, 0, 0, .02) 0%, rgba(0, 0, 0, 0) 75%),
+    //                   radial-gradient(ellipse at right, rgba(0, 0, 0, .02) 0%, rgba(0, 0, 0, 0) 75%);
+    // background-size: 30px 100%, 30px 100%;
+    // background-position: 0 center, 100% center;
+    // background-attachment: scroll, scroll;
+    // background-repeat: no-repeat;
+
+    // TODO: responsive table support
     @media (max-width: @breakpoint-md) {
       width: calc(100% + (@space-md * 2));
       .margin-offset(-@space-md, -@space-md);
@@ -437,11 +451,34 @@ body:hover .latest {
     @media (max-width: @breakpoint-sm) {
       width: calc(100% + (@space-sm * 2));
       .margin-offset(-@space-sm, -@space-sm);
+
+      // TODO: table shadow support
+      // Darker shadow for mobile devices
+      // background-image: radial-gradient(ellipse at left, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 75%),
+      //                   radial-gradient(ellipse at right, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 75%);
     }
 
     th,
     td {
       padding: .6em @space-xs;
+
+      &:first-child {
+        padding-left: @space-xs;
+        // TODO: table shadow support
+        // background-image: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0) 100%);
+        // background-repeat: no-repeat;
+        // background-position: 0 0;
+        // background-size: 50px 100%;
+      }
+
+      &:last-child {
+        padding-right: @space-xs;
+        // TODO: table shadow support
+        // background-image: linear-gradient(to left, #fff 50%, rgba(255, 255, 255, 0) 100%);
+        // background-repeat: no-repeat;
+        // background-position: 100% 0;
+        // background-size: 50px 100%;
+      }
 
       @media (max-width: @breakpoint-md) {
 
