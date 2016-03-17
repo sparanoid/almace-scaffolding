@@ -533,6 +533,12 @@ body:hover .latest {
 .leading-indent-fix {
   text-indent: -.39em;
 
+  &--double-quotes { text-indent: -.43em; }
+  &--single-quotes { text-indent: -.28em; }
+  &--chinese-corner-bracket { text-indent: -.68em; }
+  &--chinese-white-corner-bracket { text-indent: -.62em; }
+  &--fullwidth-parenthesis { text-indent: -.68em; }
+
   // Reset indent for list, otherwise it looks weird
   li & {
     text-indent: 0;
