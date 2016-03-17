@@ -1,3 +1,23 @@
+<a name="0.0.56"></a>
+## [0.0.56](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.55...v0.0.56) (2016-03-17)
+
+
+### Bug Fixes
+
+* **styles:** avoid override custom list style ([01c3b24](https://github.com/sparanoid/almace-scaffolding/commit/01c3b24))
+* **styles:** wrong table stripes on mobile devices ([edca9fc](https://github.com/sparanoid/almace-scaffolding/commit/edca9fc))
+* **template:** avoid link indicators being removed by `html-minifier` ([07ef24f](https://github.com/sparanoid/almace-scaffolding/commit/07ef24f))
+
+### Features
+
+* **grunt:** use custom regex for leading quotes fix ([917639c](https://github.com/sparanoid/almace-scaffolding/commit/917639c))
+* **styles:** better leading quote indent with custom `letter-spacing` support ([5d19263](https://github.com/sparanoid/almace-scaffolding/commit/5d19263))
+* **styles:** better list styles ([792fdf3](https://github.com/sparanoid/almace-scaffolding/commit/792fdf3))
+* **styles:** smaller splitter ([66ca21c](https://github.com/sparanoid/almace-scaffolding/commit/66ca21c))
+* **styles:** update leading quotes indent based on characters ([ea82707](https://github.com/sparanoid/almace-scaffolding/commit/ea82707))
+
+
+
 <a name="0.0.55"></a>
 ## [0.0.55](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.54...v0.0.55) (2016-03-11)
 
