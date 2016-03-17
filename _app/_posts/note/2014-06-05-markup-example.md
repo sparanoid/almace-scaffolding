@@ -29,6 +29,8 @@ HTML defines a long list of available inline tags, a complete list of which can 
 - <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
 - Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
+---
+
 * With the exception of Nietzsche, no other madman has contributed so much to human sanity as has Louis Althusser. He is mentioned twice in the Encyclopaedia Britannica as someone’s teacher. There could be no greater lapse: for two important decades (the 60s and the 70s), Althusser was at the eye of all the important cultural storms. He fathered quite a few of them.
 * This newly-found obscurity forces me to summarize his work before suggesting a few (minor) modifications to it.
     * Society consists of practices: economic, political and ideological.
@@ -60,6 +62,30 @@ HTML defines a long list of available inline tags, a complete list of which can 
         1. Ordered list
         2. Ordered list
 4. Ordered list
+
+---
+
+## “This should be replaced.”
+
+“This should be replaced.”
+
+## ‘This should be replaced.’
+
+‘This should be replaced.’
+
+## 「This should be replaced.」
+
+「This should be replaced.」
+
+## 『This should be replaced.』
+
+『This should be replaced.』
+
+## （This should be replaced.）
+
+（This should be replaced.）
+
+---
 
 Most of these elements are styled by browsers with few modifications on our part.
 
