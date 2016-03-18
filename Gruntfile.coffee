@@ -247,7 +247,7 @@ module.exports = (grunt) ->
 
     leading_quotes:
       options:
-        elements: "p, li, h1, h2, h3, h4, h5, h6"
+        elements: "p, h1, h2, h3, h4, h5, h6"
         regex: /「|『|“|‘|（/
         class: "leading-indent-fix"
         verbose: true
