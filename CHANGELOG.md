@@ -1,3 +1,18 @@
+<a name="0.0.58"></a>
+## [0.0.58](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.57...v0.0.58) (2016-03-18)
+
+
+### Features
+
+* **grunt:** better deploy options ([59ffbe3](https://github.com/sparanoid/almace-scaffolding/commit/59ffbe3))
+
+
+### BREAKING CHANGES
+
+* grunt: Original `sftp` directive has been changed to `rsync` due to new grunt task deployment method changes.
+
+
+
 <a name="0.0.57"></a>
 ## [0.0.57](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.56...v0.0.57) (2016-03-18)
 
