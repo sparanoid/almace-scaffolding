@@ -5,9 +5,9 @@
 # Prevent them from being deleted on server (rsync --delete), these files and directories are available on the remote server but outside this git repo. I need to ignore them.
 ignore_files: --exclude=lab
 
-sftp:
+rsync:
   user: rsync
-  port: 2233
+  port: 22
   host: caladbolg.sparanoid.com
   dest: /srv/www/sparanoid.com/public_html
 
