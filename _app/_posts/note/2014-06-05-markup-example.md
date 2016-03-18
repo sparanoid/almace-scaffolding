@@ -69,21 +69,31 @@ HTML defines a long list of available inline tags, a complete list of which can 
 
 “This should be replaced.”
 
+This is a normal paragraph.
+
 ## ‘This should be replaced.’
 
 ‘This should be replaced.’
+
+This is a normal paragraph.
 
 ## 「This should be replaced.」
 
 「This should be replaced.」
 
+This is a normal paragraph.
+
 ## 『This should be replaced.』
 
 『This should be replaced.』
 
+This is a normal paragraph.
+
 ## （This should be replaced.）
 
 （This should be replaced.）
+
+This is a normal paragraph.
 
 ---
 
