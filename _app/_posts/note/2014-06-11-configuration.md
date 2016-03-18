@@ -10,8 +10,7 @@ tags: getting-started
 - All AMSF built-in settings can be configured at [`_config.yml`](https://github.com/sparanoid/almace-scaffolding/blob/master/_config.yml).
 - Theme specific variables can be found at `./_app/_data/theme-name.yml`.
 - Additional variables are stored in [`./_app/_data/`](https://github.com/sparanoid/almace-scaffolding/blob/master/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
-- You should also change `favicon.ico` and `apple-touch-icon.png` to yours.
-- Some tasks in `Gruntfile.coffee` are not used in this project, they're copied from my own [website](https://github.com/sparanoid/sparanoid.com), I'll keep them untouched in case you need these.
+- You should also change `favicon.*` and `apple-touch-icon.png` to yours.
 - More customization please refer to theme specific documentation
 
 ## Tips
