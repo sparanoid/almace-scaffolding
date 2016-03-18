@@ -67,13 +67,13 @@ module.exports = (grunt) ->
         tasks: ["coffeelint:gruntfile"]
 
       js:
-        files: ["<%= config.app %>/**/_js/*.js"]
+        files: ["<%= config.app %>/**/_js/**/*.js"]
         tasks: ["copy:serve"]
         options:
           interrupt: true
 
       less:
-        files: ["<%= config.app %>/**/_less/*.less"]
+        files: ["<%= config.app %>/**/_less/**/*.less"]
         tasks: [
           "less:serve"
           "postcss:serve"
