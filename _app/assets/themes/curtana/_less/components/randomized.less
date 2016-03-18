@@ -184,10 +184,26 @@
       font-size: 100%;
     }
 
-    .lineno {
-      color: desaturate(@link-color, 95%);
-      opacity: .5;
-      user-select: none;
+    // Rouge generated codeblocks with `lineno` will nest `pre` inside an
+    // outter `pre`, this could help prevent "double" scroller issue on some
+    // platforms
+    pre {
+      overflow-x: visible;
+    }
+
+    .gutter {
+
+      // Reset theme-specific table styles
+      &:first-child,
+      &:last-child {
+        padding: 0 !important;
+      }
+
+      .lineno {
+        color: desaturate(@link-color, 95%);
+        opacity: .5;
+        user-select: none;
+      }
     }
 
     .code {
