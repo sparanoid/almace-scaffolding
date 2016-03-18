@@ -1,3 +1,18 @@
+<a name="0.0.57"></a>
+## [0.0.57](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.56...v0.0.57) (2016-03-18)
+
+
+### Bug Fixes
+
+* **grunt:** assets in subdirectories are not correctly watched ([cfd273e](https://github.com/sparanoid/almace-scaffolding/commit/cfd273e))
+* **styles:** "double" scroller issue on some platforms with codeblocks ([b4a608c](https://github.com/sparanoid/almace-scaffolding/commit/b4a608c))
+
+### Features
+
+* **styles:** tweak leading quote indents ([f7a810e](https://github.com/sparanoid/almace-scaffolding/commit/f7a810e))
+
+
+
 <a name="0.0.56"></a>
 ## [0.0.56](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.55...v0.0.56) (2016-03-17)
 
