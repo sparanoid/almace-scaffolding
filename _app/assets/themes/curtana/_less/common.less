@@ -140,7 +140,7 @@ body:hover .latest {
   header {
     display: flex;
     min-height: calc(100vh - (@nav-padding * 2) - 30px);
-    padding-top: 16vmin;
+    padding-top: 14vmin;
     padding-bottom: 16vmin;
     margin-bottom: 16vmin;
     flex-direction: column;
@@ -165,8 +165,9 @@ body:hover .latest {
     }
 
     h1 {
-      margin: 0 0 .1em;
       .heading();
+      // visual align left
+      margin-left: -2px;
       hyphens: none;
       line-height: 1.1;
 
@@ -197,7 +198,7 @@ body:hover .latest {
 
     // Reset subheading in page title (used by AMSF atm)
     h2 {
-      margin: 0;
+      margin: 1.2vmin 0 0;
     }
 
     // Hide actual text if post title is image or SVG, the actual text helps Safari get the real post title in Reader mode.
