@@ -1,3 +1,31 @@
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.58...v0.1.0) (2016-03-30)
+
+
+### Bug Fixes
+
+* **grunt:** disable `leading_quotes` for list, this could help avoid unwanted list style off ([ff19591](https://github.com/sparanoid/almace-scaffolding/commit/ff19591))
+* **styles:** missing monospace for Windows ([d547628](https://github.com/sparanoid/almace-scaffolding/commit/d547628))
+
+### Features
+
+* **script:** update LIghtense Images ([5cb16c9](https://github.com/sparanoid/almace-scaffolding/commit/5cb16c9))
+* **styles:** brand-new headings ([442d46f](https://github.com/sparanoid/almace-scaffolding/commit/442d46f))
+* **styles:** visual aligin tweak ([d6240a4](https://github.com/sparanoid/almace-scaffolding/commit/d6240a4))
+
+
+### BREAKING CHANGES
+
+* styles: I've redesigned the site headings this time, and also introduces some new variables for you to customize them, you can use your favorite color site-wide or specific post in post front-matter field:
+
+```yaml
+scheme-hero-text: "#00ebff"
+scheme-hero-link: "#00ebff"
+scheme-hero-bg: "#0029ff"
+```
+
+
+
 <a name="0.0.58"></a>
 ## [0.0.58](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.57...v0.0.58) (2016-03-18)
 
