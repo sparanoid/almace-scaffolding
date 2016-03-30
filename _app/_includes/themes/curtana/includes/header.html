@@ -1,10 +1,3 @@
-<!-- Header, just a logo at the moment -->
-<header>
-  <a href="{{ site.base }}/" class=logo accesskey=x>
-    <h1>{{ site.name }}</h1>
-  </a>
-</header>
-
 <!-- Main navigation with current page / categoriy highlighted -->
 <nav class="navigation">
   <ul>
@@ -12,7 +5,11 @@
       {% assign lowercased_title = item.title | downcase %}
       <li {% if page.permalink == item.url or page.category == lowercased_title %}class=current{% endif %}>
         <a href="{{ item.url | prepend: site.base }}">
-          {{ item.title }}
+          {% if item.title == "Home" %}
+            {{ site.name }}
+          {% else %}
+            {{ item.title }}
+          {% endif %}
         </a>
       </li>
     {% endfor %}

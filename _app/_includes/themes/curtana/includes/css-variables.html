@@ -59,23 +59,31 @@
   }
   {% endif %}
 
-  {% if page.scheme-text %}
-  body:before, .logo {
-    background: {{ page.scheme-text }};
-  }
-  {% endif %}
-    {% if page.scheme-link %}
-    .logo:hover {
-      background: {{ page.scheme-link }};
-    }
-    {% endif %}
-
   {% if page.scheme-hover %}
   .navigation li a:hover,
   .navigation li a:focus {
     color: {{ page.scheme-hover }};
   }
   {% endif %}
+
+  {% if page.scheme-hero-bg %}
+  .content header {
+    background: {{ page.scheme-hero-bg }};
+  }
+  {% endif %}
+  {% if page.scheme-hero-text %}
+  .content header {
+    color: {{ page.scheme-hero-text }};
+  }
+  {% endif %}
+    {% if page.scheme-hero-link %}
+    .content header a {
+      color: {{ page.scheme-hero-link }};
+    }
+    .content header .external .dot {
+      background: {{ page.scheme-hero-link }};
+    }
+    {% endif %}
 
   {% if page.scheme-link %}
   .current a {

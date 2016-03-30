@@ -2,30 +2,11 @@
 // Common
 // --------------------------------------------------
 
-// Site logo
-.logo {
-  display: block;
-  height: 1vmax;
-  margin: 0 0 1.4vmax;
-  background: @link-color;
-  opacity: 0;
-
-  &:hover,
-  &:focus {
-    border-bottom: none !important;
-    background: @text-color;
-    opacity: 1;
-  }
-
-  h1 {
-    height: 0;
-    text-indent: -99999em;
-  }
-}
-
 // Main navigation
+@nav-padding: 1.4vmax;
 .navigation {
-  margin: 0 0 16vmin;
+  padding-top: @nav-padding;
+  padding-bottom: @nav-padding;
   margin-right: -1.1em;
   margin-left: -1.1em;
   font-size: 60%;
@@ -157,7 +138,31 @@ body:hover .latest {
   }
 
   header {
+    display: flex;
+    min-height: calc(100vh - (@nav-padding * 2) - 30px);
+    padding-top: 16vmin;
     padding-bottom: 16vmin;
+    margin-bottom: 16vmin;
+    flex-direction: column;
+    justify-content: center;
+    background: fade(@text-color, 2%);
+    .padding-offset(@space-lg, @space-lg);
+    .margin-offset(-@space-lg, -@space-lg);
+
+    @media (max-width: @breakpoint-md) {
+      .padding-offset(@space-md, @space-md);
+      .margin-offset(-@space-md, -@space-md);
+    }
+
+    @media (max-width: @breakpoint-sm) {
+      .padding-offset(@space-sm, @space-sm);
+      .margin-offset(-@space-sm, -@space-sm);
+    }
+
+    // Reset min height for smaller screens
+    @media (max-height: @breakpoint-xs) {
+      min-height: @breakpoint-xs;
+    }
 
     h1 {
       margin: 0 0 .1em;
@@ -188,6 +193,11 @@ body:hover .latest {
           height: 100% !important;
         }
       }
+    }
+
+    // Reset subheading in page title (used by AMSF atm)
+    h2 {
+      margin: 0;
     }
 
     // Hide actual text if post title is image or SVG, the actual text helps Safari get the real post title in Reader mode.
