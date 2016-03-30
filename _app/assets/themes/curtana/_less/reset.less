@@ -44,19 +44,6 @@ body {
   @media (max-width: @breakpoint-xs) {
     font-size: (@font-size * 3.2);
   }
-
-  // A semitranslucent bar at the top of the page
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1vmax;
-    pointer-events: none;
-    background: @link-color;
-    content: "";
-    opacity: .2;
-  }
 }
 
 // Reset fonts for relevant elements
