@@ -139,8 +139,8 @@ body:hover .latest {
 
   header {
     display: flex;
-    min-height: calc(100vh - (@nav-padding * 2) - 30px);
-    padding-top: 14vmin;
+    min-height: calc(100vh - @nav-padding * 2 - 2ex);
+    padding-top: 10vmin;
     padding-bottom: 16vmin;
     margin-bottom: 16vmin;
     flex-direction: column;
@@ -150,6 +150,9 @@ body:hover .latest {
     .margin-offset(-@space-lg, -@space-lg);
 
     @media (max-width: @breakpoint-md) {
+      min-height: calc(64vh - @nav-padding * 2 - 2ex);
+      padding-top: 16vmin;
+      padding-bottom: 16vmin;
       .padding-offset(@space-md, @space-md);
       .margin-offset(-@space-md, -@space-md);
     }
@@ -157,11 +160,6 @@ body:hover .latest {
     @media (max-width: @breakpoint-sm) {
       .padding-offset(@space-sm, @space-sm);
       .margin-offset(-@space-sm, -@space-sm);
-    }
-
-    // Reset min height for smaller screens
-    @media (max-height: @breakpoint-xs) {
-      min-height: @breakpoint-xs;
     }
 
     h1 {
