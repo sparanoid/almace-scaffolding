@@ -1,3 +1,17 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.0...v0.1.1) (2016-03-31)
+
+
+### Bug Fixes
+
+* **template:** use custom variable for “Home” placeholder ([8eaa29b](https://github.com/sparanoid/almace-scaffolding/commit/8eaa29b))
+
+### Features
+
+* **styles:** better heading space for small screens ([e56fcc1](https://github.com/sparanoid/almace-scaffolding/commit/e56fcc1))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.58...v0.1.0) (2016-03-30)
 
