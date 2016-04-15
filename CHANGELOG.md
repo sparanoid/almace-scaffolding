@@ -1,3 +1,21 @@
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.1...v0.1.2) (2016-04-15)
+
+
+### Bug Fixes
+
+* **styles:** wrong logo width on larger screens ([31fa168](https://github.com/sparanoid/almace-scaffolding/commit/31fa168))
+* **traivs:** try force npm@3 to avoid hard errors ([4823ddc](https://github.com/sparanoid/almace-scaffolding/commit/4823ddc))
+* **travis:** update deps ([300b0e1](https://github.com/sparanoid/almace-scaffolding/commit/300b0e1))
+
+### Features
+
+* **styles:** optimize for iPad Pro portrait direction ([edd776b](https://github.com/sparanoid/almace-scaffolding/commit/edd776b))
+* **template:** add `data-title` for later use ([b673e72](https://github.com/sparanoid/almace-scaffolding/commit/b673e72))
+* **travis:** simplify build process ([68537f7](https://github.com/sparanoid/almace-scaffolding/commit/68537f7))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.0...v0.1.1) (2016-03-31)
 
