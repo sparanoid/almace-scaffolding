@@ -31,7 +31,7 @@
     "grunt-assets-inline": "^0.1.13",
     "grunt-banner": "^0.6.0",
     "grunt-browser-sync": "^2.2.0",
-    "grunt-bump": "^0.7.0",
+    "grunt-bump": "^0.8.0",
     "grunt-cache-bust": "^1.3.0",
     "grunt-cleanempty": "^1.0.4",
     "grunt-coffeelint": "0.0.15",
