@@ -1,3 +1,13 @@
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.2...v0.1.3) (2016-05-04)
+
+
+### Features
+
+* **theme:** update header height ([cad3c1c](https://github.com/sparanoid/almace-scaffolding/commit/cad3c1c))
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.1...v0.1.2) (2016-04-15)
 
