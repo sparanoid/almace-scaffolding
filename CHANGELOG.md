@@ -1,3 +1,14 @@
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.3...v0.1.4) (2016-05-12)
+
+
+### Bug Fixes
+
+* **grunt:** cannot enter passphrase for GPG signing script ([5a6ee76](https://github.com/sparanoid/almace-scaffolding/commit/5a6ee76))
+* **theme:** adjust header height ([e644cdd](https://github.com/sparanoid/almace-scaffolding/commit/e644cdd))
+
+
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.2...v0.1.3) (2016-05-04)
 
