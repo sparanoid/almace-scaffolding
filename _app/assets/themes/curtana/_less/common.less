@@ -139,9 +139,10 @@ body:hover .latest {
 
   header {
     display: flex;
-    min-height: calc(100vh - @nav-padding * 4 - 6ex);
+    min-height: calc(100vh - ((@nav-padding * 4)) - 5ex);
+    // Additional padding for content inside `header` are higher than `header` container
     padding-top: 10vmin;
-    padding-bottom: 16vmin;
+    padding-bottom: 10vmin;
     margin-bottom: 16vmin;
     flex-direction: column;
     justify-content: center;
