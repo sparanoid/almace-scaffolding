@@ -14,23 +14,16 @@
   h6 { font-size: 60%;  opacity: .4; }
 }
 
-// EXAMPLE: alternative title color switch
-// Uncomment the following style will enalbe alternative post title color,
-// this is useful when you're using the custom color scheme.
+// EXAMPLE: alternative post title color
+// This is useful when you're using the custom color scheme.
 // .content { .list h2 a, header h1, header h1 a { color: @link-color; } }
 // .external span { background: @link-color; }
 
 // EXAMPLE: custom header with background image
-.content header {
-  @header-factor: .64;
-  color: @background-color;
-  background: @link-color url('/assets/img/bg.png') center center;
-  background-size: (100vw * @header-factor);
-
-  a {
-    color: @background-color;
-  }
-}
+// .content header {
+//   color: @background-color;
+//   background: @link-color url('/assets/img/title-background-example.jpg') center center / cover;
+// }
 
 // EXAMPLE: amsf.github.io custom variables
 @fontstack-sans-serif: "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
