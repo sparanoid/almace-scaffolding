@@ -140,7 +140,8 @@ body:hover .latest {
   header {
     display: flex;
     min-height: calc(100vh - ((@nav-padding * 4)) - 5ex);
-    // Additional padding for content inside `header` are higher than `header` container
+    // Additional padding for content inside `header` are higher than `header`
+    // container
     padding-top: 10vmin;
     padding-bottom: 10vmin;
     margin-bottom: 16vmin;
@@ -200,7 +201,8 @@ body:hover .latest {
       margin: 1.2vmin 0 0;
     }
 
-    // Hide actual text if post title is image or SVG, the actual text helps Safari get the real post title in Reader mode.
+    // Hide actual text if post title is image or SVG, the actual text helps
+    // Safari get the real post title in Reader mode.
     .image-title {
       text-indent: -999999px;
       line-height: 0;
@@ -316,8 +318,9 @@ body:hover .latest {
       padding-left: @space-xs;
       border-left: @border-default solid;
       // TODO: Need better solution
-      // We will reset the common margin-bototm to get gapless borders for blockquotes
-      // This could help fix https://github.com/amsf/amsf-curtana/issues/4
+      // We will reset the common margin-bototm to get gapless borders for
+      // blockquotes. This could help fix
+      // https://github.com/amsf/amsf-curtana/issues/4
       padding-bottom: 1.6rem;
       // Now reset default margin button from global define
       margin-bottom: 0;
@@ -539,7 +542,8 @@ body:hover .latest {
   }
 }
 
-// Fix empty space when a paragraph starts with quote marks and some asian punctuation marks
+// Fix empty space when a paragraph starts with quote marks and some asian
+// punctuation marks, class names are powered by `grunt-leading-quotes`
 .leading-indent-fix {
 
   & { text-indent: -.39em; }
