@@ -1,3 +1,16 @@
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.4...v0.1.5) (2016-05-16)
+
+
+### Features
+
+* **docs:** semantic file name ([d123853](https://github.com/sparanoid/almace-scaffolding/commit/d123853))
+* **style:** add header background image example ([dab7482](https://github.com/sparanoid/almace-scaffolding/commit/dab7482))
+* **style:** merge  into ([de33477](https://github.com/sparanoid/almace-scaffolding/commit/de33477))
+* **theme:** useful comment for site specific styles ([07f2f96](https://github.com/sparanoid/almace-scaffolding/commit/07f2f96))
+
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.3...v0.1.4) (2016-05-12)
 
