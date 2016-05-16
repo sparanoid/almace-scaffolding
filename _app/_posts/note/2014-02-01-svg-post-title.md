@@ -3,7 +3,7 @@ layout: post
 title: SVG Post Ttile
 category: note
 tags: curtana
-svg-headline: svg/kai.svg
+svg-headline: svg/svg-title-example.svg
 svg-headline-width: 400
 svg-headline-height: 86
 scheme-text: "#b93b00"
@@ -16,17 +16,17 @@ scheme-bg: "#ff9610"
 This is an example of custom post title using SVG image. You can simply add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
 
 ```
-svg-headline: svg/kai.svg
+svg-headline: svg/cool-title.svg
 svg-headline-width: 400
 svg-headline-height: 86
 ```
 
-Image defined for `svg-headline` should be stored at `_app/assets/svg/kai.svg`, you can simply keep these title images under Git control, they will be inlined into the HTML pages using Grunt.js in production builds. The `svg-headline-width` and `svg-headline-height` are optional if you have correct dimensions for your images.
+Image defined for `svg-headline` should be stored at `_app/assets/svg/cool-title.svg`, you can simply keep these title images under Git control, they will be inlined into the HTML pages using Grunt.js in production builds. The `svg-headline-width` and `svg-headline-height` are optional if you have correct dimensions for your images.
 
 There's also an option for common raster images, but please note that these files should be stored at where you define `site.file`.
 
 ```
-img-headline: imouto-logo-large.png
+img-headline: cool-title.png
 img-headline-width: 500
 ```
 
@@ -34,6 +34,6 @@ img-headline-width: 500
 
 ```
 <svg xmlns="http://www.w3.org/2000/svg" width="2175" height="465" viewBox="0 0 2175 465">
-<title>Kai Series</title>
+<title>Cool Article</title>
 …
 ```
