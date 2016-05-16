@@ -20,6 +20,18 @@
 // .content { .list h2 a, header h1, header h1 a { color: @link-color; } }
 // .external span { background: @link-color; }
 
+// EXAMPLE: custom header with background image
+.content header {
+  @header-factor: .64;
+  color: @background-color;
+  background: @link-color url('/assets/img/bg.png') center center;
+  background-size: (100vw * @header-factor);
+
+  a {
+    color: @background-color;
+  }
+}
+
 // EXAMPLE: amsf.github.io custom variables
 @fontstack-sans-serif: "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
 @fontstack-serif: Georgia, "Hiragino Mincho ProN", serif;
