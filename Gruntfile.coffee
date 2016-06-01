@@ -623,7 +623,6 @@ module.exports = (grunt) ->
     "cleanempty"
   ]
 
-  # Release new version
   grunt.registerTask "release", "Build, bump and commit", (type) ->
     grunt.task.run [
       "bump-only:#{type or 'patch'}"
@@ -631,6 +630,17 @@ module.exports = (grunt) ->
       "replace:amsf__site__update_version"
       "bump-commit"
     ]
+
+  grunt.registerTask "deploy-sparanoid", "Deploy to remote server (for sparanoid.com)",  ->
+    if grunt.option("no-commit")
+      grunt.task.run [
+        "shell:amsf__deploy__sparanoid__copy_to_local"
+      ]
+    else
+      grunt.task.run [
+        "shell:amsf__deploy__sparanoid__copy_to_local"
+        "shell:amsf__deploy__sparanoid__auto_commit"
+      ]
 
   grunt.registerTask "default", "Default task aka. build task",  ->
     grunt.task.run [
@@ -643,12 +653,6 @@ module.exports = (grunt) ->
         "shell:amsf__deploy__rsync"
       ]
     else if grunt.option("deploy") is "sparanoid"
-      if grunt.option("no-commit")
-        grunt.task.run [
-          "shell:amsf__deploy__sparanoid__copy_to_local"
-        ]
-      else
-        grunt.task.run [
-          "shell:amsf__deploy__sparanoid__copy_to_local"
-          "shell:amsf__deploy__sparanoid__auto_commit"
-        ]
+      grunt.task.run [
+        "deploy-sparanoid"
+      ]
