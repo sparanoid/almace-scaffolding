@@ -306,11 +306,11 @@ module.exports = (grunt) ->
 
       # Direct rsync compiled static files to remote server
       amsf__deploy__rsync:
-        command: "rsync -avz -e 'ssh -p <%= config.deploy.rsync.port %>' --delete --progress <%= config.deploy.ignore_files %> <%= config.dist %>/ <%= config.deploy.rsync.user %>@<%= config.deploy.rsync.host %>:<%= config.deploy.rsync.dest %> > deploy-rsync.log"
+        command: "rsync -avz -e 'ssh -p <%= config.deploy.rsync.port %>' --delete --progress <%= config.deploy.rsync.params %> <%= config.dist %>/ <%= config.deploy.rsync.user %>@<%= config.deploy.rsync.host %>:<%= config.deploy.rsync.dest %> > deploy-rsync.log"
 
       # Copy compiled static files to local directory for further post-process
       amsf__deploy__sparanoid__copy_to_local:
-        command: "rsync -avz --delete --progress <%= config.deploy.ignore_files %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.dest %>/site/<%= config.base %> > deploy-s3_website.log"
+        command: "rsync -avz --delete --progress <%= config.deploy.rsync.params %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.dest %>/site/<%= config.base %> > deploy-s3_website.log"
 
       # Auto commit untracked files sync'ed from sync_local
       amsf__deploy__sparanoid__auto_commit:
