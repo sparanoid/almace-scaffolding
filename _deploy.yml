@@ -2,14 +2,17 @@
 # Custom deployment variables
 #
 
-# Prevent them from being deleted on server (rsync --delete), these files and directories are available on the remote server but outside this git repo. I need to ignore them.
-ignore_files: --exclude=lab
 
 rsync:
   user: rsync
   port: 22
   host: caladbolg.sparanoid.com
   dest: /srv/www/sparanoid.com/public_html
+  # Extra rsync parameters
+  # I use `--exclude` here to prevent additional files from being deleted on
+  # the server (rsync --delete), these files and directories are available on
+  # the remote server but outside this git repo. So I need to ignore them.
+  params: --exclude=lab
 
 s3_website:
   dest: ~/Git/sparanoid.com-prod
