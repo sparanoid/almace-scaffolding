@@ -9,7 +9,7 @@
 
 source:         _app
 destination:    _site
-timezone:       Asia/Hong_Kong
+timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
