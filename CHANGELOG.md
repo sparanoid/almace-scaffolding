@@ -1,3 +1,22 @@
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.5...v0.1.6) (2016-06-01)
+
+
+### Features
+
+* **config:** update default timezone ([0489949](https://github.com/sparanoid/almace-scaffolding/commit/0489949))
+* **deploy:** update rsync deploy parameter ([a63ae8e](https://github.com/sparanoid/almace-scaffolding/commit/a63ae8e))
+* **grunt:** add  support for better minified output ([1934283](https://github.com/sparanoid/almace-scaffolding/commit/1934283))
+* **grunt:** add project specific deploy task ([69766fb](https://github.com/sparanoid/almace-scaffolding/commit/69766fb))
+* **post:** introducing theme Curtana ([b91aea6](https://github.com/sparanoid/almace-scaffolding/commit/b91aea6))
+
+
+### BREAKING CHANGES
+
+* deploy: now the original  are removed, all additional  parameters should be passed through  option, you can view  for more information about this change.
+
+
+
 <a name="0.1.5"></a>
 ## [0.1.5](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.4...v0.1.5) (2016-05-16)
 
