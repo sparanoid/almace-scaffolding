@@ -245,6 +245,15 @@ module.exports = (grunt) ->
           dest: "<%= config.dist %>"
         ]
 
+    uncss_inline:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
+        ]
+
     leading_quotes:
       options:
         elements: "p, h1, h2, h3, h4, h5, h6"
@@ -578,7 +587,7 @@ module.exports = (grunt) ->
     "less:serve"
     "postcss:serve"
     "jekyll:serve"
-    "leading_quotes:main"
+    "leading_quotes"
     "browserSync"
     "watch"
   ]
@@ -604,9 +613,10 @@ module.exports = (grunt) ->
     "postcss:dist"
     "csscomb"
     "jekyll:dist"
-    "leading_quotes:main"
+    "leading_quotes"
     "cssmin"
     "assets_inline"
+    "uncss_inline"
     "cacheBust"
     "concurrent:dist"
     "usebanner"
