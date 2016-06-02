@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introducing Curtata
+title: Introducing Curtana
 category: note
 tags: curtana
 ---
