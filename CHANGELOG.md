@@ -1,3 +1,20 @@
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.6...v0.1.7) (2016-06-03)
+
+
+### Bug Fixes
+
+* **config:** wrong URL ([3493955](https://github.com/sparanoid/almace-scaffolding/commit/3493955))
+* **post:** typo post name ([9c0677d](https://github.com/sparanoid/almace-scaffolding/commit/9c0677d))
+
+
+### Features
+
+* **grunt:** auto release task ([6c33090](https://github.com/sparanoid/almace-scaffolding/commit/6c33090))
+* **grunt:** update deploy script ([a519d61](https://github.com/sparanoid/almace-scaffolding/commit/a519d61))
+
+
+
 <a name="0.1.6"></a>
 ## [0.1.6](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.5...v0.1.6) (2016-06-01)
 
