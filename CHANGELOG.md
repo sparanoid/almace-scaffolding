@@ -1,3 +1,15 @@
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.7...v0.1.8) (2016-06-06)
+
+
+### Features
+
+* **config:** update comment for better readability ([16911d8](https://github.com/sparanoid/almace-scaffolding/commit/16911d8))
+* **style:** remove obsoleted option ([9110848](https://github.com/sparanoid/almace-scaffolding/commit/9110848))
+* **style:** remove site specific styles ([6617343](https://github.com/sparanoid/almace-scaffolding/commit/6617343))
+
+
+
 <a name="0.1.7"></a>
 ## [0.1.7](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.6...v0.1.7) (2016-06-03)
 
