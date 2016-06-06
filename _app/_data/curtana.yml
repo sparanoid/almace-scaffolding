@@ -6,9 +6,6 @@ meta:
   author_url:   http://sparanoid.com/
   github:       https://github.com/amsf/amsf-curtana
 
-# {{ site.data.curtana.free }}: used in homepage, not implimented at the moment
-free:           true
-
 # Site donate link, used in several posts
 donate:         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
 
