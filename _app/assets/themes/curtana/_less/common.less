@@ -44,46 +44,6 @@ body:hover .latest {
   color: @link-color !important;
 }
 
-// Pserson status
-.content .status {
-  margin: 1vmin 0 0;
-  font-size: 75%;
-  font-weight: bold;
-
-  &:before {
-    @size: .8em;
-    display: inline-block;
-    width: @size;
-    height: @size;
-    margin-right: .8vw;
-    background: fade(@text-color, 20%);
-    border-radius: 50%;
-    content: "";
-  }
-
-  &.available {
-
-    &:before {
-      background: #0cf;
-    }
-
-    a {
-      color: #0cf;
-    }
-  }
-
-  &.unavailable {
-
-    &:before {
-      background: #ccc;
-    }
-
-    a {
-      color: #ccc;
-    }
-  }
-}
-
 // Main content
 .content {
   margin-bottom: 16vmin;
