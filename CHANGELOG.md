@@ -1,3 +1,13 @@
+<a name="0.1.10"></a>
+## [0.1.10](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.9...v0.1.10) (2016-06-13)
+
+
+### Bug Fixes
+
+* **grunt:** version confg not updated ([bfe15af](https://github.com/sparanoid/almace-scaffolding/commit/bfe15af))
+
+
+
 <a name="0.1.9"></a>
 ## [0.1.9](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.8...v0.1.9) (2016-06-13)
 
