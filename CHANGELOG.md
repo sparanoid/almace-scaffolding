@@ -1,3 +1,13 @@
+<a name="0.1.11"></a>
+## [0.1.11](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.10...v0.1.11) (2016-06-13)
+
+
+### Bug Fixes
+
+* **grunt:** config not corectly checked before upgrading ([60ef187](https://github.com/sparanoid/almace-scaffolding/commit/60ef187))
+
+
+
 <a name="0.1.10"></a>
 ## [0.1.10](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.9...v0.1.10) (2016-06-13)
 
