@@ -374,6 +374,6 @@ You really like your custom design and wanna show it off to the world? Cool, you
 $ grunt theme-save
 ```
 
-The activated theme will be saved to AMSF cache (`_amsf/`) with correct file and directory structure, then you can upload your theme to GitHub.
+The activated theme will be saved to AMSF cache (`.amsf-cache/`) with correct file and directory structure, then you can upload your theme to GitHub.
 
 Still confusing? see my default theme [Curtana](http://github.com/amsf/amsf-curtana) for reference.
