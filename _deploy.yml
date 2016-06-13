@@ -2,7 +2,6 @@
 # Custom deployment variables
 #
 
-
 rsync:
   user: rsync
   port: 22
