@@ -568,12 +568,18 @@ module.exports = (grunt) ->
 
   grunt.registerTask "amsf-func-preupdate", "Update ASMF (preprocess)", ->
     # Check if config exists
-    if !grunt.file.exists('_amsf.yml')
-      grunt.task.run [
-        "copy:amsf__config__to_app"
-      ]
+    if !grunt.file.exists("_amsf.yml")
+      if grunt.file.exists("_amsf/_config.yml")
+        grunt.file.copy("_amsf/_config.yml", "_amsf.yml")
+      else
+        grunt.task.run [
+          "copy:amsf__config__to_app"
+        ]
 
   grunt.registerTask "amsf-func-postupdate", "Update ASMF (postprocess)", ->
+    # Remove deprecated directory
+    if grunt.file.exists("_amsf")
+      grunt.file.delete("_amsf")
 
   # Defined tasks
   grunt.registerTask "theme-upgrade", "Upgrade specific theme from AMSF cache to app", [
