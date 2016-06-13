@@ -622,7 +622,6 @@ module.exports = (grunt) ->
     "uncss_inline"
     "cacheBust"
     "concurrent:dist"
-    "usebanner"
     "cleanempty"
   ]
 
