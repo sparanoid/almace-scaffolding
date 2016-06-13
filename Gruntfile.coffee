@@ -17,7 +17,7 @@ module.exports = (grunt) ->
     config:
       cfg: grunt.file.readYAML("_config.yml")
       pkg: grunt.file.readJSON("package.json")
-      amsf: grunt.file.readYAML("_amsf/_config.yml")
+      amsf: grunt.file.readYAML("_amsf.yml")
       deploy: grunt.file.readYAML("_deploy.yml")
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
@@ -25,7 +25,7 @@ module.exports = (grunt) ->
       banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
 
     amsf:
-      base: "_amsf"
+      base: ".amsf-cache"
       branch: grunt.option("branch") or "release"
       core: "<%= amsf.base %>/core"
       user:
@@ -300,13 +300,13 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.dev.yml"
+          config: "_config.yml,_amsf.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.dev.yml"
           drafts: true
           future: true
 
       dist:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml"
+          config: "_config.yml,_amsf.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml"
           dest: "<%= config.dist %><%= config.base %>"
 
     shell:
@@ -386,6 +386,19 @@ module.exports = (grunt) ->
           }
         ]
 
+      amsf__config__to_app:
+        files: [
+          {
+            expand: true
+            dot: true
+            cwd: "<%= amsf.core %>"
+            src: [
+              "_amsf.yml"
+            ]
+            dest: "./"
+          }
+        ]
+
       amsf__core__to_app:
         files: [
           {
@@ -401,6 +414,7 @@ module.exports = (grunt) ->
               "Gruntfile*" # Comment this when debugging this task
               "LICENSE"
               "package.json"
+              "!_amsf.yml"
               "!.DS_Store"
               "!TODOS.md"
             ]
@@ -472,12 +486,22 @@ module.exports = (grunt) ->
 
     replace:
       amsf__theme__update_config:
-        src: ["<%= amsf.base %>/_config.yml"]
-        dest: "<%= amsf.base %>/_config.yml"
+        src: ["_amsf.yml"]
+        dest: "_amsf.yml"
         replacements: [
           {
-            from: /(theme:)( +)(.+)/g
-            to: "$1$2<%= amsf.theme.new_name %>"
+            from: /(theme: +)(.+)/g
+            to: "$1<%= amsf.theme.new_name %>"
+          }
+        ]
+
+      amsf__core__update_version:
+        src: ["_amsf.yml"]
+        dest: "_amsf.yml"
+        replacements: [
+          {
+            from: /(version: +)(.+)/g
+            to: "$1<%= config.pkg.version %>"
           }
         ]
 
@@ -538,6 +562,20 @@ module.exports = (grunt) ->
         tagMessage: "chore: create tag %VERSION%"
         push: false
 
+  # Custom tasks
+  grunt.registerTask "amsf-func-mkdir", "Initialize AMSF working directory", ->
+    grunt.file.mkdir '.amsf-cache'
+
+  grunt.registerTask "amsf-func-preupdate", "Update ASMF (preprocess)", ->
+    # Check if config exists
+    if !grunt.file.exists('_amsf.yml')
+      grunt.task.run [
+        "copy:amsf__config__to_app"
+      ]
+
+  grunt.registerTask "amsf-func-postupdate", "Update ASMF (postprocess)", ->
+
+  # Defined tasks
   grunt.registerTask "theme-upgrade", "Upgrade specific theme from AMSF cache to app", [
     "shell:amsf__theme__to_app"
   ]
@@ -569,13 +607,17 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask "amsf-update", "Update ASMF", [
+    "amsf-func-preupdate"
     "clean:amsf__core__remove_repo"
     "gitclone:amsf__core__add_remote"
     "copy:amsf__core__to_app"
     "shell:amsf__core__update_deps"
+    "replace:amsf__core__update_version"
+    "amsf-func-postupdate"
   ]
 
   grunt.registerTask "init", "Initialize new project", [
+    "amsf-func-mkdir"
     "theme-add"
   ]
 
