@@ -1,3 +1,21 @@
+<a name="0.1.9"></a>
+## [0.1.9](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.8...v0.1.9) (2016-06-13)
+
+
+### Features
+
+* **feed:** add  tag for Atom output ([6ee388e](https://github.com/sparanoid/almace-scaffolding/commit/6ee388e))
+* **grunt:** remove banner support for minified HTMLs ([dfed2be](https://github.com/sparanoid/almace-scaffolding/commit/dfed2be))
+* **theme:** remove CSS comments ([6c04f11](https://github.com/sparanoid/almace-scaffolding/commit/6c04f11))
+* update AMSF config structure ([542a59b](https://github.com/sparanoid/almace-scaffolding/commit/542a59b))
+
+
+### BREAKING CHANGES
+
+* Now the `./_amsf/` directory is obsolete, config `_amsf.yml` and cache directory `.amsf-cache` are introduced, if you see errors when update the AMSF, try create `_amsf.yml` from the AMSF source code
+
+
+
 <a name="0.1.8"></a>
 ## [0.1.8](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.7...v0.1.8) (2016-06-06)
 
