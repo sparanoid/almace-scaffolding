@@ -12,6 +12,10 @@ module.exports = (grunt) ->
   # Track tasks load time
   require("time-grunt") grunt
 
+  # Get deploy target, run `$ grunt rsync --env=server01` to deploy to your
+  # `server01`, server info stored in `_deploy.yml`.
+  deploy_env = grunt.option("env") or "default"
+
   # Project configurations
   grunt.initConfig
     config:
@@ -315,15 +319,15 @@ module.exports = (grunt) ->
 
       # Direct rsync compiled static files to remote server
       amsf__deploy__rsync:
-        command: "rsync -avz -e 'ssh -p <%= config.deploy.rsync.port %>' --delete --progress <%= config.deploy.rsync.params %> <%= config.dist %>/ <%= config.deploy.rsync.user %>@<%= config.deploy.rsync.host %>:<%= config.deploy.rsync.dest %> > deploy-rsync.log"
+        command: "rsync -avz -e 'ssh -p <%= config.deploy.rsync.#{deploy_env}.port %>' --delete --progress <%= config.deploy.rsync.#{deploy_env}.params %> <%= config.dist %>/ <%= config.deploy.rsync.#{deploy_env}.user %>@<%= config.deploy.rsync.#{deploy_env}.host %>:<%= config.deploy.rsync.#{deploy_env}.dest %> > deploy-rsync-#{deploy_env}.log"
 
       # Copy compiled static files to local directory for further post-process
       amsf__deploy__sparanoid__copy_to_local:
-        command: "rsync -avz --delete --progress <%= config.deploy.rsync.params %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.dest %>/site/<%= config.base %> > deploy-s3_website.log"
+        command: "rsync -avz --delete --progress <%= config.deploy.rsync.params %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.#{deploy_env}.dest %>/site/<%= config.base %> > deploy-s3_website-#{deploy_env}.log"
 
       # Auto commit untracked files sync'ed from sync_local
       amsf__deploy__sparanoid__auto_commit:
-        command: "bash <%= config.deploy.s3_website.dest %>/auto-commit '<%= config.pkg.name %>'"
+        command: "bash <%= config.deploy.s3_website.#{deploy_env}.dest %>/auto-commit '<%= config.pkg.name %>'"
 
       amsf__core__update_deps:
         command: [
