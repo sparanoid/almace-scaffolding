@@ -96,7 +96,7 @@ pshh:           https://pubsubhubbub.appspot.com/
 
 # Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full
 # URLs for these fields
-url:            http://sparanoid.com
+url:            https://sparanoid.com
 
 # Media assets URL used in posts, without trailing slash. ie.
 # `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be
@@ -108,7 +108,7 @@ file:           //d349cztnlupsuf.cloudfront.net
 # differences in `site.file` and `site.download`, I just use the one for post
 # images and the other for large download files. That's it. Remove or ignore
 # this if you don't need it.
-download:       http://dl.sparanoid.com
+download:       //d1bmx7s6749k4k.cloudfront.net
 
 # Google Analytics tracking code
 google_analytics:
