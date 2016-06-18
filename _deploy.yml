@@ -17,7 +17,7 @@ rsync:
     user: sparanoid
     port: 22
     host: caladbolg.sparanoid.com
-    dest: /srv/www/dev.sparanoid.com/public_html
+    dest: /srv/www/sparanoid.com/public_html
     # Extra rsync parameters
     # I use `--rsync-path` here to run `rsync` with sudo permission.
     params: --rsync-path="sudo rsync"
