@@ -70,7 +70,7 @@ Please note that you can't apply CSS classes in Markdown, so you have to use HTM
 
 ### Example
 
-<p class="browser"><img src="http://rsrc.sparanoid.com/delicious.com.png" alt="Delicious Preview" class="no-lightense"></p>
+<p class="browser"><img src="{{ site.file }}/delicious.com.png" alt="Delicious Preview" class="no-lightense"></p>
 
 ## [Lightense Images](https://github.com/sparanoid/lightense-images)
 
@@ -110,4 +110,4 @@ Please note that if you're using HTML markup, you should wrap your images into a
 
 ### Example
 
-![Moonstruck Princess Extended - Red](http://rsrc.sparanoid.com/moonstruck-princess-ext-red.jpg)
+![Moonstruck Princess Extended - Red]({{ site.file }}/moonstruck-princess-ext-red.jpg)
