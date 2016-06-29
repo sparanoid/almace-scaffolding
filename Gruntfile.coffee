@@ -488,6 +488,9 @@ module.exports = (grunt) ->
         src: "<%= amsf.base %>/themes/<%= amsf.theme.current %>"
 
     cleanempty:
+      options:
+        files: false
+        
       dist:
         src: ["<%= config.dist %>/**/*"]
 
