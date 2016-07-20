@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SVG Post Ttile
+title: SVG Post Title
 category: note
 tags: curtana
 svg-headline: svg/svg-title-example.svg
