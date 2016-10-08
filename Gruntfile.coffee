@@ -37,7 +37,7 @@ module.exports = (grunt) ->
       theme:
         branch: "master"
         assets: "<%= amsf.user.assets %>/themes/<%= amsf.theme.current %>"
-        current: "<%= config.amsf.theme %>"
+        current: "<%= config.amsf.amsf_theme %>"
         new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
         new_author: grunt.option("user") or "amsf"
 
@@ -490,7 +490,7 @@ module.exports = (grunt) ->
     cleanempty:
       options:
         files: false
-        
+
       dist:
         src: ["<%= config.dist %>/**/*"]
 
@@ -500,7 +500,7 @@ module.exports = (grunt) ->
         dest: "_amsf.yml"
         replacements: [
           {
-            from: /(theme: +)(.+)/g
+            from: /(amsf_theme: +)(.+)/g
             to: "$1<%= amsf.theme.new_name %>"
           }
         ]
