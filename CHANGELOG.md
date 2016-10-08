@@ -1,3 +1,20 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.12...v1.0.0) (2016-10-08)
+
+
+### Features
+
+* **jekyll:** compatible with latest jekyll ([3e7421c](https://github.com/sparanoid/almace-scaffolding/commit/3e7421c))
+
+
+### BREAKING CHANGES
+
+* jekyll: Now AMSF is updated with latest version of Jekyll, with native theme support.
+
+So the  in AMSF is now conflicted with Jekyll's theme directive. I have to rename it to  in order to compatible with built-in theme feature.
+
+
+
 <a name="0.1.12"></a>
 ## [0.1.12](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.11...v0.1.12) (2016-10-08)
 
