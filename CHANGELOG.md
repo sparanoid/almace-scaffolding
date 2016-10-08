@@ -1,3 +1,25 @@
+<a name="0.1.12"></a>
+## [0.1.12](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.11...v0.1.12) (2016-10-08)
+
+
+### Bug Fixes
+
+* **deploy:** wrong prod deploy path ([a61535e](https://github.com/sparanoid/almace-scaffolding/commit/a61535e))
+* **grunt:** avoid cleaning empty files ([32c7d4c](https://github.com/sparanoid/almace-scaffolding/commit/32c7d4c))
+* **package:**  causes task hanging in macOS Sierra (also potentially in other platforms), should fix https://github.com/sparanoid/almace-scaffolding/issues/54 ([f7b4b8a](https://github.com/sparanoid/almace-scaffolding/commit/f7b4b8a))
+* **post:** typo ([e87bf30](https://github.com/sparanoid/almace-scaffolding/commit/e87bf30))
+* **travis:** remove node v0.12 support (lack of ES6) ([42ce9d9](https://github.com/sparanoid/almace-scaffolding/commit/42ce9d9))
+
+
+### Features
+
+* **config:** go HTTPS ([d2c4d5a](https://github.com/sparanoid/almace-scaffolding/commit/d2c4d5a))
+* **grunt:** add custom envrionment deployment ([0b460bc](https://github.com/sparanoid/almace-scaffolding/commit/0b460bc))
+* **grunt:** add user  support ([e775595](https://github.com/sparanoid/almace-scaffolding/commit/e775595))
+* **style:** tweak typography for San Francisco for macOS with OpenType features support ([dde96bc](https://github.com/sparanoid/almace-scaffolding/commit/dde96bc))
+
+
+
 <a name="0.1.11"></a>
 ## [0.1.11](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.10...v0.1.11) (2016-06-13)
 
