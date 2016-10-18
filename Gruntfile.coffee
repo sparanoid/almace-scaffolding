@@ -179,7 +179,7 @@ module.exports = (grunt) ->
           useShortDoctype: false
           removeEmptyAttributes: true
           removeOptionalTags: true
-          removeEmptyElements: true
+          removeEmptyElements: false
           lint: false
           keepClosingSlash: false
           caseSensitive: true
