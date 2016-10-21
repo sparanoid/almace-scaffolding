@@ -251,7 +251,7 @@ module.exports = (grunt) ->
 
     uncss_inline:
       options:
-        uncssrc: ".uncssrc"
+        stylesheets: []
 
       dist:
         files: [
