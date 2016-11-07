@@ -10,13 +10,13 @@
 
 ### BREAKING CHANGES
 
-* grunt: Now you need to set `amsf_theme_url` in `_amsf.yml` before upgrading to the latest version of Almace Scaffolding:
+* grunt: Then you can simply run `grunt update` to process the update. But after upgrading, you need to set `amsf_theme_url` in `_amsf.yml` to support the latest version of Almace Scaffolding:
 
 ```yaml
-amsf_theme_url: https://github.com/amsf/amsf-curtana (or your own if you've already using a custom theme from me)
+amsf_theme_url: https://github.com/amsf/amsf-curtana # or your own if you've already using a custom theme from me)
 ```
 
-Then you can simply run `grunt update` to process the update. This could be more complex for end users but it also allows users to use custom theme hosted wherever they want.
+This could be more complex for end users but it also allows users to use custom theme hosted wherever they want.
 
 
 
