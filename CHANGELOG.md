@@ -1,3 +1,25 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.1...v1.0.2) (2016-11-07)
+
+
+### Features
+
+* **grunt:** add custom theme URL support ([5d2efc6](https://github.com/sparanoid/almace-scaffolding/commit/5d2efc6))
+* **theme:** use latest Lightense Images ([4a2c6a1](https://github.com/sparanoid/almace-scaffolding/commit/4a2c6a1))
+
+
+### BREAKING CHANGES
+
+* grunt: Now you need to set `amsf_theme_url` in `_amsf.yml` before upgrading to the latest version of Almace Scaffolding:
+
+```yaml
+amsf_theme_url: https://github.com/amsf/amsf-curtana (or your own if you've already using a custom theme from me)
+```
+
+Then you can simply run `grunt update` to process the update. This could be more complex for end users but it also allows users to use custom theme hosted wherever they want.
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.0...v1.0.1) (2016-11-07)
 
