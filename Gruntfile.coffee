@@ -38,8 +38,9 @@ module.exports = (grunt) ->
         branch: "master"
         assets: "<%= amsf.user.assets %>/themes/<%= amsf.theme.current %>"
         current: "<%= config.amsf.amsf_theme %>"
+        current_url: "<%= config.amsf.amsf_theme_url %>"
         new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
-        new_author: grunt.option("user") or "amsf"
+        new_url: grunt.option("url") or "<%= amsf.theme.current_url %>"
 
     coffeelint:
       options:
@@ -466,7 +467,7 @@ module.exports = (grunt) ->
 
       amsf__theme__add_remote:
         options:
-          repository: "https://github.com/<%= amsf.theme.new_author %>/amsf-<%= amsf.theme.new_name %>.git"
+          repository: "<%= amsf.theme.new_url %>.git"
           branch: "<%= amsf.theme.branch %>"
           directory: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/"
 
@@ -503,6 +504,10 @@ module.exports = (grunt) ->
           {
             from: /(amsf_theme: +)(.+)/g
             to: "$1<%= amsf.theme.new_name %>"
+          }
+          {
+            from: /(amsf_theme_url: +)(.+)/g
+            to: "$1<%= amsf.theme.new_url %>"
           }
         ]
 
