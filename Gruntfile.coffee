@@ -252,6 +252,7 @@ module.exports = (grunt) ->
 
     uncss_inline:
       options:
+        uncssrc: ".uncssrc"
         htmlroot: "<%= config.dist %>"
 
       dist:
