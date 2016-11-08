@@ -1,3 +1,13 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.3...v1.0.4) (2016-11-08)
+
+
+### Bug Fixes
+
+* **grunt:** removing `.uncssrc` causes upgrading errors and missing stylesheets got uncssed, need a better solution, just add it back for now for backward compatibility ([acc75e9](https://github.com/sparanoid/almace-scaffolding/commit/acc75e9))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.2...v1.0.3) (2016-11-08)
 
