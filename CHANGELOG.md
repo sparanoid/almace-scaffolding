@@ -1,3 +1,19 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.2...v1.0.3) (2016-11-08)
+
+
+### Bug Fixes
+
+* **grunt:** bump `grunt-uncss-inline` to avoid unrelated css files inlined ([2777eed](https://github.com/sparanoid/almace-scaffolding/commit/2777eed))
+
+
+### Features
+
+* **docs:** better update guide ([0cd3a66](https://github.com/sparanoid/almace-scaffolding/commit/0cd3a66))
+* **post:** add new post "Jekyll Theme Compatibility" ([4f76f56](https://github.com/sparanoid/almace-scaffolding/commit/4f76f56))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.1...v1.0.2) (2016-11-07)
 
