@@ -6,9 +6,6 @@ meta:
   author_url:   https://sparanoid.com/
   github:       https://github.com/amsf/amsf-curtana
 
-# Site donate link, used in several posts
-donate:         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
-
 # Hide footer from your homepage, example: sparanoid.com
 # Default:      false
 clean_homepage: false
