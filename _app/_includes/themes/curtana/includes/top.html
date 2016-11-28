@@ -15,7 +15,7 @@
 <link rel="alternate" href="{{ amsf_feed_url }}" type="application/atom+xml">
 
 <!-- Site icons -->
-{% if site.base %}
+{% if site.base != "" %}
   <link rel="icon" href="{{ '/favicon.ico' | prepend: site.base }}">
   <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | prepend: site.base }}">
 {% endif %}
