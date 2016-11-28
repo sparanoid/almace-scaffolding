@@ -163,6 +163,17 @@
 {% endcapture %}
 
 {% comment %}
+  Page type (used by Twitter Cards)
+{% endcomment %}
+{% capture amsf_page_type_twitter %}
+  {% if site.tc_large_image or page.tc_large_image %}
+    summary_large_image
+  {% else %}
+    summary
+  {% endif %}
+{% endcapture %}
+
+{% comment %}
   Page language tag
 {% endcomment %}
 {% capture amsf_page_lang %}

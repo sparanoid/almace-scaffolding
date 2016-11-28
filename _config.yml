@@ -101,14 +101,14 @@ url:            https://sparanoid.com
 # Media assets URL used in posts, without trailing slash. ie.
 # `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be
 # powered by a CDN provider
-file:           //d349cztnlupsuf.cloudfront.net
+file:           https://d349cztnlupsuf.cloudfront.net
 
 # Download files URL used in posts, ie. href="{{ site.download }}/package.zip",
 # this should also be a CDN link just like `site.file`. There're no notable
 # differences in `site.file` and `site.download`, I just use the one for post
 # images and the other for large download files. That's it. Remove or ignore
 # this if you don't need it.
-download:       //d1bmx7s6749k4k.cloudfront.net
+download:       https://d1bmx7s6749k4k.cloudfront.net
 
 # Google Analytics tracking code
 google_analytics:
@@ -118,6 +118,10 @@ google_analytics:
 
 # Site Twitter account handle
 twitter:        sparanoid
+
+# Use summary card with large image for Twitter Cards, require theme support
+# Default:      false
+tc_large_image: false
 
 # Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to
 # the head of your pages
@@ -133,7 +137,7 @@ link_blog:      false
 # Default:      false
 rss_excerpt:    false
 
-# Show generator credits
+# Show or hide generator credits, require theme support
 # Default:      true
 credits:        true
 
