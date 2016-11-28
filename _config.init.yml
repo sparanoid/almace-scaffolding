@@ -120,8 +120,8 @@ google_analytics:
 twitter:        sparanoid
 
 # Use summary card with large image for Twitter Cards, require theme support
-# Default:      false
-tc_large_image: false
+# Default:      true
+tc_large_image: true
 
 # Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to
 # the head of your pages
