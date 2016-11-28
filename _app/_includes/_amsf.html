@@ -202,7 +202,7 @@
 {% endcomment %}
 {% capture amsf_post_first_image %}
   {% assign post_images = page.content | split: "<img " %}
-  {% assign hero_image = amsf_apple_touch_icon | prepend: amsf_site_base %}
+  {% assign hero_image = '/logo.png' | prepend: amsf_site_base %}
   {% for image in post_images %}
     {% if image contains "src=" %}
       {% assign hero_image = image | split: ">" | first | match_regex: 'src="([^"]+)"' %}
