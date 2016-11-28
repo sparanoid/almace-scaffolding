@@ -28,10 +28,8 @@
   {% if page.permalink != '/' %}
     {% if page.desc %}
       {{ page.desc | strip_html | strip_newlines | xml_escape }}
-    {% elsif page.excerpt %}
-      {{ page.excerpt | strip_html | strip_newlines | xml_escape | truncatewords: 50 }}
     {% else %}
-      {{ page.content | markdownify | strip_html | xml_escape | truncatewords: 50 | truncate: 210 }}
+      {{ page.content | markdownify | strip_html | normalize_whitespace | xml_escape | truncate: 300 | truncatewords: 40 }}
     {% endif %}
   {% else %}
     {{ site.description }}
@@ -59,6 +57,13 @@
 {% capture amsf_user_assets %}{{ site.assets | prepend: site.base }}{% endcapture %}
 
 {% comment %}
+  Favicons
+{% endcomment %}
+{% capture amsf_favicon %}{{ '/favicon.ico' | prepend: site.base }}{% endcapture %}
+{% capture amsf_favicon_svg %}{{ '/favicon.svg' | prepend: site.base }}{% endcapture %}
+{% capture amsf_apple_touch_icon %}{{ '/apple-touch-icon.png' | prepend: site.base }}{% endcapture %}
+
+{% comment %}
   Feed URL
 {% endcomment %}
 {% capture amsf_feed_url %}{{ site.feed | prepend: site.base | replace: '/index.xml', '/' }}{% endcapture %}
@@ -77,7 +82,6 @@
   Page publish date
 {% endcomment %}
 {% capture amsf_page_pubdate %}{{ page.date }}{% endcapture %}
-
 
 {% comment %}
   Page update date
@@ -185,8 +189,24 @@
 {% comment %}
   Page thumbnail
 {% endcomment %}
+{% capture amsf_post_first_image %}
+  {% assign post_images = page.content | split: "<img " %}
+  {% assign hero_image = amsf_apple_touch_icon | prepend: amsf_site_base %}
+  {% for image in post_images %}
+    {% if image contains "src=" %}
+      {% assign hero_image = image | split: ">" | first | match_regex: 'src="([^"]+)"' %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {{ hero_image }}
+{% endcapture %}
+
 {% capture amsf_page_thumb %}
-  {{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}
+  {% if page.thumb %}
+    {{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}
+  {% else %}
+    {{ amsf_post_first_image }}
+  {% endif %}
 {% endcapture %}
 
 {% comment %}

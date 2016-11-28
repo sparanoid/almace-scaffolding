@@ -16,12 +16,12 @@
 
 <!-- Site icons -->
 {% if site.base != "" %}
-  <link rel="icon" href="{{ '/favicon.ico' | prepend: site.base }}">
-  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | prepend: site.base }}">
+  <link rel="icon" href="{{ amsf_favicon }}">
+  <link rel="apple-touch-icon" href="{{ amsf_apple_touch_icon }}">
 {% endif %}
 
 <!-- Pinned icon for Safari -->
-<link rel="mask-icon" href="{{ '/favicon.svg' | prepend: site.base }}" color="{{ site.primary_color }}">
+<link rel="mask-icon" href="{{ amsf_favicon_svg }}" color="{{ site.primary_color }}">
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="{{ '/css/app.css?assets-inline' | prepend: amsf_theme_assets }}">
@@ -30,7 +30,7 @@
 <link rel="canonical" href="{{ amsf_page_url }}">
 
 <!-- DNS prefetching for static files -->
-{% if page.permalink == '/' %}<link rel="dns-prefetch" href="{{ site.file }}">{% endif %}
+{% if page.permalink == "/" %}<link rel="dns-prefetch" href="{{ site.file }}">{% endif %}
 
 <!-- browser-sync, don't remove this -->
 <!-- BS_INSERT -->
