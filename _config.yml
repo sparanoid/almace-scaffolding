@@ -61,6 +61,7 @@ redcarpet:
 
 gems:
   - jekyll-last-modified-at
+  - match_regex
 
 #
 # Almace Scaffolding settings
