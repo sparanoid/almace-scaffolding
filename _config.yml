@@ -102,6 +102,9 @@ url:            https://sparanoid.com
 # Media assets URL used in posts, without trailing slash. ie.
 # `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be
 # powered by a CDN provider
+# Note: you should avoid protocol-free (ie. //cdn.mysite.tld) address here
+# because Twitter Cards doesn't work well with protocol-free assets when AMSF
+# grabs the first image of your post as post featured image.
 file:           https://d349cztnlupsuf.cloudfront.net
 
 # Download files URL used in posts, ie. href="{{ site.download }}/package.zip",
