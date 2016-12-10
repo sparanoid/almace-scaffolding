@@ -201,17 +201,22 @@
   Page thumbnail
   TODO: https://regex101.com/r/N2hoxV/1
 {% endcomment %}
+{% assign amsf_site_logo = "/logo.png" | prepend: amsf_site_base %}
 {% capture amsf_post_first_image %}
   {% assign hero_image = page.content | match_regex: '<img .*?src="([^"]+)"' %}
   {% if hero_image == nil %}
-    {% assign hero_image = "/logo.png" | prepend: amsf_site_base %}
+    {% assign hero_image = amsf_site_logo %}
   {% endif %}
   {{ hero_image }}
 {% endcapture %}
 
 {% capture amsf_page_thumb %}
-  {% if page.thumb %}
-    {{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}
+  {% if page.thumb_force_logo %}
+    {{ amsf_site_logo }}
+  {% elsif page.thumb %}
+    {{ site.file }}/thumb/{{ page.thumb }}
+  {% elsif page.thumb_url %}
+    {{ page.thumb_url }}
   {% else %}
     {{ amsf_post_first_image }}
   {% endif %}
