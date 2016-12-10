@@ -11,6 +11,7 @@ tags: getting-started
 - Theme specific variables can be found at `./_app/_data/theme-name.yml`.
 - Additional variables are stored in [`./_app/_data/`](https://github.com/sparanoid/almace-scaffolding/blob/master/_app/_data) directory. They can be accessed by Jekyll. ([More info](http://jekyllrb.com/docs/datafiles/))
 - You should also change `favicon.*` and `apple-touch-icon.png` to yours.
+- `logo.png` is mainly used by Open Graph and Twitter Cards when there's no featured image in a post, you should also design your own.
 - More customization please refer to theme specific documentation
 
 ## Tips
