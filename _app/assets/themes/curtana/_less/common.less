@@ -90,6 +90,14 @@ body:hover .latest {
 
   a {
     font-weight: bold;
+
+    // TODO: Fixes wrong underline color for inline `code` within `a` links.
+    // However no browser supports this feature at the time of writing.
+    // More info: http://caniuse.com/#feat=css-has
+    // Date: Dec 10, 2016, 5:59 PM
+    &:has(>code) {
+      color: @code-color;
+    }
   }
 
   p {
