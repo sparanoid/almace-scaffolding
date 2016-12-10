@@ -205,6 +205,7 @@ body:hover .latest {
         line-height: (@line-height * 1.2 / .8);
         text-align: right;
         opacity: .6;
+        pointer-events: none;
       }
 
       > ul,
@@ -224,6 +225,30 @@ body:hover .latest {
     counter-increment: list;
     content: counter(list) ".";
     padding-right: .3em;
+  }
+
+  dl {
+    line-height: (@line-height * 1.2);
+
+    @media (max-width: @breakpoint-sm) {
+      margin-left: 1em;
+    }
+
+    dt {
+
+      &:before {
+        position: absolute;
+        width: 1em;
+        margin-left: -1em;
+        content: "-";
+        opacity: .6;
+        pointer-events: none;
+      }
+    }
+
+    dd {
+      margin-bottom: 1.8rem;
+    }
   }
 
   img,
