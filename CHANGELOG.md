@@ -1,3 +1,17 @@
+<a name="1.0.8"></a>
+## [1.0.8](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.7...v1.0.8) (2016-12-12)
+
+
+### Features
+
+* simplify push arg ([616ce2a](https://github.com/sparanoid/almace-scaffolding/commit/616ce2a))
+* **amsf:** `thumb_force_logo` to force using site logo regardless first image of a post ([dec56bc](https://github.com/sparanoid/almace-scaffolding/commit/dec56bc))
+* **curtana:** add description list styles ([27feb67](https://github.com/sparanoid/almace-scaffolding/commit/27feb67))
+* **grunt:** support ignore js generated styles via `grunt-uncss-inline` ([ccf4428](https://github.com/sparanoid/almace-scaffolding/commit/ccf4428))
+* **post:** update “Configuration” list ([e1072b8](https://github.com/sparanoid/almace-scaffolding/commit/e1072b8))
+
+
+
 <a name="1.0.7"></a>
 ## [1.0.7](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.6...v1.0.7) (2016-11-29)
 
