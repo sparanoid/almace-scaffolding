@@ -9,7 +9,7 @@ sitemap: false
 
 This is an Curtana theme example About page.
 
-Sparanoid is a one-man design studio operated by Sparanoid, currently located in China. You can ping me on [Twitter](http://twitter.com/sparanoid) or send correspondence to [t@sparanoid.com](mailto:t@sparanoid.com).
+Sparanoid is a design studio operated by Sparanoid. You can ping me on [Twitter](http://twitter.com/sparanoid) or send correspondence to [t@sparanoid.com](mailto:t@sparanoid.com).
 
 ## Colophon
 
@@ -18,4 +18,4 @@ Sparanoid is a one-man design studio operated by Sparanoid, currently located in
 [CloudFront](http://aws.amazon.com/cloudfront/) -
 [Textmate](http://macromates.com/)
 
-All posts are &copy; Sparanoid, all rights reserved. The views expressed on this site are mine alone and not those of my employers and clients, past and present.
+All posts are &copy; Sparanoid, Inc., all rights reserved.
