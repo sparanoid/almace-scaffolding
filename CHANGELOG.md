@@ -1,3 +1,18 @@
+<a name="1.0.9"></a>
+## [1.0.9](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.8...v1.0.9) (2016-12-29)
+
+
+### Features
+
+* **amsf:** update site title separator ([419f5cd](https://github.com/sparanoid/almace-scaffolding/commit/419f5cd))
+* **curtana:** more specific decoration color ([4c6f164](https://github.com/sparanoid/almace-scaffolding/commit/4c6f164))
+* **curtana:** smaller inline codes to match general text ([d53d715](https://github.com/sparanoid/almace-scaffolding/commit/d53d715))
+* **curtana:** visual align tweak for list decorations ([4c3db6b](https://github.com/sparanoid/almace-scaffolding/commit/4c3db6b))
+* **theme:** smaller header for small screens ([ccbb1f2](https://github.com/sparanoid/almace-scaffolding/commit/ccbb1f2))
+* **theme:** update Lightense Images ([9cdf6d1](https://github.com/sparanoid/almace-scaffolding/commit/9cdf6d1))
+
+
+
 <a name="1.0.8"></a>
 ## [1.0.8](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.7...v1.0.8) (2016-12-12)
 
