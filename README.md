@@ -24,4 +24,4 @@ Wanna buy me a cup of coffee? [Great](http://sparanoid.com/donate/).
 
 All files and directories are licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
 
-© Tunghsiao Liu. Rights reserved as indicated above.
+© Sparanoid, Inc., Rights reserved as indicated above.
