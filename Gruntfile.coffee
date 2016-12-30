@@ -12,8 +12,7 @@ module.exports = (grunt) ->
   # Track tasks load time
   require("time-grunt") grunt
 
-  # Get deploy target, run `$ grunt rsync --env=server01` to deploy to your
-  # `server01`, server info stored in `_deploy.yml`.
+  # Get deploy target, see `_deploy.yml` for more info
   deploy_env = grunt.option("env") or "default"
 
   # Project configurations
@@ -322,17 +321,21 @@ module.exports = (grunt) ->
       options:
         stdout: true
 
-      # Direct rsync compiled static files to remote server
+      # Sync compiled static files via `rsync`
       amsf__deploy__rsync:
         command: "rsync -avz -e 'ssh -p <%= config.deploy.rsync.#{deploy_env}.port %>' --delete --progress <%= config.deploy.rsync.#{deploy_env}.params %> <%= config.dist %>/ <%= config.deploy.rsync.#{deploy_env}.user %>@<%= config.deploy.rsync.#{deploy_env}.host %>:<%= config.deploy.rsync.#{deploy_env}.dest %> > deploy-rsync-#{deploy_env}.log"
 
+      # Sync compiled static files via `s3_website`
+      amsf__deploy__s3:
+        command: "s3_website push --site=<%= config.dist %>/ > deploy-s3-#{deploy_env}.log"
+
       # Copy compiled static files to local directory for further post-process
       amsf__deploy__sparanoid__copy_to_local:
-        command: "rsync -avz --delete --progress <%= config.deploy.rsync.#{deploy_env}.params %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.#{deploy_env}.dest %>/site/<%= config.base %> > deploy-s3_website-#{deploy_env}.log"
+        command: "rsync -avz --delete --progress <%= config.deploy.rsync.#{deploy_env}.params %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.sparanoid.#{deploy_env}.dest %>/site/<%= config.base %> > deploy-sparanoid-#{deploy_env}.log"
 
       # Auto commit untracked files sync'ed from sync_local
       amsf__deploy__sparanoid__auto_commit:
-        command: "bash <%= config.deploy.s3_website.#{deploy_env}.dest %>/auto-commit '<%= config.pkg.name %>'"
+        command: "bash <%= config.deploy.sparanoid.#{deploy_env}.dest %>/auto-commit '<%= config.pkg.name %>'"
 
       amsf__core__update_deps:
         command: [
@@ -705,6 +708,10 @@ module.exports = (grunt) ->
 
   grunt.registerTask "deploy-rsync", "Deploy to remote server via rsync",  [
     "shell:amsf__deploy__rsync"
+  ]
+
+  grunt.registerTask "deploy-s3", "Deploy to AWS S3",  [
+    "shell:amsf__deploy__s3"
   ]
 
   grunt.registerTask "deploy-sparanoid", "Deploy to remote server (for sparanoid.com)",  ->
