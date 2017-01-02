@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-desc: 關於・について・Introduction
+desc: 示例頁面・サンプルページ・Example Page
 ---
 
 This is an example About page.
