@@ -60,11 +60,65 @@
   {% endif %}
 {% endcapture %}
 
+<!-- Prepare for heading background -->
+{% capture amsf_page_heading_bg_image %}
+  {% assign protocal = page.heading-bg | match_regex: '^((?:https?:)?\/\/)' %}
+  {% if protocal == null %}
+    {% if page.heading-bg-local %}
+      background-image: url('{{ amsf_user_assets }}/{{ page.heading-bg }}');
+    {% else %}
+      background-image: url('{{ site.file }}/{{ page.heading-bg }}');
+    {% endif %}
+  {% else %}
+    background-image: url('{{ page.heading-bg }}');
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_color %}
+  {% if page.heading-bg-color %}
+    background-color: {{ page.heading-bg-color }};
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_size %}
+  {% if page.heading-bg-size %}
+    background-size: {{ page.heading-bg-size }};
+  {% else %}
+    background-size: cover;
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_position %}
+  {% if page.heading-bg-position %}
+    background-position: {{ page.heading-bg-position }};
+  {% else %}
+    background-position: center center;
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_repeat %}
+  {% if page.heading-bg-position %}
+    background-repeat: {{ page.heading-bg-repeat }};
+  {% else %}
+    background-repeat: no-repeat;
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_text %}
+  {% if page.heading-bg-text %}
+    color: {{ page.heading-bg-text }};
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg %}
+  style="{{ amsf_page_heading_bg_image | strip }} {{ amsf_page_heading_bg_color | strip }} {{ amsf_page_heading_bg_size | strip }} {{ amsf_page_heading_bg_position | strip }} {{ amsf_page_heading_bg_repeat | strip }} {{ amsf_page_heading_bg_text | strip }}"
+{% endcapture %}
+
 <!-- Article wrapper, limit width -->
 <article {{ amsf_page_lang }}>
 
   <!-- Post title -->
-  <header>
+  <header {{ amsf_page_heading_bg }}>
 
     <h1 class="{{ amsf_page_heading_class }}" title="{{ page.title | strip_html | xml_escape }}" data-title="{{ page.title | strip_html | xml_escape }}">
       {{ amsf_page_heading }}
