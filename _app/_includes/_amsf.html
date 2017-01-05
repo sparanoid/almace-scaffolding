@@ -211,6 +211,23 @@
   {{ hero_image }}
 {% endcapture %}
 
+{% comment %}
+  Page background image
+  Regex: https://regex101.com/r/AmwvYE/2
+{% endcomment %}
+{% capture amsf_page_heading_bg_image_src %}
+  {% assign protocal = page.heading-bg | match_regex: '^((?:https?:)?\/\/)' %}
+  {% if protocal == null %}
+    {% if page.heading-bg-local %}
+      {{ amsf_user_assets | prepend: amsf_site_base }}/{{ page.heading-bg }}
+    {% else %}
+      {{ site.file }}/{{ page.heading-bg }}
+    {% endif %}
+  {% else %}
+    {{ page.heading-bg }}
+  {% endif %}
+{% endcapture %}
+
 {% capture amsf_page_thumb %}
   {% if page.thumb_force_logo %}
     {{ amsf_site_logo }}
@@ -218,6 +235,8 @@
     {{ site.file }}/thumb/{{ page.thumb }}
   {% elsif page.thumb_url %}
     {{ page.thumb_url }}
+  {% elsif page.heading-bg %}
+    {{ amsf_page_heading_bg_image_src }}
   {% else %}
     {{ amsf_post_first_image }}
   {% endif %}
