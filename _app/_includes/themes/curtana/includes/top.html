@@ -15,14 +15,7 @@
 <link rel="alternate" href="{{ amsf_feed_url }}" type="application/atom+xml">
 
 <!-- Site icons -->
-{% if site.base != "" %}
-  <link rel="icon" href="{{ amsf_favicon }}">
-  <link rel="icon" href="{{ amsf_favicon_svg }}" sizes="any" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ amsf_apple_touch_icon }}">
-{% endif %}
-
-<!-- Pinned icon for Safari -->
-<link rel="mask-icon" href="{{ amsf_favicon_svg }}" color="{{ site.primary_color }}">
+{{ amsf_favicons }}
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="{{ '/css/app.css?assets-inline' | prepend: amsf_theme_assets }}">
