@@ -133,7 +133,7 @@ Output:
 
 ### `site.base`
 
-Base URL, this is useful when you need to build site in a subdirectory (like GitHub Pages for Projects), it provides a specific URL prefix, for example, if the production site URL is http://sparanoid.com/lab/amsf/, set `base` to `/lab/amsf`, without trailing slash. This make sure all the links are relative to current site root (in a subdirectory in this case), you should use this variable for **every** link appeared in your theme.
+Base URL, this is useful when you need to build site in a subdirectory (like GitHub Pages for Projects), it provides a specific URL prefix, for example, if the production site URL is https://sparanoid.com/lab/amsf/, set `base` to `/lab/amsf`, without trailing slash. This make sure all the links are relative to current site root (in a subdirectory in this case), you should use this variable for **every** link appeared in your theme.
 
 Config:
 

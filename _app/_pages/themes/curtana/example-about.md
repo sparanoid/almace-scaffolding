@@ -13,9 +13,9 @@ Sparanoid is a design studio operated by Tunghsiao Liu. You can ping me on [Twit
 
 ## Colophon
 
-[<abbr title="Almace Scaffolding">AMSF</abbr>](http://sparanoid.com/lab/amsf/) ([Source](http://github.com/sparanoid/sparanoid.com)) -
-[GitHub](http://github.com/) -
-[CloudFront](http://aws.amazon.com/cloudfront/) -
-[Textmate](http://macromates.com/)
+[<abbr title="Almace Scaffolding">AMSF</abbr>](https://sparanoid.com/lab/amsf/) ([Source](https://github.com/sparanoid/sparanoid.com)) -
+[GitHub](https://github.com/) -
+[CloudFront](https://aws.amazon.com/cloudfront/) -
+[Textmate](https://macromates.com/)
 
 All posts are &copy; Sparanoid, Inc., all rights reserved.

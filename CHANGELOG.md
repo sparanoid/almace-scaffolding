@@ -1075,7 +1075,7 @@ Note: the following changelog are inherited from [sparanoid/sparanoid.com](http:
 
 #### Breaking Changes
 
-* This release changes the way you push compiled files to remote servers. Now I changed my server from Linode VPS to Amazon S3 and CloudFront, I also changed my feed URL from /feed/ to /feed.xml since Amazon S3 doesn't support multiple Document Index. You can read more information from my [blog post](http://sparanoid.com/note/amazon-s3-cloudfront/).
+* This release changes the way you push compiled files to remote servers. Now I changed my server from Linode VPS to Amazon S3 and CloudFront, I also changed my feed URL from /feed/ to /feed.xml since Amazon S3 doesn't support multiple Document Index. You can read more information from my [blog post](https://sparanoid.com/note/amazon-s3-cloudfront/).
 
  ([6b31c70b](https://github.com/sparanoid/sparanoid.com/commit/6b31c70b))
 * Major template update, you should update all your template files if you need further updates.
@@ -2444,23 +2444,23 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/13/13-01.jpg)
-- [Screenshot #02](http://sparanoid.com/lab/version/13/13-02.jpg)
-- [Screenshot #03](http://sparanoid.com/lab/version/13/13-03.jpg)
-- [Screenshot #04](http://sparanoid.com/lab/version/13/13-04.jpg)
-- [Screenshot #05](http://sparanoid.com/lab/version/13/13-05.jpg)
-- [Screenshot #06](http://sparanoid.com/lab/version/13/13-06.jpg)
-- [Screenshot #07](http://sparanoid.com/lab/version/13/13-07.jpg)
-- [Screenshot #08](http://sparanoid.com/lab/version/13/13-08.jpg)
+- [Screenshot #01](https://sparanoid.com/lab/version/13/13-01.jpg)
+- [Screenshot #02](https://sparanoid.com/lab/version/13/13-02.jpg)
+- [Screenshot #03](https://sparanoid.com/lab/version/13/13-03.jpg)
+- [Screenshot #04](https://sparanoid.com/lab/version/13/13-04.jpg)
+- [Screenshot #05](https://sparanoid.com/lab/version/13/13-05.jpg)
+- [Screenshot #06](https://sparanoid.com/lab/version/13/13-06.jpg)
+- [Screenshot #07](https://sparanoid.com/lab/version/13/13-07.jpg)
+- [Screenshot #08](https://sparanoid.com/lab/version/13/13-08.jpg)
 
 ## 12 (2007 - 2008)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/12/12-01.jpg)
-- [Screenshot #02](http://sparanoid.com/lab/version/12/12-02.jpg)
-- [Screenshot #03](http://sparanoid.com/lab/version/12/12-03.jpg)
-- [Screenshot #04](http://sparanoid.com/lab/version/12/12-04.jpg)
+- [Screenshot #01](https://sparanoid.com/lab/version/12/12-01.jpg)
+- [Screenshot #02](https://sparanoid.com/lab/version/12/12-02.jpg)
+- [Screenshot #03](https://sparanoid.com/lab/version/12/12-03.jpg)
+- [Screenshot #04](https://sparanoid.com/lab/version/12/12-04.jpg)
 
 ## 11
 
@@ -2478,44 +2478,44 @@ Source code not available
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/08/08.png)
+- [Screenshot #01](https://sparanoid.com/lab/version/08/08.png)
 
 ## 07 (2007)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/07/07.png)
+- [Screenshot #01](https://sparanoid.com/lab/version/07/07.png)
 
 ## 06 (2007)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/06/06.jpg)
+- [Screenshot #01](https://sparanoid.com/lab/version/06/06.jpg)
 
 ## 05 (2006)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/05/05-01.jpg)
-- [Screenshot #02](http://sparanoid.com/lab/version/05/05-02.jpg)
+- [Screenshot #01](https://sparanoid.com/lab/version/05/05-01.jpg)
+- [Screenshot #02](https://sparanoid.com/lab/version/05/05-02.jpg)
 
 ## 04 (2006)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/04/04.jpg)
+- [Screenshot #01](https://sparanoid.com/lab/version/04/04.jpg)
 
 ## 03 (2006)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/03/03.png)
+- [Screenshot #01](https://sparanoid.com/lab/version/03/03.png)
 
 ## 02 (2005)
 
 Source code not available
 
-- [Screenshot #01](http://sparanoid.com/lab/version/02/02.jpg)
+- [Screenshot #01](https://sparanoid.com/lab/version/02/02.jpg)
 
 ## 01 (2005)
 
@@ -2523,21 +2523,21 @@ Source code not available
 
 - Initial release
 
-[head]:         http://sparanoid.com/
-[23.0.0]:       http://sparanoid.com/lab/version/23/
-[22.0.0]:       http://sparanoid.com/lab/version/22/
-[21-finale]:    http://sparanoid.com/lab/version/21-finale/
-[20.1-finale]:  http://sparanoid.com/lab/version/20.1-finale/
-[20.1]:         http://sparanoid.com/lab/version/20.1/
-[20]:           http://sparanoid.com/lab/version/20/
-[19.3-finale]:  http://sparanoid.com/lab/version/19.3-finale/
-[19.3]:         http://sparanoid.com/lab/version/19.3/
-[19.2]:         http://sparanoid.com/lab/version/19.2/
-[19.1]:         http://sparanoid.com/lab/version/19.1/
-[19]:           http://sparanoid.com/lab/version/19/
-[18-finale]:    http://sparanoid.com/lab/version/18-finale/
-[18]:           http://sparanoid.com/lab/version/18/
-[17]:           http://sparanoid.com/lab/version/17/
-[16]:           http://sparanoid.com/lab/version/16/
-[15]:           http://sparanoid.com/lab/version/15/
-[14]:           http://sparanoid.com/lab/version/14/
+[head]:         https://sparanoid.com/
+[23.0.0]:       https://sparanoid.com/lab/version/23/
+[22.0.0]:       https://sparanoid.com/lab/version/22/
+[21-finale]:    https://sparanoid.com/lab/version/21-finale/
+[20.1-finale]:  https://sparanoid.com/lab/version/20.1-finale/
+[20.1]:         https://sparanoid.com/lab/version/20.1/
+[20]:           https://sparanoid.com/lab/version/20/
+[19.3-finale]:  https://sparanoid.com/lab/version/19.3-finale/
+[19.3]:         https://sparanoid.com/lab/version/19.3/
+[19.2]:         https://sparanoid.com/lab/version/19.2/
+[19.1]:         https://sparanoid.com/lab/version/19.1/
+[19]:           https://sparanoid.com/lab/version/19/
+[18-finale]:    https://sparanoid.com/lab/version/18-finale/
+[18]:           https://sparanoid.com/lab/version/18/
+[17]:           https://sparanoid.com/lab/version/17/
+[16]:           https://sparanoid.com/lab/version/16/
+[15]:           https://sparanoid.com/lab/version/15/
+[14]:           https://sparanoid.com/lab/version/14/

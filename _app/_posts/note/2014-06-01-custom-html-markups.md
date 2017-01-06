@@ -62,7 +62,7 @@ A simple browser frame using pure CSS.
 
 ```html
 <p class="browser">
-  <img src="http://sparanoid.com/photo.jpg" alt="Image">
+  <img src="https://sparanoid.com/photo.jpg" alt="Image">
 </p>
 ```
 
@@ -87,14 +87,14 @@ plugin: lightense
 Markdown markup:
 
 ```markdown
-![Image](http://sparanoid.com/photo.jpg)
+![Image](https://sparanoid.com/photo.jpg)
 ```
 
 Or simply use HTML:
 
 ```html
 <p>
-  <img src="http://sparanoid.com/photo.jpg" alt="Image">
+  <img src="https://sparanoid.com/photo.jpg" alt="Image">
 </p>
 ```
 
@@ -102,7 +102,7 @@ Lightense Images is activated globally by default, if you want to disable this e
 
 ```html
 <p>
-  <img src="http://sparanoid.com/photo.jpg" class="no-lightense" alt="Image">
+  <img src="https://sparanoid.com/photo.jpg" class="no-lightense" alt="Image">
 </p>
 ```
 
