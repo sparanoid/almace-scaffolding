@@ -1,3 +1,34 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.9...v1.1.0) (2017-01-06)
+
+
+### Bug Fixes
+
+* **config:** wrong comment ([89f36b3](https://github.com/sparanoid/almace-scaffolding/commit/89f36b3))
+* **curtanta:** wrong style define for external indicator in post list ([dc9831c](https://github.com/sparanoid/almace-scaffolding/commit/dc9831c))
+* **post:** syntax highlight causes codes unreadable on custom color scheme ([c5c71f2](https://github.com/sparanoid/almace-scaffolding/commit/c5c71f2))
+* **template:** wrong Open Graph image URL ([a12bc15](https://github.com/sparanoid/almace-scaffolding/commit/a12bc15))
+
+
+### Features
+
+* **curtana:** better list item link color ([2868761](https://github.com/sparanoid/almace-scaffolding/commit/2868761))
+* **curtana:** heading background customization support (finally) ([753e4c1](https://github.com/sparanoid/almace-scaffolding/commit/753e4c1))
+* **curtana:** remove custom `::selection` styles ([1a3d468](https://github.com/sparanoid/almace-scaffolding/commit/1a3d468))
+* **grunt:** basic `s3_website` support ([06df93c](https://github.com/sparanoid/almace-scaffolding/commit/06df93c))
+* **post:** more info for “Jekyll Theme Compatibility” ([a072542](https://github.com/sparanoid/almace-scaffolding/commit/a072542))
+* **post:** new post “Open Graph” ([9e64bc6](https://github.com/sparanoid/almace-scaffolding/commit/9e64bc6))
+* **post:** update heading background ([0c99a0a](https://github.com/sparanoid/almace-scaffolding/commit/0c99a0a))
+* **template:** refactor thumbnail support ([92cbd7b](https://github.com/sparanoid/almace-scaffolding/commit/92cbd7b))
+* **template:** simplify thumbnail logic ([bb811b0](https://github.com/sparanoid/almace-scaffolding/commit/bb811b0))
+
+
+### BREAKING CHANGES
+
+* template: In this update the `svg-headline*` and `img-headline*` are deprecated and no longer available. You should use the new syntax `heading-img` for this feature, more info available on our project site.
+
+
+
 <a name="1.0.9"></a>
 ## [1.0.9](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.8...v1.0.9) (2016-12-29)
 
