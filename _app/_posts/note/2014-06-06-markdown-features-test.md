@@ -58,7 +58,7 @@ foo_bar_baz
 
 ## Auto-link
 
-http://sparanoid.com/
+https://sparanoid.com/
 
 ## Strikethroughs
 
