@@ -5,7 +5,7 @@ category: note
 tags: curtana
 heading-bg: img/heading-background-example.jpg
 heading-bg-local: true
-heading-bg-color: "#8141b1"
+heading-bg-color: "#070708"
 heading-bg-size: "cover"
 heading-bg-repeat: "no-repeat"
 heading-bg-text: "#fff"
