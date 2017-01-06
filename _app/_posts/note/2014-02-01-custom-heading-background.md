@@ -7,15 +7,17 @@ heading-bg: img/heading-background-example.jpg
 heading-bg-local: true
 heading-bg-color: "#8141b1"
 heading-bg-size: "cover"
-heading-bg-position: "center bottom"
 heading-bg-repeat: "no-repeat"
 heading-bg-text: "#fff"
 ---
 
 This is an example of custom heading background. You can simply add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
 
+> Heading image copyright info:  
+> &copy; 士郎正宗・Production I.G／講談社・「攻殻機動隊」製作委員会
+
 ```yaml
-heading-bg: img/heading-background-tile.jpg
+heading-bg: img/heading-background.jpg
 heading-bg-local: true
 heading-bg-color: "#8141b1"
 heading-bg-size: "100px 100px"
