@@ -2,6 +2,40 @@
 {{ amsf_page_css }}
 
 <!-- Prepare for image headers -->
+{% capture amsf_page_heading_img %}
+  {% assign protocal = page.heading-img | match_regex: '^((?:https?:)?\/\/)' %}
+  {% if protocal == null %}
+    {% if page.heading-img-local %}
+      <img
+        src="{{ amsf_user_assets }}/{{ page.heading-img }}"
+        {% if page.heading-img-width %}
+          style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+        {% else %}
+          style="width: 50vw;"
+        {% endif %}
+      >
+    {% else %}
+      <img
+        src="{{ site.file }}/{{ page.heading-img }}"
+        {% if page.heading-img-width %}
+          style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+        {% else %}
+          style="width: 50vw;"
+        {% endif %}
+      >
+    {% endif %}
+  {% else %}
+    <img
+      src="{{ page.heading-img }}"
+      {% if page.heading-img-width %}
+        style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+      {% else %}
+        style="width: 50vw;"
+      {% endif %}
+    >
+  {% endif %}
+{% endcapture %}
+
 {% capture amsf_page_heading_type_img %}
   <img
     src="{{ site.file }}/{{ page.img-headline }}"
@@ -27,19 +61,16 @@
 {% endcapture %}
 
 {% capture amsf_page_heading_text %}
-  {% if page.img-headline %}
+  {% if page.heading-img %}
     {{ page.title }}
-    {{ amsf_page_heading_type_img }}
-  {% elsif page.svg-headline %}
-    {{ page.title }}
-    {{ amsf_page_heading_type_svg }}
+    {{ amsf_page_heading_img }}
   {% else %}
     {{ page.title }}<span class="dot dot--post"> </span>
   {% endif %}
 {% endcapture %}
 
 {% capture amsf_page_heading_class %}
-  {% if page.img-headline or page.svg-headline %}
+  {% if page.heading-img %}
     image-title
   {% endif %}
 {% endcapture %}
@@ -62,15 +93,17 @@
 
 <!-- Prepare for heading background -->
 {% capture amsf_page_heading_bg_image %}
-  {% assign protocal = page.heading-bg | match_regex: '^((?:https?:)?\/\/)' %}
-  {% if protocal == null %}
-    {% if page.heading-bg-local %}
-      background-image: url('{{ amsf_user_assets }}/{{ page.heading-bg }}');
+  {% if page.heading-bg %}
+    {% assign protocal = page.heading-bg | match_regex: '^((?:https?:)?\/\/)' %}
+    {% if protocal == null %}
+      {% if page.heading-bg-local %}
+        background-image: url('{{ amsf_user_assets }}/{{ page.heading-bg }}');
+      {% else %}
+        background-image: url('{{ site.file }}/{{ page.heading-bg }}');
+      {% endif %}
     {% else %}
-      background-image: url('{{ site.file }}/{{ page.heading-bg }}');
+      background-image: url('{{ page.heading-bg }}');
     {% endif %}
-  {% else %}
-    background-image: url('{{ page.heading-bg }}');
   {% endif %}
 {% endcapture %}
 
@@ -81,26 +114,32 @@
 {% endcapture %}
 
 {% capture amsf_page_heading_bg_size %}
-  {% if page.heading-bg-size %}
-    background-size: {{ page.heading-bg-size }};
-  {% else %}
-    background-size: cover;
+  {% if page.heading-bg %}
+    {% if page.heading-bg-size %}
+      background-size: {{ page.heading-bg-size }};
+    {% else %}
+      background-size: cover;
+    {% endif %}
   {% endif %}
 {% endcapture %}
 
 {% capture amsf_page_heading_bg_position %}
-  {% if page.heading-bg-position %}
-    background-position: {{ page.heading-bg-position }};
-  {% else %}
-    background-position: center center;
+  {% if page.heading-bg %}
+    {% if page.heading-bg-position %}
+      background-position: {{ page.heading-bg-position }};
+    {% else %}
+      background-position: center center;
+    {% endif %}
   {% endif %}
 {% endcapture %}
 
 {% capture amsf_page_heading_bg_repeat %}
-  {% if page.heading-bg-position %}
-    background-repeat: {{ page.heading-bg-repeat }};
-  {% else %}
-    background-repeat: no-repeat;
+  {% if page.heading-bg %}
+    {% if page.heading-bg-position %}
+      background-repeat: {{ page.heading-bg-repeat }};
+    {% else %}
+      background-repeat: no-repeat;
+    {% endif %}
   {% endif %}
 {% endcapture %}
 
