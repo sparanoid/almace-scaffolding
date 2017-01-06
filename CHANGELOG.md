@@ -1,3 +1,18 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.0...v1.1.1) (2017-01-06)
+
+
+### Bug Fixes
+
+* **posts:** wrong post linking ([1d9463c](https://github.com/sparanoid/almace-scaffolding/commit/1d9463c))
+
+
+### Features
+
+* **template:** smarter way to handle favicons ([48b4b22](https://github.com/sparanoid/almace-scaffolding/commit/48b4b22))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.9...v1.1.0) (2017-01-06)
 
