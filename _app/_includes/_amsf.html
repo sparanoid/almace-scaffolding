@@ -199,11 +199,11 @@
 {% endcapture %}
 
 {% comment %}
-  Page thumbnail
+  First image in post
   TODO: https://regex101.com/r/N2hoxV/1
 {% endcomment %}
 {% assign amsf_site_logo = "/logo.png" | prepend: amsf_site_base %}
-{% capture amsf_post_first_image %}
+{% capture amsf_page_first_image %}
   {% assign hero_image = page.content | match_regex: '<img .*?src="([^"]+)"' %}
   {% if hero_image == nil %}
     {% assign hero_image = amsf_site_logo %}
@@ -228,17 +228,32 @@
   {% endif %}
 {% endcapture %}
 
-{% capture amsf_page_thumb %}
+{% comment %}
+  Page thumbnail
+  Regex: https://regex101.com/r/AmwvYE/2
+{% endcomment %}
+{% capture amsf_page_thumbnail_src %}
+  {% assign protocal = page.thumbnail | match_regex: '^((?:https?:)?\/\/)' %}
+  {% if protocal == null %}
+    {% if page.thumbnail-local %}
+      {{ amsf_user_assets | prepend: amsf_site_base }}/{{ page.thumbnail }}
+    {% else %}
+      {{ site.file }}/{{ page.thumbnail }}
+    {% endif %}
+  {% else %}
+    {{ page.thumbnail }}
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_thumbnail %}
   {% if page.thumb_force_logo %}
     {{ amsf_site_logo }}
-  {% elsif page.thumb %}
-    {{ site.file }}/thumb/{{ page.thumb }}
-  {% elsif page.thumb_url %}
-    {{ page.thumb_url }}
+  {% elsif page.thumbnail %}
+    {{ amsf_page_thumbnail_src }}
   {% elsif page.heading-bg %}
     {{ amsf_page_heading_bg_image_src }}
   {% else %}
-    {{ amsf_post_first_image }}
+    {{ amsf_page_first_image }}
   {% endif %}
 {% endcapture %}
 
