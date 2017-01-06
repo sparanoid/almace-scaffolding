@@ -9,7 +9,7 @@
 default:
   name:         Sparanoid
   email:        t@sparanoid.com
-  web:          http://sparanoid.com/
+  web:          https://sparanoid.com/
   twitter:      sparanoid
 
 tester:
