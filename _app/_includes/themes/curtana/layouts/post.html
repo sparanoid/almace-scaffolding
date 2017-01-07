@@ -36,30 +36,6 @@
   {% endif %}
 {% endcapture %}
 
-{% capture amsf_page_heading_type_img %}
-  <img
-    src="{{ site.file }}/{{ page.img-headline }}"
-    alt="{{ page.title | strip_html | xml_escape }}"
-    {% if page.img-headline-width %}
-      style="width: {{ page.img-headline-width | times: 0.1 }}vw;"
-    {% else %}
-      style="width: 50vw;"
-    {% endif %}
-  >
-{% endcapture %}
-
-<!-- Prepare for SVG header -->
-{% capture amsf_page_heading_type_svg %}
-  <img
-    src="{{ amsf_user_assets }}/{{ page.svg-headline }}"
-    {% if page.svg-headline-width %}
-      style="width: {{ page.svg-headline-width | times: 0.1 }}vw;"
-    {% else %}
-      style="width: 50vw;"
-    {% endif %}
-  >
-{% endcapture %}
-
 {% capture amsf_page_heading_text %}
   {% if page.heading-img %}
     {{ page.title }}
