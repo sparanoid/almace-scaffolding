@@ -2,12 +2,19 @@
 {{ amsf_page_css }}
 
 <!-- Article wrapper, limit width -->
-<article>
+<article {{ amsf_page_lang }}>
 
   <!-- Page title -->
-  <header>
-    <h1 data-text="{{ page.title | strip_html | xml_escape }}">{{ page.title }}</h1>
-    {% if page.desc %}<small>{{ page.desc }}</small>{% endif %}
+  <header {{ amsf_page_heading_bg }}>
+
+    <h1 class="{{ amsf_page_heading_class }}" title="{{ page.title | strip_html | xml_escape }}" data-title="{{ page.title | strip_html | xml_escape }}">
+      {{ amsf_page_heading }}
+    </h1>
+
+    {% if page.desc %}
+      <small>{{ page.desc }}</small>
+    {% endif %}
+
   </header>
 
   <!-- Page content -->
