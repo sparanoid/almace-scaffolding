@@ -59,6 +59,10 @@
 
 {% comment %}
   Favicons
+
+  Check `static_file` and output favicon markup
+
+  @since 1.1.0
 {% endcomment %}
 {% capture amsf_favicon %}{{ '/favicon.ico' | prepend: site.base }}{% endcapture %}
 {% capture amsf_favicon_png %}{{ '/favicon.png' | prepend: site.base }}{% endcapture %}
@@ -89,7 +93,6 @@
     {% endif %}
   {% endfor %}
 {% endcapture %}
-
 
 {% comment %}
   Feed URL
@@ -126,11 +129,13 @@
 {% endcapture %}
 
 {% comment %}
-  Page words and reading time
+  Page words
+
+  Calculate total words in a post
+
+  @since 0.0.49
 {% endcomment %}
 {% assign amsf_page_words_raw = page.content | number_of_words %}
-{% assign amsf_page_reading_time_raw = amsf_page_words_raw | divided_by: 200 %}
-
 {% capture amsf_page_words %}
   {% if amsf_page_words_raw == 0 %}
     No word
@@ -141,6 +146,14 @@
   {% endif %}
 {% endcapture %}
 
+{% comment %}
+  Reading time
+
+  Calculate Reading time in a post based on page words
+
+  @since 0.0.49
+{% endcomment %}
+{% assign amsf_page_reading_time_raw = amsf_page_words_raw | divided_by: 200 %}
 {% capture amsf_page_reading_time %}
   {% if amsf_page_reading_time_raw == 0 %}
     Less than 1 min
@@ -226,8 +239,14 @@
 {% endcapture %}
 
 {% comment %}
-  First image in post
-  TODO: https://regex101.com/r/N2hoxV/1
+  Thumbnails
+
+  Generate page thumbnail for Open Graph and Twitter Cards
+  Regex:
+    - Match first `img` tag in post: https://regex101.com/r/N2hoxV/1
+    - Match filename protocol:  https://regex101.com/r/AmwvYE/2
+
+  @since 1.1.0
 {% endcomment %}
 {% assign amsf_site_logo = "/logo.png" | prepend: amsf_site_base %}
 {% capture amsf_page_first_image %}
@@ -238,27 +257,6 @@
   {{ hero_image }}
 {% endcapture %}
 
-{% comment %}
-  Page background image
-  Regex: https://regex101.com/r/AmwvYE/2
-{% endcomment %}
-{% capture amsf_page_heading_bg_image_src %}
-  {% assign protocal = page.heading-bg | match_regex: '^((?:https?:)?\/\/)' %}
-  {% if protocal == null %}
-    {% if page.heading-bg-local %}
-      {{ amsf_user_assets | prepend: site.url }}/{{ page.heading-bg }}
-    {% else %}
-      {{ site.file }}/{{ page.heading-bg }}
-    {% endif %}
-  {% else %}
-    {{ page.heading-bg }}
-  {% endif %}
-{% endcapture %}
-
-{% comment %}
-  Page thumbnail
-  Regex: https://regex101.com/r/AmwvYE/2
-{% endcomment %}
 {% capture amsf_page_thumbnail_src %}
   {% assign protocal = page.thumbnail | match_regex: '^((?:https?:)?\/\/)' %}
   {% if protocal == null %}
@@ -272,6 +270,19 @@
   {% endif %}
 {% endcapture %}
 
+{% capture amsf_page_heading_bg_image_src %}
+  {% assign protocal = page.heading-bg | match_regex: '^((?:https?:)?\/\/)' %}
+  {% if protocal == null %}
+    {% if page.heading-bg-local %}
+      {{ amsf_user_assets | prepend: site.url }}/{{ page.heading-bg }}
+    {% else %}
+      {{ site.file }}/{{ page.heading-bg }}
+    {% endif %}
+  {% else %}
+    {{ page.heading-bg }}
+  {% endif %}
+{% endcapture %}
+
 {% capture amsf_page_thumbnail %}
   {% if page.thumb_force_logo %}
     {{ amsf_site_logo }}
@@ -282,6 +293,146 @@
   {% else %}
     {{ amsf_page_first_image }}
   {% endif %}
+{% endcapture %}
+
+{% comment %}
+  Heading image
+
+  Check front-matter fileds and generate custom heading image styles
+
+  @since 1.1.0
+{% endcomment %}
+{% capture amsf_page_heading_img %}
+  {% assign protocal = page.heading-img | match_regex: '^((?:https?:)?\/\/)' %}
+  {% if protocal == null %}
+    {% if page.heading-img-local %}
+      <img
+        src="{{ amsf_user_assets }}/{{ page.heading-img }}"
+        {% if page.heading-img-width %}
+          style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+        {% else %}
+          style="width: 50vw;"
+        {% endif %}
+      >
+    {% else %}
+      <img
+        src="{{ site.file }}/{{ page.heading-img }}"
+        {% if page.heading-img-width %}
+          style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+        {% else %}
+          style="width: 50vw;"
+        {% endif %}
+      >
+    {% endif %}
+  {% else %}
+    <img
+      src="{{ page.heading-img }}"
+      {% if page.heading-img-width %}
+        style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+      {% else %}
+        style="width: 50vw;"
+      {% endif %}
+    >
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_text %}
+  {% if page.heading-img %}
+    {{ page.title }}
+    {{ amsf_page_heading_img }}
+  {% else %}
+    {{ page.title }}<span class="dot dot--post"> </span>
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_class %}
+  {% if page.heading-img %}
+    image-title
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_external %}
+  {% if page.link %}
+    class=external
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading %}
+  {% if page.link %}
+    <a href="{{ page.link }}" class=external>
+      {{ amsf_page_heading_text }}
+    </a>
+  {% else %}
+    {{ amsf_page_heading_text }}
+  {% endif %}
+{% endcapture %}
+
+{% comment %}
+  Heading background
+
+  Check front-matter fileds and generate custom heading background styles
+
+  @since 1.1.0
+{% endcomment %}
+{% capture amsf_page_heading_bg_image %}
+  {% if page.heading-bg %}
+    {% assign protocal = page.heading-bg | match_regex: '^((?:https?:)?\/\/)' %}
+    {% if protocal == null %}
+      {% if page.heading-bg-local %}
+        background-image: url('{{ amsf_user_assets }}/{{ page.heading-bg }}');
+      {% else %}
+        background-image: url('{{ site.file }}/{{ page.heading-bg }}');
+      {% endif %}
+    {% else %}
+      background-image: url('{{ page.heading-bg }}');
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_color %}
+  {% if page.heading-bg-color %}
+    background-color: {{ page.heading-bg-color }};
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_size %}
+  {% if page.heading-bg %}
+    {% if page.heading-bg-size %}
+      background-size: {{ page.heading-bg-size }};
+    {% else %}
+      background-size: cover;
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_position %}
+  {% if page.heading-bg %}
+    {% if page.heading-bg-position %}
+      background-position: {{ page.heading-bg-position }};
+    {% else %}
+      background-position: center center;
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_repeat %}
+  {% if page.heading-bg %}
+    {% if page.heading-bg-position %}
+      background-repeat: {{ page.heading-bg-repeat }};
+    {% else %}
+      background-repeat: no-repeat;
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg_text %}
+  {% if page.heading-bg-text %}
+    color: {{ page.heading-bg-text }};
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_heading_bg %}
+  style="{{ amsf_page_heading_bg_image | strip }} {{ amsf_page_heading_bg_color | strip }} {{ amsf_page_heading_bg_size | strip }} {{ amsf_page_heading_bg_position | strip }} {{ amsf_page_heading_bg_repeat | strip }} {{ amsf_page_heading_bg_text | strip }}"
 {% endcapture %}
 
 {% comment %}
