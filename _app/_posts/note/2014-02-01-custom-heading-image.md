@@ -20,7 +20,7 @@ heading-img-width: 400
 `heading-img`
 : Heading image filename, if a relative URL (non-external URL) is provided, the file will be prefixed with `site.file`.
 
-`heading-bg-local`
+`heading-img-local`
 : To avoid relative URL prefixed by `site.file`, you can set this option to `true` to prefix it with `amsf_user_assets`, then you can store your images in `_app/assets/`.
 
 `heading-img-width`
