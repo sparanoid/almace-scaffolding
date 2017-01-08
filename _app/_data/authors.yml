@@ -15,5 +15,5 @@ default:
 tester:
   name:         Tester
   email:        test@test.com
-  web:          http://tester.com/
+  web:          https://example.com/
   twitter:      tester

@@ -185,6 +185,6 @@ Careful Skippy, you really aren’t as convincing as you think you are.
 
 ## Newsletters Signup Form
 
-<form action="http://email.sparanoid.com/t/j/s/uykhir/" method="post">
+<form action="//sparanoid.us2.list-manage.com/subscribe/post?u=eef500b1fe3fe595f03a27605&id=7bbabe95a9" method="post">
   <input name="cm-uykhir-uykhir" type="email" placeholder="Your Email" required>
 </form>
