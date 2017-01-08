@@ -28,4 +28,4 @@ If you'd like to keep all things under Git control, you can try the following fi
 └── README.md (your own readme)
 ```
 
-You can see this [live demo](http://github.com/amsf/amsf.github.io/) how to make them friends.
+You can see this [live demo](https://github.com/amsf/amsf.github.io/) how to make them friends.

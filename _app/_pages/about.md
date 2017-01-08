@@ -7,7 +7,7 @@ desc: 示例頁面・サンプルページ・Example Page
 
 This is an example About page.
 
-Sparanoid is a design studio operated by Sparanoid. You can ping me on [Twitter](http://twitter.com/sparanoid) or send correspondence to [t@sparanoid.com](mailto:t@sparanoid.com).
+Sparanoid is a design studio operated by Sparanoid. You can ping me on [Twitter](https://twitter.com/sparanoid) or send correspondence to [t@sparanoid.com](mailto:t@sparanoid.com).
 
 ## Colophon
 

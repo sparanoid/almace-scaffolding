@@ -17,8 +17,8 @@ Wanna buy me a cup of coffee? [Great](https://sparanoid.com/donate/).
 
 **Sparanoid**
 
-- Twitter: @[sparanoid](http://twitter.com/sparanoid)
-- GitHub: @[sparanoid](http://github.com/sparanoid)
+- Twitter: @[sparanoid](https://twitter.com/sparanoid)
+- GitHub: @[sparanoid](https://github.com/sparanoid)
 
 ## Licenses
 
