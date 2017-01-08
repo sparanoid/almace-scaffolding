@@ -33,7 +33,7 @@ You can create your own theme in AMSF, theme files are located in the following 
 
 The theme specific config `curtana.yml` should have the same filename as your theme name. It should contain theme specific variables and can also override AMSF built-in settings.
 
-More info about theme structure you can check out my default theme [Curtana](http://github.com/amsf/amsf-curtana).
+More info about theme structure you can check out my default theme [Curtana](https://github.com/amsf/amsf-curtana).
 
 You can also have multiple themes in your project, as many as you like. For example if you also have themes Bootstrap and Ghost installed, the file structure should be:
 
@@ -182,13 +182,13 @@ Site Twitter account handle.
 Template:
 
 ```html
-<a href="http://twitter.com/{{ '{{ site.twitter ' }}}}">Follow @{{ '{{ site.twitter ' }}}} on Twitter</a>
+<a href="https://twitter.com/{{ '{{ site.twitter ' }}}}">Follow @{{ '{{ site.twitter ' }}}} on Twitter</a>
 ```
 
 Output:
 
 ```html
-<a href="http://twitter.com/sparanoid">Follow @sparanoid on Twitter</a>
+<a href="https://twitter.com/sparanoid">Follow @sparanoid on Twitter</a>
 ```
 
 ### `site.force_utf_8`
@@ -376,4 +376,4 @@ $ grunt theme-save
 
 The activated theme will be saved to AMSF cache (`.amsf-cache/`) with correct file and directory structure, then you can upload your theme to GitHub.
 
-Still confusing? see my default theme [Curtana](http://github.com/amsf/amsf-curtana) for reference.
+Still confusing? see my default theme [Curtana](https://github.com/amsf/amsf-curtana) for reference.

@@ -17,8 +17,8 @@ Wanna buy me a cup of coffee? [Great](https://sparanoid.com/donate/).
 
 **Tunghsiao Liu**
 
-- Twitter: @[tunghsiao](http://twitter.com/tunghsiao)
-- GitHub: @[sparanoid](http://github.com/sparanoid)
+- Twitter: @[tunghsiao](https://twitter.com/tunghsiao)
+- GitHub: @[sparanoid](https://github.com/sparanoid)
 
 ## Licenses
 
