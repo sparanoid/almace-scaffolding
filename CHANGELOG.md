@@ -1,3 +1,16 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.1...v1.1.2) (2017-01-09)
+
+
+### Features
+
+* **post:** new post “Upgrade Guide: v1.1.0” ([9bd2ab1](https://github.com/sparanoid/almace-scaffolding/commit/9bd2ab1))
+* **posts:** docs minor tweaks ([b43002b](https://github.com/sparanoid/almace-scaffolding/commit/b43002b))
+* **template:** make custom heading image and background available for pages ([5951b7b](https://github.com/sparanoid/almace-scaffolding/commit/5951b7b))
+* **template:** no longer support `favicon.ico` ([fb6de93](https://github.com/sparanoid/almace-scaffolding/commit/fb6de93))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.0...v1.1.1) (2017-01-06)
 
