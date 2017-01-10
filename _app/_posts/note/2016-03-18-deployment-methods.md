@@ -16,5 +16,15 @@ Just about any traditional web hosting provider will let you upload files to the
 There's a `_deploy.yml` at the root of your AMSF project containing a basic `rsync` configurations. Change these configurations to yours and then run:
 
 ```bash
-$ grunt --deploy=rsync
+$ grunt deploy:rsync
 ```
+
+You can deploy it for specific environment, the following command will deploy your site to `beta` environment via `rsync` method you defined in `_deploy.yml`:
+
+```bash
+$ grunt deploy:rsync --env=beta
+```
+
+## Amazon S3 (s3_website)
+
+You can also deploy your site to Amazon S3 via [s3_website](https://github.com/laurilehmijoki/s3_website), see `s3_website.example.yml` for more info.
