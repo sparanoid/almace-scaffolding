@@ -348,13 +348,12 @@ body:hover .latest {
   pre {
     font-family: @fontstack-monospace;
     color: @code-color;
+    word-wrap: break-word;
   }
 
-  // Only apply word breaking rule for codes in paragraphs
   p code,
   li code {
     font-size: 92%;
-    word-break: break-all;
   }
 
   pre {
