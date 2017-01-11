@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Upgrade Guide: v1.1.0"
+title: "Upgrading Guide: v1.1.0"
 category: news
 ---
 
