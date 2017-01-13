@@ -304,7 +304,7 @@ module.exports = (grunt) ->
     cacheBust:
       options:
         algorithm: "md5"
-        assets: ["<%= amsf.user.assets %>/**/*"]
+        assets: ["**/*.css", "**/*.js"]
         baseDir: "<%= config.dist %>"
         deleteOriginals: true
         encoding: "utf8"
