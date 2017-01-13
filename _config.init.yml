@@ -121,7 +121,7 @@ primary_color:  '#ff00b4'
 # Service Worker Precache support
 # Service Worker does not work on HTTP
 # Default       true
-sw:             true
+service_worker: true
 
 # Google Analytics tracking code
 google_analytics:
