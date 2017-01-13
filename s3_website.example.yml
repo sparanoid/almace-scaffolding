@@ -8,7 +8,9 @@ site: .
 cache_control:
   "*.json":  no-cache, no-store
 max_age:
-  "*.xml":   15
+  "*/service-worker.js": 60
+  "*.html":  1800
+  "*.xml":   1800
   "*.css":   2592000
   "*.js":    2592000
   "*": 86400
