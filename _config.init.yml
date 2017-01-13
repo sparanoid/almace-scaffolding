@@ -118,6 +118,11 @@ download:       https://d1bmx7s6749k4k.cloudfront.net
 # Default       #ff00b4
 primary_color:  '#ff00b4'
 
+# Service Worker Precache support
+# Service Worker does not work on HTTP
+# Default       true
+sw:             true
+
 # Google Analytics tracking code
 google_analytics:
   enabled:      false
