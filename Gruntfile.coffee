@@ -119,12 +119,12 @@ module.exports = (grunt) ->
         ]
 
     uglify:
-      dist:
-        options:
-          report: "gzip"
-          compress:
-            drop_console: true
+      options:
+        report: "gzip"
+        compress:
+          drop_console: true
 
+      dist:
         files: [
           {
             expand: true
@@ -139,6 +139,9 @@ module.exports = (grunt) ->
             dest: "<%= amsf.theme.assets %>/js/"
           }
         ]
+
+      sw:
+        files: "<%= config.dist %><%= config.base %>/service-worker.js": [ "<%= config.dist %><%= config.base %>/service-worker.js" ]
 
     less:
       options:
@@ -713,7 +716,7 @@ module.exports = (grunt) ->
   grunt.registerTask "build", "Build site with jekyll", [
     "clean:main"
     "coffeelint"
-    "uglify"
+    "uglify:dist"
     "lesslint"
     "less:dist"
     "postcss:dist"
@@ -726,6 +729,7 @@ module.exports = (grunt) ->
     "cacheBust"
     "concurrent:dist"
     "sw_precache"
+    "uglify:sw"
     "cleanempty"
   ]
 
