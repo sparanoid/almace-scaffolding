@@ -83,14 +83,6 @@ module.exports = (grunt) ->
       gruntfile:
         src: ["Gruntfile.coffee"]
 
-    lesslint:
-      options:
-        csslint:
-          csslintrc: "<%= amsf.theme.assets %>/_less/.csslintrc"
-
-      test:
-        src: ["<%= amsf.theme.assets %>/_less/**/app*.less"]
-
     watch:
       options:
         spawn: false
@@ -720,7 +712,6 @@ module.exports = (grunt) ->
     "clean:main"
     "coffeelint"
     "uglify:dist"
-    "lesslint"
     "less:dist"
     "postcss:dist"
     "csscomb"
