@@ -36,8 +36,11 @@ module.exports = (grunt) ->
       handleFetch: handleFetch
       logger: grunt.log.writeln
       staticFileGlobs: [
-        rootDir + "/**/css/**.css"
+        rootDir + "/**/**.css"
         rootDir + "/**/**.html"
+        rootDir + "/**/**.jpg"
+        rootDir + "/**/**.png"
+        rootDir + "/**/**.svg"
         rootDir + "/**/img/**.*"
         rootDir + "/**/js/**.js"
       ]
