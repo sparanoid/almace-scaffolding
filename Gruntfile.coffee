@@ -1,7 +1,7 @@
 "use strict"
 
 path = require("path")
-swPrecache = require("sw-precache")
+sw_precache = require("sw-precache")
 
 module.exports = (grunt) ->
 
@@ -19,9 +19,20 @@ module.exports = (grunt) ->
   # Get deploy target, see `_deploy.yml` for more info
   deploy_env = grunt.option("env") or "default"
 
-  writeServiceWorkerFile = (cacheId, rootDir, destDir, handleFetch, callback) ->
+  baseConfig =
+    cfg: grunt.file.readYAML("_config.yml")
+    pkg: grunt.file.readJSON("package.json")
+    amsf: grunt.file.readYAML("_amsf.yml")
+    deploy: grunt.file.readYAML("_deploy.yml")
+    app: "<%= config.cfg.source %>"
+    dist: "<%= config.cfg.destination %>"
+    base: "<%= config.cfg.base %>"
+    banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
+
+  # TODO: Wrap it into a separate Grunt plugin?
+  writeServiceWorkerFile = (rootDir, handleFetch, callback) ->
     config =
-      cacheId: cacheId
+      cacheId: baseConfig.pkg.name
       handleFetch: handleFetch
       logger: grunt.log.writeln
       staticFileGlobs: [
@@ -32,20 +43,11 @@ module.exports = (grunt) ->
       ]
       stripPrefix: rootDir
       verbose: true
-    swPrecache.write path.join(destDir, "service-worker.js"), config, callback
+    sw_precache.write path.join(baseConfig.cfg.destination + baseConfig.cfg.base, "service-worker.js"), config, callback
 
   # Project configurations
   grunt.initConfig
-    config:
-      cfg: grunt.file.readYAML("_config.yml")
-      pkg: grunt.file.readJSON("package.json")
-      amsf: grunt.file.readYAML("_amsf.yml")
-      deploy: grunt.file.readYAML("_deploy.yml")
-      app: "<%= config.cfg.source %>"
-      dist: "<%= config.cfg.destination %>"
-      base: "<%= config.cfg.base %>"
-      banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
-
+    config: baseConfig
     amsf:
       base: ".amsf-cache"
       branch: grunt.option("branch") or "release"
@@ -60,12 +62,10 @@ module.exports = (grunt) ->
         new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
         new_url: grunt.option("url") or "<%= amsf.theme.current_url %>"
 
-    swPrecache:
-      dev:
+    sw_precache:
+      dist:
         handleFetch: true
-        cacheId: "<%= config.pkg.name %>"
         rootDir: "<%= config.dist %>"
-        destDir: "<%= config.dist %><%= config.base %>"
 
     coffeelint:
       options:
@@ -609,13 +609,11 @@ module.exports = (grunt) ->
         push: false
 
   # Custom tasks
-  grunt.registerMultiTask "swPrecache", ->
+  grunt.registerMultiTask "sw_precache", ->
     done = @async()
-    cacheId = @data.cacheId
-    rootDir = @data.rootDir
-    destDir = @data.destDir
     handleFetch = @data.handleFetch
-    writeServiceWorkerFile cacheId, rootDir, destDir, handleFetch, (error) ->
+    rootDir = @data.rootDir
+    writeServiceWorkerFile rootDir, handleFetch, (error) ->
       if error
         grunt.fail.warn error
       done()
@@ -727,7 +725,7 @@ module.exports = (grunt) ->
     "uncss_inline"
     "cacheBust"
     "concurrent:dist"
-    "swPrecache"
+    "sw_precache"
     "cleanempty"
   ]
 
