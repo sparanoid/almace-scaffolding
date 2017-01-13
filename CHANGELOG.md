@@ -1,3 +1,18 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.2...v1.1.3) (2017-01-13)
+
+
+### Features
+
+* init Service Worker support ([553e91a](https://github.com/sparanoid/almace-scaffolding/commit/553e91a))
+* **amsf:** make Service Worker system feature ([8da2494](https://github.com/sparanoid/almace-scaffolding/commit/8da2494))
+* **curtana:** less aggressive word breaking (wrapping) for codes ([8451012](https://github.com/sparanoid/almace-scaffolding/commit/8451012))
+* **grunt:** uglify `service-worker.js` ([a202fd9](https://github.com/sparanoid/almace-scaffolding/commit/a202fd9))
+* **post:** add testing guide for “Getting Started” ([6ea1fad](https://github.com/sparanoid/almace-scaffolding/commit/6ea1fad))
+* **post:** update content for “Deployment Methods” ([4933c42](https://github.com/sparanoid/almace-scaffolding/commit/4933c42))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.1...v1.1.2) (2017-01-09)
 
