@@ -27,6 +27,7 @@ module.exports = (grunt) ->
     app: "<%= config.cfg.source %>"
     dist: "<%= config.cfg.destination %>"
     base: "<%= config.cfg.base %>"
+    assets: "<%= config.cfg.assets %>"
     banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
 
   # TODO: Wrap it into a separate Grunt plugin?
@@ -56,7 +57,7 @@ module.exports = (grunt) ->
       branch: grunt.option("branch") or "release"
       core: "<%= amsf.base %>/core"
       user:
-        assets: "<%= config.app %>/assets"
+        assets: "<%= config.app %><%= config.assets %>"
       theme:
         branch: "master"
         assets: "<%= amsf.user.assets %>/themes/<%= amsf.theme.current %>"
@@ -262,7 +263,7 @@ module.exports = (grunt) ->
         inlineImg: false
         inlineSvg: true
         inlineSvgBase64: false
-        assetsUrlPrefix: "<%= config.base %>/assets/"
+        assetsUrlPrefix: "<%= config.base %><%= config.assets %>"
         deleteOriginals: true
 
       dist:
