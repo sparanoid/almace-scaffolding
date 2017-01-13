@@ -431,6 +431,23 @@
 {% endcapture %}
 
 {% comment %}
+  Service Worker
+{% endcomment %}
+{% capture amsf_service_worker %}
+  {% if site.service_worker == true and site.dev == false %}
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('{{ "/service-worker.js" | prepend: site.base }}').then(function (registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      }
+    </script>
+  {% endif %}
+{% endcapture %}
+
+{% comment %}
   Google Analytics tracking code
 {% endcomment %}
 {% capture amsf_google_analytics %}
