@@ -42,3 +42,23 @@ $ grunt amsf-update
 ```
 
 It checks the latest Almace Scaffolding build from GitHub and update core files automatically. Please keep in mind that if you changed some of the AMSF core files this action will **override** the changes you made. So it's recommended to keep your project under version control, you will be always be able to compare changes for Almace Scaffolding.
+
+## Using Beta Release
+
+By default, when you run `amsf-update` you will get updated files from `release` branch. However, I'm continuously working on Almace Scaffolding, so there may have testing branches you can try and give me feedback if you're interested. You can check the AMSF GitHub repository for available branches, and it's very easy to switch:
+
+```sh
+$ grunt amsf-update --branch=feat/service-worker
+```
+
+The branch `master` is the one which is always available to checkout and also has the latest changes:
+
+```sh
+$ grunt amsf-update --branch=master
+```
+
+If you messed up with the testing branch, don't worry, you can just run a normal update to revert them back:
+
+```sh
+$ grunt amsf-update
+```
