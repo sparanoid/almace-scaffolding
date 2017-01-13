@@ -1,4 +1,8 @@
 "use strict"
+
+path = require("path")
+swPrecache = require("sw-precache")
+
 module.exports = (grunt) ->
 
   # Load all grunt tasks
@@ -14,6 +18,21 @@ module.exports = (grunt) ->
 
   # Get deploy target, see `_deploy.yml` for more info
   deploy_env = grunt.option("env") or "default"
+
+  writeServiceWorkerFile = (cacheId, rootDir, destDir, handleFetch, callback) ->
+    config =
+      cacheId: cacheId
+      handleFetch: handleFetch
+      logger: grunt.log.writeln
+      staticFileGlobs: [
+        rootDir + "/**/css/**.css"
+        rootDir + "/**/**.html"
+        rootDir + "/**/img/**.*"
+        rootDir + "/**/js/**.js"
+      ]
+      stripPrefix: rootDir
+      verbose: true
+    swPrecache.write path.join(destDir, "service-worker.js"), config, callback
 
   # Project configurations
   grunt.initConfig
@@ -40,6 +59,13 @@ module.exports = (grunt) ->
         current_url: "<%= config.amsf.amsf_theme_url %>"
         new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
         new_url: grunt.option("url") or "<%= amsf.theme.current_url %>"
+
+    swPrecache:
+      dev:
+        handleFetch: true
+        cacheId: "<%= config.pkg.name %>"
+        rootDir: "<%= config.dist %>"
+        destDir: "<%= config.dist %><%= config.base %>"
 
     coffeelint:
       options:
@@ -583,6 +609,17 @@ module.exports = (grunt) ->
         push: false
 
   # Custom tasks
+  grunt.registerMultiTask "swPrecache", ->
+    done = @async()
+    cacheId = @data.cacheId
+    rootDir = @data.rootDir
+    destDir = @data.destDir
+    handleFetch = @data.handleFetch
+    writeServiceWorkerFile cacheId, rootDir, destDir, handleFetch, (error) ->
+      if error
+        grunt.fail.warn error
+      done()
+
   grunt.registerTask "amsf-func-mkdir", "Initialize AMSF working directory", ->
     grunt.file.mkdir '.amsf-cache'
 
@@ -690,6 +727,7 @@ module.exports = (grunt) ->
     "uncss_inline"
     "cacheBust"
     "concurrent:dist"
+    "swPrecache"
     "cleanempty"
   ]
 
