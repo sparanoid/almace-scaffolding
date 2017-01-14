@@ -1,8 +1,5 @@
 "use strict"
 
-path = require("path")
-sw_precache = require("sw-precache")
-
 module.exports = (grunt) ->
 
   # Load all grunt tasks
@@ -19,39 +16,19 @@ module.exports = (grunt) ->
   # Get deploy target, see `_deploy.yml` for more info
   deploy_env = grunt.option("env") or "default"
 
-  baseConfig =
-    cfg: grunt.file.readYAML("_config.yml")
-    pkg: grunt.file.readJSON("package.json")
-    amsf: grunt.file.readYAML("_amsf.yml")
-    deploy: grunt.file.readYAML("_deploy.yml")
-    app: "<%= config.cfg.source %>"
-    dist: "<%= config.cfg.destination %>"
-    base: "<%= config.cfg.base %>"
-    assets: "<%= config.cfg.assets %>"
-    banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
-
-  # TODO: Wrap it into a separate Grunt plugin?
-  writeServiceWorkerFile = (rootDir, handleFetch, callback) ->
-    config =
-      cacheId: baseConfig.pkg.name
-      handleFetch: handleFetch
-      logger: grunt.log.writeln
-      staticFileGlobs: [
-        rootDir + "/**/**.css"
-        rootDir + "/**/**.html"
-        rootDir + "/**/**.jpg"
-        rootDir + "/**/**.png"
-        rootDir + "/**/**.svg"
-        rootDir + "/**/img/**.*"
-        rootDir + "/**/js/**.js"
-      ]
-      stripPrefix: rootDir
-      verbose: true
-    sw_precache.write path.join(baseConfig.cfg.destination + baseConfig.cfg.base, "service-worker.js"), config, callback
-
   # Project configurations
   grunt.initConfig
-    config: baseConfig
+    config:
+      cfg: grunt.file.readYAML("_config.yml")
+      pkg: grunt.file.readJSON("package.json")
+      amsf: grunt.file.readYAML("_amsf.yml")
+      deploy: grunt.file.readYAML("_deploy.yml")
+      app: "<%= config.cfg.source %>"
+      dist: "<%= config.cfg.destination %>"
+      base: "<%= config.cfg.base %>"
+      assets: "<%= config.cfg.assets %>"
+      banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
+
     amsf:
       base: ".amsf-cache"
       branch: grunt.option("branch") or "release"
@@ -65,11 +42,6 @@ module.exports = (grunt) ->
         current_url: "<%= config.amsf.amsf_theme_url %>"
         new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
         new_url: grunt.option("url") or "<%= amsf.theme.current_url %>"
-
-    sw_precache:
-      dist:
-        handleFetch: true
-        rootDir: "<%= config.dist %>"
 
     coffeelint:
       options:
@@ -317,6 +289,18 @@ module.exports = (grunt) ->
           cwd: "<%= config.dist %>"
           src: "**/*.html"
         ]
+
+    service_worker:
+      dist:
+        options:
+          cacheId: "<%= config.pkg.name %>"
+          baseDir: "<%= config.dist %>"
+          workerDir: "<%= config.dist %><%= config.base %>"
+          staticFileGlobs: [
+            "**/*.{css,html,jpg,gif,png,svg}"
+            "**/img/**.*"
+            "**/js/**.js"
+          ]
 
     usebanner:
       options:
@@ -608,15 +592,6 @@ module.exports = (grunt) ->
         push: false
 
   # Custom tasks
-  grunt.registerMultiTask "sw_precache", ->
-    done = @async()
-    handleFetch = @data.handleFetch
-    rootDir = @data.rootDir
-    writeServiceWorkerFile rootDir, handleFetch, (error) ->
-      if error
-        grunt.fail.warn error
-      done()
-
   grunt.registerTask "amsf-func-mkdir", "Initialize AMSF working directory", ->
     grunt.file.mkdir '.amsf-cache'
 
@@ -723,7 +698,7 @@ module.exports = (grunt) ->
     "uncss_inline"
     "cacheBust"
     "concurrent:dist"
-    "sw_precache"
+    "service_worker"
     "uglify:sw"
     "cleanempty"
   ]
