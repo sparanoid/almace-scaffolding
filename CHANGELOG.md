@@ -1,3 +1,26 @@
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.3...v1.1.4) (2017-01-14)
+
+
+### Bug Fixes
+
+* **config:** wrong Service Worker init key ([4583fb9](https://github.com/sparanoid/almace-scaffolding/commit/4583fb9))
+* **curtana:** wrong word wrapping in `pre` codeblocks ([8962aac](https://github.com/sparanoid/almace-scaffolding/commit/8962aac))
+* **posts:** deprecated `sitemap` usage ([e41944d](https://github.com/sparanoid/almace-scaffolding/commit/e41944d))
+* **s3_website:** wrong cache value for `*service-worker.js` ([705a34b](https://github.com/sparanoid/almace-scaffolding/commit/705a34b))
+
+
+### Features
+
+* **grunt:** `cacheBust` only css and js ([70568ac](https://github.com/sparanoid/almace-scaffolding/commit/70568ac))
+* **grunt:** remove `lesslint` support ([3677115](https://github.com/sparanoid/almace-scaffolding/commit/3677115))
+* **grunt:** update Service Worker glob pattern ([18712f8](https://github.com/sparanoid/almace-scaffolding/commit/18712f8))
+* **grunt:** use `grunt-service-worker` ([3bc06f1](https://github.com/sparanoid/almace-scaffolding/commit/3bc06f1))
+* **package:** remove deprecated package ([8ae3700](https://github.com/sparanoid/almace-scaffolding/commit/8ae3700))
+* **post:** brand Service Worker in post “Welcome” ([2685690](https://github.com/sparanoid/almace-scaffolding/commit/2685690))
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.2...v1.1.3) (2017-01-13)
 
