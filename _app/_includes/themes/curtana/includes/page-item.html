@@ -1,52 +1,24 @@
 <!-- List snippets -->
+{% include _amsf.html type=post %}
+
+{% assign custom_scheme = post.scheme-text or
+                          post.scheme-hover or
+                          post.scheme-code or
+                          post.scheme-bg or
+                          post.scheme-link
+                          %}
 
 <!-- Dynamic link color based on post color scheme -->
 {% capture post_link_color %}
-  {% if post.scheme-list-color %}
-    {% if post.scheme-list-color == 'text' %}
-      style="color: {{ post.scheme-text }};"
-    {% elsif post.scheme-list-color == 'hover' %}
-      style="color: {{ post.scheme-hover }};"
-    {% elsif post.scheme-list-color == 'code' %}
-      style="color: {{ post.scheme-code }};"
-    {% elsif post.scheme-list-color == 'bg' %}
-      style="color: {{ post.scheme-bg }};"
-    {% else %}
-      style="color: {{ post.scheme-link }};"
-    {% endif %}
-  {% elsif post.scheme-bg %}
-    {% if post.scheme-bg-light %}
-      style="color: {{ post.scheme-link }};"
-    {% else %}
-      style="color: {{ post.scheme-bg }};"
-    {% endif %}
-  {% elsif post.scheme-link %}
-    style="color: {{ post.scheme-link }};"
+  {% if custom_scheme %}
+    style="color: {{ amsf_page_theme_color | strip }};"
   {% endif %}
 {% endcapture %}
 
 <!-- Dynamic background color based on post color scheme -->
 {% capture post_link_bg %}
-  {% if post.scheme-list-color %}
-    {% if post.scheme-list-color == 'text' %}
-      style="background: {{ post.scheme-text }};"
-    {% elsif post.scheme-list-color == 'hover' %}
-      style="background: {{ post.scheme-hover }};"
-    {% elsif post.scheme-list-color == 'code' %}
-      style="background: {{ post.scheme-code }};"
-    {% elsif post.scheme-list-color == 'bg' %}
-      style="background: {{ post.scheme-bg }};"
-    {% else %}
-      style="background: {{ post.scheme-link }};"
-    {% endif %}
-  {% elsif post.scheme-bg %}
-    {% if post.scheme-bg-light %}
-      style="background: {{ post.scheme-link }};"
-    {% else %}
-      style="background: {{ post.scheme-bg }};"
-    {% endif %}
-  {% elsif post.scheme-link %}
-    style="background: {{ post.scheme-link }};"
+  {% if custom_scheme %}
+    style="background: {{ amsf_page_theme_color | strip }};"
   {% endif %}
 {% endcapture %}
 
