@@ -3,7 +3,7 @@
 
 {
   "name": {{ site.name | jsonify }},
-  "short_name": {{ site.name | jsonify }},
+  "short_name": {{ site.name_short | jsonify }},
   "icons": [
     {
       "src": {{ "/favicon.png" | prepend: site.base | jsonify }},
