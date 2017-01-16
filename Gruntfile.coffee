@@ -109,7 +109,7 @@ module.exports = (grunt) ->
         ]
 
       sw:
-        files: "<%= config.dist %><%= config.base %>/service-worker.js": [ "<%= config.dist %><%= config.base %>/service-worker.js" ]
+        files: "<%= config.dist %><%= config.base %>/<%= service_worker.dist.options.workerFile %>": [ "<%= config.dist %><%= config.base %>/<%= service_worker.dist.options.workerFile %>" ]
 
     less:
       options:
@@ -295,6 +295,7 @@ module.exports = (grunt) ->
         options:
           cacheId: "<%= config.pkg.name %>"
           baseDir: "<%= config.dist %>"
+          workerFile: "service-worker.js"
           workerDir: "<%= config.dist %><%= config.base %>"
           staticFileGlobs: [
             "**/*.{css,html,jpg,gif,png,svg}"
