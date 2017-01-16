@@ -11,11 +11,17 @@
 <!-- Define a description for better SEO result -->
 <meta name="description" content="{{ amsf_site_desc | strip }}">
 
+<!-- Cheome Web App theme color -->
+<meta name="theme-color" content="{{ amsf_theme_color | strip }}">
+
 <!-- Feed URL -->
 <link rel="alternate" href="{{ amsf_feed_url }}" type="application/atom+xml">
 
 <!-- Site icons -->
 {{ amsf_favicons }}
+
+<!-- Chrome Web App manifest -->
+<link rel="manifest" href="{{ '/manifest.json' | prepend: site.base }}">
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="{{ '/css/app.css?assets-inline' | prepend: amsf_theme_assets }}">

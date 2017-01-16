@@ -1,0 +1,16 @@
+---
+---
+
+{
+  "name": {{ site.name | jsonify }},
+  "short_name": {{ site.name | jsonify }},
+  "icons": [
+    {
+      "src": {{ "/favicon.png" | prepend: site.base | jsonify }},
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": {{ site.base | jsonify }},
+  "display": "standalone"
+}
