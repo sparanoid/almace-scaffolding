@@ -114,9 +114,10 @@ file:           https://d349cztnlupsuf.cloudfront.net
 # this if you don't need it.
 download:       https://d1bmx7s6749k4k.cloudfront.net
 
-# Primary color (used by Safari mask-icon)
-# Default       #ff00b4
-primary_color:  '#ff00b4'
+# Primary color
+# Used by Safari mask-icon, Chrome Web App theme color
+# Default       "#ff00b4"
+primary_color:  "#ff00b4"
 
 # Service Worker Precache support
 # Service Worker does not work on HTTP
