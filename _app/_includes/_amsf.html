@@ -434,7 +434,7 @@
   Service Worker
 {% endcomment %}
 {% capture amsf_service_worker %}
-  {% if site.service_worker == true and site.dev == false %}
+  {% if site.service_worker.enabled == true and site.dev == false %}
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('{{ "/service-worker.js" | prepend: site.base }}').then(function (registration) {
