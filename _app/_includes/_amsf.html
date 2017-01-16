@@ -1,4 +1,16 @@
 {% comment %}
+  Include type
+
+  Define include type of this file, make sure code snippets work smoothly on
+  both `page` and `post` and whatever content types:
+
+  {% include _amsf.html type=post %}
+
+  @since 1.1.4
+{% endcomment %}
+{% assign type = include.type | default: page %}
+
+{% comment %}
   Post author meta
 {% endcomment %}
 {% if post.author %}
@@ -444,6 +456,45 @@
         });
       }
     </script>
+  {% endif %}
+{% endcapture %}
+
+{% comment %}
+  Page theme color
+{% endcomment %}
+{% capture amsf_page_theme_color %}
+  {% if type.scheme-list-color %}
+    {% if type.scheme-list-color == 'text' %}
+      {{ type.scheme-text }}
+    {% elsif type.scheme-list-color == 'hover' %}
+      {{ type.scheme-hover }}
+    {% elsif type.scheme-list-color == 'code' %}
+      {{ type.scheme-code }}
+    {% elsif type.scheme-list-color == 'bg' %}
+      {{ type.scheme-bg }}
+    {% else %}
+      {{ type.scheme-link }}
+    {% endif %}
+  {% elsif type.scheme-bg %}
+    {% if type.scheme-bg-light %}
+      {{ type.scheme-link }}
+    {% else %}
+      {{ type.scheme-bg }}
+    {% endif %}
+  {% elsif type.scheme-link %}
+    {{ type.scheme-link }}
+  {% endif %}
+{% endcapture %}
+
+{% comment %}
+  Chrome Web App theme color
+{% endcomment %}
+{% capture amsf_theme_color %}
+  {% assign amsf_page_theme_color = amsf_page_theme_color | strip %}
+  {% if amsf_page_theme_color != "" %}
+    {{ amsf_page_theme_color }}
+  {% else %}
+    {{ site.primary_color }}
   {% endif %}
 {% endcapture %}
 
