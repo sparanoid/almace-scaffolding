@@ -297,11 +297,7 @@ module.exports = (grunt) ->
           baseDir: "<%= config.dist %>"
           workerFile: "service-worker.js"
           workerDir: "<%= config.dist %><%= config.base %>"
-          staticFileGlobs: [
-            "**/*.{css,html,jpg,gif,png,svg}"
-            "**/img/**.*"
-            "**/js/**.js"
-          ]
+          staticFileGlobs: "<%= config.cfg.service_worker.files %>"
 
     usebanner:
       options:

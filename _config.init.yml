@@ -120,8 +120,12 @@ primary_color:  '#ff00b4'
 
 # Service Worker Precache support
 # Service Worker does not work on HTTP
-# Default       true
-service_worker: true
+service_worker:
+  enabled:      true
+  file_globs:
+    - "**/*.{css,html,jpg,gif,png,svg}"
+    - "**/img/**.*"
+    - "**/js/**.js"
 
 # Google Analytics tracking code
 google_analytics:
