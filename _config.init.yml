@@ -81,6 +81,22 @@ dev:            false
 # Default:      Almace Scaffolding
 name:           Almace Scaffolding
 
+# Site short name
+#
+# Currently only used by Chrome Web App manifest, can be anything you like.
+# You can also just use your `name` for `name_short` if it is short enough
+#
+# For example:
+# - name:       Almace Scaffolding
+# - name_short: AMSF
+#
+# or:
+# - name:       Sparanoid Group
+# - name_short: Sparanoid
+#
+# Default:      AMSF
+name_short:     AMSF
+
 # Site description
 #
 # Will be used in the document meta and Atom feed subtitle
