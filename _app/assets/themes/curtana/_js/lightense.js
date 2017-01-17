@@ -1,4 +1,4 @@
-/*! lightense-images v1.0.2 | © Tunghsiao Liu | MIT */
+/*! lightense-images v1.0.3 | © Tunghsiao Liu | MIT */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -59,13 +59,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var Lightense = function () {
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	var Lightense = function Lightense() {
 	  'use strict';
 
 	  // Save some bytes
 
-	  var w = window,
-	      d = document;
+	  var w = window;
+	  var d = document;
 
 	  // default options
 	  var defaults = {
@@ -79,6 +81,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  // Init user options
 	  var config = {};
+
+	  // Init target elements
+	  var elements;
+
+	  function getElements(elements) {
+	    switch (typeof elements === 'undefined' ? 'undefined' : _typeof(elements)) {
+	      case 'undefined':
+	        throw 'You need to pass an element!';
+
+	      case 'string':
+	        return document.querySelectorAll(elements);
+
+	      case 'object':
+	        return elements;
+	    }
+	  }
 
 	  function startTracking(passedElements) {
 	    // If passed an array of elements, assign tracking to all
@@ -266,15 +284,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 
-	  function main(elements) {
+	  function main(target) {
 	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-	    // Parse arguments
-	    if (!elements) {
-	      throw 'You need to pass an element!';
-	    }
+	    // Parse elements
+	    elements = getElements(target);
 
-	    // Get user options
+	    // Parse user options
 	    config = _extends({}, defaults, options);
 
 	    // Prepare stylesheets
@@ -288,9 +304,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  return main;
-	}();
+	};
 
-	module.exports = Lightense;
+	var singleton = Lightense();
+
+	module.exports = singleton;
 
 /***/ }
 /******/ ])
