@@ -168,8 +168,7 @@ primary_color:  "#ff00b4"
 service_worker:
   enabled:      true
   files:
-    - "**/*.{css,html,jpg,gif,png,svg}"
-    - "**/img/**.*"
+    - "**/*.{css,html,jpg,gif,png,svg,woff,woff2}"
     - "**/js/**.js"
 
 # Google Analytics tracking code
