@@ -372,6 +372,9 @@ module.exports = (grunt) ->
       amsf__theme__to_dev_repo:
         command: "rsync -avz --delete --progress --exclude=.git --exclude=node_modules <%= amsf.base %>/themes/<%= amsf.theme.current %>/ /Users/sparanoid/Git/amsf-<%= amsf.theme.current %> > rsync-theme-dev.log"
 
+      amsf__staging:
+        command: "git checkout staging && git pull && git merge master --no-edit && git push && git checkout master && git push"
+
       amsf__release:
         command: "git checkout release && git pull && git merge master --no-edit && git push && git checkout master && git push"
 
@@ -709,10 +712,11 @@ module.exports = (grunt) ->
       "replace:amsf__site__update_version"
       "bump-commit"
     ]
-    if grunt.option("push")
-      grunt.task.run [
-        "shell:amsf__release"
-      ]
+
+  grunt.registerTask "publish", "Publish new release", (branch) ->
+    grunt.task.run [
+      "shell:amsf__#{branch or 'staging'}"
+    ]
 
   grunt.registerTask "deploy-rsync", "Deploy to remote server via rsync",  [
     "shell:amsf__deploy__rsync"
