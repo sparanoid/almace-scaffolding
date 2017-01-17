@@ -297,6 +297,7 @@ module.exports = (grunt) ->
           baseDir: "<%= config.dist %>"
           workerFile: "service-worker.js"
           workerDir: "<%= config.dist %><%= config.base %>"
+          maximumFileSizeToCacheInBytes: "<%= config.cfg.service_worker.max_size %>"
           staticFileGlobs: "<%= config.cfg.service_worker.files %>"
 
     usebanner:
