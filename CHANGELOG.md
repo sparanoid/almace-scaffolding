@@ -1,3 +1,36 @@
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.4...v1.1.5) (2017-01-17)
+
+
+### Bug Fixes
+
+* **manifest:** wrong variable ([8e6111c](https://github.com/sparanoid/almace-scaffolding/commit/8e6111c))
+* **post:** wrong internal post link ([f6c8184](https://github.com/sparanoid/almace-scaffolding/commit/f6c8184))
+* **service-worker:** too aggressive image caching ([05fd453](https://github.com/sparanoid/almace-scaffolding/commit/05fd453))
+
+
+### Features
+
+* **amsf:** add `colors` config ([5ba1094](https://github.com/sparanoid/almace-scaffolding/commit/5ba1094))
+* **amsf:** basic Chrome Web App manifest support ([28e5d67](https://github.com/sparanoid/almace-scaffolding/commit/28e5d67))
+* **amsf:** better Safari mask icon support ([ba286ca](https://github.com/sparanoid/almace-scaffolding/commit/ba286ca))
+* **amsf:** remove deplicated assigns ([623a4f3](https://github.com/sparanoid/almace-scaffolding/commit/623a4f3))
+* **amsf:** system-wide snippet import support ([4c531c9](https://github.com/sparanoid/almace-scaffolding/commit/4c531c9))
+* **config:** better comments for init config ([f8ec113](https://github.com/sparanoid/almace-scaffolding/commit/f8ec113))
+* **curtana:** update Lightense Images ([55ea836](https://github.com/sparanoid/almace-scaffolding/commit/55ea836))
+* **grunt:** move `service_worker` file globs option to config ([7c94736](https://github.com/sparanoid/almace-scaffolding/commit/7c94736))
+* **grunt:** use `workerFile` variable ([fa43158](https://github.com/sparanoid/almace-scaffolding/commit/fa43158))
+* **manifest:** add `theme_color` and `background_color` support ([c0c23ce](https://github.com/sparanoid/almace-scaffolding/commit/c0c23ce))
+* **service-worker:** limit max size to cache ([6074a00](https://github.com/sparanoid/almace-scaffolding/commit/6074a00))
+* **service-worker:** make sure Service Worker works only when hostname matches ([3edeffc](https://github.com/sparanoid/almace-scaffolding/commit/3edeffc))
+
+
+### BREAKING CHANGES
+
+* amsf: Now the `primary_color` is deprecated, please replace all `site.primary_color` to `site.colors.theme` in your templates.
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.3...v1.1.4) (2017-01-14)
 
