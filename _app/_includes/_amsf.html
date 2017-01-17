@@ -20,6 +20,15 @@
 {% endif %}
 
 {% comment %}
+  Site domain
+
+  Get current site domain name defined by `site.url`
+  Regex:
+    - Match domain hostname (without port): https://regex101.com/r/VkNQ7Q/1
+{% endcomment %}
+{% assign amsf_hostname = site.url | match_regex: '^(?:https?\:)?\/\/([^\/?#:]+)(?:[\/?#:]|$)' %}
+
+{% comment %}
   Site title
 {% endcomment %}
 {% capture amsf_site_title %}{% if page.title != site.name %} - {{ site.name }}{% endif %}{% endcapture %}
@@ -489,7 +498,7 @@
 {% capture amsf_service_worker %}
   {% if site.service_worker.enabled == true and site.dev == false %}
     <script>
-      if ('serviceWorker' in navigator) {
+      if ('serviceWorker' in navigator && window.location.hostname === '{{ amsf_hostname }}') {
         navigator.serviceWorker.register('{{ "/service-worker.js" | prepend: site.base }}').then(function (registration) {
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }).catch(function(err) {
