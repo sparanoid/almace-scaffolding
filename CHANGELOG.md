@@ -721,7 +721,7 @@ plugin: lightense
 >
 > Paul Graham
 ```
-* jekyll: Appending &#xfe0e; to the Unicode-represenation of the reversed arrow will prevent the conversion to an Emoji graphic on iOS. You should update Kramdown settings `footnote_backlink` in your exisitng config.
+* jekyll: Appending &#xfe0e; to the Unicode-represenation of the reversed arrow will prevent the conversion to an Emoji graphic on iOS. You should update kramdown settings `footnote_backlink` in your exisitng config.
 
 Reference:
 
@@ -1005,7 +1005,7 @@ robots:
 
 * **grunt:** `strictMath` not enabled for `dist` task ([117cbc9](https://github.com/sparanoid/almace-scaffolding/commit/117cbc9))
 * **post:** avoid the symbol conversion to an Emoji graphic on iOS ([d9d14a9](https://github.com/sparanoid/almace-scaffolding/commit/d9d14a9))
-* **theme:** missing CSS variables for Kramdown ([d665375](https://github.com/sparanoid/almace-scaffolding/commit/d665375))
+* **theme:** missing CSS variables for kramdown ([d665375](https://github.com/sparanoid/almace-scaffolding/commit/d665375))
 
 ### Features
 
@@ -1054,7 +1054,7 @@ Reference:
 
 ### Bug Fixes
 
-* **style:** missing footnotes styles for Kramdown ([cbd8d03](https://github.com/sparanoid/almace-scaffolding/commit/cbd8d03))
+* **style:** missing footnotes styles for kramdown ([cbd8d03](https://github.com/sparanoid/almace-scaffolding/commit/cbd8d03))
 
 ### Features
 
