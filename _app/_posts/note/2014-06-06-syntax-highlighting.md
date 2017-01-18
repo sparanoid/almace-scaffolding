@@ -17,6 +17,10 @@ def show
 end
 ```
 
+```php?start_inline=1
+echo "Hello, world!";
+```
+
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"

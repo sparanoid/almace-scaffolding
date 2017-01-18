@@ -29,7 +29,7 @@ port:           4321
 future:         false
 
 #
-# Additional Markdown settings
+# Markdown settings
 #
 
 kramdown:
@@ -42,18 +42,10 @@ kramdown:
   enable_coderay:            false
   hard_wrap:                 false
   syntax_highlighter:        rouge
+  syntax_highlighter_opts:
+    css_class:               "highlight"
   transliterated_header_ids: true
   footnote_backlink:         "&#8617;&#xfe0e;"
-
-redcarpet:
-  extensions:
-    - footnotes
-    - no_intra_emphasis
-    - smart
-    - space_after_headers
-    - strikethrough
-    - superscript
-    - tables
 
 #
 # Jekyll plugins
