@@ -15,18 +15,25 @@
   @calc-bg: mix(#000, @v, 70%);
 }
 
-.highlight {
+// Reset background
+//
+// `.highlight > pre`              - Jekyll liquid code blocks
+// `.highlighter-rouge .highlight` - Rouge GFM code blocks
+//
+// Ref: https://github.com/jekyll/jekyll/pull/4053
+@highlighter-tint: @link-color;
+.highlight > pre,
+.highlighter-rouge .highlight {
+  .calc-bg(@highlighter-tint);
+  background: fade(@calc-bg, 2%);
+}
 
-  // Reset background
-  // .highlight > pre for common liquid method
-  // .highlighter-rouge .highlight for GFM method
-  // Ref: https://github.com/jekyll/jekyll/pull/4053
-  @highlighter-tint: @link-color;
-  > pre,
-  .highlighter-rouge & {
-    .calc-bg(@highlighter-tint);
-    background: fade(@calc-bg, 2%);
-  }
+// General highlights
+//
+// `.highlight code`         - Rouge GFM and Jekyll liquid code blocks
+// `.highlighter-rouge code` - Rouge inline code
+.highlight,
+.highlighter-rouge {
 
   // Reset default `code`
   code { color: desaturate(@link-color, 95%); } // Normal code
