@@ -357,13 +357,65 @@ body:hover .latest {
   }
 
   pre {
+    background: fade(#08f, 4%);
+  }
+
+  // TODO: Need refine
+  // Date: Jan 18, 2017, 8:24 PM
+  //
+  // Jekyll (liquid) {% highlight %} method and GFM method generates different
+  // markup for code blocks, this result in different CSS styling for different
+  // highlight methods you use.
+  //
+  // ## GFM method
+  //
+  // ```
+  // div.language-js.highlighter-rouge
+  //   pre.highlight
+  //     code
+  // ```
+  //
+  // ## GFM method with `line_numbers` enabled under `syntax_highlighter_opts`
+  //
+  // ```
+  // div.language-js.highlighter-rouge
+  //   div.highlight
+  //     table
+  //       tbody
+  //         tr
+  //           td.gutter.gl
+  //             pre
+  //               code
+  //           td.code
+  //             pre
+  //               code
+  // ```
+  //
+  // ## Jekyll {% highlight %} method:
+  //
+  // ```
+  // figure.highlight
+  //   pre
+  //     code.language-html
+  //       table
+  //         tbody
+  //           tr
+  //             td.gutter.gl
+  //               pre
+  //                 code
+  //             td.code
+  //               pre
+  //                 code
+  // ```
+  pre,
+  .highlight > pre,
+  .highlighter-rouge .highlight {
     padding: @space-xs;
     .margin-offset(-@space-xs, -@space-xs);
     margin-bottom: 1.8rem;
     overflow-x: auto;
     font-size: 80%;
     line-height: (@line-height * 1.2);
-    background: fade(#08f, 4%);
     // Bouncing scroll fix for iOS
     -webkit-overflow-scrolling: touch;
 
