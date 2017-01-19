@@ -265,25 +265,89 @@ body:hover .latest {
   iframe,
   .browser {
     display: block;
-    width: calc(100% + (@space-xs * 2) + (@border-default * 2));
-    margin: 0 calc(-@space-xs - @border-default) 1.8rem;
+    width: calc(100% + (@space-md * 2) + (@border-default * 2));
+    margin: 0 calc(-@space-md - @border-default) 1.8rem;
 
     @media (max-width: @breakpoint-md) {
       width: calc(100% + (@space-md * 2));
-      .margin-offset(-@space-md, -@space-md);
+      .margin-offset(-@space-md);
     }
 
     @media (max-width: @breakpoint-sm) {
       width: calc(100% + (@space-sm * 2));
-      .margin-offset(-@space-sm, -@space-sm);
+      .margin-offset(-@space-sm);
     }
 
     // avoid images with `.no-enlarge` stretched by global img styles
+    &.size-fit,
     &.no-enlarge {
       margin-left: 0;
       margin-right: 0;
       max-width: 100%;
       width: auto;
+    }
+
+    // Full width image
+    &.size-large {
+      width: calc(100% + (@space-lg * 2));
+      .margin-offset(-@space-lg);
+
+      @media (max-width: @breakpoint-md) {
+        width: calc(100% + (@space-md * 2));
+        .margin-offset(-@space-md);
+      }
+
+      @media (max-width: @breakpoint-sm) {
+        width: calc(100% + (@space-sm * 2));
+        .margin-offset(-@space-sm);
+      }
+    }
+
+    &.size-small {
+      width: calc(100% + (@space-xs * 2) + (@border-default * 2));
+      .margin-offset(calc(-@space-xs - @border-default));
+
+      @media (max-width: @breakpoint-md) {
+        width: calc(100% + (@space-md * 2));
+        .margin-offset(-@space-md);
+      }
+
+      @media (max-width: @breakpoint-sm) {
+        width: calc(100% + (@space-sm * 2));
+        .margin-offset(-@space-sm);
+      }
+    }
+
+    &.size-left {
+      float: left;
+      max-width: 40vw;
+      margin-top: (@space-xs / 2);
+      margin-right: @space-xs;
+      margin-bottom: (@space-xs / 2);
+
+      @media (max-width: @breakpoint-md) {
+        float: none;
+        max-width: none;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    &.size-right {
+      float: right;
+      max-width: 40vw;
+      margin-top: (@space-xs / 2);
+      margin-left: @space-xs;
+      margin-bottom: (@space-xs / 2);
+
+      @media (max-width: @breakpoint-md) {
+        float: none;
+        max-width: none;
+        margin-top: auto;
+        margin-left: auto;
+        margin-bottom: auto;
+      }
     }
   }
 
