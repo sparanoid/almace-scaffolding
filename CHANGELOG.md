@@ -1,3 +1,25 @@
+<a name="1.1.6"></a>
+## [1.1.6](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.5...v1.1.6) (2017-01-19)
+
+
+### Features
+
+* **curtana:** image size helpers ([3df01f7](https://github.com/sparanoid/almace-scaffolding/commit/3df01f7))
+* **curtana:** layout minor tweaks ([dfd1e41](https://github.com/sparanoid/almace-scaffolding/commit/dfd1e41))
+* **curtana:** simply offset calculation ([020c34e](https://github.com/sparanoid/almace-scaffolding/commit/020c34e))
+* **grunt:** add `publish` task support ([c43dbb7](https://github.com/sparanoid/almace-scaffolding/commit/c43dbb7))
+* **post:** use kramdown syntax ([d79f2a2](https://github.com/sparanoid/almace-scaffolding/commit/d79f2a2))
+* **style:** update syntax highlighter styles ([f0807db](https://github.com/sparanoid/almace-scaffolding/commit/f0807db))
+
+
+### BREAKING CHANGES
+
+* style: I've remove Redcarpet config to enforce using Rouge as default highlighter, it's also recommended to switch to Rouge over Redcarpet as your default highlighter.
+
+More work still need to be done to simplify the stylesheets, ref https://github.com/jekyll/jekyll/pull/4053
+
+
+
 <a name="1.1.5"></a>
 ## [1.1.5](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.4...v1.1.5) (2017-01-17)
 
