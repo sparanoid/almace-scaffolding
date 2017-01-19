@@ -12,7 +12,7 @@ A paragraph block with a thin border line.
 
 ### Usage
 
-```markdown
+```md
 [Download](download) it from GitHub
 {: .download}
 
@@ -34,7 +34,7 @@ Make normal paragraph text large enough.
 
 ### Usage
 
-```markdown
+```md
 [PayPal](donate)
 {: .largetype}
 ```
@@ -50,7 +50,7 @@ A simple browser frame using pure CSS.
 
 ### Usage
 
-```markdown
+```md
 ![Image](https://sparanoid.com/logo.png)
 {: .browser}
 ```
@@ -74,13 +74,13 @@ plugin: lightense
 
 Markdown markup:
 
-```markdown
+```md
 ![Image](https://sparanoid.com/photo.jpg)
 ```
 
 Lightense Images is activated globally by default, if you want to disable this effect for specific image, you can simply apply `.no-lightense` CSS class to your image or `<img>`:
 
-```markdown
+```md
 ![Image](https://sparanoid.com/logo.png){: .no-lightense}
 ```
 
@@ -89,3 +89,47 @@ Please note that if you're using HTML markup, you should wrap your images into a
 ### Example
 
 ![Moonstruck Princess Extended - Red]({{ site.file }}/moonstruck-princess-ext-red.jpg)
+
+## Image Sizes
+
+There're different size helpers for images. They're available using the following CSS classes:
+
+### Small Size
+
+```md
+![Image](https://sparanoid.com/logo.png){: .size-small}
+```
+
+![Moonstruck Princess Extended - orange]({{ site.file }}/moonstruck-princess-ext-orange.jpg){: .size-small}
+
+### Medium Size
+
+Medium size is the default size of images, so you don't need additional CSS class for it.
+
+```md
+![Image](https://sparanoid.com/logo.png)
+```
+
+![Moonstruck Princess Extended - Yellow]({{ site.file }}/moonstruck-princess-ext-yellow.jpg)
+
+### Large Size
+
+```md
+![Image](https://sparanoid.com/logo.png){: .size-large}
+```
+
+![Moonstruck Princess Extended - Green]({{ site.file }}/moonstruck-princess-ext-green.jpg){: .size-large}
+
+### Aligned Images
+
+```md
+![Image](https://sparanoid.com/logo.png){: .size-left}
+
+![Image](https://sparanoid.com/logo.png){: .size-right}
+```
+
+![Moonstruck Princess Extended - Blue]({{ site.file }}/moonstruck-princess-ext-blue.jpg){: .size-left}
+
+Aligned images are smaller images beside text, you can just apply `.size-left` or `.size-right` to your images and nothing special markup required.
+
+Please note that aligned images will be responded to normal large size for small desktops or mobile devices.
