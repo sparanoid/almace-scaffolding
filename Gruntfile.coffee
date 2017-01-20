@@ -20,12 +20,14 @@ module.exports = (grunt) ->
   grunt.initConfig
     config:
       cfg: grunt.file.readYAML("_config.yml")
+      cfg_dev: grunt.file.readYAML("_config.dev.yml")
       pkg: grunt.file.readJSON("package.json")
       amsf: grunt.file.readYAML("_amsf.yml")
       deploy: grunt.file.readYAML("_deploy.yml")
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
-      base: "<%= config.cfg.base %>"
+      base: "<%= config.cfg.baseurl %>"
+      base_dev: "<%= config.cfg_dev.baseurl %>"
       assets: "<%= config.cfg.assets %>"
       banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
 
@@ -317,6 +319,7 @@ module.exports = (grunt) ->
       serve:
         options:
           config: "_config.yml,_amsf.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.dev.yml"
+          dest: "<%= config.dist %><%= config.base_dev %>"
           drafts: true
           future: true
 
