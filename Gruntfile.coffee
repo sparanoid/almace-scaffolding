@@ -235,6 +235,7 @@ module.exports = (grunt) ->
         inlineImg: false
         inlineSvg: true
         inlineSvgBase64: false
+        inlineLinkTags: true
         assetsUrlPrefix: "<%= config.base %><%= config.assets %>"
         deleteOriginals: true
 
