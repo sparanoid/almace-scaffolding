@@ -3,7 +3,7 @@
 {% else %}
   <footer class="footer">
     <ul>
-      <li><a href="{{ site.base }}/">{{ site.name }}</a></li>
+      <li><a href="{{ '/' | relative_url }}">{{ site.name }}</a></li>
 
       {% if site.credits %}
         <li><a href="https://sparanoid.com/lab/amsf/" title="Almace Scaffolding">AMSF</a></li>
@@ -11,7 +11,7 @@
       {% endif %}
 
       {% if site.data.curtana.subscription %}
-        <li><a href="{{ '/email-signup' | prepend: site.base }}/">Email</a></li>
+        <li><a href="{{ '/email-signup' | relative_url }}/">Email</a></li>
       {% endif %}
 
       <li><a href="{{ amsf_feed_url }}" title="Feed - Atom (The Atom Syndication Format)">Atom</a></li>

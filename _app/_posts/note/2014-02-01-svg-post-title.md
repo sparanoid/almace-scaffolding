@@ -5,7 +5,7 @@ category: note
 hidden: true
 ---
 
-> The content of this post in deprecated, please see [Custom Heading Image]({{ site.base }}/custom-heading-image.html) for more info.
+> The content of this post in deprecated, please see [Custom Heading Image]({{ "/custom-heading-image.html" | relative_url}}) for more info.
 
 This is an example of custom post title using SVG image. You can simply add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
 
