@@ -100,11 +100,11 @@ description:    Almace Scaffolding - Super-fast Jekyll framework
 #
 # This is useful when I need to build site in a subdirectory (like
 # GitHub Pages for Projects), it provides a specific URL prefix, for example, if
-# the production site URL is https://sparanoid.com/my-project/, set `base` to
+# the production site URL is https://sparanoid.com/my-project/, set `baseurl` to
 # `/my-project`, without trailing slash.
 #
 # Default:      ""
-base:           ""
+baseurl:        ""
 
 # CSS path used in templates
 #

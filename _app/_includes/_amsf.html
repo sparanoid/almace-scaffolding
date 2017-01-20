@@ -51,23 +51,25 @@
 
 {% comment %}
   Site base URL
+
+  Deprecated, it's now the same as the Jekyll built-in filter `absolute_url`.
 {% endcomment %}
-{% capture amsf_site_base %}{{ site.base | prepend: site.url }}{% endcapture %}
+{% capture amsf_site_base %}{{ "" | absolute_url }}{% endcapture %}
 
 {% comment %}
   Theme base URL
 {% endcomment %}
-{% capture amsf_theme_base %}{{ site.amsf_theme | prepend: '/themes/' }}{% endcapture %}
+{% capture amsf_theme_base %}{{ site.amsf_theme | prepend: "/themes/" }}{% endcapture %}
 
 {% comment %}
   Theme assets base URL
 {% endcomment %}
-{% capture amsf_theme_assets %}{{ site.amsf_theme | prepend: '/themes/' | prepend: site.assets | prepend: site.base }}{% endcapture %}
+{% capture amsf_theme_assets %}{{ amsf_theme_base | prepend: site.assets | relative_url }}{% endcapture %}
 
 {% comment %}
   User assets base URL
 {% endcomment %}
-{% capture amsf_user_assets %}{{ site.assets | prepend: site.base }}{% endcapture %}
+{% capture amsf_user_assets %}{{ site.assets | relative_url }}{% endcapture %}
 
 {% comment %}
   Page theme color
@@ -119,10 +121,10 @@
 
   @since 1.1.0
 {% endcomment %}
-{% capture amsf_favicon_png %}{{ "/favicon.png" | prepend: site.base }}{% endcapture %}
-{% capture amsf_favicon_svg %}{{ "/favicon.svg?assets-inline-assets-keep" | prepend: site.base }}{% endcapture %}
-{% capture amsf_mask_icon %}{{ "/mask-icon.svg" | prepend: site.base }}{% endcapture %}
-{% capture amsf_apple_touch_icon %}{{ "/apple-touch-icon.png" | prepend: site.base }}{% endcapture %}
+{% capture amsf_favicon_png %}{{ "/favicon.png" | relative_url }}{% endcapture %}
+{% capture amsf_favicon_svg %}{{ "/favicon.svg?assets-inline-assets-keep" | relative_url }}{% endcapture %}
+{% capture amsf_mask_icon %}{{ "/mask-icon.svg" | relative_url }}{% endcapture %}
+{% capture amsf_apple_touch_icon %}{{ "/apple-touch-icon.png" | relative_url }}{% endcapture %}
 
 {% capture amsf_favicons %}
   {% for static_file in site.static_files %}
@@ -154,7 +156,7 @@
 {% comment %}
   Feed URL
 {% endcomment %}
-{% capture amsf_feed_url %}{{ site.feed | prepend: site.base | replace: '/index.xml', '/' }}{% endcapture %}
+{% capture amsf_feed_url %}{{ site.feed | relative_url | replace: '/index.xml', '/' }}{% endcapture %}
 
 {% comment %}
   Page title
@@ -162,9 +164,9 @@
 {% capture amsf_page_title %}{{ page.title | strip_html | xml_escape }}{% endcapture %}
 
 {% comment %}
-  Page URL
+  Page URL (full URl with `site.url`)
 {% endcomment %}
-{% capture amsf_page_url %}{{ page.url | prepend: amsf_site_base | replace: '/index.html', '/' | replace: '/index.htm', '/' | replace: '/index.xml', '/' }}{% endcapture %}
+{% capture amsf_page_url %}{{ page.url | absolute_url | replace: '/index.html', '/' | replace: '/index.htm', '/' | replace: '/index.xml', '/' }}{% endcapture %}
 
 {% comment %}
   Page publish date
@@ -305,7 +307,7 @@
 
   @since 1.1.0
 {% endcomment %}
-{% assign amsf_site_logo = "/logo.png" | prepend: amsf_site_base %}
+{% assign amsf_site_logo = "/logo.png" | absolute_url %}
 {% capture amsf_page_first_image %}
   {% assign hero_image = page.content | match_regex: '<img .*?src="([^"]+)"' %}
   {% if hero_image == nil %}
@@ -499,7 +501,7 @@
   {% if site.service_worker.enabled == true and site.dev == false %}
     <script>
       if ('serviceWorker' in navigator && window.location.hostname === '{{ amsf_hostname }}') {
-        navigator.serviceWorker.register('{{ "/service-worker.js" | prepend: site.base }}').then(function (registration) {
+        navigator.serviceWorker.register('{{ "/service-worker.js" | relative_url }}').then(function (registration) {
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }).catch(function(err) {
           console.log('ServiceWorker registration failed: ', err);

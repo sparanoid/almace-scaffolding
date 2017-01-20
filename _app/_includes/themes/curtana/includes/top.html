@@ -21,7 +21,7 @@
 {{ amsf_favicons }}
 
 <!-- Chrome Web App manifest -->
-<link rel="manifest" href="{{ '/manifest.json' | prepend: site.base }}">
+<link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
 
 <!-- Main CSS -->
 <link rel="stylesheet" href="{{ '/css/app.css?assets-inline' | prepend: amsf_theme_assets }}">

@@ -131,28 +131,6 @@ Output:
 <meta property="og:description" content="Super-fast Jekyll framework">
 ```
 
-### `site.base`
-
-Base URL, this is useful when you need to build site in a subdirectory (like GitHub Pages for Projects), it provides a specific URL prefix, for example, if the production site URL is https://sparanoid.com/lab/amsf/, set `base` to `/lab/amsf`, without trailing slash. This make sure all the links are relative to current site root (in a subdirectory in this case), you should use this variable for **every** link appeared in your theme.
-
-Config:
-
-```yaml
-base: /lab/amsf
-```
-
-Template:
-
-```html
-<a href="{{ '{{ site.base ' }}}}/atom.xml">Atom</a>
-```
-
-Output:
-
-```html
-<a href="/lab/amsf/atom.xml">Atom</a>
-```
-
 ### `site.file`
 
 Media assets URL used in posts, without trailing slash. In the most cases this URL should be powered by a CDN provider.
