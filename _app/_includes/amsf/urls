@@ -23,7 +23,14 @@
 {% comment %}
   Feed URL
 {% endcomment %}
-{% capture amsf_feed_url %}{{ site.feed | relative_url | replace: '/index.xml', '/' }}{% endcapture %}
+{% capture amsf_feed_url %}
+  {% include amsf/has_protocol url=site.feed %}
+  {% if amsf_has_protocol == null %}
+    {{ site.feed | relative_url | replace: '/index.xml', '/' }}
+  {% else %}
+    {{ site.feed }}
+  {% endif %}
+{% endcapture %}
 
 {% comment %}
   Page title
