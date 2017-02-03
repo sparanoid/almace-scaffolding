@@ -1,6 +1,5 @@
 <!-- Footer section -->
-{% if page.permalink == '/' and site.data.curtana.clean_homepage %}
-{% else %}
+{% unless page.permalink == '/' and site.data.curtana.clean_homepage %}
   <footer class="footer">
     <ul>
       <li><a href="{{ '/' | relative_url }}">{{ site.name }}</a></li>
@@ -17,7 +16,7 @@
       <li><a href="{{ amsf_feed_url }}" title="Feed - Atom (The Atom Syndication Format)">Atom</a></li>
     </ul>
   </footer>
-{% endif %}
+{% endunless %}
 
 <!-- Theme scripts -->
 <script src="{{ '/js/app.js?assets-inline' | prepend: amsf_theme_assets }}"></script>
