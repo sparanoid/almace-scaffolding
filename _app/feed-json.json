@@ -5,7 +5,7 @@ permalink: /feed.json
 [
 
 {% assign first = true %}
-{% include _amsf.html %}
+{% include amsf/core %}
 
 {% for post in site.posts %}
   {% if post.hidden != true %}
