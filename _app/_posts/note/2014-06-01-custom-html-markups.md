@@ -41,7 +41,7 @@ Make normal paragraph text large enough.
 
 ### Example
 
-[PayPal](donate)
+[PayPal](https://sparanoid.com/donate/)
 {: .largetype}
 
 ## `.browser`
