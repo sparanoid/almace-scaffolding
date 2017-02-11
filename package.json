@@ -46,6 +46,7 @@
     "grunt-conventional-changelog": "^6.1.0",
     "grunt-csscomb": "^3.1.1",
     "grunt-git": "^1.0.0",
+    "grunt-html-trim": "^0.1.0",
     "grunt-jekyll": "^0.4.4",
     "grunt-leading-quotes": "0.0.13",
     "grunt-minjson": "^0.4.0",
