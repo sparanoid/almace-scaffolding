@@ -228,6 +228,15 @@ module.exports = (grunt) ->
       #   src: "**/*.html"
       #   dest: "<%= config.dist %>"
 
+    html_trim:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: ["**/*.html"]
+          dest: "<%= config.dist %>"
+        ]
+
     assets_inline:
       options:
         jsDir: "<%= config.dist %>"
@@ -703,6 +712,7 @@ module.exports = (grunt) ->
     "uncss_inline"
     "cacheBust"
     "concurrent:dist"
+    "html_trim"
     "service_worker"
     "uglify:sw"
     "cleanempty"
