@@ -1,3 +1,38 @@
+<a name="1.1.7"></a>
+## [1.1.7](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.6...v1.1.7) (2017-02-16)
+
+
+### Bug Fixes
+
+* **grunt:** missing core files update ([99e3004](https://github.com/sparanoid/almace-scaffolding/commit/99e3004))
+* **post:** wrong donate URL ([c3e51fe](https://github.com/sparanoid/almace-scaffolding/commit/c3e51fe))
+* **template:** external feed URL not correctly parseed ([432371c](https://github.com/sparanoid/almace-scaffolding/commit/432371c))
+
+
+### Features
+
+* **favicon:** add border for Chrome Web App design ([cd48b62](https://github.com/sparanoid/almace-scaffolding/commit/cd48b62))
+* **footer:** simplify condition ([a137df6](https://github.com/sparanoid/almace-scaffolding/commit/a137df6))
+* **grunt:** add `html_trim` support ([72e0f35](https://github.com/sparanoid/almace-scaffolding/commit/72e0f35))
+* **jekyll:** update support for v3.4.0 ([a886418](https://github.com/sparanoid/almace-scaffolding/commit/a886418))
+* **template:** inline `favicon.svg` ([c22daac](https://github.com/sparanoid/almace-scaffolding/commit/c22daac))
+* **template:** migrate from home-made `site.base` and `amsf_theme_base` to Jekyll built-in `relative_url` and `absolute_url` ([777929e](https://github.com/sparanoid/almace-scaffolding/commit/777929e))
+* **template:** update helper structure ([90f6d0f](https://github.com/sparanoid/almace-scaffolding/commit/90f6d0f))
+
+
+### BREAKING CHANGES
+
+* template: To migrate from old URL structure. You should simply replace the following:
+
+- `site.base` in your templates to `relative_url`, examples:
+  - `{{ site.base }}/my-post.html` to `{{ "my-post.html" | relative_url }}`
+  - `{{ "my-post.html" | prepend: site.base }}` to `{{ "my-post.html" | relative_url }}`
+- `amsf_theme_base` in your templates to `absolute_url`, examples:
+  - `{{ amsf_theme_base }}/my-post.html` to `{{ "my-post.html" | absolute_url }}`
+  - `{{ "my-post.html" | prepend: amsf_theme_base }}` to `{{ "my-post.html" | absolute_url }}`
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.5...v1.1.6) (2017-01-19)
 
