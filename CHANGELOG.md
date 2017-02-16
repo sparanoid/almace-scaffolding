@@ -23,13 +23,12 @@
 ### BREAKING CHANGES
 
 * template: To migrate from old URL structure. You should simply replace the following:
-
-- `site.base` in your templates to `relative_url`, examples:
-  - `{{ site.base }}/my-post.html` to `{{ "my-post.html" | relative_url }}`
-  - `{{ "my-post.html" | prepend: site.base }}` to `{{ "my-post.html" | relative_url }}`
-- `amsf_theme_base` in your templates to `absolute_url`, examples:
-  - `{{ amsf_theme_base }}/my-post.html` to `{{ "my-post.html" | absolute_url }}`
-  - `{{ "my-post.html" | prepend: amsf_theme_base }}` to `{{ "my-post.html" | absolute_url }}`
+  - `site.base` in your templates to `relative_url`, examples:
+    - `{{ site.base }}/my-post.html` to `{{ "my-post.html" | relative_url }}`
+    - `{{ "my-post.html" | prepend: site.base }}` to `{{ "my-post.html" | relative_url }}`
+  - `amsf_theme_base` in your templates to `absolute_url`, examples:
+    - `{{ amsf_theme_base }}/my-post.html` to `{{ "my-post.html" | absolute_url }}`
+    - `{{ "my-post.html" | prepend: amsf_theme_base }}` to `{{ "my-post.html" | absolute_url }}`
 
 
 
