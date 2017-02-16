@@ -478,6 +478,13 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
+            cwd: "<%= amsf.core %>/_app/_includes/amsf/"
+            src: ["**"]
+            dest: "<%= config.app %>/_includes/amsf/"
+          }
+          {
+            expand: true
+            dot: true
             cwd: "<%= amsf.core %>/_app/_layouts/"
             src: ["**"]
             dest: "<%= config.app %>/_layouts/"
