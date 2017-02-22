@@ -135,21 +135,19 @@ module.exports = (grunt) ->
         files: "<%= less.serve.files %>"
 
     postcss:
+      options:
+        processors: [
+          require("autoprefixer")(browsers: "last 1 versions")
+        ]
+
       serve:
         src: "<%= amsf.theme.assets %>/css/*.css"
         options:
           map:
             inline: true
-          processors: [
-            require("autoprefixer")(browsers: "last 1 versions")
-          ]
 
       dist:
         src: "<%= postcss.serve.src %>"
-        options:
-          processors: [
-            require("autoprefixer")(browsers: "last 2 versions")
-          ]
 
     csscomb:
       options:
