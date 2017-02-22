@@ -408,20 +408,19 @@ body:hover .latest {
     font-size: 75%;
   }
 
-  code,
-  pre {
+  pre,
+  code {
     font-family: @fontstack-monospace;
     color: @code-color;
   }
 
-  p code,
-  li code {
-    font-size: 92%;
-    word-wrap: break-word;
-  }
-
   pre {
     background: fade(#08f, 4%);
+  }
+
+  code {
+    font-size: 92%;
+    overflow-wrap: break-word;
   }
 
   // TODO: Need refine
@@ -491,6 +490,11 @@ body:hover .latest {
     @media (max-width: @breakpoint-sm) {
       .padding-offset(@space-sm);
       .margin-offset(-@space-sm);
+    }
+
+    // Reset overflow for code in code blocks
+    code {
+      overflow-wrap: normal;
     }
   }
 

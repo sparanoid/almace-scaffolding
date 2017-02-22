@@ -7,6 +7,13 @@ tags: miscellaneous
 
 Code highlighting demo, powered by Rouge. More info about code highlighting can be found at [Jekyll's documentation](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
 
+```
+.code-text (@link, @text) when (lightness(@link) >= 50%) and (lightness(@link) < lightness(@text)) {
+  @return-color: lighten(@text, 20%);
+  @return-value: 30%;
+}
+```
+
 ```ruby
 def show
   @widget = Widget(params[:id])
