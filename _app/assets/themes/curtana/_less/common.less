@@ -2,6 +2,17 @@
 // Common
 // --------------------------------------------------
 
+// Typography setup
+// TODO: need better solution
+// Apply `font-feature` for Apple devices, since these features are only
+// available for San Francisco. implemented in `app.js`
+.system {
+
+  &--apple {
+    font-feature-settings: @font-features;
+  }
+}
+
 // Main navigation
 @nav-padding: 1.4vmax;
 .navigation {
