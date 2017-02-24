@@ -1,7 +1,7 @@
 <!-- Main navigation with current page / categoriy highlighted -->
 <nav class="navigation">
   <ul>
-    {% for item in site.data.nav %}
+    {% for item in site.data.header %}
       {% include amsf/relative_url url=item.url %}
       {% assign item_url = amsf_relative_url %}
       {% assign lowercased_title = item.title | downcase %}
