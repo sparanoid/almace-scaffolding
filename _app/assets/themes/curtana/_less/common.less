@@ -2,6 +2,17 @@
 // Common
 // --------------------------------------------------
 
+// Typography setup
+// TODO: need better solution
+// Apply `font-feature` for Apple devices, since these features are only
+// available for San Francisco. implemented in `app.js`
+.js-system {
+
+  &--apple {
+    font-feature-settings: "case", "ss01", "ss02";
+  }
+}
+
 // Main navigation
 @nav-padding: 1.4vmax;
 .navigation {
@@ -408,20 +419,19 @@ body:hover .latest {
     font-size: 75%;
   }
 
-  code,
-  pre {
+  pre,
+  code {
     font-family: @fontstack-monospace;
     color: @code-color;
   }
 
-  p code,
-  li code {
-    font-size: 92%;
-    word-wrap: break-word;
-  }
-
   pre {
     background: fade(#08f, 4%);
+  }
+
+  code {
+    font-size: 92%;
+    overflow-wrap: break-word;
   }
 
   // TODO: Need refine
@@ -491,6 +501,11 @@ body:hover .latest {
     @media (max-width: @breakpoint-sm) {
       .padding-offset(@space-sm);
       .margin-offset(-@space-sm);
+    }
+
+    // Reset overflow for code in code blocks
+    code {
+      overflow-wrap: normal;
     }
   }
 
