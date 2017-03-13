@@ -6,10 +6,10 @@
 // TODO: need better solution
 // Apply `font-feature` for Apple devices, since these features are only
 // available for San Francisco. implemented in `app.js`
-.system {
+.js-system {
 
   &--apple {
-    font-feature-settings: @font-features;
+    font-feature-settings: "case", "ss01", "ss02";
   }
 }
 
