@@ -1,3 +1,26 @@
+<a name="1.1.8"></a>
+## [1.1.8](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.7...v1.1.8) (2017-03-13)
+
+
+### Bug Fixes
+
+* **curtana:** avoid applying `font-feature-settings` for non-Apple devices ([2f1f6fa](https://github.com/sparanoid/almace-scaffolding/commit/2f1f6fa))
+* **header:** extra whitespace for links in header ([ebd2241](https://github.com/sparanoid/almace-scaffolding/commit/ebd2241))
+* **style:** script generated styles been removed by `uncss` ([5e78d47](https://github.com/sparanoid/almace-scaffolding/commit/5e78d47))
+
+
+### Features
+
+* **curtana:** global font smoothing ([57bd509](https://github.com/sparanoid/almace-scaffolding/commit/57bd509))
+* **curtana:** simplify code wrapping using `overflow-wrap` ([3f9d0f8](https://github.com/sparanoid/almace-scaffolding/commit/3f9d0f8))
+* **grunt:** more aggressive autoprefixer config ([ba74276](https://github.com/sparanoid/almace-scaffolding/commit/ba74276))
+* **header:** use `slugify` name for header link state comparison ([fe98930](https://github.com/sparanoid/almace-scaffolding/commit/fe98930))
+* **script:** use minified script ([c83b5d2](https://github.com/sparanoid/almace-scaffolding/commit/c83b5d2))
+* **template:** unify `header` naming ([48cf486](https://github.com/sparanoid/almace-scaffolding/commit/48cf486))
+* **template:** use inline css option for error page ([303d873](https://github.com/sparanoid/almace-scaffolding/commit/303d873))
+
+
+
 <a name="1.1.7"></a>
 ## [1.1.7](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.6...v1.1.7) (2017-02-16)
 
