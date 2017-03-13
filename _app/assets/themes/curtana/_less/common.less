@@ -156,14 +156,16 @@ body:hover .latest {
       }
 
       svg {
-        display: block;
-        max-width: 100%;
       }
 
-      // Override margin from article img
       svg,
       img {
-        // avoid header stretched by global img styles
+        // Normalize image size
+        display: block;
+        max-width: 100%;
+
+        // Override margin from article img, avoid header stretched by global
+        // img styles
         margin-left: 0;
         margin-right: 0;
         margin-bottom: .3em;
