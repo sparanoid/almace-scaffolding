@@ -15,11 +15,12 @@
 
 // Main navigation
 @nav-padding: 1.4vmax;
+@nav-item-space: 1vmax;
 .navigation {
   padding-top: @nav-padding;
   padding-bottom: @nav-padding;
-  margin-right: -1.1em;
-  margin-left: -1.1em;
+  margin-right: -@nav-item-space;
+  margin-left: -@nav-item-space;
   font-size: 60%;
   font-weight: bold;
   letter-spacing: .45em;
@@ -31,7 +32,7 @@
     list-style: none;
 
     a {
-      padding: .5em 1.2em;
+      padding: .5em @nav-item-space;
 
       &:hover,
       &:focus {
@@ -846,7 +847,7 @@ body:hover .latest {
       display: inline;
 
       &:after {
-        padding: 0 .6vw;
+        padding: 0 @nav-item-space;
         content: " / ";
         opacity: .3;
       }
