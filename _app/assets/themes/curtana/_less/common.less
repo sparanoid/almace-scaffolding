@@ -659,29 +659,6 @@ body:hover .latest {
   }
 }
 
-// Fix empty space when a paragraph starts with quote marks and some asian
-// punctuation marks, class names are powered by `grunt-leading-quotes`
-.leading-indent-fix {
-
-  & { text-indent: -.39em; }
-  &--double-quotes { text-indent: -.45em; }
-  &--single-quotes { text-indent: -.28em; }
-  &--chinese-corner-bracket { text-indent: -.6em; }
-  &--chinese-white-corner-bracket { text-indent: -.56em; }
-  &--fullwidth-parenthesis { text-indent: -.62em; }
-
-  // Special heading indent fix with `@heading-letter-spacing` offset
-  h1& {
-    &--double-quotes { text-indent: (-.45em - @heading-letter-spacing); }
-    &--single-quotes { text-indent: (-.28em - @heading-letter-spacing); }
-  }
-
-  // Reset indent for list, otherwise it looks weird
-  li & {
-    text-indent: 0;
-  }
-}
-
 // Tweet button margin fix
 .post-modified-date {
   font-size: 75%;
