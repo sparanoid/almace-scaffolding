@@ -85,7 +85,6 @@ module.exports = (grunt) ->
         files: ["<%= config.app %>/**/*", "!_*", "_config*.yml"]
         tasks: [
           "jekyll:serve"
-          "newer:leading_quotes"
         ]
 
     uglify:
@@ -262,21 +261,6 @@ module.exports = (grunt) ->
         htmlroot: "<%= config.dist %>"
 
       dist:
-        files: [
-          expand: true
-          cwd: "<%= config.dist %>"
-          src: "**/*.html"
-          dest: "<%= config.dist %>"
-        ]
-
-    leading_quotes:
-      options:
-        elements: "p, h1, h2, h3, h4, h5, h6"
-        regex: /「|『|“|‘|（/
-        class: "leading-indent-fix"
-        verbose: true
-
-      main:
         files: [
           expand: true
           cwd: "<%= config.dist %>"
@@ -686,7 +670,6 @@ module.exports = (grunt) ->
     "less:serve"
     "postcss:serve"
     "jekyll:serve"
-    "leading_quotes"
     "browserSync"
     "watch"
   ]
@@ -711,7 +694,6 @@ module.exports = (grunt) ->
     "postcss:dist"
     "csscomb"
     "jekyll:dist"
-    "leading_quotes"
     "cssmin"
     "assets_inline"
     "uncss_inline"
