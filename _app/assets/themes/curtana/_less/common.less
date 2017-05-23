@@ -15,11 +15,12 @@
 
 // Main navigation
 @nav-padding: 1.4vmax;
+@nav-item-space: 1vmax;
 .navigation {
   padding-top: @nav-padding;
   padding-bottom: @nav-padding;
-  margin-right: -1.1em;
-  margin-left: -1.1em;
+  margin-right: -@nav-item-space;
+  margin-left: -@nav-item-space;
   font-size: 60%;
   font-weight: bold;
   letter-spacing: .45em;
@@ -31,7 +32,7 @@
     list-style: none;
 
     a {
-      padding: .5em 1.2em;
+      padding: .5em @nav-item-space;
 
       &:hover,
       &:focus {
@@ -156,14 +157,16 @@ body:hover .latest {
       }
 
       svg {
-        display: block;
-        max-width: 100%;
       }
 
-      // Override margin from article img
       svg,
       img {
-        // avoid header stretched by global img styles
+        // Normalize image size
+        display: block;
+        max-width: 100%;
+
+        // Override margin from article img, avoid header stretched by global
+        // img styles
         margin-left: 0;
         margin-right: 0;
         margin-bottom: .3em;
@@ -654,28 +657,12 @@ body:hover .latest {
       text-align: start;
     }
   }
-}
 
-// Fix empty space when a paragraph starts with quote marks and some asian
-// punctuation marks, class names are powered by `grunt-leading-quotes`
-.leading-indent-fix {
+  ruby {
 
-  & { text-indent: -.39em; }
-  &--double-quotes { text-indent: -.45em; }
-  &--single-quotes { text-indent: -.28em; }
-  &--chinese-corner-bracket { text-indent: -.6em; }
-  &--chinese-white-corner-bracket { text-indent: -.56em; }
-  &--fullwidth-parenthesis { text-indent: -.62em; }
-
-  // Special heading indent fix with `@heading-letter-spacing` offset
-  h1& {
-    &--double-quotes { text-indent: (-.45em - @heading-letter-spacing); }
-    &--single-quotes { text-indent: (-.28em - @heading-letter-spacing); }
-  }
-
-  // Reset indent for list, otherwise it looks weird
-  li & {
-    text-indent: 0;
+    rt {
+      text-align: start;
+    }
   }
 }
 
@@ -844,7 +831,7 @@ body:hover .latest {
       display: inline;
 
       &:after {
-        padding: 0 .6vw;
+        padding: 0 @nav-item-space;
         content: " / ";
         opacity: .3;
       }
