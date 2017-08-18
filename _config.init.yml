@@ -51,7 +51,7 @@ kramdown:
 # Jekyll plugins
 #
 
-gems:
+plugins:
   - jekyll-last-modified-at
   - match_regex
 
