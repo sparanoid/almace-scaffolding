@@ -18,7 +18,7 @@
 
 {% if page.path contains "_posts" %}
   <meta property="article:published_time" content="{{ amsf_page_pubdate | date_to_xmlschema }}">
-  <meta property="article:modified_time" content="{{ amsf_page_update | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ amsf_page_update | strip | date_to_xmlschema }}">
   <meta name="twitter:label1" value="Words">
   <meta name="twitter:data1" value="{{ amsf_page_words | strip }}">
   <meta name="twitter:label2" value="Reading time">
