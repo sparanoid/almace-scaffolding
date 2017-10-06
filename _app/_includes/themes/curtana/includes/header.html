@@ -5,7 +5,7 @@
       {% include amsf/relative_url url=item.url %}
       {% assign item_url = amsf_relative_url | strip %}
       {% assign lowercased_title = item.title | slugify %}
-      <li {% if page.permalink == item.url or page.category == lowercased_title %}class=current{% endif %}>
+      <li {% if page.title == item.title or page.collection == lowercased_title or page.category == lowercased_title %}class=current{% endif %}>
         <a href="{{ item_url }}">
           {% if item.title == "__home__" %}
             {{ site.name }}
