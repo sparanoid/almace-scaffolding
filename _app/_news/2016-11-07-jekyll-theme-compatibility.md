@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Jekyll Theme Compatibility
-category: news
 ---
 
 With recent release of Jekyll, it gets the built-in ability to support [themes](https://jekyllrb.com/docs/themes/), since we've already added theme support in 2015, the original config variables `theme` would be conflicted with the built-in one.
