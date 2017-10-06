@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Error‽
-permalink: /404.html
 desc: 錯誤・エラー・Oops
 category: home
 css: |
