@@ -13,8 +13,6 @@ timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
-include:        ["_pages"]
-exclude:        ["_pages/themes"]
 
 #
 # Jekyll serve settings
@@ -27,6 +25,49 @@ port:           4321
 #
 
 future:         false
+
+#
+# Jekyll content defaults
+#
+
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      type: pages
+    values:
+      layout: page
+  -
+    scope:
+      type: news
+    values:
+      layout: post
+  -
+    scope:
+      path: docs
+    values:
+      layout: post
+
+#
+# Jekyll collections
+#
+
+collections:
+  pages:
+    output:     true
+    permalink:  /:path/
+
+  news:
+    output:     true
+    permalink:  /:collection/:title/
+
+  docs:
+    output:     true
+    permalink:  /:collection/:title/
 
 #
 # Markdown settings
@@ -149,12 +190,12 @@ file:           https://d349cztnlupsuf.cloudfront.net
 # Default:      https://d1bmx7s6749k4k.cloudfront.net
 download:       https://d1bmx7s6749k4k.cloudfront.net
 
-# Primary color
+# Colors
 #
 # Used by Safari mask-icon, Chrome Web App theme color
-#
-# Default       "#ff00b4"
-primary_color:  "#ff00b4"
+colors:
+  theme:        "#ff00b4"
+  background:   "#fff"
 
 # Service Worker Precache
 service_worker:
