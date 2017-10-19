@@ -2,7 +2,8 @@
 layout: post
 title: Deployment Methods
 category: note
-tags: deployment
+tags:
+  - 4. Deployment
 ---
 
 Sites generated using Almace Scaffolding can be deployed in nearly any web hosting services. A few of the most common deployment techniques are described below. More deployment methods please refer to [Jekyll - Deployment methods](https://jekyllrb.com/docs/deployment-methods/).
