@@ -95,6 +95,7 @@ kramdown:
 plugins:
   - jekyll-last-modified-at
   - match_regex
+  - replace_regex
 
 #
 # Almace Scaffolding settings

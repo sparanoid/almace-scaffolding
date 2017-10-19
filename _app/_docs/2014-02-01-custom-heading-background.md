@@ -2,13 +2,14 @@
 layout: post
 title: Custom Heading Background
 category: note
-tags: curtana
 heading-bg: img/heading-background-example.jpg
 heading-bg-local: true
 heading-bg-color: "#070708"
 heading-bg-size: "cover"
 heading-bg-repeat: "no-repeat"
 heading-bg-text: "#fff"
+tags:
+  - 3. Theme Curtana
 ---
 
 This is an example of custom heading background. You can simply add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):

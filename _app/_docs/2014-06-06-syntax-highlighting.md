@@ -2,7 +2,8 @@
 layout: post
 title: Syntax Highlighting
 category: note
-tags: miscellaneous
+tags:
+  - 9. Miscellaneous
 ---
 
 Code highlighting demo, powered by Rouge. More info about code highlighting can be found at [Jekyll's documentation](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
