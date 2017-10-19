@@ -13,6 +13,7 @@ timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
+exclude:        ["_pages/themes"]
 
 #
 # Jekyll serve settings
@@ -43,6 +44,11 @@ defaults:
       layout: page
   -
     scope:
+      type: static
+    values:
+      layout: blank
+  -
+    scope:
       type: news
     values:
       layout: post
@@ -57,9 +63,16 @@ defaults:
 #
 
 collections:
+  posts:
+    output:     true
+
   pages:
     output:     true
     permalink:  /:path/
+
+  static:
+    output:     true
+    permalink:  /:path
 
   news:
     output:     true
