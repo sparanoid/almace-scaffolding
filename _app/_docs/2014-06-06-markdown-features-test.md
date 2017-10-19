@@ -2,7 +2,8 @@
 layout: post
 title: Markdown Features Test
 category: note
-tags: miscellaneous
+tags:
+  - 9. Miscellaneous
 ---
 
 ## Indented Code Blocks

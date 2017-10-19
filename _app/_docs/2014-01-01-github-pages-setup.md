@@ -1,7 +1,8 @@
 ---
 title: GitHub Pages Setup Guide
 category: note
-tags: deployment
+tags:
+  - 4. Deployment
 ---
 
 ## The Problem

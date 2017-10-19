@@ -3,7 +3,8 @@ layout: post
 title: Open Graph
 category: note
 plugin: lightense
-tags: curtana
+tags:
+  - 3. Theme Curtana
 ---
 
 Theme Curtana has full [Open Graph](http://ogp.me/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support.
