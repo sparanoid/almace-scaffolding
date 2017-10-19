@@ -2,7 +2,8 @@
 layout: post
 title: Creating Your Own Theme
 category: note
-tags: customization
+tags:
+  - 2. Customization
 ---
 
 ## Overview

@@ -3,7 +3,8 @@ layout: post
 title: Custom HTML Markups
 category: note
 plugin: lightense
-tags: curtana
+tags:
+  - 3. Theme Curtana
 ---
 
 ## `.note`, `.store`, and `.download`

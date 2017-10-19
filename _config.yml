@@ -13,7 +13,6 @@ timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
-include:        ["_pages"]
 exclude:        ["_pages/themes"]
 
 #
@@ -27,6 +26,61 @@ port:           4321
 #
 
 future:         false
+
+#
+# Jekyll content defaults
+#
+
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      type: pages
+    values:
+      layout: page
+  -
+    scope:
+      type: static
+    values:
+      layout: blank
+  -
+    scope:
+      type: news
+    values:
+      layout: post
+  -
+    scope:
+      path: docs
+    values:
+      layout: post
+
+#
+# Jekyll collections
+#
+
+collections:
+  posts:
+    output:     true
+
+  pages:
+    output:     true
+    permalink:  /:path/
+
+  static:
+    output:     true
+    permalink:  /:path
+
+  news:
+    output:     true
+    permalink:  /:collection/:title/
+
+  docs:
+    output:     true
+    permalink:  /:collection/:title/
 
 #
 # Markdown settings
@@ -54,6 +108,7 @@ kramdown:
 plugins:
   - jekyll-last-modified-at
   - match_regex
+  - replace_regex
 
 #
 # Almace Scaffolding settings
