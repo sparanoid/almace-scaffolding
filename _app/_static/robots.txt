@@ -1,4 +1,5 @@
 ---
+layout: blank
 ---
 
 {% for post in site.robots
