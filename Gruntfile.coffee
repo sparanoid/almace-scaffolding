@@ -569,11 +569,6 @@ module.exports = (grunt) ->
         # tunnel: "<%= config.pkg.name %>"
         # online: true
         open: true
-        browser: [
-          "safari"
-          "google chrome"
-          "firefox"
-        ]
         notify: true
 
     conventionalChangelog:
