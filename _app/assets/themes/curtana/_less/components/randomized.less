@@ -17,13 +17,13 @@
 
 // Reset background
 //
-// `.highlight > pre`              - Jekyll liquid code blocks
-// `.highlighter-rouge .highlight` - Rouge GFM code blocks
+// `.highlight > pre`                 - Jekyll liquid code blocks
+// `.highlighter-rouge pre.highlight` - Rouge GFM code blocks
 //
 // Ref: https://github.com/jekyll/jekyll/pull/4053
 @highlighter-tint: @link-color;
 .highlight > pre,
-.highlighter-rouge .highlight {
+.highlighter-rouge pre.highlight {
   .calc-bg(@highlighter-tint);
   background: fade(@calc-bg, 2%);
 }
