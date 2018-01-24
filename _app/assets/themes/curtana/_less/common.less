@@ -438,7 +438,7 @@ body:hover .latest {
   }
 
   // TODO: Need refine
-  // Date: Jan 18, 2017, 8:24 PM
+  // Date: Jan 24, 2018, 5:37 PM
   //
   // Jekyll (liquid) {% highlight %} method and GFM method generates different
   // markup for code blocks, this result in different CSS styling for different
@@ -448,8 +448,9 @@ body:hover .latest {
   //
   // ```
   // div.language-js.highlighter-rouge
-  //   pre.highlight
-  //     code
+  //   div.highlight
+  //     pre.highlight
+  //       code
   // ```
   //
   // ## GFM method with `line_numbers` enabled under `syntax_highlighter_opts`
@@ -486,7 +487,7 @@ body:hover .latest {
   // ```
   pre,
   .highlight > pre,
-  .highlighter-rouge .highlight {
+  .highlighter-rouge pre.highlight {
     padding: @space-xs;
     .margin-offset(-@space-xs);
     margin-bottom: 1.8rem;
