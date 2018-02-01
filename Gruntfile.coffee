@@ -8,7 +8,6 @@ module.exports = (grunt) ->
     "bump-only": "grunt-bump"
     gitclone: "grunt-git"
     replace: "grunt-text-replace"
-    usebanner: "grunt-banner"
 
   # Track tasks load time
   require("time-grunt") grunt
@@ -65,6 +64,8 @@ module.exports = (grunt) ->
       coffee:
         files: ["<%= coffeelint.gruntfile.src %>"]
         tasks: ["coffeelint:gruntfile"]
+        options:
+          reload: true
 
       js:
         files: ["<%= config.app %>/**/_js/**/*.js"]
@@ -80,12 +81,6 @@ module.exports = (grunt) ->
         ]
         options:
           interrupt: true
-
-      jekyll:
-        files: ["<%= config.app %>/**/*", "!_*", "_config*.yml"]
-        tasks: [
-          "jekyll:serve"
-        ]
 
     uglify:
       options:
@@ -294,21 +289,15 @@ module.exports = (grunt) ->
           maximumFileSizeToCacheInBytes: "<%= config.cfg.service_worker.max_size %>"
           staticFileGlobs: "<%= config.cfg.service_worker.files %>"
 
-    usebanner:
-      options:
-        position: "bottom"
-        banner: "<%= config.banner %>"
-
-      dist:
-        files:
-          src: ["<%= config.dist %>/**/*.html"]
-
     jekyll:
       options:
         bundleExec: true
 
       serve:
         options:
+          serve: true
+          incremental: true
+          livereload: true
           config: "_config.yml,_amsf.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.dev.yml"
           dest: "<%= config.dist %><%= config.base_dev %>"
           drafts: true
@@ -376,6 +365,12 @@ module.exports = (grunt) ->
     concurrent:
       options:
         logConcurrentOutput: true
+
+      serve:
+        tasks: [
+          "jekyll:serve"
+          "watch"
+        ]
 
       dist:
         tasks: [
@@ -546,31 +541,6 @@ module.exports = (grunt) ->
           }
         ]
 
-    browserSync:
-      bsFiles:
-        src: ["<%= config.dist %>/**"]
-      options:
-        watchTask: true
-        server:
-          baseDir: "<%= config.dist %>"
-        port: "<%= config.cfg.port %>"
-        ghostMode:
-          clicks: true
-          scroll: true
-          location: true
-          forms: true
-        logFileChanges: false
-        snippetOptions:
-          rule:
-            match: /<!-- BS_INSERT -->/i
-            fn: (snippet, match) ->
-              match + snippet
-        # Uncomment the following options for client presentation
-        # tunnel: "<%= config.pkg.name %>"
-        # online: true
-        open: true
-        notify: true
-
     conventionalChangelog:
       options:
         changelogOpts:
@@ -664,9 +634,7 @@ module.exports = (grunt) ->
     "copy:serve"
     "less:serve"
     "postcss:serve"
-    "jekyll:serve"
-    "browserSync"
-    "watch"
+    "concurrent:serve"
   ]
 
   grunt.registerTask "test", "Build test task", ->

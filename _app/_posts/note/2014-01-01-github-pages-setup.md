@@ -9,7 +9,7 @@ tags: deployment
 
 Unfortunately this project doesn't work with GitHub Pages or GitHub Pages for projects. There're some factors that prevent it from generating pages:
 
-- Many features Almace Scaffolding provides like live reloading, Less support, inline SVG, and HTML minification are implemented using [Grunt.js](http://gruntjs.com/), it's not supported by GitHub Pages.
+- Many features Almace Scaffolding provides like LiveReload, Less support, inline SVG, and HTML minification are implemented using [Grunt.js](http://gruntjs.com/), it's not supported by GitHub Pages.
 - Almace Scaffolding uses the latest pre-release Jekyll, so not all features are supported by GitHub Pages renderers.
 - GItHub Pages build server [overwrites the `source` settings](https://help.github.com/articles/pages-don-t-build-unable-to-run-jekyll#source-setting). This prevent it generating pages from current file structure.
 
