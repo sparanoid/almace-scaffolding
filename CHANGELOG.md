@@ -1,3 +1,13 @@
+<a name="1.1.10"></a>
+## [1.1.10](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.9...v1.1.10) (2018-02-01)
+
+
+### Features
+
+* **jekyll:** use native livereload for better performance ([5a75298](https://github.com/sparanoid/almace-scaffolding/commit/5a75298))
+
+
+
 <a name="1.1.9"></a>
 ## [1.1.9](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.8...v1.1.9) (2018-01-24)
 
