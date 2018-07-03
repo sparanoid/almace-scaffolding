@@ -4,8 +4,8 @@
 {% include amsf/type type=include.type %}
 {% include amsf/author %}
 {% include amsf/hostname %}
-{% include amsf/site_title %}
-{% include amsf/site_desc %}
+{% include amsf/title %}
+{% include amsf/desc %}
 {% include amsf/urls %}
 {% include amsf/dates %}
 {% include amsf/lang %}
