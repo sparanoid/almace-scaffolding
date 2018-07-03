@@ -33,7 +33,14 @@
   {%- endif -%}
 
   {%- if page_title == site_name or page.permalink == '/' -%}
-    {{ site_name }} - {{ site_description }}
+    {%- comment -%}
+      force using `page.title` if defined in homepage
+    {%- endcomment -%}
+    {%- if page.title -%}
+      {{ page_title }} - {{ site_name }}
+    {%- else -%}
+      {{ site_name }} - {{ site_description }}
+    {%- endif -%}
   {%- else -%}
     {{ page_title }} - {{ site_name }}
   {%- endif -%}
