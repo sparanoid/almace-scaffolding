@@ -1,6 +1,6 @@
-{% comment %}
+{%- comment -%}
   Site description
-{% endcomment %}
+{%- endcomment -%}
 {%- capture amsf_site_desc -%}
   {%- if page.permalink != '/' -%}
     {%- if page.desc -%}
