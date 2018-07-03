@@ -1,6 +1,6 @@
-{% comment %}
+{%- comment -%}
   Site name
-{% endcomment %}
+{%- endcomment -%}
 {%- capture amsf_site_name -%}
   {%- if site.name.first -%}
     {{ site.name[site.active_lang] }}
@@ -9,10 +9,10 @@
   {%- endif -%}
 {%- endcapture -%}
 
-{% comment %}
+{%- comment -%}
   Site title
   = site name + site desc
-{% endcomment %}
+{%- endcomment -%}
 {%- capture amsf_site_title -%}
   {%- if site.name.first -%}
     {%- assign site_name = site.name[site.active_lang] -%}
@@ -39,9 +39,9 @@
   {%- endif -%}
 {%- endcapture -%}
 
-{% comment %}
+{%- comment -%}
   Page title
-{% endcomment %}
+{%- endcomment -%}
 {%- capture amsf_page_title -%}
   {%- if page.title.first -%}
     {{ page.title[site.active_lang] }}
@@ -50,9 +50,9 @@
   {%- endif -%}
 {%- endcapture -%}
 
-{% comment %}
+{%- comment -%}
   Post title
-{% endcomment %}
+{%- endcomment -%}
 {%- capture amsf_post_title -%}
   {%- if post.title.first -%}
     {{ post.title[site.active_lang] }}

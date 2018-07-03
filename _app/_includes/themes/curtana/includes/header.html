@@ -2,7 +2,7 @@
 <nav class="navigation">
   <ul>
     {% for item in site.data.header %}
-      {% include amsf/relative_url url=item.url %}
+      {%- include amsf/relative_url url=item.url -%}
       {% assign item_url = amsf_relative_url | strip %}
       {% assign lowercased_title = item.title | slugify %}
       <li {% if page.permalink == item.url or page.category == lowercased_title %}class=current{% endif %}>
