@@ -11,14 +11,14 @@
 <!-- Dynamic link color based on post color scheme -->
 {% capture post_link_color %}
   {% if custom_scheme %}
-    style="color: {{ amsf_page_theme_color | strip }};"
+    style="color: {{ amsf_page_theme_color }};"
   {% endif %}
 {% endcapture %}
 
 <!-- Dynamic background color based on post color scheme -->
 {% capture post_link_bg %}
   {% if custom_scheme %}
-    style="background: {{ amsf_page_theme_color | strip }};"
+    style="background: {{ amsf_page_theme_color }};"
   {% endif %}
 {% endcapture %}
 
