@@ -323,7 +323,7 @@ This allow you to show average reading time of current post.
 Template:
 
 ```html
-Reading time: {% raw %}{{ amsf_page_reading_time | strip }}{% endraw %}
+Reading time: {% raw %}{{ amsf_page_reading_time }}{% endraw %}
 ```
 
 Output:
