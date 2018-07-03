@@ -12,7 +12,7 @@
   <meta charset="utf-8">
 {% endif %}
 
-<title>{{ amsf_page_title }}{{ amsf_site_title }}</title>
+<title>{{ amsf_site_title | strip_html | xml_escape }}</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 

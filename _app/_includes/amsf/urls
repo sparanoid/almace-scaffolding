@@ -33,11 +33,6 @@
 {% endcapture %}
 
 {% comment %}
-  Page title
-{% endcomment %}
-{% capture amsf_page_title %}{{ page.title | strip_html | xml_escape }}{% endcapture %}
-
-{% comment %}
   Page URL (full URl with `site.url`)
 {% endcomment %}
 {% capture amsf_page_url %}{{ page.url | absolute_url | replace: '/index.html', '/' | replace: '/index.htm', '/' | replace: '/index.xml', '/' }}{% endcapture %}
