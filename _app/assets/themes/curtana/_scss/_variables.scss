@@ -2,34 +2,15 @@
 // Variables
 // --------------------------------------------------
 
-// Typography
-$fontstack-prefix: -apple-system, BlinkMacSystemFont;
-$fontstack-sans-serif: "Helvetica Neue", Arial, sans-serif;
-$fontstack-serif: Georgia, serif;
-$fontstack-monospace: Menlo, Consolas, monospace;
-$fontstack-default: $fontstack-prefix, $fontstack-sans-serif;
-$font-size: 1.6vw;
-$font-features: "case", "ss01", "ss02";
-$line-height: (20 / 14); // ~ 1.428571429
-$heading-letter-spacing: -.04em;
+// TODO: We're in the process of transfering Sass variables to CSS native
+// variables, since CSS variables still don't support media query and color
+// manipulation, I still need some Sass variables here.
 
 // Layout
 $breakpoint-lg: 1600px;
 $breakpoint-md: 1080px;
 $breakpoint-sm: 640px;
 $breakpoint-xs: 400px;
-$breakpoint-default: $breakpoint-md;
-
-$space-lg: 24vw;
-$space-md: 8vw;
-$space-sm: 4vw;
-$space-xs: 1.2vw;
-$space-default: $space-md;
-
-$border-lg: 4px;
-$border-md: 2px;
-$border-sm: 1px;
-$border-default: $border-md;
 
 // Colors
 $link-color: #a212d1;
@@ -54,24 +35,21 @@ $code-color: #00cc80;
   --breakpoint-lg: 1600px;
   --breakpoint-sm: 640px;
   --breakpoint-xs: 400px;
-  --breakpoint-default: var(--breakpoint-md);
 
   --space-lg: 24vw;
   --space-md: 8vw;
   --space-sm: 4vw;
   --space-xs: 1.2vw;
-  --space-default: var(--space-md);
 
   --border-lg: 4px;
   --border-md: 2px;
   --border-sm: 1px;
-  --border-default: var(--border-md);
 
   // Colors
-  --link-color: #a212d1;
-  --background-color: #fff;
-  --text-color: #000;
-  --code-color: #00cc80;
+  --link-color: $link-color;
+  --background-color: $background-color;
+  --text-color: $text-color;
+  --code-color: $code-color;
 
   // Nav
   --nav-padding: 1.4vmax;
