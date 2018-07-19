@@ -1,0 +1,92 @@
+//
+// Print
+// --------------------------------------------------
+
+// Style fixes for priting
+
+@media print {
+
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; // Black prints faster: h5bp.com/s
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    padding: 10mm !important;
+    margin: 0 !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  .content header {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  .content .post-content,
+  .content .page-content {
+    max-width: 100% !important;
+
+    a[href]:after {
+      content: " (" attr(href) ")";
+      font-weight: normal;
+    }
+
+    // Don't show links that are fragment identifiers,
+    // or use the `javascript:` pseudo protocol
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+      content: "";
+    }
+
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+      font-weight: normal;
+    }
+  }
+
+  pre,
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .navigation,
+  .footer {
+    display: none;
+  }
+}
