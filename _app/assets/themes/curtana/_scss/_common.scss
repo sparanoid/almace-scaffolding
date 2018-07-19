@@ -368,7 +368,7 @@ body:hover .latest {
 
     > p {
       padding-left: var(--space-xs);
-      border-left: var(--border-default) solid;
+      border-left: var(--border-md) solid;
 
       // TODO: Need better solution
       // We will reset the common margin-bottom to get gapless borders for
@@ -387,7 +387,7 @@ body:hover .latest {
       }
 
       @media (max-width: $breakpoint-sm) {
-        @include padding-offset(calc(var(--space-sm) - var(--border-default)), var(--space-sm));
+        @include padding-offset(calc(var(--space-sm) - var(--border-md)), var(--space-sm));
         @include margin-offset(calc(var(--space-sm) * -1));
       }
     }
@@ -622,7 +622,7 @@ body:hover .latest {
     }
 
     th {
-      border-bottom: var(--border-default) solid rgba($text-color, .06); // Override default user agent stylesheet
+      border-bottom: var(--border-md) solid rgba($text-color, .06); // Override default user agent stylesheet
       text-align: left;
     }
 
@@ -718,10 +718,10 @@ body:hover .latest {
 .download {
   padding-left: var(--space-xs);
   margin-left: calc(var(--space-xs) * -1);
-  border-left: var(--border-default) solid var(--link-color);
+  border-left: var(--border-md) solid var(--link-color);
 
   @media (max-width: $breakpoint-sm) {
-    @include padding-offset(calc(var(--space-sm) - var(--border-default)), var(--space-sm));
+    @include padding-offset(calc(var(--space-sm) - var(--border-md)), var(--space-sm));
     @include margin-offset(calc(var(--space-sm) * -1));
   }
 }
