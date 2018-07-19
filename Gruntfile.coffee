@@ -2,6 +2,9 @@
 
 module.exports = (grunt) ->
 
+  # Load Sass deps
+  sass = require('node-sass')
+
   # Load all grunt tasks
   require("jit-grunt") grunt,
     "bump-commit": "grunt-bump"
@@ -141,8 +144,11 @@ module.exports = (grunt) ->
     sass:
       serve:
         options:
-          sourcemap: "inline"
-          style: "nested"
+          implementation: sass
+          outputStyle: "nested"
+          precision: 10
+          sourceMapContents: true
+          sourceMapEmbed: true
 
         files: [
           expand: true
