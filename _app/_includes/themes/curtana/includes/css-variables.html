@@ -1,25 +1,24 @@
 <!-- Post specified styles -->
 <style data-assets-inline>
-  /*
-    TODO: You have to speicify background color for `html` in order to make `-webkit-filter` work
-    Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
-    Date: Mar 1, 2016, 5:41 PM
-  */
-  html {
+  :root {
+    {% if page.scheme-link %}
+    --link-color: {{ page.scheme-link }};
+    {% endif %}
+
     {% if page.scheme-bg %}
-    background-color: {{ page.scheme-bg }};
+    --background-color: {{ page.scheme-bg }};
+    {% endif %}
+
+    {% if page.scheme-text %}
+    --text-color: {{ page.scheme-text }};
+    {% endif %}
+
+    {% if page.scheme-code %}
+    --code-color: {{ page.scheme-code }};
     {% endif %}
   }
 
   body {
-    {% if page.scheme-text %}
-    color: {{ page.scheme-text }};
-    {% endif %}
-
-    {% if page.scheme-bg %}
-    background-color: {{ page.scheme-bg }};
-    {% endif %}
-
     {% if page.scheme-bg-img %}
       {% assign first = true %}
       background-image:
@@ -35,19 +34,6 @@
       ;
     {% endif %}
   }
-
-  {% if page.scheme-text %}
-  a,
-  button {
-    color: {{ page.scheme-text }};
-  }
-  {% endif %}
-
-  {% if page.scheme-link %}
-  ::selection {
-    color: {{ page.scheme-link }};
-  }
-  {% endif %}
 
   {% if page.scheme-hover %}
   .navigation li a:hover,
@@ -82,48 +68,6 @@
 
   .content a {
     color: {{ page.scheme-link }};
-  }
-  {% endif %}
-
-  {% if page.scheme-code %}
-  .content code,
-  .content pre {
-    color: {{ page.scheme-code }};
-  }
-  {% endif %}
-
-  /*
-    TODO: Need a better solution. I have to redefine the whole box-shadow here because no invidual box-shadow-color exists
-    Date: Mar 12, 2016, 12:09 AM
-  */
-  {% if page.scheme-text %}
-  .content hr::before,
-  .footnotes::before {
-    background: {{ page.scheme-text }};
-    box-shadow: 24px 0 0 0 {{ page.scheme-text }}, -24px 0 0 0 {{ page.scheme-text }};
-  }
-  {% endif %}
-
-  {% if page.scheme-text and page.scheme-link %}
-  .note,
-  .store,
-  .download {
-    border-left-color: {{ page.scheme-link }};
-  }
-  {% endif %}
-
-  {% if page.scheme-link %}
-  .external .dot {
-    background: {{ page.scheme-link }};
-  }
-  {% endif %}
-
-  {% if page.scheme-hover %}
-  :target [rev=footnote],
-  :target [rel=footnote],
-  :target .reversefootnote,
-  :target .footnote {
-    color: {{ page.scheme-hover }};
   }
   {% endif %}
 </style>
