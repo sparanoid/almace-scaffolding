@@ -1,0 +1,115 @@
+//
+// Reset
+// --------------------------------------------------
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  text-size-adjust: none;
+  text-rendering: optimizelegibility;
+  image-rendering: optimizequality;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // TODO: You have to speicify background color for `html` in order to
+  //       make `-webkit-filter` work
+  // Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
+  // Date: Mar 1, 2016, 5:41 PM
+  background: @background-color;
+}
+
+body {
+  padding: 0 @space-lg;
+  margin: 0 auto 0;
+  font-family: @fontstack-default;
+  font-size: @font-size;
+  line-height: @line-height;
+  hanging-punctuation: first allow-end;
+  color: @text-color;
+  background: @background-color;
+  transition: all .2s ease;
+
+  @media (max-width: @breakpoint-md) {
+    .padding-offset(@space-md);
+    font-size: (@font-size * 1.4);
+  }
+
+  @media (max-width: @breakpoint-sm) {
+    .padding-offset(@space-sm);
+    font-size: (@font-size * 2.4);
+  }
+
+  @media (max-width: @breakpoint-xs) {
+    font-size: (@font-size * 3.2);
+  }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Reset unusual Firefox-on-Android default style.
+// See https://github.com/necolas/normalize.css/issues/214
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+
+// Reset common elements
+a, button {
+  color: @text-color;
+  text-decoration: none;
+  transition: color .5s ease, border-color .5s ease, background .5s ease, opacity 1.5s ease;
+
+  &:hover,
+  &:focus {
+    transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+
+  &[disabled] {
+    opacity: .4;
+    cursor: not-allowed;
+  }
+}
+
+button {
+  appearance: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+img, hr {
+  border: 0;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+::placeholder {
+  color: @text-color;
+  opacity: .2;
+
+  :focus& {
+    color: @link-color;
+  }
+}

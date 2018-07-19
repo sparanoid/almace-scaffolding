@@ -83,6 +83,15 @@ module.exports = (grunt) ->
         options:
           interrupt: true
 
+      sass:
+        files: ["<%= config.app %>/**/_scss/**/*.scss"]
+        tasks: [
+          "sass:serve"
+          "postcss:serve"
+        ]
+        options:
+          interrupt: true
+
     uglify:
       options:
         report: "gzip"
@@ -128,6 +137,26 @@ module.exports = (grunt) ->
 
       dist:
         files: "<%= less.serve.files %>"
+
+    sass:
+      serve:
+        options:
+          sourcemap: "inline"
+          style: "nested"
+
+        files: [
+          expand: true
+          cwd: "<%= amsf.theme.assets %>/_scss/"
+          src: ["**/app*.scss"]
+          dest: "<%= amsf.theme.assets %>/css/"
+          ext: ".css"
+        ]
+
+      dist:
+        options:
+          sourcemap: "compressed"
+
+        files: "<%= sass.serve.files %>"
 
     postcss:
       options:
@@ -633,7 +662,7 @@ module.exports = (grunt) ->
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean:main"
     "copy:serve"
-    "less:serve"
+    "sass:serve"
     "postcss:serve"
     "concurrent:serve"
   ]
@@ -654,7 +683,7 @@ module.exports = (grunt) ->
     "clean:main"
     "coffeelint"
     "uglify:dist"
-    "less:dist"
+    "sass:dist"
     "postcss:dist"
     "csscomb"
     "jekyll:dist"
