@@ -46,10 +46,10 @@ $code-color: #00cc80;
   --border-sm: 1px;
 
   // Colors
-  --link-color: $link-color;
-  --background-color: $background-color;
-  --text-color: $text-color;
-  --code-color: $code-color;
+  --link-color: #{$link-color};
+  --background-color: #{$background-color};
+  --text-color: #{$text-color};
+  --code-color: #{$code-color};
 
   // Nav
   --nav-padding: 1.4vmax;
