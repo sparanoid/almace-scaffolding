@@ -1,7 +1,7 @@
 //
 // User styles
 // --------------------------------------------------
-// All other vaiables in `variables.less` can be overwritten below
+// All other vaiables in `variables.scss` can be overwritten below
 // NOTE: the following user styles are designed for default theme Curtana
 //
 // EXAMPLE: alternative title size
@@ -20,24 +20,24 @@
 // EXAMPLE: alternative post title color
 // This is useful when you're using the custom color scheme.
 //
-// .content { .list h2 a, header h1, header h1 a { color: @link-color; } }
-// .external span { background: @link-color; }
+// .content { .list h2 a, header h1, header h1 a { color: $link-color; } }
+// .external span { background: $link-color; }
 //
 // EXAMPLE: custom header with background image
 //
 // .content header {
-//   color: @background-color;
-//   background: @link-color url('/assets/img/title-background-example.jpg') center center / cover;
+//   color: $background-color;
+//   background: $link-color url('/assets/img/title-background-example.jpg') center center / cover;
 // }
 //
 // EXAMPLE: Custom typography for Chinese Traditional
 //
-// @fontstack-sans-serif: "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
-// @fontstack-serif: Georgia, "Hiragino Mincho ProN", serif;
+// $fontstack-sans-serif: "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
+// $fontstack-serif: Georgia, "Hiragino Mincho ProN", serif;
 //
 // EXAMPLE: amsf.github.io custom appearance
 //
-@link-color: #ff00b4;
+$link-color: #ff00b4;
 
 .content .sub-title {
   font-size: 108%;
