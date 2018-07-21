@@ -6,12 +6,12 @@
 // @link-color: #a212d1;
 // @code-color: #00cc80;
 
-// Calculate code background color based on the lightness of link color
-.calc-bg (@v) when (lightness(@v) >= 80%) {
+// Calculate code background color based on the luminance of link color
+.calc-bg (@v) when (luminance(@v) >= 50%) {
   @calc-bg: mix(#fff, @v, 90%);
 }
 
-.calc-bg (@v) when (lightness(@v) < 80%) {
+.calc-bg (@v) when (luminance(@v) < 50%) {
   @calc-bg: mix(#000, @v, 70%);
 }
 
