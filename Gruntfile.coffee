@@ -63,7 +63,7 @@ module.exports = (grunt) ->
 
     watch:
       options:
-        spawn: false
+        spawn: true
 
       coffee:
         files: ["<%= coffeelint.gruntfile.src %>"]
