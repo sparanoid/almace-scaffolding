@@ -517,7 +517,7 @@ body:hover .latest {
       padding: 1vmin 0;
       margin: 0 0 1.8rem;
       border: none;
-      border-bottom: 1px solid rgba($text-color, .2);
+      border-bottom: 1px solid var(--text-color);
 
       // Remove border-radius for iOS devices
       border-radius: 0;
@@ -525,8 +525,6 @@ body:hover .latest {
       transition: padding .2s ease;
 
       &:focus {
-        padding: 1vmin;
-        background: rgba($text-color, .02);
         border-color: var(--text-color);
       }
     }
@@ -540,7 +538,7 @@ body:hover .latest {
     &:focus:required:invalid {
 
       &:focus {
-        background: rgba($link-color, .05);
+        color: var(--link-color);
         border-color: var(--link-color);
 
         // Override Firefox default styles
@@ -563,14 +561,6 @@ body:hover .latest {
     // overflow-x: auto;
     // white-space: nowrap;
 
-    // TODO: table shadow support
-    // background-image: radial-gradient(ellipse at left, rgba(0, 0, 0, .02) 0%, rgba(0, 0, 0, 0) 75%),
-    //                   radial-gradient(ellipse at right, rgba(0, 0, 0, .02) 0%, rgba(0, 0, 0, 0) 75%);
-    // background-size: 30px 100%, 30px 100%;
-    // background-position: 0 center, 100% center;
-    // background-attachment: scroll, scroll;
-    // background-repeat: no-repeat;
-
     // TODO: responsive table support
     @media (max-width: $breakpoint-md) {
       --space-table: var(--space-md);
@@ -580,11 +570,6 @@ body:hover .latest {
     @media (max-width: $breakpoint-sm) {
       --space-table: var(--space-sm);
       width: calc(100% + var(--space-table) * 2);
-
-      // TODO: table shadow support
-      // Darker shadow for mobile devices
-      // background-image: radial-gradient(ellipse at left, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 75%),
-      //                   radial-gradient(ellipse at right, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 75%);
     }
 
     th,
@@ -594,22 +579,10 @@ body:hover .latest {
 
       &:first-child {
         padding-left: var(--space-table-cell);
-
-        // TODO: table shadow support
-        // background-image: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0) 100%);
-        // background-repeat: no-repeat;
-        // background-position: 0 0;
-        // background-size: 50px 100%;
       }
 
       &:last-child {
         padding-right: var(--space-table-cell);
-
-        // TODO: table shadow support
-        // background-image: linear-gradient(to left, #fff 50%, rgba(255, 255, 255, 0) 100%);
-        // background-repeat: no-repeat;
-        // background-position: 100% 0;
-        // background-size: 50px 100%;
       }
 
       @media (max-width: $breakpoint-md) {
@@ -689,7 +662,12 @@ body:hover .latest {
     background: lighten(#f24e59, 30%);
     border-radius: 50%;
     content: "";
-    box-shadow: 16px 0 0 0 rgba(lighten(#fac536, 30%), .96), 32px 0 0 0 rgba(lighten(#26e93d, 30%), .96), 0 0 0 1px rgba(darken(#f24e59, 30%), .3), 16px 0 0 1px rgba(darken(#fac536, 30%), 30%), 32px 0 0 1px rgba(darken(#26e93d, 30%), .3);
+    box-shadow:
+      16px 0 0 0   rgba(lighten(#fac536, 30%), .96),
+      32px 0 0 0   rgba(lighten(#26e93d, 30%), .96),
+         0 0 0 1px rgba(darken(#f24e59, 30%), .3),
+      16px 0 0 1px rgba(darken(#fac536, 30%), .3),
+      32px 0 0 1px rgba(darken(#26e93d, 30%), .3);
   }
 
   img {
