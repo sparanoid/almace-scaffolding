@@ -38,6 +38,9 @@
 // EXAMPLE: amsf.github.io custom appearance
 //
 $link-color: #ff00b4;
+:root {
+  --link-color: #ff00b4;
+}
 
 .content .sub-title {
   font-size: 108%;
