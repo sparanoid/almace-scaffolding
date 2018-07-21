@@ -25,7 +25,7 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "autoprefixer": "^8.6.5",
+    "autoprefixer": "^9.0.1",
     "coffeelint": "^2.1.0",
     "grunt": "^1.0.3",
     "grunt-assets-inline": "^0.1.19",
