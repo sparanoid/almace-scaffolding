@@ -13,10 +13,10 @@ $breakpoint-sm: 640px;
 $breakpoint-xs: 400px;
 
 // Colors
-$link-color: #a212d1;
-$background-color: #fff;
-$text-color: #000;
-$code-color: #00cc80;
+$link-color: #a212d1 !default;
+$background-color: #fff !default;
+$text-color: #000 !default;
+$code-color: #00cc80 !default;
 
 :root {
   // Typography
