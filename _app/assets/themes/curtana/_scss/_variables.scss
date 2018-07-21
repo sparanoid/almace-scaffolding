@@ -1,16 +1,16 @@
 //
 // Variables
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // TODO: We're in the process of transfering Sass variables to CSS native
 // variables, since CSS variables still don't support media query and color
 // manipulation, I still need some Sass variables here.
 
 // Layout
-$breakpoint-lg: 1600px;
-$breakpoint-md: 1080px;
-$breakpoint-sm: 640px;
-$breakpoint-xs: 400px;
+$breakpoint-lg: 1600px !default;
+$breakpoint-md: 1080px !default;
+$breakpoint-sm: 640px !default;
+$breakpoint-xs: 400px !default;
 
 // Colors
 $link-color: #a212d1 !default;
