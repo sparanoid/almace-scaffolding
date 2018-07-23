@@ -18,4 +18,4 @@ From 2.0.0, Almace Scaffolding still has the ability to use Less with Grunt.js, 
 If you'd like to stick with the Less version:
 
 - v1.1.11 will be the last version that support Less.
-- Less version of theme Curtana will be avaiable as `amsf/curtana-less`.
+- Less version of theme Curtana will be avaiable as `amsf/amsf-curtana-less`.
