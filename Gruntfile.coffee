@@ -142,11 +142,13 @@ module.exports = (grunt) ->
         files: "<%= less.serve.files %>"
 
     sass:
+      options:
+        implementation: sass
+        precision: 10
+
       serve:
         options:
-          implementation: sass
           outputStyle: "nested"
-          precision: 10
           sourceMapContents: true
           sourceMapEmbed: true
 
@@ -160,7 +162,7 @@ module.exports = (grunt) ->
 
       dist:
         options:
-          sourcemap: "compressed"
+          outputStyle: "compressed"
 
         files: "<%= sass.serve.files %>"
 
