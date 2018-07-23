@@ -1,3 +1,19 @@
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.0...v2.0.1) (2018-07-23)
+
+
+### Bug Fixes
+
+* **css:** invalid font stack when `--fontstack-prefix` is empty ([6757818](https://github.com/sparanoid/almace-scaffolding/commit/6757818))
+* **css:** wrong variable ([0ba92a0](https://github.com/sparanoid/almace-scaffolding/commit/0ba92a0))
+
+
+### Features
+
+* **css:** update color variables ([02110f2](https://github.com/sparanoid/almace-scaffolding/commit/02110f2))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.10...v2.0.0) (2018-07-23)
 
