@@ -2,16 +2,16 @@
 <nav class="navigation">
   <ul>
     {% for item in site.data.header %}
-      {% include amsf/relative_url url=item.url %}
-      {% assign item_url = amsf_relative_url | strip %}
-      {% assign lowercased_title = item.title | slugify %}
+      {%- include amsf/relative_url url=item.url -%}
+      {%- assign item_url = amsf_relative_url -%}
+      {%- assign lowercased_title = item.title | slugify -%}
       <li {% if page.permalink == item.url or page.category == lowercased_title %}class=current{% endif %}>
         <a href="{{ item_url }}">
-          {% if item.title == "__home__" %}
-            {{ site.name }}
-          {% else %}
+          {%- if item.title == "__home__" -%}
+            {{ amsf_site_name }}
+          {%- else -%}
             {{ item.title }}
-          {% endif %}
+          {%- endif -%}
         </a>
       </li>
     {% endfor %}

@@ -12,18 +12,18 @@
   <meta charset="utf-8">
 {% endif %}
 
-<title>{{ amsf_page_title }}{{ amsf_site_title }}</title>
+<title>{{ amsf_site_title | strip_html | xml_escape }}</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <!-- Define a description for better SEO result -->
-<meta name="description" content="{{ amsf_site_desc | strip }}">
+<meta name="description" content="{{ amsf_site_desc }}">
 
 <!-- Cheome Web App theme color -->
-<meta name="theme-color" content="{{ amsf_theme_color | strip }}">
+<meta name="theme-color" content="{{ amsf_theme_color }}">
 
 <!-- Feed URL -->
-<link rel="alternate" href="{{ amsf_feed_url | strip }}" type="application/atom+xml">
+<link rel="alternate" href="{{ amsf_feed_url }}" type="application/atom+xml">
 
 <!-- Site icons -->
 {{ amsf_favicons }}

@@ -3,16 +3,55 @@
 //
 
 // Variables for standalone version
-// @link-color: #a212d1;
-// @code-color: #00cc80;
+// $link-color: #a212d1;
+// $code-color: #00cc80;
 
-// Calculate code background color based on the lightness of link color
-.calc-bg (@v) when (lightness(@v) >= 80%) {
-  @calc-bg: mix(#fff, @v, 90%);
+// Power
+@function pow($num, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $num;
+    }
+  }
+
+  @return $value;
 }
 
-.calc-bg (@v) when (lightness(@v) < 80%) {
-  @calc-bg: mix(#000, @v, 70%);
+// Returns the luminance of `$color` as a float (between 0 and 1)
+// https://css-tricks.com/snippets/sass/luminance-color-function/
+@function luminance($color) {
+  $colors: (
+    'red': red($color),
+    'green': green($color),
+    'blue': blue($color)
+  );
+
+  @each $name, $value in $colors {
+    $adjusted: 0;
+    $value: $value / 255;
+
+    @if $value < 0.03928 {
+      $value: $value / 12.92;
+    } @else {
+      $value: ($value + .055) / 1.055;
+      $value: pow($value, 2.4);
+    }
+
+    $colors: map-merge($colors, ($name: $value));
+  }
+
+  @return (map-get($colors, 'red') * .2126) + (map-get($colors, 'green') * .7152) + (map-get($colors, 'blue') * .0722);
+}
+
+// Calculate code background color based on the luminance of link color
+@function calc-bg($color) {
+  @if luminance($color) >= .5 {
+    @return mix(#fff, $color, 90%);
+  } @else {
+    @return mix(#000, $color, 70%);
+  }
 }
 
 // Reset background
@@ -21,11 +60,10 @@
 // `.highlighter-rouge pre.highlight` - Rouge GFM code blocks
 //
 // Ref: https://github.com/jekyll/jekyll/pull/4053
-@highlighter-tint: @link-color;
+$highlighter-tint: $link-color;
 .highlight > pre,
 .highlighter-rouge pre.highlight {
-  .calc-bg(@highlighter-tint);
-  background: fade(@calc-bg, 2%);
+  background: rgba(calc-bg($highlighter-tint), .02);
 }
 
 // General highlights
@@ -36,10 +74,10 @@
 .highlighter-rouge {
 
   // Reset default `code`
-  code { color: desaturate(@link-color, 95%); } // Normal code
+  code { color: desaturate($link-color, 95%); } // Normal code
 
   // Special background for syntax errors
-  .err { background-color: fade(saturate(@highlighter-tint, 10%), 10%) } // Error
+  .err { background-color: rgba(saturate($highlighter-tint, 10%), .1) } // Error
 
   .c   { font-style: italic } // Comment
   .cm  { font-style: italic } // Comment.Multiline
@@ -64,7 +102,7 @@
   .kp  { font-weight: bold } // Keyword.Pseudo
   .kr  { font-weight: bold } // Keyword.Reserved
 
-  @token-main:
+  $main-tokens:
     err // Error
     x   // Other
 
@@ -145,18 +183,14 @@
   ;
 
   // Generate main highlights
-  // Ref: https://github.com/less/less.js/issues/2071
-  .loop-main (@i) when (@i < (length(@token-main) + 1)) {
-    @token: extract(@token-main, @i);
-
-    .@{token} {
-      color: mix(spin(@code-color, (@i * 360 / length(@token-main))), @link-color, 80%);
+  @each $token in $main-tokens {
+    $i: index($main-tokens, $token);
+    .#{$token} {
+      color: mix(adjust-hue($code-color, ($i * 360 / length($main-tokens))), $link-color, 80%);
     }
-    .loop-main((@i + 1));
   }
-  .loop-main(1);
 
-  @token-comments:
+  $comment-tokens:
     c // Comment
     cd // Comment.Multiline
     cm // Comment.Multiline
@@ -166,16 +200,13 @@
   ;
 
   // Generate highlight for comments
-  .loop-comments (@i) when (@i < (length(@token-comments) + 1)) {
-    @token: extract(@token-comments, @i);
-
-    .@{token} {
-      color: mix(desaturate(spin(@code-color, (@i * 360 / length(@token-comments))), 70%), @link-color, 90%);
+  @each $token in $comment-tokens {
+    $i: index($comment-tokens, $token);
+    .#{$token} {
+      color: mix(desaturate(adjust-hue($code-color, ($i * 360 / length($comment-tokens))), 70%), $link-color, 90%);
       opacity: .6;
     }
-    .loop-comments((@i + 1));
   }
-  .loop-comments(1);
 
   // Reset code blocks appearance with line numbers
   table {
@@ -207,7 +238,7 @@
       }
 
       .lineno {
-        color: desaturate(@link-color, 95%);
+        color: desaturate($link-color, 95%);
         opacity: .5;
         user-select: none;
       }

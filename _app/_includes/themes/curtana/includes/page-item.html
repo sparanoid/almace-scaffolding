@@ -1,5 +1,5 @@
 <!-- List snippets -->
-{% include amsf/core type=post %}
+{%- include amsf/core type=post -%}
 
 {% assign custom_scheme = post.scheme-text or
                           post.scheme-hover or
@@ -11,21 +11,21 @@
 <!-- Dynamic link color based on post color scheme -->
 {% capture post_link_color %}
   {% if custom_scheme %}
-    style="color: {{ amsf_page_theme_color | strip }};"
+    style="color: {{ amsf_page_theme_color }};"
   {% endif %}
 {% endcapture %}
 
 <!-- Dynamic background color based on post color scheme -->
 {% capture post_link_bg %}
   {% if custom_scheme %}
-    style="background: {{ amsf_page_theme_color | strip }};"
+    style="background: {{ amsf_page_theme_color }};"
   {% endif %}
 {% endcapture %}
 
 <section class="list">
   <h1>
     <!-- Item title -->
-    <a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ post.title }}</a>
+    <a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ amsf_post_title }}</a>
 
     <!-- External link indicator -->
     {% if post.link %}

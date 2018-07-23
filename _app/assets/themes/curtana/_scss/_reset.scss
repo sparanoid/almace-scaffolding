@@ -1,6 +1,6 @@
 //
 // Reset
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 *,
 *:before,
@@ -17,36 +17,40 @@ html {
   image-rendering: optimizequality;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   // TODO: You have to speicify background color for `html` in order to
   //       make `-webkit-filter` work
   // Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
   // Date: Mar 1, 2016, 5:41 PM
-  background: @background-color;
+  background: var(--background-color);
 }
 
 body {
-  padding: 0 @space-lg;
+  --space-body: var(--space-lg);
+  padding-top: 0;
+  padding-bottom: 0;
+  @include padding-offset(var(--space-body));
   margin: 0 auto 0;
-  font-family: @fontstack-default;
-  font-size: @font-size;
-  line-height: @line-height;
+  font-family: var(--fontstack-default);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   hanging-punctuation: first allow-end;
-  color: @text-color;
-  background: @background-color;
+  color: var(--text-color);
+  background: var(--background-color);
   transition: all .2s ease;
 
-  @media (max-width: @breakpoint-md) {
-    .padding-offset(@space-md);
-    font-size: (@font-size * 1.4);
+  @media (max-width: $breakpoint-md) {
+    --space-body: var(--space-md);
+    font-size: calc(var(--font-size) * 1.4);
   }
 
-  @media (max-width: @breakpoint-sm) {
-    .padding-offset(@space-sm);
-    font-size: (@font-size * 2.4);
+  @media (max-width: $breakpoint-sm) {
+    --space-body: var(--space-sm);
+    font-size: calc(var(--font-size) * 2.4);
   }
 
-  @media (max-width: @breakpoint-xs) {
-    font-size: (@font-size * 3.2);
+  @media (max-width: $breakpoint-xs) {
+    font-size: calc(var(font-size) * 3.2);
   }
 }
 
@@ -71,8 +75,9 @@ textarea {
 }
 
 // Reset common elements
-a, button {
-  color: @text-color;
+a,
+button {
+  color: var(--text-color);
   text-decoration: none;
   transition: color .5s ease, border-color .5s ease, background .5s ease, opacity 1.5s ease;
 
@@ -97,7 +102,8 @@ button {
   outline: none;
 }
 
-img, hr {
+img,
+hr {
   border: 0;
 }
 
@@ -106,10 +112,10 @@ del {
 }
 
 ::placeholder {
-  color: @text-color;
+  color: var(--text-color);
   opacity: .2;
+}
 
-  :focus& {
-    color: @link-color;
-  }
+:focus::placeholder {
+  color: var(--link-color);
 }

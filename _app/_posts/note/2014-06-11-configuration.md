@@ -18,4 +18,4 @@ tags: getting-started
 
 - Not familiar with [Markdown](http://daringfireball.net/projects/markdown/)? Try [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 - You can use Jekyll's [built-in syntax highlighting](http://jekyllrb.com/docs/templates/#code-snippet-highlighting), I've included a default theme for this project.
-- [Tables](https://help.github.com/articles/github-flavored-markdown#tables) and [footnotes](https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use) are also available to use.
+- [Tables](https://kramdown.gettalong.org/quickref.html#tables) and [footnotes](https://kramdown.gettalong.org/quickref.html#footnotes) are also available to use.

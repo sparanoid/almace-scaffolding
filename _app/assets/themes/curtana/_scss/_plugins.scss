@@ -1,6 +1,6 @@
 //
 // Plugins
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // GitHub Gist
 .gist {
@@ -13,7 +13,7 @@
   }
 
   .gist-data {
-    font-family: @fontstack-monospace !important;
+    font-family: var(--fontstack-monospace) !important;
 
     .file-data {
       font-size: 100% !important;

@@ -1,0 +1,55 @@
+//
+// Mixins
+// -----------------------------------------------------------------------------
+
+// http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin cf {
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin heading {
+  font-size: 360%;
+  font-weight: bold;
+  letter-spacing: var(--heading-letter-spacing);
+}
+
+@mixin sub-heading {
+  font-size: 72%;
+  font-weight: normal;
+  opacity: .5;
+}
+
+@mixin padding-offset($padding-left, $padding-right: $padding-left) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+@mixin margin-offset($margin-left, $margin-right: $margin-left) {
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+@mixin spliter {
+  $size: 3px;
+  $color: var(--text-color);
+
+  &::before {
+    display: block;
+    content: '';
+    width: $size;
+    height: $size;
+    margin: 2em auto;
+    border-radius: 50%;
+    background: $color;
+    box-shadow: ($size * 8) 0 0 0 $color, ($size * -8) 0 0 0 $color;
+  }
+}

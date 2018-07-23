@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Almace Scaffolding
 permalink: /
 thumb_force_logo: true
 ---
 
-{% include amsf/core %}
+{%- include amsf/core -%}
 
 <!-- Article wrapper, limit width -->
 <article>
@@ -20,33 +19,33 @@ thumb_force_logo: true
 
     <h2 class="sub-title">Super-fast Jekyll framework</h2>
 
-    <small>a.k.a. <b>AMSF</b>&#x30FB;ver. <b class="amsf-version">1.1.10</b>&#x30FB;view it on <a href="https://github.com/sparanoid/almace-scaffolding">GitHub</a></small>
+    <small>a.k.a. <b>AMSF</b>&#x30FB;ver. <b class="amsf-version">2.0.0</b>&#x30FB;view it on <a href="https://github.com/sparanoid/almace-scaffolding">GitHub</a></small>
   </header>
 
   <div class="page-content">
     <h2>Getting Started</h2>
     {% for post in site.tags.getting-started %}
-      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
     {% endfor %}
 
     <h2>Customization</h2>
     {% for post in site.tags.customization %}
-      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
     {% endfor %}
 
     <h2>Theme Curtana</h2>
     {% for post in site.tags.curtana %}
-      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
     {% endfor %}
 
     <h2>Deployment</h2>
     {% for post in site.tags.deployment %}
-      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
     {% endfor %}
 
     <h2>Miscellaneous</h2>
     {% for post in site.tags.miscellaneous %}
-      {% include themes/{{ site.amsf_theme }}/includes/page-item.html %}
+      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
     {% endfor %}
   </div>
 </article>
