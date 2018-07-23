@@ -35,13 +35,6 @@
     {% endif %}
   }
 
-  {% if page.scheme-hover %}
-  .navigation li a:hover,
-  .navigation li a:focus {
-    color: {{ page.scheme-hover }};
-  }
-  {% endif %}
-
   {% if page.scheme-hero-bg %}
   .content header {
     background: {{ page.scheme-hero-bg }};
@@ -60,14 +53,4 @@
       background: {{ page.scheme-hero-link }};
     }
     {% endif %}
-
-  {% if page.scheme-link %}
-  .current a {
-    color: {{ page.scheme-link }};
-  }
-
-  .content a {
-    color: {{ page.scheme-link }};
-  }
-  {% endif %}
 </style>
