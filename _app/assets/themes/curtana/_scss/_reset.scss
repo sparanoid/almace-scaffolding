@@ -50,7 +50,7 @@ body {
   }
 
   @media (max-width: $breakpoint-xs) {
-    font-size: calc(var(font-size) * 3.2);
+    font-size: calc(var(--font-size) * 3.2);
   }
 }
 
