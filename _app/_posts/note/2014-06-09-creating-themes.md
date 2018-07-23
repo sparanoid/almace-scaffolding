@@ -27,7 +27,7 @@ You can create your own theme in AMSF, theme files are located in the following 
 |   |   └── themes/
 |   |   |   └── curtana/
 |   |   |   |   └── _js/
-|   |   |   |   └── _less/
+|   |   |   |   └── _scss/
 |   |   |   |   └── ...
 ```
 
@@ -74,15 +74,15 @@ You can also have multiple themes in your project, as many as you like. For exam
 |   |   └── themes/
 |   |   |   └── bootstrap/
 |   |   |   |   └── _coffee/
-|   |   |   |   └── _less/
+|   |   |   |   └── _scss/
 |   |   |   |   └── images/
 |   |   |   └── curtana/
 |   |   |   |   └── _js/
-|   |   |   |   └── _less/
+|   |   |   |   └── _scss/
 |   |   |   |   └── svg/
 |   |   |   └── ghost/
 |   |   |   |   └── _js/
-|   |   |   |   └── _scss/
+|   |   |   |   └── _less/
 |   |   |   |   └── fonts/
 ...
 ```
@@ -250,11 +250,11 @@ You can simply add the query string `?assets-inline` at the end of the file you'
 
 ### User Custom Styles Support
 
-Define the following code snippet into your theme styles (Less) will allow users to custom your theme without touching the theme files:
+Define the following code snippet into your theme styles (Sass) will allow users to custom your theme without touching the theme files:
 
 ```css
 // Import user custom styles
-@import "../../../_less/custom";
+@import "../../../_scss/custom";
 ```
 
 ### User Custom Scripts Support
