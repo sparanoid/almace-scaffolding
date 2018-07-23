@@ -20,11 +20,11 @@ $code-color: #c57000 !default;
 
 :root {
   // Typography
-  --fontstack-prefix: -apple-system, BlinkMacSystemFont;
+  --fontstack-prefix: -apple-system, BlinkMacSystemFont,; // Notice that ending comma?
   --fontstack-sans-serif: "Helvetica Neue", Arial, sans-serif;
   --fontstack-serif: Georgia, serif;
   --fontstack-monospace: Menlo, Consolas, monospace;
-  --fontstack-default: var(--fontstack-prefix), var(--fontstack-sans-serif);
+  --fontstack-default: var(--fontstack-prefix) var(--fontstack-sans-serif);
   --font-size: 1.6vw;
   --font-features: "case", "ss01", "ss02";
   --line-height: calc(20 / 14); // ~ 1.428571429
