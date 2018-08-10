@@ -66,7 +66,7 @@ A simple library inspired by [Tim Holman](https://github.com/tholman) to view la
 
 ### Usage
 
-Add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
+Add the following setting to your post [front-matter field](https://jekyllrb.com/docs/frontmatter/):
 
 ```
 plugin: lightense
