@@ -5,7 +5,7 @@ category: note
 tags: miscellaneous
 ---
 
-Code highlighting demo, powered by Rouge. More info about code highlighting can be found at [Jekyll's documentation](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
+Code highlighting demo, powered by Rouge. More info about code highlighting can be found at [Jekyll's documentation](https://jekyllrb.com/docs/templates/#code-snippet-highlighting).
 
 ```
 .code-text (@link, @text) when (lightness(@link) >= 50%) and (lightness(@link) < lightness(@text)) {
@@ -65,7 +65,7 @@ var server = http.createServer(function (request, response) {
 server.listen(8000);
 
 // Put a friendly message on the terminal
-console.log("Server running at http://127.0.0.1:8000/");
+console.log("Server running at https://127.0.0.1:8000/");
 ```
 
 ```css
@@ -91,7 +91,7 @@ console.log("Server running at http://127.0.0.1:8000/");
 ```
 
 ```llvm
-; copied from http://llvm.org/docs/LangRef.html#module-structure
+; copied from https://llvm.org/docs/LangRef.html#module-structure
 ; Declare the string constant as a global constant.
 @.str = private unnamed_addr constant [13 x i8] c"hello world\0A\00"
 
@@ -284,9 +284,9 @@ print $a;
 
 ```markdown
 Markdown has cool [reference links][ref 1]
-and [regular links too](http://example.com)
+and [regular links too](https://example.com)
 
-[ref 1]: http://example.com
+[ref 1]: https://example.com
 ```
 
 ```yaml

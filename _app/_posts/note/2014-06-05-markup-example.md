@@ -8,9 +8,9 @@ tags: miscellaneous
 Lorem lean startup ipsum **product market fit customer development** acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying [crowded market](#) pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor.
 
 <blockquote>
-  <p>Two days ago the Chinese website <a href="http://www.taobao.com/">Taobao</a> held a discount promotion to celebrate what’s known as “double sticks day” in China. In a single 24hr period, they conducted 19bn RMB (US$3.06bn) of business.</p>
+  <p>Two days ago the Chinese website <a href="https://www.taobao.com/">Taobao</a> held a discount promotion to celebrate what’s known as “double sticks day” in China. In a single 24hr period, they conducted 19bn RMB (US$3.06bn) of business.</p>
   <footer>
-    <cite><a href="http://westiseast.co.uk/blog/taobao-sales-19-billion-bonanza/">Chris West</a></cite>
+    <cite><a href="https://web.archive.org/web/20150223182728/http://westiseast.co.uk:80/blog/taobao-sales-19-billion-bonanza/">Chris West</a></cite>
   </footer>
 </blockquote>
 
