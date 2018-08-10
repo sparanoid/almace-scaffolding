@@ -13,7 +13,7 @@ css: |
   }
 ---
 
-This is an example how to change your post styling via CSS. You can simply add the `css` option to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
+This is an example how to change your post styling via CSS. You can simply add the `css` option to your post [front-matter field](https://jekyllrb.com/docs/frontmatter/):
 
 ```
 scheme-text: "#000"

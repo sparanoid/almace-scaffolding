@@ -7,7 +7,7 @@ heading-img: svg/heading-image-example.svg
 heading-img-local: true
 ---
 
-This is an example of custom post heading image. You can simply add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
+This is an example of custom post heading image. You can simply add the following setting to your post [front-matter field](https://jekyllrb.com/docs/frontmatter/):
 
 ```yaml
 heading-img: svg/heading-image.svg

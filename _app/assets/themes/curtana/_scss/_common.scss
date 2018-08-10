@@ -103,7 +103,7 @@ body:hover .latest {
 
     // TODO: Fixes wrong underline color for inline `code` within `a` links.
     // However no browser supports this feature at the time of writing.
-    // More info: http://caniuse.com/#feat=css-has
+    // More info: https://caniuse.com/#feat=css-has
     // Date: Dec 10, 2016, 5:59 PM
     &:has(> code) {
       text-decoration-color: var(--code-color);
@@ -402,7 +402,7 @@ body:hover .latest {
       font-style: normal;
 
       &:before {
-        // http://www.fileformat.info/info/unicode/char/2500/index.htm
+        // https://www.fileformat.info/info/unicode/char/2500/index.htm
         content: "\2500\2500\00a0"
       }
     }
