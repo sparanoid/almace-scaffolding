@@ -7,12 +7,12 @@ tags: getting-started
 
 ## Requirements
 
-Almace Scaffolding has exactly the same requirements as Jekyll. For more info please refer to [Installation - Jekyll](http://jekyllrb.com/docs/installation/).
+Almace Scaffolding has exactly the same requirements as Jekyll. For more info please refer to [Installation - Jekyll](https://jekyllrb.com/docs/installation/).
 
 ## Quick Start
 
 1. [Fork](https://github.com/sparanoid/almace-scaffolding/fork) or clone the repo.
-2. Install dependencies with Ruby gem [`bundler`](http://bundler.io/) and Node.js package manager [`npm`](https://www.npmjs.org/).
+2. Install dependencies with Ruby gem [`bundler`](https://bundler.io/) and Node.js package manager [`npm`](https://www.npmjs.org/).
 3. Run `grunt init` to initialize your project.
 3. Run `grunt serve` to fire up a local server.
 

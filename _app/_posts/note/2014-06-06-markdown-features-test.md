@@ -86,6 +86,6 @@ Expected id should be `id-zhong-wen-biao-ti`.
 
 [^1]: Lorem lean startup ipsum **product market fit customer development** acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying [crowded market](#) pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor.
 
-[^2]: [An Important Announcement](http://blog.readability.com/2012/06/announcement/) by Richard Ziade at Readability
+[^2]: [An Important Announcement](https://web.archive.org/web/20160425094356/http://blog.readability.com:80/2012/06/announcement/) by Richard Ziade at Readability
 
 [^3]: Good afterble constanoon, this sweet hongi is as bung as a stuffed morepork. Mean while, in the marae, Dr Ropata and Hairy Maclary from Donaldson's Dairy were up to no good with a bunch of bloody troties.
