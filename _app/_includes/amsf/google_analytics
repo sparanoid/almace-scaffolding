@@ -8,7 +8,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics.id }}');
+      gtag('config', '{{ site.google_analytics.id }}', {'anonymize_ip': true});
     </script>
   {%- endif -%}
 {%- endcapture -%}
