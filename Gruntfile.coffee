@@ -181,19 +181,6 @@ module.exports = (grunt) ->
       dist:
         src: "<%= postcss.serve.src %>"
 
-    csscomb:
-      options:
-        config: "<%= amsf.theme.assets %>/_less/.csscomb.json"
-
-      dist:
-        files: [
-          expand: true
-          cwd: "<%= less.serve.files.0.dest %>"
-          src: ["*.css"]
-          dest: "<%= less.serve.files.0.dest %>"
-          ext: ".css"
-        ]
-
     htmlmin:
       dist:
         options:
@@ -693,7 +680,6 @@ module.exports = (grunt) ->
     "uglify:dist"
     "sass:dist"
     "postcss:dist"
-    "csscomb"
     "jekyll:dist"
     "cssmin"
     "assets_inline"
