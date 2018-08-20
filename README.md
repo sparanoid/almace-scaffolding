@@ -1,9 +1,9 @@
 # Almace Scaffolding
 
+[![Built with Almace Scaffolding](https://d349cztnlupsuf.cloudfront.net/amsf-badge.svg)](https://sparanoid.com/lab/amsf/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/sparanoid/almace-scaffolding.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/sparanoid/almace-scaffolding.svg)](https://travis-ci.org/sparanoid/almace-scaffolding)
 [![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
-[![Built with Almace Scaffolding](https://d349cztnlupsuf.cloudfront.net/amsf-badge.svg)](https://sparanoid.com/lab/amsf/)
 
 `AMSF`, a.k.a. **Almace Scaffolding**, a super-fast Jekyll framework. Supports LiveReload, Sass, HTML minification, inlined stylesheets and more.
 
