@@ -27,6 +27,7 @@
   "devDependencies": {
     "autoprefixer": "^9.0.2",
     "coffeelint": "^2.1.0",
+    "coffeescript": "^2.3.1",
     "grunt": "^1.0.3",
     "grunt-assets-inline": "^0.1.20",
     "grunt-bump": "^0.8.0",
