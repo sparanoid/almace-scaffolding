@@ -28,7 +28,7 @@
     "autoprefixer": "^9.0.2",
     "coffeelint": "^2.1.0",
     "grunt": "^1.0.3",
-    "grunt-assets-inline": "^0.1.20",
+    "grunt-assets-inline": "^1.0.0",
     "grunt-bump": "^0.8.0",
     "grunt-cache-bust": "^1.7.0",
     "grunt-cleanempty": "^1.0.4",
