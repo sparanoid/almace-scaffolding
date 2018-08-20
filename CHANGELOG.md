@@ -1,3 +1,15 @@
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.1...v2.0.2) (2018-08-20)
+
+
+### Features
+
+* **google_analytics:** enable ip anonymization by default ([b361f1f](https://github.com/sparanoid/almace-scaffolding/commit/b361f1f))
+* **grunt:** remove deprecated csscomb support ([70bd4b2](https://github.com/sparanoid/almace-scaffolding/commit/70bd4b2))
+* **post:** use lighter arrow for “Welcome” ([6d0d843](https://github.com/sparanoid/almace-scaffolding/commit/6d0d843))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.0...v2.0.1) (2018-07-23)
 
