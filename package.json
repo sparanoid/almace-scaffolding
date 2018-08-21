@@ -52,7 +52,7 @@
     "grunt-sass": "^3.0.1",
     "grunt-service-worker": "^0.1.4",
     "grunt-shell": "^2.1.0",
-    "grunt-sri-hash": "^1.0.2",
+    "grunt-sri-hash": "^1.1.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-uncss-inline": "^1.2.1",
     "grunt-xmlmin": "^0.1.8",
