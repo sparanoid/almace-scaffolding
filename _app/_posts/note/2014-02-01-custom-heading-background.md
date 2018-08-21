@@ -11,7 +11,7 @@ heading-bg-repeat: "no-repeat"
 heading-bg-text: "#fff"
 ---
 
-This is an example of custom heading background. You can simply add the following setting to your post [front-matter field](http://jekyllrb.com/docs/frontmatter/):
+This is an example of custom heading background. You can simply add the following setting to your post [front-matter field](https://jekyllrb.com/docs/frontmatter/):
 
 ```yaml
 heading-bg: img/heading-background.jpg
@@ -44,5 +44,5 @@ heading-bg-text: "#fff"
 `heading-bg-text`
 : Text color in heading, set it based on your background image.
 
-> Heading image copyright info:  
+> Heading image copyright info:
 > &copy; 士郎正宗・Production I.G／講談社・「攻殻機動隊」製作委員会

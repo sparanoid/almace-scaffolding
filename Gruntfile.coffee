@@ -181,19 +181,6 @@ module.exports = (grunt) ->
       dist:
         src: "<%= postcss.serve.src %>"
 
-    csscomb:
-      options:
-        config: "<%= amsf.theme.assets %>/_less/.csscomb.json"
-
-      dist:
-        files: [
-          expand: true
-          cwd: "<%= less.serve.files.0.dest %>"
-          src: ["*.css"]
-          dest: "<%= less.serve.files.0.dest %>"
-          ext: ".css"
-        ]
-
     htmlmin:
       dist:
         options:
@@ -326,6 +313,18 @@ module.exports = (grunt) ->
           workerDir: "<%= config.dist %><%= config.base %>"
           maximumFileSizeToCacheInBytes: "<%= config.cfg.service_worker.max_size %>"
           staticFileGlobs: "<%= config.cfg.service_worker.files %>"
+
+    sri_hash:
+      options:
+        assetsDir: "<%= config.dist %>"
+
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
+        ]
 
     jekyll:
       options:
@@ -693,7 +692,6 @@ module.exports = (grunt) ->
     "uglify:dist"
     "sass:dist"
     "postcss:dist"
-    "csscomb"
     "jekyll:dist"
     "cssmin"
     "assets_inline"
@@ -703,6 +701,7 @@ module.exports = (grunt) ->
     "html_trim"
     "service_worker"
     "uglify:sw"
+    "sri_hash:dist"
     "cleanempty"
   ]
 
