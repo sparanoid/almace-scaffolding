@@ -1,3 +1,19 @@
+<a name="2.0.3"></a>
+## [2.0.3](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.2...v2.0.3) (2018-08-21)
+
+
+### Bug Fixes
+
+* **grunt:** wrong hash generated ([52a6ff1](https://github.com/sparanoid/almace-scaffolding/commit/52a6ff1))
+
+
+### Features
+
+* **docs:** brand badge first ([dbe9cb0](https://github.com/sparanoid/almace-scaffolding/commit/dbe9cb0))
+* **grunt:** add  support ([3eb03a8](https://github.com/sparanoid/almace-scaffolding/commit/3eb03a8))
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.1...v2.0.2) (2018-08-20)
 
