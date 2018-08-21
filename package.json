@@ -1,6 +1,6 @@
 {
   "name": "almace-scaffolding",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Almace Scaffolding, a super-fast Jekyll framework",
   "author": "Tunghsiao Liu",
   "homepage": "https://sparanoid.com/lab/amsf/",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sparanoid/almace-scaffolding.git"
+    "url": "git+https://github.com/sparanoid/almace-scaffolding.git"
   },
   "bugs": {
     "url": "https://github.com/sparanoid/almace-scaffolding/issues"
@@ -52,7 +52,7 @@
     "grunt-sass": "^3.0.1",
     "grunt-service-worker": "^0.1.4",
     "grunt-shell": "^2.1.0",
-    "grunt-sri-hash": "^1.0.2",
+    "grunt-sri-hash": "^1.1.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-uncss-inline": "^1.2.1",
     "grunt-xmlmin": "^0.1.8",
