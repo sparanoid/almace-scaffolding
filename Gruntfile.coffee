@@ -314,6 +314,18 @@ module.exports = (grunt) ->
           maximumFileSizeToCacheInBytes: "<%= config.cfg.service_worker.max_size %>"
           staticFileGlobs: "<%= config.cfg.service_worker.files %>"
 
+    sri_hash:
+      options:
+        assetsDir: "<%= config.dist %>"
+
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
+        ]
+
     jekyll:
       options:
         bundleExec: true
@@ -689,6 +701,7 @@ module.exports = (grunt) ->
     "html_trim"
     "service_worker"
     "uglify:sw"
+    "sri_hash:dist"
     "cleanempty"
   ]
 
