@@ -3,14 +3,8 @@
 // -----------------------------------------------------------------------------
 
 // Typography setup
-// TODO: need better solution
-// Apply `font-feature` for Apple devices, since these features are only
-// available for San Francisco. implemented in `app.js`
-.js-system {
-
-  &--apple {
-    font-feature-settings: "case", "ss01", "ss02";
-  }
+body[data-ua*="Windows"] {
+  --font-features: normal;
 }
 
 // Main navigation
