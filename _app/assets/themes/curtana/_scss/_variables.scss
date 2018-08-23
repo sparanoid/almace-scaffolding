@@ -31,10 +31,10 @@ $code-color: #c57000 !default;
   --heading-letter-spacing: -.04em;
 
   // Layout
-  --breakpoint-md: 1080px;
-  --breakpoint-lg: 1600px;
-  --breakpoint-sm: 640px;
-  --breakpoint-xs: 400px;
+  --breakpoint-lg: $breakpoint-lg;
+  --breakpoint-md: $breakpoint-md;
+  --breakpoint-sm: $breakpoint-sm;
+  --breakpoint-xs: $breakpoint-xs;
 
   --space-lg: 24vw;
   --space-md: 8vw;
