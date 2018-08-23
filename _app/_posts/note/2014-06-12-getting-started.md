@@ -19,7 +19,8 @@ Almace Scaffolding has exactly the same requirements as Jekyll. For more info pl
 So in short for geeks:
 
 ```sh
-$ git clone git@github.com:sparanoid/almace-scaffolding.git
+$ git clone https://github.com/sparanoid/almace-scaffolding my-site
+$ cd my-site
 $ bundle install && npm install
 $ grunt init
 $ grunt serve
