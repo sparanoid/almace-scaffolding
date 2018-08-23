@@ -33,6 +33,7 @@ body {
   margin: 0 auto 0;
   font-family: var(--fontstack-default);
   font-size: var(--font-size);
+  font-feature-settings: var(--font-features);
   line-height: var(--line-height);
   hanging-punctuation: first allow-end;
   color: var(--text-color);
