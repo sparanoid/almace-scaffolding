@@ -1,2 +1,2 @@
 // Detect user platform
-document.body.setAttribute('data-ua', navigator.userAgent);
+document.documentElement.setAttribute('data-ua', navigator.userAgent);
