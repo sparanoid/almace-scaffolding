@@ -411,6 +411,10 @@ body:hover .latest {
       outline: none;
       cursor: pointer;
 
+      @media (max-width: $breakpoint-sm) {
+        margin-left: 1em;
+      }
+
       &::-webkit-details-marker {
         display: none
       }
