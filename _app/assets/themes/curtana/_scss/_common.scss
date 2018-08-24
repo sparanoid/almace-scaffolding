@@ -402,6 +402,40 @@ body:hover .latest {
     }
   }
 
+  details {
+    margin-bottom: 1.8rem;
+
+    summary {
+      position: relative;
+      line-height: calc(var(--line-height) * 1.2);
+      outline: none;
+      cursor: pointer;
+
+      &::-webkit-details-marker {
+        display: none
+      }
+
+      &:before {
+        content: "+";
+        position: absolute;
+        display: inline-block;
+        width: 4em;
+        padding-right: .6em;
+        margin-top: 0;
+        margin-left: -4em;
+        font-size: 80%;
+        line-height: calc(var(--line-height) * 1.2 / .8);
+        text-align: right;
+        opacity: .6;
+        pointer-events: none;
+      }
+    }
+
+    &[open] summary:before {
+      content: "-";
+    }
+  }
+
   hr {
     @include spliter();
   }
