@@ -167,6 +167,14 @@ Careful Skippy, you really aren’t as convincing as you think you are.
   </footer>
 </blockquote>
 
+<details>
+  <summary>Supported Fonts</summary>
+  <ul>
+    <li><a href="https://www.microsoft.com/typography/otspec/features_fj.htm#qwid">Microsoft Registered features - qwid</a></li>
+    <li><a href="https://typekit.com/fonts/kozuka-mincho-pr6n">Kozuka Mincho Pr6n</a></li>
+  </ul>
+</details>
+
 ## Chinese Paragraph
 
 <p lang="zh-cn">「名词成灾」的流行病里，灾情最严重的该是所谓「科学至上」（scientism）。在现代的工业社会里，科学早成显贵，科技更是骄子，所以知识分子的口头与笔下，有意无意，总爱用一些「学术化」的抽象名词，好显得客观而精确。有人称之为「伪术语」（pseudo-jargon）。例如：明明是 first step，却要说成 initial phase：明明是 letter，却要说成 communication，都属此类。</p>
