@@ -214,7 +214,7 @@ body:hover .latest {
         position: absolute;
         display: inline-block;
         width: 4em;
-        margin-top: 1px;
+        margin-top: 0;
         margin-left: -4em;
         font-size: 80%;
         line-height: calc(var(--line-height) * 1.2 / .8);
