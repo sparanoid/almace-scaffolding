@@ -1,3 +1,26 @@
+<a name="2.0.4"></a>
+## [2.0.4](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.3...v2.0.4) (2018-09-01)
+
+
+### Bug Fixes
+
+* **css:** missing varibles ([0865587](https://github.com/sparanoid/almace-scaffolding/commit/0865587))
+* **css:** wrong list deco position ([5225640](https://github.com/sparanoid/almace-scaffolding/commit/5225640))
+* **css:** wrong summary position on small screens ([89ece87](https://github.com/sparanoid/almace-scaffolding/commit/89ece87))
+
+
+### Features
+
+* **css:** add summary support ([781c5dc](https://github.com/sparanoid/almace-scaffolding/commit/781c5dc))
+* **css:** apply font features to `:root` ([6831f2b](https://github.com/sparanoid/almace-scaffolding/commit/6831f2b))
+* **css:** better font-feature-settings ([17804b8](https://github.com/sparanoid/almace-scaffolding/commit/17804b8))
+* **css:** refine header, footer appearance ([94ca740](https://github.com/sparanoid/almace-scaffolding/commit/94ca740))
+* **css:** update footer font size and decos ([53cb2ce](https://github.com/sparanoid/almace-scaffolding/commit/53cb2ce))
+* **docs:** update quick start guide ([753b9ec](https://github.com/sparanoid/almace-scaffolding/commit/753b9ec))
+* **getting-started:** use https clone by default ([0692b3e](https://github.com/sparanoid/almace-scaffolding/commit/0692b3e))
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.2...v2.0.3) (2018-08-21)
 
