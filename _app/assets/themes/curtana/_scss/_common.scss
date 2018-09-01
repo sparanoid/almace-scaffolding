@@ -13,10 +13,9 @@
   padding-bottom: var(--nav-padding);
   margin-right: calc(var(--nav-item-space) * -1);
   margin-left: calc(var(--nav-item-space) * -1);
-  font-size: 60%;
+  font-size: 90%;
   font-weight: bold;
-  letter-spacing: .45em;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   li {
     display: inline-block;
@@ -110,9 +109,10 @@ body:hover .latest {
   }
 
   header {
+    --header-height: 100vh;
     --space-header: var(--space-lg);
     display: flex;
-    min-height: calc(100vh - (var(--nav-padding) * 4) - 5ex);
+    min-height: calc(var(--header-height) - (var(--nav-padding) * 4) - (var(--nav-item-space) * 4) - (1ex * .9 * 2));
 
     // Additional padding for content inside `header` are higher than `header`
     // container
@@ -126,8 +126,8 @@ body:hover .latest {
     @include margin-offset(calc(var(--space-header) * -1));
 
     @media (max-width: $breakpoint-md) {
+      --header-height: 70vh;
       --space-header: var(--space-md);
-      min-height: calc(50vh - var(--nav-padding) * 2 - 3ex);
       padding-top: 16vmin;
       padding-bottom: 16vmin;
     }
@@ -815,7 +815,7 @@ body:hover .latest {
 
 .footer {
   padding: 0 0 16vmin;
-  font-size: 75%;
+  font-size: 80%;
   text-transform: lowercase;
 
   ul {
@@ -825,7 +825,7 @@ body:hover .latest {
 
       &:after {
         padding: 0 var(--nav-item-space);
-        content: " / ";
+        content: "/";
         opacity: .3;
       }
 
