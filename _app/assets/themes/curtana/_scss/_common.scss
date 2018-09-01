@@ -20,7 +20,6 @@
   li {
     display: inline-block;
     line-height: 2;
-    list-style: none;
 
     a {
       padding: .5em var(--nav-item-space);
@@ -815,25 +814,19 @@ body:hover .latest {
 
 .footer {
   padding: 0 0 16vmin;
+  margin-right: calc(var(--nav-item-space) * -1);
+  margin-left: calc(var(--nav-item-space) * -1);
   font-size: 80%;
   text-transform: lowercase;
 
   ul {
 
     li {
-      display: inline;
+      display: inline-block;
+      line-height: 1.8;
 
-      &::after {
-        padding: 0 var(--nav-item-space);
-        content: "/";
-        opacity: .3;
-      }
-
-      &:last-child {
-
-        &::after {
-          content: none;
-        }
+      a {
+        padding: .5em var(--nav-item-space);
       }
     }
   }
