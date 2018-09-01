@@ -3,14 +3,8 @@
 // -----------------------------------------------------------------------------
 
 // Typography setup
-// TODO: need better solution
-// Apply `font-feature` for Apple devices, since these features are only
-// available for San Francisco. implemented in `app.js`
-.js-system {
-
-  &--apple {
-    font-feature-settings: "case", "ss01", "ss02";
-  }
+:root[data-ua*="Windows"] {
+  --font-features: normal;
 }
 
 // Main navigation
@@ -19,15 +13,13 @@
   padding-bottom: var(--nav-padding);
   margin-right: calc(var(--nav-item-space) * -1);
   margin-left: calc(var(--nav-item-space) * -1);
-  font-size: 60%;
+  font-size: 90%;
   font-weight: bold;
-  letter-spacing: .45em;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   li {
     display: inline-block;
     line-height: 2;
-    list-style: none;
 
     a {
       padding: .5em var(--nav-item-space);
@@ -116,9 +108,10 @@ body:hover .latest {
   }
 
   header {
+    --header-height: 100vh;
     --space-header: var(--space-lg);
     display: flex;
-    min-height: calc(100vh - (var(--nav-padding) * 4) - 5ex);
+    min-height: calc(var(--header-height) - (var(--nav-padding) * 4) - (var(--nav-item-space) * 4) - (1ex * .9 * 2));
 
     // Additional padding for content inside `header` are higher than `header`
     // container
@@ -132,8 +125,8 @@ body:hover .latest {
     @include margin-offset(calc(var(--space-header) * -1));
 
     @media (max-width: $breakpoint-md) {
+      --header-height: 70vh;
       --space-header: var(--space-md);
-      min-height: calc(50vh - var(--nav-padding) * 2 - 3ex);
       padding-top: 16vmin;
       padding-bottom: 16vmin;
     }
@@ -216,11 +209,11 @@ body:hover .latest {
     li {
       line-height: calc(var(--line-height) * 1.2);
 
-      &:before {
+      &::before {
         position: absolute;
         display: inline-block;
         width: 4em;
-        margin-top: 1px;
+        margin-top: 0;
         margin-left: -4em;
         font-size: 80%;
         line-height: calc(var(--line-height) * 1.2 / .8);
@@ -237,12 +230,12 @@ body:hover .latest {
     }
   }
 
-  ul li:before {
+  ul li::before {
     content: "•";
     padding-right: .6em;
   }
 
-  ol li:before {
+  ol li::before {
     counter-increment: list;
     content: counter(list) ".";
     padding-right: .3em;
@@ -257,7 +250,7 @@ body:hover .latest {
 
     dt {
 
-      &:before {
+      &::before {
         position: absolute;
         width: 1em;
         margin-left: -1em;
@@ -401,10 +394,48 @@ body:hover .latest {
       float: right;
       font-style: normal;
 
-      &:before {
+      &::before {
         // https://www.fileformat.info/info/unicode/char/2500/index.htm
         content: "\2500\2500\00a0"
       }
+    }
+  }
+
+  details {
+    margin-bottom: 1.8rem;
+
+    summary {
+      position: relative;
+      line-height: calc(var(--line-height) * 1.2);
+      outline: none;
+      cursor: pointer;
+
+      @media (max-width: $breakpoint-sm) {
+        margin-left: 1em;
+      }
+
+      &::-webkit-details-marker {
+        display: none
+      }
+
+      &::before {
+        content: "+";
+        position: absolute;
+        display: inline-block;
+        width: 4em;
+        padding-right: .6em;
+        margin-top: 0;
+        margin-left: -4em;
+        font-size: 80%;
+        line-height: calc(var(--line-height) * 1.2 / .8);
+        text-align: right;
+        opacity: .6;
+        pointer-events: none;
+      }
+    }
+
+    &[open] summary::before {
+      content: "-";
     }
   }
 
@@ -653,7 +684,7 @@ body:hover .latest {
     border-radius: 0;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     top: 8px;
     left: 10px;
@@ -783,25 +814,19 @@ body:hover .latest {
 
 .footer {
   padding: 0 0 16vmin;
-  font-size: 75%;
+  margin-right: calc(var(--nav-item-space) * -1);
+  margin-left: calc(var(--nav-item-space) * -1);
+  font-size: 80%;
   text-transform: lowercase;
 
   ul {
 
     li {
-      display: inline;
+      display: inline-block;
+      line-height: 1.8;
 
-      &:after {
-        padding: 0 var(--nav-item-space);
-        content: " / ";
-        opacity: .3;
-      }
-
-      &:last-child {
-
-        &:after {
-          content: none;
-        }
+      a {
+        padding: .5em var(--nav-item-space);
       }
     }
   }
