@@ -204,7 +204,7 @@ There're some features can be integrated into your theme.
 You can define post / page language in your front-matter field:
 
 ```yaml
-languages:
+lang:
   - zh-tw
 ```
 
@@ -219,12 +219,12 @@ An additional `lang` HTML attribute will be added to your final rendering:
 If your post / page content is multilingual, you can also define multiple languages in array:
 
 ```yaml
-languages:
+lang:
   - zh-tw
   - en-us
 ```
 
-Please note that only the first item defined in `languages` array will be used in final `lang` output, the additional languages will be available in JSON feed output:
+Please note that only the first item defined in `lang` array will be used in final `lang` output, the additional languages will be available in JSON feed output:
 
 ```json
 {
