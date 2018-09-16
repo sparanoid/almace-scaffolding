@@ -20,6 +20,7 @@
   body {
     padding: 10mm !important;
     margin: 0 !important;
+    font-size: calc(var(--font-size) * 1.35);
   }
 
   a,
@@ -39,6 +40,7 @@
     a[href]::after {
       content: " (" attr(href) ")";
       font-weight: normal;
+      opacity: .5;
     }
 
     // Don't show links that are fragment identifiers,
