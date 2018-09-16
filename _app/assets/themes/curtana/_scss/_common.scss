@@ -406,6 +406,7 @@ body:hover .latest {
 
     summary {
       position: relative;
+      list-style: none;
       line-height: calc(var(--line-height) * 1.2);
       outline: none;
       cursor: pointer;
