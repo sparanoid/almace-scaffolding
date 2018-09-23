@@ -1,3 +1,30 @@
+<a name="2.0.5"></a>
+## [2.0.5](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.4...v2.0.5) (2018-09-23)
+
+
+### Bug Fixes
+
+* **css:** wrong summary appearance in firefox ([9ba87cb](https://github.com/sparanoid/almace-scaffolding/commit/9ba87cb))
+
+
+### Features
+
+* **css:** add opentype feature modifier ([333afb0](https://github.com/sparanoid/almace-scaffolding/commit/333afb0))
+* **css:** better details > summary deco appearance ([3dc4fe4](https://github.com/sparanoid/almace-scaffolding/commit/3dc4fe4))
+* **css:** remove typography detect hack for windows ([000339a](https://github.com/sparanoid/almace-scaffolding/commit/000339a))
+* **css:** simplify list decoration font size ([cf109a3](https://github.com/sparanoid/almace-scaffolding/commit/cf109a3))
+* **css:** update blockquote cite margin ([5df8803](https://github.com/sparanoid/almace-scaffolding/commit/5df8803))
+* **css:** update list style ([5a4aef9](https://github.com/sparanoid/almace-scaffolding/commit/5a4aef9))
+* **gem:** preload jekyll plugins ([cf7ab9d](https://github.com/sparanoid/almace-scaffolding/commit/cf7ab9d))
+* **template:** update lang attribute ([0d518d0](https://github.com/sparanoid/almace-scaffolding/commit/0d518d0))
+
+
+### BREAKING CHANGES
+
+* **template:** old `languages` is now depreacted, in place of a more common attribute `lang`
+
+
+
 <a name="2.0.4"></a>
 ## [2.0.4](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.3...v2.0.4) (2018-09-01)
 
