@@ -654,7 +654,7 @@ body:hover .latest {
   }
 }
 
-// Tweet button margin fix
+// Post date margin fix
 .post-modified-date {
   font-size: 75%;
   opacity: .5;
@@ -806,6 +806,11 @@ body:hover .latest {
       transform: scale(1.4);
     }
   }
+}
+
+// OpenType features
+.of-case {
+  font-feature-settings: "case";
 }
 
 .footer {
