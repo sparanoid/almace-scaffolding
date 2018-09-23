@@ -416,21 +416,23 @@ body:hover .latest {
       &::before {
         content: "+";
         position: absolute;
-        display: inline-block;
-        width: 4em;
-        padding-right: .6em;
+        display: flex;
+        justify-content: center;
+        width: 1em;
+        left: -.3em;
         margin-top: 0;
-        margin-left: -4em;
-        font-size: 80%;
-        line-height: calc(var(--line-height) * 1.2 / .8);
+        margin-left: -1em;
         text-align: right;
-        opacity: .6;
-        pointer-events: none;
+        opacity: .4;
+        transition: opacity .2s ease, transform .2s ease;
+        transform-origin: center center;
+        font-feature-settings: "case";
       }
     }
 
     &[open] summary::before {
-      content: "-";
+      opacity: 1;
+      transform: rotate(45deg);
     }
   }
 
