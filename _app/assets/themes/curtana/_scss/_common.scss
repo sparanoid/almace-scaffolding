@@ -206,12 +206,13 @@ body:hover .latest {
 
       &::before {
         position: absolute;
-        display: inline-block;
+        display: flex;
+        justify-content: flex-end;
         width: 4em;
         margin-top: 0;
         margin-left: -4em;
         text-align: right;
-        opacity: .6;
+        opacity: .4;
         pointer-events: none;
       }
 
@@ -224,7 +225,7 @@ body:hover .latest {
   }
 
   ul li::before {
-    content: "•";
+    content: "-";
     padding-right: .6em;
   }
 
