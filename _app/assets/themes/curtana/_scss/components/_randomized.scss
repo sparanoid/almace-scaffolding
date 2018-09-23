@@ -3,8 +3,16 @@
 //
 
 // Variables for standalone version
-// $link-color: #a212d1;
-// $code-color: #00cc80;
+// $code-color: #3914b3;
+
+// Remove output unit
+@function unitlessness($input) {
+  @if type-of($input) == 'number' and not unitless($input) {
+    @return $input / ($input * 0 + 1);
+  }
+
+  @return $input;
+}
 
 // Power
 @function pow($num, $exponent) {
@@ -54,16 +62,22 @@
   }
 }
 
+// Set code color variables from $code-color
+:root {
+  --rdmz-hue: #{unitlessness(hue($code-color))};
+  --rdmz-sat: #{saturation($code-color)};
+  --rdmz-light: #{lightness($code-color)};
+}
+
 // Reset background
 //
 // `.highlight > pre`                 - Jekyll liquid code blocks
 // `.highlighter-rouge pre.highlight` - Rouge GFM code blocks
 //
 // Ref: https://github.com/jekyll/jekyll/pull/4053
-$highlighter-tint: $link-color;
 .highlight > pre,
 .highlighter-rouge pre.highlight {
-  background: rgba(calc-bg($highlighter-tint), .02);
+  background: hsla(var(--rdmz-hue), var(--rdmz-sat), var(--rdmz-light), .03);
 }
 
 // General highlights
@@ -74,7 +88,7 @@ $highlighter-tint: $link-color;
 .highlighter-rouge {
 
   // Special background for syntax errors
-  .err { background-color: rgba(saturate($highlighter-tint, 10%), .1) } // Error
+  .err { background-color: hsla(var(--rdmz-hue), calc(var(--rdmz-sat) * 2), var(--rdmz-light), .1); } // Error
 
   .c   { font-style: italic } // Comment
   .cm  { font-style: italic } // Comment.Multiline
@@ -179,11 +193,17 @@ $highlighter-tint: $link-color;
     pi // Punctuation.Indicator
   ;
 
+  // Redefine code color to HSL format
+  pre,
+  code {
+    color: hsl(var(--rdmz-hue), var(--rdmz-sat), var(--rdmz-light));
+  }
+
   // Generate main highlights
   @each $token in $main-tokens {
     $i: index($main-tokens, $token);
     .#{$token} {
-      color: mix(adjust-hue($code-color, ($i * 360 / length($main-tokens))), $link-color, 80%);
+      color: hsl(calc(var(--rdmz-hue) + #{$i * 360 / length($main-tokens)}), var(--rdmz-sat), var(--rdmz-light));
     }
   }
 
@@ -200,8 +220,7 @@ $highlighter-tint: $link-color;
   @each $token in $comment-tokens {
     $i: index($comment-tokens, $token);
     .#{$token} {
-      color: mix(desaturate(adjust-hue($code-color, ($i * 360 / length($comment-tokens))), 70%), $link-color, 90%);
-      opacity: .6;
+      color: hsla(calc(var(--rdmz-hue) + #{$i * 360 / length($main-tokens)}), calc(var(--rdmz-sat) * .7), var(--rdmz-light), .6);
     }
   }
 
@@ -235,8 +254,7 @@ $highlighter-tint: $link-color;
       }
 
       .lineno {
-        color: desaturate($link-color, 95%);
-        opacity: .5;
+        color: hsla(var(--rdmz-hue), calc(var(--rdmz-sat) * .4), var(--rdmz-light), .4);
         user-select: none;
       }
     }
