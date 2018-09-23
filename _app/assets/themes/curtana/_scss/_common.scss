@@ -2,11 +2,6 @@
 // Common
 // -----------------------------------------------------------------------------
 
-// Typography setup
-:root[data-ua*="Windows"] {
-  --font-features: normal;
-}
-
 // Main navigation
 .navigation {
   padding-top: var(--nav-padding);
@@ -211,14 +206,13 @@ body:hover .latest {
 
       &::before {
         position: absolute;
-        display: inline-block;
+        display: flex;
+        justify-content: flex-end;
         width: 4em;
         margin-top: 0;
         margin-left: -4em;
-        font-size: 80%;
-        line-height: calc(var(--line-height) * 1.2 / .8);
         text-align: right;
-        opacity: .6;
+        opacity: .4;
         pointer-events: none;
       }
 
@@ -231,7 +225,7 @@ body:hover .latest {
   }
 
   ul li::before {
-    content: "•";
+    content: "-";
     padding-right: .6em;
   }
 
@@ -368,7 +362,7 @@ body:hover .latest {
       // We will reset the common margin-bottom to get gapless borders for
       // blockquotes. This could help fix
       // https://github.com/amsf/amsf-curtana/issues/4
-      padding-bottom: 1.6rem;
+      padding-bottom: 1.6em;
 
       // Now reset default margin button from global define
       margin-bottom: 0;
@@ -377,7 +371,7 @@ body:hover .latest {
       // Remove extra padding for the last element, re-apply margin
       &:last-of-type {
         padding-bottom: 0;
-        margin-bottom: 1.6rem;
+        margin-bottom: .4em;
       }
 
       @media (max-width: $breakpoint-sm) {
@@ -406,6 +400,7 @@ body:hover .latest {
 
     summary {
       position: relative;
+      list-style: none;
       line-height: calc(var(--line-height) * 1.2);
       outline: none;
       cursor: pointer;
@@ -421,21 +416,23 @@ body:hover .latest {
       &::before {
         content: "+";
         position: absolute;
-        display: inline-block;
-        width: 4em;
-        padding-right: .6em;
+        display: flex;
+        justify-content: center;
+        width: 1em;
+        left: -.3em;
         margin-top: 0;
-        margin-left: -4em;
-        font-size: 80%;
-        line-height: calc(var(--line-height) * 1.2 / .8);
+        margin-left: -1em;
         text-align: right;
-        opacity: .6;
-        pointer-events: none;
+        opacity: .4;
+        transition: opacity .2s ease, transform .2s ease;
+        transform-origin: center center;
+        font-feature-settings: "case";
       }
     }
 
     &[open] summary::before {
-      content: "-";
+      opacity: 1;
+      transform: rotate(45deg);
     }
   }
 
@@ -658,7 +655,7 @@ body:hover .latest {
   }
 }
 
-// Tweet button margin fix
+// Post date margin fix
 .post-modified-date {
   font-size: 75%;
   opacity: .5;
@@ -810,6 +807,11 @@ body:hover .latest {
       transform: scale(1.4);
     }
   }
+}
+
+// OpenType features
+.of-case {
+  font-feature-settings: "case";
 }
 
 .footer {
