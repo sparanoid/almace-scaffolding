@@ -26,7 +26,7 @@ $code-color: #c57000 !default;
   --fontstack-monospace: Menlo, Consolas, monospace;
   --fontstack-default: var(--fontstack-prefix) var(--fontstack-sans-serif);
   --font-size: 1.6vw;
-  --font-features: "case", "ss01", "ss02";
+  --font-features: "ss01", "ss02";
   --line-height: calc(20 / 14); // ~ 1.428571429
   --heading-letter-spacing: -.04em;
 

@@ -2,11 +2,6 @@
 // Common
 // -----------------------------------------------------------------------------
 
-// Typography setup
-:root[data-ua*="Windows"] {
-  --font-features: normal;
-}
-
 // Main navigation
 .navigation {
   padding-top: var(--nav-padding);
