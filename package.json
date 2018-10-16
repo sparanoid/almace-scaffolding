@@ -1,7 +1,7 @@
 {
   "name": "almace-scaffolding",
   "version": "2.0.5",
-  "description": "Almace Scaffolding, a super-fast Jekyll framework",
+  "description": "Almace Scaffolding, a super-fast Jekyll framework fighting against the website obesity.",
   "author": "Tunghsiao Liu",
   "homepage": "https://sparanoid.com/lab/amsf/",
   "main": "Gruntfile.coffee",
