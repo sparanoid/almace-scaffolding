@@ -128,7 +128,7 @@ Template:
 Output:
 
 ```html
-<meta property="og:description" content="Super-fast Jekyll framework">
+<meta property="og:description" content="A super-fast Jekyll framework fighting against the website obesity.">
 ```
 
 ### `site.file`
