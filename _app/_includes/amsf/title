@@ -50,10 +50,14 @@
   Page title
 {%- endcomment -%}
 {%- capture amsf_page_title -%}
-  {%- if page.title.first -%}
-    {{ page.title[site.active_lang] }}
+  {%- if page.title -%}
+    {%- if page.title.first -%}
+      {{ page.title[site.active_lang] }}
+    {%- else -%}
+      {{ page.title }}
+    {%- endif -%}
   {%- else -%}
-    {{ page.title }}
+    {{ site.name }}
   {%- endif -%}
 {%- endcapture -%}
 
