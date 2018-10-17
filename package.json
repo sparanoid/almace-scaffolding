@@ -43,6 +43,7 @@
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-conventional-changelog": "^6.1.0",
+    "grunt-doctype": "^2.0.1",
     "grunt-git": "^1.0.10",
     "grunt-html-trim": "^0.1.0",
     "grunt-jekyll": "^0.4.7",
