@@ -326,6 +326,15 @@ module.exports = (grunt) ->
           dest: "<%= config.dist %>"
         ]
 
+    doctype:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
+        ]
+
     jekyll:
       options:
         bundleExec: true
@@ -702,6 +711,7 @@ module.exports = (grunt) ->
     "service_worker"
     "uglify:sw"
     "sri_hash:dist"
+    "doctype"
     "cleanempty"
   ]
 
