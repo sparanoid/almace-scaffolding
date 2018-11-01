@@ -59,6 +59,6 @@
     "grunt-xmlmin": "^0.1.8",
     "jit-grunt": "^0.10.0",
     "node-sass": "^4.9.3",
-    "time-grunt": "^1.4.0"
+    "time-grunt": "^2.0.0"
   }
 }
