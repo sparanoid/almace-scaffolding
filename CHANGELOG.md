@@ -1,3 +1,25 @@
+<a name="2.0.6"></a>
+## [2.0.6](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.5...v2.0.6) (2018-11-09)
+
+
+### Bug Fixes
+
+* **css:** wrong mixin order ([4c26c69](https://github.com/sparanoid/almace-scaffolding/commit/4c26c69))
+* **css:** wrong variable definition ([4057f9e](https://github.com/sparanoid/almace-scaffolding/commit/4057f9e))
+* **grunt:** `uncss_inline` v1.2.4 causes `cacheBust` not triggered anymore, reorder task ([d2672c8](https://github.com/sparanoid/almace-scaffolding/commit/d2672c8))
+
+
+### Features
+
+* rebrand description ([7362fe5](https://github.com/sparanoid/almace-scaffolding/commit/7362fe5))
+* rebrand logo to v2 ([4eb9a46](https://github.com/sparanoid/almace-scaffolding/commit/4eb9a46))
+* **amsf:** fallback to site name if page title not defined ([725521b](https://github.com/sparanoid/almace-scaffolding/commit/725521b))
+* **config:** revert back to original analytics.js instead of ga.js for better performance ([54c826f](https://github.com/sparanoid/almace-scaffolding/commit/54c826f))
+* **css:** add a simple way to avoid default image resizing ([cd66a6c](https://github.com/sparanoid/almace-scaffolding/commit/cd66a6c))
+* **grunt:** add `grunt-doctype` support ([092b498](https://github.com/sparanoid/almace-scaffolding/commit/092b498))
+
+
+
 <a name="2.0.5"></a>
 ## [2.0.5](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.4...v2.0.5) (2018-09-23)
 
