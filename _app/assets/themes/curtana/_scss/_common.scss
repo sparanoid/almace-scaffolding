@@ -226,13 +226,13 @@ body:hover .latest {
 
   ul li::before {
     content: "-";
-    padding-right: .6em;
+    padding-right: .5em;
   }
 
   ol li::before {
     counter-increment: list;
     content: counter(list) ".";
-    padding-right: .3em;
+    padding-right: .25em;
   }
 
   dl {
