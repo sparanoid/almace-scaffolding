@@ -16,7 +16,7 @@ $breakpoint-xs: 400px !default;
 $link-color: #a212d1 !default;
 $background-color: #fff !default;
 $text-color: #000 !default;
-$code-color: #c57000 !default;
+$code-color: #3914b3 !default;
 
 :root {
   // Typography
@@ -31,10 +31,10 @@ $code-color: #c57000 !default;
   --heading-letter-spacing: -.04em;
 
   // Layout
-  --breakpoint-lg: $breakpoint-lg;
-  --breakpoint-md: $breakpoint-md;
-  --breakpoint-sm: $breakpoint-sm;
-  --breakpoint-xs: $breakpoint-xs;
+  --breakpoint-lg: #{$breakpoint-lg};
+  --breakpoint-md: #{$breakpoint-md};
+  --breakpoint-sm: #{$breakpoint-sm};
+  --breakpoint-xs: #{$breakpoint-xs};
 
   --space-lg: 24vw;
   --space-md: 8vw;

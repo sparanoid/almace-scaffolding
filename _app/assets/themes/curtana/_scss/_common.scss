@@ -259,7 +259,7 @@ body:hover .latest {
     }
   }
 
-  img,
+  img:not(.no-resize),
   video,
   iframe,
   .browser {

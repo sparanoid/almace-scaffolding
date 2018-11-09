@@ -326,6 +326,15 @@ module.exports = (grunt) ->
           dest: "<%= config.dist %>"
         ]
 
+    doctype:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
+        ]
+
     jekyll:
       options:
         bundleExec: true
@@ -696,12 +705,13 @@ module.exports = (grunt) ->
     "cssmin"
     "assets_inline"
     "uncss_inline"
-    "cacheBust"
     "concurrent:dist"
+    "cacheBust"
     "html_trim"
     "service_worker"
     "uglify:sw"
     "sri_hash:dist"
+    "doctype"
     "cleanempty"
   ]
 

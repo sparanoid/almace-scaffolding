@@ -14,6 +14,21 @@ Code highlighting demo, powered by Rouge. More info about code highlighting can 
 }
 ```
 
+```diff
+{
+  "scripts": {
+-   "precommit": "npm test",
+-   "commitmsg": "commitlint -E GIT_PARAMS"
+  },
++ "husky": {
++   "hooks": {
++     "pre-commit": "npm test",
++     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
++   }
++ }
+}
+```
+
 ```ruby
 def show
   @widget = Widget(params[:id])

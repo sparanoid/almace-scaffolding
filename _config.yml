@@ -163,7 +163,7 @@ service_worker:
 google_analytics:
   enabled:      false
   id:           UA-xxxxxxx
-  url:          https://www.googletagmanager.com/gtag/js
+  url:          https://www.google-analytics.com/analytics.js
 
 # Site Twitter account handle
 twitter:        sparanoid
