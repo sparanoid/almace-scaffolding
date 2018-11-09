@@ -1,3 +1,19 @@
+<a name="2.0.7"></a>
+## [2.0.7](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.6...v2.0.7) (2018-11-09)
+
+
+### Bug Fixes
+
+* **css:** image position overwritten with `:not` pseudo selector ([4f7e623](https://github.com/sparanoid/almace-scaffolding/commit/4f7e623))
+* **css:** list decorations not aligned to the baseline ([9d2ee52](https://github.com/sparanoid/almace-scaffolding/commit/9d2ee52))
+
+
+### Features
+
+* **css:** reimplement `no-resize` separately ([752b521](https://github.com/sparanoid/almace-scaffolding/commit/752b521))
+
+
+
 <a name="2.0.6"></a>
 ## [2.0.6](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.5...v2.0.6) (2018-11-09)
 
