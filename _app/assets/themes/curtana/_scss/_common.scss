@@ -342,6 +342,20 @@ body:hover .latest {
         margin-bottom: auto;
       }
     }
+
+    &.no-resize,
+    &.noresize,
+    &.size-original {
+      width: unset;
+      max-width: 100%;
+      margin-left: unset;
+      margin-right: unset;
+
+      &.center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 
   blockquote {
