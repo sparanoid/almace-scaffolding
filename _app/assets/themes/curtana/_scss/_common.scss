@@ -432,10 +432,10 @@ body:hover .latest {
         position: absolute;
         display: flex;
         justify-content: center;
-        width: 1em;
-        left: -.3em;
+        width: 1ex;
+        left: -.5em;
         margin-top: 0;
-        margin-left: -1em;
+        margin-left: -1ex;
         text-align: right;
         opacity: .4;
         transition: opacity .2s ease, transform .2s ease;
@@ -444,6 +444,10 @@ body:hover .latest {
       }
     }
 
+    // TODO: SCSS generates wrong !important comment position when related
+    // block are nested inside, you have to make sure the block you wanna keep
+    // by uncss the topmost level (root) of your css. I already implemented a
+    // workaround for `opentype-features` repo.
     &[open] summary::before {
       opacity: 1;
       transform: rotate(45deg);
