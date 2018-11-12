@@ -50,24 +50,13 @@
   Page title
 {%- endcomment -%}
 {%- capture amsf_page_title -%}
-  {%- if page.title -%}
-    {%- if page.title.first -%}
-      {{ page.title[site.active_lang] }}
+  {%- if type.title -%}
+    {%- if type.title.first -%}
+      {{ type.title[site.active_lang] }}
     {%- else -%}
-      {{ page.title }}
+      {{ type.title }}
     {%- endif -%}
   {%- else -%}
-    {{ site.name }}
-  {%- endif -%}
-{%- endcapture -%}
-
-{%- comment -%}
-  Post title
-{%- endcomment -%}
-{%- capture amsf_post_title -%}
-  {%- if post.title.first -%}
-    {{ post.title[site.active_lang] }}
-  {%- else -%}
-    {{ post.title }}
+    {{ amsf_site_name }}
   {%- endif -%}
 {%- endcapture -%}
