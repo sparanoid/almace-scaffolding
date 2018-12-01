@@ -1,3 +1,25 @@
+<a name="2.0.8"></a>
+## [2.0.8](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.7...v2.0.8) (2018-12-01)
+
+
+### Bug Fixes
+
+* **amsf:** no page/post title fallback ([176d3a0](https://github.com/sparanoid/almace-scaffolding/commit/176d3a0))
+
+
+### Features
+
+* **footer:** add dynamic footer links support ([b64617f](https://github.com/sparanoid/almace-scaffolding/commit/b64617f))
+* **pages:** hide error page in sitemap ([ad72fda](https://github.com/sparanoid/almace-scaffolding/commit/ad72fda))
+* **robots.txt:** better output ([fd3fd55](https://github.com/sparanoid/almace-scaffolding/commit/fd3fd55))
+
+
+### BREAKING CHANGES
+
+* **footer:** If you already defined your custom footer links in `footer.html`, you need to remove them and defined them in `footer.yml` for further compatibility
+
+
+
 <a name="2.0.7"></a>
 ## [2.0.7](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.6...v2.0.7) (2018-11-09)
 
