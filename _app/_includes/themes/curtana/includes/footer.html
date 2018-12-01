@@ -5,13 +5,19 @@
       <li><a href="{{ '/' | relative_url }}">{{ amsf_site_name }}</a></li>
 
       {% if site.credits %}
-        <li><a href="https://sparanoid.com/lab/amsf/" title="Almace Scaffolding">AMSF</a></li>
-        <li><a href="{{ site.data.curtana.meta.url }}" title="{{ site.data.curtana.meta.name }}">{{ site.data.curtana.meta.name }}</a></li>
+        <li>
+          <a href="https://sparanoid.com/lab/amsf/" title="Almace Scaffolding with theme {{ site.data.curtana.meta.name }}">AMSF</a>
+        </li>
       {% endif %}
 
-      {% if site.data.curtana.subscription %}
-        <li><a href="{{ '/email-signup' | relative_url }}/">Email</a></li>
-      {% endif %}
+      {% for item in site.data.footer %}
+        {%- include amsf/relative_url url=item.url -%}
+        {%- assign item_url = amsf_relative_url -%}
+        {%- assign lowercased_title = item.title | slugify -%}
+        <li>
+          <a href="{{ item_url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </footer>
 {% endunless %}
