@@ -55,7 +55,7 @@
     "grunt-shell": "2.1.0",
     "grunt-sri-hash": "1.1.2",
     "grunt-text-replace": "0.4.0",
-    "grunt-uncss-inline": "1.2.4",
+    "grunt-uncss-inline": "1.2.5",
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
     "node-sass": "4.9.3",
