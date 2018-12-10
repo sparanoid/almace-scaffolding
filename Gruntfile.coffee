@@ -378,7 +378,7 @@ module.exports = (grunt) ->
         command: [
           "bundle update"
           "bundle install"
-          "npm install"
+          "yarn install"
         ].join("&&")
 
       amsf__theme__to_app:

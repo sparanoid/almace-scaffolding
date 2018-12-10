@@ -24,7 +24,7 @@ So in short for geeks:
 ```sh
 $ git clone https://github.com/sparanoid/almace-scaffolding my-site
 $ cd my-site
-$ bundle install && npm install
+$ bundle install && yarn install
 $ grunt init
 $ grunt serve
 # ...editing
