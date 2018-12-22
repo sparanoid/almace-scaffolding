@@ -1477,12 +1477,12 @@ grunt-service-worker@1.0.2:
   dependencies:
     sw-precache "^5.2.1"
 
-grunt-shell@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/grunt-shell/-/grunt-shell-2.1.0.tgz#439f79159ed11e64a651a69cc8a3d02bebf5ecc2"
-  integrity sha1-Q595FZ7RHmSmUaacyKPQK+v17MI=
+grunt-shell@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/grunt-shell/-/grunt-shell-3.0.0.tgz#bc5e8acf9863968e8b837f9f68672c4ad2203b7b"
+  integrity sha512-H4ots7FD/UEYGjNbRLmvuQZ6LPwOeAj8Y9Ow8FQIo6IoCAmACx0CFYISOlmkJm/KmUvfMFAla976iqDf1yCRYw==
   dependencies:
-    chalk "^1.0.0"
+    chalk "^2.4.1"
     npm-run-path "^2.0.0"
 
 grunt-sri-hash@1.1.2:
