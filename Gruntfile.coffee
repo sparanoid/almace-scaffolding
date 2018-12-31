@@ -11,7 +11,6 @@ module.exports = (grunt) ->
     "bump-only": "grunt-bump"
     gitclone: "grunt-git"
     replace: "grunt-text-replace"
-    uglify: "grunt-contrib-uglify-es"
 
   # Track tasks load time
   require("time-grunt") grunt
