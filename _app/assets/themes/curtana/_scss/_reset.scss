@@ -86,7 +86,6 @@ button {
   &:focus {
     transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
     text-decoration: underline;
-    text-decoration-skip: ink;
   }
 
   &[disabled] {
