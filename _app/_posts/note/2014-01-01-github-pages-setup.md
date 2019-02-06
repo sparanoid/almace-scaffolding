@@ -23,7 +23,7 @@ Since GitHub Pages for users or organization sites can only be served from the r
 
 - Make sure your `baseurl` is set to `""` (empty) in your `_config.yml`.
 - Build your site locally (`grunt build`).
-- You your own method, create a script, bash, whatever it works to move the generated pages to the root directory of your repository.
+- Use your own method, create a script, bash, whatever it works to move the generated pages to the root directory of your repository.
 - Upload Jekyll generated static files to your `username.github.io` repository.
 
 If you'd like to keep all things under Git control, you can try the following file structure:
