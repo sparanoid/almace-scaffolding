@@ -30,6 +30,7 @@ module.exports = (grunt) ->
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.baseurl %>"
       base_dev: "<%= config.cfg_dev.baseurl %>"
+      flatten_base: "<%= config.cfg.flatten_base %>"
       assets: "<%= config.cfg.assets %>"
       banner: "<!-- <%= config.pkg.name %> v<%= config.pkg.version %> | © <%= config.pkg.author %> | <%= config.pkg.license %> -->\n"
 
@@ -407,6 +408,9 @@ module.exports = (grunt) ->
       amsf__release:
         command: "git checkout release && git pull && git merge master --no-edit && git push && git checkout master && git push"
 
+      move_flatten_base:
+        command: if "<%= config.flatten_base %>" then "mv <%= config.dist %><%= config.base %>/* <%= config.dist %>/"
+
     concurrent:
       options:
         logConcurrentOutput: true
@@ -711,6 +715,7 @@ module.exports = (grunt) ->
     "uglify:sw"
     "sri_hash:dist"
     "doctype"
+    "shell:move_flatten_base"
     "cleanempty"
   ]
 
