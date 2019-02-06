@@ -409,7 +409,7 @@ module.exports = (grunt) ->
         command: "git checkout release && git pull && git merge master --no-edit && git push && git checkout master && git push"
 
       move_flatten_base:
-        command: if "<%= config.flatten_base %>" then "mv <%= config.dist %><%= config.base %>/* <%= config.dist %>/"
+        command: "mv <%= config.dist %><%= config.base %>/* <%= config.dist %>/"
 
     concurrent:
       options:
@@ -698,6 +698,12 @@ module.exports = (grunt) ->
         "amsf-update"
       ]
 
+  grunt.registerTask "flatten_check", "Build site with jekyll", ->
+    if grunt.config.get(['config']).flatten_base
+      grunt.task.run [
+        "shell:move_flatten_base"
+      ]
+
   grunt.registerTask "build", "Build site with jekyll", [
     "clean:main"
     "coffeelint"
@@ -715,7 +721,7 @@ module.exports = (grunt) ->
     "uglify:sw"
     "sri_hash:dist"
     "doctype"
-    "shell:move_flatten_base"
+    "flatten_check"
     "cleanempty"
   ]
 
