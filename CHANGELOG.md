@@ -1,3 +1,13 @@
+<a name="2.0.10"></a>
+## [2.0.10](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.9...v2.0.10) (2019-02-06)
+
+
+### Bug Fixes
+
+* **grunt:** wrong task condition for flatten option ([2740b78](https://github.com/sparanoid/almace-scaffolding/commit/2740b78))
+
+
+
 <a name="2.0.9"></a>
 ## [2.0.9](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.8...v2.0.9) (2019-02-06)
 
