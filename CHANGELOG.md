@@ -1,3 +1,15 @@
+<a name="2.0.9"></a>
+## [2.0.9](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.8...v2.0.9) (2019-02-06)
+
+
+### Features
+
+* **config:** add new option `flatten_base` for easier setup fpr GitHub Pages (for projects) ([8f41221](https://github.com/sparanoid/almace-scaffolding/commit/8f41221))
+* **css:** add `halt` support ([bb2fe6c](https://github.com/sparanoid/almace-scaffolding/commit/bb2fe6c))
+* switch from npm to yarn ([6020fbf](https://github.com/sparanoid/almace-scaffolding/commit/6020fbf))
+
+
+
 <a name="2.0.8"></a>
 ## [2.0.8](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.7...v2.0.8) (2018-12-01)
 
