@@ -1485,14 +1485,14 @@ grunt-shell@3.0.1:
     npm-run-path "^2.0.0"
     strip-ansi "^5.0.0"
 
-grunt-sri-hash@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/grunt-sri-hash/-/grunt-sri-hash-1.1.2.tgz#4ec06d21bc1cf4f9108f5c96ebcda64a1a4a790c"
-  integrity sha512-DkyHvqTp5u2/izFixgPAgVfx/ujseSOtlDQW5hAXkDCBWlEjgPANmxSQX6u+XKqAmHRqu+yt6nkyAfCokhxBSw==
+grunt-sri-hash@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/grunt-sri-hash/-/grunt-sri-hash-1.1.3.tgz#92fe9186c4e9703afc26ba5d8738559accea6df2"
+  integrity sha512-Yh6zguYUJkFixS/+dE4/KLH9xjKm4ImikuWhJe+O0w1dUoThWtBLI8MHaTajUcYgcfPLsudhhYwWJ2naX8P8tQ==
   dependencies:
-    jsdom "^12.0.0"
+    jsdom "^13.0.0"
 
-grunt-terser@^0.1.0:
+grunt-terser@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/grunt-terser/-/grunt-terser-0.1.0.tgz#979a571d1ed9764773819db0f57dd46bc8a9c5d5"
   integrity sha1-l5pXHR7ZdkdzgZ2w9X3Ua8ipxdU=
@@ -1924,37 +1924,6 @@ jsdom@^11.3.0:
     whatwg-mimetype "^2.1.0"
     whatwg-url "^6.4.1"
     ws "^5.2.0"
-    xml-name-validator "^3.0.0"
-
-jsdom@^12.0.0:
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-12.2.0.tgz#7cf3f5b5eafd47f8f09ca52315d367ff6e95de23"
-  integrity sha512-QPOggIJ8fquWPLaYYMoh+zqUmdphDtu1ju0QGTitZT1Yd8I5qenPpXM1etzUegu3MjVp8XPzgZxdn8Yj7e40ig==
-  dependencies:
-    abab "^2.0.0"
-    acorn "^6.0.2"
-    acorn-globals "^4.3.0"
-    array-equal "^1.0.0"
-    cssom "^0.3.4"
-    cssstyle "^1.1.1"
-    data-urls "^1.0.1"
-    domexception "^1.0.1"
-    escodegen "^1.11.0"
-    html-encoding-sniffer "^1.0.2"
-    nwsapi "^2.0.9"
-    parse5 "5.1.0"
-    pn "^1.1.0"
-    request "^2.88.0"
-    request-promise-native "^1.0.5"
-    saxes "^3.1.3"
-    symbol-tree "^3.2.2"
-    tough-cookie "^2.4.3"
-    w3c-hr-time "^1.0.1"
-    webidl-conversions "^4.0.2"
-    whatwg-encoding "^1.0.5"
-    whatwg-mimetype "^2.2.0"
-    whatwg-url "^7.0.0"
-    ws "^6.1.0"
     xml-name-validator "^3.0.0"
 
 jsdom@^13.0.0:
