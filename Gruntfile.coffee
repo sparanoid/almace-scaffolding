@@ -95,9 +95,8 @@ module.exports = (grunt) ->
         options:
           interrupt: true
 
-    uglify:
+    terser:
       options:
-        report: "gzip"
         compress:
           drop_console: true
 
@@ -707,7 +706,7 @@ module.exports = (grunt) ->
   grunt.registerTask "build", "Build site with jekyll", [
     "clean:main"
     "coffeelint"
-    "uglify:dist"
+    "terser:dist"
     "sass:dist"
     "postcss:dist"
     "jekyll:dist"
@@ -718,7 +717,7 @@ module.exports = (grunt) ->
     "cacheBust"
     "html_trim"
     "service_worker"
-    "uglify:sw"
+    "terser:sw"
     "sri_hash:dist"
     "doctype"
     "flatten_check"
