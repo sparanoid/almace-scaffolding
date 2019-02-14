@@ -1,3 +1,13 @@
+<a name="2.0.11"></a>
+## [2.0.11](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.10...v2.0.11) (2019-02-14)
+
+
+### Features
+
+* **grunt:** use terser for es6+ uglifier ([0037e2d](https://github.com/sparanoid/almace-scaffolding/commit/0037e2d))
+
+
+
 <a name="2.0.10"></a>
 ## [2.0.10](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.9...v2.0.10) (2019-02-06)
 
