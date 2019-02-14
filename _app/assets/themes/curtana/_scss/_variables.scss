@@ -21,7 +21,7 @@ $code-color: #3914b3 !default;
 :root {
   // Typography
   --fontstack-prefix: -apple-system, BlinkMacSystemFont,; // Notice that ending comma?
-  --fontstack-sans-serif: "Helvetica Neue", Arial, sans-serif;
+  --fontstack-sans-serif: "Helvetica Neue", sans-serif;
   --fontstack-serif: Georgia, serif;
   --fontstack-monospace: Menlo, Consolas, monospace;
   --fontstack-default: var(--fontstack-prefix) var(--fontstack-sans-serif);
