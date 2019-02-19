@@ -1,3 +1,15 @@
+<a name="2.0.12"></a>
+## [2.0.12](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.11...v2.0.12) (2019-02-19)
+
+
+### Features
+
+* **css:** simpler fontstack ([48f9446](https://github.com/sparanoid/almace-scaffolding/commit/48f9446))
+* **docs:** update “Customizing Styles” ([8579b04](https://github.com/sparanoid/almace-scaffolding/commit/8579b04))
+* **package:** avoid deprecated package ([61b410f](https://github.com/sparanoid/almace-scaffolding/commit/61b410f))
+
+
+
 <a name="2.0.11"></a>
 ## [2.0.11](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.10...v2.0.11) (2019-02-14)
 
