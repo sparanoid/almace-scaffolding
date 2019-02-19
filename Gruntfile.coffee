@@ -13,7 +13,7 @@ module.exports = (grunt) ->
     replace: "grunt-text-replace"
 
   # Track tasks load time
-  require("time-grunt") grunt
+  require("@lodder/time-grunt") grunt
 
   # Get deploy target, see `_deploy.yml` for more info
   deploy_env = grunt.option("env") or "default"
