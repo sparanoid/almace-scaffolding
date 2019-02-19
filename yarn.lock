@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@lodder/time-grunt@^3.0.1":
+"@lodder/time-grunt@3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@lodder/time-grunt/-/time-grunt-3.0.1.tgz#a311f145c23079dac729a332de5e79636f61097c"
   integrity sha512-4DVTiDfCNbtr9lu3DVAEccEQiKQxT7rQp7w/VqHGxIc+m98MYcMgt7fNIPPdP0rc73W7pwCP5Lr/T4I6qEWBIw==
