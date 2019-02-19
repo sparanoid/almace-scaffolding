@@ -1380,10 +1380,10 @@ grunt-conventional-changelog@6.1.0:
     plur "^2.0.0"
     q "^1.4.1"
 
-grunt-doctype@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/grunt-doctype/-/grunt-doctype-2.0.1.tgz#9cf4c2ca1ffbf96b3f08e8c2da408e52c3780625"
-  integrity sha512-sXW5D2xxbiXaGlql3q50vM6k6yWYE+58Rh8CYb+V6vBiTgHRqKgYXX4c7z4OjbQttKJ++KkOzX89PnlWZeGPtA==
+grunt-doctype@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/grunt-doctype/-/grunt-doctype-2.0.2.tgz#7ca2df3f339e6b8a7c7fa50f7b5d201600e6f4be"
+  integrity sha512-ALVt7V81Rj/BTiHw1mOE0AVeH/V8yH6QaWwIpPsnshc5jBzPVRwGA4G/cXB4y541+ptp7Hq/RwiV0/ueAWsgZQ==
 
 grunt-git@1.0.10:
   version "1.0.10"
