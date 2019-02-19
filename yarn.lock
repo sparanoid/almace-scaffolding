@@ -1469,10 +1469,10 @@ grunt-sass@3.0.2:
   resolved "https://registry.yarnpkg.com/grunt-sass/-/grunt-sass-3.0.2.tgz#b4f01567ce3df4460fcc788e9e5e4c65263425ed"
   integrity sha512-Ogq4cWqBre71gZIkgxIxevgzZHSIIsrKu/5yvPDl4Mvib0A4TRTJEQUdpQ0YV1iai0DPjayz02vDJE6KUVHQ2w==
 
-grunt-service-worker@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/grunt-service-worker/-/grunt-service-worker-1.0.2.tgz#a39839491a8c826d654a9e02d92e15784fcc13c5"
-  integrity sha512-nWsUbkmNmU5a6sWxBQoNruqO4JX1tc+KbtcMrFIPTLCPW1VF33Sz7r8hx6SQmtgeryd2gfGCY3+AZFTi7rB3Ow==
+grunt-service-worker@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/grunt-service-worker/-/grunt-service-worker-1.0.3.tgz#671f1ddad52dc46ad0de4c7b242f1e772ba78ff4"
+  integrity sha512-5mX9zyA6Ar5ox1LWMf8LLgnrtJg2PUJWEvxv33jgzhbhKIOa1uSCctDpkZjM0iG0ejjt8zWaHmYYj6scf97Utw==
   dependencies:
     sw-precache "^5.2.1"
 
