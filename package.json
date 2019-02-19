@@ -25,6 +25,7 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
+    "@lodder/time-grunt": "^3.0.1",
     "autoprefixer": "9.4.7",
     "coffeelint": "2.1.0",
     "coffeescript": "2.3.2",
@@ -58,7 +59,6 @@
     "grunt-uncss-inline": "1.2.5",
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
-    "node-sass": "4.11.0",
-    "time-grunt": "2.0.0"
+    "node-sass": "4.11.0"
   }
 }
