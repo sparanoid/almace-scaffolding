@@ -42,7 +42,7 @@
     "grunt-contrib-less": "2.0.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-conventional-changelog": "6.1.0",
-    "grunt-doctype": "2.0.1",
+    "grunt-doctype": "2.0.2",
     "grunt-git": "1.0.10",
     "grunt-html-trim": "0.1.2",
     "grunt-jekyll": "1.0.0",
