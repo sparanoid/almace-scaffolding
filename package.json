@@ -25,7 +25,7 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "@lodder/time-grunt": "3.0.1",
+    "@lodder/time-grunt": "4.0.0",
     "autoprefixer": "9.4.10",
     "coffeelint": "2.1.0",
     "coffeescript": "2.3.2",
