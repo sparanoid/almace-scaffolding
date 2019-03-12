@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@lodder/time-grunt@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@lodder/time-grunt/-/time-grunt-3.0.1.tgz#a311f145c23079dac729a332de5e79636f61097c"
-  integrity sha512-4DVTiDfCNbtr9lu3DVAEccEQiKQxT7rQp7w/VqHGxIc+m98MYcMgt7fNIPPdP0rc73W7pwCP5Lr/T4I6qEWBIw==
+"@lodder/time-grunt@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@lodder/time-grunt/-/time-grunt-4.0.0.tgz#4ae6b20f880481e257669eaf1c8ac416c3bc7ded"
+  integrity sha512-DCa672NsKsmP7aRT8oiteXI+oHrMKnIlfhXbD11y+rQWDCOmTWJk1asfCmj4/SWet6yUA9fd7WJlA7iuSt05YA==
   dependencies:
-    date-time "^2.1.0"
+    date-time "^3.0.0"
     figures "^2.0.0"
     hooker "^0.2.3"
-    kleur "^3.0.1"
+    kleur "^3.0.2"
     pretty-ms "^4.0.0"
     text-table "^0.2.0"
 
@@ -757,10 +757,10 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-date-time@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/date-time/-/date-time-2.1.0.tgz#0286d1b4c769633b3ca13e1e62558d2dbdc2eba2"
-  integrity sha512-/9+C44X7lot0IeiyfgJmETtRMhBidBYM2QFFIkGa0U1k+hSyY87Nw7PY3eDqpvCBm7I3WCSfPeZskW/YYq6m4g==
+date-time@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/date-time/-/date-time-3.0.0.tgz#1a6e73e37f2e644b5e98f4b5491677ce915baca9"
+  integrity sha512-MNuyn5mYceudu3MZ/Eji5cEvUJ1aegwUWXS861U62dcs8PpEtLr3vJcd2ZX4tgyxEn2cem/fsEa1PtHx1DR8mQ==
   dependencies:
     time-zone "^1.0.0"
 
@@ -2008,7 +2008,7 @@ junk@^1.0.2:
   resolved "https://registry.yarnpkg.com/junk/-/junk-1.0.3.tgz#87be63488649cbdca6f53ab39bec9ccd2347f592"
   integrity sha1-h75jSIZJy9ym9Tqzm+yczSNH9ZI=
 
-kleur@^3.0.1:
+kleur@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.2.tgz#83c7ec858a41098b613d5998a7b653962b504f68"
   integrity sha512-3h7B2WRT5LNXOtQiAaWonilegHcPSf9nLVXlSTci8lu1dZUuui61+EsPEZqSVxY7rXYmB2DVKMQILxaO5WL61Q==
