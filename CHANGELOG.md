@@ -1,3 +1,18 @@
+<a name="2.0.13"></a>
+## [2.0.13](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.12...v2.0.13) (2019-03-16)
+
+
+### Bug Fixes
+
+* **google_analytics:** missing url variable ([4e9f528](https://github.com/sparanoid/almace-scaffolding/commit/4e9f528))
+
+
+### Features
+
+* **js:** update lightense images ([dfd14cd](https://github.com/sparanoid/almace-scaffolding/commit/dfd14cd))
+
+
+
 <a name="2.0.12"></a>
 ## [2.0.12](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.11...v2.0.12) (2019-02-19)
 
