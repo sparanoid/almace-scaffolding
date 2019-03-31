@@ -3,7 +3,6 @@
 //
 
 // Variables for standalone version
-// $code-color: #3914b3;
 $code-color: hsl(254, 80%, 39%) !default;
 
 // Remove output unit
@@ -65,9 +64,9 @@ $code-color: hsl(254, 80%, 39%) !default;
 
 // Set code color variables from $code-color
 :root {
-  --rdmz-hue: #{unitlessness(hue($code-color))};
-  --rdmz-sat: #{saturation($code-color)};
-  --rdmz-light: #{lightness($code-color)};
+  --rdmz-h: var(--code-color-h, #{unitlessness(hue($code-color))});
+  --rdmz-s: var(--code-color-s, #{saturation($code-color)});
+  --rdmz-l: var(--code-color-l, #{lightness($code-color)});
 }
 
 // Reset background
@@ -78,7 +77,7 @@ $code-color: hsl(254, 80%, 39%) !default;
 // Ref: https://github.com/jekyll/jekyll/pull/4053
 .highlight > pre,
 .highlighter-rouge pre.highlight {
-  background: hsla(var(--rdmz-hue), var(--rdmz-sat), var(--rdmz-light), .03);
+  background: hsla(var(--rdmz-h), var(--rdmz-s), var(--rdmz-l), .03);
 }
 
 // General highlights
@@ -89,7 +88,7 @@ $code-color: hsl(254, 80%, 39%) !default;
 .highlighter-rouge {
 
   // Special background for syntax errors
-  .err { background-color: hsla(var(--rdmz-hue), calc(var(--rdmz-sat) * 2), var(--rdmz-light), .1); } // Error
+  .err { background-color: hsla(var(--rdmz-h), calc(var(--rdmz-s) * 2), var(--rdmz-l), .1); } // Error
 
   .c   { font-style: italic } // Comment
   .cm  { font-style: italic } // Comment.Multiline
@@ -197,16 +196,22 @@ $code-color: hsl(254, 80%, 39%) !default;
   // Redefine code color to HSL format
   pre,
   code {
-    color: hsl(var(--rdmz-hue), var(--rdmz-sat), var(--rdmz-light));
+    --rdmz-h-local: var(--rdmz-h);
+    color: hsl(var(--rdmz-h), var(--rdmz-s), var(--rdmz-l));
   }
 
   // Generate main highlights
   @each $token in $main-tokens {
     $i: index($main-tokens, $token);
     .#{$token} {
-      color: hsl(calc(var(--rdmz-hue) + #{$i * 360 / length($main-tokens)}), var(--rdmz-sat), var(--rdmz-light));
+      --rdmz-h-local: calc(var(--rdmz-h) + #{$i * 360 / length($main-tokens)});
+      color: hsl(var(--rdmz-h-local), var(--rdmz-s), var(--rdmz-l));
     }
   }
+
+  // Tweak general inserts/deletion for more semantic colors
+  .gd { --rdmz-h-local: 10; }
+  .gi { --rdmz-h-local: 150; }
 
   $comment-tokens:
     c // Comment
@@ -221,7 +226,7 @@ $code-color: hsl(254, 80%, 39%) !default;
   @each $token in $comment-tokens {
     $i: index($comment-tokens, $token);
     .#{$token} {
-      color: hsla(calc(var(--rdmz-hue) + #{$i * 360 / length($main-tokens)}), calc(var(--rdmz-sat) * .7), var(--rdmz-light), .6);
+      color: hsla(calc(var(--rdmz-h) + #{$i * 360 / length($main-tokens)}), calc(var(--rdmz-s) * .7), var(--rdmz-l), .6);
     }
   }
 
@@ -255,7 +260,7 @@ $code-color: hsl(254, 80%, 39%) !default;
       }
 
       .lineno {
-        color: hsla(var(--rdmz-hue), calc(var(--rdmz-sat) * .4), var(--rdmz-light), .4);
+        color: hsla(var(--rdmz-h), calc(var(--rdmz-s) * .4), var(--rdmz-l), .4);
         user-select: none;
       }
     }

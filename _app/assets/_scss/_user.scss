@@ -26,6 +26,16 @@
 // }
 
 // EXAMPLE: amsf.github.io custom appearance
+:root {
+  --code-color-h: calc(var(--link-color-h) + 30);
+  --code-color-s: calc(var(--link-color-s) * .2 + 40%);
+
+  @media (prefers-color-scheme: dark) {
+    // Code should be lighter in dark mode
+    --code-color-l: calc(var(--link-color-l) * 1.3);
+  }
+}
+
 .content .sub-title {
   font-size: 108%;
   opacity: .8;
