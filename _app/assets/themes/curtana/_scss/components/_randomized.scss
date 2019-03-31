@@ -4,6 +4,7 @@
 
 // Variables for standalone version
 // $code-color: #3914b3;
+$code-color: hsl(254, 80%, 39%) !default;
 
 // Remove output unit
 @function unitlessness($input) {
