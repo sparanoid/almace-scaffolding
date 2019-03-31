@@ -1,3 +1,14 @@
+<a name="2.0.14"></a>
+## [2.0.14](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.13...v2.0.14) (2019-03-31)
+
+
+### Features
+
+* **css:** further switch to css variables ([b757caf](https://github.com/sparanoid/almace-scaffolding/commit/b757caf))
+* **css:** update randomized color ([3bafdfc](https://github.com/sparanoid/almace-scaffolding/commit/3bafdfc))
+
+
+
 <a name="2.0.13"></a>
 ## [2.0.13](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.12...v2.0.13) (2019-03-16)
 
