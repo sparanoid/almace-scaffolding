@@ -2,13 +2,6 @@
 // Common
 // -----------------------------------------------------------------------------
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color-l: 95%;
-    --bg-color-l: 5%;
-  }
-}
-
 // Main navigation
 .navigation {
   padding-top: var(--nav-padding);

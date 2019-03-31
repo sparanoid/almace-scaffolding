@@ -114,9 +114,9 @@ $breakpoint-xs: 400px !default;
   --bg-color-light: hsl(var(--bg-color-h), var(--bg-color-s), calc(var(--bg-color-l) / .9));
   --bg-color-dark: hsl(var(--bg-color-h), var(--bg-color-s), calc(var(--bg-color-l) * .9));
 
-  // Color - code color, an inverted demo from link-color
-  --code-color-h: calc(var(--link-color-h) + 180);
-  --code-color-s: var(--link-color-s);
+  // Color - code color
+  --code-color-h: calc(var(--link-color-h) + 30);
+  --code-color-s: calc(var(--link-color-s) * .2 + 30%);
   --code-color-l: var(--link-color-l);
   --code-color-hsl: var(--code-color-h), var(--code-color-s), var(--code-color-l);
 
@@ -136,4 +136,10 @@ $breakpoint-xs: 400px !default;
   --code-color-90: hsla(var(--code-color-hsl), .9);
   --code-color-light: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) / .9));
   --code-color-dark: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) * .9));
+
+  // Dark mode overrides, that's all we need for dark mode
+  @media (prefers-color-scheme: dark) {
+    --text-color-l: 95%;
+    --bg-color-l: 5%;
+  }
 }
