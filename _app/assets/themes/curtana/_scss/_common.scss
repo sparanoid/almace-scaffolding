@@ -2,6 +2,13 @@
 // Common
 // -----------------------------------------------------------------------------
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color-l: 95%;
+    --bg-color-l: 5%;
+  }
+}
+
 // Main navigation
 .navigation {
   padding-top: var(--nav-padding);
@@ -115,7 +122,7 @@ body:hover .latest {
     margin-bottom: 16vmin;
     flex-direction: column;
     justify-content: center;
-    background: rgba($text-color, .02);
+    background: var(--text-color-3);
     @include padding-offset(var(--space-header));
     @include margin-offset(calc(var(--space-header) * -1));
 
@@ -469,7 +476,7 @@ body:hover .latest {
   }
 
   pre {
-    background: rgba(#08f, .04);
+    background: var(--code-color-5);
   }
 
   code {
@@ -642,12 +649,12 @@ body:hover .latest {
     }
 
     th {
-      border-bottom: var(--border-md) solid rgba($text-color, .06); // Override default user agent stylesheet
+      border-bottom: var(--border-md) solid var(--text-color-5); // Override default user agent stylesheet
       text-align: left;
     }
 
     td {
-      border-top: var(--border-sm) solid rgba($text-color, .04);
+      border-top: var(--border-sm) solid var(--text-color-5);
     }
   }
 }

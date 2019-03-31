@@ -3,29 +3,25 @@
 // -----------------------------------------------------------------------------
 
 // TODO: We're in the process of transfering Sass variables to CSS native
-// variables, since CSS variables still don't support media query and color
-// manipulation, I still need some Sass variables here.
-
-// Layout
+// variables, since CSS variables still don't support media query, I still need
+// some Sass variables here:
 $breakpoint-lg: 1600px !default;
 $breakpoint-md: 1080px !default;
 $breakpoint-sm: 640px !default;
 $breakpoint-xs: 400px !default;
 
-// Colors
-$link-color: #a212d1 !default;
-$background-color: #fff !default;
-$text-color: #000 !default;
-$code-color: #3914b3 !default;
-
 :root {
   // Typography
-  --fontstack-prefix: -apple-system, BlinkMacSystemFont,; // Notice that ending comma?
+  --fontstack-prefix: -apple-system, BlinkMacSystemFont,;
   --fontstack-sans-serif: "Helvetica Neue", sans-serif;
   --fontstack-serif: Georgia, serif;
   --fontstack-monospace: Menlo, Consolas, monospace;
   --fontstack-default: var(--fontstack-prefix) var(--fontstack-sans-serif);
+  --font-size-base: 1rem;
+  --font-size-factor: 1vw;
   --font-size: 1.6vw;
+  // TODO: Swtich to viewport width factor-based font size
+  // --font-size: calc(var(--font-size-base) + var(--font-size-factor));
   --font-features: "halt", "ss01", "ss02";
   --line-height: calc(20 / 14); // ~ 1.428571429
   --heading-letter-spacing: -.04em;
@@ -45,61 +41,99 @@ $code-color: #3914b3 !default;
   --border-md: 2px;
   --border-sm: 1px;
 
-  // Colors
-  --link-color: #{$link-color};
-  --background-color: #{$background-color};
-  --text-color: #{$text-color};
-  --code-color: #{$code-color};
-
   // Nav
   --nav-padding: .75vmax;
   --nav-item-space: 1.4vmax;
+
+  // Color - text color
+  --text-color-h: 318;
+  --text-color-s: 30%;
+  --text-color-l: 10%;
+  --text-color-hsl: var(--text-color-h), var(--text-color-s), var(--text-color-l);
+
+  --text-color: hsl(var(--text-color-hsl));
+  --text-color-0: hsla(var(--text-color-hsl), 0);
+  --text-color-3: hsla(var(--text-color-hsl), .03);
+  --text-color-5: hsla(var(--text-color-hsl), .05);
+  --text-color-7: hsla(var(--text-color-hsl), .07);
+  --text-color-10: hsla(var(--text-color-hsl), .1);
+  --text-color-20: hsla(var(--text-color-hsl), .2);
+  --text-color-30: hsla(var(--text-color-hsl), .3);
+  --text-color-40: hsla(var(--text-color-hsl), .4);
+  --text-color-50: hsla(var(--text-color-hsl), .5);
+  --text-color-60: hsla(var(--text-color-hsl), .6);
+  --text-color-70: hsla(var(--text-color-hsl), .7);
+  --text-color-80: hsla(var(--text-color-hsl), .8);
+  --text-color-90: hsla(var(--text-color-hsl), .9);
+  --text-color-light: hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) / .9));
+  --text-color-dark: hsl(var(--text-color-h), var(--text-color-s), calc(var(--text-color-l) * .9));
+
+  // Color - link color
+  --link-color-h: 318;
+  --link-color-s: 100%;
+  --link-color-l: 50%;
+  --link-color-hsl: var(--link-color-h), var(--link-color-s), var(--link-color-l);
+
+  --link-color: hsl(var(--link-color-hsl));
+  --link-color-0: hsla(var(--link-color-hsl), 0);
+  --link-color-3: hsla(var(--link-color-hsl), .03);
+  --link-color-5: hsla(var(--link-color-hsl), .05);
+  --link-color-7: hsla(var(--link-color-hsl), .07);
+  --link-color-10: hsla(var(--link-color-hsl), .1);
+  --link-color-20: hsla(var(--link-color-hsl), .2);
+  --link-color-30: hsla(var(--link-color-hsl), .3);
+  --link-color-40: hsla(var(--link-color-hsl), .4);
+  --link-color-50: hsla(var(--link-color-hsl), .5);
+  --link-color-60: hsla(var(--link-color-hsl), .6);
+  --link-color-70: hsla(var(--link-color-hsl), .7);
+  --link-color-80: hsla(var(--link-color-hsl), .8);
+  --link-color-90: hsla(var(--link-color-hsl), .9);
+  --link-color-light: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) / .9));
+  --link-color-dark: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) * .9));
+
+  // Color - background color
+  --bg-color-h: 318;
+  --bg-color-s: 30%;
+  --bg-color-l: 100%;
+  --bg-color-hsl: var(--bg-color-h), var(--bg-color-s), var(--bg-color-l);
+
+  --bg-color: hsl(var(--bg-color-hsl));
+  --bg-color-0: hsla(var(--bg-color-hsl), 0);
+  --bg-color-3: hsla(var(--bg-color-hsl), .03);
+  --bg-color-5: hsla(var(--bg-color-hsl), .05);
+  --bg-color-7: hsla(var(--bg-color-hsl), .07);
+  --bg-color-10: hsla(var(--bg-color-hsl), .1);
+  --bg-color-20: hsla(var(--bg-color-hsl), .2);
+  --bg-color-30: hsla(var(--bg-color-hsl), .3);
+  --bg-color-40: hsla(var(--bg-color-hsl), .4);
+  --bg-color-50: hsla(var(--bg-color-hsl), .5);
+  --bg-color-60: hsla(var(--bg-color-hsl), .6);
+  --bg-color-70: hsla(var(--bg-color-hsl), .7);
+  --bg-color-80: hsla(var(--bg-color-hsl), .8);
+  --bg-color-90: hsla(var(--bg-color-hsl), .9);
+  --bg-color-light: hsl(var(--bg-color-h), var(--bg-color-s), calc(var(--bg-color-l) / .9));
+  --bg-color-dark: hsl(var(--bg-color-h), var(--bg-color-s), calc(var(--bg-color-l) * .9));
+
+  // Color - code color, an inverted demo from link-color
+  --code-color-h: calc(var(--link-color-h) + 180);
+  --code-color-s: var(--link-color-s);
+  --code-color-l: var(--link-color-l);
+  --code-color-hsl: var(--code-color-h), var(--code-color-s), var(--code-color-l);
+
+  --code-color: hsl(var(--code-color-hsl));
+  --code-color-0: hsla(var(--code-color-hsl), 0);
+  --code-color-3: hsla(var(--code-color-hsl), .03);
+  --code-color-5: hsla(var(--code-color-hsl), .05);
+  --code-color-7: hsla(var(--code-color-hsl), .07);
+  --code-color-10: hsla(var(--code-color-hsl), .1);
+  --code-color-20: hsla(var(--code-color-hsl), .2);
+  --code-color-30: hsla(var(--code-color-hsl), .3);
+  --code-color-40: hsla(var(--code-color-hsl), .4);
+  --code-color-50: hsla(var(--code-color-hsl), .5);
+  --code-color-60: hsla(var(--code-color-hsl), .6);
+  --code-color-70: hsla(var(--code-color-hsl), .7);
+  --code-color-80: hsla(var(--code-color-hsl), .8);
+  --code-color-90: hsla(var(--code-color-hsl), .9);
+  --code-color-light: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) / .9));
+  --code-color-dark: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) * .9));
 }
-
-// EXAMPLE: custom color schemes
-// Change $link-color could change the whole theme color scheme
-
-// tan #D2B48C rgb(210,180,140)
-// $link-color: darken($background-color, 50%);
-// $background-color: tan;
-// $text-color: darken($background-color, 30%);
-
-// mediumvioletred #C71585 rgb(199,21,133)
-// $link-color: mediumvioletred;
-// $background-color: #fff;
-// $text-color: #000;
-
-// orangered #FF4500 rgb(255,69,0)
-// $link-color: orangered;
-// $background-color: #fff;
-// $text-color: #000;
-
-// indigo (invert) #4B0082 rgb(75,0,130)
-// $link-color: #fff;
-// $background-color: indigo;
-// $text-color: lighten($background-color, 60%);
-
-// indigo #4B0082 rgb(75,0,130)
-// $link-color: indigo;
-// $background-color: #fff;
-// $text-color: #000;
-
-// limegreen #32CD32 rgb(rgb(50,205,50))
-// $link-color: limegreen;
-// $background-color: #fff;
-// $text-color: darken($link-color, 30%);
-
-// yellow #FFFF00 rgb(255,255,0)
-// $link-color: #000;
-// $background-color: yellow;
-// $text-color: darken($background-color, 40%);
-
-// paleturquoise #AFEEEE rgb(175,238,238)
-// $link-color: darken($background-color, 60%);
-// $background-color: paleturquoise;
-// $text-color: darken($background-color, 50%);
-
-// crimson #DC143C rgb(220,20,60) × gold #FFD700 rgb(255,215,0)
-// $link-color: crimson;
-// $background-color: gold;
-// $text-color: #000;
