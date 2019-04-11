@@ -16,5 +16,5 @@ Curtana is the default theme of [AMSF](https://sparanoid.com/lab/amsf/) (Almace 
 - Handcrafted stylesheets. No Bootstrap or other bloated frameworks are used, unminified CSS < 12 KB
 - Predefined CSS and Sass (SCSS) variables make it easier to change color schemes for posts
 - Dynamic color scheme for code highlighters powered by [Randomized](https://sparanoid.com/lab/randomized/)
-- [Open Graph](http://ogp.me/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support
+- Open Graph and Twitter Cards support
 - No Internet Explorer support
