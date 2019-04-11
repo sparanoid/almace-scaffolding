@@ -6,7 +6,7 @@ plugin: lightense
 tags: curtana
 ---
 
-Theme Curtana has full [Open Graph](http://ogp.me/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support.
+Theme Curtana has full Open Graph and Twitter Cards support.
 
 It will look for the image in the following order:
 
