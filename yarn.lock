@@ -1495,12 +1495,12 @@ grunt-shell@3.0.1:
     npm-run-path "^2.0.0"
     strip-ansi "^5.0.0"
 
-grunt-sri-hash@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/grunt-sri-hash/-/grunt-sri-hash-1.1.4.tgz#e0c1a4341084e1fc8ba0ccca3169b03e36fd912b"
-  integrity sha512-G9aAiBFqs9aXw0gntx7qxUnVTZG7V7lWdJ/oigfXycdTZK+SuELJPMEr4AUAxezxcyt+vqxM/zORcK4uzcO+zw==
+grunt-sri-hash@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/grunt-sri-hash/-/grunt-sri-hash-1.1.5.tgz#73ffda10140d4441bfce198abf9c39286c7f3695"
+  integrity sha512-YQdFoBkAu9zKPaD+elvx6fFf0e1mwJmM5VkHMxDc8SLvYRcmifuFgBJ9wh9xGoUGigTazc9vSYEhd5P1BnyELw==
   dependencies:
-    jsdom "^13.0.0"
+    jsdom "^15.0.0"
 
 grunt-terser@0.1.0:
   version "0.1.0"
