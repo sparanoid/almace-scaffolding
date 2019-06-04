@@ -168,7 +168,7 @@ module.exports = (grunt) ->
     postcss:
       options:
         processors: [
-          require("autoprefixer")(browsers: "last 1 versions")
+          require("autoprefixer")
         ]
 
       serve:
