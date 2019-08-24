@@ -1,0 +1,59 @@
+# https://discuss.circleci.com/t/circleci-2-1-config-overview/26057
+version: 2.1
+
+references:
+  defaults: &defaults
+    working_directory: ~/repo
+    environment:
+      TZ: "/usr/share/zoneinfo/Asia/Hong_Kong"
+      TERM: xterm
+
+jobs:
+  build:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.6.3-node-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - v1-dependencies-
+      - run:
+          name: update bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> "$BASH_ENV"
+            source $BASH_ENV
+            gem install bundler
+      - run:
+          name: install ruby dependencies
+          command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+      - run:
+          name: install node dependencies
+          command: sudo npm install -g grunt-cli && yarn install --frozen-lockfile
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run:
+          name: generate static files
+          command: grunt build
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - Dockerfile
+            - default.conf
+            - _site/*
+
+workflows:
+  build-deploy:
+    jobs:
+      - build
