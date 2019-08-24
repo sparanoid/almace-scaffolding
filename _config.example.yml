@@ -154,12 +154,12 @@ file:           https://d349cztnlupsuf.cloudfront.net
 # Default:      https://d1bmx7s6749k4k.cloudfront.net
 download:       https://d1bmx7s6749k4k.cloudfront.net
 
-# Primary color
+# Colors
 #
 # Used by Safari mask-icon, Chrome Web App theme color
-#
-# Default       "#ff00b4"
-primary_color:  "#ff00b4"
+colors:
+  theme:        "#ff00b4"
+  background:   "#fff"
 
 # Service Worker Precache
 service_worker:
