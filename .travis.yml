@@ -7,7 +7,9 @@ node_js:
   - "12"
 before_install:
   - rvm use 2.6.3 --install --fuzzy
-  - bundle update --bundler
+  - echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+  - source $BASH_ENV
+  - gem install bundler
   - bundle install
 matrix:
   fast_finish: true
