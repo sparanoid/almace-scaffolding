@@ -15,4 +15,4 @@ clean_homepage: false
 colorful_list:  false
 
 # Enable dark mode automatically via `prefers-color-scheme: dark`
-auto_dark_mode: false
+auto_dark_mode: true
