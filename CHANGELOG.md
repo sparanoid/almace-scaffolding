@@ -1,3 +1,13 @@
+<a name="2.0.17"></a>
+## [2.0.17](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.16...v2.0.17) (2019-08-24)
+
+
+### Bug Fixes
+
+* **grunt:** wrong circleci config location copied ([b335620](https://github.com/sparanoid/almace-scaffolding/commit/b335620))
+
+
+
 <a name="2.0.16"></a>
 ## [2.0.16](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.15...v2.0.16) (2019-08-24)
 
