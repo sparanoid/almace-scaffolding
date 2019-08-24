@@ -487,7 +487,7 @@ module.exports = (grunt) ->
             src: [
               "config.example.yml"
             ]
-            dest: "<%= config.app %>/.circleci/"
+            dest: ".circleci/"
           }
           {
             expand: true
