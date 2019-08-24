@@ -565,6 +565,7 @@ body:hover .latest {
       margin: 0 0 1.8rem;
       border: none;
       border-bottom: 1px solid var(--text-color);
+      background: inherit;
 
       // Remove border-radius for iOS devices
       border-radius: 0;
