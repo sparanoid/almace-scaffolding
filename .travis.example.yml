@@ -1,3 +1,4 @@
+# Travis is slow, I recommend use CircleCI for CI process
 sudo: false
 language: node_js
 cache:
@@ -7,9 +8,6 @@ node_js:
   - "12"
 before_install:
   - rvm use 2.6.3 --install --fuzzy
-  - echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> "$BASH_ENV"
-  - source $BASH_ENV
-  - gem install bundler
   - bundle install
 matrix:
   fast_finish: true
