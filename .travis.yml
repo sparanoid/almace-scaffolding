@@ -7,6 +7,7 @@ node_js:
   - "12"
 before_install:
   - rvm use 2.6.3 --install --fuzzy
+  - bundle update --bundler
   - bundle install
 matrix:
   fast_finish: true
