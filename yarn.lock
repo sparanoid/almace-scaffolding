@@ -1403,10 +1403,10 @@ grunt-html-trim@0.1.2:
   resolved "https://registry.yarnpkg.com/grunt-html-trim/-/grunt-html-trim-0.1.2.tgz#73a34f05b3be385dc4d9d36887cdbd31ab8fa566"
   integrity sha512-j+Tk8dVbJs8gNWaeNv5minLD2m9aZGwvx2SnR7HgSwf/lbzFW9iAbjA2aPnLXoA6jGNQl3aUN/C47RpkbpNUZg==
 
-grunt-jekyll@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/grunt-jekyll/-/grunt-jekyll-1.0.0.tgz#7b30276cc5e0d1d34799ae2fe5e7866efed484bb"
-  integrity sha512-9TacbiDPNPsrd5OAlHAn1jFl5e5q7V8P2rxOR5qGbjI8KulmY4ij07lCBOx/XhIg1MtltKfn7PnIu0gZ+7qIiw==
+grunt-jekyll@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/grunt-jekyll/-/grunt-jekyll-1.0.1.tgz#7f65a5832eee12e4c356597a6f1d69d39b51b4e1"
+  integrity sha512-GJ+hBVDVvyUc5QrIuSxVRWXCPuFN20Umf/sSj+Y3PaS173IjWXA7xdnaMw/vi6NgcDpDEUebwyw/egZnK6Qi8A==
   dependencies:
     tmp "^0.0.33"
 
