@@ -136,10 +136,4 @@ $breakpoint-xs: 400px !default;
   --code-color-90: hsla(var(--code-color-hsl), .9);
   --code-color-light: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) / .9));
   --code-color-dark: hsl(var(--code-color-h), var(--code-color-s), calc(var(--code-color-l) * .9));
-
-  // Dark mode overrides, that's all we need for dark mode
-  @media (prefers-color-scheme: dark) {
-    --text-color-l: 95%;
-    --bg-color-l: 5%;
-  }
 }
