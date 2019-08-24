@@ -46,7 +46,7 @@
     "grunt-doctype": "2.0.2",
     "grunt-git": "1.0.14",
     "grunt-html-trim": "0.1.2",
-    "grunt-jekyll": "1.0.0",
+    "grunt-jekyll": "1.0.1",
     "grunt-minjson": "0.4.0",
     "grunt-newer": "1.3.0",
     "grunt-postcss": "0.9.0",
