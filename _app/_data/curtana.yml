@@ -13,3 +13,6 @@ clean_homepage: false
 # Style post link color (if defined) for article list
 # Default:      false
 colorful_list:  false
+
+# Enable dark mode automatically via `prefers-color-scheme: dark`
+auto_dark_mode: false
