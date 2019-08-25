@@ -104,7 +104,7 @@ There're different size helpers for images. They're available using the followin
 
 ### Medium Size
 
-Medium size is the default size of images, so you don't need additional CSS class for it.
+The medium size is the default size of images, so you don't need additional CSS classes for it.
 
 ```md
 ![Image](https://sparanoid.com/logo.png)
@@ -130,7 +130,7 @@ Medium size is the default size of images, so you don't need additional CSS clas
 
 ![Moonstruck Princess Extended - Blue]({{ site.file }}/moonstruck-princess-ext-blue.jpg){: .size-left}
 
-Aligned images are smaller images beside text, you can just apply `.size-left` or `.size-right` to your images and nothing special markup required. However that aligned images will be responded to normal large size for small desktops or mobile devices.
+Aligned images are smaller images beside the text, you can just apply `.size-left` or `.size-right` to your images and nothing special markup required. However, that aligned images will be responded to normal large size for small desktops or mobile devices.
 
 ### Small Images
 
