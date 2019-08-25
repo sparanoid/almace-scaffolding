@@ -31,7 +31,7 @@ You can create your own theme in AMSF, theme files are located in the following 
 |   |   |   |   └── ...
 ```
 
-The theme specific config `curtana.yml` should have the same filename as your theme name. It should contain theme specific variables and can also override AMSF built-in settings.
+The theme specific config `curtana.yml` should have the same filename as your theme name. It should contain theme-specific variables and can also override AMSF built-in settings.
 
 More info about theme structure you can check out my default theme [Curtana](https://github.com/amsf/amsf-curtana).
 
@@ -89,7 +89,7 @@ You can also have multiple themes in your project, as many as you like. For exam
 
 ## AMSF Options
 
-There're several built-in options you can use in your theme. These options can also be overridden in theme specific config.
+There're several built-in options you can use in your theme. These options can also be overridden in theme-specific config.
 
 ### `site.name`
 
@@ -117,7 +117,7 @@ Output:
 
 ### `site.description`
 
-Site description, will appear in the document meta and Atom feed subtitle.
+Site description will appear in the document meta and Atom feed subtitle.
 
 Template:
 
@@ -133,7 +133,7 @@ Output:
 
 ### `site.file`
 
-Media assets URL used in posts, without trailing slash. In the most cases this URL should be powered by a CDN provider.
+Media assets URL used in posts, without trailing slash. In most cases this URL should be powered by a CDN provider.
 
 Config:
 
@@ -201,7 +201,7 @@ There're some features can be integrated into your theme.
 
 ### (Basic) Multi-Language Support
 
-You can define post / page language in your front-matter field:
+You can define post/page language in your front-matter field:
 
 ```yaml
 lang:
@@ -216,7 +216,7 @@ An additional `lang` HTML attribute will be added to your final rendering:
 </article>
 ```
 
-If your post / page content is multilingual, you can also define multiple languages in array:
+If your post/page content is multilingual, you can also define multiple languages in array:
 
 ```yaml
 lang:
@@ -268,7 +268,7 @@ Define the following code snippet into your theme template (it's recommended to 
 
 ### Page / Post Specific CSS Block Support
 
-This allow your user to define page / post specific CSS blocks in front-matter data:
+This allows your user to define page / post specific CSS blocks in front-matter data:
 
 ```html
 <!-- Page-wide custom CSS -->
@@ -277,7 +277,7 @@ This allow your user to define page / post specific CSS blocks in front-matter d
 
 ### Google Analytics Support
 
-This allow your user to be able to use Google Analytics for their site, tracking ID can be changed in config file:
+This allows your user to be able to use Google Analytics for their site, tracking ID can be changed in the config file:
 
 ```html
 <!-- Google Analytics tracking code -->
@@ -286,7 +286,7 @@ This allow your user to be able to use Google Analytics for their site, tracking
 
 ### Post Published Time
 
-This allow you to get the published time of current post.
+This allows you to get the published time of the current post.
 
 Template:
 
@@ -302,7 +302,7 @@ Output:
 
 ### Post Modified Time
 
-This allow you to get the modified time of current post.
+This allows you to get the modified time of the current post.
 
 Template:
 
@@ -318,7 +318,7 @@ Output:
 
 ### Post Reading Time
 
-This allow you to show average reading time of current post.
+This allows you to show the average reading time of current post.
 
 Template:
 

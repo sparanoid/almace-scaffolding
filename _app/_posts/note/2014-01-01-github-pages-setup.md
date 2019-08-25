@@ -15,11 +15,11 @@ There're some factors that prevent it from generating pages using GitHub Pages r
 
 - Many features Almace Scaffolding provides like LiveReload, Sass support, inline SVG, and HTML minification are implemented using [Grunt.js](https://gruntjs.com/), it's not supported by GitHub Pages.
 - Almace Scaffolding uses the latest pre-release Jekyll, so not all features are supported by GitHub Pages renderers.
-- GItHub Pages build server [overwrites the `source` settings](https://help.github.com/articles/pages-don-t-build-unable-to-run-jekyll#source-setting). This prevent it generating pages from current file structure.
+- GItHub Pages build server [overwrites the `source` settings](https://help.github.com/articles/pages-don-t-build-unable-to-run-jekyll#source-setting). This prevents it from generating pages from current file structure.
 
 ## The Solution for Users or Organization Sites
 
-Since GitHub Pages for users or organization sites can only be served from the root directoy of your master branch. You have to:
+Since GitHub Pages for users or organization sites can only be served from the root directory of your master branch. You have to:
 
 - Make sure your `baseurl` is set to `""` (empty) in your `_config.yml`.
 - Build your site locally (`grunt build`).

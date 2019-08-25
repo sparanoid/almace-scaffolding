@@ -50,7 +50,7 @@ It will be easy if you're a casual blogger and keep every core and template file
 $ grunt amsf-update
 ```
 
-It checks the latest Almace Scaffolding build from GitHub and update core files automatically. Please keep in mind that if you changed some of the AMSF core files this action will **override** the changes you made. So it's recommended to keep your project under version control, you will be always be able to compare changes for Almace Scaffolding.
+It checks the latest Almace Scaffolding build from GitHub and updates core files automatically. Please keep in mind that if you changed some of the AMSF core files this action will **override** the changes you made. So it's recommended to keep your project under version control, you will always be able to compare changes for Almace Scaffolding.
 
 ## Using Beta Release
 
@@ -60,7 +60,7 @@ By default, when you run `amsf-update` you will get updated files from `release`
 $ grunt amsf-update --branch=feat/service-worker
 ```
 
-The branch `master` is the one which is always available to checkout and also has the latest changes:
+The branch `master` is the one which is always available to check out and also has the latest changes:
 
 ```sh
 $ grunt amsf-update --branch=master
