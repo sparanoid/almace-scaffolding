@@ -19,7 +19,7 @@ There's a `_deploy.yml` at the root of your AMSF project containing a basic `rsy
 $ grunt deploy:rsync
 ```
 
-You can deploy it for specific environment, the following command will deploy your site to `beta` environment via `rsync` method you defined in `_deploy.yml`:
+You can deploy it for specific environments, the following command will deploy your site to `beta` environment via `rsync` method you defined in `_deploy.yml`:
 
 ```bash
 $ grunt deploy:rsync --env=beta

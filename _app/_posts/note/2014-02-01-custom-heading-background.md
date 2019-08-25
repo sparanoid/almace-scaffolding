@@ -42,7 +42,7 @@ heading-bg-text: "#fff"
 : Background repeat, default value is `no-repeat`.
 
 `heading-bg-text`
-: Text color in heading, set it based on your background image.
+: Text color of the heading, set it based on your background image.
 
 > Heading image copyright info:
 > &copy; 士郎正宗・Production I.G／講談社・「攻殻機動隊」製作委員会

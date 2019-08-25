@@ -26,4 +26,4 @@ css: |
   }
 ```
 
-Please note that syntax highligting may look ugly with custom background color.
+Please note that syntax highlighting may look ugly with the custom background color.
