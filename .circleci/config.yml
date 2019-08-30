@@ -12,7 +12,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.6.3-node-browsers
+      - image: circleci/ruby:2.6.4-node-browsers
     steps:
       - checkout
       - restore_cache:
