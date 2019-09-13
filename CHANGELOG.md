@@ -1,3 +1,15 @@
+<a name="2.0.18"></a>
+## [2.0.18](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.17...v2.0.18) (2019-09-13)
+
+
+### Features
+
+* **circleci:** add percy ([63308df](https://github.com/sparanoid/almace-scaffolding/commit/63308df))
+* **config:** force utf-8 by default ([49643c4](https://github.com/sparanoid/almace-scaffolding/commit/49643c4))
+* update copywriting ([1cc68b6](https://github.com/sparanoid/almace-scaffolding/commit/1cc68b6))
+
+
+
 <a name="2.0.17"></a>
 ## [2.0.17](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.16...v2.0.17) (2019-08-24)
 
