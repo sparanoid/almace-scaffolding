@@ -72,5 +72,7 @@ workflows:
           filters:
             branches:
               ignore:
+                - staging
+                - release
                 - /^renovate\/.*/
                 - /^dependabot\/.*/
