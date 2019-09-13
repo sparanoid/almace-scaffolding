@@ -20,6 +20,3 @@ baseurl:        ""
 
 # CDN location for development
 file:           https://s3.amazonaws.com/sparanoid
-
-# Force UTF-8 since local server doesn't send charset in their respond header
-force_utf_8:    true
