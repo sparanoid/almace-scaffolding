@@ -371,6 +371,7 @@ body:hover .latest {
     > p {
       padding-left: var(--space-xs);
       border-left: var(--border-md) solid;
+      color: var(--text-color-60);
 
       // TODO: Need better solution
       // We will reset the common margin-bottom to get gapless borders for
@@ -380,7 +381,6 @@ body:hover .latest {
 
       // Now reset default margin button from global define
       margin-bottom: 0;
-      opacity: .6;
 
       // Remove extra padding for the last element, re-apply margin
       &:last-of-type {
