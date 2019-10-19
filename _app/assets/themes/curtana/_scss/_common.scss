@@ -371,6 +371,7 @@ body:hover .latest {
     > p {
       padding-left: var(--space-xs);
       border-left: var(--border-md) solid;
+      color: var(--text-color-60);
 
       // TODO: Need better solution
       // We will reset the common margin-bottom to get gapless borders for
@@ -380,7 +381,6 @@ body:hover .latest {
 
       // Now reset default margin button from global define
       margin-bottom: 0;
-      opacity: .6;
 
       // Remove extra padding for the last element, re-apply margin
       &:last-of-type {
@@ -597,10 +597,10 @@ body:hover .latest {
 
   table {
     --space-table: var(--space-xs);
+    width: calc(100% + var(--space-table) * 2);
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 90%;
-    width: 100%;
     @include margin-offset(calc(var(--space-table) * -1));
     margin-bottom: 1.8rem;
 
@@ -612,12 +612,10 @@ body:hover .latest {
     // TODO: responsive table support
     @media (max-width: $breakpoint-md) {
       --space-table: var(--space-md);
-      width: calc(100% + var(--space-table) * 2);
     }
 
     @media (max-width: $breakpoint-sm) {
       --space-table: var(--space-sm);
-      width: calc(100% + var(--space-table) * 2);
     }
 
     th,
