@@ -624,7 +624,6 @@ body:hover .latest {
     td {
       --space-table-cell: var(--space-xs);
       padding: .6em var(--space-xs);
-      word-break: break-word;
 
       &:first-child {
         padding-left: var(--space-table-cell);
