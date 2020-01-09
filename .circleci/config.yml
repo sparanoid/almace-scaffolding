@@ -12,7 +12,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:2.7.0-node-browsers
     steps:
       - checkout
       - restore_cache:
@@ -56,7 +56,7 @@ jobs:
   percy:
     <<: *defaults
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:2.7.0-node-browsers
     steps:
       - attach_workspace:
           at: ~/repo
