@@ -1274,10 +1274,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.2.tgz#6f0952605d0140c1cfdb138ed005775b92d67b02"
   integrity sha512-IItsdsea19BoLC7ELy13q1iJFNmd7ofZH5+X/pJr90/nRoPEX0DJo1dHDbgtYWOhJhcCgMDTOw84RZ72q6lB+Q==
 
-grunt-assets-inline@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/grunt-assets-inline/-/grunt-assets-inline-1.2.2.tgz#3372f3c9358c789977188af08737b6d7860827f6"
-  integrity sha512-ZxC+rz5GTt5yiCpf0gLkDzidWrjEv/usLn1FZy1U1NF7LO9Jycv84iLpDGzp3m+tLgb5rcSqYm8hZ6cNbZGoNg==
+grunt-assets-inline@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/grunt-assets-inline/-/grunt-assets-inline-1.2.3.tgz#a3d119f4225db7537c0b91cbf1b7dcbdd76f48e3"
+  integrity sha512-jlwcM+4F5Ra6XIq7lXHhgTtv7nt/YV7wP2Vmonbq8lTMJv/pgc2V7C8fgC8gNczPbMhNdHORlISC84dTVzz6Ag==
   dependencies:
     jsdom "^15.0.0"
     uglify-js "^3.4.7"
