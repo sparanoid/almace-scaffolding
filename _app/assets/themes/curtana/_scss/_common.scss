@@ -676,6 +676,10 @@ body:hover .latest {
 .post-modified-date {
   font-size: 75%;
   opacity: .5;
+
+  @media only percy {
+    display: none;
+  }
 }
 
 // Largetype styles (replaces button styles)
