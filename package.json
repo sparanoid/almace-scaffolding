@@ -26,11 +26,11 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "@lodder/time-grunt": "4.0.0",
-    "autoprefixer": "9.7.3",
+    "autoprefixer": "9.8.0",
     "coffeelint": "2.1.0",
-    "coffeescript": "2.5.0",
-    "grunt": "1.0.4",
-    "grunt-assets-inline": "1.2.2",
+    "coffeescript": "2.5.1",
+    "grunt": "1.1.0",
+    "grunt-assets-inline": "1.2.3",
     "grunt-bump": "0.8.0",
     "grunt-cache-bust": "1.7.0",
     "grunt-cleanempty": "1.0.4",
@@ -59,7 +59,7 @@
     "grunt-uncss-inline": "1.2.6",
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
-    "node-sass": "4.13.0"
+    "node-sass": "4.14.1"
   },
   "browserslist": [
     ">0.2%",
