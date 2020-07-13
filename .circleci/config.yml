@@ -53,26 +53,7 @@ jobs:
             - default.conf
             - _site/*
 
-  percy:
-    <<: *defaults
-    docker:
-      - image: circleci/ruby:2.7.0-node-browsers
-    steps:
-      - attach_workspace:
-          at: ~/repo
-      - run: npx percy snapshot _site
-
 workflows:
   build-n-test:
     jobs:
       - build
-      - percy:
-          requires:
-            - build
-          filters:
-            branches:
-              ignore:
-                - staging
-                - release
-                - /^renovate\/.*/
-                - /^dependabot\/.*/
