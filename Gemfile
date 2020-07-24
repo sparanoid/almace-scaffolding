@@ -18,6 +18,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   gem "tzinfo-data"
 end
 
-
 # this solves error from the grunt
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
