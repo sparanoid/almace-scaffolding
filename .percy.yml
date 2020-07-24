@@ -1,0 +1,4 @@
+version: 1
+agent:
+  asset-discovery:
+    network-idle-timeout: 2000 # ms
