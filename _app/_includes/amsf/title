@@ -36,14 +36,14 @@
     {%- comment -%}
       force using `page.title` if defined in homepage
     {%- endcomment -%}
-    {%- if page.title -%}
-      {{ page_title }} - {{ site_name }}
-    {%- else -%}
-      {%- if page.title_no_desc == true -%}
-        {{ site_name }}
+    {%- if page_title -%}
+      {%- if page.force_desc == true -%}
+        {{ page_title }} - {{ site_description }}
       {%- else -%}
-        {{ site_name }} - {{ site_description }}
+        {{ page_title }}
       {%- endif -%}
+    {%- else -%}
+      {{ site_name }}
     {%- endif -%}
   {%- else -%}
     {{ page_title }} - {{ site_name }}
