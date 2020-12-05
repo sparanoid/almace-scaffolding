@@ -13,7 +13,7 @@ $breakpoint-xs: 400px !default;
 :root {
   // Typography
   --fontstack-prefix: -apple-system, BlinkMacSystemFont,;
-  --fontstack-sans-serif: "Helvetica Neue", "Segoe UI", sans-serif;
+  --fontstack-sans-serif: "Helvetica Neue", Arial, sans-serif;
   --fontstack-serif: Georgia, serif;
   --fontstack-monospace: Menlo, Consolas, monospace;
   --fontstack-default: var(--fontstack-prefix) var(--fontstack-sans-serif);
@@ -22,7 +22,11 @@ $breakpoint-xs: 400px !default;
   --font-size: 1.6vw;
   // TODO: Swtich to viewport width factor-based font size
   // --font-size: calc(var(--font-size-base) + var(--font-size-factor));
-  --font-features: "halt", "ss01", "ss02";
+  // For -apple-system (San Francisco):
+  // - cv01: open six
+  // - cv02: open nine
+  // - cv03: open four
+  --font-features: "halt", "cv01", "cv02", "cv03";
   --line-height: calc(20 / 14); // ~ 1.428571429
   --heading-letter-spacing: -.04em;
 
