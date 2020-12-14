@@ -25,7 +25,7 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "@lodder/grunt-postcss": "^3.0.0",
+    "@lodder/grunt-postcss": "3.0.0",
     "@lodder/time-grunt": "4.0.0",
     "autoprefixer": "10.0.4",
     "coffeelint": "2.1.0",
@@ -60,7 +60,7 @@
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
     "node-sass": "5.0.0",
-    "postcss": "^8.1.14"
+    "postcss": "8.1.14"
   },
   "browserslist": [
     ">0.2%",
