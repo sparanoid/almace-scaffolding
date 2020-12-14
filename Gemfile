@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "4.1.1"
+gem "jekyll", "4.2.0"
 
 group :development do
   gem "jekyll-last-modified-at"
