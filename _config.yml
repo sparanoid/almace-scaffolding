@@ -14,6 +14,8 @@ markdown:       kramdown
 highlighter:    rouge
 include:        ["_pages"]
 exclude:        ["_pages/themes"]
+url: sri-shubham.github.io
+baseurl: /blog
 
 #
 # Jekyll serve settings
