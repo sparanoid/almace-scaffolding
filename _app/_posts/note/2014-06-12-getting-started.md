@@ -38,7 +38,7 @@ $ grunt && grunt deploy:rsync --env=prod
 
 Go to the [GitHub repository](https://github.com/sparanoid/almace-scaffolding) for downloads, bug reports, and feature requests.
 
-## Transfer from Jekyll
+## Jekyll Migration
 
 You can simply copy all posts from your old Jekyll setup into `_app/_posts`, you can also transfer your custom pages into `_app/_pages/`.
 
