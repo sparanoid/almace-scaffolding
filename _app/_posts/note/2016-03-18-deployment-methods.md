@@ -7,6 +7,14 @@ tags: deployment
 
 Sites generated using Almace Scaffolding can be deployed in nearly any web hosting services. A few of the most common deployment techniques are described below. More deployment methods please refer to [Jekyll - Deployment methods](https://jekyllrb.com/docs/deployment-methods/).
 
+## Cloudflare Pages
+
+The simplest way to deploy your AMSF site is using [Cloudflare Pages](https://pages.cloudflare.com/). Just signup for Cloudflare and connect it with your GitHub account. Create a Pages project and use the following settings:
+
+- Framework preset: Jekyll
+- Build command: `grunt build`
+- Build output directory: `_site`
+
 ## Web Hosting Providers (FTP/SFTP)
 
 Just about any traditional web hosting provider will let you upload files to their servers over FTP. You can simply run the `grunt build` command and upload all files generated under `_site` to the HTTP root folder of your hosting account.
