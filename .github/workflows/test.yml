@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         ruby-version: [3.0.0]
-        node-version: [15]
+        node-version: [16]
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby ${{ matrix.ruby-version }}
