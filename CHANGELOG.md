@@ -1,3 +1,16 @@
+<a name="2.0.20"></a>
+## [2.0.20](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.19...v2.0.20) (2021-05-03)
+
+
+### Features
+
+* compatible with ruby 3.0.0 ([b64194b](https://github.com/sparanoid/almace-scaffolding/commit/b64194b))
+* update deps ([32418d5](https://github.com/sparanoid/almace-scaffolding/commit/32418d5))
+* update docs for cloudflare pages ([00a8f5a](https://github.com/sparanoid/almace-scaffolding/commit/00a8f5a))
+* update ruby version for ci ([4f2c6a0](https://github.com/sparanoid/almace-scaffolding/commit/4f2c6a0))
+
+
+
 <a name="2.0.19"></a>
 ## [2.0.19](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.18...v2.0.19) (2020-12-14)
 
