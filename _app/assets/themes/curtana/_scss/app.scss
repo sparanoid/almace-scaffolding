@@ -3,18 +3,18 @@
 //
 
 // Sass variables customization
-@use "../../../_scss/variables" as user-variables;
+@import "../../../_scss/variables";
 
 // Core components
-@use "mixins";
-@use "variables";
-@use "reset";
-@use "common";
-@use "plugins";
-@use "print";
+@import "mixins";
+@import "variables";
+@import "reset";
+@import "common";
+@import "plugins";
+@import "print";
 
 // Extra components
-@use "components/randomized";
+@import "components/randomized";
 
 // Finally user custom styles go here
-@use "../../../_scss/user";
+@import "../../../_scss/user";
