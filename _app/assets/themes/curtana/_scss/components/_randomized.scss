@@ -2,13 +2,15 @@
 // Randomized | © Tunghsiao Liu | MIT
 //
 
+@use "sass:math";
+
 // Variables for standalone version
 $code-color: hsl(254, 80%, 39%) !default;
 
 // Remove output unit
 @function unitlessness($input) {
   @if type-of($input) == 'number' and not unitless($input) {
-    @return $input / ($input * 0 + 1);
+    @return math.div($input, $input * 0 + 1);
   }
 
   @return $input;
@@ -204,7 +206,7 @@ $code-color: hsl(254, 80%, 39%) !default;
   @each $token in $main-tokens {
     $i: index($main-tokens, $token);
     .#{$token} {
-      --rdmz-h-local: calc(var(--rdmz-h) + #{$i * 360 / length($main-tokens)});
+      --rdmz-h-local: calc(var(--rdmz-h) + #{math.div($i * 360, length($main-tokens))});
       color: hsl(var(--rdmz-h-local), var(--rdmz-s), var(--rdmz-l));
     }
   }
@@ -226,7 +228,7 @@ $code-color: hsl(254, 80%, 39%) !default;
   @each $token in $comment-tokens {
     $i: index($comment-tokens, $token);
     .#{$token} {
-      color: hsla(calc(var(--rdmz-h) + #{$i * 360 / length($main-tokens)}), calc(var(--rdmz-s) * .7), var(--rdmz-l), .6);
+      color: hsla(calc(var(--rdmz-h) + #{math.div($i * 360, length($main-tokens))}), calc(var(--rdmz-s) * .7), var(--rdmz-l), .6);
     }
   }
 
