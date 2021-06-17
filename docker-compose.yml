@@ -1,0 +1,17 @@
+version: '3'
+
+x-defaults: &defaults
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: sparanoid/amsf:latest
+  restart: always
+  volumes:
+    - ./:/opt/amsf/
+  ports:
+    - "4321:4321"
+
+services:
+  amsf:
+    <<: *defaults
+    command: serve
