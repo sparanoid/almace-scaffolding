@@ -7,7 +7,7 @@ run:
 	docker run --rm -it -p 4321:4321 --name amsf sparanoid/amsf:latest
 
 up:
-	docker-compose down --volumes --remove-orphans && docker-compose up
+	docker compose down -v --remove-orphans && docker compose up
 
 push:
 	docker push sparanoid/amsf:latest
