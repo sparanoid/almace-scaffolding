@@ -542,7 +542,7 @@ module.exports = (grunt) ->
       main:
         src: [
           ".tmp"
-          "<%= config.dist %>"
+          "<%= config.dist %>/*"
           "<%= config.app %>/.jekyll-metadata"
           "<%= amsf.theme.assets %>/css/"
           "<%= amsf.theme.assets %>/js/"
