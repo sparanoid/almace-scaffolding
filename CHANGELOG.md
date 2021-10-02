@@ -1,3 +1,18 @@
+<a name="2.0.22"></a>
+## [2.0.22](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.21...v2.0.22) (2021-10-02)
+
+
+### Features
+
+* add docker guide ([8e5e8d1](https://github.com/sparanoid/almace-scaffolding/commit/8e5e8d1))
+* add github docker build actions ([2d5208b](https://github.com/sparanoid/almace-scaffolding/commit/2d5208b))
+* basic docker support ([5fb1b7a](https://github.com/sparanoid/almace-scaffolding/commit/5fb1b7a))
+* unify docker image name ([1be65be](https://github.com/sparanoid/almace-scaffolding/commit/1be65be))
+* **grunt:** avoid removing the whole dist dir for docker compatibility ([6180cfd](https://github.com/sparanoid/almace-scaffolding/commit/6180cfd))
+* migrate to new syntax for dart-sass ([af5f1d0](https://github.com/sparanoid/almace-scaffolding/commit/af5f1d0))
+
+
+
 <a name="2.0.21"></a>
 ## [2.0.21](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.20...v2.0.21) (2021-05-03)
 
