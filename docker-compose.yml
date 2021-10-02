@@ -7,7 +7,7 @@ x-defaults: &defaults
   build:
     context: .
     dockerfile: Dockerfile
-  image: sparanoid/amsf:latest
+  image: sparanoid/almace-scaffolding:latest
   restart: always
   volumes:
     - ./:/app/
