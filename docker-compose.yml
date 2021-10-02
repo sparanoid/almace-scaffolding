@@ -10,7 +10,7 @@ x-defaults: &defaults
   image: sparanoid/amsf:latest
   restart: always
   volumes:
-    - ./:/opt/amsf/
+    - ./:/app/
   ports:
     - "4321:4321"
 
