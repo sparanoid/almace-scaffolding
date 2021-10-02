@@ -20,7 +20,7 @@ You can simply run Almace Scaffolding in Docker with `compose` command. Create y
 version: '3'
 
 x-defaults: &defaults
-  image: sparanoid/amsf:latest
+  image: sparanoid/almace-scaffolding:latest
   restart: always
   volumes:
     - ./_app/_posts/:/app/_app/_posts/
@@ -78,7 +78,7 @@ You can see the example repo at [amsf/docker-amsf-example](https://github.com/am
 You can load custom dependencies (custom Grunt plugins or Jekyll plugins) in Docker by building your own Docker images. First you need to create a `Dockerfile`:
 
 ```dockerfile
-FROM sparanoid/amsf:latest
+FROM sparanoid/almace-scaffolding:latest
 
 # Copy custom dependencies configs
 COPY Gemfile* /app/
