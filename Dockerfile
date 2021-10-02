@@ -1,10 +1,10 @@
 FROM sparanoid/ruby-node:latest
 
-COPY ./ /opt/amsf/
+COPY . /app
 
-VOLUME /opt/amsf/
+VOLUME /app
 
-WORKDIR /opt/amsf/
+WORKDIR /app
 
 RUN bundle install && yarn install
 

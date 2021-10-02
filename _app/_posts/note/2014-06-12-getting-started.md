@@ -23,7 +23,7 @@ x-defaults: &defaults
   image: sparanoid/amsf:latest
   restart: always
   volumes:
-    - ./_app/_posts/:/opt/amsf/_app/_posts/
+    - ./_app/_posts/:/app/_app/_posts/
   ports:
     - "4321:4321"
 
@@ -40,9 +40,9 @@ Mount custom data, pages, posts to override them inside container:
 ```yml
 ...
   volumes:
-    - ./_app/_data/:/opt/amsf/_app/_data/
-    - ./_app/_pages/:/opt/amsf/_app/_pages/
-    - ./_app/_posts/:/opt/amsf/_app/_posts/
+    - ./_app/_data/:/app/_app/_data/
+    - ./_app/_pages/:/app/_app/_pages/
+    - ./_app/_posts/:/app/_app/_posts/
 ```
 
 Override config file:
@@ -50,7 +50,7 @@ Override config file:
 ```yml
 ...
   volumes:
-    - ./_config.yml:/opt/amsf/_config.yml
+    - ./_config.yml:/app/_config.yml
 ```
 
 Use custom Gruntfile:
@@ -58,7 +58,7 @@ Use custom Gruntfile:
 ```yml
 ...
   volumes:
-    - ./Gruntfile.coffee:/opt/amsf/Gruntfile.coffee
+    - ./Gruntfile.coffee:/app/Gruntfile.coffee
 ```
 
 Use custom AMSF config for custom themes and templates:
@@ -66,9 +66,9 @@ Use custom AMSF config for custom themes and templates:
 ```yml
 ...
   volumes:
-    - ./_app/:/opt/amsf/_app/
-    - ./_site/:/opt/amsf/_site/
-    - ./_amsf.yml:/opt/amsf/_amsf.yml
+    - ./_app/:/app/_app/
+    - ./_site/:/app/_site/
+    - ./_amsf.yml:/app/_amsf.yml
 ```
 
 You can see the example repo at [amsf/docker-amsf-example](https://github.com/amsf/docker-amsf-example).
@@ -81,9 +81,9 @@ You can load custom dependencies (custom Grunt plugins or Jekyll plugins) in Doc
 FROM sparanoid/amsf:latest
 
 # Copy custom dependencies configs
-COPY Gemfile* /opt/amsf/
-COPY package.json /opt/amsf/package.json
-COPY yarn.lock /opt/amsf/yarn.lock
+COPY Gemfile* /app/
+COPY package.json /app/package.json
+COPY yarn.lock /app/yarn.lock
 
 # Reinstall project specific dependencies
 RUN bundle install && yarn install
