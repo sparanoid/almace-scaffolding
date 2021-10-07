@@ -108,6 +108,7 @@ jobs:
             sparanoid/almace-scaffolding
             ghcr.io/sparanoid/almace-scaffolding
           tags: |
+            type=edge
             type=schedule
             type=ref,event=branch
             type=ref,event=pr
