@@ -69,9 +69,7 @@ jobs:
         run: grunt build
 
       - name: Run Percy
-        uses: percy/snapshot-action@v0.1.2
-        with:
-          build-directory: "_site"
+        run: npx percy snapshot _site/
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
