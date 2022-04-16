@@ -1,0 +1,103 @@
+# This is a configuration file to customize code analysis by Sider.
+#
+# For more information, see the documentation:
+# https://help.sider.review/getting-started/custom-configuration
+
+# Customize each tool. If analyses fail, try adjusting each option referencing the following example.
+linter:
+
+#   # ESLint example. See https://help.sider.review/tools/javascript/eslint
+#   eslint:
+#     root_dir: project/
+#     dependencies:
+#       - my-eslint-plugin@2
+#     npm_install: false
+#     target:
+#       - src/
+#       - lib/
+#     ext: [.js, .jsx]
+#     config: config/.eslintrc.js
+#     ignore-path: config/.eslintignore
+#     ignore-pattern: "vendor/**"
+#     no-ignore: true
+#     global: ["require", "exports:true"]
+#     quiet: true
+
+#   # hadolint example. See https://help.sider.review/tools/dockerfile/hadolint
+#   hadolint:
+#     root_dir: project/
+#     target:
+#       - images/**/Dockerfile
+#     ignore:
+#       - DL3003
+#       - SC1010
+#     trusted-registry:
+#       - docker.io
+#       - my-company.com:5000
+#     config: config/hadolint.yaml
+
+#   # Misspell example. See https://help.sider.review/tools/others/misspell
+#   misspell:
+#     root_dir: project/
+#     target: [src/, test/]
+#     exclude: ["**/*.min.*"]
+#     locale: UK
+#     ignore: [center, behavior]
+
+#   # Reek example. See https://help.sider.review/tools/ruby/reek
+#   reek:
+#     root_dir: project/
+#     dependencies:
+#       - { name: "reek", version: "6.0.0" }
+#     target: [lib/, test/]
+#     config: config/reek.yml
+
+#   # RuboCop example. See https://help.sider.review/tools/ruby/rubocop
+#   rubocop:
+#     root_dir: project/
+#     dependencies:
+#       - rubocop-rails
+#       - { name: "rubocop-rspec", version: "2.1.0" }
+#     config: config/.rubocop.yml
+#     safe: true
+
+#   # ShellCheck example. See https://help.sider.review/tools/shellscript/shellcheck
+#   shellcheck:
+#     root_dir: project/
+#     target:
+#       - "**/*.{sh,bash}"
+#       - shebang: true
+#     include: [SC2104, SC2105]
+#     exclude: [SC1000, SC1118]
+#     enable: all
+#     shell: bash
+#     severity: error
+#     norc: true
+
+#   # stylelint example. See https://help.sider.review/tools/css/stylelint
+#   stylelint:
+#     root_dir: project/
+#     dependencies:
+#       - my-stylelint-plugin@2
+#     npm_install: false
+#     config: config/.stylelintrc.yml
+#     syntax: scss
+#     ignore-path: config/.stylelintignore
+#     ignore-disables: true
+#     report-needless-disables: true
+#     quiet: true
+#     target: ["app/**/*.scss"]
+
+# Ignore specific files. Example:
+# ignore:
+#   - "*.pdf"
+#   - "*.mp4"
+#   - "*.min.*"
+#   - "images/**"
+
+# Exclude specific branches. Example:
+# branches:
+#   exclude:
+#     - master
+#     - development
+#     - /^release-.*$/
