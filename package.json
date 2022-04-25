@@ -27,7 +27,7 @@
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.1.1",
     "@lodder/time-grunt": "4.0.0",
-    "autoprefixer": "10.4.4",
+    "autoprefixer": "10.4.5",
     "coffeelint": "2.1.0",
     "coffeescript": "2.6.1",
     "grunt": "1.5.2",
