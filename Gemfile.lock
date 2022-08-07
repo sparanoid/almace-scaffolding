@@ -61,7 +61,7 @@ GEM
     stringex (2.8.5)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.1)
       tzinfo (>= 1.0.0)
@@ -76,7 +76,7 @@ DEPENDENCIES
   jekyll-last-modified-at
   match_regex
   stringex
-  tzinfo (= 2.0.4)
+  tzinfo (= 2.0.5)
   tzinfo-data
   webrick
 
