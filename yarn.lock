@@ -42,7 +42,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@lodder/grunt-postcss@^3.1.1":
+"@lodder/grunt-postcss@3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@lodder/grunt-postcss/-/grunt-postcss-3.1.1.tgz#68d658c25fc97f2ad1306a4f33c02dd622c9733b"
   integrity sha512-dgkDAUgjtCCCk7jsIBkDMhcL78y2reQ9YxqBpVJGa/0tX1Eus7GRWEn0QWqfFiHqqc3yrMQN+GtH8PUIZOBmDQ==
@@ -3787,7 +3787,7 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-terser@^5.14.2:
+terser@5.14.2:
   version "5.14.2"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.14.2.tgz#9ac9f22b06994d736174f4091aa368db896f1c10"
   integrity sha512-oL0rGeM/WFQCUd0y2QrWxYnq7tfSuKBiqTjRPWrRgB46WD/kiwHwF8T23z78H6Q6kGCuuHcPB+KULHRdxvVGQA==
