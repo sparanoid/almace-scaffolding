@@ -1,3 +1,22 @@
+<a name="2.0.23"></a>
+## [2.0.23](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.22...v2.0.23) (2023-01-31)
+
+
+### Bug Fixes
+
+* jekyll sass dep issue, ref https://github.com/sass/dart-sass-embedded/issues/106 ([7550db9](https://github.com/sparanoid/almace-scaffolding/commit/7550db9))
+* missing percy deps ([dd06072](https://github.com/sparanoid/almace-scaffolding/commit/dd06072))
+
+
+### Features
+
+* add edge build ([dc88b79](https://github.com/sparanoid/almace-scaffolding/commit/dc88b79))
+* update deps ([5eab83e](https://github.com/sparanoid/almace-scaffolding/commit/5eab83e))
+* update node and ruby version ([8f260c2](https://github.com/sparanoid/almace-scaffolding/commit/8f260c2))
+* **github-actions:** migrate to percy cli ([5c84fd2](https://github.com/sparanoid/almace-scaffolding/commit/5c84fd2))
+
+
+
 <a name="2.0.22"></a>
 ## [2.0.22](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.21...v2.0.22) (2021-10-02)
 
