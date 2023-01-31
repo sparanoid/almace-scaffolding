@@ -30,7 +30,7 @@
     "autoprefixer": "10.4.13",
     "coffeelint": "2.1.0",
     "coffeescript": "2.7.0",
-    "grunt": "1.6.0",
+    "grunt": "1.6.1",
     "grunt-assets-inline": "1.2.4",
     "grunt-bump": "0.8.0",
     "grunt-cache-bust": "1.7.0",
