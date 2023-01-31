@@ -30,7 +30,7 @@
     "autoprefixer": "10.4.13",
     "coffeelint": "2.1.0",
     "coffeescript": "2.7.0",
-    "grunt": "1.5.3",
+    "grunt": "1.6.0",
     "grunt-assets-inline": "1.2.4",
     "grunt-bump": "0.8.0",
     "grunt-cache-bust": "1.7.0",
@@ -59,9 +59,9 @@
     "grunt-uncss-inline": "1.2.7",
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
-    "postcss": "8.4.18",
+    "postcss": "8.4.21",
     "sass": "1.57.1",
-    "terser": "5.15.1"
+    "terser": "5.16.2"
   },
   "browserslist": [
     ">0.2%",
@@ -69,6 +69,6 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@percy/cli": "^1.13.0"
+    "@percy/cli": "^1.17.0"
   }
 }
