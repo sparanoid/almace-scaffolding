@@ -8,7 +8,7 @@ group :development do
   gem "webrick"
 
   # TODO: https://github.com/sass/dart-sass-embedded/issues/106
-  gem "jekyll-sass-converter", "< 3.0"
+  gem "jekyll-sass-converter", "< 3.1"
 end
 
 group :jekyll_plugins do
