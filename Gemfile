@@ -6,6 +6,9 @@ group :development do
   gem "jekyll-last-modified-at"
   gem "stringex"
   gem "webrick"
+
+  # TODO: https://github.com/sass/dart-sass-embedded/issues/106
+  gem "jekyll-sass-converter", "< 3.0"
 end
 
 group :jekyll_plugins do
