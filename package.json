@@ -60,7 +60,7 @@
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
     "postcss": "8.4.21",
-    "sass": "1.58.0",
+    "sass": "1.58.1",
     "terser": "5.16.2"
   },
   "browserslist": [
