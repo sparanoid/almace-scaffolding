@@ -61,7 +61,7 @@
     "jit-grunt": "0.10.0",
     "postcss": "8.4.21",
     "sass": "1.58.3",
-    "terser": "5.16.2"
+    "terser": "5.16.9"
   },
   "browserslist": [
     ">0.2%",
