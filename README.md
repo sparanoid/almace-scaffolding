@@ -15,13 +15,6 @@
 
 Wanna buy me a cup of coffee? [Great](https://sparanoid.com/donate/).
 
-## Author
-
-**Tunghsiao Liu**
-
-- Twitter: @[tunghsiao](https://twitter.com/tunghsiao)
-- GitHub: @[sparanoid](https://github.com/sparanoid)
-
 ## Licenses
 
 All files and directories are licensed under the [MIT](https://opensource.org/licenses/mit-license.php) unless explicitly stated.
