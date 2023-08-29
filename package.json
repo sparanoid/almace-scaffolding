@@ -27,7 +27,7 @@
   "devDependencies": {
     "@lodder/grunt-postcss": "3.1.1",
     "@lodder/time-grunt": "4.0.0",
-    "autoprefixer": "10.4.13",
+    "autoprefixer": "10.4.14",
     "coffeelint": "2.1.0",
     "coffeescript": "2.7.0",
     "grunt": "1.6.1",
@@ -39,7 +39,7 @@
     "grunt-concurrent": "3.0.0",
     "grunt-contrib-clean": "2.0.1",
     "grunt-contrib-copy": "1.0.0",
-    "grunt-contrib-cssmin": "4.0.0",
+    "grunt-contrib-cssmin": "5.0.0",
     "grunt-contrib-htmlmin": "3.1.0",
     "grunt-contrib-less": "3.0.0",
     "grunt-contrib-watch": "1.1.0",
@@ -59,9 +59,9 @@
     "grunt-uncss-inline": "1.2.7",
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
-    "postcss": "8.4.21",
+    "postcss": "8.4.23",
     "sass": "1.62.1",
-    "terser": "5.16.2"
+    "terser": "5.17.3"
   },
   "browserslist": [
     ">0.2%",
